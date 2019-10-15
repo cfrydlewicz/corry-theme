@@ -1,0 +1,17 @@
+{
+  "name": "Corry",
+  "description": "Theme for corryfrydlewicz.com",
+  "version": "18.0.0",
+  "repository": "https://github.com/cfrydlewicz/corry18.git",
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-autoprefixer": "*",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-cssmin": "*",
+    "grunt-contrib-jshint": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-dev-update": "*",
+    "grunt-sass": "*"
+  }
+}

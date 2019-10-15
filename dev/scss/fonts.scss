@@ -1,0 +1,373 @@
+/* Font Settings */
+
+$f_base-size:	16px;
+
+// Defaults
+body {
+	font-size: $f_base-size;
+	line-height: 1;
+	color: $c_basetext;
+	@media #{$mq-lg} {
+		font-size: $f_base-size * 1.125;
+	}
+	@media #{$mq-xl} {
+		font-size: $f_base-size * 1.25;
+	}
+}
+
+
+// Emphasis
+strong {
+	font-weight: bold;
+}
+em {
+	font-style: italic;
+}
+.i_copy-area {
+	strong,
+	em {
+		color: $c_black;
+	}
+	del {
+		color: $c_grey;
+	}
+	blockquote del {	// Exception for del elements within blockquotes (used for <cite>)
+		color: inherit;
+	}
+	span[style*="color:"] {	// Exception for when color is manually changed in the WP editor
+		strong,
+		em,
+		del {
+			color: inherit;
+		}
+	}
+}
+
+
+// Links
+a,
+.fakelink {
+	color: $c_link;
+	text-decoration: none;
+	.i_dark-bg & {
+		color: $c_link2;
+	}
+	.i_copy-area & {
+		text-decoration: underline;
+	}
+	&:hover {
+		color: $c_link--hov;
+		.i_dark-bg & {
+			color: $c_link2--hov;
+		}
+	}
+	&:active,
+	&:visited {
+		color: $c_link--act;
+		.i_dark-bg & {
+			color: $c_link2--act;
+		}
+	}
+}
+
+
+// Copy
+p,
+li {
+	font-size: 1rem;
+  /* Maximum width of 65 characters */
+  max-width: 65ch;
+}
+p {
+	line-height: 1.75;
+}
+li {
+	line-height: 1.2;
+	margin-bottom: .5em;
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+.i_copy-area {
+	h1 {
+		font-size: 2.1rem;
+		line-height: 1;
+		font-weight: normal;
+		margin-bottom: 1em;
+	}
+	h2 {
+		font-size: 1.7rem;
+		line-height: 1;
+		font-weight: normal;
+		margin-top: 2em;
+		margin-bottom: .5em;
+	}
+	h3 {
+		font-size: 1.1rem;
+		line-height: 1.4;
+		font-weight: bold;
+		margin-top: 1.5em;
+		margin-bottom: .5em;
+	}
+	h4 {
+		font-size: 1rem;
+		line-height: 1;
+		font-weight: bold;
+		text-transform: uppercase;
+		margin-bottom: .5em;
+	}
+	p {
+		&:not(:last-of-type) {
+			margin-bottom: 1em;
+		}
+		a,
+		.fakelink {
+			// Break long links and hyphenate them
+			overflow-wrap: break-word;
+			word-wrap: break-word;
+			-ms-word-break: break-all;
+			word-break: break-word;
+			-ms-hyphens: auto;
+			-moz-hyphens: auto;
+			-webkit-hyphens: auto;
+			hyphens: auto;
+		}
+	}
+}
+
+
+// Lists
+.i_copy-area {
+	ul,
+	ol {
+		padding-left: 2em;
+		margin-bottom: 1em;
+		ul, ol {
+			padding-left: .5em;
+			margin: 1em 0 .5em;
+			border-width: 1px 0;
+			border-style: solid;
+			border-color: mix(white, $c_primary, 80%);
+			ul, ol {
+				border-color: mix(white, $c_secondary, 80%);
+				ul, ol {
+					border-color: mix(white, $c_accent, 80%);
+				}
+			}
+		}
+	}
+	ul {
+		// TODO: Replace these with icons
+		list-style-type: disc;
+		ul {
+			list-style-type: square;
+			ul {
+				list-style-type: circle;
+			}
+		}
+	}
+	ol {
+		list-style-type: decimal-leading-zero;
+		ol {
+			list-style-type: upper-alpha;
+			ol {
+				list-style-type: lower-roman;
+				ol {
+					list-style-type: lower-alpha;
+				}
+			}
+		}
+	}
+}
+
+
+// Tables
+.i_copy-area table {
+	font-size: .9em;
+	line-height: 1.2;
+	p, li {
+		font-size: .9em;
+	}
+	th {
+		font-weight: bold;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+	}
+}
+
+
+// Quotes
+blockquote {
+	quotes: "\201C""\201D""\2018""\2019";
+	&::before {
+		content: open-quote;
+		@extend .u_visually-hidden;
+	}
+	&::after {
+		content: close-quote;
+		@extend .u_visually-hidden;
+	}
+	p {
+		display: inline-block;
+		&:nth-last-child(2)::after {
+			/* add close-quote after next-to-last p tag */
+			content: close-quote;
+		}
+		&:last-child {
+			margin-bottom: 0;
+		}
+		&.cite,
+		del { /* fallback in case the replacement script doesn't fire */
+			font-size: .9em;
+			line-height: 1;
+			text-align: right;
+			margin-bottom: 0;
+		}
+		del { /* fallback in case the replacement script doesn't fire */
+			color: inherit;
+			text-decoration: none;
+		}
+	}
+}
+
+/* text modifiers */
+.f_small {
+	font-size: .9rem;
+	.i_copy-area & {
+		font-size: .9em;
+	}
+}
+.f_smaller {
+	font-size: .75rem;
+	.i_copy-area & {
+		font-size: .75em;
+	}
+}
+.f_smallest {
+	font-size: .625rem;
+	.i_copy-area & {
+		font-size: .625em;
+	}
+}
+.f_large {
+	font-size: 1.1rem;
+	.i_copy-area & {
+		font-size: .1.1em;
+	}
+}
+.f_larger {
+	font-size: 1.25rem;
+	.i_copy-area & {
+		font-size: 1.25em;
+	}
+}
+.f_largest {
+	font-size: 1.4rem;
+	.i_copy-area & {
+		font-size: 1.4em;
+	}
+}
+
+/* icomoon CSS */
+@font-face {
+	font-family: 'icomoon';
+	src:url('fonts/icomoon.eot?byte2f');
+	src:url('fonts/icomoon.eot?byte2f#iefix') format('embedded-opentype'),
+		url('fonts/icomoon.ttf?byte2f') format('truetype'),
+		url('fonts/icomoon.woff?byte2f') format('woff'),
+		url('fonts/icomoon.svg?byte2f#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+.u_icomoon,
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-home3::before {
+	content: "\e903";
+}
+.icon-bubbles::before {
+	content: "\e904";
+}
+.icon-heart::before {
+	content: "\e905";
+}
+.icon-plus::before {
+	content: "\e906";
+}
+.icon-minus::before {
+	content: "\e907";
+}
+.icon-cross::before {
+	content: "\e908";
+}
+.icon-checkmark::before {
+	content: "\e909";
+}
+.icon-arrow-up2::before {
+	content: "\e90a";
+}
+.icon-arrow-right2::before {
+	content: "\e90b";
+}
+.icon-arrow-down2::before {
+	content: "\e90c";
+}
+.icon-arrow-left2::before {
+	content: "\e90d";
+}
+.icon-mail2::before {
+	content: "\e90e";
+}
+.icon-google-plus::before {
+	content: "\e90f";
+}
+.icon-facebook2::before {
+	content: "\e910";
+}
+.icon-twitter::before {
+	content: "\e911";
+}
+.icon-steam::before {
+	content: "\e912";
+}
+.icon-github::before {
+	content: "\e913";
+}
+.icon-wordpress::before {
+	content: "\e914";
+}
+.icon-skype::before {
+	content: "\e915";
+}
+.icon-reddit::before {
+	content: "\e916";
+}
+.icon-search::before {
+	content: "\e917";
+}
+.icon-spotify::before {
+	content: "\e900";
+}
+.icon-twitch::before {
+	content: "\e91a";
+}
+.icon-linkedin::before {
+	content: "\e901";
+}
+.icon-stackoverflow::before {
+	content: "\e902";
+}

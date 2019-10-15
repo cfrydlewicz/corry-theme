@@ -1,0 +1,12 @@
+// Magic: The Gathering Article Styles
+
+
+// MTG icons
+// TODO: Build out MTG Styling
+.icon-mana-blue .path1::before {
+	content: "\e918";
+}
+.icon-mana-blue .path2::before {
+	content: "\e919";
+	margin-left: -1em;
+}

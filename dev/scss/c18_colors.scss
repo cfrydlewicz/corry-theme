@@ -1,0 +1,35 @@
+// Theme Base Colors
+$c_primary:		#376c7c;
+$c_secondary:	#3c377c;
+$c_accent:		#e85f00;
+
+// Secondary Colors
+$c_black:				mix(black, $c_primary, 90%);
+$c_grey20:			mix(black, $c_primary, 80%);
+$c_grey30:			mix(black, $c_primary, 70%);
+$c_grey40:			mix(black, $c_primary, 60%);
+$c_grey50:			mix(#808080, $c_primary, 50%);
+$c_grey60:			mix(white, $c_primary, 60%);
+$c_grey70:			mix(white, $c_primary, 70%);
+$c_grey80:			mix(white, $c_primary, 80%);
+$c_white:				mix(white, $c_primary, 90%);
+
+// Functional
+$c_basetext:		#484e4e;			// assumes light backgrounds
+$c_link:				#00f;
+$c_link--hov:		$c_accent;
+$c_link--act:		$c_accent;
+$c_link2:				#00f;					// link2 for dark backgrounds
+$c_link2--hov:	$c_accent;
+$c_link2--act:	$c_accent;
+
+
+// Color Utility Classes
+// TODO: Write a Mixin for Color utility classes
+.c_black {	color: $c_black;	}
+.c_white {	color: $c_white;	}
+
+.c_bg-black {	background-color: $c_black;	}
+.c_bg-white {	background-color: $c_white;	}
+
+

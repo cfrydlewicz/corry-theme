@@ -1,0 +1,15 @@
+@media print {
+
+	// Append Link URLs in print
+  a[href^="http"]:not([href*="mywebsite.com"])::after {
+    content: " [" attr(href) "]";
+  }
+
+  // Hide elements that are irrelevant in print
+  .header-search,
+  .navigation-container,
+  .footer-links-container {
+  	display: none;
+  }
+
+}
