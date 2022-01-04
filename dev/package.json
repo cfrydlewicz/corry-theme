@@ -1,8 +1,8 @@
 {
   "name": "Corry",
   "description": "Theme for corryfrydlewicz.com",
-  "version": "18.0.0",
-  "repository": "https://github.com/cfrydlewicz/corry18.git",
+  "version": "22.0.0",
+  "repository": "https://github.com/cfrydlewicz/corryNext",
   "devDependencies": {
     "grunt": "*",
     "grunt-autoprefixer": "*",
