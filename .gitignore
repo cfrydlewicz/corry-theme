@@ -2,3 +2,6 @@
 .DS_Store
 dev/node_modules
 dev/package-lock.json
+dev/css/*.concat.css
+dev/css/*.min.css
+dev/js/corry.concat.js

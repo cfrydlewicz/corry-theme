@@ -10,7 +10,7 @@
 	.third-col {
 		float: left;
 		width: 100%;
-		@media #{$not-sm} {
+		@media #{$mq-md} {
 			width: 33%;
 		}
 	}
@@ -89,7 +89,7 @@
 
 	.meter {
 		box-sizing: border-box;
-		background-color: $c-dark;
+		background-color: $c_grey20;
 		padding: .2rem .5rem;
 		h3 {
 			white-space: nowrap;
@@ -99,8 +99,8 @@
 	}
 	.skill {
 		color: #fff;
-		background-color: mix(black, $c-basetext, 29%);
-		background: repeating-linear-gradient( 45deg, mix(black, $c-basetext, 29%), mix(black, $c-basetext, 20%) 10px, mix(black, $c-basetext, 29%) 10px, mix(black, $c-basetext, 20%) 20px );
+		background-color: mix(black, $c_basetext, 29%);
+		background: repeating-linear-gradient( 45deg, mix(black, $c_basetext, 29%), mix(black, $c_basetext, 20%) 10px, mix(black, $c_basetext, 29%) 10px, mix(black, $c_basetext, 20%) 20px );
 		margin-bottom: .5rem;
 		&.level100 {
 /*    &::after {content: "100%";}  */

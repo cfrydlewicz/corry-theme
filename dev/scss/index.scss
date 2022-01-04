@@ -4,7 +4,7 @@
 .time-nav {
 	margin: 0 0 2rem;
 	a {
-		@extend .button-link;
+		//@extend .button-link;
 		&:first-child {
 			float: right;
 		}

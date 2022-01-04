@@ -29,7 +29,7 @@ em {
 		color: $c_black;
 	}
 	del {
-		color: $c_grey;
+		color: $c_grey50;
 	}
 	blockquote del {	// Exception for del elements within blockquotes (used for <cite>)
 		color: inherit;
