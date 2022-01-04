@@ -1,8 +1,9 @@
+/*jshint esversion: 6 */
 module.exports = function(grunt) {
 
+  const sass = require('node-sass');
   require('load-grunt-tasks')(grunt);
 
-	// Project configuration.
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 
@@ -16,12 +17,15 @@ module.exports = function(grunt) {
     },
 
     sass: {
+      options: {
+        implementation: sass,
+        sourceMap: false,
+        style: 'expanded'
+      },
       dist: {
-        options: {
-          style: 'expanded',
-        },
         files: {
-          'css/c18.concat.css' : 'scss/c18_manifest.scss'
+          'css/corry.concat.css' : 'scss/00_manifest.scss',
+          'css/critical.concat.css' : 'scss/00_critical.scss'
         }
       }
     },
@@ -31,14 +35,18 @@ module.exports = function(grunt) {
         browsers: ['last 2 version']
       },
       your_target: {
-        src: 'css/c18.concat.css'
+        src: 'css/*.concat.css'
       },
     },
 
     cssmin: {
-      minify: {
-        src: 'css/c18.concat.css',
-        dest: 'css/c18.min.css'
+      mintheme: {
+        src: 'css/corry.concat.css',
+        dest: 'css/corry.min.css'
+      },
+      mincritical: {
+        src: 'css/critical.concat.css',
+        dest: 'css/critical.min.css'
       }
     },
 
@@ -46,17 +54,17 @@ module.exports = function(grunt) {
       css: {
         // append WordPress Theme info
         src: [
-          'c18.wpinfo.css',
-          'css/c18.min.css'
+          'corry.wpinfo.css',
+          'css/corry.min.css'
         ],
         dest: '../style.css'
       },
       js : {
         src : [
-          'js/modernizr.custom.js',
+          //'js/modernizr.custom.js',
           'js/custom.js'
         ],
-        dest : 'js/c18.concat.js'
+        dest : 'js/corry.concat.js'
       }
     },
 
@@ -67,11 +75,11 @@ module.exports = function(grunt) {
     uglify: {
       options: {
         mangle: false,
-//        banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+        //banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
       },
       my_target: {
         files: {
-          '../scripts.js': ['js/c18.concat.js']
+          '../scripts.js': ['js/corry.concat.js']
         }
       }
     },

@@ -1,0 +1,37 @@
+/*
+==========================================================================
+SCSS MANIFEST
+==========================================================================
+Concatenate the files in the following order.
+*/
+
+// Reset
+@import "reset.scss";
+
+// Variables
+@import "breakpoints.scss";
+@import "colors.scss";
+@import "fonts.scss";
+
+// High-Level Styling
+@import "layout.scss";
+
+// Listings
+@import "index.scss";
+
+// Articles
+@import "article.scss";
+@import "article_animosity.scss";
+//@import "article_mtg-deck.scss";
+//@import "article_recipe.scss";
+
+// Pages
+@import "page.scss";
+@import "page_about.scss";
+@import "page_404.scss";
+
+// Wordpress Tweaks
+@import "wordpress.scss";
+
+// Utility Classes
+@import "utility.scss";

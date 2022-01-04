@@ -1,17 +1,22 @@
 {
   "name": "Corry",
   "description": "Theme for corryfrydlewicz.com",
-  "version": "18.0.0",
-  "repository": "https://github.com/cfrydlewicz/corry18.git",
+  "version": "22.0.0",
+  "repository": "https://github.com/cfrydlewicz/corryNext",
   "devDependencies": {
-    "grunt": "*",
-    "grunt-autoprefixer": "*",
-    "grunt-contrib-concat": "*",
-    "grunt-contrib-cssmin": "*",
-    "grunt-contrib-jshint": "*",
-    "grunt-contrib-uglify": "*",
-    "grunt-contrib-watch": "*",
-    "grunt-dev-update": "*",
-    "grunt-sass": "*"
+    "grunt": "^1.4.1",
+    "grunt-autoprefixer": "^3.0.4",
+    "grunt-contrib-concat": "^2.0.0",
+    "grunt-contrib-cssmin": "^4.0.0",
+    "grunt-contrib-jshint": "^3.1.1",
+    "grunt-contrib-uglify": "^5.0.1",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-dev-update": "^2.3.0",
+    "grunt-sass": "^3.1.0",
+    "node-sass": "^7.0.1"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.1",
+    "load-grunt-tasks": "^5.1.0"
   }
 }

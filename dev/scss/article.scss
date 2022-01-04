@@ -1,29 +1,8 @@
 // Article Specific Features
 .entry-container {
 
-
-	// Images
-	img,
-	figure,
-	picture {
-		max-width: 100%;
-		height: auto;
-	}
-
-
-	// Media
-	iframe,
-	embed,
-	.youtube-player {
-		display: block;
-		max-width: 100%;
-		margin: 0 auto;
-	}
-
-
 	// Quotes
 	blockquote {
-		// TODO: Remove un-needed properties
 		margin: 2em 0;
 		padding: .5em 1em 1.2em .5em;
 		quotes: "\201C""\201D""\2018""\2019";
@@ -71,7 +50,6 @@
 		}
 	}
 
-
 	// Horizontal Rules
 	hr {
 		margin: 2em auto;
@@ -80,7 +58,6 @@
 		border-top: 1px solid $c_accent;
 	}
 
-
 	// Tables
 	table {
 		border-collapse: collapse;
@@ -88,50 +65,34 @@
 		margin-bottom: 3em;
 		th, td {
 			padding: .25rem;
-			border: 1px solid $c_grey;
+			border: 1px solid $c_grey50;
 		}
 	}
-
-
-	// Forms
-	input,
-	select,
-	textarea {
-		max-width: 100%;
-	}
-
 
 	// Link Indentifying Icons
 	a[href*="amazon.com"] {
 		// TODO: Style text links with an icon.
 	}
 	a[href*="hbogo.com"],
+	a[href*="hbomax.com"],
 	a[href*="hbonow.com"] {
 		// TODO: Style text links with an icon.
 	}
-
 	a[href*="hulu.com"] {
 		// TODO: Style text links with an icon.
 	}
-
 	a[href*="netflix.com"] {
 		// TODO: Style text links with an icon.
 	}
-
 	a[href*="spotify.com"] {
 		// TODO: Style spotify text links with an icon.
 	}
-
 	a[href*="youtube.com"] {
 		// TODO: Style text links with an icon.
 	}
 
-
 	// Single Posts
 	.single & {
-
-
 	}
-
 
 }	// .entry-container
