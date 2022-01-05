@@ -30,17 +30,16 @@ $header_height: 40px;
     z-index: 1;
 
     .inner-wrapper {
-      align-items: center;
+      align-items: stretch;
       display: flex;
+      max-height: $header_height;
       opacity: 1;
     }
 
     .header-logo {
-      align-self: stretch;
       flex-grow: 1;
       svg {
-        height: 150%;
-        max-height: 150%; // let the y dangle over
+        height: 150%; // let the y dangle over
         z-index: 2;
         path {
           fill: $c_link;
@@ -51,8 +50,8 @@ $header_height: 40px;
         border-style: solid;
         border-width: 0 0 2px;
         display: block;
-        height: $header_height;
-        padding: 4px;
+        height: 100%;
+        padding: 4px 4px 2px;
         width: fit-content;
         &:hover {
           border-color: $c_white;
@@ -60,6 +59,19 @@ $header_height: 40px;
             fill: $c_white;
           }
         }
+      }
+    }
+
+    .header-nav {
+      ul {
+        display: flex;
+        list-style: none;
+      }
+    }
+
+    .header-search {
+      .search-container {
+        height: 100%;
       }
     }
 

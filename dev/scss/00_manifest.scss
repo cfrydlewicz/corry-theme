@@ -15,6 +15,7 @@ Concatenate the files in the following order.
 
 // High-Level Styling
 @import "layout.scss";
+@import "organisms.scss";
 
 // Listings
 @import "index.scss";
@@ -35,3 +36,6 @@ Concatenate the files in the following order.
 
 // Utility Classes
 @import "utility.scss";
+
+// Feature: Tones
+//@import "tones.scss";

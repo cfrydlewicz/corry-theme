@@ -1,0 +1,48 @@
+
+$border-radius: 2px;
+
+// Buttons
+button,
+input[type="submit"],
+.button {
+	background-color: $c_primary;
+	border-color: mix(black, $c_primary, 25%);
+	border-radius: $border-radius;
+	border-style: solid;
+	border-width: 2px;
+	font-weight: bold;
+	padding: 8px;
+	&:hover {
+		background-color: $c_secondary;
+		border-color: mix(black, $c_secondary, 25%);
+	}
+	&:active {
+		background-color: $c_accent;
+		border-color: mix(black, $c_accent, 25%);
+	}
+}
+
+// Text Inputs
+input {
+	border-radius: $border-radius;
+}
+
+// Search
+.search-container {
+  form {
+    display: flex;
+    height: 100%;
+  }
+  label {
+  	align-items: center;
+  	display: flex;
+  }
+	input[type="search"] {
+		border-bottom-right-radius: 0;
+		border-top-right-radius: 0;
+	}
+	input[type="submit"] {
+		border-bottom-left-radius: 0;
+		border-top-left-radius: 0;
+	}
+}
