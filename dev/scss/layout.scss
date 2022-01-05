@@ -9,55 +9,66 @@ $header_height: 40px;
   width: 100%;
 }
 
-header {
-  // Above-the-fold and nav elements should be considered for critical css
+.total-wrapper {
 
-  align-items: center;
-  background-color: rgba(0,0,0,0.5);
-  &:hover {
-    background-color: rgba(0,0,0,0.95);
-  }
-  display: flex;
-  max-height: $header_height;
-  position: fixed;
-  top: 0;
-  width: 100%;
+  > header {
+    // Above-the-fold and nav elements should be considered for critical css
 
-  .header-logo {
-    align-self: stretch;
-    flex-grow: 1;
-    svg {
-      height: 150%;
-      max-height: 150%; // let the y dangle over
-      path {
-        fill: $c_link;
-      }
+    background-color: rgba(0,0,0,0.5);
+    &:hover {
+      background-color: rgba(0,0,0,0.95);
     }
-    a {
-      border-color: transparent;
-      border-style: solid;
-      border-width: 0 0 0 1px;
-      display: block;
-      height: 100%;
-      padding: 4px;
-      &:hover {
-        border-color: $c_white;
-        svg path {
-          fill: $c_white;
+    max-height: $header_height;
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    .inner-wrapper {
+      align-items: center;
+      display: flex;
+    }
+
+    .header-logo {
+      align-self: stretch;
+      flex-grow: 1;
+      svg {
+        height: 150%;
+        max-height: 150%; // let the y dangle over
+        path {
+          fill: $c_link;
+        }
+      }
+      a {
+        border-color: transparent;
+        border-style: solid;
+        border-width: 0 0 0 1px;
+        display: block;
+        height: 100%;
+        padding: 4px;
+        &:hover {
+          border-color: $c_white;
+          svg path {
+            fill: $c_white;
+          }
         }
       }
     }
+
   }
 
-}
+  main {
 
-footer {
+  }
 
-  .follow-container {
-    ul {
-      display: flex;
-      list-style: none;
+  > footer {
+
+    .follow-container {
+      ul {
+        display: flex;
+        list-style: none;
+      }
     }
+
   }
 
 }
