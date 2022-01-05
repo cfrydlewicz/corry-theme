@@ -1,17 +1,14 @@
 /* Font Settings */
 
-$f_base-size:	16px;
-
-// Defaults
 body {
-	font-size: $f_base-size;
-	line-height: 1;
 	color: $c_basetext;
+  // font-family: 'Arimo', helvetica, sans-serif; // critical
+	font-size: 16px;
 	@media #{$mq-lg} {
-		font-size: $f_base-size * 1.125;
+		font-size: 16px;
 	}
 	@media #{$mq-xl} {
-		font-size: $f_base-size * 1.25;
+		font-size: 20px;
 	}
 }
 
@@ -271,18 +268,18 @@ blockquote {
 /* icomoon CSS */
 @font-face {
 	font-family: 'icomoon';
-	src:url('fonts/icomoon.eot?byte2f');
-	src:url('fonts/icomoon.eot?byte2f#iefix') format('embedded-opentype'),
-		url('fonts/icomoon.ttf?byte2f') format('truetype'),
-		url('fonts/icomoon.woff?byte2f') format('woff'),
-		url('fonts/icomoon.svg?byte2f#icomoon') format('svg');
+	src:url('assets/fonts/icomoon.eot?byte2f');
+	src:url('assets/fonts/icomoon.eot?byte2f#iefix') format('embedded-opentype'),
+		url('assets/fonts/icomoon.ttf?byte2f') format('truetype'),
+		url('assets/fonts/icomoon.woff?byte2f') format('woff'),
+		url('assets/fonts/icomoon.svg?byte2f#icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
 }
 
 .u_icomoon,
-[class^="icon-"], [class*=" icon-"] {
+[class^="i_"], [class*=" i_"] {
 	font-family: 'icomoon';
 	speak: none;
 	font-style: normal;
@@ -296,78 +293,78 @@ blockquote {
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.icon-home3::before {
+.i_home3::before {
 	content: "\e903";
 }
-.icon-bubbles::before {
+.i_bubbles::before {
 	content: "\e904";
 }
-.icon-heart::before {
+.i_heart::before {
 	content: "\e905";
 }
-.icon-plus::before {
+.i_plus::before {
 	content: "\e906";
 }
-.icon-minus::before {
+.i_minus::before {
 	content: "\e907";
 }
-.icon-cross::before {
+.i_cross::before {
 	content: "\e908";
 }
-.icon-checkmark::before {
+.i_checkmark::before {
 	content: "\e909";
 }
-.icon-arrow-up2::before {
+.i_arrow-up2::before {
 	content: "\e90a";
 }
-.icon-arrow-right2::before {
+.i_arrow-right2::before {
 	content: "\e90b";
 }
-.icon-arrow-down2::before {
+.i_arrow-down2::before {
 	content: "\e90c";
 }
-.icon-arrow-left2::before {
+.i_arrow-left2::before {
 	content: "\e90d";
 }
-.icon-mail2::before {
+.i_mail2::before {
 	content: "\e90e";
 }
-.icon-google-plus::before {
+.i_google-plus::before {
 	content: "\e90f";
 }
-.icon-facebook2::before {
+.i_facebook2::before {
 	content: "\e910";
 }
-.icon-twitter::before {
+.i_twitter::before {
 	content: "\e911";
 }
-.icon-steam::before {
+.i_steam::before {
 	content: "\e912";
 }
-.icon-github::before {
+.i_github::before {
 	content: "\e913";
 }
-.icon-wordpress::before {
+.i_wordpress::before {
 	content: "\e914";
 }
-.icon-skype::before {
+.i_skype::before {
 	content: "\e915";
 }
-.icon-reddit::before {
+.i_reddit::before {
 	content: "\e916";
 }
-.icon-search::before {
+.i_search::before {
 	content: "\e917";
 }
-.icon-spotify::before {
+.i_spotify::before {
 	content: "\e900";
 }
-.icon-twitch::before {
+.i_twitch::before {
 	content: "\e91a";
 }
-.icon-linkedin::before {
+.i_linkedin::before {
 	content: "\e901";
 }
-.icon-stackoverflow::before {
+.i_stackoverflow::before {
 	content: "\e902";
 }
