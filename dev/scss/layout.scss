@@ -70,18 +70,18 @@ $header_height: 40px;
         li {
           align-items: stretch;
           display: flex;
-          margin: 0 2px 0 0;
+          margin: 0;
           a {
             align-items: center;
             border-color: $c_grey50;
             border-style: solid;
             border-width: 0 1px 0 0;
-            &:first-child {
-              border-left-width: 1px;
-            }
             color: $c_white;
             display: flex;
             padding: 0 8px;
+          }
+          &:first-child a {
+            border-left-width: 1px;
           }
         }
       }
