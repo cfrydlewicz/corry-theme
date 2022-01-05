@@ -48,5 +48,6 @@
 	<?php else : ?>
 		<!--Single Post Not Found-->
 	<?php endif; ?>
+</main>
 
 <?php get_footer(); ?>
