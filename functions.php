@@ -51,23 +51,26 @@ function get_post_thumbnail_url() { // requires $post to be initialized
   }
 }
 
-add_filter('body_class','add_category_to_single');
-function add_category_to_single($classes) {
-  if (is_single() ) {
-    global $post;
-    foreach((get_the_category($post->ID)) as $category) {
-      $classes[] = 'category-'.$category->category_nicename;
-        $parent = $category->category_parent;
-        if ( $parent != '' ) {
+add_filter('body_class','cats_and_tags_classes');
+function cats_and_tags_classes($classes) {
+  global $post;
+  // categories (lowest in hierarchy)
+  foreach((get_the_category($post->ID)) as $category) {
+    $classes[] = 'category--'.$category->category_nicename;
+    $parent = $category->category_parent;
+    if ( $parent != '' ) {
+      $category = &get_category( $parent );
+      $classes[] = 'category--'.$category->category_nicename;
+      $parent = $category->category_parent;
+      if ( $parent != '' ) {
           $category = &get_category( $parent );
-          $classes[] = 'category-'.$category->category_nicename;
-          $parent = $category->category_parent;
-          if ( $parent != '' ) {
-              $category = &get_category( $parent );
-              $classes[] = 'category-'.$category->category_nicename;
-          }
-        }
+          $classes[] = 'category--'.$category->category_nicename;
+      }
     }
+  }
+  // tags
+  foreach((get_the_tags($post->ID)) as $tag) {
+    $classes[] = 'tag--'.$tag->tag_nicename;
   }
   return $classes;
 }
