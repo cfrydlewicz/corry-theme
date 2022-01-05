@@ -1,8 +1,12 @@
   <footer>
-		<div class="inner-wrapper u_flex u_flex--space-between">
+		<div class="inner-wrapper">
 
       <section class="copyright-footer">
-        <div class="f_smallest"><span class="copyright">&copy;<span itemprop="copyrightYear"><?php echo date('Y'); ?></span> <a href="mailto:cfrydlewicz@gmail.com" target="_blank"><span itemprop="copyrightHolder">Corry Frydlewicz</span></a>.</span> <span class="back-to-top"><a href="#">Back to Top &uarr;</a></span></div>
+        <div class="f_smallest"><span class="copyright">&copy;<span itemprop="copyrightYear"><?php echo date('Y'); ?></span> <a href="mailto:cfrydlewicz@gmail.com" target="_blank"><span itemprop="copyrightHolder">Corry Frydlewicz</span></a>.</span></div>
+      </section>
+
+      <section class="back-to-top">
+      	<a href="#">Back to Top &uarr;</a>
       </section>
 
       <section class="follow-container">

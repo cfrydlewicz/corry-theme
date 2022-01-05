@@ -12,23 +12,26 @@ $header_height: 40px;
 .total-wrapper {
   position: relative;
 
-  > header {
-    // Above-the-fold and nav elements should be considered for critical css
-
+  > header,
+  > footer {
     background-color: rgba($c_black, 0.5);
-    height: $header_height;
     &:hover {
       background-color: rgba($c_black, 0.95);
     }
-    position: fixed;
     width: 100%;
     z-index: 1;
+  }
+
+  > header {
+    // Above-the-fold and nav elements should be considered for critical css
+
+    height: $header_height;
+    position: fixed;
 
     .inner-wrapper {
       align-items: stretch;
       display: flex;
       max-height: $header_height;
-      opacity: 1;
     }
 
     .header-logo {
@@ -76,10 +79,21 @@ $header_height: 40px;
   }
 
   main {
-
+    padding-bottom: 36px;
   }
 
   > footer {
+    bottom: 0;
+    position: absolute;
+
+    .inner-wrapper {
+      align-items: stretch;
+      display: flex;
+      flex-wrap: wrap;
+      @media #{$mq_md} {
+        flex-wrap: nowrap;
+      }
+    }
 
     .follow-container {
       ul {

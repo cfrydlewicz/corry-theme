@@ -9,7 +9,7 @@
 .u_show--xl {
 	display: none;
 }
-@media #{$mq-md} {
+@media #{$mq_md} {
 	.u_hide--md {
 		display: none;
 	}
@@ -17,7 +17,7 @@
 		display: initial;
 	}
 }
-@media #{$mq-lg} {
+@media #{$mq_lg} {
 	.u_hide--lg {
 		display: none;
 	}
@@ -25,7 +25,7 @@
 		display: initial;
 	}
 }
-@media #{$mq-xl} {
+@media #{$mq_xl} {
 	.u_hide--xl {
 		display: none;
 	}
@@ -105,7 +105,7 @@
 	}
 
 }
-@media #{$mq-md} {
+@media #{$mq_md} {
 	.u_flex {
 		&.u_flex--row-nowrap--md {
 			-webkit-flex-flow: row nowrap;
@@ -121,7 +121,7 @@
 		}
 	}
 }
-@media #{$mq-lg} {
+@media #{$mq_lg} {
 	.u_flex {
 		&.u_flex--row-nowrap--lg {
 			-webkit-flex-flow: row nowrap;
@@ -137,7 +137,7 @@
 		}
 	}
 }
-@media #{$mq-xl} {
+@media #{$mq_xl} {
 	.u_flex {
 		&.u_flex--row-nowrap--xl {
 			-webkit-flex-flow: row nowrap;

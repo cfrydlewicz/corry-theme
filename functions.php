@@ -34,13 +34,6 @@ function post_thumbnail() {
 
 }
 
-function get_top_parent($cat){
-  $curr_cat = get_category_parents($cat, false, '/' ,true);
-  $curr_cat = explode('/',$curr_cat);
-  $idObj = get_category_by_slug($curr_cat[0]);
-  echo $id = $idObj->term_id;
-}
-
 function get_post_thumbnail_url() { // requires $post to be initialized
   $thumbnail = '';
   if (function_exists('has_post_thumbnail')) {

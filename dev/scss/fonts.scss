@@ -4,10 +4,10 @@ body {
 	color: $c_basetext;
   font-family: 'Arimo', helvetica, sans-serif;	// critical
 	font-size: 16px;
-	@media #{$mq-lg} {
+	@media #{$mq_lg} {
 		font-size: 16px;
 	}
-	@media #{$mq-xl} {
+	@media #{$mq_xl} {
 		font-size: 20px;
 	}
 }
@@ -20,7 +20,7 @@ strong {
 em {
 	font-style: italic;
 }
-.i_copy-area {
+.entry-content {
 	strong,
 	em {
 		color: $c_black;
@@ -46,24 +46,15 @@ a,
 .fakelink {
 	color: $c_link;
 	text-decoration: none;
-	.i_dark-bg & {
-		color: $c_link2;
-	}
-	.i_copy-area & {
+	.entry-content & {
 		text-decoration: underline;
 	}
 	&:hover {
-		color: $c_link--hov;
-		.i_dark-bg & {
-			color: $c_link2--hov;
-		}
+		color: $c_secondary;
 	}
 	&:active,
 	&:visited {
-		color: $c_link--act;
-		.i_dark-bg & {
-			color: $c_link2--act;
-		}
+		color: $c_accent;
 	}
 }
 
@@ -85,7 +76,7 @@ li {
 		margin-bottom: 0;
 	}
 }
-.i_copy-area {
+.entry-content {
 	h1 {
 		font-size: 2.1rem;
 		line-height: 1;
@@ -134,7 +125,7 @@ li {
 
 
 // Lists
-.i_copy-area {
+.entry-content {
 	ul,
 	ol {
 		padding-left: 2em;
@@ -179,7 +170,7 @@ li {
 
 
 // Tables
-.i_copy-area table {
+.entry-content table {
 	font-size: .9em;
 	line-height: 1.2;
 	p, li {
@@ -230,37 +221,37 @@ blockquote {
 /* text modifiers */
 .f_small {
 	font-size: .9rem;
-	.i_copy-area & {
+	.entry-content & {
 		font-size: .9em;
 	}
 }
 .f_smaller {
 	font-size: .75rem;
-	.i_copy-area & {
+	.entry-content & {
 		font-size: .75em;
 	}
 }
 .f_smallest {
 	font-size: .625rem;
-	.i_copy-area & {
+	.entry-content & {
 		font-size: .625em;
 	}
 }
 .f_large {
 	font-size: 1.1rem;
-	.i_copy-area & {
+	.entry-content & {
 		font-size: .1.1em;
 	}
 }
 .f_larger {
 	font-size: 1.25rem;
-	.i_copy-area & {
+	.entry-content & {
 		font-size: 1.25em;
 	}
 }
 .f_largest {
 	font-size: 1.4rem;
-	.i_copy-area & {
+	.entry-content & {
 		font-size: 1.4em;
 	}
 }

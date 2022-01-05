@@ -10,7 +10,7 @@
 	.third-col {
 		float: left;
 		width: 100%;
-		@media #{$mq-md} {
+		@media #{$mq_md} {
 			width: 33%;
 		}
 	}
