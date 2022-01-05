@@ -32,17 +32,36 @@
 
       <section class="entry-footer">
       	<div class="f_large">Thank you for reading!</div>
-      </section>
 
-			<?php if ( comments_open() ) : ?>
-	      <section class="comments-container">
-					<?php
-						if ( get_comments_number() ) {
-							comments_template();
-						}
-					?>
-				</section>
-			<?php endif; ?>
+				<?php if ( comments_open() ) : ?>
+		      <div class="comments-container">
+		      	<div class="post-footer_header">Discuss</div>
+						<?php
+							if ( get_comments_number() ) {
+								comments_template();
+							}
+						?>
+					</div>
+				<?php endif; ?>
+
+				<div class="share-container">
+					<div class="post-footer_header">Share</div>
+					<div>Copy Post URL</div>
+					<div>Share to Facebook</div>
+					<div>Tweet this Post</div>
+				</div>
+
+				<div class="read-more-container">
+					<?php if ( is_active_sidebar( 'home_right_1' ) ) : ?>
+						<div id="single-post-footer_widget" class="widget-area" role="complementary">
+							<?php dynamic_sidebar( 'widget_single-post-footer1' ); ?>
+						</div>
+					<?php else : ?>
+						<a href="/tag/favorite-post/">My Favorite Posts</a>
+					<?php endif; ?>
+				</div>
+
+      </section>
 
 		<?php endwhile; ?>
 	<?php else : ?>
