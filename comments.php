@@ -1,11 +1,6 @@
-<?php
-if ( post_password_required() ) {
-	return;
-}
-$comment_count = get_comments_number();
-?>
+<?php $comment_count = get_comments_number(); ?>
 
-<div id="comments" class="comments-area <?php echo get_option( 'show_avatars' ) ? 'show-avatars' : ''; ?>">
+<div id="comments" class="comments-area show_avatars">
 
 	<?php if ( have_comments() ) : ?>
 		<div class="comments-title f_larger">
@@ -21,31 +16,14 @@ $comment_count = get_comments_number();
 		</div><!-- .comments-title -->
 
 		<ol class="comment-list">
-			<?php wp_list_comments(
-				array(
-					'avatar_size' => 60,
-					'style'       => 'ol',
-					'short_ping'  => true,
-				)
-			); ?>
+			<?php wp_list_comments( array(
+				'avatar_size' => 60,
+				'style'       => 'ol',
+				'short_ping'  => true,
+			) ); ?>
 		</ol><!-- .comment-list -->
 
-		<?php the_comments_pagination(
-			array(
-				'before_page_number' => esc_html__( 'Page' ) . ' ',
-				'mid_size'           => 0,
-				'prev_text'          => sprintf(
-					'%s <span class="nav-prev-text">%s</span>',
-					is_rtl() ? twenty_twenty_one_get_icon_svg( 'ui', 'arrow_right' ) : twenty_twenty_one_get_icon_svg( 'ui', 'arrow_left' ),
-					esc_html__( 'Older comments' )
-				),
-				'next_text'          => sprintf(
-					'<span class="nav-next-text">%s</span> %s',
-					esc_html__( 'Newer comments' ),
-					is_rtl() ? twenty_twenty_one_get_icon_svg( 'ui', 'arrow_left' ) : twenty_twenty_one_get_icon_svg( 'ui', 'arrow_right' )
-				),
-			)
-		); ?>
+		<?php the_comments_pagination(); ?>
 
 	<?php endif; ?>
 
