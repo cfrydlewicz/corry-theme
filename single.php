@@ -52,7 +52,7 @@
 				</div>
 
 				<div class="read-more-container">
-					<?php if ( is_active_sidebar( 'home_right_1' ) ) : ?>
+					<?php if ( is_active_sidebar( 'widget_single-post-footer1' ) ) : ?>
 						<div id="single-post-footer_widget" class="widget-area" role="complementary">
 							<?php dynamic_sidebar( 'widget_single-post-footer1' ); ?>
 						</div>

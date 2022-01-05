@@ -64,19 +64,17 @@ function word_count() {
   echo $count;
 }
 
-function widgets_init() {
-  register_sidebar(
-    array(
-      'name'          => esc_html__( 'Post Footer' ),
-      'id'            => 'widget_single-post-footer1',
-      'description'   => esc_html__( 'Add widgets here to appear beneath single posts.' ),
-      'before_widget' => '<div id="%1$s" class="widget %2$s">',
-      'after_widget'  => '</div>',
-      'before_title'  => '<div class="widget-title">',
-      'after_title'   => '</div>',
-    )
-  );
-  add_action( 'widgets_init' );
+function corry_widgets_init() {
+  register_sidebar( array(
+    'name'          => 'Single Post Footer',
+    'id'            => 'widget_single-post-footer1',
+    'description'   => 'Appears beneath single posts.',
+    'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    'after_widget'  => '</div>',
+    'before_title'  => '<div class="widget-title">',
+    'after_title'   => '</div>',
+  ) );
+  add_action( 'widgets_init', 'corry_widgets_init' );
 }
 
 ?>
