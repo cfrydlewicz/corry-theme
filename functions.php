@@ -52,6 +52,7 @@ function get_post_thumbnail_url() { // requires $post to be initialized
 }
 
 add_filter('body_class','cats_and_tags_classes');
+add_filter('post_class','cats_and_tags_classes');
 function cats_and_tags_classes($classes) {
   global $post;
   // categories (lowest in hierarchy)
