@@ -40,7 +40,9 @@
 				<a href="#skip-to-content">Skip to content &gt;</a>
 			</section><!--.screen-reader-nav-->
 
-			<section><?php wp_nav_menu('primary'); ?></section>
+			<section class="header-nav">
+				<?php wp_nav_menu('primary'); ?>
+			</section>
 
 			<section class="header-search">
 				<div class="search-container icon-search"><?php get_search_form(); ?></div>
