@@ -14,11 +14,12 @@ $header_height: 40px;
   > header {
     // Above-the-fold and nav elements should be considered for critical css
 
-    background-color: rgba(0,0,0,0.5);
+    background-color: $c_black;
+    height: $header_height;
+    opacity: 0.5;
     &:hover {
-      background-color: rgba(0,0,0,0.95);
+      opacity: 0.95;
     }
-    max-height: $header_height;
     position: fixed;
     top: 0;
     width: 100%;
@@ -26,6 +27,7 @@ $header_height: 40px;
     .inner-wrapper {
       align-items: center;
       display: flex;
+      opacity: 1;
     }
 
     .header-logo {
@@ -43,7 +45,7 @@ $header_height: 40px;
         border-style: solid;
         border-width: 0 0 0 1px;
         display: block;
-        height: 100%;
+        height: $header_height;
         padding: 4px;
         &:hover {
           border-color: $c_white;

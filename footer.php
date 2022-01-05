@@ -29,4 +29,5 @@
 <!-- BEGIN elements opened in header.php -->
 </div><!-- /.total-wrapper -->
 
+<?php wp_footer(); ?>
 </body></html>

@@ -2,7 +2,7 @@
 
 body {
 	color: $c_basetext;
-  // font-family: 'Arimo', helvetica, sans-serif; // critical
+  font-family: 'Arimo', helvetica, sans-serif;	// critical
 	font-size: 16px;
 	@media #{$mq-lg} {
 		font-size: 16px;
