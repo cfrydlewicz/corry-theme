@@ -11,7 +11,7 @@
   <meta name="application-name" content="Corry">
   <meta name="msapplication-TileColor" content="#00aba9">
   <meta name="theme-color" content="#ffffff">
-	<title><?php wp_title( '|', true, 'right' ); ?></title>
+	<title><?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' | '; } ?><?php bloginfo('name'); ?></title>
 	<style>body{font-family:Arimo,helvetica,sans-serif}</style>
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
