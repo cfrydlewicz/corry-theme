@@ -35,7 +35,7 @@
         </div><!--.entry-content-->
 
         <footer class="entry-footer">
-          <a href="<?php esc_url(get_permalink()); ?>"><button>Read it Now!</button></a>
+          <a href="<?php echo str_replace(home_url(), '', get_permalink()); ?>" class="button">Read it Now!</a>
         </footer>
 
       </article>
