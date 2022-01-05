@@ -79,7 +79,7 @@ $header_height: 40px;
   }
 
   main {
-    padding-bottom: 36px;
+    padding-bottom: 60px;
   }
 
   > footer {
@@ -93,14 +93,26 @@ $header_height: 40px;
       @media #{$mq_md} {
         flex-wrap: nowrap;
       }
+      justify-content: space-between;
+    }
+
+    section {
+      padding: 4px 0;
     }
 
     .follow-container {
       ul {
         display: flex;
+        justify-content: center;
+        @media #{$mq_md} {
+          justify-content: flex-end;
+        }
         list-style: none;
         li {
-          margin: 0 0 0 2px;
+          margin: 0 4px;
+          a {
+            font-size: 24px;
+          }
         }
       }
     }

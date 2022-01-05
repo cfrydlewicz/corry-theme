@@ -6,7 +6,7 @@
       </section>
 
       <section class="back-to-top">
-      	<a href="#">Back to Top &uarr;</a>
+      	<a href="#" class="f_smallest">Back to Top &uarr;</a>
       </section>
 
       <section class="follow-container">
