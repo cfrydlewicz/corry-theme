@@ -14,12 +14,23 @@ function theme_setup() {
     'primary' => __( 'Top primary menu' )
   ) );
 
-  /* Switch default core markup for search form, comment form, and comments
-   * to output valid HTML5.
-   */
-  add_theme_support( 'html5', array(
-    'search-form', 'gallery', 'caption'
-  ) );
+  // Switch default core markup to HTML5
+  add_theme_support(
+    'html5',
+    array(
+      'comment-form',
+      'comment-list',
+      'gallery',
+      'caption',
+      'style',
+      'script',
+      'navigation-widgets',
+    )
+  );
+
+  // Widgets
+  add_theme_support( 'widgets' );
+  add_theme_support( 'widgets-block-editor' );
 
 }
 add_action( 'after_setup_theme', 'theme_setup' );
@@ -51,6 +62,21 @@ function word_count() {
   $strip_tags = wp_strip_all_tags( $filter_shortcode, true );
   $count = str_word_count( $strip_tags );
   echo $count;
+}
+
+function widgets_init() {
+  register_sidebar(
+    array(
+      'name'          => esc_html__( 'Post Footer' ),
+      'id'            => 'widget_single-post-footer1',
+      'description'   => esc_html__( 'Add widgets here to appear beneath single posts.' ),
+      'before_widget' => '<div id="%1$s" class="widget %2$s">',
+      'after_widget'  => '</div>',
+      'before_title'  => '<div class="widget-title">',
+      'after_title'   => '</div>',
+    )
+  );
+  add_action( 'widgets_init' );
 }
 
 ?>
