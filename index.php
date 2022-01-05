@@ -6,7 +6,7 @@
 	</header>
 <?php endif; ?>
 
-<main id="skip-to-content">
+<main id="skip-to-content" class="inner-wrapper">
   <?php if ( have_posts() ) : ?>
   	<?php while ( have_posts() ) : ?>
   		<?php the_post(); ?>
@@ -52,7 +52,7 @@
         <div class="entry-summary">
           <p>Sorry! Please <a href="#search">try another search</a> or <a href="/">return to the home page</a>.</p>
         </div><!-- .entry-summary -->
-      </div><!--.text-container-->
+      </div><!--.entry-content-->
     </section>
 
   <?php endif; ?>
