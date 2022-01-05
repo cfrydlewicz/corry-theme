@@ -3,6 +3,14 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="apple-mobile-web-app-title" content="Corry's Blog">
+  <meta name="application-name" content="Corry's Blog">
+  <meta name="msapplication-TileColor" content="#00aba9">
+  <meta name="theme-color" content="#ffffff">
 	<title><?php wp_title( '|', true, 'right' ); ?></title>
 	<style>body{font-family:Arimo,helvetica,sans-serif}</style>
 	<link rel="profile" href="http://gmpg.org/xfn/11">
