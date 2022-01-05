@@ -15,17 +15,12 @@ $header_height: 40px;
   > header {
     // Above-the-fold and nav elements should be considered for critical css
 
-    background-color: $c_black;
+    background-color: rgba($c_black, 0.5);
     height: $header_height;
-    opacity: 0.5;
     &:hover {
-      opacity: 0.95;
-    }
-    * /*, &:hover **/ {
-      opacity: 1;
+      background-color: rgba($c_black, 0.95);
     }
     position: fixed;
-    //top: 0;
     width: 100%;
     z-index: 1;
 
