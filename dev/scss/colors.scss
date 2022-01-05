@@ -15,10 +15,5 @@ $c_grey80:			mix(white, $c_primary, 80%);
 $c_white:				mix(white, $c_primary, 90%);
 
 // Functional
-$c_basetext:		#484e4e;			// assumes light backgrounds
-$c_link:				#00f;
-$c_link--hov:		$c_accent;
-$c_link--act:		$c_accent;
-$c_link2:				#00f;					// link2 for dark backgrounds
-$c_link2--hov:	$c_accent;
-$c_link2--act:	$c_accent;
+$c_basetext:		$c_white;
+$c_link:				$c_primary;
