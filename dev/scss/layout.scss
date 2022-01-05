@@ -20,6 +20,9 @@ $header_height: 40px;
     &:hover {
       opacity: 0.95;
     }
+    * /*, &:hover **/ {
+      opacity: 1;
+    }
     position: fixed;
     top: 0;
     width: 100%;
