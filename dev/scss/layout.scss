@@ -24,14 +24,12 @@ $header_height: 40px;
 
   > header {
     // Above-the-fold and nav elements should be considered for critical css
-
-    height: $header_height;
     position: fixed;
 
     .inner-wrapper {
       align-items: stretch;
       display: flex;
-      max-height: $header_height;
+      height: $header_height;
     }
 
     .header-logo {
@@ -61,10 +59,16 @@ $header_height: 40px;
     }
 
     .header-nav {
+      > div {
+        height: 100%;
+      }
       ul {
         display: flex;
+        height: 100%;
         list-style: none;
         li {
+          align-items: center;
+          display: flex;
           margin: 0 2px 0 0;
         }
       }
@@ -101,6 +105,10 @@ $header_height: 40px;
     }
 
     .follow-container {
+      width: 100%;
+      @media #{$mq_md} {
+        width: auto;
+      }
       ul {
         display: flex;
         justify-content: center;
