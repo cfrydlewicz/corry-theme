@@ -27,11 +27,12 @@ em {
 		color: $c_truewhite;
 	}
 	del {
-		color: $c_grey50;
+		color: $c_grey70;
 	}
 	blockquote del {	// Exception for del elements within blockquotes (used for <cite>)
 		color: inherit;
 	}
+	a,
 	span[style*="color:"] {	// Exception for when color is manually changed in the WP editor
 		strong,
 		em,
@@ -52,9 +53,11 @@ a,
 	&:hover {
 		color: $c_secondary;
 	}
-	&:active,
-	&:visited {
+	&:active {
 		color: $c_accent;
+	}
+	&:visited {
+		//color: $c_link;
 	}
 }
 
