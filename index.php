@@ -24,7 +24,7 @@
 
             <section class="post-meta">
               <div class="post-stats"><span class="word-count"><?php word_count(); ?> words</span> published on <span class="post-date"><?php the_date(); ?></span></div>
-              <div class="post-categories"><?php get_the_category_list(); ?></div>
+              <div class="post-categories"><?php the_category(); ?></div>
             </section>
 
           </div>
