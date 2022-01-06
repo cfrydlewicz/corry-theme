@@ -4,8 +4,10 @@ article {
 
 
   // Single Posts
-  .single & {
-    padding: 0 0 36px;
+  .single {
+	  & {
+	    padding: 0 0 36px;
+	  }
 
     // Post Footer
     .post-footer {
