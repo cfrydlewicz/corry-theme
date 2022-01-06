@@ -47,9 +47,6 @@ a,
 .fakelink {
   color: $c_link;
   text-decoration: none;
-  .entry-content & {
-    text-decoration: underline;
-  }
   &:hover {
     color: $c_secondary;
   }

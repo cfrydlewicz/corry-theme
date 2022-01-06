@@ -11,8 +11,45 @@
     url('assets/fonts/icomoon.svg?byte2f#icomoon') format('svg');
 }
 
-[class^="i_"]::before,
-[class*=" i_"]::before {
+.u_icomoon::after,
+.u_icomoon::before,
+.i_arrow-down::before,
+.i_arrow-left::before,
+.i_arrow-right::before,
+.i_arrow-up::before,
+.i_bubbles::before,
+.i_chat::before,
+.i_calendar::before,
+.i_checkbox::before,
+.i_checkbox--unchecked::before,
+.i_checkmark::before,
+.i_code::before,
+.i_cross::before,
+.i_close::before,
+.i_exit::before,
+.i_facebook::before,
+.i_github::before,
+.i_heart::before,
+.i_home::before,
+.i_instagram::before,
+.i_linkedin::before,
+.i_mail::before,
+.i_minus::before,
+.i_movie::before,
+.i_music::before,
+.i_nophone::before,
+.i_plus::before,
+.i_search::before,
+.i_share::before,
+.i_shopping::before,
+.i_spotify::before,
+.i_stackoverflow::before,
+.i_star::before,
+.i_steam::before,
+.i_twitch::before,
+.i_twitter::before,
+.i_youtube::before,
+.i_wordpress::before {
   font-family: 'icomoon';
   speak: none;
   font-style: normal;
@@ -21,7 +58,6 @@
   text-transform: none;
   line-height: 1;
 }
-
 .i_arrow-down::before {
   content: "\edbf";
 }
