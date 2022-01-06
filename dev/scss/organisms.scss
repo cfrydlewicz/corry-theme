@@ -46,10 +46,17 @@ input {
   input[type="search"] {
     background-color: $c_black;
     border-bottom-right-radius: 0;
+    border-color: $c_trueblack;
     border-top-right-radius: 0;
+    border-width: 2px 0 2px 2px;
     color: $c_truewhite;
     font-size: 1rem;
+    height: 100%;
     padding: 0 2px 0 8px;
+    width: 100px;
+    @media #{$mq_md} {
+      width: 160px;
+    }
     &:focus {
       background-color: $c_trueblack;
       border-width: 0;
@@ -57,11 +64,9 @@ input {
       outline-offset: -2px;
     }
   }
+  button,
   input[type="submit"] {
-    @extend .i_search;
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
-    color: transparent;
-    //font-size: 0;
   }
 }
