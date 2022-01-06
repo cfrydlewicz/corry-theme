@@ -96,8 +96,9 @@
                   if ( $commentNum > 0 ) {
                     echo ' <span class="comments-count">('.$commentNum.')</span>';
                   }
-                  comments_template(); ?>
+                ?>
               </div>
+              <?php comments_template(); ?>
             </section>
           <?php endif; ?>
 
