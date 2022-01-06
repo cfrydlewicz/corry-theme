@@ -10,7 +10,7 @@ input[type="submit"],
   border-radius: $border-radius;
   border-style: solid;
   border-width: 2px;
-  color: $c_white;
+  color: $c_trueblack;
   font-weight: bold;
   padding: 8px;
   &:hover {
@@ -30,6 +30,7 @@ input {
 
 // Search
 .search-container {
+  padding: 4px 0;
   form {
     display: flex;
     height: 100%;
@@ -41,12 +42,26 @@ input {
     align-items: center;
     display: flex;
   }
+  input[type="text"],
   input[type="search"] {
+    background-color: $c_black;
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;
+    color: $c_truewhite;
+    font-size: 1rem;
+    padding: 0 2px 0 8px;
+    &:focus {
+      background-color: $c_trueblack;
+      border-width: 0;
+      outline: 2px solid $c_accent;
+      outline-offset: -2px;
+    }
   }
   input[type="submit"] {
+    @extend .i_search;
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
+    color: transparent;
+    //font-size: 0;
   }
 }
