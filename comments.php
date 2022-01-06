@@ -2,9 +2,10 @@
 
   <ol class="comment-list">
     <?php wp_list_comments( array(
-      'avatar_size' => 48,
-      'style'       => 'ol',
-      'short_ping'  => true,
+      'avatar_size'       => 48,
+      'reverse_top_level' => true,
+      'style'             => 'ol',
+      'short_ping'        => true,
     ) ); ?>
   </ol><!-- .comment-list -->
 
@@ -18,7 +19,7 @@
       'logged_in_as'       => null,
       'title_reply'        => esc_html__( 'Leave a Comment' ),
       'title_reply_before' => '<div class="comment-reply-title">',
-      'title_reply_after'  => ' to <span class="comment-reply-author-name">'.comment_author().'</span></div>',
+      'title_reply_after'  => '</div>',
     )
   ); ?>
 </div>
