@@ -56,127 +56,129 @@ $header_height: 40px;
 .total-wrapper {
   background-color: $c_dark-base;
   position: relative;
+}
 
-  > header,
-  > footer {
-    width: 100%;
-    z-index: 1;
+.site-header,
+.site-footer {
+  width: 100%;
+  z-index: 1;
+}
+
+.site-header {
+  background: linear-gradient(320deg, rgba($c_grey20,0.625), rgba($c_dark-base,0.625));
+  &:hover {
+    @extend .grainy;
+  }
+  // Above-the-fold and nav elements should be considered for critical css
+  position: fixed;
+
+  .inner-wrapper {
+    align-items: stretch;
+    display: flex;
+    height: $header_height;
+    padding-left: 0;
+    padding-right: 0;
   }
 
-  > header {
-    background: linear-gradient(320deg, rgba($c_grey20,0.5), rgba($c_dark-base,0.5));
-    &:hover {
-      @extend .grainy;
+  .header-logo {
+    flex-grow: 1;
+    margin-right: 12px;
+    svg {
+      height: 150%; // let the y dangle over
+      z-index: 2;
+      path {
+        fill: $c_link;
+      }
     }
-    // Above-the-fold and nav elements should be considered for critical css
-    position: fixed;
+    a {
+      display: block;
+      height: 100%;
+      padding: 4px;
+      width: fit-content;
+      &:hover {
+        svg path {
+          fill: $c_accent;
+        }
+      }
+    }
+  }
 
-    .inner-wrapper {
-      align-items: stretch;
+  .header-nav {
+    > div {
+      height: 100%;
+    }
+    ul {
       display: flex;
-      height: $header_height;
-      padding-left: 0;
-      padding-right: 0;
-    }
-
-    .header-logo {
-      flex-grow: 1;
-      margin-right: 12px;
-      svg {
-        height: 150%; // let the y dangle over
-        z-index: 2;
-        path {
-          fill: $c_link;
-        }
-      }
-      a {
-        display: block;
-        height: 100%;
-        padding: 4px;
-        width: fit-content;
-        &:hover {
-          svg path {
-            fill: $c_accent;
-          }
-        }
-      }
-    }
-
-    .header-nav {
-      > div {
-        height: 100%;
-      }
-      ul {
+      height: 100%;
+      list-style: none;
+      li {
+        align-items: stretch;
         display: flex;
-        height: 100%;
-        list-style: none;
-        li {
-          align-items: stretch;
+        margin: 0;
+        a {
+          @extend .bezel--horizontal;
+          align-items: center;
           display: flex;
-          margin: 0;
-          a {
-            @extend .bezel--horizontal;
-            align-items: center;
-            color: $c_white;
-            display: flex;
-            padding: 0 8px;
+          padding: 0 8px;
+          &:hover {
+            @extend .grainy;
+            text-decoration: underline;
           }
         }
       }
     }
+  }
 
-    .header-search {
-      margin-left: 8px;
-      .search-container {
-        height: 100%;
-      }
+  .header-search {
+    margin-left: 8px;
+    .search-container {
+      height: 100%;
     }
-
   }
 
-  main {
-    padding-bottom: 60px;
+}
+
+main {
+  padding-bottom: 60px;
+}
+
+.site-footer {
+  bottom: 0;
+  position: absolute;
+
+  .inner-wrapper {
+    align-items: stretch;
+    display: flex;
+    flex-wrap: wrap;
+    @media #{$mq_md} {
+      flex-wrap: nowrap;
+    }
+    justify-content: space-between;
   }
 
-  > footer {
-    bottom: 0;
-    position: absolute;
+  section {
+    padding: 4px 0;
+  }
 
-    .inner-wrapper {
-      align-items: stretch;
+  .follow-container {
+    width: 100%;
+    @media #{$mq_md} {
+      width: auto;
+    }
+    ul {
       display: flex;
-      flex-wrap: wrap;
+      justify-content: center;
       @media #{$mq_md} {
-        flex-wrap: nowrap;
+        justify-content: flex-end;
       }
-      justify-content: space-between;
-    }
-
-    section {
-      padding: 4px 0;
-    }
-
-    .follow-container {
-      width: 100%;
-      @media #{$mq_md} {
-        width: auto;
-      }
-      ul {
-        display: flex;
-        justify-content: center;
-        @media #{$mq_md} {
-          justify-content: flex-end;
-        }
-        list-style: none;
-        li {
-          margin: 0 4px;
-          a {
-            font-size: 24px;
-          }
+      list-style: none;
+      li {
+        margin: 0 4px;
+        a {
+          font-size: 24px;
         }
       }
     }
-
   }
 
 }

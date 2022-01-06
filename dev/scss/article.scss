@@ -1,10 +1,18 @@
+article {
+
+}
+
 // Post Cards
 body.home,
 body.search-results {
+  article {
+
+  }
 }
 
 // Single Posts
 body.single {
+
   main article {
     padding: 0 0 36px;
 

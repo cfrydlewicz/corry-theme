@@ -24,7 +24,7 @@
 <body <?php body_class(); ?>>
 
 <div class="total-wrapper">
-  <header>
+  <header class="site-header">
     <div class="inner-wrapper">
 
       <section class="header-logo">
