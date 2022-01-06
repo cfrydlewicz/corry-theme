@@ -11,10 +11,6 @@ body.single {
     // Text Links
     a {
       text-decoration: underline;
-      &::after,
-      &::before {
-        text-decoration: none;
-      }
     }
 
     // Quotes
