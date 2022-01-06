@@ -8,6 +8,20 @@ $header_height: 40px;
   padding: 0 16px;
   width: 100%;
 }
+@media #{$mq_sm-only} {
+  .inner-wrapper--sm-only {
+    padding: 0 16px;
+    width: 100%;
+  }
+}
+@media #{$mq_md} {
+  .inner-wrapper--at-md {
+    margin: 0 auto;
+    max-width: 1056px;
+    padding: 0 16px;
+    width: 100%;
+  }
+}
 
 // Anchor Links Accommodate Fixed Header
 [id^="a_"] {
@@ -22,11 +36,13 @@ $header_height: 40px;
 }
 
 .total-wrapper {
+  @extend .grainy;
   background-color: $c_dark-base;
   position: relative;
 
   > header,
   > footer {
+    @extend .grainy;
     background-color: rgba($c_black, 0.5);
     &:hover {
       background-color: rgba($c_black, 0.95);
@@ -119,6 +135,14 @@ $header_height: 40px;
           flex-direction: row;
         }
         flex-wrap: wrap;
+        > div {
+          @extend .grainy;
+          border-color: $c_black;
+          border-style: solid;
+          border-top-color: $c_white;
+          border-width: 1px 0;
+          padding: 24px 16px;
+        }
 
         //headers
         .post-footer_header {
@@ -127,6 +151,7 @@ $header_height: 40px;
         }
 
         .thanks-container {
+          text-align: center;
           width: 100%;
         }
 
