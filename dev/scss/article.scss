@@ -11,6 +11,37 @@ body.single {
     // Text Links
     a {
       text-decoration: underline;
+      &::before {
+        font-size: 0.75em;
+        margin: 0 2px;
+      }
+      &[target="_blank"] {
+        @extend .u_icomoon;
+        &::after {
+          content: "\ed7b";
+          font-size: 0.625em;
+          margin: 1px 2px 0;
+          vertical-align: text-top;
+        }
+      }
+      &[href*="amazon.com"] {
+        @extend .i_shopping;
+      }
+      &[href*="disneyplus.com"],
+      &[href*="hbogo.com"],
+      &[href*="hbomax.com"],
+      &[href*="hbonow.com"],
+      &[href*="hulu.com"],
+      &[href*="netflix.com"] {
+        @extend .i_movie;
+      }
+      &[href*="spotify.com"] {
+        @extend .i_spotify;
+      }
+      &[href*="youtube.com"],
+      &[href*="youtu.be"] {
+        @extend .i_youtube;
+      }
     }
 
     // Quotes
@@ -79,34 +110,6 @@ body.single {
         padding: .25rem;
         border: 1px solid $c_grey50;
       }
-    }
-
-    // Links w/ Identifying Icons
-    a[target="_blank"] {
-      @extend .u_icomoon;
-      padding-right: 1.25em;
-      &::after {
-        content: "\ed7b";
-        font-size: 0.75em;
-      }
-    }
-    a[href*="amazon.com"] {
-      @extend .i_shopping;
-    }
-    a[href*="disneyplus.com"],
-    a[href*="hbogo.com"],
-    a[href*="hbomax.com"],
-    a[href*="hbonow.com"],
-    a[href*="hulu.com"],
-    a[href*="netflix.com"] {
-      @extend .i_movie;
-    }
-    a[href*="spotify.com"] {
-      @extend .i_spotify;
-    }
-    a[href*="youtube.com"],
-    a[href*="youtu.be"] {
-      @extend .i_youtube;
     }
 
   }
