@@ -130,9 +130,15 @@ $header_height: 40px;
   }
 
   .header-search {
-    margin-left: 8px;
+    @extend .bezel--horizontal;
+    padding: 0 8px;
+    &:hover,
+    &:focus-within {
+      @extend .grainy;
+    }
     .search-container {
       height: 100%;
+      padding: 6px 0;
     }
   }
 
