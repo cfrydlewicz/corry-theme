@@ -27,8 +27,8 @@
           </section>
 
           <footer class="entry-footer">
-            <div class="post-categories">Categorized: <?php the_category(); ?></div>
-            <div class="post-tags">Tagged: <?php the_tags(); ?></div>
+            <div class="post-categories">Categories: <?php the_category(); ?></div>
+            <div class="post-tags"><?php the_tags(); ?></div>
           </footer>
         </div>
       </article>

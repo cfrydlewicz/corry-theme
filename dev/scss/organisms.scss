@@ -11,6 +11,7 @@ input[type="submit"],
   border-style: solid;
   border-width: 2px;
   color: $c_trueblack;
+  cursor: pointer;
   font-weight: bold;
   padding: 8px;
   &:hover {
@@ -23,9 +24,12 @@ input[type="submit"],
   }
 }
 
-// Text Inputs
+// Form Inputs
 input {
   border-radius: $border-radius;
+}
+label {
+  cursor: pointer;
 }
 
 // Search
