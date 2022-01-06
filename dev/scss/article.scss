@@ -1,5 +1,5 @@
-// Articles are used for Pages, Listings, and Single Posts
 article {
+  // Articles are used for Pages, Listings, Single Posts, and Comments
 
   .entry-header {
     position: relative;
@@ -32,7 +32,7 @@ body.single .post-footer .read-more-container {
 // Single Posts
 body.single {
 
-  main article {
+  main > article {
     padding: 0 0 36px;
 
     // Text Links
@@ -162,6 +162,9 @@ body.single {
       @extend .grainy;
       @extend .bezel--vertical;
       padding: 24px 16px;
+      &:last-of-type {
+        padding-bottom: 36px;
+      }
 
       ul {
         list-style: none;
@@ -182,9 +185,33 @@ body.single {
 
     // Comments
     .comments-container {
+
+      ol {
+        list-style: none;
+      }
+
+      article {
+        display: flex;
+        flex-direction: column;
+        .comment-content {
+          order: 1;
+        }
+        .comment-meta {
+          order: 2;
+        }
+        .reply {
+          order: 3;
+          text-align: right;
+          a {
+            @extend .button--small;
+          }
+        }
+      }
+
       p[class*="akismet"] {
         @extend .f_smallest;
       }
+
     }
 
   }

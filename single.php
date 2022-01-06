@@ -9,6 +9,7 @@
         $postId = get_the_ID();
         $postTitle = get_the_title();
         $postShortUrl = "https://corry.us/?p=".$postId;
+        $commentNum = get_comments_number();
       ?>
 
       <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -48,8 +49,8 @@
             <div class="post-footer_header">Discuss</div>
             <ul>
               <?php if ( comments_open() ) : ?>
-                <?php if ( get_comments_number() ) : ?>
-                  <li><a class="i_arrow-down" href="#a_comments_top">View Comments (<?php echo get_comments_number(); ?>)</a></li>
+                <?php if ( $commentNum > 0 ) : ?>
+                  <li><a class="i_arrow-down" href="#a_comments_top">View Comments (<?php echo $commentNum; ?>)</a></li>
                 <?php endif; ?>
                 <li><a class="i_chat" href="#a_respond">Leave a Comment</a></li>
               <?php endif; ?>
@@ -90,12 +91,13 @@
 
           <?php if ( comments_open() ) : ?>
             <section id="a_comments_top" class="comments-container t_slides-up">
-              <div class="post-footer_header">Comments</div>
-              <?php
-                if ( get_comments_number() ) {
-                  comments_template();
-                }
-              ?>
+              <div class="post-footer_header">
+                <span>Comments</span><?php
+                  if ( $commentNum > 0 ) {
+                    echo ' <span class="comments-count">('.$commentNum.')</span>';
+                  }
+                  comments_template(); ?>
+              </div>
             </section>
           <?php endif; ?>
 

@@ -2,8 +2,6 @@
 $border-radius: 12px;
 
 // Buttons
-button,
-input[type="submit"],
 .button {
   background-color: $c_primary;
   border-color: mix(black, $c_primary, 25%);
@@ -14,6 +12,7 @@ input[type="submit"],
   cursor: pointer;
   font-weight: bold;
   padding: 8px;
+  text-decoration: none;
   &:hover {
     background-color: $c_hover;
     border-color: mix(black, $c_hover, 25%);
@@ -22,6 +21,16 @@ input[type="submit"],
     background-color: $c_active;
     border-color: mix(black, $c_active, 25%);
   }
+  &--small {
+    @extend .f_small;
+    border-radius: $border-radius/2;
+    border-width: 1px;
+    padding: 4px;
+  }
+}
+button,
+input[type="submit"] {
+  @extend .button;
 }
 
 // Text Fields
@@ -43,6 +52,9 @@ textarea {
     border-color: $c_active;
     outline-width: 0;
   }
+}
+textarea {
+  resize: none;
 }
 label {
   cursor: pointer;
