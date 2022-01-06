@@ -6,7 +6,7 @@
 	</header>
 <?php endif; ?>
 
-<main id="skip-to-content" class="inner-wrapper">
+<main id="a_skip-to-content" class="inner-wrapper">
   <?php if ( have_posts() ) : ?>
   	<?php while ( have_posts() ) : ?>
   		<?php the_post(); ?>
@@ -50,7 +50,7 @@
       <div class="entry-content">
         <h2 class="entry-title">No Results Found</h2>
         <div class="entry-summary">
-          <p>Sorry! Please <a href="#search">try another search</a> or <a href="/">return to the home page</a>.</p>
+          <p>Sorry! Please <a href="#a_search">try another search</a> or <a href="/">return to the home page</a>.</p>
         </div><!-- .entry-summary -->
       </div><!--.entry-content-->
     </section>

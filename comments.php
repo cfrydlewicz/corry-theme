@@ -1,6 +1,6 @@
 <?php $comment_count = get_comments_number(); ?>
 
-<div id="comments" class="comments-area show_avatars">
+<div id="a_comments" class="comments-area show_avatars">
 
 	<?php if ( have_comments() ) : ?>
 		<div class="comments-title f_larger">
@@ -31,7 +31,7 @@
 		array(
 			'logged_in_as'       => null,
 			'title_reply'        => esc_html__( 'Leave a Comment' ),
-			'title_reply_before' => '<div id="reply-title" class="comment-reply-title">',
+			'title_reply_before' => '<div id="a_reply-title" class="comment-reply-title">',
 			'title_reply_after'  => '</div>',
 		)
 	); ?>

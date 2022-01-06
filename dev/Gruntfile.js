@@ -61,7 +61,6 @@ module.exports = function(grunt) {
       },
       js : {
         src : [
-          //'js/modernizr.custom.js',
           'js/custom.js'
         ],
         dest : 'js/corry.concat.js'

@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main id="skip-to-content" class="inner-wrapper">
+<main id="a_skip-to-content" class="inner-wrapper">
   <?php if ( have_posts() ) : ?>
   	<?php while ( have_posts() ) : ?>
   		<?php the_post(); ?>
@@ -40,7 +40,7 @@
 	      	<div class="post-footer_header">Discuss</div>
 	      	<ul>
 						<?php if ( comments_open() && get_comments_number() ) : ?>
-							<li><a href="#comments_top">Comments</a></li>
+							<li><a href="#a_comments_top">Comments</a></li>
 						<?php endif; ?>
 						<li><a class="i_twitter" href="https://twitter.com/intent/tweet?text=%40cfrydlewicz%20Re%3A%20https://corry.us/<?php wp_get_shortlink(); ?>" target="_blank">Discuss on Twitter</a>
 						<li><a class="i_facebook2" href="https://www.facebook.com/groups/4912504758808432/?ref=share" target="_blank">Facebook Group</a></li>
@@ -68,7 +68,7 @@
 				</div>
 
 				<?php if ( comments_open() ) : ?>
-		      <div id="comments_top" class="comments-container">
+		      <div id="a_comments_top" class="comments-container">
 		      	<div class="post-footer_header">Comments</div>
 						<?php
 							if ( get_comments_number() ) {

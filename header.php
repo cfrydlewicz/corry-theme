@@ -37,7 +37,7 @@
 			</section><!--.header-logo-->
 
 			<section class="screen-reader-nav u_visually-hidden">
-				<a href="#skip-to-content">Skip to content &gt;</a>
+				<a href="#a_skip-to-content">Skip to content &gt;</a>
 			</section><!--.screen-reader-nav-->
 
 			<section class="header-nav">
