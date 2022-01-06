@@ -66,15 +66,15 @@ function word_count() {
 
 function corry_widgets_init() {
   register_sidebar( array(
-    'name'          => 'Single Post Footer',
+    'name'          => __( 'Single Post Footer', 'corry' ),
     'id'            => 'widget_single-post-footer1',
-    'description'   => 'Appears beneath single posts.',
+    'description'   => __( 'Appears beneath single posts.', 'corry' ),
     'before_widget' => '<div id="%1$s" class="widget %2$s">',
     'after_widget'  => '</div>',
     'before_title'  => '<div class="widget-title">',
     'after_title'   => '</div>',
   ) );
-  add_action( 'widgets_init', 'corry_widgets_init' );
 }
+add_action( 'widgets_init', 'corry_widgets_init' );
 
 ?>
