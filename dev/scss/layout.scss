@@ -3,25 +3,20 @@
 $header_height: 40px;
 
 .inner-wrapper {
-  margin: 0 auto;
-  max-width: 1056px;
   padding: 0 16px;
   width: 100%;
 }
-/*
-@media #{$mq_sm-only} {
-  .inner-wrapper--sm-only {
+@media #{$mq_md} {
+  .inner-wrapper--at-md {
     padding: 0 16px;
     width: 100%;
   }
 }
-*/
-@media #{$mq_md} {
+@media #{$mq_lg} {
+  .inner-wrapper,
   .inner-wrapper--at-md {
     margin: 0 auto;
     max-width: 1056px;
-    padding: 0 16px;
-    width: 100%;
   }
 }
 
@@ -60,12 +55,6 @@ $header_height: 40px;
   position: relative;
 }
 
-.site-header,
-.site-footer {
-  width: 100%;
-  z-index: 1;
-}
-
 .site-header {
   background: linear-gradient(320deg, rgba($c_grey20,0.625), rgba($c_dark-base,0.625));
   &:hover {
@@ -73,6 +62,8 @@ $header_height: 40px;
   }
   // Above-the-fold and nav elements should be considered for critical css
   position: fixed;
+  width: 100vw;
+  z-index: 1;
 
   .inner-wrapper {
     align-items: stretch;
@@ -179,7 +170,7 @@ main {
       }
       list-style: none;
       li {
-        margin: 0 4px;
+        margin: 0;
         a {
           font-size: 24px;
         }

@@ -1,10 +1,29 @@
+// Articles are used for Pages, Listings, and Single Posts
 article {
+
+  .entry-header {
+    position: relative;
+    img {
+      // Post Thumbnail
+    }
+    .thumbnail-overlay {
+      position: absolute;
+      > div {
+        background-color: rgba($c_black,0.75);
+        &:hover {
+          background-color: $c_black;
+        }
+        position: sticky;
+      }
+    }
+  }
 
 }
 
-// Post Cards
+// Listings Cards
 body.home,
-body.search-results {
+body.search-results,
+body.single .post-footer .read-more-container {
   article {
 
   }
@@ -150,18 +169,15 @@ body.single {
 
     }
 
-    //headers
-    .post-footer_header {
-      @extend .f_large;
-      margin-bottom: 1em;
-    }
-
     .thanks-container {
       text-align: center;
       width: 100%;
     }
 
-    .read-more-container {
+    // headers
+    .post-footer_header {
+      @extend .f_largest;
+      margin-bottom: 1em;
     }
 
   }
