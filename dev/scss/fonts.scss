@@ -10,8 +10,9 @@ body {
 	@media #{$mq_xl} {
 		font-size: 20px;
 	}
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
-
 
 // Emphasis
 strong {
@@ -40,7 +41,6 @@ em {
 	}
 }
 
-
 // Links
 a,
 .fakelink {
@@ -57,7 +57,6 @@ a,
 		color: $c_accent;
 	}
 }
-
 
 // Copy
 p,
@@ -123,7 +122,6 @@ li {
 	}
 }
 
-
 // Lists
 .entry-content {
 	ul,
@@ -168,7 +166,6 @@ li {
 	}
 }
 
-
 // Tables
 .entry-content table {
 	font-size: .9em;
@@ -182,7 +179,6 @@ li {
 		letter-spacing: 1px;
 	}
 }
-
 
 // Quotes
 blockquote {
@@ -269,8 +265,9 @@ blockquote {
 	font-display: swap;
 }
 
-.u_icomoon,
-[class^="i_"], [class*=" i_"] {
+.u_icomoon::before,
+[class^="i_"]::before,
+[class*=" i_"]::before {
 	font-family: 'icomoon';
 	speak: none;
 	font-style: normal;
@@ -278,10 +275,6 @@ blockquote {
 	font-variant: normal;
 	text-transform: none;
 	line-height: 1;
-
-	/* Better Font Rendering =========== */
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
 }
 
 .i_home3::before {
