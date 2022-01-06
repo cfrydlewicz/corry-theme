@@ -1,4 +1,4 @@
-/* icomoon CSS */
+// https://icomoon.io/app/
 @font-face {
 	font-display: swap;
 	font-family: 'icomoon';
@@ -23,80 +23,109 @@
 }
 
 .i_arrow-down::before {
-	content: "\e90c";
+	content: "\edbf";
 }
 .i_arrow-left::before {
-	content: "\e90d";
+	content: "\edc3";
 }
 .i_arrow-right::before {
-	content: "\e90b";
+	content: "\edbb";
 }
 .i_arrow-up::before {
-	content: "\e90a";
+	content: "\edb7";
 }
-.i_bubbles::before {
-	content: "\e904";
+.i_bubbles::before,
+.i_chat::before {
+	content: "\eac5";
+}
+.i_calendar::before {
+	content: "\ea60";
+}
+.i_checkbox::before {
+	content: "\ee6e";
+}
+.i_checkbox--unchecked::before {
+	content: "\ee6f";
 }
 .i_checkmark::before {
-	content: "\e909";
+	content: "\ed6f";
 }
-.i_cross::before {
-	content: "\e908";
+.i_code::before {
+	content: "\eecd";
+}
+.i_cross::before,
+.i_close::before {
+	content: "\ed6c";
+}
+.i_exit::before {
+	content: "\ed7b";
 }
 .i_facebook::before {
-	content: "\e910";
+	content: "\eef0";
 }
 .i_github::before {
-	content: "\e913";
+	content: "\ef0f";
 }
 .i_heart::before {
-	content: "\e905";
+	content: "\ecef";
 }
 .i_home::before {
-	content: "\e903";
+	content: "\e904";
 }
 .i_instagram::before {
-	content: "\e16c";
+	content: "\eef1";
 }
 .i_linkedin::before {
-	content: "\e901";
+	content: "\ef28";
 }
 .i_mail::before {
-	content: "\e90e";
+	content: "\ea30";
 }
 .i_minus::before {
-	content: "\e907";
+	content: "\ed5c";
 }
 .i_movie::before {
-	content: "\e034";
+	content: "\e959";
+}
+.i_music::before {
+	content: "\e94c";
+}
+.i_nophone::before {
+	content: "\ea1e";
 }
 .i_plus::before {
-	content: "\e906";
+	content: "\ed5b";
 }
 .i_search::before {
-	content: "\e917";
+	content: "\eb30";
+}
+.i_share::before {
+	content: "\eec8";
 }
 .i_shopping::before {
-	content: "\e035";
+	content: "\ea02";
 }
 .i_spotify::before {
-	content: "\e900";
+	content: "\eef3";
 }
 .i_stackoverflow::before {
-	content: "\e902";
+	content: "\ef2f";
+}
+.i_star::before {
+	content: "\ece5";
 }
 .i_steam::before {
-	content: "\e912";
+	content: "\ef0c";
 }
 .i_twitch::before {
-	content: "\e91a";
+	content: "\eefe";
 }
 .i_twitter::before {
-	content: "\e911";
+	content: "\eef5";
 }
 .i_youtube::before {
-	content: "\e173";
+	content: "\eefc";
 }
 .i_wordpress::before {
-	content: "\e914";
+	content: "\ef13";
 }
