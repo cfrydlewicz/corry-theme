@@ -1,7 +1,7 @@
 // Resets & Personal preferences
 * {
-	box-sizing: border-box;
-	max-width: 100%;
+  box-sizing: border-box;
+  max-width: 100%;
 }
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -12,49 +12,49 @@ dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td {
   background-repeat: no-repeat;
-	border: 0;
-	font-size: 100%;
-	font-style: inherit;
-	font-weight: inherit;
-	margin: 0;
-	outline: 0;
-	padding: 0;
-	vertical-align: baseline;
+  border: 0;
+  font-size: 100%;
+  font-style: inherit;
+  font-weight: inherit;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  vertical-align: baseline;
 }
 html {
-	scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 body {
-	// Dark Mode
-	background-color: black;
-	color: white;
-	line-height: 1;
+  // Dark Mode
+  background-color: black;
+  color: white;
+  line-height: 1;
 }
 embed,
 iframe,
 img,
 video {
-	display: block;
-	height: auto;
-	max-width: 100%;
+  display: block;
+  height: auto;
+  max-width: 100%;
 }
 table {
-	border-collapse: separate;
-	border-spacing: 0;
+  border-collapse: separate;
+  border-spacing: 0;
 }
 caption, th, td {
-	text-align: left;
-	font-weight: normal;
+  text-align: left;
+  font-weight: normal;
 }
 blockquote::before, blockquote::after,
 q::before, q::after {
-	content: "";
+  content: "";
 }
 blockquote, q {
-	quotes: "" "";
+  quotes: "" "";
 }
 input,
 select,
 textarea {
-	max-width: 100%;
+  max-width: 100%;
 }

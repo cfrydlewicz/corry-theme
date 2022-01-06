@@ -1,6 +1,6 @@
 @media print {
 
-	// Append Link URLs in print
+  // Append Link URLs in print
   a[href^="http"]:not([href*="mywebsite.com"])::after {
     content: " [" attr(href) "]";
   }
@@ -9,7 +9,7 @@
   .header-search,
   .navigation-container,
   .footer-links-container {
-  	display: none;
+    display: none;
   }
 
 }

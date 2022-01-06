@@ -1,22 +1,22 @@
 // Theme Base Colors
-$c_primary:		#7dfcd6; // cyan
-$c_secondary:	#fd32db; // magenta
-$c_accent:		#d6622b; // orange
+$c_primary:   #7dfcd6; // cyan
+$c_secondary: #fd32db; // magenta
+$c_accent:    #d6622b; // orange
 $c_dark-base: #2e3c41; // murk
 
 // Secondary Colors
-$c_trueblack:   mix(black, $c_dark-base, 99%);
-$c_black:       mix(black, $c_dark-base, 90%);
-$c_grey20:			mix(black, $c_dark-base, 80%);
-$c_grey30:			mix(black, $c_dark-base, 70%);
-$c_grey40:			mix(black, $c_dark-base, 60%);
-$c_grey50:      mix(black, $c_dark-base, 50%);
-$c_grey60:			mix(white, $c_dark-base, 60%);
-$c_grey70:			mix(white, $c_dark-base, 70%);
-$c_grey80:      mix(white, $c_dark-base, 80%);
-$c_white:       mix(white, $c_dark-base, 90%);
-$c_truewhite:   mix(white, $c_dark-base, 99%);
+$c_trueblack: mix(black, $c_dark-base, 99%);
+$c_black:     mix(black, $c_dark-base, 90%);
+$c_grey20:    mix(black, $c_dark-base, 80%);
+$c_grey30:    mix(black, $c_dark-base, 70%);
+$c_grey40:    mix(black, $c_dark-base, 60%);
+$c_grey50:    mix(black, $c_dark-base, 50%);
+$c_grey60:    mix(white, $c_dark-base, 60%);
+$c_grey70:    mix(white, $c_dark-base, 70%);
+$c_grey80:    mix(white, $c_dark-base, 80%);
+$c_white:     mix(white, $c_dark-base, 90%);
+$c_truewhite: mix(white, $c_dark-base, 99%);
 
 // Functional
-$c_basetext:		$c_white;
-$c_link:				$c_primary;
+$c_basetext:  $c_white;
+$c_link:      $c_primary;

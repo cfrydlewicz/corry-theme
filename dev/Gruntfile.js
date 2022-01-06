@@ -4,8 +4,8 @@ module.exports = function(grunt) {
   const sass = require('node-sass');
   require('load-grunt-tasks')(grunt);
 
-	grunt.initConfig({
-		pkg: grunt.file.readJSON('package.json'),
+  grunt.initConfig({
+    pkg: grunt.file.readJSON('package.json'),
 
     devUpdate: {
       main: {
@@ -83,8 +83,8 @@ module.exports = function(grunt) {
       }
     },
 
-		watch: {
-			files: [
+    watch: {
+      files: [
         'Gruntfile.js',
         'package.json',
         'scss/*.scss',
@@ -93,7 +93,7 @@ module.exports = function(grunt) {
       tasks: ['default']
     }
 
-	});
+  });
 
   // Default task(s).
   grunt.registerTask('default', ['devUpdate', 'sass', 'autoprefixer', 'cssmin', 'concat', 'jshint', 'uglify']);

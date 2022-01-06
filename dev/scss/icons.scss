@@ -1,131 +1,131 @@
 // https://icomoon.io/app/
 @font-face {
-	font-display: swap;
-	font-family: 'icomoon';
-	font-style: normal;
-	font-weight: normal;
-	src:url('assets/fonts/icomoon.eot?byte2f');
-	src:url('assets/fonts/icomoon.eot?byte2f#iefix') format('embedded-opentype'),
-		url('assets/fonts/icomoon.ttf?byte2f') format('truetype'),
-		url('assets/fonts/icomoon.woff?byte2f') format('woff'),
-		url('assets/fonts/icomoon.svg?byte2f#icomoon') format('svg');
+  font-display: swap;
+  font-family: 'icomoon';
+  font-style: normal;
+  font-weight: normal;
+  src:url('assets/fonts/icomoon.eot?byte2f');
+  src:url('assets/fonts/icomoon.eot?byte2f#iefix') format('embedded-opentype'),
+    url('assets/fonts/icomoon.ttf?byte2f') format('truetype'),
+    url('assets/fonts/icomoon.woff?byte2f') format('woff'),
+    url('assets/fonts/icomoon.svg?byte2f#icomoon') format('svg');
 }
 
 [class^="i_"]::before,
 [class*=" i_"]::before {
-	font-family: 'icomoon';
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
 }
 
 .i_arrow-down::before {
-	content: "\edbf";
+  content: "\edbf";
 }
 .i_arrow-left::before {
-	content: "\edc3";
+  content: "\edc3";
 }
 .i_arrow-right::before {
-	content: "\edbb";
+  content: "\edbb";
 }
 .i_arrow-up::before {
-	content: "\edb7";
+  content: "\edb7";
 }
 .i_bubbles::before,
 .i_chat::before {
-	content: "\eac5";
+  content: "\eac5";
 }
 .i_calendar::before {
-	content: "\ea60";
+  content: "\ea60";
 }
 .i_checkbox::before {
-	content: "\ee6e";
+  content: "\ee6e";
 }
 .i_checkbox--unchecked::before {
-	content: "\ee6f";
+  content: "\ee6f";
 }
 .i_checkmark::before {
-	content: "\ed6f";
+  content: "\ed6f";
 }
 .i_code::before {
-	content: "\eecd";
+  content: "\eecd";
 }
 .i_cross::before,
 .i_close::before {
-	content: "\ed6c";
+  content: "\ed6c";
 }
 .i_exit::before {
-	content: "\ed7b";
+  content: "\ed7b";
 }
 .i_facebook::before {
-	content: "\eef0";
+  content: "\eef0";
 }
 .i_github::before {
-	content: "\ef0f";
+  content: "\ef0f";
 }
 .i_heart::before {
-	content: "\ecef";
+  content: "\ecef";
 }
 .i_home::before {
-	content: "\e904";
+  content: "\e904";
 }
 .i_instagram::before {
-	content: "\eef1";
+  content: "\eef1";
 }
 .i_linkedin::before {
-	content: "\ef28";
+  content: "\ef28";
 }
 .i_mail::before {
-	content: "\ea30";
+  content: "\ea30";
 }
 .i_minus::before {
-	content: "\ed5c";
+  content: "\ed5c";
 }
 .i_movie::before {
-	content: "\e959";
+  content: "\e959";
 }
 .i_music::before {
-	content: "\e94c";
+  content: "\e94c";
 }
 .i_nophone::before {
-	content: "\ea1e";
+  content: "\ea1e";
 }
 .i_plus::before {
-	content: "\ed5b";
+  content: "\ed5b";
 }
 .i_search::before {
-	content: "\eb30";
+  content: "\eb30";
 }
 .i_share::before {
-	content: "\eec8";
+  content: "\eec8";
 }
 .i_shopping::before {
-	content: "\ea02";
+  content: "\ea02";
 }
 .i_spotify::before {
-	content: "\eef3";
+  content: "\eef3";
 }
 .i_stackoverflow::before {
-	content: "\ef2f";
+  content: "\ef2f";
 }
 .i_star::before {
-	content: "\ece5";
+  content: "\ece5";
 }
 .i_steam::before {
-	content: "\ef0c";
+  content: "\ef0c";
 }
 .i_twitch::before {
-	content: "\eefe";
+  content: "\eefe";
 }
 .i_twitter::before {
-	content: "\eef5";
+  content: "\eef5";
 }
 .i_youtube::before {
-	content: "\eefc";
+  content: "\eefc";
 }
 .i_wordpress::before {
-	content: "\ef13";
+  content: "\ef13";
 }

@@ -1,12 +1,12 @@
   <footer>
-		<div class="inner-wrapper">
+    <div class="inner-wrapper">
 
       <section class="copyright-footer">
         <span class="copyright f_smallest">&copy;<span itemprop="copyrightYear"><?php echo date('Y'); ?></span> <a href="mailto:cfrydlewicz@gmail.com" target="_blank"><span itemprop="copyrightHolder">Corry Frydlewicz</span></a></span>
       </section>
 
       <section class="back-to-top">
-      	<a href="#" class="f_smallest">Back to Top &uarr;</a>
+        <a href="#" class="f_smallest">Back to Top &uarr;</a>
       </section>
 
       <section class="follow-container">
