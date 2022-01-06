@@ -31,23 +31,28 @@
       </article>
 
       <section class="entry-footer">
-      	<div class="f_large">Thank you for reading!</div>
 
-				<?php if ( comments_open() ) : ?>
-		      <div class="comments-container">
-		      	<div class="post-footer_header">Discuss</div>
-						<?php
-							if ( get_comments_number() ) {
-								comments_template();
-							}
-						?>
-					</div>
-				<?php endif; ?>
+      	<div class="thanks-container">
+	      	<div class="f_large">Thank you for reading!</div>
+	      </div>
+
+	      <div class="discussion-container">
+	      	<div class="post-footer_header">Discuss</div>
+	      	<ul>
+						<?php if ( comments_open() && get_comments_number() ) : ?>
+							<li><a href="#comments_top">Comments</a></li>
+						<?php endif; ?>
+						<li><a class="i_twitter" href="https://twitter.com/intent/tweet?text=%40cfrydlewicz%20Re%3A%20https://corry.us/<?php wp_get_shortlink(); ?>" target="_blank">Discuss on Twitter</a>
+						<li><a class="i_facebook2" href="https://www.facebook.com/groups/4912504758808432/?ref=share" target="_blank">Facebook Group</a></li>
+					</ul>
+				</div>
 
 				<div class="share-container">
 					<div class="post-footer_header">Share</div>
 					<div>Copy Post URL</div>
-					<div>Share to Facebook</div>
+					<div>
+						<a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//corry.us/<?php wp_get_shortlink(); ?>" target="_blank">Share on Facebook</a>
+					</div>
 					<div>Tweet this Post</div>
 				</div>
 
@@ -57,9 +62,21 @@
 							<?php dynamic_sidebar( 'widget_single-post-footer1' ); ?>
 						</div>
 					<?php else : ?>
-						<a href="/tag/favorite-post/">My Favorite Posts</a>
+						<div class="widget-title">Read More</div>
+						<div><a href="/tag/favorite-post/">My Favorite Posts</a></div>
 					<?php endif; ?>
 				</div>
+
+				<?php if ( comments_open() ) : ?>
+		      <div id="comments_top" class="comments-container">
+		      	<div class="post-footer_header">Comments</div>
+						<?php
+							if ( get_comments_number() ) {
+								comments_template();
+							}
+						?>
+					</div>
+				<?php endif; ?>
 
       </section>
 

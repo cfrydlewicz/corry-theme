@@ -69,9 +69,7 @@ function corry_widgets_init() {
     'name'          => __( 'Single Post Footer', 'corry' ),
     'id'            => 'widget_single-post-footer1',
     'description'   => __( 'Appears beneath single posts.', 'corry' ),
-    'before_widget' => '<div id="%1$s" class="widget %2$s">',
-    'after_widget'  => '</div>',
-    'before_title'  => '<div class="widget-title">',
+    'before_title'  => '<div class="post-footer_header widget-title">',
     'after_title'   => '</div>',
   ) );
 }

@@ -97,6 +97,36 @@ $header_height: 40px;
 
   main {
     padding-bottom: 60px;
+
+    // Single Posts
+    body.single & {
+
+      // Post Footer
+      .entry-footer {
+        display: flex;
+        flex-direction: column;
+        @media #{$mq_md} {
+          flex-direction: row;
+        }
+        flex-wrap: wrap;
+
+        //headers
+        .post-footer_header {
+          @extend .f_large;
+          margin-bottom: 1em;
+        }
+
+        .thanks-container {
+          width: 100%;
+        }
+
+        .read-more-container {
+        }
+
+      }
+
+    }
+
   }
 
   > footer {
