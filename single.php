@@ -6,7 +6,7 @@
   		<?php
   			the_post();
   			$postId = get_the_ID();
-  			$postTitle = the_title();
+  			$postTitle = get_the_title();
   		?>
 
       <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -46,17 +46,19 @@
 						<?php if ( comments_open() && get_comments_number() ) : ?>
 							<li><a href="#a_comments_top">Comments</a></li>
 						<?php endif; ?>
-						<li><a class="i_twitter" href="https://twitter.com/intent/tweet?text=%40cfrydlewicz%20Re%3A%20https://corry.us/<?php wp_get_shortlink(); ?>" target="_blank">Discuss on Twitter</a>
+						<li><a class="i_twitter" href="https://twitter.com/intent/tweet?text=%40cfrydlewicz%20Re%3A%20https://corry.us/?p=<?php echo $postId; ?>" target="_blank">Discuss on Twitter</a>
 						<li><a class="i_facebook2" href="https://www.facebook.com/groups/4912504758808432/?ref=share" target="_blank">Facebook Group</a></li>
 					</ul>
 				</div>
 
 				<div class="share-container">
 					<div class="post-footer_header">Share</div>
-					<div>URL: <a href="https://corry.us/?p=<?php echo $postId; ?>" class="f_smallest u_break-line">https://corry.us/?p=<?php echo $postId; ?></a></div>
-					<div><a href="mailto:?subject=<?php echo $postTitle; ?>&body=https%3A//corry.us/?p=<?php echo $postId; ?>">Send Email</a></div>
-					<div><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//corry.us/?p=<?php echo $postId; ?>" target="_blank">Share on Facebook</a></div>
-					<div><a class="i_twitter" href="https://twitter.com/intent/tweet?text=%40cfrydlewicz%20Re%3A%20https://corry.us/<?php wp_get_shortlink(); ?>" target="_blank">Tweet This Post</a></div>
+					<ul>
+						<li>Short URL: <a href="https://corry.us/?p=<?php echo $postId; ?>" class="u_break-line">https://corry.us/?p=<?php echo $postId; ?></a></li>
+						<li><a href="mailto:?subject=<?php echo $postTitle; ?>&body=https%3A//corry.us/?p=<?php echo $postId; ?>" target="_blank">Send Email</a></li>
+						<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//corry.us/?p=<?php echo $postId; ?>" target="_blank">Share on Facebook</a></li>
+						<li><a class="i_twitter" href="https://twitter.com/intent/tweet?text=%40cfrydlewicz%20Re%3A%20https://corry.us/?p=<?php echo $postId; ?>" target="_blank">Tweet This Post</a></li>
+					</ul>
 				</div>
 
 				<div class="read-more-container">
