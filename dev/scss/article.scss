@@ -1,128 +1,131 @@
 article {
-  padding: 0 0 36px;
 
-	// Quotes
-	blockquote {
-		margin: 2em 0;
-		padding: .5em 1em 1.2em .5em;
-		quotes: "\201C""\201D""\2018""\2019";
-		background-color: $c_grey80;
-		border-left: 8px solid $c_grey60;
-		&::before {
-			float: left;
-			color: $c_grey60;
-			content: open-quote;
-			font-size: 5em;
-			line-height: 0;
-			margin-top: .4em;
-			vertical-align: top;
-		}
-		&::after {
-			content: close-quote;
-			@extend .u_visually-hidden;
-		}
-		p {
-			display: inline-block;
-			max-width: 80%;
-			margin-top: .5em;	/* align with large open quote */
-			margin-left: 1em;	/* Indent text */
-			margin-bottom: 2.5em;	/* compensate an extra 1.5 for negative margin-top */
-			&:nth-last-child(2):after {
-				/* add close-quote after next-to-last p tag */
-				content: close-quote;
-			}
-			&:last-child {
-				margin-bottom: 0;
-			}
-			&.cite,
-			del { /* fallback in case the replacement script doesn't fire */
-				font-size: .9em;
-				line-height: 1;
-				text-align: right;
-				width: 100%;
-				margin-top: 0;
-				margin-bottom: 0;
-			}
-			del { /* fallback in case the replacement script doesn't fire */
-				color: inherit;
-				text-decoration: none;
-			}
-		}
-	}
+  // Post Cards
 
-	// Horizontal Rules
-	hr {
-		margin: 2em auto;
-		width: 60%;
-		border: none;
-		border-top: 1px solid $c_accent;
-	}
 
-	// Tables
-	table {
-		border-collapse: collapse;
-		max-width: 100%;
-		margin-bottom: 3em;
-		th, td {
-			padding: .25rem;
-			border: 1px solid $c_grey50;
-		}
-	}
+  // Single Posts
+  .single & {
+    padding: 0 0 36px;
 
-	// Links w/ Identifying Icons
-	a[href*="amazon.com"] {
-		@extend .i_shopping;
-	}
-	a[href*="disneyplus.com"],
-	a[href*="hbogo.com"],
-	a[href*="hbomax.com"],
-	a[href*="hbonow.com"],
-	a[href*="hulu.com"],
-	a[href*="netflix.com"] {
-		@extend .i_movie;
-	}
-	a[href*="spotify.com"] {
-		@extend .i_spotify;
-	}
-	a[href*="youtube.com"],
-	a[href*="youtu.be"] {
-		@extend .i_youtube;
-	}
+    // Post Footer
+    .post-footer {
+      display: flex;
+      flex-direction: column;
+      @media #{$mq_md} {
+        flex-direction: row;
+      }
+      flex-wrap: wrap;
 
-	// Single Posts
-	.single & {
+      > div > div {
+        @extend .grainy;
+        @extend .bezel--vertical;
+        padding: 24px 16px;
+      }
 
-		// Post Footer
-		.post-footer {
-		  display: flex;
-		  flex-direction: column;
-		  @media #{$mq_md} {
-		    flex-direction: row;
-		  }
-		  flex-wrap: wrap;
+      //headers
+      .post-footer_header {
+        @extend .f_large;
+        margin-bottom: 1em;
+      }
 
-		  > div > div {
-		    @extend .grainy;
-		    @extend .bezel--vertical;
-		    padding: 24px 16px;
-		  }
+      .thanks-container {
+        text-align: center;
+        width: 100%;
+      }
 
-		  //headers
-		  .post-footer_header {
-		    @extend .f_large;
-		    margin-bottom: 1em;
-		  }
+      .read-more-container {
+      }
 
-		  .thanks-container {
-		    text-align: center;
-		    width: 100%;
-		  }
+    }
 
-		  .read-more-container {
-		  }
+  }
 
-		}
+  // Quotes
+  blockquote {
+    margin: 2em 0;
+    padding: .5em 1em 1.2em .5em;
+    quotes: "\201C""\201D""\2018""\2019";
+    background-color: $c_grey80;
+    border-left: 8px solid $c_grey60;
+    &::before {
+      float: left;
+      color: $c_grey60;
+      content: open-quote;
+      font-size: 5em;
+      line-height: 0;
+      margin-top: .4em;
+      vertical-align: top;
+    }
+    &::after {
+      content: close-quote;
+      @extend .u_visually-hidden;
+    }
+    p {
+      display: inline-block;
+      max-width: 80%;
+      margin-top: .5em;  /* align with large open quote */
+      margin-left: 1em;  /* Indent text */
+      margin-bottom: 2.5em;  /* compensate an extra 1.5 for negative margin-top */
+      &:nth-last-child(2):after {
+        /* add close-quote after next-to-last p tag */
+        content: close-quote;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &.cite,
+      del { /* fallback in case the replacement script doesn't fire */
+        font-size: .9em;
+        line-height: 1;
+        text-align: right;
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+      del { /* fallback in case the replacement script doesn't fire */
+        color: inherit;
+        text-decoration: none;
+      }
+    }
+  }
 
-	}
+  // Horizontal Rules
+  hr {
+    margin: 2em auto;
+    width: 60%;
+    border: none;
+    border-top: 1px solid $c_accent;
+  }
+
+  // Tables
+  table {
+    border-collapse: collapse;
+    max-width: 100%;
+    margin-bottom: 3em;
+    th, td {
+      padding: .25rem;
+      border: 1px solid $c_grey50;
+    }
+  }
+
+  // Links w/ Identifying Icons
+  a[href*="amazon.com"] {
+    @extend .i_shopping;
+  }
+  a[href*="disneyplus.com"],
+  a[href*="hbogo.com"],
+  a[href*="hbomax.com"],
+  a[href*="hbonow.com"],
+  a[href*="hulu.com"],
+  a[href*="netflix.com"] {
+    @extend .i_movie;
+  }
+  a[href*="spotify.com"] {
+    @extend .i_spotify;
+  }
+  a[href*="youtube.com"],
+  a[href*="youtu.be"] {
+    @extend .i_youtube;
+  }
 
 }
