@@ -3,7 +3,11 @@
 <main id="a_skip-to-content" class="inner-wrapper">
   <?php if ( have_posts() ) : ?>
   	<?php while ( have_posts() ) : ?>
-  		<?php the_post(); ?>
+  		<?php
+  			the_post();
+  			$postId = get_the_ID();
+  			$postTitle = the_title();
+  		?>
 
       <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
@@ -49,16 +53,15 @@
 
 				<div class="share-container">
 					<div class="post-footer_header">Share</div>
-					<div>Copy Post URL</div>
-					<div>
-						<a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//corry.us/<?php wp_get_shortlink(); ?>" target="_blank">Share on Facebook</a>
-					</div>
-					<div>Tweet this Post</div>
+					<div>URL: <a href="https://corry.us/?p=<?php echo $postId; ?>" class="f_smallest u_break-line">https://corry.us/?p=<?php echo $postId; ?></a></div>
+					<div><a href="mailto:?subject=<?php echo $postTitle; ?>&body=https%3A//corry.us/?p=<?php echo $postId; ?>">Send Email</a></div>
+					<div><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//corry.us/?p=<?php echo $postId; ?>" target="_blank">Share on Facebook</a></div>
+					<div><a class="i_twitter" href="https://twitter.com/intent/tweet?text=%40cfrydlewicz%20Re%3A%20https://corry.us/<?php wp_get_shortlink(); ?>" target="_blank">Tweet This Post</a></div>
 				</div>
 
 				<div class="read-more-container">
 					<?php if ( is_active_sidebar( 'widget_single-post-footer1' ) ) : ?>
-						<div id="single-post-footer_widget" class="widget-area" role="complementary">
+						<div class="widget-area" role="complementary">
 							<?php dynamic_sidebar( 'widget_single-post-footer1' ); ?>
 						</div>
 					<?php else : ?>

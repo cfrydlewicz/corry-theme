@@ -44,6 +44,12 @@
 .u_nowrap {
 	white-space: nowrap;
 }
+.u_break-line {
+	//let long space-less text (like URLs) break lines
+	overflow-wrap: break-word;
+  word-break: break-word;
+  word-wrap: break-word;
+}
 
 /* Accessibility */
 .u_visually-hidden {
