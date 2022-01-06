@@ -14,12 +14,12 @@ input[type="submit"],
   font-weight: bold;
   padding: 8px;
   &:hover {
-    background-color: $c_secondary;
-    border-color: mix(black, $c_secondary, 25%);
+    background-color: $c_hover;
+    border-color: mix(black, $c_hover, 25%);
   }
   &:active {
-    background-color: $c_accent;
-    border-color: mix(black, $c_accent, 25%);
+    background-color: $c_active;
+    border-color: mix(black, $c_active, 25%);
   }
 }
 

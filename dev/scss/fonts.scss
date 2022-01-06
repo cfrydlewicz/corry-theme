@@ -48,13 +48,10 @@ a,
   color: $c_link;
   text-decoration: none;
   &:hover {
-    color: $c_secondary;
+    color: $c_hover;
   }
   &:active {
-    color: $c_accent;
-  }
-  &:visited {
-    //color: $c_link;
+    color: $c_active;
   }
 }
 

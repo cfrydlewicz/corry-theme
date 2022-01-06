@@ -97,7 +97,7 @@ $header_height: 40px;
       width: fit-content;
       &:hover {
         svg path {
-          fill: $c_accent;
+          fill: $c_hover;
         }
       }
     }
@@ -122,7 +122,6 @@ $header_height: 40px;
           padding: 0 8px;
           &:hover {
             @extend .grainy;
-            text-decoration: underline;
           }
         }
       }
