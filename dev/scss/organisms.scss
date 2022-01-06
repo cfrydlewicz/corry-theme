@@ -28,7 +28,7 @@ input[type="submit"],
 input[type="text"],
 input[type="search"],
 textarea {
-  background-color: $c_grey20;
+  background-color: $c_grey30;
   border-color: $c_trueblack;
   border-radius: $border-radius;
   border-style: solid;
@@ -37,9 +37,11 @@ textarea {
   font-size: 1rem;
   padding-left: 8px;
   padding-right: 8px;
-  &:focus {
+  &:focus,
+  &:focus-visible {
     background-color: $c_trueblack;
     border-color: $c_active;
+    outline-width: 0;
   }
 }
 label {
@@ -72,7 +74,6 @@ label {
   input[type="search"] {
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;
-    border-right-width: 0;
     padding-right: 2px;
     width: 100px;
     @media #{$mq_md} {

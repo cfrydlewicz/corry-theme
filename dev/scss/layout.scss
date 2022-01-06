@@ -146,12 +146,11 @@ $header_height: 40px;
 }
 
 main {
-  padding-bottom: 60px;
 }
 
 .site-footer {
-  bottom: 0;
-  position: absolute;
+  @extend .bezel--vertical;
+  @extend .grainy;
 
   .inner-wrapper {
     align-items: stretch;

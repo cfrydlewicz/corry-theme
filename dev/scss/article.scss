@@ -19,16 +19,12 @@ body.single {
     // Text Links
     a {
       text-decoration: underline;
-      &::before {
-        font-size: 0.75em;
-        margin: 0 2px;
-      }
       &[target="_blank"] {
         @extend .u_icomoon;
         &::after {
           content: "\ed7b";
           font-size: 0.625em;
-          margin: 1px 2px 0;
+          margin: 0.125em 0 0 0.375em;
           vertical-align: text-top;
         }
       }
@@ -49,6 +45,14 @@ body.single {
       &[href*="youtube.com"],
       &[href*="youtu.be"] {
         @extend .i_youtube;
+      }
+      &[href*="docs.google.com"],
+      &[href*="drive.google.com"] {
+        @extend .i_gdrive;
+      }
+      &[href*="pinterest.com"],
+      &[href*="pin.it"] {
+        @extend .i_pinterest;
       }
     }
 
