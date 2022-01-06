@@ -30,22 +30,22 @@ $header_height: 40px;
 
 .grainy {
   background:
-    linear-gradient(320deg, rgba($c_dark-base,1), rgba($c_black,1)),
+    linear-gradient(320deg, rgba($c_grey20,1), rgba($c_dark-base,1)),
     url("data:image/svg+xml,%3Csvg viewBox='0 0 375 375' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.75' numOctaves='1' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 }
 .grainy--lite {
   background:
-    linear-gradient(320deg, rgba($c_dark-base,0.2), rgba($c_black,0.2)),
+    linear-gradient(320deg, rgba($c_grey20,0.2), rgba($c_dark-base,0.2)),
     url("data:image/svg+xml,%3Csvg viewBox='0 0 375 375' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.75' numOctaves='1' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 }
 .bezel,
 .bezel--vertical,
 .bezel--horizontal {
-  border-bottom-color: $c_grey20;
-  border-left-color: $c_grey80;
-  border-right-color: $c_grey20;
+  border-bottom-color: $c_grey40;
+  border-left-color: $c_grey60;
+  border-right-color: $c_grey40;
   border-style: solid;
-  border-top-color: $c_grey80;
+  border-top-color: $c_grey60;
 }
 .bezel {
   border-width: 1px;
@@ -54,7 +54,7 @@ $header_height: 40px;
   border-width: 1px 0;
 }
 .bezel--horizontal {
-  border-width: 1px 0;
+  border-width: 0 1px;
 }
 
 .total-wrapper {
@@ -138,46 +138,6 @@ $header_height: 40px;
 
   main {
     padding-bottom: 60px;
-
-    // Single Posts
-    body.single & {
-
-      article {
-        padding: 0 0 36px;
-      }
-
-      // Post Footer
-      .post-footer {
-        display: flex;
-        flex-direction: column;
-        @media #{$mq_md} {
-          flex-direction: row;
-        }
-        flex-wrap: wrap;
-        > div > div {
-          @extend .grainy;
-          @extend .bezel--vertical;
-          padding: 24px 16px;
-        }
-
-        //headers
-        .post-footer_header {
-          @extend .f_large;
-          margin-bottom: 1em;
-        }
-
-        .thanks-container {
-          text-align: center;
-          width: 100%;
-        }
-
-        .read-more-container {
-        }
-
-      }
-
-    }
-
   }
 
   > footer {

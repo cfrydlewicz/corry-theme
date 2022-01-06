@@ -1,5 +1,5 @@
-// Article Specific Features
-.entry-container {
+article {
+  padding: 0 0 36px;
 
 	// Quotes
 	blockquote {
@@ -93,6 +93,38 @@
 
 	// Single Posts
 	.single & {
+
+		// Post Footer
+		.post-footer {
+		  display: flex;
+		  flex-direction: column;
+		  @media #{$mq_md} {
+		    flex-direction: row;
+		  }
+		  flex-wrap: wrap;
+
+		  > div > div {
+		    @extend .grainy;
+		    @extend .bezel--vertical;
+		    padding: 24px 16px;
+		  }
+
+		  //headers
+		  .post-footer_header {
+		    @extend .f_large;
+		    margin-bottom: 1em;
+		  }
+
+		  .thanks-container {
+		    text-align: center;
+		    width: 100%;
+		  }
+
+		  .read-more-container {
+		  }
+
+		}
+
 	}
 
-}	// .entry-container
+}
