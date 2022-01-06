@@ -109,6 +109,13 @@ article {
   }
 
   // Links w/ Identifying Icons
+  a[target="_blank"] {
+  	padding-right: 1.25em;
+  	&::after {
+		  content: "\ed7b";
+		  font-size: 0.75em;
+  	}
+  }
   a[href*="amazon.com"] {
     @extend .i_shopping;
   }
