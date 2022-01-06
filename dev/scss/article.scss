@@ -191,13 +191,38 @@ body.single {
       }
 
       article {
+        @extend .bezel;
         display: flex;
         flex-direction: column;
+        padding: 12px;
         .comment-content {
           order: 1;
         }
         .comment-meta {
           order: 2;
+          .comment-author {
+            display: flex;
+            img {
+              float: left;
+              margin-right: 8px;
+            }
+            b.fn {
+              // author name
+            }
+            .says {
+              display: none;
+            }
+          }
+          .comment-metadata {
+            @extend .f_smaller;
+            time {
+              // comment timestamp
+            }
+            .edit-link {
+              // comment admin
+              display: block;
+            }
+          }
         }
         .reply {
           order: 3;
