@@ -22,6 +22,7 @@ $border-radius: 12px;
     border-color: mix(black, $c_active, 25%);
   }
   &--small {
+    @extend .button;
     @extend .f_small;
     border-radius: $border-radius/2;
     border-width: 1px;
