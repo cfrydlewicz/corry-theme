@@ -180,6 +180,13 @@ body.single {
       margin-bottom: 1em;
     }
 
+    // Comments
+    .comments-container {
+      p[class*="akismet"] {
+        @extend .f_smallest;
+      }
+    }
+
   }
 
 }

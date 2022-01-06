@@ -51,7 +51,7 @@
                 <?php if ( get_comments_number() ) : ?>
                   <li><a class="i_arrow-down" href="#a_comments_top">View Comments (<?php echo get_comments_number(); ?>)</a></li>
                 <?php endif; ?>
-                <li><a class="i_chat" href="#a_reply-title">Leave a Comment</a></li>
+                <li><a class="i_chat" href="#a_respond">Leave a Comment</a></li>
               <?php endif; ?>
               <li><a class="i_twitter" href="https://twitter.com/intent/tweet?text=%40cfrydlewicz%20Re%3A%20https://corry.us/?p=<?php echo $postId; ?>" target="_blank">Discuss on Twitter</a>
               <li><a class="i_facebook" href="https://www.facebook.com/groups/4912504758808432/?ref=share" target="_blank">Facebook Group</a></li>
@@ -82,7 +82,7 @@
           <section class="follow-container">
             <div class="post-footer_header">Follow This Blog</div>
             <ul>
-              <li><a class="i_rss" href="<?php bloginfo('rss2_url'); ?>" target="_blank">My RSS Feed</a> is the way to follow <em>only new articles</em>.</li>
+              <li><a class="i_rss" href="<?php bloginfo('rss2_url'); ?>" target="_blank">My RSS Feed</a> is an easy way to follow <em>only new articles</em>.</li>
               <li><a class="i_facebook" href="https://www.facebook.com/groups/4912504758808432/?ref=share" target="_blank" rel="noreferrer" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://www.facebook.com']);">My Facebook Group</a> is where I share <em>all content I create</em> and host discussions about it.</li>
               <li>If you don't have those, I share links to new posts on <a class="i_twitter"  href="http://www.twitter.com/cfrydlewicz" target="_blank" rel="noreferrer" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://www.twitter.com']);">Twitter</a> as well.</li>
             </ul>
