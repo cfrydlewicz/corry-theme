@@ -53,15 +53,10 @@ a,
   &:active {
     color: $c_active;
   }
-
-  p &,
-  li & {
-    &::before {
-      font-size: 0.75em;
-      margin: 0 2px;
-    }
+  &::before {
+    font-size: 0.75em;
+    margin: 0 2px;
   }
-
 }
 
 // Copy
