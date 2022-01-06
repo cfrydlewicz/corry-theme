@@ -34,7 +34,7 @@
 				</div>
       </article>
 
-      <section class="entry-footer">
+      <section class="post-footer">
 	    	<div class="inner-wrapper--at-md">
 
       	<div class="thanks-container">
