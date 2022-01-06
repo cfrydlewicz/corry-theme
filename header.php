@@ -45,7 +45,7 @@
 			</section>
 
 			<section class="header-search">
-				<div class="search-container icon-search"><?php get_search_form(); ?></div>
+				<div class="search-container"><?php get_search_form(); ?></div>
 			</section><!--.header-search-->
 
 		</div>
