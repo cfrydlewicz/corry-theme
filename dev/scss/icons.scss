@@ -28,6 +28,7 @@
 .i_close::before,
 .i_exit::before,
 .i_facebook::before,
+.i_gdrive::before,
 .i_github::before,
 .i_heart::before,
 .i_home::before,
@@ -38,7 +39,9 @@
 .i_movie::before,
 .i_music::before,
 .i_nophone::before,
+.i_pinterest::before,
 .i_plus::before,
+.i_rss::before,
 .i_search::before,
 .i_share::before,
 .i_shopping::before,
@@ -94,6 +97,9 @@
 .i_close::before {
   content: "\ed6c";
 }
+.i_gdrive::before {
+  content: "\eeee";
+}
 .i_exit::before {
   content: "\ed7b";
 }
@@ -130,8 +136,14 @@
 .i_nophone::before {
   content: "\ea1e";
 }
+.i_pinterest::before {
+  content: "\ef30";
+}
 .i_plus::before {
   content: "\ed5b";
+}
+.i_rss::before {
+  content: "\eefa";
 }
 .i_search::before {
   content: "\eb30";
