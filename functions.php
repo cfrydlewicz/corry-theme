@@ -75,4 +75,11 @@ function corry_widgets_init() {
 }
 add_action( 'widgets_init', 'corry_widgets_init' );
 
+function corry_comment_reply_text( $link ) {
+  $commentAuthor = get_comment_author();
+  $link = str_replace( 'Reply', 'Reply to '.$commentAuthor, $link );
+  return $link;
+}
+add_filter( 'comment_reply_link', 'corry_comment_reply_text' );
+
 ?>
