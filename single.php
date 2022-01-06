@@ -27,7 +27,7 @@
           </section>
 
           <footer class="entry-footer">
-            <div class="post-categories">Categories: <?php the_category(); ?></div>
+            <div class="post-categories">Categories: <?php the_category(', '); ?></div>
             <div class="post-tags"><?php the_tags(); ?></div>
           </footer>
         </div>
@@ -37,59 +37,52 @@
         <div class="inner-wrapper--at-md">
 
         <div class="thanks-container">
-          <div class="inner-wrapper--sm-only">
-            <div class="f_large">Thanks for reading!</div>
-          </div>
+          <div class="f_large">Thanks for reading!</div>
         </div>
 
         <div class="discussion-container">
-          <div class="inner-wrapper--sm-only">
-            <div class="post-footer_header">Discuss</div>
-            <ul>
-              <?php if ( comments_open() && get_comments_number() ) : ?>
-                <li><a href="#a_comments_top">Comments</a></li>
+          <div class="post-footer_header">Discuss</div>
+          <ul>
+            <?php if ( comments_open() ) : ?>
+              <?php if ( get_comments_number() ) : ?>
+                <li><a class="i_arrow-down" href="#a_comments_top">View Comments (<?php echo get_comments_number(); ?>)</a></li>
               <?php endif; ?>
-              <li><a class="i_twitter" href="https://twitter.com/intent/tweet?text=%40cfrydlewicz%20Re%3A%20https://corry.us/?p=<?php echo $postId; ?>" target="_blank">Discuss on Twitter</a>
-              <li><a class="i_facebook2" href="https://www.facebook.com/groups/4912504758808432/?ref=share" target="_blank">Facebook Group</a></li>
-            </ul>
-          </div>
+              <li><a class="i_chat" href="#a_reply-title">Leave a Comment</a></li>
+            <?php endif; ?>
+            <li><a class="i_twitter" href="https://twitter.com/intent/tweet?text=%40cfrydlewicz%20Re%3A%20https://corry.us/?p=<?php echo $postId; ?>" target="_blank">Discuss on Twitter</a>
+            <li><a class="i_facebook" href="https://www.facebook.com/groups/4912504758808432/?ref=share" target="_blank">Facebook Group</a></li>
+          </ul>
         </div>
 
         <div class="share-container">
-          <div class="inner-wrapper--sm-only">
-            <div class="post-footer_header">Share</div>
-            <ul>
-              <li>Short URL: <a href="https://corry.us/?p=<?php echo $postId; ?>" class="u_break-line">https://corry.us/?p=<?php echo $postId; ?></a></li>
-              <li><a href="mailto:?subject=<?php echo $postTitle; ?>&body=https%3A//corry.us/?p=<?php echo $postId; ?>" target="_blank">Send Email</a></li>
-              <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//corry.us/?p=<?php echo $postId; ?>" target="_blank">Share on Facebook</a></li>
-              <li><a class="i_twitter" href="https://twitter.com/intent/tweet?text=%40cfrydlewicz%20Re%3A%20https://corry.us/?p=<?php echo $postId; ?>" target="_blank">Tweet This Post</a></li>
-            </ul>
-          </div>
+          <div class="post-footer_header">Share</div>
+          <ul>
+            <li>Short URL: <a href="https://corry.us/?p=<?php echo $postId; ?>" class="u_break-line">https://corry.us/?p=<?php echo $postId; ?></a></li>
+            <li><a class="i_mail" href="mailto:?subject=<?php echo $postTitle; ?>&body=https%3A//corry.us/?p=<?php echo $postId; ?>" target="_blank">Send Email</a></li>
+            <li><a class="i_facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A//corry.us/?p=<?php echo $postId; ?>" target="_blank">Share on Facebook</a></li>
+            <li><a class="i_twitter" href="https://twitter.com/intent/tweet?text=%40cfrydlewicz%20Re%3A%20https://corry.us/?p=<?php echo $postId; ?>" target="_blank">Tweet This Post</a></li>
+          </ul>
         </div>
 
         <div class="read-more-container">
-          <div class="inner-wrapper--sm-only">
-            <?php if ( is_active_sidebar( 'widget_single-post-footer1' ) ) : ?>
-              <div class="widget-area" role="complementary">
-                <?php dynamic_sidebar( 'widget_single-post-footer1' ); ?>
-              </div>
-            <?php else : ?>
-              <div class="widget-title">Read More</div>
-              <div><a href="/tag/favorite-post/">My Favorite Posts</a></div>
-            <?php endif; ?>
-          </div>
+          <?php if ( is_active_sidebar( 'widget_single-post-footer1' ) ) : ?>
+            <div class="widget-area" role="complementary">
+              <?php dynamic_sidebar( 'widget_single-post-footer1' ); ?>
+            </div>
+          <?php else : ?>
+            <div class="widget-title">Read More</div>
+            <div><a href="/tag/favorite-post/">My Favorite Posts</a></div>
+          <?php endif; ?>
         </div>
 
         <?php if ( comments_open() ) : ?>
           <div id="a_comments_top" class="comments-container">
-            <div class="inner-wrapper--sm-only">
-              <div class="post-footer_header">Comments</div>
-              <?php
-                if ( get_comments_number() ) {
-                  comments_template();
-                }
-              ?>
-            </div>
+            <div class="post-footer_header">Comments</div>
+            <?php
+              if ( get_comments_number() ) {
+                comments_template();
+              }
+            ?>
           </div>
         <?php endif; ?>
 

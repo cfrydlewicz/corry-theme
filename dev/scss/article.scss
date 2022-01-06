@@ -122,13 +122,6 @@ body.single {
 
     .entry-footer {
       padding-top: 36px;
-      ul {
-        display: inline;
-        list-style: none;
-        li {
-          display: inline;
-        }
-      }
     }
 
   }
@@ -146,6 +139,11 @@ body.single {
       @extend .grainy;
       @extend .bezel--vertical;
       padding: 24px 16px;
+
+      ul {
+        list-style: none;
+      }
+
     }
 
     //headers

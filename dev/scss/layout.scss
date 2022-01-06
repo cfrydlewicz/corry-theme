@@ -8,12 +8,14 @@ $header_height: 40px;
   padding: 0 16px;
   width: 100%;
 }
+/*
 @media #{$mq_sm-only} {
   .inner-wrapper--sm-only {
     padding: 0 16px;
     width: 100%;
   }
 }
+*/
 @media #{$mq_md} {
   .inner-wrapper--at-md {
     margin: 0 auto;
