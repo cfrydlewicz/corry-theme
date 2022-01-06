@@ -30,7 +30,7 @@ input {
 
 // Search
 .search-container {
-  padding: 4px 0;
+  padding: 4px 4px 4px 0;
   form {
     display: flex;
     height: 100%;
@@ -43,6 +43,14 @@ input {
     display: flex;
   }
   input[type="text"],
+  input[type="search"],
+  button,
+  input[type="submit"] {
+    height: 100%;
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+  input[type="text"],
   input[type="search"] {
     background-color: $c_black;
     border-bottom-right-radius: 0;
@@ -51,8 +59,8 @@ input {
     border-width: 2px 0 2px 2px;
     color: $c_truewhite;
     font-size: 1rem;
-    height: 100%;
-    padding: 0 2px 0 8px;
+    padding-left: 8px;
+    padding-right: 2px;
     width: 100px;
     @media #{$mq_md} {
       width: 160px;
@@ -68,5 +76,6 @@ input {
   input[type="submit"] {
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
+    font-size: 16px;
   }
 }

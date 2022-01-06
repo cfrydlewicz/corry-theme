@@ -37,11 +37,11 @@ $header_height: 40px;
 .bezel,
 .bezel--vertical,
 .bezel--horizontal {
-  border-bottom-color: $c_grey40;
-  border-left-color: $c_grey50;
-  border-right-color: $c_grey40;
+  border-bottom-color: $c_grey50;
+  border-left-color: $c_light20;
+  border-right-color: $c_grey50;
   border-style: solid;
-  border-top-color: $c_grey50;
+  border-top-color: $c_light20;
 }
 .bezel {
   border-width: 1px;
@@ -126,7 +126,7 @@ $header_height: 40px;
     }
 
     .header-search {
-      margin-left: 12px;
+      margin-left: 8px;
       .search-container {
         height: 100%;
       }
