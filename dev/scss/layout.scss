@@ -61,14 +61,17 @@ $header_height: 40px;
 }
 
 .site-header {
-  background: linear-gradient(320deg, rgba($c_grey20,0.625), rgba($c_dark-base,0.625));
-  &:hover {
-    @extend .grainy;
-  }
   // Above-the-fold and nav elements should be considered for critical css
   position: fixed;
   width: 100vw;
   z-index: 1;
+
+  > section {
+    background: linear-gradient(320deg, rgba($c_grey20,0.625), rgba($c_dark-base,0.625));
+    &:hover {
+      @extend .grainy;
+    }
+  }
 
   .inner-wrapper {
     align-items: stretch;
