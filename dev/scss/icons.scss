@@ -17,6 +17,7 @@
 .i_arrow-left::before,
 .i_arrow-right::before,
 .i_arrow-up::before,
+.i_arrow-up--after::after,
 .i_bubbles::before,
 .i_chat::before,
 .i_calendar::before,
@@ -72,6 +73,9 @@
   content: "\edbb";
 }
 .i_arrow-up::before {
+  content: "\edb7";
+}
+.i_arrow-up--after::after {
   content: "\edb7";
 }
 .i_bubbles::before,

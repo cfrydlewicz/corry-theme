@@ -62,7 +62,7 @@
     <?php if ( is_single() ) : ?>
       <section class="site-header-single">
         <div class="inner-wrapper">
-          <div class="title"><a href="#"><?php the_title(); ?></a></div>
+          <div class="title"><a href="#" class="i_arrow-up"><?php the_title(); ?></a></div>
         </div>
       </section>
     <?php endif; ?>
