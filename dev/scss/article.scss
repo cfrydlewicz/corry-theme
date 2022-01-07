@@ -193,15 +193,18 @@ body.single {
       article {
         @extend .bezel;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
         padding: 12px;
         .comment-content {
           order: 1;
+          width: 100%;
         }
         .comment-meta {
           order: 2;
+          width: 60%;
           .comment-author {
-            display: flex;
             img {
               // background styles for when no avatar found for author
               background-color: $c_dark-base;
@@ -218,7 +221,7 @@ body.single {
             }
           }
           .comment-metadata {
-            @extend .f_smaller;
+            @extend .f_smallest;
             time {
               // comment timestamp
             }
@@ -229,10 +232,24 @@ body.single {
           }
         }
         .reply {
+          align-self: flex-end;
           order: 3;
           text-align: right;
+          width: 40%;
           a {
             @extend .button--small;
+          }
+        }
+        @media #{$mq_md} {
+          .comment-meta,
+          .reply {
+            width: 50%;
+          }
+          .comment-meta {
+            min-width: 180px; // ensure timestamp fits on one line
+          }
+          .reply {
+            flex-grow: 1;
           }
         }
       }
