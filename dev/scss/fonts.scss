@@ -1,5 +1,3 @@
-/* Font Settings */
-
 body {
   color: $c_basetext;
   font-family: 'Arimo', helvetica, sans-serif; // critical
@@ -14,32 +12,51 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* sizes */
+.f_small {
+  font-size: .875rem;
+
+  body.single main > article & {
+    font-size: .875em;
+  }
+}
+.f_smaller {
+  font-size: .75rem;
+  body.single main > article & {
+    font-size: .75em;
+  }
+}
+.f_smallest {
+  font-size: .625rem;
+  body.single main > article & {
+    font-size: .625em;
+  }
+}
+.f_large {
+  font-size: 1.125rem;
+  body.single main > article & {
+    font-size: .1.125em;
+  }
+}
+.f_larger {
+  font-size: 1.25rem;
+  body.single main > article & {
+    font-size: 1.25em;
+  }
+}
+.f_largest {
+  font-size: 1.5rem;
+  body.single main > article & {
+    font-size: 1.5em;
+  }
+}
+
 // Emphasis
 strong {
   font-weight: bold;
 }
 em {
   font-style: italic;
-}
-.entry-content {
-  strong,
-  em {
-    color: $c_truewhite;
-  }
-  del {
-    color: $c_grey70;
-  }
-  blockquote del { // Exception for del elements within blockquotes (used for <cite>)
-    color: inherit;
-  }
-  a,
-  span[style*="color:"] { // Exception for when color is manually changed in the WP editor
-    strong,
-    em,
-    del {
-      color: inherit;
-    }
-  }
 }
 
 // Links
@@ -54,121 +71,33 @@ a,
     color: $c_active;
   }
   &::before {
+    // for links with icons in front of them
     font-size: 0.75em;
     margin: 0 0.375em;
   }
 }
 
-// Copy
+// General Copy
 p,
 li {
   font-size: 1rem;
-  max-width: 65ch; // Maximum width of 65 characters
 }
 p {
   line-height: 1.75;
+  &:not(:last-child) {
+    margin-bottom: 0.5em;
+  }
+}
+
+// General Lists
+ul,
+ol {
+  list-style: none;
 }
 li {
   line-height: 1.2;
-  margin-bottom: .5em;
-  &:last-child {
-    margin-bottom: 0;
-  }
-}
-.entry-content {
-  h1 {
-    font-size: 2.1rem;
-    line-height: 1;
-    font-weight: normal;
-    margin-bottom: 1em;
-  }
-  h2 {
-    font-size: 1.7rem;
-    line-height: 1;
-    font-weight: normal;
-    margin-top: 2em;
-    margin-bottom: .5em;
-  }
-  h3 {
-    font-size: 1.1rem;
-    line-height: 1.4;
-    font-weight: bold;
-    margin-top: 1.5em;
-    margin-bottom: .5em;
-  }
-  h4 {
-    font-size: 1rem;
-    line-height: 1;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-bottom: .5em;
-  }
-  p {
-    &:not(:last-of-type) {
-      margin-bottom: 1em;
-    }
-    a,
-    .fakelink {
-      @extend .u_break-line;
-    }
-  }
-}
-
-// Lists
-.entry-content {
-  ul,
-  ol {
-    padding-left: 2em;
-    margin-bottom: 1em;
-    ul, ol {
-      padding-left: .5em;
-      margin: 1em 0 .5em;
-      border-width: 1px 0;
-      border-style: solid;
-      border-color: mix(white, $c_primary, 80%);
-      ul, ol {
-        border-color: mix(white, $c_secondary, 80%);
-        ul, ol {
-          border-color: mix(white, $c_accent, 80%);
-        }
-      }
-    }
-  }
-  ul {
-    // TODO: Replace these with icons
-    list-style-type: disc;
-    ul {
-      list-style-type: square;
-      ul {
-        list-style-type: circle;
-      }
-    }
-  }
-  ol {
-    list-style-type: decimal-leading-zero;
-    ol {
-      list-style-type: upper-alpha;
-      ol {
-        list-style-type: lower-roman;
-        ol {
-          list-style-type: lower-alpha;
-        }
-      }
-    }
-  }
-}
-
-// Tables
-.entry-content table {
-  font-size: .9em;
-  line-height: 1.2;
-  p, li {
-    font-size: .9em;
-  }
-  th {
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+  &:not(:last-child) {
+    margin-bottom: 0.5em;
   }
 }
 
@@ -189,57 +118,11 @@ blockquote {
       /* add close-quote after next-to-last p tag */
       content: close-quote;
     }
-    &:last-child {
-      margin-bottom: 0;
-    }
-    &.cite,
-    del { /* fallback in case the replacement script doesn't fire */
-      font-size: .9em;
+    &.cite {
+      font-size: .875em;
       line-height: 1;
-      text-align: right;
       margin-bottom: 0;
+      text-align: right;
     }
-    del { /* fallback in case the replacement script doesn't fire */
-      color: inherit;
-      text-decoration: none;
-    }
-  }
-}
-
-/* text modifiers */
-.f_small {
-  font-size: .9rem;
-  .entry-content & {
-    font-size: .9em;
-  }
-}
-.f_smaller {
-  font-size: .75rem;
-  .entry-content & {
-    font-size: .75em;
-  }
-}
-.f_smallest {
-  font-size: .625rem;
-  .entry-content & {
-    font-size: .625em;
-  }
-}
-.f_large {
-  font-size: 1.1rem;
-  .entry-content & {
-    font-size: .1.1em;
-  }
-}
-.f_larger {
-  font-size: 1.25rem;
-  .entry-content & {
-    font-size: 1.25em;
-  }
-}
-.f_largest {
-  font-size: 1.4rem;
-  .entry-content & {
-    font-size: 1.4em;
   }
 }
