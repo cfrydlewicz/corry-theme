@@ -2308,9 +2308,9 @@ function wp_list_comments( $args = array(), $comments = null ) {
  *     @type string $title_reply_to       The translatable 'reply-to' button label. Default 'Leave a Reply to %s',
  *                                        where %s is the author of the comment being replied to.
  *     @type string $title_reply_before   HTML displayed before the comment form title.
- *                                        Default: '<h3 id="reply-title" class="comment-reply-title">'.
+ *                                        Default: '<div id="reply-title" class="comment-reply-title">'.
  *     @type string $title_reply_after    HTML displayed after the comment form title.
- *                                        Default: '</h3>'.
+ *                                        Default: '</div>'.
  *     @type string $cancel_reply_before  HTML displayed before the cancel reply link.
  *     @type string $cancel_reply_after   HTML displayed after the cancel reply link.
  *     @type string $cancel_reply_link    The translatable 'cancel reply' button label. Default 'Cancel reply'.
@@ -2318,7 +2318,7 @@ function wp_list_comments( $args = array(), $comments = null ) {
  *     @type string $submit_button        HTML format for the Submit button.
  *                                        Default: '<input name="%1$s" type="submit" id="%2$s" class="%3$s" value="%4$s" />'.
  *     @type string $submit_field         HTML format for the markup surrounding the Submit button and comment hidden
- *                                        fields. Default: '<p class="form-submit">%1$s %2$s</p>', where %1$s is the
+ *                                        fields. Default: '<div class="form-submit">%1$s %2$s</div> ', where %1$s is the
  *                                        submit button markup and %2$s is the comment hidden fields.
  *     @type string $format               The comment form format. Default 'xhtml'. Accepts 'xhtml', 'html5'.
  * }
@@ -2356,7 +2356,7 @@ function comment_form( $args = array(), $post_id = null ) {
 
 	$fields = array(
 		'author' => sprintf(
-			'<p class="comment-form-author">%s %s</p>',
+			'<div class="comment-form-author">%s %s</div> ',
 			sprintf(
 				'<label for="author">%s%s</label>',
 				__( 'Name' ),
@@ -2369,7 +2369,7 @@ function comment_form( $args = array(), $post_id = null ) {
 			)
 		),
 		'email'  => sprintf(
-			'<p class="comment-form-email">%s %s</p>',
+			'<div class="comment-form-email">%s %s</div> ',
 			sprintf(
 				'<label for="email">%s%s</label>',
 				__( 'Email' ),
@@ -2383,7 +2383,7 @@ function comment_form( $args = array(), $post_id = null ) {
 			)
 		),
 		'url'    => sprintf(
-			'<p class="comment-form-url">%s %s</p>',
+			'<div class="comment-form-url">%s %s</div> ',
 			sprintf(
 				'<label for="url">%s</label>',
 				__( 'Website' )
@@ -2400,7 +2400,7 @@ function comment_form( $args = array(), $post_id = null ) {
 		$consent = empty( $commenter['comment_author_email'] ) ? '' : ' checked="checked"';
 
 		$fields['cookies'] = sprintf(
-			'<p class="comment-form-cookies-consent">%s %s</p>',
+			'<div class="comment-form-cookies-consent">%s %s</div> ',
 			sprintf(
 				'<input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"%s />',
 				$consent
@@ -2435,7 +2435,7 @@ function comment_form( $args = array(), $post_id = null ) {
 	$defaults = array(
 		'fields'               => $fields,
 		'comment_field'        => sprintf(
-			'<p class="comment-form-comment">%s %s</p>',
+			'<div class="comment-form-comment">%s %s</div> ',
 			sprintf(
 				'<label for="comment">%s</label>',
 				_x( 'Comment', 'noun' )
@@ -2443,7 +2443,7 @@ function comment_form( $args = array(), $post_id = null ) {
 			'<textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea>'
 		),
 		'must_log_in'          => sprintf(
-			'<p class="must-log-in">%s</p>',
+			'<div class="must-log-in">%s</div> ',
 			sprintf(
 				/* translators: %s: Login URL. */
 				__( 'You must be <a href="%s">logged in</a> to post a comment.' ),
@@ -2452,7 +2452,7 @@ function comment_form( $args = array(), $post_id = null ) {
 			)
 		),
 		'logged_in_as'         => sprintf(
-			'<p class="logged-in-as">%s</p>',
+			'<div class="logged-in-as">%s</div> ',
 			sprintf(
 				/* translators: 1: Edit user link, 2: Accessibility text, 3: User name, 4: Logout URL. */
 				__( '<a href="%1$s" aria-label="%2$s">Logged in as %3$s</a>. <a href="%4$s">Log out?</a>' ),
@@ -2465,7 +2465,7 @@ function comment_form( $args = array(), $post_id = null ) {
 			)
 		),
 		'comment_notes_before' => sprintf(
-			'<p class="comment-notes">%s%s</p>',
+			'<div class="comment-notes">%s%s</div> ',
 			sprintf(
 				'<span id="email-notes">%s</span>',
 				__( 'Your email address will not be published.' )
@@ -2483,14 +2483,14 @@ function comment_form( $args = array(), $post_id = null ) {
 		'title_reply'          => __( 'Leave a Reply' ),
 		/* translators: %s: Author of the comment being replied to. */
 		'title_reply_to'       => __( 'Leave a Reply to %s' ),
-		'title_reply_before'   => '<h3 id="reply-title" class="comment-reply-title">',
-		'title_reply_after'    => '</h3>',
+		'title_reply_before'   => '<div id="reply-title" class="comment-reply-title">',
+		'title_reply_after'    => '</div>',
 		'cancel_reply_before'  => ' <small>',
 		'cancel_reply_after'   => '</small>',
 		'cancel_reply_link'    => __( 'Cancel reply' ),
 		'label_submit'         => __( 'Post Comment' ),
 		'submit_button'        => '<input name="%1$s" type="submit" id="%2$s" class="%3$s" value="%4$s" />',
-		'submit_field'         => '<p class="form-submit">%1$s %2$s</p>',
+		'submit_field'         => '<div class="form-submit">%1$s %2$s</div> ',
 		'format'               => 'xhtml',
 	);
 
