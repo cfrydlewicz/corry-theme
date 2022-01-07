@@ -46,7 +46,7 @@
   <?php else : ?>
 
     <section class="post error404">
-      <img src="<?php bloginfo('template_url');?>/assets/static/404.jpg">
+      <img src="<?php bloginfo('template_url');?>/assets/404.jpg">
       <div class="entry-content">
         <h2 class="entry-title">No Results Found</h2>
         <div class="entry-summary">
