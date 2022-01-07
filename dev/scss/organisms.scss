@@ -10,8 +10,10 @@ $border-radius: 12px;
   border-width: 2px;
   color: $c_trueblack;
   cursor: pointer;
+  display: inline-block;
   font-weight: bold;
   padding: 8px;
+  text-align: center;
   text-decoration: none;
   &:hover {
     background-color: $c_hover;

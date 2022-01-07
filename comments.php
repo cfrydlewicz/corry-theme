@@ -13,7 +13,7 @@
 
 <?php endif; ?>
 
-<div id="a_respond">
+<div id="a_respond" class="respond-container">
   <?php comment_form(
     array(
       'logged_in_as'       => null,
