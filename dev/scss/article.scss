@@ -1,6 +1,12 @@
 article {
   // Articles are used for Pages, Listings, Single Posts, and Comments
 
+  h1 {
+    // Post Title
+    font-size: 2.25em;
+    line-height: 1.125;
+  }
+
   .entry-header {
     position: relative;
     img {
@@ -8,13 +14,25 @@ article {
     }
     .thumbnail-overlay {
       position: absolute;
-      > div {
-        background-color: rgba($c_black,0.75);
+      top: 0;
+
+      .title-container,
+      .post-meta {
+        background-color: rgba($c_black,0.5);
         &:hover {
           background-color: $c_black;
         }
+        padding: 12px;
+      }
+      .title-container {
         position: sticky;
       }
+      .post-meta {
+        @extend .f_small;
+        bottom: 0;
+        position: absolute;
+      }
+
     }
   }
 
@@ -35,208 +53,213 @@ body.single {
   main > article {
     padding: 0 0 36px;
 
-    // Typography
-    h1 {
-      // Post Title
-    }
-    h2 {
-      @extend .f_largest;
-      line-height: 1;
-      font-weight: 400;
-      margin-top: 2em;
-      margin-bottom: 0.5em;
-    }
-    h3 {
-      @extend .f_larger;
-      line-height: 1.4;
-      font-weight: bold;
-      margin-top: 1.5em;
-      margin-bottom: 0.5em;
-    }
-    h4 {
-      @extend .f_large;
-      line-height: 1.4;
-      font-weight: bold;
-      margin-top: 1.5em;
-      margin-bottom: 0.5em;
-    }
-    h5 {
-      line-height: 1;
-      font-weight: 400;
-      text-transform: uppercase;
-      margin-bottom: 0.5em;
-    }
-    p,
-    li {
-      max-width: 65ch;
-    }
-    p {
-      &:not(:last-of-type) {
-        margin-bottom: 1em;
-      }
-    }
+    .entry-content {
+      // avoids the post header
 
-    // emphasis
-    strong,
-    em {
-      color: $c_truewhite;
-    }
-    del {
-      color: $c_light70;
-    }
-    a,
-    .fakelink,
-    span[style*="color:"] { // Exception for when color is manually changed in the WP editor
-      strong,
-      em,
-      del {
-        color: inherit;
+      h2 {
+        @extend .f_largest;
+        line-height: 1;
+        font-weight: 400;
+        margin-top: 2em;
+        margin-bottom: 0.5em;
       }
-    }
-
-    // Text Links
-    a,
-    .fakelink {
-      @extend .u_break-line;
-      text-decoration: underline;
-    }
-    a {
-      &[target="_blank"] {
-        @extend .u_icomoon;
-        &::after {
-          content: "\ed7b";
-          font-size: 0.625em;
-          margin: 0.125em 0 0 0.375em;
-          vertical-align: text-top;
-        }
-      }
-      &[href*="amazon.com"] {
-        @extend .i_shopping;
-      }
-      &[href*="disneyplus.com"],
-      &[href*="hbogo.com"],
-      &[href*="hbomax.com"],
-      &[href*="hbonow.com"],
-      &[href*="hulu.com"],
-      &[href*="netflix.com"] {
-        @extend .i_movie;
-      }
-      &[href*="spotify.com"] {
-        @extend .i_spotify;
-      }
-      &[href*="youtube.com"],
-      &[href*="youtu.be"] {
-        @extend .i_youtube;
-      }
-      &[href*="docs.google.com"],
-      &[href*="drive.google.com"] {
-        @extend .i_gdrive;
-      }
-      &[href*="pinterest.com"],
-      &[href*="pin.it"] {
-        @extend .i_pinterest;
-      }
-    }
-
-    // lists
-    ul,
-    ol {
-      padding-left: 2em;
-      margin-bottom: 1em;
-      ul, ol {
-        padding-left: 0.5em;
-        margin: 1em 0 0.5em;
-        border-width: 1px 0;
-        border-style: solid;
-        border-color: mix(white, $c_secondary, 80%);
-        ul, ol {
-          border-color: mix(white, $c_accent, 80%);
-          ul, ol {
-            border-color: $c_grey50;
-          }
-        }
-      }
-    }
-    ul {
-      list-style-type: disc;
-      ul {
-        list-style-type: square;
-        ul {
-          list-style-type: circle;
-        }
-      }
-    }
-    ol {
-      list-style-type: decimal-leading-zero;
-      ol {
-        list-style-type: upper-alpha;
-        ol {
-          list-style-type: lower-roman;
-          ol {
-            list-style-type: lower-alpha;
-          }
-        }
-      }
-    }
-
-    // Quotes
-    blockquote {
-      background-color: $c_grey80;
-      border-left: 8px solid $c_grey60;
-      margin: 2em 0;
-      padding: 0.5em 1em 1.2em 0.5em;
-      &::before {
-        color: $c_grey60;
-        float: left;
-        font-size: 5em;
-        line-height: 0;
-        margin-top: 0.5em;
-        vertical-align: top;
-      }
-      p {
-        margin-bottom: 2.5em;  /* compensate an extra 1.5 for negative margin-top */
-        margin-left: 1em;  /* Indent text */
-        margin-top: 0.5em;  /* align with large open quote */
-        max-width: 80%;
-        &.cite {
-          margin-bottom: 0;
-          margin-top: 0;
-          width: 100%;
-        }
-      }
-    }
-
-    // Horizontal Rules
-    hr {
-      margin: 2em auto;
-      width: 60%;
-      border: none;
-      border-top: 1px solid $c_accent;
-    }
-
-    // Tables
-    table {
-      border-collapse: collapse;
-      font-size: .875em;
-      line-height: 1.2;
-      max-width: 100%;
-      margin-bottom: 3em;
-      th,
-      td {
-        padding: 0.25rem;
-        border: 1px solid $c_grey50;
-      }
-      th {
+      h3 {
+        @extend .f_larger;
+        line-height: 1.4;
         font-weight: bold;
-        text-transform: uppercase;
+        margin-top: 1.5em;
+        margin-bottom: 0.5em;
       }
-      /* TODO needed?
+      h4 {
+        @extend .f_large;
+        line-height: 1.4;
+        font-weight: bold;
+        margin-top: 1.5em;
+        margin-bottom: 0.5em;
+      }
+      h5 {
+        line-height: 1;
+        font-weight: 400;
+        text-transform: uppercase;
+        margin-bottom: 0.5em;
+      }
       p,
       li {
-        font-size: inherit;
-        line-height: inherit;
+        max-width: 65ch;
       }
-      */
+      p {
+        &:not(:last-of-type) {
+          margin-bottom: 1em;
+        }
+      }
+      figcaption {
+        @extend .f_small;
+        line-height: 1.125
+      }
+
+      // emphasis
+      strong,
+      em {
+        color: $c_truewhite;
+      }
+      del {
+        color: $c_light70;
+      }
+      a,
+      .fakelink,
+      span[style*="color:"] { // Exception for when color is manually changed in the WP editor
+        strong,
+        em,
+        del {
+          color: inherit;
+        }
+      }
+
+      // Text Links
+      a,
+      .fakelink {
+        @extend .u_break-line;
+        text-decoration: underline;
+      }
+      a {
+        &[target="_blank"] {
+          @extend .u_icomoon;
+          &::after {
+            @extend .f_smallest;
+            content: "\ed7b";
+            margin: 0.125em 0 0 0.375em;
+            vertical-align: text-top;
+          }
+        }
+        &[href*="amazon.com"] {
+          @extend .i_shopping;
+        }
+        &[href*="disneyplus.com"],
+        &[href*="hbogo.com"],
+        &[href*="hbomax.com"],
+        &[href*="hbonow.com"],
+        &[href*="hulu.com"],
+        &[href*="netflix.com"] {
+          @extend .i_movie;
+        }
+        &[href*="spotify.com"] {
+          @extend .i_spotify;
+        }
+        &[href*="youtube.com"],
+        &[href*="youtu.be"] {
+          @extend .i_youtube;
+        }
+        &[href*="docs.google.com"],
+        &[href*="drive.google.com"] {
+          @extend .i_gdrive;
+        }
+        &[href*="pinterest.com"],
+        &[href*="pin.it"] {
+          @extend .i_pinterest;
+        }
+      }
+
+      // lists
+      ul,
+      ol {
+        padding-left: 2em;
+        margin-bottom: 1em;
+        ul, ol {
+          border-color: mix(white, $c_secondary, 80%);
+          border-style: solid;
+          border-width: 1px 0;
+          margin: 1em 0 0.5em;
+          padding-left: 0.5em;
+          ul, ol {
+            border-color: mix(white, $c_accent, 80%);
+            ul, ol {
+              border-color: $c_grey50;
+            }
+          }
+        }
+      }
+      ul {
+        list-style-type: disc;
+        ul {
+          list-style-type: square;
+          ul {
+            list-style-type: circle;
+          }
+        }
+      }
+      ol {
+        list-style-type: decimal-leading-zero;
+        ol {
+          list-style-type: upper-alpha;
+          ol {
+            list-style-type: lower-roman;
+            ol {
+              list-style-type: lower-alpha;
+            }
+          }
+        }
+      }
+
+      // Quotes
+      blockquote {
+        background-color: $c_grey80;
+        border-left: 8px solid $c_grey60;
+        margin: 2em 0;
+        padding: 0.5em 1em 1.2em 0.5em;
+        &::before {
+          color: $c_grey60;
+          float: left;
+          font-size: 5em;
+          line-height: 0;
+          margin-top: 0.5em;
+          vertical-align: top;
+        }
+        p {
+          margin-bottom: 2.5em;  /* compensate an extra 1.5 for negative margin-top */
+          margin-left: 1em;  /* Indent text */
+          margin-top: 0.5em;  /* align with large open quote */
+          max-width: 80%;
+          &.cite {
+            margin-bottom: 0;
+            margin-top: 0;
+            width: 100%;
+          }
+        }
+      }
+
+      // Horizontal Rules
+      hr {
+        margin: 2em auto;
+        width: 60%;
+        border: none;
+        border-top: 1px solid $c_accent;
+      }
+
+      // Tables
+      table {
+        @extend .f_small;
+        border-collapse: collapse;
+        line-height: 1.2;
+        max-width: 100%;
+        margin-bottom: 3em;
+        th,
+        td {
+          padding: 0.25rem;
+          border: 1px solid $c_grey50;
+        }
+        th {
+          font-weight: bold;
+          text-transform: uppercase;
+        }
+        /* TODO needed?
+        p,
+        li {
+          font-size: inherit;
+          line-height: inherit;
+        }
+        */
+      }
+
     }
 
     .entry-footer {

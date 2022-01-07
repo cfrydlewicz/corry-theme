@@ -13,29 +13,32 @@
       ?>
 
       <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-        <div class="inner-wrapper">
-          <header class="entry-header">
+
+        <header class="entry-header">
+          <div class="inner-wrapper--at-lg">
             <?php post_thumbnail(); ?>
             <div class="thumbnail-overlay">
-              <div>
+              <div class="title-container">
                 <h1 class="entry-title"><?php the_title(); ?></h1>
-                <section class="post-meta">
-                  <div class="post-stats"><span class="word-count"><?php word_count(); ?> words</span> published on <span class="post-date"><?php the_date(); ?></span></div>
-                  <div class="post-categories"><?php the_category(); ?></div>
-                </section>
               </div>
+              <div class="post-meta"><span class="word-count"><?php word_count(); ?> words</span> published on <span class="post-date"><?php the_date(); ?></span></div>
             </div>
-          </header>
+          </div>
+        </header>
 
-          <section class="entry-content">
+        <section class="entry-content">
+          <div class="inner-wrapper">
             <?php the_content(); ?>
-          </section>
+          </div>
+        </section>
 
-          <footer id="a_end-of-article" class="entry-footer">
+        <footer id="a_end-of-article" class="entry-footer">
+          <div class="inner-wrapper">
             <p class="post-categories">Categories: <?php the_category(', '); ?></p>
             <p class="post-tags"><?php the_tags(); ?></p>
-          </footer>
-        </div>
+          </div>
+        </footer>
+
       </article>
 
       <footer class="post-footer t_slides-up">

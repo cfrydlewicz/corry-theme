@@ -14,9 +14,14 @@ $header_height: 40px;
 }
 @media #{$mq_lg} {
   .inner-wrapper,
-  .inner-wrapper--at-md {
+  .inner-wrapper--at-md,
+  .inner-wrapper--at-lg {
     margin: 0 auto;
     max-width: 1056px;
+  }
+  .inner-wrapper--at-lg {
+    // TODO padding: 0 16px;
+    width: 100%;
   }
 }
 
