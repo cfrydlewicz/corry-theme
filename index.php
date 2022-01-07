@@ -14,19 +14,19 @@
       <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
         <header class="entry-header">
-          <?php post_thumbnail(); ?>
-          <div class="thumbnail-overlay">
-            <?php if ( is_singular() ) : ?>
-              <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-            <?php else : ?>
-              <?php the_title( sprintf( '<h2 class="entry-title"><a href="%s">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-            <?php endif; ?>
-
-            <section class="post-meta">
+          <div class="inner-wrapper--at-md">
+            <?php post_thumbnail(); ?>
+            <div class="title-container thumbnail-overlay">
+              <?php if ( is_singular() ) : ?>
+                <h1 class="entry-title"><?php the_title(); ?></h1>
+              <?php else : ?>
+                <h2 class="entry-title"><?php the_title( sprintf( '<a href="%s">', esc_url( get_permalink() ) ), '</a>' ); ?></h2>
+              <?php endif; ?>
+            </div>
+            <div class="post-meta thumbnail-overlay">
               <div class="post-stats"><span class="word-count"><?php word_count(); ?> words</span> published on <span class="post-date"><?php the_date(); ?></span></div>
               <div class="post-categories"><?php the_category(); ?></div>
-            </section>
-
+            </div>
           </div>
         </header>
 

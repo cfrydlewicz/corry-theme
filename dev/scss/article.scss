@@ -13,27 +13,33 @@ article {
       // Post Thumbnail
     }
     .thumbnail-overlay {
+      background-color: rgba($c_black,0.5);
+      &:hover {
+        background-color: $c_black;
+      }
+      @supports (backdrop-filter: blur(10px)) {
+        backdrop-filter: blur(10px);
+        background-color: rgba($c_black,0.25);
+        &:hover {
+          background-color: rgba($c_black,0.5);
+        }
+      }
+      padding: 12px;
       position: absolute;
       top: 0;
-
-      .title-container,
-      .post-meta {
-        background-color: rgba($c_black,0.5);
-        &:hover {
-          background-color: $c_black;
-        }
-        padding: 12px;
-      }
-      .title-container {
-        position: sticky;
-      }
-      .post-meta {
-        @extend .f_small;
-        bottom: 0;
-        position: absolute;
-      }
-
     }
+
+    .title-container {
+    }
+    .post-meta {
+      @extend .f_small;
+      bottom: 0;
+      display: flex;
+      justify-content: space-between;
+      position: absolute;
+      width: 100%;
+    }
+
   }
 
 }
@@ -52,6 +58,12 @@ body.single {
 
   main > article {
     padding: 0 0 36px;
+
+    .entry-header {
+      .title-container {
+        position: sticky;
+      }
+    }
 
     .entry-content {
       // avoids the post header
