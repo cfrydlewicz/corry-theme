@@ -31,7 +31,7 @@
             <?php the_content(); ?>
           </section>
 
-          <footer class="entry-footer">
+          <footer id="a_end-of-article" class="entry-footer">
             <p class="post-categories">Categories: <?php the_category(', '); ?></p>
             <p class="post-tags"><?php the_tags(); ?></p>
           </footer>

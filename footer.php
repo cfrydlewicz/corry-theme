@@ -1,4 +1,4 @@
-  <footer class="site-footer">
+  <footer id="a_footer" class="site-footer">
     <div class="inner-wrapper">
 
       <section class="copyright-footer">
