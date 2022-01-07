@@ -70,6 +70,7 @@ a,
   &:active {
     color: $c_active;
   }
+  &::after,
   &::before {
     // for links with icons in front of them
     font-size: 0.75em;
