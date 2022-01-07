@@ -24,12 +24,13 @@ article {
           background-color: rgba($c_black,0.5);
         }
       }
+      height: min-content;
       padding: 12px;
       position: absolute;
-      top: 0;
     }
 
     .title-container {
+      top: 0;
     }
     .post-meta {
       @extend .f_small;

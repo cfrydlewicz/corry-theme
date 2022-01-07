@@ -20,7 +20,9 @@
             <div class="title-container thumbnail-overlay">
               <h1 class="entry-title"><?php the_title(); ?></h1>
             </div>
-            <div class="post-meta thumbnail-overlay"><span class="word-count"><?php word_count(); ?> words</span> published on <span class="post-date"><?php the_date(); ?></span></div>
+            <div class="post-meta thumbnail-overlay">
+              <div class="post-stats"><span class="word-count"><?php word_count(); ?> words</span> published on <span class="post-date"><?php the_date(); ?></span></div>
+            </div>
           </div>
         </header>
 
