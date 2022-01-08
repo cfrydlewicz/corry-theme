@@ -70,18 +70,14 @@ function corry_head_meta() {
   // assume homepage
   $metaDesc = "A blog for both personal and professional content.";
   $metaKeys = "Corry Frydlewicz, Corry, Frydlewicz, Corry Blog, CorryArt";
-/*
   if ( is_singular() ) {
     // Articles and Pages
     $metaDesc = $the_excerpt;
     $metaKeys = esc_html( get_the_terms('','','',', ') );
-  } elseif ( $is_category() ) {
-*/
-  if ( is_category() ) {
-    $metaDesc = "Posts labeled [CATEGORY] from Corry Frydlewicz";
-    $metaKeys = "[CATEGORY], Corry Frydlewicz, Corry, Frydlewicz";
+  } elseif ( is_category() ) {
+    $metaDesc = "Posts labeled ".single_cat_title()." from Corry Frydlewicz";
+    $metaKeys = single_cat_title().", Corry Frydlewicz, Corry, Frydlewicz";
   }
-/*
   } elseif ( is_tag() ) {
     $metaDesc = "Posts tagged ".single_tag_title()." from Corry Frydlewicz";
     $metaKeys = single_tag_title().", Corry Frydlewicz, Corry, Frydlewicz";
@@ -89,7 +85,6 @@ function corry_head_meta() {
     $metaDesc = "Search results for ".esc_html($_GET['s'])." from Corry Frydlewicz";
     $metaKeys = esc_html($_GET['s']).", Corry Frydlewicz, Corry, Frydlewicz";
   }
-*/
   echo '<meta name="description" content="'.$metaDesc.'"><meta name="keywords" content="'.$metaKeys.'">';
 }
 
