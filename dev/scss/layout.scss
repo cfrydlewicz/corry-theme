@@ -89,6 +89,7 @@ $header_height: 40px;
   }
 
   .header-logo {
+    @extend .bezel;
     flex-grow: 1;
     margin-right: 12px;
     svg {
@@ -124,7 +125,7 @@ $header_height: 40px;
         display: flex;
         margin: 0;
         a {
-          @extend .bezel--horizontal;
+          @extend .bezel;
           align-items: center;
           display: flex;
           padding: 0 8px;
@@ -137,7 +138,7 @@ $header_height: 40px;
   }
 
   .header-search {
-    @extend .bezel--horizontal;
+    @extend .bezel;
     padding: 0 8px;
     &:hover,
     &:focus-within {
