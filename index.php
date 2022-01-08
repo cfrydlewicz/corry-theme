@@ -1,14 +1,18 @@
 <?php get_header(); ?>
 
 
-<main id="a_skip-to-content">
+<main id="a_skip-to-content" class="listing-page">
 
   <?php if ( ! is_home() ) : ?>
     <header class="page-header">
       <?php if ( is_category() ) : ?>
-        <h1 class="page-title"><?php single_cat_title(); ?></h1>
+        <h1 class="page-title">Category: <strong><?php single_cat_title(); ?></strong></h1>
       <?php elseif ( is_tag() ) : ?>
-        <h1 class="page-title"><?php single_tag_title(); ?></h1>
+        <h1 class="page-title">Tag <strong><?php single_tag_title(); ?></strong></h1>
+      <?php elseif ( is_search() ) : ?>
+        <h1 class="page-title">Search Results for <strong><?php echo esc_html($_GET['s']); ?></strong></h1>
+      <?php else : ?>
+        <div class="page-title u_hidden">Unknown Page Type</div>
       <?php endif; ?>
     </header>
   <?php endif; ?>
