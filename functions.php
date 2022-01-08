@@ -70,14 +70,11 @@ function corry_head_meta() {
   // assume homepage
   $metaDesc = "A blog for both personal and professional content.";
   $metaKeys = "Corry Frydlewicz, Corry, Frydlewicz, Corry Blog, CorryArt";
-/*
   if ( is_singular() ) {
     // Articles and Pages
-    $metaDesc = $the_excerpt;
+    $metaDesc = get_the_excerpt();
     $metaKeys = esc_html( get_the_terms('','','',', ') );
   } elseif ( $is_category() ) {
-*/
-  if ( is_category() ) {
     $metaDesc = "Posts labeled ".single_cat_title('', false)." from Corry Frydlewicz";
     $metaKeys = single_cat_title('', false).", Corry Frydlewicz, Corry, Frydlewicz";
   } elseif ( is_tag() ) {
