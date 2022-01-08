@@ -1,1 +1,1 @@
-$("#single-post-title").ready(function(){window.addEventListener("scroll",function(){var position=document.querySelector("#single-post-title").getBoundingClientRect();0<=position.top&&position.bottom<=window.innerHeight?$("#site-header-secondary").slideUp():$("#site-header-secondary").slideDown()})});
+$("#single-post-title").ready(function(){new IntersectionObserver(function(entries){!0===entries[0].isIntersecting?$("#site-header-secondary").slideUp():$("#site-header-secondary").slideDown()},{threshold:[0]}).observe(document.querySelector("#single-post-title"))});
