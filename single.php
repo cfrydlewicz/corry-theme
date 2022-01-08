@@ -31,8 +31,8 @@
             <?php if ( has_tag('old-post') ) : ?>
               <div class="disclaimer_old-posts disclaimer-container">
                 <div>
-                  <p><strong>Disclaimer: This post is old and likely contains outdated information.</strong> If you would like to see an update for this content, <a href="#a_respond">leave a comment</a> saying so and I can write an update or editorial note.</p>
-                  <p>I have a policy of <em>only</em> removing potentially harmful content, and I try to keep old posts visible here &mdash; even if they're embarrassing or no longer accurate. I want to look back and see my growth, and I don't want to hide that growth from others either.</p>
+                  <p><strong>This post is old and contains outdated information.</strong> If you'd like to see an update for this content, <a href="#a_respond" class="i_chat">leave a comment</a> saying so.</p>
+                  <p>I make a point to <em>only remove harmful content</em>, and I try to keep old posts visible &mdash; even if they're embarrassing or no longer accurate. I want to look back and see my growth over the years, and I don't want to hide that growth from others either. Thanks for considering this as you read.</p>
                 </div>
               </div>
             <?php endif; ?>

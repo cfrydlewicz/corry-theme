@@ -67,7 +67,7 @@ body.single {
     }
 
     .entry-content {
-      // avoids the post header
+      padding-top: 12px;
 
       h2 {
         @extend .f_largest;
@@ -277,13 +277,17 @@ body.single {
         @extend .i_warning;
         background-color: mix(black, $c_accent, 80%);
         border-color: $c_accent;
-        display: none;
+        border-style: solid;
+        border-width: 1px;
+        display: flex;
+        margin-bottom: 1.25em;
         padding: 12px;
         &::before {
           font-size: 24px;
+          margin-right: 12px;
         }
-        body.tag-old-post &.disclaimer_old {
-          display: flex;
+        > div {
+          @extend .f_small;
         }
       }
 
