@@ -3,12 +3,6 @@
 
 <main id="a_skip-to-content">
 
-  <?php if ( ! is_home() ) : ?>
-    <header class="page-header">
-      <h1 class="page-title"><?php the_title(); ?></h1>
-    </header>
-  <?php endif; ?>
-
   <?php if ( have_posts() ) : ?>
     <?php while ( have_posts() ) : ?>
       <?php the_post(); ?>
