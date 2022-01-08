@@ -7,7 +7,7 @@
     <header class="page-header">
       <?php if ( is_category() ) : ?>
         <h1 class="page-title"><?php single_cat_title(); ?></h1>
-      <?php else if ( is_tag() ) : ?>
+      <?php elseif ( is_tag() ) : ?>
         <h1 class="page-title"><?php single_tag_title(); ?></h1>
       <?php endif; ?>
     </header>
