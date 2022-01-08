@@ -65,7 +65,6 @@ function word_count() {
 }
 
 // SEO Population
-/*
 function corry_head_meta() {
   global $post;
   if ( $is_singular() ) {
@@ -91,7 +90,6 @@ function corry_head_meta() {
   }
   echo '<meta name="description" content="'.$metaDesc.'"><meta name="keywords" content="'.$metaKeys.'">';
 }
-*/
 
 function corry_widgets_init() {
   register_sidebar( array(

@@ -13,7 +13,7 @@
   <meta name="theme-color" content="#ffffff">
 
   <title><?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' | '; } ?><?php bloginfo('name'); ?></title>
-  <!--?php corry_head_meta(); ?-->
+  <?php corry_head_meta(); ?>
 
   <link rel="profile" href="http://gmpg.org/xfn/11">
   <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
