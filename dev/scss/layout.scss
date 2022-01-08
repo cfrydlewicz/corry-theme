@@ -2,13 +2,16 @@
 
 $header_height: 40px;
 
+$gutter:    16px;
+$gutter_lg: 24px;
+
 .inner-wrapper {
-  padding: 0 16px;
+  padding: 0 $gutter;
   width: 100%;
 }
 @media #{$mq_md} {
   .inner-wrapper--at-md {
-    padding: 0 16px;
+    padding: 0 $gutter;
     width: 100%;
   }
 }
@@ -16,11 +19,12 @@ $header_height: 40px;
   .inner-wrapper,
   .inner-wrapper--at-md,
   .inner-wrapper--at-lg {
+    @extend .bezel--horizontal--at-lg;
     margin: 0 auto;
     max-width: 1056px;
+    padding: 0 $gutter_lg;
   }
   .inner-wrapper--at-lg {
-    // TODO padding: 0 16px;
     width: 100%;
   }
 }
@@ -45,6 +49,15 @@ $header_height: 40px;
   border-style: solid;
   border-top-color: $c_light20;
 }
+@media #{$mq_lg} {
+  .bezel--horizontal--at-lg {
+    border-bottom-color: $c_grey50;
+    border-left-color: $c_light20;
+    border-right-color: $c_grey50;
+    border-style: solid;
+    border-top-color: $c_light20;
+  }
+}
 .bezel {
   border-width: 1px;
 }
@@ -57,6 +70,7 @@ $header_height: 40px;
 
 .total-wrapper {
   background-color: $c_dark-base;
+  min-width: $bp_min;
   position: relative;
 }
 
@@ -118,6 +132,12 @@ $header_height: 40px;
       display: block;
       height: 100%;
       padding: 4px;
+      @media #{$mq_sm2} {
+        padding-left: $gutter;
+      }
+      @media #{$mq_lg} {
+        padding-left: $gutter_lg;
+      }
       width: fit-content;
       &:hover {
         svg path {
@@ -144,6 +164,12 @@ $header_height: 40px;
           align-items: center;
           display: flex;
           padding: 0 8px;
+          @media #{$mq_sm2} {
+            padding: 0 $gutter;
+          }
+          @media #{$mq_lg} {
+            padding: 0 $gutter_lg;
+          }
           &:hover {
             @extend .grainy;
           }
@@ -154,7 +180,13 @@ $header_height: 40px;
 
   .header-search {
     @extend .bezel;
-    padding: 0 8px;
+    padding: 0 4px 0 8px;
+    @media #{$mq_sm2} {
+      padding: 0 $gutter;
+    }
+    @media #{$mq_lg} {
+      padding: 0 $gutter_lg;
+    }
     &:hover,
     &:focus-within {
       @extend .grainy;
