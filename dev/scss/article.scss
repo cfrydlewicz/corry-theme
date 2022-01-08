@@ -38,12 +38,19 @@ article {
       height: min-content;
       padding: 12px 16px 16px;
       position: absolute;
+      width: 100%;
+      @media #{$mq_md} {
+        width: auto;
+      }
     }
     .post-meta {
       @extend .f_small;
       display: flex;
       justify-content: space-between;
       width: 100%;
+      a {
+        font-size: inherit;
+      }
     }
   }
 
