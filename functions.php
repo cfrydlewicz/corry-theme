@@ -80,7 +80,6 @@ function corry_head_meta() {
   if ( is_category() ) {
     $metaDesc = "Posts labeled ".single_cat_title('', false)." from Corry Frydlewicz";
     $metaKeys = single_cat_title('', false).", Corry Frydlewicz, Corry, Frydlewicz";
-  }
   } elseif ( is_tag() ) {
     $metaDesc = "Posts tagged ".single_tag_title('', false)." from Corry Frydlewicz";
     $metaKeys = single_tag_title('', false).", Corry Frydlewicz, Corry, Frydlewicz";
