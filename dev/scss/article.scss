@@ -3,7 +3,7 @@ article {
 
   h1 {
     // Post Title
-    font-size: 2.25em;
+    font-size: 1.75em;
     line-height: 1.125;
   }
 
@@ -24,10 +24,12 @@ article {
           background-color: rgba($c_black,0.5);
         }
       }
-      bottom: 0;
       height: min-content;
       padding: 12px;
-      position: absolute;
+      @media #{$mq_md} {
+        bottom: 0;
+        position: absolute;
+      }
     }
     .post-meta {
       @extend .f_small;
@@ -63,7 +65,7 @@ body.single {
     }
 
     .entry-content {
-      padding-top: 12px;
+      padding-top: 16px;
 
       h2 {
         @extend .f_largest;
