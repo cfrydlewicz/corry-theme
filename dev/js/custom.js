@@ -2,7 +2,7 @@ $(document).ready( function() {
 
   // Secondary site header
   // For single posts
-  if( $("single-post-title").length > 0 ) {
+  if( $("#single-post-title").length > 0 ) {
 
     // Watch the h1
     var observer = new IntersectionObserver(function(entries) {
