@@ -26,7 +26,7 @@ $header_height: 40px;
 }
 
 // Anchor Links Accommodate Fixed Header
-[id^="a_"] {
+[id^="a_"]:not(main) {
   padding-top: $header_height + 8;
 }
 
@@ -92,7 +92,10 @@ $header_height: 40px;
     .title {
       @extend .f_smaller;
       display: block;
+      overflow-x: hidden;
       padding: 4px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
   }
 

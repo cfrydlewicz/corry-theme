@@ -17,11 +17,11 @@
         <header class="entry-header">
           <div class="inner-wrapper--at-lg">
             <?php post_thumbnail(); ?>
-            <div class="title-container thumbnail-overlay">
+            <div class="thumbnail-overlay">
               <h1 id="single-post-title" class="entry-title"><?php the_title(); ?></h1>
-            </div>
-            <div class="post-meta thumbnail-overlay">
-              <div class="post-stats"><span class="word-count"><?php word_count(); ?> words</span> published on <span class="post-date"><?php the_date(); ?></span></div>
+              <div class="post-meta thumbnail-overlay">
+                <div class="post-stats"><span class="word-count"><?php word_count(); ?> words</span> published on <span class="post-date"><?php the_date(); ?></span></div>
+              </div>
             </div>
           </div>
         </header>
@@ -31,8 +31,8 @@
             <?php if ( has_tag('old-post') ) : ?>
               <div class="disclaimer_old-posts disclaimer-container">
                 <div>
-                  <p><strong>This post is old and contains outdated information.</strong> If you'd like to see an update for this content, <a href="#a_respond" class="i_chat">leave a comment</a> saying so.</p>
-                  <p>I make a point to <em>only remove harmful content</em>, and I try to keep old posts visible &mdash; even if they're embarrassing or no longer accurate. I want to look back and see my growth over the years, and I don't want to hide that growth from others either. Thanks for considering this as you read.</p>
+                  <p><strong>This post is old and contains outdated information.</strong> I make a point to <em>only remove harmful content</em>, and I try to keep old posts visible &mdash; even if they're embarrassing or no longer accurate. I want to look back and see my growth over the years, and I don't want to hide that growth from others either. Thanks for considering this as you read.</p>
+                  <p>If you'd like to see an update for this content, <a href="#a_respond" class="i_chat u_nowrap">leave a comment</a> saying so.</p>
                 </div>
               </div>
             <?php endif; ?>

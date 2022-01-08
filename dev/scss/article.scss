@@ -24,13 +24,10 @@ article {
           background-color: rgba($c_black,0.5);
         }
       }
+      bottom: 0;
       height: min-content;
       padding: 12px;
       position: absolute;
-    }
-
-    .title-container {
-      top: 0;
     }
     .post-meta {
       @extend .f_small;
@@ -40,7 +37,6 @@ article {
       position: absolute;
       width: 100%;
     }
-
   }
 
 }
@@ -91,6 +87,7 @@ body.single {
         margin-bottom: 0.5em;
       }
       h5 {
+        font-size: 1rem;
         line-height: 1;
         font-weight: 400;
         text-transform: uppercase;
@@ -98,7 +95,9 @@ body.single {
       }
       p,
       li {
-        max-width: 65ch;
+        font-size: 1rem;
+        line-height: 1.625;
+        max-width: 65ch; // accessibility recommendation is 80 max
       }
       p {
         &:not(:last-of-type) {
@@ -107,7 +106,7 @@ body.single {
       }
       figcaption {
         @extend .f_small;
-        line-height: 1.125
+        line-height: 1.125;
       }
 
       // emphasis
