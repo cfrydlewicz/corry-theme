@@ -1,1 +1,1 @@
-$("#single-post-title").ready(function(){new IntersectionObserver(function(entries){!0===entries[0].isIntersecting?$("#site-header-secondary").slideUp():$("#site-header-secondary").slideDown()},{threshold:[0]}).observe(document.querySelector("#single-post-title"))});
+$(document).ready(function(){0<$("single-post-title").length&&new IntersectionObserver(function(entries){!0===entries[0].isIntersecting?$("#site-header-secondary").slideUp():$("#site-header-secondary").slideDown()},{threshold:[0]}).observe(document.querySelector("#single-post-title"))});
