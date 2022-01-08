@@ -76,7 +76,6 @@ function corry_head_meta() {
     $metaDesc = $the_excerpt;
     $metaKeys = esc_html( get_the_terms('','','',', ') );
   } elseif ( $is_category() ) {
-*/
   if ( $is_category() ) {
     $metaDesc = "Posts labeled "."[CATEGORY]"." from Corry Frydlewicz";
     $metaKeys = "[CATEGORY]".", Corry Frydlewicz, Corry, Frydlewicz";
