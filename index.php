@@ -3,6 +3,16 @@
 
 <main id="a_skip-to-content">
 
+  <?php if ( ! is_home() ) : ?>
+    <header class="page-header">
+      <?php if ( is_category() ) : ?>
+        <h1 class="page-title"><?php single_cat_title(); ?></h1>
+      <?php else if ( is_tag() ) : ?>
+        <h1 class="page-title"><?php single_tag_title(); ?></h1>
+      <?php endif; ?>
+    </header>
+  <?php endif; ?>
+
   <?php if ( have_posts() ) : ?>
     <?php while ( have_posts() ) : ?>
       <?php the_post(); ?>
