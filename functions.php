@@ -78,7 +78,7 @@ function corry_head_meta() {
   } elseif ( $is_category() ) {
 */
   if ( is_category() ) {
-    $metaDesc = "Posts labeled [CATEGORY] from Corry Frydlewicz";
+    $metaDesc = "Posts labeled ".single_cat_title()." from Corry Frydlewicz";
     $metaKeys = "[CATEGORY], Corry Frydlewicz, Corry, Frydlewicz";
   }
 /*
