@@ -14,10 +14,13 @@
 
   <title><?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' | '; } ?><?php bloginfo('name'); ?></title>
   <meta name="og:title" property="og:title" content="<?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' | '; } ?><?php bloginfo('name'); ?>">
-  <meta name="og:type" property="og:type" content="<?php if ( is_singular() ) { echo 'article' } else { echo 'website' } ?>">
   <?php if ( is_singular() ) : ?>
+    <meta name="og:type" property="og:type" content="article">
     <meta name="og:description" property="og:type" content="<?php the_excerpt(); ?>">
     <meta name="og:image" property="og:type" content="<?php get_the_post_thumbnail_url(); ?>">
+  <?php else : ?>
+    <meta name="og:type" property="og:type" content="website">
+    <meta name="og:image" property="og:type" content="<?php bloginfo('template_url'); ?>/assets/corry_opengraph.jpg">
   <?php endif; ?>
 
   <?php corry_head_meta(); ?>
