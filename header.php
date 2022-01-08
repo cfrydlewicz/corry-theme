@@ -11,14 +11,20 @@
   <meta name="application-name" content="Corry">
   <meta name="msapplication-TileColor" content="#00aba9">
   <meta name="theme-color" content="#ffffff">
+
   <title><?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' | '; } ?><?php bloginfo('name'); ?></title>
-  <style>body{font-family:Arimo,helvetica,sans-serif}</style>
+  <?php corry_head_meta(); ?>
+
   <link rel="profile" href="http://gmpg.org/xfn/11">
   <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-  <link href='http://fonts.googleapis.com/css?family=Arimo:400,700,400italic,700italic|Oxygen:300' rel='stylesheet' type='text/css'>
+
+  <style>/* critical css */body{font-family:Arimo,helvetica,sans-serif}</style>
   <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url');?>/style.css" />
+
+  <link href='http://fonts.googleapis.com/css?family=Arimo:400,700,400italic,700italic|Oxygen:300' rel='stylesheet' type='text/css'>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
   <script type="text/javascript" src="<?php bloginfo('template_url');?>/scripts.js"></script>
+
   <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>

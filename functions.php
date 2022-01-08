@@ -64,6 +64,33 @@ function word_count() {
   echo $count;
 }
 
+// SEO Population
+function corry_head_meta() {
+  global $post;
+  if ( $is_singular() ) {
+    // Articles and Pages
+    $metaDesc = $the_excerpt;
+    $metaKeys = esc_html( get_the_terms('','','',', ') );
+  } else if ( $is_category() ) {
+    // Listings
+    $metaDesc = "Posts labeled ".get_category()." on Corry Frydlewicz's website.";
+    $metaKeys = get_category().", Corry Frydlewicz, Corry, Frydlewicz";
+  } else if ( $is_tag() ) {
+    // Listings
+    $metaDesc = "Posts tagged ".get_tag()." on Corry Frydlewicz's website.";
+    $metaKeys = get_tag().", Corry Frydlewicz, Corry, Frydlewicz";
+  } else if ( $is_search() ) {
+    // Search Results
+    $metaDesc = "Search results for ".esc_html($_GET['s'])." from Corry Frydlewicz's website.";
+    $metaKeys = esc_html($_GET['s']).", Corry Frydlewicz, Corry, Frydlewicz";
+  } else {
+    // assume homepage
+    $metaDesc = "Corry Frydlewicz's website: a blog for both personal and professional content.";
+    $metaKeys = "Corry Frydlewicz, Corry, Frydlewicz, Corry Blog, CorryArt";
+  }
+  echo '<meta name="description" content="'.$metaDesc.'"><meta name="keywords" content="'.$metaKeys.'">';
+}
+
 function corry_widgets_init() {
   register_sidebar( array(
     'name'          => __( 'Single Post Footer', 'corry' ),
