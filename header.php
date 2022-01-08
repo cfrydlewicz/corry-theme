@@ -10,7 +10,9 @@
   <meta name="apple-mobile-web-app-title" content="Corry">
   <meta name="application-name" content="Corry">
   <meta name="msapplication-TileColor" content="#00aba9">
-  <meta name="theme-color" content="#ffffff">
+  <meta name="theme-color" content="#2e3c41">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fff">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e3c41">
 
   <title><?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' | '; } ?><?php bloginfo('name'); ?></title>
   <meta name="og:title" property="og:title" content="<?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' | '; } ?><?php bloginfo('name'); ?>">
