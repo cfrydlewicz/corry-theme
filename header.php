@@ -42,7 +42,7 @@
   <?php endif; ?>
 
   <?php if ( has_post_thumbnail() ) : ?>
-    <meta name="og:image" property="og:type" content="<?php get_the_post_thumbnail_url(); ?>">
+    <meta name="og:image" property="og:type" content="<?php the_post_thumbnail_url(); ?>">
   <?php else : ?>
     <meta name="og:image" property="og:type" content="<?php bloginfo('template_url'); ?>/assets/corry_opengraph.jpg">
   <?php endif; ?>
