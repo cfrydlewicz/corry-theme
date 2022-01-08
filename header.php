@@ -15,9 +15,21 @@
   <title><?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' | '; } ?><?php bloginfo('name'); ?></title>
   <meta name="og:title" property="og:title" content="<?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' | '; } ?><?php bloginfo('name'); ?>">
   <?php if ( is_singular() ) : ?>
-    <meta name="description" content="<?php the_excerpt(); ?>">
-    <meta name="og:description" property="og:type" content="<?php the_excerpt(); ?>">
-    <meta name="keywords" content="<?php strip_tags( get_the_term_list('','','',', ') ); ?>">
+    <meta name="description" content="<?php echo get_the_excerpt(); ?>">
+    <meta name="og:description" property="og:type" content="<?php echo get_the_excerpt(); ?>">
+    <meta name="keywords" content="<?php
+      $postcats = get_the_category();
+      if ($postcats) {
+        foreach($postcats as $cat) {
+          echo $cat->name . ', ';
+        }
+      } ?><?php
+      $posttags = get_the_tags();
+      if ($posttags) {
+        foreach($posttags as $tag) {
+          echo $tag->name . ', ';
+        }
+      } ?>">
     <meta name="og:type" property="og:type" content="article">
   <?php elseif ( is_category() ) : ?>
     <meta name="description" content="Posts labeled <?php echo single_cat_title('', false); ?> from Corry Frydlewicz">
@@ -42,7 +54,7 @@
   <?php endif; ?>
 
   <?php if ( has_post_thumbnail() ) : ?>
-    <meta name="og:image" property="og:type" content="<?php get_the_post_thumbnail_url(); ?>">
+    <meta name="og:image" property="og:type" content="<?php the_post_thumbnail_url(); ?>">
   <?php else : ?>
     <meta name="og:image" property="og:type" content="<?php bloginfo('template_url'); ?>/assets/corry_opengraph.jpg">
   <?php endif; ?>
