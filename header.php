@@ -26,7 +26,7 @@
 <div class="total-wrapper">
   <header class="site-header">
 
-    <section class="site-header-main">
+    <section id="site-header-primary" class="site-header-primary">
       <div class="inner-wrapper">
 
         <section class="header-logo">
@@ -60,7 +60,7 @@
     </section>
 
     <?php if ( is_single() ) : ?>
-      <section class="site-header-single">
+      <section id="site-header-secondary" class="site-header-single site-header-secondary">
         <div class="inner-wrapper">
           <div class="title"><a href="#" class="i_arrow-up"><?php the_title(); ?></a></div>
         </div>

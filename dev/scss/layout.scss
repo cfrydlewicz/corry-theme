@@ -68,17 +68,24 @@ $header_height: 40px;
 
   > section {
     background: linear-gradient(320deg, rgba($c_grey20,0.625), rgba($c_dark-base,0.625));
-    &:hover {
-      @extend .grainy;
-    }
   }
-
   .inner-wrapper {
     align-items: stretch;
     display: flex;
-    height: $header_height;
     padding-left: 0;
     padding-right: 0;
+  }
+
+  &-primary {
+    &:hover {
+      @extend .grainy;
+    }
+    .inner-wrapper {
+      height: $header_height;
+    }
+  }
+  &-secondary {
+    display: none; // show with JS
   }
 
   .header-logo {
