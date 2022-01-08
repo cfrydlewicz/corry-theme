@@ -85,13 +85,20 @@ $header_height: 40px;
     }
   }
   &-secondary {
+    border-color: transparent;
+    border-style: solid;
+    border-width: 0 1px; // compensate for bezel on primary header for easy horizontal alignment
     display: none; // show with JS
+    .title {
+      @extend .f_smaller;
+      display: block;
+      padding: 4px;
+    }
   }
 
   .header-logo {
     @extend .bezel;
     flex-grow: 1;
-    margin-right: 12px;
     svg {
       height: 150%; // let the y dangle over
       z-index: 2;
