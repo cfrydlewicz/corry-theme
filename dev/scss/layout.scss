@@ -80,14 +80,14 @@ $gutter_lg: 24px;
   width: 100vw;
   z-index: 1;
 
-  > section {
-    background: linear-gradient(320deg, rgba($c_grey20,0.625), rgba($c_dark-base,0.625));
-  }
   .inner-wrapper {
     align-items: stretch;
     display: flex;
     padding-left: 0;
     padding-right: 0;
+  }
+  > section > .inner-wrapper {
+    background: linear-gradient(320deg, rgba($c_grey20,0.625), rgba($c_dark-base,0.625));
   }
 
   &-primary {
@@ -193,7 +193,9 @@ $gutter_lg: 24px;
     }
     .search-container {
       height: 100%;
-      padding: 6px 0;
+      label {
+        padding: 6px 0;
+      }
     }
   }
 

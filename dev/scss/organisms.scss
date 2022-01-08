@@ -30,6 +30,10 @@ $border-radius: 12px;
     border-width: 1px;
     padding: 4px;
   }
+  @media #{$mq_touch} {
+    min-height: 32px;
+    min-width: 32px;
+  }
 }
 button,
 input[type="submit"] {
@@ -65,7 +69,6 @@ label {
 
 // Search
 .search-container {
-  padding: 4px 4px 4px 0;
   form {
     display: flex;
     height: 100%;
@@ -76,6 +79,11 @@ label {
   label {
     align-items: center;
     display: flex;
+    @media #{$mq_touch} {
+      min-height: 32px;
+      min-width: 32px;
+    }
+    padding: 4px 4px 4px 0;
   }
   input[type="text"],
   input[type="search"],
