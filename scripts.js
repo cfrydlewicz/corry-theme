@@ -1,0 +1,1 @@
+$(".site-header-single").ready(function(){window.addEventListener("scroll",function(){var position=document.querySelector("#site-header-single").getBoundingClientRect();0<=position.top&&position.bottom<=window.innerHeight?$(".site-header-single").slideUp():$(".site-header-single").slideDown()})});

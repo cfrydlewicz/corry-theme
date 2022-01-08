@@ -18,7 +18,7 @@
           <div class="inner-wrapper--at-lg">
             <?php post_thumbnail(); ?>
             <div class="title-container thumbnail-overlay">
-              <h1 class="entry-title"><?php the_title(); ?></h1>
+              <h1 id="single-post-title" class="entry-title"><?php the_title(); ?></h1>
             </div>
             <div class="post-meta thumbnail-overlay">
               <div class="post-stats"><span class="word-count"><?php word_count(); ?> words</span> published on <span class="post-date"><?php the_date(); ?></span></div>
