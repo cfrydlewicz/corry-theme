@@ -94,7 +94,8 @@ $header_height: 40px;
     }
     .title {
       @extend .f_smaller;
-      display: block;
+      align-items: center;
+      display: flex;
       height: 100%;
       overflow-x: hidden;
       padding: 4px;
