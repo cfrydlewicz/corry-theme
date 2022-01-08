@@ -79,15 +79,14 @@ function corry_head_meta() {
   if ( $is_category() ) {
     $metaDesc = "Posts labeled "."[CATEGORY]"." from Corry Frydlewicz";
     $metaKeys = "[CATEGORY]".", Corry Frydlewicz, Corry, Frydlewicz";
-/*
   } elseif ( $is_tag() ) {
     $metaDesc = "Posts tagged ".single_tag_title()." from Corry Frydlewicz";
     $metaKeys = single_tag_title().", Corry Frydlewicz, Corry, Frydlewicz";
   } elseif ( $is_search() ) {
     $metaDesc = "Search results for ".esc_html($_GET['s'])." from Corry Frydlewicz";
     $metaKeys = esc_html($_GET['s']).", Corry Frydlewicz, Corry, Frydlewicz";
-*/
   }
+*/
   echo '<meta name="description" content="'.$metaDesc.'"><meta name="keywords" content="'.$metaKeys.'">';
 }
 
