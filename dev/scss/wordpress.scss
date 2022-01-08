@@ -1,1 +1,47 @@
-// WordPress Plug-In Tweaks
+// WordPress Tweaks
+
+// Backend Helpers
+body.admin-bar.logged-in {
+
+  // compensate for the WP Admin bar
+  margin-top: -32px !important;
+  @media only screen and (max-width: 782px) {
+    margin-top: -46px !important;
+  }
+  #wpadminbar {
+    display: none;
+  }
+
+  &.single,
+  &.page {
+
+    // Mark unlinked post images
+    img {
+      outline: 2px dashed $c_accent;
+    }
+    a img {
+      outline: none;
+    }
+
+  }
+
+}
+
+// Plug-In: Simple Lightbox
+#slb_viewer_wrap .slb_theme_slb_black,
+#slb_viewer_wrap .slb_theme_slb_default {
+
+  .slb_container {
+    background-color: $c_trueblack;
+    margin-top: $header_height;
+  }
+  .slb_data_title,
+  .slb_group_status {
+    @extend .f_small;
+    color: $c_white;
+    font-family: inherit;
+  }
+
+}
+
+
