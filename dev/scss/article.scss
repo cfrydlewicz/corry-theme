@@ -1,8 +1,7 @@
 article {
   // Articles are used for Pages, Listings, Single Posts, and Comments
 
-  h1 {
-    // Post Title
+  .entry-title {
     font-size: 1.75em;
     line-height: 1;
     margin-bottom: 0.375em;
@@ -17,6 +16,11 @@ article {
       max-width: none;
       transform: translateX(-10%);
       width: auto;
+      @media #{$mq_md} {
+        height: auto;
+        transform: none;
+        width: 100%;
+      }
     }
     .thumbnail-overlay {
       background-color: rgba($c_black,0.5);
@@ -213,6 +217,25 @@ body.single {
               list-style-type: lower-alpha;
             }
           }
+        }
+      }
+
+      // Images
+      .wp-block-image {
+        margin-bottom: 1.5em;
+      }
+      figure {
+        // center by default
+        margin-left: auto;
+        margin-right: auto;
+        &.alignleft {
+          margin-left: 0;
+        }
+        &.alignright {
+          margin-right: 0;
+        }
+        figcaption {
+          margin: 8px 0 0;
         }
       }
 
