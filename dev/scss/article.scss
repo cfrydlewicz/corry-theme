@@ -5,6 +5,7 @@ article {
     // Post Title
     font-size: 1.75em;
     line-height: 1.125;
+    margin-bottom: 0.125em;
   }
 
   .entry-header {
@@ -33,10 +34,8 @@ article {
     }
     .post-meta {
       @extend .f_small;
-      bottom: 0;
       display: flex;
       justify-content: space-between;
-      position: absolute;
       width: 100%;
     }
   }

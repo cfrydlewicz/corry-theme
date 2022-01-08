@@ -89,9 +89,13 @@ $header_height: 40px;
     border-style: solid;
     border-width: 0 1px; // compensate for bezel on primary header for easy horizontal alignment
     display: none; // show with JS
+    .inner-wrapper {
+      height: 30px;
+    }
     .title {
       @extend .f_smaller;
       display: block;
+      height: 100%;
       overflow-x: hidden;
       padding: 4px;
       text-overflow: ellipsis;
