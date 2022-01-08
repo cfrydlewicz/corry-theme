@@ -6,6 +6,9 @@ function theme_setup() {
   add_theme_support( 'post-thumbnails' );
   set_post_thumbnail_size( 1024, 9999 ); // Unlimited height, soft crop
 
+  // Let Pages use excerpts
+  add_post_type_support( 'page', 'excerpt' );
+
   // Add RSS feed links to <head> for posts and comments.
   add_theme_support( 'automatic-feed-links' );
 
