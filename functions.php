@@ -65,13 +65,13 @@ function word_count() {
 }
 
 // SEO Population
+/*
 function corry_head_meta() {
   global $post;
   if ( $is_singular() ) {
     // Articles and Pages
     $metaDesc = $the_excerpt;
     $metaKeys = esc_html( get_the_terms('','','',', ') );
-/*
   } else if ( $is_category() ) {
     // Listings
     $metaDesc = "Posts labeled ".get_category()." on Corry Frydlewicz's website.";
@@ -84,7 +84,6 @@ function corry_head_meta() {
     // Search Results
     $metaDesc = "Search results for ".esc_html($_GET['s'])." from Corry Frydlewicz's website.";
     $metaKeys = esc_html($_GET['s']).", Corry Frydlewicz, Corry, Frydlewicz";
-*/
   } else {
     // assume homepage
     $metaDesc = "Corry Frydlewicz's website: a blog for both personal and professional content.";
@@ -92,6 +91,7 @@ function corry_head_meta() {
   }
   echo '<meta name="description" content="'.$metaDesc.'"><meta name="keywords" content="'.$metaKeys.'">';
 }
+*/
 
 function corry_widgets_init() {
   register_sidebar( array(
