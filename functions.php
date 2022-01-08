@@ -78,8 +78,8 @@ function corry_head_meta() {
   } elseif ( $is_category() ) {
 */
   if ( $is_category() ) {
-    $metaDesc = "Posts labeled ".single_cat_title()." from Corry Frydlewicz";
-    $metaKeys = single_cat_title().", Corry Frydlewicz, Corry, Frydlewicz";
+    $metaDesc = "Posts labeled ".esc_html( single_cat_title() )." from Corry Frydlewicz";
+    $metaKeys = esc_html( single_cat_title() ).", Corry Frydlewicz, Corry, Frydlewicz";
 /*
   } elseif ( $is_tag() ) {
     $metaDesc = "Posts tagged ".single_tag_title()." from Corry Frydlewicz";
