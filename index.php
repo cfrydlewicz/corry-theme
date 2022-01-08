@@ -48,10 +48,9 @@
     <section class="post error404">
       <img src="<?php bloginfo('template_url');?>/assets/404.jpg">
       <div class="entry-content">
-        <h2 class="entry-title">No Results Found</h2>
-        <div class="entry-summary">
-          <p>Sorry! Please <a href="#a_search">try another search</a> or <a href="/">return to the home page</a>.</p>
-        </div><!--.entry-summary-->
+        <div class="inner-wrapper">
+          <p>Sorry! Please <a href="#a_search" onclick="$('#header-search-field').focus();">try another search</a> or <a href="/">return to the home page</a>.</p>
+        </div>
       </div><!--.entry-content-->
     </section>
 
