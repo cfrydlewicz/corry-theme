@@ -53,6 +53,7 @@
 .i_twitch::before,
 .i_twitter::before,
 .i_youtube::before,
+.i_warning::before,
 .i_wordpress::before {
   display: inline-block;
   font-family: 'icomoon';
@@ -178,6 +179,9 @@
 }
 .i_youtube::before {
   content: "\eefc";
+}
+.i_warning::before {
+  content: "\ed50";
 }
 .i_wordpress::before {
   content: "\ef13";

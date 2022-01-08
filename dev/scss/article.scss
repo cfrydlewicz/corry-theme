@@ -273,6 +273,20 @@ body.single {
         */
       }
 
+      .disclaimer-container {
+        @extend .i_warning;
+        background-color: mix(black, $c_accent, 80%);
+        border-color: $c_accent;
+        display: none;
+        padding: 12px;
+        &::before {
+          font-size: 24px;
+        }
+        body.tag-old-post &.disclaimer_old {
+          display: flex;
+        }
+      }
+
     }
 
     .entry-footer {

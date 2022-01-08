@@ -28,6 +28,14 @@
 
         <section class="entry-content">
           <div class="inner-wrapper">
+            <?php if ( has_tag('old-post') ) : ?>
+              <div class="disclaimer_old-posts disclaimer-container">
+                <div>
+                  <p><strong>Disclaimer: This post is old and likely contains outdated information.</strong> If you would like to see an update for this content, <a href="#a_respond">leave a comment</a> saying so and I can write an update or editorial note.</p>
+                  <p>I have a policy of <em>only</em> removing potentially harmful content, and I try to keep old posts visible here &mdash; even if they're embarrassing or no longer accurate. I want to look back and see my growth, and I don't want to hide that growth from others either.</p>
+                </div>
+              </div>
+            <?php endif; ?>
             <?php the_content(); ?>
           </div>
         </section>
