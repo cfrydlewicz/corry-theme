@@ -80,6 +80,12 @@ body.single .read-more-container {
     margin-bottom: 24px;
 
     .entry-header {
+      img {
+        transition: all 0.2s ease-in-out;
+      }
+      &:hover img {
+        transform: scale(1.125);
+      }
     }
 
     &:first-child {

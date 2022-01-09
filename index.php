@@ -27,7 +27,7 @@
 
         <header class="entry-header">
           <div class="inner-wrapper--at-md">
-            <?php post_thumbnail(); ?>
+            <a href="<?php the_permalink(); ?>"><?php post_thumbnail(); ?></a>
             <div class="title-container thumbnail-overlay">
               <?php if ( is_singular() ) : ?>
                 <h1 id="single-post-title" class="entry-title"><?php the_title(); ?></h1>
