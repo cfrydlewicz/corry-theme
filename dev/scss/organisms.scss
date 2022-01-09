@@ -33,6 +33,11 @@ $border-radius: 12px;
   @media #{$mq_touch} {
     min-height: 32px;
     min-width: 32px;
+    label & {
+      // exception for when label covers interaction
+      min-height: 0;
+      min-width: 0;
+    }
   }
 }
 button,
