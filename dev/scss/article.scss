@@ -49,7 +49,7 @@ article {
       justify-content: space-between;
       width: 100%;
       a {
-        font-size: inherit;
+        @extend .f_small;
       }
     }
   }
@@ -61,6 +61,25 @@ body.home,
 body.search-results,
 body.single .post-footer .read-more-container {
   article {
+
+    .entry-header {
+      .post-meta {
+        flex-direction: column;
+        .post-categories ul {
+          display: flex;
+          flex-wrap: wrap;
+          li {
+            display: inline;
+            &:not(:last-child)::after {
+              content: ', ';
+            }
+          }
+          a {
+            white-space: nowrap;
+          }
+        }
+      }
+    }
 
   }
 }
