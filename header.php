@@ -19,19 +19,7 @@
   <?php if ( is_singular() ) : ?>
     <meta name="description" content="<?php echo get_the_excerpt(); ?>">
     <meta name="og:description" property="og:type" content="<?php echo get_the_excerpt(); ?>">
-    <meta name="keywords" content="<?php
-      $postcats = get_the_category();
-      if ($postcats) {
-        foreach($postcats as $cat) {
-          echo $cat->name . ', ';
-        }
-      } ?><?php
-      $posttags = get_the_tags();
-      if ($posttags) {
-        foreach($posttags as $tag) {
-          echo $tag->name . ', ';
-        }
-      } ?>">
+    <meta name="keywords" content="<?php list_categories_tags(); ?>">
     <meta name="og:type" property="og:type" content="article">
   <?php elseif ( is_category() ) : ?>
     <meta name="description" content="Posts labeled <?php echo single_cat_title('', false); ?> from Corry Frydlewicz">

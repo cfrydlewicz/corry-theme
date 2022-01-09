@@ -67,6 +67,26 @@ function word_count() {
   echo $count;
 }
 
+function list_categories_tags() {
+  // list them together, unlinked
+  $list = '';
+  $postcategories = get_the_category();
+  if ($postcategories) {
+    foreach($posttags as $cat) {
+      $list .= $cat->name . ', ';
+    }
+  }
+  $posttags = get_the_tags();
+  if ($posttags) {
+    foreach($posttags as $tag) {
+      $list .= $tag->name . ', ';
+    }
+  }
+  if ($list) {
+    echo preg_replace('/(, (?!.*, ))/', '', $list);
+  }
+}
+
 function corry_widgets_init() {
   register_sidebar( array(
     'name'          => __( 'Single Post Footer', 'corry' ),
