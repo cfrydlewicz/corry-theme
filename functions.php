@@ -44,13 +44,11 @@ add_filter( 'wp_title', function($title) {
 } );
 
 function post_thumbnail() {
-
   if ( has_post_thumbnail() ) {
     the_post_thumbnail();
   } else {
     echo '<img alt="null" src="'.bloginfo('template_url').'/assets/thumbnail-default.jpg">';
   }
-
 }
 
 function get_post_thumbnail_url() { // requires $post to be initialized
@@ -74,7 +72,6 @@ function word_count() {
 
 function list_categories_tags() {
   // list them together, unlinked
-  $list = '';
   $postcategories = get_the_category();
   if ($postcategories) {
     foreach($posttags as $cat) {
@@ -88,7 +85,9 @@ function list_categories_tags() {
     }
   }
   if ($list) {
-    echo preg_replace('/(, (?!.*, ))/', '', $list);
+    // strip off last separator
+    $list = preg_replace('/(, (?!.*, ))/', '', $list);
+    echo $list;
   }
 }
 
