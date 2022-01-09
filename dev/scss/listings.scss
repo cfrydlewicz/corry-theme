@@ -5,6 +5,19 @@ body.tag,
 body.search,
 body.archive {
 
+  .pagination-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto 24px;
+    a:last-child {
+      @extend .i_arrow-right--after;
+      margin-left: auto;
+    }
+    a:first-child:not(:last-child) {
+      @extend .i_arrow-left;
+      margin-right: auto;
+    }
+  }
 
 }
 

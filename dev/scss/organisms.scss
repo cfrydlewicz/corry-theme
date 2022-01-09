@@ -18,10 +18,12 @@ $border-radius: 12px;
   &:hover {
     background-color: $c_hover;
     border-color: mix(black, $c_hover, 25%);
+    color: $c_trueblack;
   }
   &:active {
     background-color: $c_active;
     border-color: mix(black, $c_active, 25%);
+    color: $c_trueblack;
   }
   &--small {
     @extend .button;

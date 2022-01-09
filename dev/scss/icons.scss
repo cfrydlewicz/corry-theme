@@ -16,6 +16,7 @@
 .i_arrow-down::before,
 .i_arrow-left::before,
 .i_arrow-right::before,
+.i_arrow-right--after::after,
 .i_arrow-up::before,
 .i_arrow-up--after::after,
 .i_bubbles::before,
@@ -71,6 +72,9 @@
   content: "\edc3";
 }
 .i_arrow-right::before {
+  content: "\edbb";
+}
+.i_arrow-right--after::after {
   content: "\edbb";
 }
 .i_arrow-up::before {

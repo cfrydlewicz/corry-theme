@@ -44,7 +44,7 @@
               <?php the_excerpt(); ?>
             </div>
             <div class="cta-container">
-              <a href="<?php echo str_replace(home_url(), '', get_permalink()); ?>" class="button">Read it Now!</a>
+              <a href="<?php echo str_replace(home_url(), '', get_permalink()); ?>" class="button i_arrow-right--after">Read it Now!</a>
             </div>
           </div>
         </div><!--.entry-content-->
@@ -61,7 +61,10 @@
       </article>
 
     <?php endwhile; ?>
-    <?php posts_nav_link(); ?>
+
+    <div class="pagination-container inner-wrapper">
+      <?php posts_nav_link(''); ?>
+    </div>
 
   <?php else : ?>
 
