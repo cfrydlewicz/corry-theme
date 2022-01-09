@@ -40,18 +40,23 @@
 
         <div class="entry-content">
           <div class="inner-wrapper">
-            <?php the_excerpt(); ?>
+            <div class="excerpt-container">
+              <?php the_excerpt(); ?>
+            </div>
             <div class="cta-container">
               <a href="<?php echo str_replace(home_url(), '', get_permalink()); ?>" class="button">Read it Now!</a>
             </div>
           </div>
-          <footer class="entry-footer">
+        </div><!--.entry-content-->
+
+        <footer class="entry-footer">
+          <div class="inner-wrapper">
             <div class="post-meta">
               <div class="post-stats"><span class="word-count"><?php word_count(); ?> words</span> published on <span class="post-date"><?php the_date(); ?></span></div>
-              <div class="post-categories"><?php the_category(); ?></div>
+              <?php the_category(); ?>
             </div>
-          </footer>
-        </div><!--.entry-content-->
+          </div>
+        </footer>
 
       </article>
 

@@ -5,24 +5,6 @@ body.tag,
 body.search,
 body.archive {
 
-  article {
-    margin-bottom: 24px;
-
-    .entry-content {
-      @extend .bezel;
-    }
-
-    &:not(:first-child) {
-
-      .entry-header {
-        img {
-          height: auto;
-          width: 100%;
-        }
-      }
-
-    }
-  }
 
 }
 
