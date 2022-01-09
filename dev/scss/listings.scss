@@ -3,5 +3,14 @@ body.category,
 body.tag,
 body.search,
 body.archive {
+// non-homepage
+
+  main {
+    padding-top: $header_height;
+  }
+
+  .page-header {
+    @extend .f_larger;
+  }
 
 }

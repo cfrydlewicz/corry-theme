@@ -5,15 +5,17 @@
 
   <?php if ( ! is_home() ) : ?>
     <header class="page-header">
-      <?php if ( is_category() ) : ?>
-        <h1 class="page-title">Category: <strong><?php single_cat_title(); ?></strong></h1>
-      <?php elseif ( is_tag() ) : ?>
-        <h1 class="page-title">Tag <strong><?php single_tag_title(); ?></strong></h1>
-      <?php elseif ( is_search() ) : ?>
-        <h1 class="page-title">Search Results for <strong><?php echo esc_html($_GET['s']); ?></strong></h1>
-      <?php else : ?>
-        <div class="page-title u_hidden">Unknown Page Type</div>
-      <?php endif; ?>
+      <div class="inner-wrapper">
+        <?php if ( is_category() ) : ?>
+          <h1 class="page-title">Category: <strong><?php single_cat_title(); ?></strong></h1>
+        <?php elseif ( is_tag() ) : ?>
+          <h1 class="page-title">Tag <strong><?php single_tag_title(); ?></strong></h1>
+        <?php elseif ( is_search() ) : ?>
+          <h1 class="page-title">Search Results for <strong><?php echo esc_html($_GET['s']); ?></strong></h1>
+        <?php else : ?>
+          <div class="page-title u_hidden">Unknown Page Type</div>
+        <?php endif; ?>
+      </div>
     </header>
   <?php endif; ?>
 
