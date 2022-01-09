@@ -34,10 +34,6 @@
               <?php else : ?>
                 <h2 class="entry-title"><?php the_title( sprintf( '<a href="%s">', esc_url( get_permalink() ) ), '</a>' ); ?></h2>
               <?php endif; ?>
-              <div class="post-meta">
-                <div class="post-stats"><span class="word-count"><?php word_count(); ?> words</span> published on <span class="post-date"><?php the_date(); ?></span></div>
-                <div class="post-categories"><?php the_category(); ?></div>
-              </div>
             </div>
           </div>
         </header>
@@ -45,14 +41,17 @@
         <div class="entry-content">
           <div class="inner-wrapper">
             <?php the_excerpt(); ?>
+            <div class="cta-container">
+              <a href="<?php echo str_replace(home_url(), '', get_permalink()); ?>" class="button">Read it Now!</a>
+            </div>
           </div>
+          <footer class="entry-footer">
+            <div class="post-meta">
+              <div class="post-stats"><span class="word-count"><?php word_count(); ?> words</span> published on <span class="post-date"><?php the_date(); ?></span></div>
+              <div class="post-categories"><?php the_category(); ?></div>
+            </div>
+          </footer>
         </div><!--.entry-content-->
-
-        <footer class="entry-footer">
-          <div class="inner-wrapper">
-            <a href="<?php echo str_replace(home_url(), '', get_permalink()); ?>" class="button">Read it Now!</a>
-          </div>
-        </footer>
 
       </article>
 

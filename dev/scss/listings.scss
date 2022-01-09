@@ -1,15 +1,45 @@
 // Listing Pages
+body.home,
 body.category,
 body.tag,
 body.search,
 body.archive {
+
+  article {
+    margin-bottom: 24px;
+
+    .entry-content {
+      @extend .bezel;
+    }
+
+    &:not(:first-child) {
+
+      .entry-header {
+        img {
+          height: auto;
+          width: 100%;
+        }
+      }
+
+    }
+  }
+
+}
+
 // non-homepage
+body.category,
+body.tag,
+body.search,
+body.archive {
 
   main {
-    padding-top: $header_height;
+    padding-top: $header_height + 8;
   }
 
   .page-header {
+    padding: 8px 0;
+  }
+  .page-title {
     @extend .f_larger;
   }
 
