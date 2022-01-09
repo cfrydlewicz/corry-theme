@@ -33,7 +33,7 @@ Concatenate the files in the following order.
 //@import "page_404.scss";
 
 // Wordpress Tweaks
-//@import "wordpress.scss";
+@import "wordpress.scss";
 
 // Utility Classes
 @import "utility.scss";
