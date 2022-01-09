@@ -14,8 +14,11 @@
   <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fff">
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e3c41">
 
-  <title><?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' | '; } ?><?php bloginfo('name'); ?></title>
-  <meta name="og:title" property="og:title" content="<?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' | '; } ?><?php bloginfo('name'); ?>">
+  <?php $pageTitle = wp_title('', false).' | '.get_bloginfo('name'); ?>
+  <title><?php echo $pageTitle; ?></title>
+  <meta name="og:title" property="og:title" content="<?php echo $pageTitle; ?>">
+  <meta name="twitter:title" content="<?php echo $pageTitle; ?>">
+
   <?php if ( is_singular() ) : ?>
     <meta name="description" content="<?php echo get_the_excerpt(); ?>">
     <meta name="og:description" property="og:description" content="<?php echo get_the_excerpt(); ?>">
