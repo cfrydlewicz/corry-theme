@@ -38,6 +38,11 @@ function theme_setup() {
 }
 add_action( 'after_setup_theme', 'theme_setup' );
 
+// Remove spaces from front of title
+add_filter( 'wp_title', function($title) {
+  return trim( $title );
+} );
+
 function post_thumbnail() {
 
   if ( has_post_thumbnail() ) {
