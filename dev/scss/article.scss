@@ -44,8 +44,20 @@ article {
     }
   }
 
+  .excerpt-container {
+    margin-bottom: 2px;
+    p {
+      margin: 0;
+    }
+  }
+
+  .cta-container {
+    text-align: right;
+  }
+
   .post-meta {
     @extend .f_small;
+    align-items: center;
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -72,6 +84,7 @@ body.single .read-more-container {
 
     &:first-child {
       .button {
+        margin-right: 4px;
         margin-top: -10px;
         padding: 8px 16px;
         transform: rotate(5deg) scale(1.25);
@@ -93,43 +106,35 @@ body.single .read-more-container {
 
     .entry-content {
       @extend .bezel;
-      p {
-        // excerpt
-        margin: 0;
-      }
-    }
-    .cta-container {
-      text-align: right;
+      padding: 12px 0;
     }
 
     .entry-footer {
       @extend .bezel;
+      padding: 8px 0;
     }
-
-  }
-
-  article {
-
-    .entry-header {
-      .post-meta {
-        flex-direction: column;
-        .post-categories ul {
-          display: flex;
-          flex-wrap: wrap;
-          li {
-            display: inline;
-            &:not(:last-child)::after {
-              content: ', ';
-            }
+    .post-meta {
+      flex-direction: column;
+      @media #{$mq_md} {
+        flex-direction: row;
+      }
+      .post-categories ul {
+        display: flex;
+        flex-wrap: wrap;
+        li {
+          display: inline;
+          &:not(:last-child)::after {
+            content: ', ';
           }
-          a {
-            white-space: nowrap;
-          }
+        }
+        a {
+          white-space: nowrap;
         }
       }
     }
 
   }
+
 }
 
 // Single Posts
