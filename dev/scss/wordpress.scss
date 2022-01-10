@@ -15,12 +15,17 @@ body.admin-bar.logged-in {
   &.single,
   &.page {
 
-    // Mark unlinked post images
-    img {
-      outline: 2px dashed $c_accent;
-    }
-    a img {
-      outline: none;
+    // Content Area
+    main > article .entry-content {
+
+      // Mark unlinked post images
+      img {
+        outline: 2px dashed $c_accent;
+      }
+      a img {
+        outline: none;
+      }
+
     }
 
   }
