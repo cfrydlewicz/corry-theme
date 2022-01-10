@@ -9,24 +9,24 @@
       <div class="post-footer_header">Discuss</div>
       <ul>
         <?php if ( comments_open() ) : ?>
-          <?php if ( $commentNum > 0 ) : ?>
-            <li><a class="i_arrow-down" href="#a_comments_top">View Comments (<?php echo $commentNum; ?>)</a></li>
+          <?php if ( $thisPostCommentNum > 0 ) : ?>
+            <li><a class="i_arrow-down" href="#a_comments_top">View Comments (<?php echo $thisPostCommentNum; ?>)</a></li>
           <?php endif; ?>
           <li><a class="i_chat" href="#a_respond">Leave a Comment</a></li>
         <?php endif; ?>
-        <li><a class="i_twitter" href="https://twitter.com/intent/tweet?text=%40cfrydlewicz%20Re%3A%20https://corry.us/?p=<?php echo $postId; ?>" target="_blank">Discuss on Twitter</a>
+        <li><a class="i_twitter" href="https://twitter.com/intent/tweet?text=%40cfrydlewicz%20Re%3A%20<?php echo $thisPostShortUrl; ?>" target="_blank">Discuss on Twitter</a>
         <li><a class="i_facebook" href="https://www.facebook.com/groups/4912504758808432/?ref=share" target="_blank">Facebook Group</a></li>
       </ul>
     </section>
 
-    <?php if ( !empty($postShortUrl) ) : ?>
+    <?php if ( !empty($thisPostShortUrl) ) : ?>
       <section class="share-container">
         <div class="post-footer_header">Share</div>
         <ul>
-          <li>Short URL: <a href="<?php echo $postShortUrl; ?>" class="u_break-line"><?php echo $postShortUrl; ?></a></li>
-          <li><a class="i_mail" href="mailto:?subject=<?php echo $postTitle; ?>&body=<?php echo $postShortUrl; ?>" target="_blank">Send Email</a></li>
-          <li><a class="i_facebook" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $postShortUrl; ?>" target="_blank">Share on Facebook</a></li>
-          <li><a class="i_twitter" href="https://twitter.com/intent/tweet?text=%40cfrydlewicz%20Re%3A%20<?php echo $postShortUrl; ?>" target="_blank">Tweet This Post</a></li>
+          <li>Short URL: <a href="<?php echo $thisPostShortUrl; ?>" class="u_break-line"><?php echo $thisPostShortUrl; ?></a></li>
+          <li><a class="i_mail" href="mailto:?subject=<?php echo $thisPostTitle; ?>&body=<?php echo $thisPostShortUrl; ?>" target="_blank">Send Email</a></li>
+          <li><a class="i_facebook" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $thisPostShortUrl; ?>" target="_blank">Share on Facebook</a></li>
+          <li><a class="i_twitter" href="https://twitter.com/intent/tweet?text=%40cfrydlewicz%20Re%3A%20<?php echo $thisPostShortUrl; ?>" target="_blank">Tweet This Post</a></li>
         </ul>
       </section>
     <?php endif; ?>
@@ -55,8 +55,8 @@
       <section id="a_comments_top" class="comments-container t_slides-up">
         <div class="post-footer_header">
           <span>Comments</span><?php
-            if ( $commentNum > 0 ) {
-              echo ' <span class="comments-count">('.$commentNum.')</span>';
+            if ( $thisPostCommentNum > 0 ) {
+              echo ' <span class="comments-count">('.$thisPostCommentNum.')</span>';
             }
           ?>
         </div>

@@ -6,10 +6,9 @@
       <?php
         the_post();
         // store data for the post footer widgets
-        $postId = get_the_ID();
-        $postTitle = get_the_title();
-        $postShortUrl = "https://corry.us/?p=".$postId;
-        $commentNum = get_comments_number();
+        global $thisPostTitle = get_the_title();
+        global $thisPostShortUrl = "https://corry.us/?p=".get_the_ID();
+        global $thisPostCommentNum = get_comments_number();
       ?>
 
       <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
