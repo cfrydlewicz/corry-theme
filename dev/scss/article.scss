@@ -55,9 +55,8 @@ article {
 
   .post-meta {
     @extend .f_small;
-    align-items: center;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
     a {
       @extend .f_small;
