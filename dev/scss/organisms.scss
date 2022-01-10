@@ -15,6 +15,7 @@ $border-radius: 12px;
   padding: 8px;
   text-align: center;
   text-decoration: none;
+  vertical-align: middle;
   &:hover {
     background-color: $c_hover;
     border-color: mix(black, $c_hover, 25%);
@@ -28,8 +29,6 @@ $border-radius: 12px;
   &--small {
     @extend .button;
     @extend .f_small;
-    border-radius: $border-radius/2;
-    border-width: 1px;
     padding: 4px;
   }
   @media #{$mq_touch} {
