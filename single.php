@@ -3,13 +3,6 @@
 <main id="a_skip-to-content">
   <?php if ( have_posts() ) : ?>
     <?php while ( have_posts() ) : ?>
-      <?php
-        the_post();
-        // store data for the post footer widgets
-        global $thisPostTitle = get_the_title();
-        global $thisPostShortUrl = "https://corry.us/?p=".get_the_ID();
-        global $thisPostCommentNum = get_comments_number();
-      ?>
 
       <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 

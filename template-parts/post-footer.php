@@ -1,3 +1,11 @@
+<?php
+  the_post();
+  // store data for the post footer widgets
+  global $thisPostTitle = get_the_title();
+  global $thisPostShortUrl = "https://corry.us/?p=".get_the_ID();
+  global $thisPostCommentNum = get_comments_number();
+?>
+
 <footer class="post-footer t_slides-up">
   <div class="inner-wrapper--at-md">
 
