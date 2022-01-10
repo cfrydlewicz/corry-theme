@@ -479,6 +479,7 @@ body.single {
 
       article {
         @extend .bezel;
+        @extend .grainy;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -551,13 +552,22 @@ body.single {
 
         .comment-reply-title {
           @extend .f_largest;
+          margin-bottom: 8px;
         }
         label[for="comment"] {
           display: none;
         }
 
+        .comment-form-comment {
+          margin-bottom: 4px;
+        }
+        .form-submit {
+          text-align: right;
+        }
+
         p[class*="akismet"] {
           @extend .f_smallest;
+          display: none;
         }
 
       }
