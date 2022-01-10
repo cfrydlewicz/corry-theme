@@ -3,6 +3,11 @@
 <main id="a_skip-to-content">
   <?php if ( have_posts() ) : ?>
     <?php while ( have_posts() ) : ?>
+      <?php
+        the_post();
+        // store data for the post footer widgets
+        $thisPostId = get_the_ID();
+      ?>
 
       <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
@@ -53,7 +58,7 @@ echo get_post_meta(get_post_thumbnail_id( $post->ID ), '_wp_attachment_image_alt
 
       </article>
 
-      <?php get_template_part('template-parts/post-footer') ?>
+      <?php get_template_part('template-parts/post-footer', '', $thisPostId) ?>
 
     <?php endwhile; ?>
   <?php else : ?>
