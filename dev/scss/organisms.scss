@@ -51,7 +51,10 @@ input[type="text"],
 input[type="search"],
 textarea {
   background-color: $c_grey30;
-  border-color: $c_trueblack;
+  border-bottom-color: $c_black;
+  border-left-color: $c_trueblack;
+  border-right-color: $c_black;
+  border-top-color: $c_trueblack;
   border-radius: $border-radius;
   border-style: solid;
   border-width: 2px;
