@@ -21,15 +21,9 @@ article {
     }
     .thumbnail-overlay {
       background-color: rgba($c_black,0.5);
-      &:hover {
-        background-color: $c_black;
-      }
       @supports (backdrop-filter: blur(10px)) {
         backdrop-filter: blur(10px);
         background-color: rgba($c_black,0.25);
-        &:hover {
-          background-color: rgba($c_black,0.5);
-        }
       }
       bottom: 0;
       height: min-content;
@@ -38,6 +32,14 @@ article {
       width: 100%;
       @media #{$mq_md} {
         width: auto;
+      }
+    }
+    &:hover {
+      .thumbnail-overlay {
+        background-color: $c_black;
+        @supports (backdrop-filter: blur(10px)) {
+          background-color: rgba($c_black,0.5);
+        }
       }
     }
   }
@@ -82,7 +84,7 @@ body.single .read-more-container {
         img {
           transition: all 0.2s ease-in-out;
         }
-        a:hover img {
+        &:hover img {
           transform: scale(1.125);
         }
       }
@@ -104,9 +106,9 @@ body.single .read-more-container {
         @media #{$mq_mouse} {
           &::after {
             transition: all 0.2s ease-in-out;
-            &:hover {
-              margin: 0 0 0 0.75em;
-            }
+          }
+          &:hover::after {
+            margin: 0 0 0 0.75em;
           }
         }
       }
