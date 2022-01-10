@@ -61,7 +61,7 @@ echo get_post_meta(get_post_thumbnail_id( $post->ID ), '_wp_attachment_image_alt
 
       </article>
 
-      <?php get_template_part('post-footer') ?>
+      <?php get_template_part('template-parts/post-footer') ?>
 
     <?php endwhile; ?>
   <?php else : ?>

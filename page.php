@@ -31,7 +31,7 @@
 
       </article>
 
-      <?php get_template_part('post-footer') ?>
+      <?php get_template_part('template-parts/post-footer') ?>
 
     <?php endwhile; ?>
   <?php else : ?>
