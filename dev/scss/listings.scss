@@ -39,25 +39,21 @@ body.archive {
 
   .entry-header {
     position: relative;
+    @media #{$mq_mouse} {
+      overflow: hidden;
+      img {
+        transition: all 0.2s ease-in-out;
+      }
+      &:hover img {
+        transform: scale(1.125);
+      }
+    }
   }
   .title-container {
     @extend .thumbnail-overlay;
   }
   .entry-title {
     @extend .f_largest;
-  }
-
-  img {
-    // Post Thumbnail
-  }
-  @media #{$mq_mouse} {
-    overflow: hidden;
-    img {
-      transition: all 0.2s ease-in-out;
-    }
-    &:hover img {
-      transform: scale(1.125);
-    }
   }
 
   .entry-title {
@@ -71,19 +67,21 @@ body.archive {
   }
 
   .excerpt-container {
-    padding-bottom: 40px;
+    padding-bottom: 44px;
     position: relative;
     p {
       margin: 0;
     }
     a {
       @extend .button;
+      bottom: 0;
+      position: absolute;
+      right: 0;
     }
   }
 
   .entry-footer {
     @extend .bezel;
-    @extend .f_small;
     padding: 8px 0;
     .inner-wrapper {
       flex-direction: column;
@@ -91,6 +89,10 @@ body.archive {
         flex-direction: row;
         justify-content: space-between;
       }
+    }
+    .post-stats,
+    .post-categories a {
+      @extend .f_small;
     }
     .post-categories {
       display: flex;
@@ -131,17 +133,16 @@ body.archive {
       a {
         bottom: -16px;
         padding: 8px 16px;
-        position: absolute;
         right: 2%;
         transform: rotate(2.5deg) scale(1.25);
       }
-      @media #{$mq_mouse} {
-        .excerpt-container a::after {
-          transition: all 0.2s ease-in-out;
-        }
-        .excerpt-container a:hover::after {
-          margin: 0 0 0 0.75em;
-        }
+    }
+    @media #{$mq_mouse} {
+      .excerpt-container a::after {
+        transition: all 0.2s ease-in-out;
+      }
+      .excerpt-container a:hover::after {
+        margin: 0 0 0 0.75em;
       }
     }
 

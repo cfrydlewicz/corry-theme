@@ -19,7 +19,7 @@ body.admin-bar.logged-in {
     main > article .entry-content {
 
       // Mark unlinked post images
-      img {
+      img:not(.emoji) {
         outline: 2px dashed $c_accent;
       }
       a img {
@@ -48,9 +48,9 @@ body.admin-bar.logged-in {
   }
 
 }
-.srpw-aligncenter {
+.srpw-aligncenter.srpw-aligncenter {
   margin: 0;
 }
-.srpw-block li {
+.srpw-block.srpw-block li {
   padding: 0;
 }

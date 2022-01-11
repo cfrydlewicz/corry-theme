@@ -105,25 +105,15 @@ li {
 // Quotes
 blockquote {
   quotes: "\201C""\201D""\2018""\2019";
-  &::before {
-    content: open-quote;
-    @extend .u_visually-hidden;
-  }
-  &::after {
-    content: close-quote;
-    @extend .u_visually-hidden;
-  }
   p {
     display: inline-block;
-    &:nth-last-child(2)::after {
-      /* add close-quote after next-to-last p tag */
-      content: close-quote;
+    &:first-of-type::before {
+      content: open-quote;
+      @extend .u_visually-hidden;
     }
-    &.cite {
-      font-size: .875em;
-      line-height: 1;
-      margin-bottom: 0;
-      text-align: right;
+    &:last-of-type::after {
+      @extend .u_visually-hidden;
+      content: close-quote;
     }
   }
 }

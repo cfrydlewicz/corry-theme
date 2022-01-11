@@ -126,6 +126,7 @@ label {
   bottom: 0;
   height: min-content;
   padding: 12px $gutter;
+  pointer-events: none;
   position: absolute;
   width: 100%;
   @supports (backdrop-filter: blur(10px)) {
