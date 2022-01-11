@@ -112,16 +112,22 @@
       </div>
     </section>
 
-    <?php if ( !is_home() ) : ?>
-      <section id="site-header-secondary" class="site-header-secondary">
-        <div class="inner-wrapper">
+    <section id="site-header-secondary" class="site-header-secondary">
+      <div class="inner-wrapper">
+        <?php if ( is_singular() ) : ?>
           <a href="#a_skip-to-content" class="title i_arrow-up"><?php the_title(); ?></a>
           <?php if ( comments_open() && !empty(get_comments_number()) ) : ?>
             <a title="Jump to Comments" class="i_chat i_arrow-down--after" href="#a_comments_top"><span class="u_visually-hidden">Comments: </span><?php echo get_comments_number(); ?></a>
           <?php endif; ?>
-        </div>
-      </section>
-    <?php endif; ?>
+        <?php elseif ( is_category() ) : ?>
+          <a href="#a_skip-to-content" class="title i_arrow-up">Category: <strong><?php single_cat_title(); ?></strong></a>
+        <?php elseif ( is_tag() ) : ?>
+          <a href="#a_skip-to-content" class="title i_arrow-up">Tag: <strong><?php single_tag_title(); ?></strong></a>
+        <?php elseif ( is_search() ) : ?>
+          <a href="#a_skip-to-content" class="title i_arrow-up">Search: <strong><?php echo esc_html($_GET['s']); ?></strong></a>
+        <?php endif; ?>
+      </div>
+    </section>
 
   </header>
 <!--.total-wrapper ends in footer.php -->
