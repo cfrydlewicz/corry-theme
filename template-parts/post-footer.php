@@ -59,13 +59,9 @@
 
   <?php if ( comments_open() ) : ?>
     <section id="a_comments_top" class="comments-container t_slides-up">
-      <div class="post-footer_header">
-        <span>Comments</span><?php
-          if ( $thisPostCommentNum > 0 ) {
-            echo ' <span class="comments-count">('.$thisPostCommentNum.')</span>';
-          }
-        ?>
-      </div>
+      <?php if ( $thisPostCommentNum > 0 ) : ?>
+        <div class="post-footer_header">Comments <span class="comments-count">(<?php echo $thisPostCommentNum; ?></span></div>
+      <?php endif; ?>
       <?php comments_template(); ?>
     </section>
   <?php endif; ?>
