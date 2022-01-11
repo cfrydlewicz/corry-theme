@@ -5,10 +5,10 @@
     position: relative;
     img {
       // Post Thumbnail
-      height: auto;
-      max-height: 75vh;
+      height: 80vh;
       max-width: 1024px; // Thumbnail Widths
       transform: translateX(-10%);
+      width: auto;
       @media #{$mq_md} {
         transform: none;
         width: 100%;
