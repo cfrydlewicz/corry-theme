@@ -128,14 +128,17 @@
     a[href^="#a_"]::after,
     a[target="_blank"]::after {
       @extend .f_smallest;
-      margin: 0.125em 0 0 0.375em;
       vertical-align: text-top;
     }
     a[href^="#a_"]::after {
       content: '#';
+      display: inline-block;
+      margin: 0 0.25em;
+      speak: none;
     }
     a[target="_blank"]::after {
       content: "\ed7b";
+      margin: 0.125em 0 0 0.375em;
     }
     a[href*="amazon.com"] {
       @extend .i_shopping;
@@ -349,13 +352,15 @@
 
     .thanks-header {
       @extend .f_large;
-      margin-bottom: 2em;
       text-align: center;
     }
     p {
       @extend .f_small;
       a {
         white-space: nowrap;
+      }
+      &:first-of-type {
+        margin-top: 2em;
       }
     }
 
