@@ -159,8 +159,9 @@ body.single .read-more-container {
 
 }
 
-// Single Posts
-body.single {
+// Single Posts & Pages
+body.single,
+body.page {
 
   main > article {
     padding: 0 0 36px;
