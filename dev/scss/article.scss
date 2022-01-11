@@ -507,6 +507,8 @@
         text-align: right;
         input[type="submit"] {
           @extend .button--big;
+          margin-right: 8px;
+          margin-top: -16px;
         }
       }
 
