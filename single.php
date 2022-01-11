@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main id="a_skip-to-content" class="single-post">
+<main id="a_skip-to-content">
   <?php while ( have_posts() ) : ?>
     <?php
       the_post();
@@ -8,7 +8,7 @@
       $thisPostId = get_the_ID();
     ?>
 
-    <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+    <article id="post-<?php the_ID(); ?>" <?php post_class('article-content'); ?>>
 
       <header class="entry-header">
         <?php post_thumbnail(); ?>

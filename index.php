@@ -23,7 +23,7 @@
     <?php while ( have_posts() ) : ?>
       <?php the_post(); ?>
 
-      <article id="post-<?php the_ID(); ?> article-card" <?php post_class(); ?>>
+      <article id="post-<?php the_ID(); ?>" <?php get_post_class('article-card'); ?>>
 
         <header class="entry-header">
           <a href="<?php the_permalink(); ?>"><?php post_thumbnail(); ?></a>
