@@ -30,8 +30,8 @@ $gutter_lg: 24px;
 }
 
 // Anchor Links Accommodate Fixed Header
-[id^="a_"]:not(main):not(footer) {
-  padding-top: $header_height + 8;
+[id^="a_"] {
+  scroll-margin-top: $header_height + 8;
 }
 
 .grainy {
