@@ -40,7 +40,7 @@
           <div class="inner-wrapper">
             <div class="excerpt-container">
               <?php the_excerpt(); ?>
-              <a href="<?php echo str_replace(home_url(), '', get_permalink()); ?>" class="button i_arrow-right--after">Read it Now!</a>
+              <a href="<?php echo str_replace(home_url(), '', get_permalink()); ?>" class="i_arrow-right--after">Read it Now!</a>
             </div>
           </div>
         </div><!--.entry-content-->

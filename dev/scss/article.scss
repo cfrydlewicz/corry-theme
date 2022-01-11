@@ -363,8 +363,11 @@ article.article-content {
   .srpw-li {
     @extend .article-card;
   }
-  .srpw-title {
+  .srpw-content {
     @extend .thumbnail-overlay;
+  }
+  .srpw-title {
+    @extend .entry-title;
   }
   .srpw-summary {
     @extend .excerpt-container;
