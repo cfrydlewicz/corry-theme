@@ -104,15 +104,21 @@ $gutter_lg: 24px;
     border-width: 0 1px; // compensate for bezel on primary header for easy horizontal alignment
     display: none; // show with JS
     .inner-wrapper {
-      height: 30px;
-    }
-    .title {
       @extend .f_smaller;
+      display: flex;
+      height: 30px;
+      justify-content: space-between;
+    }
+    a {
       align-items: center;
       display: flex;
       height: 100%;
-      overflow-x: hidden;
+      min-width: 40px;
       padding: 4px;
+    }
+    .title {
+      flex-grow: 1;
+      overflow-x: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
     }

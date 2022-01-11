@@ -117,7 +117,7 @@
         <div class="inner-wrapper">
           <a href="#a_skip-to-content" class="title i_arrow-up"><?php the_title(); ?></a>
           <?php if ( comments_open() && !empty(get_comments_number()) ) : ?>
-            <a class="i_chat i_arrow-down--right" href="#a_comments_top"><span class="u_visually-hidden">Comments: </span><?php echo get_comments_number(); ?></a>
+            <a title="Jump to Comments" class="i_chat i_arrow-down--after" href="#a_comments_top"><span class="u_visually-hidden">Comments: </span><?php echo get_comments_number(); ?></a>
           <?php endif; ?>
         </div>
       </section>
