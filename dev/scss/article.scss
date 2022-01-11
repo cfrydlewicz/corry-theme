@@ -1,4 +1,5 @@
 .article-content {
+  font-size: 16px;
 
   .entry-header {
     overflow-x: hidden;
@@ -66,9 +67,10 @@
     h3::before,
     h4::before,
     h5::before {
-      @extend .f_smallest;
       color: $c_light50;
+      display: inline-block;
       font-family: monospace;
+      font-size: 12px;
       margin-right: 0.25em;
     }
     h2::before {

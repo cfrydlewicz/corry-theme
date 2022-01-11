@@ -15,38 +15,37 @@ body {
 /* sizes */
 .f_small {
   font-size: .875rem;
-
-  body.single main > article & {
+  .article-content & {
     font-size: .875em;
   }
 }
 .f_smaller {
   font-size: .75rem;
-  body.single main > article & {
+  .article-content & {
     font-size: .75em;
   }
 }
 .f_smallest {
   font-size: .625rem;
-  body.single main > article & {
+  .article-content & {
     font-size: .625em;
   }
 }
 .f_large {
   font-size: 1.125rem;
-  body.single main > article & {
+  .article-content & {
     font-size: .1.125em;
   }
 }
 .f_larger {
   font-size: 1.25rem;
-  body.single main > article & {
+  .article-content & {
     font-size: 1.25em;
   }
 }
 .f_largest {
   font-size: 1.5rem;
-  body.single main > article & {
+  .article-content & {
     font-size: 1.5em;
   }
 }
