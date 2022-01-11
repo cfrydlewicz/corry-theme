@@ -29,7 +29,7 @@ $border-radius: 12px;
   &--small {
     @extend .button;
     @extend .f_small;
-    padding: 4px;
+    padding: 6px 4px;
   }
   &--big {
     @extend .button;

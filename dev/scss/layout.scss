@@ -76,6 +76,7 @@ $gutter_lg: 24px;
 
 .site-header {
   // Above-the-fold and nav elements should be considered for critical css
+  backface-visibility: hidden; // fixed position fix for old mobile browsers
   position: fixed;
   width: 100vw;
   z-index: 1;
@@ -99,9 +100,7 @@ $gutter_lg: 24px;
     }
   }
   &-secondary {
-    border-color: transparent;
-    border-style: solid;
-    border-width: 0 1px; // compensate for bezel on primary header for easy horizontal alignment
+    @extend .bezel--horizontal; // compensate for bezel on primary header for easy horizontal alignment
     display: none; // show with JS
     .inner-wrapper {
       @extend .f_smaller;

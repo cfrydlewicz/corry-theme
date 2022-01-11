@@ -3,7 +3,7 @@
 <main id="a_skip-to-content" class="listing-page">
 
   <?php if ( ! is_home() ) : ?>
-    <header class="page-header">
+    <header class="listing-page-header">
       <div class="inner-wrapper">
         <?php if ( is_category() ) : ?>
           <h1 id="sticky-title" class="page-title">Category: <strong><?php single_cat_title(); ?></strong></h1>
@@ -19,6 +19,7 @@
   <?php endif; ?>
 
   <?php if ( have_posts() ) : ?>
+
     <?php while ( have_posts() ) : ?>
       <?php the_post(); ?>
 
@@ -72,13 +73,17 @@
 
       <div class="entry-content">
         <div class="inner-wrapper">
-          <p>Sorry! Please <a href="#a_search" onclick="$('#header-search-field').focus();">try another search</a> or <a href="/">return to the home page</a>.</p>
+          <div class="title-container">
+            <div class="entry-title">Sorry!</div>
+          </div>
+          <p>I couldn't find what you're looking for. Please <a href="#a_search" onclick="$('#header-search-field').focus();">try another search</a> or <a href="/">return to the home page</a>.</p>
         </div>
       </div><!--.entry-content-->
 
     </article>
 
   <?php endif; ?>
+
 </main>
 
 <?php get_footer(); ?>

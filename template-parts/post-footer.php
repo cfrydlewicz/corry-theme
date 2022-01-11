@@ -56,7 +56,7 @@
   <?php if ( comments_open() ) : ?>
     <section id="a_comments_top" class="comments-container t_slides-up">
       <?php if ( $thisPostCommentNum > 0 ) : ?>
-        <div class="post-footer_header">Comments <span class="comments-count">(<?php echo $thisPostCommentNum; ?></span></div>
+        <div class="post-footer_header">Comments <span class="comments-count">(<?php echo $thisPostCommentNum; ?>)</span></div>
       <?php endif; ?>
       <?php comments_template(); ?>
     </section>
