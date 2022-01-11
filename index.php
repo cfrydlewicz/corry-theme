@@ -23,7 +23,7 @@
     <?php while ( have_posts() ) : ?>
       <?php the_post(); ?>
 
-      <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+      <article id="post-<?php the_ID(); ?> article-card" <?php post_class(); ?>>
 
         <header class="entry-header">
           <div class="inner-wrapper--at-md">
@@ -42,8 +42,6 @@
           <div class="inner-wrapper">
             <div class="excerpt-container">
               <?php the_excerpt(); ?>
-            </div>
-            <div class="cta-container">
               <a href="<?php echo str_replace(home_url(), '', get_permalink()); ?>" class="button i_arrow-right--after">Read it Now!</a>
             </div>
           </div>
@@ -51,10 +49,8 @@
 
         <footer class="entry-footer">
           <div class="inner-wrapper">
-            <div class="post-meta">
-              <div class="post-stats"><span class="word-count"><?php word_count(); ?> words</span> published on <span class="post-date"><?php the_date(); ?></span></div>
-              <?php the_category(); ?>
-            </div>
+            <div class="post-stats"><span class="word-count"><?php word_count(); ?> words</span> published on <span class="post-date"><?php the_date(); ?></span></div>
+            <?php the_category(); ?>
           </div>
         </footer>
 

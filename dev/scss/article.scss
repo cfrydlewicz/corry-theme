@@ -1,11 +1,6 @@
-article {
-  // Articles are used for Pages, Listings, Single Posts, and Comments
+main.single-post article.post {
+  padding: 0 0 36px;
 
-  .entry-title,
-  .srpw-title {
-    font-size: 1.75em;
-    line-height: 1;
-  }
 
   .entry-header {
     overflow-x: hidden;
@@ -14,26 +9,20 @@ article {
       // Post Thumbnail
       height: 75vh;
       max-width: none;
+      transform: translateX(-10%);
       width: auto;
       @media #{$mq_md} {
         height: auto;
+        transform: none;
         width: 100%;
       }
     }
-    .thumbnail-overlay {
-      background-color: rgba($c_black,0.5);
-      @supports (backdrop-filter: blur(10px)) {
-        backdrop-filter: blur(10px);
-        background-color: rgba($c_black,0.25);
-      }
-      bottom: 0;
-      height: min-content;
-      padding: 12px 16px 16px;
-      position: absolute;
-      width: 100%;
-      @media #{$mq_md} {
-        width: auto;
-      }
+    .entry-title {
+      font-size: 1.75em;
+      line-height: 1;
+    }
+    .post-meta {
+      @extend .f_small;
     }
   }
   .entry-header:hover {
@@ -45,405 +34,220 @@ article {
     }
   }
 
-  .excerpt-container {
-    margin-bottom: 2px;
-    p {
-      margin: 0;
-    }
-  }
+  // Main Article Content
+  .entry-content {
+    padding-top: 16px;
 
-  .post-meta {
-    @extend .f_small;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    a {
-      @extend .f_small;
-    }
-  }
-
-}
-
-// Article Cards
-body.home,
-body.category,
-body.tag,
-body.search,
-body.archive,
-body.single .read-more-container {
-
-  // Listing Cards and Recommended Post Card
-  article .entry-header,
-  .sprw-li {
-    .button {
-      text-align: right;
-    }
-  }
-
-  @media #{$mq_mouse} {
-    article .entry-header,
-    .sprw-li {
-      overflow: hidden;
-      img {
-        transition: all 0.2s ease-in-out;
-      }
-    }
-    article .entry-header:hover,
-    .sprw-li:hover img {
-      transform: scale(1.125);
-    }
-  }
-
-
-  // First Listing and Recommended Post Card
-  article:first-of-type,
-  .sprw-li {
-    img {
-      height: 65vh;
-      transform: translateX(-10%);
-      @media #{$mq_md} {
-        transform: none;
-      }
-    }
-    .srpw-summary {
-      line-height: inherit;
-      padding: 0;
-    }
-    .srpw-more-link {
-      @extend .button;
-    }
-    .button {
-      margin-right: 4px;
-      margin-top: -10px;
-      padding: 8px 16px;
-      transform: rotate(5deg) scale(1.25);
-    }
-    @media #{$mq_mouse} {
-      .button::after {
-        transition: all 0.2s ease-in-out;
-      }
-      .button:hover::after {
-        margin: 0 0 0 0.75em;
-      }
-    }
-
-    .entry-content {
-      @extend .bezel;
-      padding: 12px 0;
-    }
-    .srpw-content {
-      padding: 0 12px;
-    }
-
-  }
-}
-
-// Just Listing Cards
-body.home,
-body.category,
-body.tag,
-body.search,
-body.archive {
-
-  article {
-    margin-bottom: 24px;
-
-    .entry-footer {
-      @extend .bezel;
-      padding: 8px 0;
-    }
-    .post-meta {
-      flex-direction: column;
-      .post-categories {
-        display: flex;
-        flex-wrap: wrap;
-        li {
-          display: inline;
-        }
-        li:not(:last-child)::after {
-          content: ', ';
-        }
-        a {
-          white-space: nowrap;
-        }
-      }
-      @media #{$mq_md} {
-        flex-direction: row;
-        justify-content: space-between;
-        .post-categories {
-          flex-wrap: nowrap;
-        }
-      }
-    }
-  }
-
-  // Non-First Cards on Listings Only
-  article:not(:first-of-type) {
-    .entry-title {
+    h2 {
       @extend .f_largest;
+      line-height: 1;
+      font-weight: 400;
+      margin-top: 2em;
+      margin-bottom: 0.5em;
     }
-    .entry-header {
-      img {
-        height: auto;
-        width: 100%;
+    h3 {
+      @extend .f_larger;
+      line-height: 1.4;
+      font-weight: bold;
+      margin-top: 1.5em;
+      margin-bottom: 0.5em;
+    }
+    h4 {
+      @extend .f_large;
+      line-height: 1.4;
+      font-weight: bold;
+      margin-top: 1.5em;
+      margin-bottom: 0.5em;
+    }
+    h5 {
+      font-size: 1rem;
+      line-height: 1;
+      font-weight: 400;
+      text-transform: uppercase;
+      margin-bottom: 0.5em;
+    }
+    p,
+    li {
+      font-size: 1rem;
+      line-height: 1.625;
+      max-width: 65ch; // accessibility recommendation is 80 max
+    }
+    p:not(:last-of-type) {
+      margin-bottom: 1em;
+    }
+    figcaption {
+      @extend .f_small;
+      line-height: 1.125;
+    }
+
+    // emphasis
+    strong,
+    em {
+      color: $c_truewhite;
+    }
+    del {
+      color: $c_light70;
+    }
+    a,
+    .fakelink,
+    span[style*="color:"] { // Exception for when color is manually changed in the WP editor
+      strong,
+      em,
+      del {
+        color: inherit;
       }
     }
-  }
 
-}
+    // Text Links
+    a,
+    .fakelink {
+      @extend .u_break-line;
+      text-decoration: underline;
+    }
+    a[target="_blank"] {
+      @extend .u_icomoon;
+    }
+    a[target="_blank"]::after {
+      @extend .f_smallest;
+      content: "\ed7b";
+      margin: 0.125em 0 0 0.375em;
+      vertical-align: text-top;
+    }
+    a[href*="amazon.com"] {
+      @extend .i_shopping;
+    }
+    a[href*="disneyplus.com"],
+    a[href*="hbogo.com"],
+    a[href*="hbomax.com"],
+    a[href*="hbonow.com"],
+    a[href*="hulu.com"],
+    a[href*="netflix.com"] {
+      @extend .i_movie;
+    }
+    a[href*="spotify.com"] {
+      @extend .i_spotify;
+    }
+    a[href*="youtube.com"],
+    a[href*="youtu.be"] {
+      @extend .i_youtube;
+    }
+    a[href*="docs.google.com"],
+    a[href*="drive.google.com"] {
+      @extend .i_gdrive;
+    }
+    a[href*="pinterest.com"],
+    a[href*="pin.it"] {
+      @extend .i_pinterest;
+    }
 
-// Single Posts and Pages
-body.single,
-body.page {
-
-  main > article {
-    padding: 0 0 36px;
-
-    .entry-header {
-      img {
-        transform: translateX(-10%);
-        @media #{$mq_md} {
-          transform: none;
+    // lists
+    ul,
+    ol {
+      padding-left: 2em;
+      margin-bottom: 1em;
+      ul, ol {
+        border-color: mix(white, $c_secondary, 80%);
+        border-style: solid;
+        border-width: 1px 0;
+        margin: 0.25em 2em 1em 0;
+        padding-bottom: 0.25em;
+        padding-right: 0.25em;
+        padding-top: 0.25em;
+        ul, ol {
+          border-color: mix(white, $c_accent, 80%);
+          ul, ol {
+            border-color: $c_grey50;
+          }
         }
       }
-      .title-container {
-        position: sticky;
+    }
+    ul {
+      list-style-type: disc;
+      ul {
+        list-style-type: square;
+        ul {
+          list-style-type: circle;
+        }
+      }
+    }
+    ol {
+      list-style-type: decimal-leading-zero;
+      ol {
+        list-style-type: upper-alpha;
+        ol {
+          list-style-type: lower-roman;
+          ol {
+            list-style-type: lower-alpha;
+          }
+        }
       }
     }
 
-    .entry-content {
-      padding-top: 16px;
+    // Images
+    .wp-block-image {
+      margin-bottom: 1.5em;
+    }
+    figure {
+      // center by default
+      margin-left: auto;
+      margin-right: auto;
+      figcaption {
+        margin: 8px 0 0;
+      }
+    }
+    figure.alignleft {
+      margin-left: 0;
+    }
+    figure.alignright {
+      margin-right: 0;
+    }
 
-      h2 {
-        @extend .f_largest;
-        line-height: 1;
-        font-weight: 400;
-        margin-top: 2em;
-        margin-bottom: 0.5em;
+    // Quotes
+    blockquote {
+      background-color: $c_grey80;
+      border-left: 8px solid $c_grey60;
+      margin: 2em 0;
+      padding: 0.5em 1em 1.25em 0.5em;
+      p {
+        margin-left: 1em;  /* Indent text */
+        margin-top: 0.5em;
+        &.cite {
+          margin-top: 0;
+        }
       }
-      h3 {
-        @extend .f_larger;
-        line-height: 1.4;
+    }
+
+    // Horizontal Rules
+    hr {
+      margin: 2em auto;
+      width: 60%;
+      border: none;
+      border-top: 1px solid $c_accent;
+    }
+
+    // Tables
+    table {
+      @extend .f_small;
+      border-collapse: collapse;
+      line-height: 1.2;
+      max-width: 100%;
+      margin-bottom: 3em;
+      th,
+      td {
+        padding: 0.25rem;
+        border: 1px solid $c_grey50;
+      }
+      th {
         font-weight: bold;
-        margin-top: 1.5em;
-        margin-bottom: 0.5em;
-      }
-      h4 {
-        @extend .f_large;
-        line-height: 1.4;
-        font-weight: bold;
-        margin-top: 1.5em;
-        margin-bottom: 0.5em;
-      }
-      h5 {
-        font-size: 1rem;
-        line-height: 1;
-        font-weight: 400;
         text-transform: uppercase;
-        margin-bottom: 0.5em;
       }
+      /* TODO needed?
       p,
       li {
-        font-size: 1rem;
-        line-height: 1.625;
-        max-width: 65ch; // accessibility recommendation is 80 max
+        font-size: inherit;
+        line-height: inherit;
       }
-      p:not(:last-of-type) {
-        margin-bottom: 1em;
-      }
-      figcaption {
-        @extend .f_small;
-        line-height: 1.125;
-      }
-
-      // emphasis
-      strong,
-      em {
-        color: $c_truewhite;
-      }
-      del {
-        color: $c_light70;
-      }
-      a,
-      .fakelink,
-      span[style*="color:"] { // Exception for when color is manually changed in the WP editor
-        strong,
-        em,
-        del {
-          color: inherit;
-        }
-      }
-
-      // Text Links
-      a,
-      .fakelink {
-        @extend .u_break-line;
-        text-decoration: underline;
-      }
-      a[target="_blank"] {
-        @extend .u_icomoon;
-      }
-      a[target="_blank"]::after {
-        @extend .f_smallest;
-        content: "\ed7b";
-        margin: 0.125em 0 0 0.375em;
-        vertical-align: text-top;
-      }
-      a[href*="amazon.com"] {
-        @extend .i_shopping;
-      }
-      a[href*="disneyplus.com"],
-      a[href*="hbogo.com"],
-      a[href*="hbomax.com"],
-      a[href*="hbonow.com"],
-      a[href*="hulu.com"],
-      a[href*="netflix.com"] {
-        @extend .i_movie;
-      }
-      a[href*="spotify.com"] {
-        @extend .i_spotify;
-      }
-      a[href*="youtube.com"],
-      a[href*="youtu.be"] {
-        @extend .i_youtube;
-      }
-      a[href*="docs.google.com"],
-      a[href*="drive.google.com"] {
-        @extend .i_gdrive;
-      }
-      a[href*="pinterest.com"],
-      a[href*="pin.it"] {
-        @extend .i_pinterest;
-      }
-
-      // lists
-      ul,
-      ol {
-        padding-left: 2em;
-        margin-bottom: 1em;
-        ul, ol {
-          border-color: mix(white, $c_secondary, 80%);
-          border-style: solid;
-          border-width: 1px 0;
-          margin: 0.25em 2em 1em 0;
-          padding-bottom: 0.25em;
-          padding-right: 0.25em;
-          padding-top: 0.25em;
-          ul, ol {
-            border-color: mix(white, $c_accent, 80%);
-            ul, ol {
-              border-color: $c_grey50;
-            }
-          }
-        }
-      }
-      ul {
-        list-style-type: disc;
-        ul {
-          list-style-type: square;
-          ul {
-            list-style-type: circle;
-          }
-        }
-      }
-      ol {
-        list-style-type: decimal-leading-zero;
-        ol {
-          list-style-type: upper-alpha;
-          ol {
-            list-style-type: lower-roman;
-            ol {
-              list-style-type: lower-alpha;
-            }
-          }
-        }
-      }
-
-      // Images
-      .wp-block-image {
-        margin-bottom: 1.5em;
-      }
-      figure {
-        // center by default
-        margin-left: auto;
-        margin-right: auto;
-        figcaption {
-          margin: 8px 0 0;
-        }
-      }
-      figure.alignleft {
-        margin-left: 0;
-      }
-      figure.alignright {
-        margin-right: 0;
-      }
-
-      // Quotes
-      blockquote {
-        background-color: $c_grey80;
-        border-left: 8px solid $c_grey60;
-        margin: 2em 0;
-        padding: 0.5em 1em 1.25em 0.5em;
-        p {
-          margin-left: 1em;  /* Indent text */
-          margin-top: 0.5em;
-          &.cite {
-            margin-top: 0;
-          }
-        }
-      }
-
-      // Horizontal Rules
-      hr {
-        margin: 2em auto;
-        width: 60%;
-        border: none;
-        border-top: 1px solid $c_accent;
-      }
-
-      // Tables
-      table {
-        @extend .f_small;
-        border-collapse: collapse;
-        line-height: 1.2;
-        max-width: 100%;
-        margin-bottom: 3em;
-        th,
-        td {
-          padding: 0.25rem;
-          border: 1px solid $c_grey50;
-        }
-        th {
-          font-weight: bold;
-          text-transform: uppercase;
-        }
-        /* TODO needed?
-        p,
-        li {
-          font-size: inherit;
-          line-height: inherit;
-        }
-        */
-      }
-
-      .disclaimer-container {
-        @extend .i_warning;
-        background-color: mix(black, $c_accent, 80%);
-        border-color: $c_accent;
-        border-style: solid;
-        border-width: 1px;
-        display: flex;
-        margin-bottom: 1.25em;
-        padding: 12px;
-        &::before {
-          font-size: 24px;
-          margin-right: 12px;
-        }
-        > div {
-          @extend .f_small;
-        }
-      }
-
+      */
     }
 
     .entry-footer {
@@ -457,12 +261,12 @@ body.page {
   .post-footer {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     @media #{$mq_md} {
       flex-direction: row;
     }
-    flex-wrap: wrap;
 
-    > div > section {
+    section {
       @extend .grainy;
       @extend .bezel--vertical;
       padding: 24px 16px;
@@ -596,6 +400,39 @@ body.page {
           display: none;
         }
 
+      }
+
+    }
+
+    @media #{$mq_md} {
+
+      .thanks-container {
+        order: 1;
+      }
+
+      .discuss-container {
+        order: 2;
+        width: 33%;
+      }
+
+      .follow-container {
+        order: 3;
+        width: 33%;
+      }
+
+      .share-container {
+        order: 4;
+        width: 33%;
+      }
+
+      .read-more-container {
+        order: 5;
+        width: 100%;
+      }
+
+      .comments-container {
+        order: 6;
+        width: 100%;
       }
 
     }

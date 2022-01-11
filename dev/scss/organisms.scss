@@ -88,11 +88,11 @@ label {
   label {
     align-items: center;
     display: flex;
+    padding: 4px 4px 4px 0;
     @media #{$mq_touch} {
       min-height: 32px;
       min-width: 32px;
     }
-    padding: 4px 4px 4px 0;
   }
   input[type="text"],
   input[type="search"],
@@ -117,5 +117,45 @@ label {
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
     font-size: 16px;
+  }
+}
+
+// Thumbnail Overlays
+.thumbnail-overlay {
+  background-color: rgba($c_black,0.5);
+  bottom: 0;
+  height: min-content;
+  padding: 12px $gutter 16px;
+  position: absolute;
+  width: 100%;
+  @supports (backdrop-filter: blur(10px)) {
+    backdrop-filter: blur(10px);
+    background-color: rgba($c_black,0.25);
+  }
+  @media #{$mq_md} {
+    width: auto;
+  }
+  @media #{$mq_lg} {
+    padding-left: $gutter_lg;
+    padding-right: $gutter_lg;
+  }
+}
+
+// Alert / Warning Boxes
+.disclaimer-container {
+  @extend .i_warning;
+  background-color: mix(black, $c_accent, 80%);
+  border-color: $c_accent;
+  border-style: solid;
+  border-width: 1px;
+  display: flex;
+  margin-bottom: 1.25em;
+  padding: 12px;
+  &::before {
+    font-size: 24px;
+    margin-right: 12px;
+  }
+  > div {
+    @extend .f_small;
   }
 }
