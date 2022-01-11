@@ -381,6 +381,11 @@
   }
   .srpw-li {
     @extend .article-card;
+    &:hover {
+      .srpw-more-link {
+        @extend .button:hover;
+      }
+    }
   }
   .srpw-img {
     @extend .entry-header;
@@ -500,6 +505,9 @@
       }
       .form-submit {
         text-align: right;
+        input[type="submit"] {
+          @extend .button--big;
+        }
       }
 
       p[class*="akismet"] {

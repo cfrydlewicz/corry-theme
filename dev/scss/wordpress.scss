@@ -22,7 +22,7 @@ body.admin-bar.logged-in {
       img:not(.emoji) {
         outline: 2px dashed $c_accent;
       }
-      a img {
+      a img:not(.emoji) {
         outline: none;
       }
 
