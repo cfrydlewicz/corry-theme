@@ -25,6 +25,12 @@
         </div>
       </section>
 
+      <footer id="a_end-of-article" class="entry-footer">
+        <div class="inner-wrapper">
+          <div class="thanks-header">Thanks for reading!</div>
+        </div>
+      </footer>
+
     </article>
 
     <?php get_template_part('template-parts/post-footer', '', $thisPostId) ?>

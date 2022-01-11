@@ -7,10 +7,6 @@
 
 <footer class="post-footer t_slides-up">
 
-  <section class="thanks-container">
-    <div class="f_large">Thanks for reading!</div>
-  </section>
-
   <section class="discussion-container">
     <div class="post-footer_header">Discuss</div>
     <ul>

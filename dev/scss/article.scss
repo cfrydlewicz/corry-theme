@@ -319,7 +319,17 @@
 
     .entry-footer {
       // article-specific meta section (categories, tags)
+      @extend .bezel--vertical;
+      @extend .grainy;
       padding-top: 36px;
+      // width: 100%;
+
+      .thanks-header {
+        @extend .f_large;
+        margin-bottom: 0.25em;
+        text-align: center;
+      }
+
     }
 
   }
@@ -353,11 +363,6 @@
     @extend .f_largest;
     font-weight: 500;
     margin-bottom: 1em;
-  }
-
-  .thanks-container {
-    text-align: center;
-    width: 100%;
   }
 
   .read-more-container {
@@ -491,32 +496,28 @@
 
   @media #{$mq_md} {
 
-    .thanks-container {
-      order: 1;
-    }
-
     .discuss-container {
-      order: 2;
+      order: 1;
       width: 33%;
     }
 
     .follow-container {
-      order: 3;
+      order: 2;
       width: 33%;
     }
 
     .share-container {
-      order: 4;
+      order: 3;
       width: 33%;
     }
 
     .read-more-container {
-      order: 5;
+      order: 4;
       width: 100%;
     }
 
     .comments-container {
-      order: 6;
+      order: 5;
       width: 100%;
     }
 

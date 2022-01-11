@@ -48,6 +48,7 @@ echo get_post_meta(get_post_thumbnail_id( $post->ID ), '_wp_attachment_image_alt
 
       <footer id="a_end-of-article" class="entry-footer">
         <div class="inner-wrapper">
+          <div class="thanks-header">Thanks for reading!</div>
           <p class="post-categories">Categories: <?php the_category(', '); ?></p>
           <p class="post-tags"><?php the_tags(); ?></p>
         </div>
