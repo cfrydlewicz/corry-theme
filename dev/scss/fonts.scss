@@ -107,13 +107,13 @@ blockquote {
   quotes: "\201C""\201D""\2018""\2019";
   p {
     display: inline-block;
-    &:first-of-type::before {
-      content: open-quote;
-      @extend .u_visually-hidden;
-    }
-    &:last-of-type::after {
-      @extend .u_visually-hidden;
-      content: close-quote;
-    }
+  }
+  cite ~ p:first-of-type::before {
+    @extend .u_visually-hidden;
+    content: open-quote;
+  }
+  cite ~ p:last-of-type::after {
+    @extend .u_visually-hidden;
+    content: close-quote;
   }
 }
