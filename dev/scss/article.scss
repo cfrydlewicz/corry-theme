@@ -347,6 +347,7 @@ article.article-content {
   // headers
   .post-footer_header {
     @extend .f_largest;
+    font-weight: 500;
     margin-bottom: 1em;
   }
 
@@ -356,9 +357,22 @@ article.article-content {
   }
 
   .read-more-container {
-    .srpw-li {
-      @extend .article-card;
-    }
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .srpw-li {
+    @extend .article-card;
+  }
+  .srpw-title {
+    @extend .thumbnail-overlay;
+  }
+  .srpw-summary {
+    @extend .excerpt-container;
+    line-height: inherit;
+    padding: 0;
+  }
+  .srpw-more-link {
+    @extend .button;
   }
 
   // Comments

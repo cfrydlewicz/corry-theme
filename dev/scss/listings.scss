@@ -36,47 +36,43 @@ body.archive {
 .article-card {
   position: relative;
 
+  .entry-header {
+    position: relative;
+  }
+
   .entry-title {
     @extend .f_largest;
   }
 
   img {
     // Post Thumbnail
-    // height: auto;
-    // width: 100%;
   }
-
   @media #{$mq_mouse} {
-    .entry-header,
-    .sprw-li {
-      overflow: hidden;
-      img {
-        transition: all 0.2s ease-in-out;
-      }
-      &:hover img {
-        transform: scale(1.125);
-      }
+    overflow: hidden;
+    img {
+      transition: all 0.2s ease-in-out;
+    }
+    &:hover img {
+      transform: scale(1.125);
     }
   }
 
-  .entry-title,
-  .srpw-title {
+  .entry-title {
     font-size: 1.75em;
     line-height: 1;
   }
 
   .excerpt-container {
     margin-bottom: 2px;
+    position: relative;
     p {
       margin: 0;
     }
   }
 
   .button {
-    text-align: right;
-  }
-  .srpw-more-link {
-    @extend .button;
+    position: absolute;
+    right: 0;
   }
 
   .post-meta {
@@ -107,14 +103,7 @@ body.archive {
       @extend .bezel;
       padding: 12px 0;
     }
-    .srpw-content {
-      padding: 0 12px;
-    }
 
-    .srpw-summary {
-      line-height: inherit;
-      padding: 0;
-    }
     .button {
       margin-right: 4px;
       margin-top: -10px;
