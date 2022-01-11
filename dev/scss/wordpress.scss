@@ -35,12 +35,18 @@ body.admin-bar.logged-in {
 }
 
 // Plug-In: Simple Lightbox
-#slb_viewer_wrap .slb_theme_slb_black,
-#slb_viewer_wrap .slb_theme_slb_default {
-
+#slb_viewer_wrap .slb_theme_slb_baseline.slb_theme_slb_baseline,
+#slb_viewer_wrap .slb_theme_slb_black.slb_theme_slb_black,
+#slb_viewer_wrap .slb_theme_slb_default.slb_theme_slb_default {
+  * {
+    font-family: 'Arimo', helvetica, sans-serif;
+  }
   .slb_container {
     background-color: $c_trueblack;
     margin-top: $header_height;
+  }
+  .slb_details {
+    margin: 4px auto 0;
   }
   .slb_data_title,
   .slb_group_status {
@@ -48,7 +54,13 @@ body.admin-bar.logged-in {
     color: $c_white;
     font-family: inherit;
   }
-
+  .slb_data_title {
+    margin-right: 0;
+    span {
+      line-height: 1.125;
+      text-align: center;
+    }
+  }
 }
 .srpw-aligncenter.srpw-aligncenter {
   margin: 0;
