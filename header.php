@@ -116,8 +116,10 @@
       <div class="inner-wrapper">
         <?php if ( is_singular() ) : ?>
           <a href="#a_skip-to-content" class="title i_arrow-up"><?php the_title(); ?></a>
-          <?php if ( comments_open() && !empty(get_comments_number()) ) : ?>
+          <?php if ( !empty(get_comments_number()) ) : ?>
             <a title="Jump to Comments" class="i_chat i_arrow-down--after" href="#a_comments_top"><span class="u_visually-hidden">Comments: </span><?php echo get_comments_number(); ?></a>
+          <?php else : ?>
+            <a title="Jump to End of Content" class="i_chat i_arrow-down--after" href="a_end-of-article"><span class="u_visually-hidden">End of Article</a>
           <?php endif; ?>
         <?php elseif ( is_category() ) : ?>
           <a href="#a_skip-to-content" class="title i_arrow-up">Category: <strong><?php single_cat_title(); ?></strong></a>
