@@ -63,7 +63,7 @@
     <?php endwhile; ?>
 
     <div class="pagination-container inner-wrapper">
-      <?php posts_nav_link(''); ?>
+      <?php posts_nav_link('', 'Previous Page', 'Next Page'); ?>
     </div>
 
   <?php else : ?>
