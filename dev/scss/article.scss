@@ -7,12 +7,15 @@
     img {
       // Post Thumbnail
       height: 80vh;
-      max-width: 1024px; // Thumbnail Widths
+      max-width: none;
       transform: translateX(-10%);
       width: auto;
       @media #{$mq_md} {
         transform: none;
         width: 100%;
+      }
+      @media #{$mq_lg} {
+        max-width: 1024px; // Thumbnail Widths
       }
     }
     .title-container {
