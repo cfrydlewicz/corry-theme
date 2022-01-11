@@ -260,7 +260,7 @@
           @extend .f_larger;
           &:first-of-type::before,
           &:last-of-type::after {
-            content: '';
+            content: none;
           }
         }
       }

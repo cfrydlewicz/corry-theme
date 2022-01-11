@@ -48,7 +48,7 @@ caption, th, td {
 }
 blockquote::before, blockquote::after,
 q::before, q::after {
-  content: "";
+  content: none;
 }
 blockquote, q {
   quotes: "" "";
