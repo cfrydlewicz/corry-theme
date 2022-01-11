@@ -227,11 +227,10 @@ article.article-content {
       background-color: $c_grey80;
       border-left: 8px solid $c_grey60;
       margin: 2em 0;
-      padding: 0.5em 1em 1.25em 0.5em;
+      padding: 0.75em 0.75em 1.25em 1.25em;
       p,
       cite {
         line-height: 1.5;
-        margin-left: 1em;  /* Indent text */
       }
       p {
         margin-top: 0.5em;
@@ -251,10 +250,6 @@ article.article-content {
         &::before,
         &::after {
           content: '';
-        }
-        p,
-        cite {
-          margin-left: 0;
         }
         p {
           @extend .f_larger;
@@ -361,8 +356,8 @@ article.article-content {
   }
 
   .read-more-container {
-    .srpw-block {
-      @extend .bezel;
+    .srpw-li {
+      @extend .article-card;
     }
   }
 
