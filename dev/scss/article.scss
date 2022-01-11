@@ -75,7 +75,9 @@
     h4::before,
     h5::before {
       @extend .f_smallest;
-      color: $c_grey50;
+      color: $c_light50;
+      font-family: monospace;
+      margin-right: 0.25em;
     }
     h2::before {
       content: 'h2';
