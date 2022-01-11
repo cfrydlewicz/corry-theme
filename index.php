@@ -26,15 +26,13 @@
       <article id="post-<?php the_ID(); ?> article-card" <?php post_class(); ?>>
 
         <header class="entry-header">
-          <div class="inner-wrapper--at-md">
-            <a href="<?php the_permalink(); ?>"><?php post_thumbnail(); ?></a>
-            <div class="title-container thumbnail-overlay">
-              <?php if ( is_singular() ) : ?>
-                <h1 id="single-post-title" class="entry-title"><?php the_title(); ?></h1>
-              <?php else : ?>
-                <h2 class="entry-title"><?php the_title( sprintf( '<a href="%s">', esc_url( get_permalink() ) ), '</a>' ); ?></h2>
-              <?php endif; ?>
-            </div>
+          <a href="<?php the_permalink(); ?>"><?php post_thumbnail(); ?></a>
+          <div class="title-container thumbnail-overlay">
+            <?php if ( is_singular() ) : ?>
+              <h1 id="single-post-title" class="entry-title"><?php the_title(); ?></h1>
+            <?php else : ?>
+              <h2 class="entry-title"><?php the_title( sprintf( '<a href="%s">', esc_url( get_permalink() ) ), '</a>' ); ?></h2>
+            <?php endif; ?>
           </div>
         </header>
 
@@ -67,11 +65,9 @@
     <article id="post error404">
 
       <header class="entry-header">
-        <div class="inner-wrapper--at-md">
-          <img src="<?php bloginfo('template_url');?>/assets/404.jpg">
-          <div class="title-container thumbnail-overlay">
-            <h2 class="entry-title">No Results Found</h2>
-          </div>
+        <img src="<?php bloginfo('template_url');?>/assets/404.jpg">
+        <div class="title-container thumbnail-overlay">
+          <h2 class="entry-title">No Results Found</h2>
         </div>
       </header>
 
