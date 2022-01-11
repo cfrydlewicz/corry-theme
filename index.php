@@ -1,17 +1,16 @@
 <?php get_header(); ?>
 
-
 <main id="a_skip-to-content" class="listing-page">
 
   <?php if ( ! is_home() ) : ?>
     <header class="page-header">
       <div class="inner-wrapper">
         <?php if ( is_category() ) : ?>
-          <h1 class="page-title">Category: <strong><?php single_cat_title(); ?></strong></h1>
+          <h1 id="sticky-title" class="page-title">Category: <strong><?php single_cat_title(); ?></strong></h1>
         <?php elseif ( is_tag() ) : ?>
-          <h1 class="page-title">Tag <strong><?php single_tag_title(); ?></strong></h1>
+          <h1 id="sticky-title" class="page-title">Tag <strong><?php single_tag_title(); ?></strong></h1>
         <?php elseif ( is_search() ) : ?>
-          <h1 class="page-title">Search Results for <strong><?php echo esc_html($_GET['s']); ?></strong></h1>
+          <h1 id="sticky-title" class="page-title">Search Results for <strong><?php echo esc_html($_GET['s']); ?></strong></h1>
         <?php else : ?>
           <div class="page-title u_hidden">Unknown Page Type</div>
         <?php endif; ?>
@@ -29,7 +28,7 @@
           <a href="<?php the_permalink(); ?>"><?php post_thumbnail(); ?></a>
           <div class="title-container">
             <?php if ( is_singular() ) : ?>
-              <h1 id="single-post-title" class="entry-title"><?php the_title(); ?></h1>
+              <h1 id="sticky-title" class="entry-title"><?php the_title(); ?></h1>
             <?php else : ?>
               <h2 class="entry-title"><?php the_title( sprintf( '<a href="%s">', esc_url( get_permalink() ) ), '</a>' ); ?></h2>
             <?php endif; ?>

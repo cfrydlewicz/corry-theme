@@ -2,7 +2,7 @@ $(document).ready( function() {
 
   // Secondary site header
   // For single posts
-  if( $("#single-post-title").length > 0 ) {
+  if( $("#sticky-title").length > 0 ) {
 
     // Watch the h1
     var observer = new IntersectionObserver(function(entries) {
@@ -14,7 +14,7 @@ $(document).ready( function() {
         $('#site-header-secondary').slideDown();
       }
     }, { threshold: [0] });
-    observer.observe(document.querySelector("#single-post-title"));
+    observer.observe(document.querySelector("#sticky-title"));
 
   }
 

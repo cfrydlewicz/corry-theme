@@ -14,7 +14,7 @@
         <div class="inner-wrapper--at-lg">
           <?php post_thumbnail(); ?>
           <div class="thumbnail-overlay">
-            <h1 id="single-post-title" class="entry-title"><?php the_title(); ?></h1>
+            <h1 id="sticky-title" class="entry-title"><?php the_title(); ?></h1>
           </div>
         </div>
       </header>
