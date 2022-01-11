@@ -64,43 +64,13 @@ article {
 
 }
 
-// Listings Cards
+// Article Cards
 body.home,
 body.category,
 body.tag,
 body.search,
 body.archive,
 body.single .read-more-container {
-
-  // Just Listing Cards
-  article {
-    margin-bottom: 24px;
-
-    .entry-footer {
-      @extend .bezel;
-      padding: 8px 0;
-    }
-    .post-meta {
-      flex-direction: column;
-      @media #{$mq_md} {
-        flex-direction: row;
-      }
-      .post-categories ul {
-        display: flex;
-        flex-wrap: wrap;
-        li {
-          display: inline;
-          &:not(:last-child)::after {
-            content: ', ';
-          }
-        }
-        a {
-          white-space: nowrap;
-        }
-      }
-    }
-
-  }
 
   // Listing Cards and Recommended Post Card
   article .entry-header,
@@ -116,8 +86,7 @@ body.single .read-more-container {
       }
     }
 
-    .cta-container,
-    .srpw-more-link {
+    .button {
       text-align: right;
     }
 
@@ -164,18 +133,59 @@ body.single .read-more-container {
     }
 
   }
+}
 
-  // Non-First Cards on Listings Only
-  article:not(:first-of-type) {
-    .entry-title {
-      @extend .f_largest;
+// Just Listing Cards
+body.home,
+body.category,
+body.tag,
+body.search,
+body.archive {
+
+  article {
+    margin-bottom: 24px;
+
+    .entry-footer {
+      @extend .bezel;
+      padding: 8px 0;
     }
-    .entry-header {
-      img {
-        height: auto;
-        width: 100%;
+    .post-meta {
+      flex-direction: column;
+      .post-categories ul {
+        display: flex;
+        flex-wrap: wrap;
+        li {
+          display: inline;
+          &:not(:last-child)::after {
+            content: ', ';
+          }
+        }
+        a {
+          white-space: nowrap;
+        }
+      }
+      @media #{$mq_md} {
+        flex-direction: row;
+        justify-content: space-between;
+        .post-categories ul {
+          flex-wrap: nowrap;
+        }
       }
     }
+
+    // Non-First Cards on Listings Only
+    &:not(:first-of-type) {
+      .entry-title {
+        @extend .f_largest;
+      }
+      .entry-header {
+        img {
+          height: auto;
+          width: 100%;
+        }
+      }
+    }
+
   }
 
 }
