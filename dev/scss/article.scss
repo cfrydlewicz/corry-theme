@@ -35,12 +35,12 @@ article {
         width: auto;
       }
     }
-    &:hover {
-      .thumbnail-overlay {
-        background-color: $c_black;
-        @supports (backdrop-filter: blur(10px)) {
-          background-color: rgba($c_black,0.5);
-        }
+  }
+  .entry-header:hover {
+    .thumbnail-overlay {
+      background-color: $c_black;
+      @supports (backdrop-filter: blur(10px)) {
+        background-color: rgba($c_black,0.5);
       }
     }
   }
@@ -75,22 +75,25 @@ body.single .read-more-container {
   // Listing Cards and Recommended Post Card
   article .entry-header,
   .sprw-li {
+    .button {
+      text-align: right;
+    }
+  }
 
-    @media #{$mq_mouse} {
+  @media #{$mq_mouse} {
+    article .entry-header,
+    .sprw-li {
       overflow: hidden;
       img {
         transition: all 0.2s ease-in-out;
       }
-      &:hover img {
-        transform: scale(1.125);
-      }
     }
-
-    .button {
-      text-align: right;
+    article .entry-header:hover,
+    .sprw-li:hover img {
+      transform: scale(1.125);
     }
-
   }
+
 
   // First Listing and Recommended Post Card
   article:first-of-type,
@@ -114,13 +117,13 @@ body.single .read-more-container {
       margin-top: -10px;
       padding: 8px 16px;
       transform: rotate(5deg) scale(1.25);
-      @media #{$mq_mouse} {
-        &::after {
-          transition: all 0.2s ease-in-out;
-        }
-        &:hover::after {
-          margin: 0 0 0 0.75em;
-        }
+    }
+    @media #{$mq_mouse} {
+      .button::after {
+        transition: all 0.2s ease-in-out;
+      }
+      .button:hover::after {
+        margin: 0 0 0 0.75em;
       }
     }
 
@@ -151,14 +154,14 @@ body.archive {
     }
     .post-meta {
       flex-direction: column;
-      .post-categories ul {
+      .post-categories {
         display: flex;
         flex-wrap: wrap;
         li {
           display: inline;
-          &:not(:last-child)::after {
-            content: ', ';
-          }
+        }
+        li:not(:last-child)::after {
+          content: ', ';
         }
         a {
           white-space: nowrap;
@@ -167,30 +170,29 @@ body.archive {
       @media #{$mq_md} {
         flex-direction: row;
         justify-content: space-between;
-        .post-categories ul {
+        .post-categories {
           flex-wrap: nowrap;
         }
       }
     }
+  }
 
-    // Non-First Cards on Listings Only
-    &:not(:first-of-type) {
-      .entry-title {
-        @extend .f_largest;
-      }
-      .entry-header {
-        img {
-          height: auto;
-          width: 100%;
-        }
+  // Non-First Cards on Listings Only
+  article:not(:first-of-type) {
+    .entry-title {
+      @extend .f_largest;
+    }
+    .entry-header {
+      img {
+        height: auto;
+        width: 100%;
       }
     }
-
   }
 
 }
 
-// Single Posts & Pages
+// Single Posts and Pages
 body.single,
 body.page {
 
@@ -246,10 +248,8 @@ body.page {
         line-height: 1.625;
         max-width: 65ch; // accessibility recommendation is 80 max
       }
-      p {
-        &:not(:last-of-type) {
-          margin-bottom: 1em;
-        }
+      p:not(:last-of-type) {
+        margin-bottom: 1em;
       }
       figcaption {
         @extend .f_small;
@@ -280,42 +280,40 @@ body.page {
         @extend .u_break-line;
         text-decoration: underline;
       }
-      a {
-        &[target="_blank"] {
-          @extend .u_icomoon;
-          &::after {
-            @extend .f_smallest;
-            content: "\ed7b";
-            margin: 0.125em 0 0 0.375em;
-            vertical-align: text-top;
-          }
-        }
-        &[href*="amazon.com"] {
-          @extend .i_shopping;
-        }
-        &[href*="disneyplus.com"],
-        &[href*="hbogo.com"],
-        &[href*="hbomax.com"],
-        &[href*="hbonow.com"],
-        &[href*="hulu.com"],
-        &[href*="netflix.com"] {
-          @extend .i_movie;
-        }
-        &[href*="spotify.com"] {
-          @extend .i_spotify;
-        }
-        &[href*="youtube.com"],
-        &[href*="youtu.be"] {
-          @extend .i_youtube;
-        }
-        &[href*="docs.google.com"],
-        &[href*="drive.google.com"] {
-          @extend .i_gdrive;
-        }
-        &[href*="pinterest.com"],
-        &[href*="pin.it"] {
-          @extend .i_pinterest;
-        }
+      a[target="_blank"] {
+        @extend .u_icomoon;
+      }
+      a[target="_blank"]::after {
+        @extend .f_smallest;
+        content: "\ed7b";
+        margin: 0.125em 0 0 0.375em;
+        vertical-align: text-top;
+      }
+      a[href*="amazon.com"] {
+        @extend .i_shopping;
+      }
+      a[href*="disneyplus.com"],
+      a[href*="hbogo.com"],
+      a[href*="hbomax.com"],
+      a[href*="hbonow.com"],
+      a[href*="hulu.com"],
+      a[href*="netflix.com"] {
+        @extend .i_movie;
+      }
+      a[href*="spotify.com"] {
+        @extend .i_spotify;
+      }
+      a[href*="youtube.com"],
+      a[href*="youtu.be"] {
+        @extend .i_youtube;
+      }
+      a[href*="docs.google.com"],
+      a[href*="drive.google.com"] {
+        @extend .i_gdrive;
+      }
+      a[href*="pinterest.com"],
+      a[href*="pin.it"] {
+        @extend .i_pinterest;
       }
 
       // lists
@@ -369,15 +367,15 @@ body.page {
         // center by default
         margin-left: auto;
         margin-right: auto;
-        &.alignleft {
-          margin-left: 0;
-        }
-        &.alignright {
-          margin-right: 0;
-        }
         figcaption {
           margin: 8px 0 0;
         }
+      }
+      figure.alignleft {
+        margin-left: 0;
+      }
+      figure.alignright {
+        margin-right: 0;
       }
 
       // Quotes
