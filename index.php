@@ -27,7 +27,7 @@
 
         <header class="entry-header">
           <a href="<?php the_permalink(); ?>"><?php post_thumbnail(); ?></a>
-          <div class="title-container thumbnail-overlay">
+          <div class="title-container">
             <?php if ( is_singular() ) : ?>
               <h1 id="single-post-title" class="entry-title"><?php the_title(); ?></h1>
             <?php else : ?>
@@ -66,7 +66,7 @@
 
       <header class="entry-header">
         <img src="<?php bloginfo('template_url');?>/assets/404.jpg">
-        <div class="title-container thumbnail-overlay">
+        <div class="title-container">
           <h2 class="entry-title">No Results Found</h2>
         </div>
       </header>

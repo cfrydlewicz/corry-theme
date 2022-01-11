@@ -1,4 +1,4 @@
-article.article-content {
+.article-content {
   padding: 0 0 36px;
 
   .entry-header {
@@ -15,6 +15,10 @@ article.article-content {
         width: 100%;
       }
     }
+    .title-container {
+      @extend .thumbnail-overlay;
+      padding-bottom: 16px;
+    }
     .entry-title {
       font-size: 2.5em;
       font-weight: 500;
@@ -26,7 +30,7 @@ article.article-content {
     }
   }
   .entry-header:hover {
-    .thumbnail-overlay {
+    .title-container {
       background-color: $c_black;
     }
   }

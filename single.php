@@ -12,7 +12,7 @@
 
       <header class="entry-header">
         <?php post_thumbnail(); ?>
-        <div class="thumbnail-overlay">
+        <div class="title-container">
           <h1 id="single-post-title" class="entry-title"><?php the_title(); ?></h1>
           <div class="post-meta">
             <div class="post-stats"><span class="word-count"><?php word_count(); ?> words</span> published on <span class="post-date"><?php the_date(); ?></span></div>

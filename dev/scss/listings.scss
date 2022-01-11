@@ -40,7 +40,9 @@ body.archive {
   .entry-header {
     position: relative;
   }
-
+  .entry-title-container {
+    @extend .thumbnail-overlay;
+  }
   .entry-title {
     @extend .f_largest;
   }
@@ -63,7 +65,14 @@ body.archive {
     line-height: 1;
   }
 
+  .entry-content {
+    @extend .bezel;
+    padding: 12px 0;
+  }
+
   .excerpt-container {
+    padding-bottom: 40px;
+    position: relative;
     p {
       margin: 0;
     }
@@ -72,14 +81,34 @@ body.archive {
     }
   }
 
-  .post-meta {
+  .entry-footer {
+    @extend .bezel;
     @extend .f_small;
-    display: flex;
-    justify-content: center;
-    margin-top: 2px;
-    width: 100%;
-    a {
-      @extend .f_small;
+    padding: 8px 0;
+    .inner-wrapper {
+      flex-direction: column;
+      @media #{$mq_md} {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+    .post-categories {
+      display: flex;
+      flex-wrap: wrap;
+      @media #{$mq_md} {
+        flex-wrap: nowrap;
+      }
+      li {
+        display: inline;
+        margin-bottom: 0;
+        &:not(:last-child)::after {
+          content: ', ';
+          margin-right: 0.25em;
+        }
+      }
+      a {
+        white-space: nowrap;
+      }
     }
   }
 
@@ -97,14 +126,8 @@ body.archive {
       }
     }
 
-    .entry-content {
-      @extend .bezel;
-      padding: 12px 0;
-    }
-
     .excerpt-container {
       padding-bottom: 16px;
-      position: relative;
       a {
         bottom: -16px;
         padding: 8px 16px;
@@ -118,36 +141,6 @@ body.archive {
         }
         .excerpt-container a:hover::after {
           margin: 0 0 0 0.75em;
-        }
-      }
-    }
-
-    .entry-footer {
-      @extend .bezel;
-      padding: 8px 0;
-      > div {
-        flex-direction: column;
-      }
-      .post-categories {
-        display: flex;
-        flex-wrap: wrap;
-        li {
-          display: inline;
-          margin-bottom: 0;
-          &:not(:last-child)::after {
-            content: ', ';
-            margin-right: 0.25em;
-          }
-        }
-        a {
-          white-space: nowrap;
-        }
-      }
-      @media #{$mq_md} {
-        flex-direction: row;
-        justify-content: space-between;
-        .post-categories {
-          flex-wrap: nowrap;
         }
       }
     }
