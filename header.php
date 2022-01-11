@@ -115,7 +115,10 @@
     <?php if ( is_single() ) : ?>
       <section id="site-header-secondary" class="site-header-single site-header-secondary">
         <div class="inner-wrapper">
-          <a href="#" class="title i_arrow-up"><?php the_title(); ?></a>
+          <a href="#a_skip-to-content" class="title i_arrow-up"><?php the_title(); ?></a>
+          <?php if ( comments_open() && !empty(get_comments_number()) ) : ?>
+            <a class="i_chat i_arrow-down--right" href="#a_comments_top"><span class="u_visually-hidden">Comments: </span><?php echo get_comments_number(); ?></a>
+          <?php endif; ?>
         </div>
       </section>
     <?php endif; ?>

@@ -14,6 +14,7 @@
 .u_icomoon::after,
 .u_icomoon::before,
 .i_arrow-down::before,
+.i_arrow-down--after::after,
 .i_arrow-left::before,
 .i_arrow-right::before,
 .i_arrow-right--after::after,
@@ -66,6 +67,9 @@
   speak: none;
 }
 .i_arrow-down::before {
+  content: "\edbf";
+}
+.i_arrow-down--after::after {
   content: "\edbf";
 }
 .i_arrow-left::before {
