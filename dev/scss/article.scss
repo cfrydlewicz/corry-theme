@@ -1,5 +1,4 @@
 .article-content {
-  padding: 0 0 36px;
 
   .entry-header {
     overflow-x: hidden;
@@ -32,7 +31,7 @@
 
   // Main Article Content
   .entry-content {
-    padding-top: 24px;
+    padding: 24px 0 36px;
 
     h2 {
       @extend .f_largest;
@@ -222,6 +221,13 @@
       margin-right: 0;
     }
 
+    // Embeds
+    .wp-block-embed {
+      iframe {
+        min-height: 220px;
+      }
+    }
+
     // Quotes
     blockquote {
       background-color: $c_grey80;
@@ -322,13 +328,19 @@
     // article-specific meta section (categories, tags)
     @extend .bezel--vertical;
     @extend .grainy;
-    padding-top: 36px;
+    padding: 36px 0;
     // width: 100%;
 
     .thanks-header {
       @extend .f_large;
-      margin-bottom: 0.25em;
+      margin-bottom: 2em;
       text-align: center;
+    }
+    p {
+      @extend .f_small;
+      a {
+        white-space: nowrap;
+      }
     }
 
   }
@@ -372,6 +384,7 @@
   }
   .srpw-img {
     @extend .entry-header;
+    overflow: hidden;
   }
   .srpw-content {
     @extend .thumbnail-overlay;
