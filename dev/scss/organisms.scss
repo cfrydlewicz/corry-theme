@@ -130,7 +130,6 @@ label {
   width: 100%;
   @supports (backdrop-filter: blur(10px)) {
     backdrop-filter: blur(10px);
-    background-color: rgba($c_black,0.25);
   }
   @media #{$mq_md} {
     width: auto;

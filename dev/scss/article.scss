@@ -1,305 +1,331 @@
-main.single-post article.post {
-  padding: 0 0 36px;
+main.single-post {
 
-  .entry-header {
-    overflow-x: hidden;
-    position: relative;
-    img {
-      // Post Thumbnail
-      height: auto;
-      max-height: 75vh;
-      max-width: 1024px; // Thumbnail Widths
-      transform: translateX(-10%);
-      @media #{$mq_md} {
-        transform: none;
-        width: 100%;
-      }
-    }
-    .entry-title {
-      font-size: 2.5em;
-      font-weight: 500;
-      line-height: 1;
-      margin-bottom: 4px;
-    }
-    .post-meta {
-      @extend .f_small;
-    }
-  }
-  .entry-header:hover {
-    .thumbnail-overlay {
-      background-color: $c_black;
-      @supports (backdrop-filter: blur(10px)) {
-        background-color: rgba($c_black,0.5);
-      }
-    }
-  }
+  article.post {
+    padding: 0 0 36px;
 
-  // Main Article Content
-  .entry-content {
-    padding-top: 24px;
-
-    h2 {
-      @extend .f_largest;
-      line-height: 1;
-      font-weight: 400;
-      margin-top: 2em;
-      margin-bottom: 0.5em;
-    }
-    h3 {
-      @extend .f_larger;
-      line-height: 1.4;
-      font-weight: bold;
-      margin-top: 1.5em;
-      margin-bottom: 0.5em;
-    }
-    h4 {
-      @extend .f_large;
-      line-height: 1.4;
-      font-weight: bold;
-      margin-top: 1.5em;
-      margin-bottom: 0.5em;
-    }
-    h5 {
-      font-size: 1rem;
-      line-height: 1;
-      font-weight: 400;
-      text-transform: uppercase;
-      margin-bottom: 0.5em;
-    }
-    p,
-    li {
-      font-size: 1rem;
-      line-height: 1.625;
-      max-width: 65ch; // accessibility recommendation is 80 max
-    }
-    p:not(:last-of-type) {
-      margin-bottom: 1em;
-    }
-    figcaption {
-      @extend .f_small;
-      line-height: 1.125;
-    }
-
-    // emphasis
-    strong,
-    em {
-      color: $c_truewhite;
-    }
-    del {
-      color: $c_light70;
-    }
-    a,
-    .fakelink,
-    span[style*="color:"] { // Exception for when color is manually changed in the WP editor
-      strong,
-      em,
-      del {
-        color: inherit;
-      }
-    }
-
-    // Text Links
-    a,
-    .fakelink {
-      @extend .u_break-line;
-      text-decoration: underline;
-    }
-    a[target="_blank"] {
-      @extend .u_icomoon;
-    }
-    a[target="_blank"]::after {
-      @extend .f_smallest;
-      content: "\ed7b";
-      margin: 0.125em 0 0 0.375em;
-      vertical-align: text-top;
-    }
-    a[href*="amazon.com"] {
-      @extend .i_shopping;
-    }
-    a[href*="disneyplus.com"],
-    a[href*="hbogo.com"],
-    a[href*="hbomax.com"],
-    a[href*="hbonow.com"],
-    a[href*="hulu.com"],
-    a[href*="netflix.com"] {
-      @extend .i_movie;
-    }
-    a[href*="spotify.com"] {
-      @extend .i_spotify;
-    }
-    a[href*="youtube.com"],
-    a[href*="youtu.be"] {
-      @extend .i_youtube;
-    }
-    a[href*="docs.google.com"],
-    a[href*="drive.google.com"] {
-      @extend .i_gdrive;
-    }
-    a[href*="pinterest.com"],
-    a[href*="pin.it"] {
-      @extend .i_pinterest;
-    }
-
-    // lists
-    ul,
-    ol {
-      padding-left: 2em;
-      margin-bottom: 1em;
-      ul, ol {
-        border-color: $c_grey40;
-        border-style: solid;
-        border-width: 1px 0;
-        margin: 0.25em 2em 1em 0;
-        padding-bottom: 0.25em;
-        padding-right: 0.25em;
-        padding-top: 0.25em;
-        ul, ol {
-          border-color: $c_grey60;
-          ul, ol {
-            border-color: $c_grey80;
-          }
+    .entry-header {
+      overflow-x: hidden;
+      position: relative;
+      img {
+        // Post Thumbnail
+        height: auto;
+        max-height: 75vh;
+        max-width: 1024px; // Thumbnail Widths
+        transform: translateX(-10%);
+        @media #{$mq_md} {
+          transform: none;
+          width: 100%;
         }
       }
-    }
-    ul {
-      list-style-type: disc;
-      ul {
-        list-style-type: square;
-        ul {
-          list-style-type: circle;
-        }
+      .entry-title {
+        font-size: 2.5em;
+        font-weight: 500;
+        line-height: 1;
+        margin-bottom: 4px;
       }
-    }
-    ol {
-      list-style-type: decimal-leading-zero;
-      ol {
-        list-style-type: upper-alpha;
-        ol {
-          list-style-type: lower-roman;
-          ol {
-            list-style-type: lower-alpha;
-          }
-        }
-      }
-    }
-
-    // Images
-    .wp-block-image {
-      margin-bottom: 1.5em;
-    }
-    figure {
-      // center by default
-      margin-left: auto;
-      margin-right: auto;
-      figcaption {
-        margin: 8px 0 0;
-      }
-    }
-    figure.alignleft {
-      margin-left: 0;
-    }
-    figure.alignright {
-      margin-right: 0;
-    }
-
-    // Quotes
-    blockquote {
-      background-color: $c_grey80;
-      border-left: 8px solid $c_grey60;
-      margin: 2em 0;
-      padding: 0.5em 1em 1.25em 0.5em;
-      p,
-      cite {
-        line-height: 1.5;
-        margin-left: 1em;  /* Indent text */
-      }
-      p {
-        margin-top: 0.5em;
-      }
-      cite {
+      .post-meta {
         @extend .f_small;
       }
     }
-    .wp-block-pullquote {
-      margin: 2em auto;
-      padding: 0;
-      blockquote {
-        @extend .bezel;
-        @extend .grainy;
-        margin: 0;
-        text-align: center;
-        &::before,
-        &::after {
-          content: '';
-        }
-        p,
-        cite {
-          margin-left: 0;
-        }
+    .entry-header:hover {
+      .thumbnail-overlay {
+        background-color: $c_black;
       }
     }
 
-    // Horizontal Rules
-    hr {
-      margin: 2em auto;
-      width: 60%;
-      border: none;
-      border-top: 1px solid $c_accent;
-    }
+    // Main Article Content
+    .entry-content {
+      padding-top: 24px;
 
-    // Tables
-    table {
-      @extend .f_small;
-      border-collapse: collapse;
-      line-height: 1.2;
-      max-width: 100%;
-      margin-bottom: 3em;
-      th,
-      td {
-        padding: 0.25rem;
-        border: 1px solid $c_grey50;
+
+      h2 {
+        @extend .f_largest;
+        line-height: 1;
+        font-weight: 400;
+        margin-top: 2em;
+        margin-bottom: 0.5em;
       }
-      th {
+      h3 {
+        @extend .f_larger;
+        line-height: 1.4;
         font-weight: bold;
-        text-transform: uppercase;
+        margin-top: 1.5em;
+        margin-bottom: 0.5em;
       }
-      /* TODO needed?
+      h4 {
+        @extend .f_large;
+        line-height: 1.4;
+        font-weight: bold;
+        margin-top: 1.5em;
+        margin-bottom: 0.5em;
+      }
+      h5 {
+        font-size: 1rem;
+        line-height: 1;
+        font-weight: 400;
+        text-transform: uppercase;
+        margin-bottom: 0.5em;
+      }
+
+      // header effects
+      h2::before,
+      h3::before,
+      h4::before,
+      h5::before {
+        @extend .f_smallest;
+        color: $c_grey50;
+      }
+      h2::before {
+        content: 'h2';
+      }
+      h3::before {
+        content: 'h2';
+      }
+      h4::before {
+        content: 'h2';
+      }
+      h5::before {
+        content: 'h2';
+      }
+
       p,
       li {
-        font-size: inherit;
-        line-height: inherit;
+        font-size: 1rem;
+        line-height: 1.625;
+        max-width: 65ch; // accessibility recommendation is 80 max
       }
-      */
-    }
-
-    // pre-formatted
-    pre {
-      @extend .grainy;
-      border: 1px solid $c_grey50;
-      margin-bottom: 1em;
-      padding: 8px;
-    }
-
-    // Special Article Features
-    p.disclaimer {
-      @extend .i_warning;
-      background-color: mix(black, $c_accent, 80%);
-      border-color: $c_accent;
-      border-style: solid;
-      border-width: 1px;
-      margin-bottom: 1.25em;
-      padding: 12px;
-      &::before {
-        font-size: 24px;
-        margin-right: 12px;
+      p:not(:last-of-type) {
+        margin-bottom: 1em;
       }
-    }
+      figcaption {
+        @extend .f_small;
+        line-height: 1.125;
+      }
 
-    .entry-footer {
-      // article-specific meta section (categories, tags)
-      padding-top: 36px;
-    }
+      // emphasis
+      strong,
+      em {
+        color: $c_truewhite;
+      }
+      del {
+        color: $c_light70;
+      }
+      a,
+      .fakelink,
+      span[style*="color:"] { // Exception for when color is manually changed in the WP editor
+        strong,
+        em,
+        del {
+          color: inherit;
+        }
+      }
 
+      // Text Links
+      a,
+      .fakelink {
+        @extend .u_break-line;
+        text-decoration: underline;
+      }
+      a[target="_blank"] {
+        @extend .u_icomoon;
+      }
+      a[target="_blank"]::after {
+        @extend .f_smallest;
+        content: "\ed7b";
+        margin: 0.125em 0 0 0.375em;
+        vertical-align: text-top;
+      }
+      a[href*="amazon.com"] {
+        @extend .i_shopping;
+      }
+      a[href*="disneyplus.com"],
+      a[href*="hbogo.com"],
+      a[href*="hbomax.com"],
+      a[href*="hbonow.com"],
+      a[href*="hulu.com"],
+      a[href*="netflix.com"] {
+        @extend .i_movie;
+      }
+      a[href*="spotify.com"] {
+        @extend .i_spotify;
+      }
+      a[href*="youtube.com"],
+      a[href*="youtu.be"] {
+        @extend .i_youtube;
+      }
+      a[href*="docs.google.com"],
+      a[href*="drive.google.com"] {
+        @extend .i_gdrive;
+      }
+      a[href*="pinterest.com"],
+      a[href*="pin.it"] {
+        @extend .i_pinterest;
+      }
+
+      // lists
+      ul,
+      ol {
+        padding-left: 2em;
+        margin-bottom: 1em;
+        ul, ol {
+          border-color: $c_grey40;
+          border-style: solid;
+          border-width: 1px 0;
+          margin: 0.25em 2em 1em 0;
+          padding-bottom: 0.25em;
+          padding-right: 0.25em;
+          padding-top: 0.25em;
+          ul, ol {
+            border-color: $c_grey60;
+            ul, ol {
+              border-color: $c_grey80;
+            }
+          }
+        }
+      }
+      ul {
+        list-style-type: disc;
+        ul {
+          list-style-type: square;
+          ul {
+            list-style-type: circle;
+          }
+        }
+      }
+      ol {
+        list-style-type: decimal-leading-zero;
+        ol {
+          list-style-type: upper-alpha;
+          ol {
+            list-style-type: lower-roman;
+            ol {
+              list-style-type: lower-alpha;
+            }
+          }
+        }
+      }
+
+      // Images
+      .wp-block-image {
+        margin-bottom: 1.5em;
+      }
+      figure {
+        // center by default
+        margin-left: auto;
+        margin-right: auto;
+        figcaption {
+          margin: 8px 0 0;
+        }
+      }
+      figure.alignleft {
+        margin-left: 0;
+      }
+      figure.alignright {
+        margin-right: 0;
+      }
+
+      // Quotes
+      blockquote {
+        background-color: $c_grey80;
+        border-left: 8px solid $c_grey60;
+        margin: 2em 0;
+        padding: 0.5em 1em 1.25em 0.5em;
+        p,
+        cite {
+          line-height: 1.5;
+          margin-left: 1em;  /* Indent text */
+        }
+        p {
+          margin-top: 0.5em;
+        }
+        cite {
+          @extend .f_small;
+        }
+      }
+      .wp-block-pullquote {
+        margin: 2em auto;
+        padding: 0;
+        blockquote {
+          @extend .bezel;
+          @extend .grainy;
+          margin: 0;
+          text-align: center;
+          &::before,
+          &::after {
+            content: '';
+          }
+          p,
+          cite {
+            margin-left: 0;
+          }
+          p {
+            @extend .f_larger;
+          }
+        }
+      }
+
+      // Horizontal Rules
+      hr {
+        margin: 2em auto;
+        width: 60%;
+        border: none;
+        border-top: 1px solid $c_accent;
+      }
+
+      // Tables
+      table {
+        @extend .f_small;
+        border-collapse: collapse;
+        line-height: 1.2;
+        max-width: 100%;
+        margin-bottom: 3em;
+        th,
+        td {
+          padding: 0.25rem;
+          border: 1px solid $c_grey50;
+        }
+        th {
+          font-weight: bold;
+          text-transform: uppercase;
+        }
+        /* TODO needed?
+        p,
+        li {
+          font-size: inherit;
+          line-height: inherit;
+        }
+        */
+      }
+
+      // pre-formatted
+      pre {
+        @extend .grainy;
+        border: 1px solid $c_grey50;
+        margin-bottom: 1em;
+        padding: 8px;
+      }
+
+      // Special Article Features
+      p.disclaimer {
+        @extend .i_warning;
+        background-color: mix(black, $c_accent, 80%);
+        border-color: $c_accent;
+        border-style: solid;
+        border-width: 1px;
+        margin-bottom: 1.25em;
+        padding: 12px;
+        &::before {
+          font-size: 24px;
+          margin-right: 12px;
+        }
+      }
+
+      .entry-footer {
+        // article-specific meta section (categories, tags)
+        padding-top: 36px;
+      }
+
+    }
   }
 
   // Post Footer
