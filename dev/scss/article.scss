@@ -1,7 +1,8 @@
 article {
   // Articles are used for Pages, Listings, Single Posts, and Comments
 
-  .entry-title {
+  .entry-title,
+  .srpw-title {
     font-size: 1.75em;
     line-height: 1;
   }
@@ -51,10 +52,6 @@ article {
     }
   }
 
-  .cta-container {
-    text-align: right;
-  }
-
   .post-meta {
     @extend .f_small;
     display: flex;
@@ -75,61 +72,9 @@ body.search,
 body.archive,
 body.single .read-more-container {
 
+  // Just Listing Cards
   article {
     margin-bottom: 24px;
-
-    .entry-header {
-      @media #{$mq_mouse} {
-        overflow: hidden;
-        img {
-          transition: all 0.2s ease-in-out;
-        }
-        &:hover img {
-          transform: scale(1.125);
-        }
-      }
-    }
-
-    &:first-of-type {
-      img {
-        height: 60vh;
-        transform: translateX(-10%);
-        @media #{$mq_md} {
-          transform: none;
-        }
-      }
-      .button {
-        margin-right: 4px;
-        margin-top: -10px;
-        padding: 8px 16px;
-        transform: rotate(5deg) scale(1.25);
-        @media #{$mq_mouse} {
-          &::after {
-            transition: all 0.2s ease-in-out;
-          }
-          &:hover::after {
-            margin: 0 0 0 0.75em;
-          }
-        }
-      }
-    }
-
-    &:not(:first-of-type) {
-      .entry-title {
-        @extend .f_largest;
-      }
-      .entry-header {
-        img {
-          height: auto;
-          width: 100%;
-        }
-      }
-    }
-
-    .entry-content {
-      @extend .bezel;
-      padding: 12px 0;
-    }
 
     .entry-footer {
       @extend .bezel;
@@ -155,6 +100,82 @@ body.single .read-more-container {
       }
     }
 
+  }
+
+  // Listing Cards and Recommended Post Card
+  article .entry-header,
+  .sprw-li {
+
+    @media #{$mq_mouse} {
+      overflow: hidden;
+      img {
+        transition: all 0.2s ease-in-out;
+      }
+      &:hover img {
+        transform: scale(1.125);
+      }
+    }
+
+    .cta-container,
+    .srpw-more-link {
+      text-align: right;
+    }
+
+  }
+
+  // First Listing and Recommended Post Card
+  article:first-of-type,
+  .sprw-li {
+    img {
+      height: 65vh;
+      transform: translateX(-10%);
+      @media #{$mq_md} {
+        transform: none;
+      }
+    }
+    .srpw-summary {
+      line-height: inherit;
+      padding: 0;
+    }
+    .srpw-more-link {
+      @extend .button;
+    }
+    .button {
+      margin-right: 4px;
+      margin-top: -10px;
+      padding: 8px 16px;
+      transform: rotate(5deg) scale(1.25);
+      @media #{$mq_mouse} {
+        &::after {
+          transition: all 0.2s ease-in-out;
+        }
+        &:hover::after {
+          margin: 0 0 0 0.75em;
+        }
+      }
+    }
+
+    .entry-content {
+      @extend .bezel;
+      padding: 12px 0;
+    }
+    .srpw-content {
+      padding: 0 12px;
+    }
+
+  }
+
+  // Non-First Cards on Listings Only
+  article:not(:first-of-type) {
+    .entry-title {
+      @extend .f_largest;
+    }
+    .entry-header {
+      img {
+        height: auto;
+        width: 100%;
+      }
+    }
   }
 
 }
@@ -296,8 +317,10 @@ body.page {
           border-color: mix(white, $c_secondary, 80%);
           border-style: solid;
           border-width: 1px 0;
-          margin: 1em 0 0.5em;
-          padding-left: 0.5em;
+          margin: 0.25em 2em 1em 0;
+          padding-bottom: 0.25em;
+          padding-right: 0.25em;
+          padding-top: 0.25em;
           ul, ol {
             border-color: mix(white, $c_accent, 80%);
             ul, ol {
@@ -352,24 +375,12 @@ body.page {
         background-color: $c_grey80;
         border-left: 8px solid $c_grey60;
         margin: 2em 0;
-        padding: 0.5em 1em 1.2em 0.5em;
-        &::before {
-          color: $c_grey60;
-          float: left;
-          font-size: 5em;
-          line-height: 0;
-          margin-top: 0.5em;
-          vertical-align: top;
-        }
+        padding: 0.5em 1em 1.25em 0.5em;
         p {
-          margin-bottom: 2.5em;  /* compensate an extra 1.5 for negative margin-top */
           margin-left: 1em;  /* Indent text */
-          margin-top: 0.5em;  /* align with large open quote */
-          max-width: 80%;
+          margin-top: 0.5em;
           &.cite {
-            margin-bottom: 0;
             margin-top: 0;
-            width: 100%;
           }
         }
       }
@@ -457,15 +468,21 @@ body.page {
 
     }
 
+    // headers
+    .post-footer_header {
+      @extend .f_largest;
+      margin-bottom: 1em;
+    }
+
     .thanks-container {
       text-align: center;
       width: 100%;
     }
 
-    // headers
-    .post-footer_header {
-      @extend .f_largest;
-      margin-bottom: 1em;
+    .read-more-container {
+      .srpw-block {
+        @extend .bezel;
+      }
     }
 
     // Comments
