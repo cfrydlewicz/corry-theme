@@ -46,7 +46,12 @@ body.admin-bar.logged-in {
     margin-top: $header_height;
   }
   .slb_details {
+    line-height: 1.125;
     margin: 4px auto 0;
+  }
+  .slb_data {
+    display: block;
+    text-align: center;
   }
   .slb_data_title,
   .slb_group_status {
@@ -57,6 +62,7 @@ body.admin-bar.logged-in {
   .slb_data_title {
     margin-right: 0;
     span {
+      display: block;
       line-height: 1.125;
       text-align: center;
     }
