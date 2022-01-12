@@ -130,6 +130,7 @@ label {
   background-color: rgba($c_black,0.5);
   bottom: 0;
   height: min-content;
+  max-width: 1024px;
   padding: 12px $gutter;
   pointer-events: none;
   position: absolute;

@@ -21,7 +21,7 @@ $gutter_lg: 24px;
   .inner-wrapper--at-lg {
     @extend .bezel--horizontal--at-lg;
     margin: 0 auto;
-    max-width: 1056px;
+    max-width: 1024px + $gutter_lg*2;
     padding: 0 $gutter_lg;
   }
   .inner-wrapper--at-lg {
