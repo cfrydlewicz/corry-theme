@@ -419,9 +419,34 @@
     @extend .f_largest;
     font-weight: 500;
     margin-bottom: 1em;
+    &[class*="i_"]::before {
+      font-size: 0.625em;
+      margin-right: 0.25em;
+    }
+  }
+
+  .discussion-container {
+    .post-footer_header {
+      @extend .i_chat;
+    }
+  }
+
+  .follow-container {
+    .post-footer_header {
+      @extend .i_heart;
+    }
+  }
+
+  .share-container {
+    .post-footer_header {
+      @extend .i_share;
+    }
   }
 
   .read-more-container {
+    .post-footer_header {
+      @extend .i_star;
+    }
   }
   .srpw-li {
     @extend .article-card;
@@ -456,6 +481,9 @@
 
   // Comments
   .comments-container {
+    .post-footer_header {
+      @extend .i_chat;
+    }
 
     ol {
       list-style: none;
@@ -574,12 +602,12 @@
       width: 33%;
     }
 
-    .follow-container {
+    .share-container {
       order: 2;
       width: 33%;
     }
 
-    .share-container {
+    .follow-container {
       order: 3;
       width: 33%;
     }
