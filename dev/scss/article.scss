@@ -49,7 +49,7 @@
       margin-bottom: 4px;
     }
     .post-meta {
-      @extend .f_small;
+      font-size: 1em;
       @media #{$mq_md} {
         font-size: 0.75em;
       }
@@ -61,7 +61,7 @@
     padding: 24px 0 36px;
 
     h2 {
-      @extend .f_largest;
+      font-size: 1.625em;
       line-height: 1.125;
       font-weight: 500;
       margin-top: 2em;
@@ -71,7 +71,7 @@
       }
     }
     h3 {
-      @extend .f_larger;
+      font-size: 1.375em;
       line-height: 1.375;
       margin-top: 1.75em;
       margin-bottom: 0.5em;
@@ -80,7 +80,7 @@
       }
     }
     h4 {
-      @extend .f_large;
+      font-size: 1.25em;
       line-height: 1.375;
       font-weight: 500;
       margin-top: 1.625em;
@@ -139,7 +139,7 @@
       margin-bottom: 1.5em;
     }
     figcaption {
-      @extend .f_small;
+      font-size: 1em;
       line-height: 1.125;
       @media #{$mq_md} {
         font-size: 0.75em;
@@ -179,7 +179,7 @@
     }
     a[href^="#a_"]::after,
     a[target="_blank"]::after {
-      @extend .f_smallest;
+      font-size: 0.75em;
       vertical-align: text-top;
       @media #{$mq_md} {
         font-size: 0.625em;
@@ -316,6 +316,8 @@
     // Embeds
     .wp-block-embed {
       iframe {
+        margin-left: auto;
+        margin-right: auto;
         min-height: 220px;
       }
     }
@@ -334,8 +336,8 @@
         margin-top: 0.5em;
       }
       cite {
-        @extend .f_small;
         display: inline-block;
+        font-size: 1em;
         margin-top: 1.25em;
         @media #{$mq_md} {
           font-size: 0.75em;
@@ -353,7 +355,7 @@
         padding: 0.75em 0.75em 1.25em;
         text-align: center;
         p {
-          @extend .f_larger;
+          font-size: 1.375em;
         }
       }
     }
@@ -368,8 +370,8 @@
 
     // Tables
     table {
-      @extend .f_small;
       border-collapse: collapse;
+      font-size: 1em;
       line-height: 1.2;
       max-width: 100%;
       margin-bottom: 3em;
@@ -424,11 +426,11 @@
     // width: 100%;
 
     .thanks-header {
-      @extend .f_large;
+      font-size: 1.25em;
       text-align: center;
     }
     p {
-      @extend .f_small;
+      font-size: 1em;
       @media #{$mq_md} {
         font-size: 14px;
         font-weight: 400;
@@ -467,7 +469,7 @@
 
   // headers
   .post-footer_header {
-    @extend .f_largest;
+    font-size: 1.625em;
     font-weight: 500;
     margin-bottom: 1em;
     &::before {
@@ -609,7 +611,7 @@
   }
 
   .comment-metadata {
-    @extend .f_smallest;
+    font-size: 0.75em;
     .edit-link {
       // comment admin
       display: block;
@@ -621,7 +623,7 @@
     max-width: 432px;
 
     .comment-reply-title {
-      @extend .f_largest;
+      font-size: 1.625em;
       margin-bottom: 8px;
       small {
         font-size: 12px;
@@ -646,8 +648,8 @@
     }
 
     p[class*="akismet"] {
-      @extend .f_smallest;
       display: none;
+      //font-size: 0.75em;
     }
 
   }
