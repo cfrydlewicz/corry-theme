@@ -48,6 +48,9 @@
     }
     .post-meta {
       @extend .f_small;
+      @media #{$mq_md} {
+        font-size: 0.75em;
+      }
     }
   }
 
@@ -136,6 +139,9 @@
     figcaption {
       @extend .f_small;
       line-height: 1.125;
+      @media #{$mq_md} {
+        font-size: 0.75em;
+      }
     }
 
     // emphasis
@@ -277,6 +283,9 @@
     }
 
     // Images
+    img {
+      margin: 0 auto;
+    }
     .wp-block-image {
       margin-bottom: 1.5em;
     }
@@ -286,13 +295,20 @@
       margin-right: auto;
       figcaption {
         margin: 8px 0 0;
+        text-align: center;
       }
     }
     figure.alignleft {
       margin-left: 0;
+      img {
+        margin-left: 0;
+      }
     }
     figure.alignright {
       margin-right: 0;
+      img {
+        margin-right: 0;
+      }
     }
 
     // Embeds
@@ -666,7 +682,11 @@
       width: 48%;
     }
     .comment-list {
+      flex-grow: 1;
       margin-right: 24px;
+    }
+    .comment-list ~ .respond-container {
+      margin-right: 0;
     }
 
   }
