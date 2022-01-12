@@ -4,7 +4,7 @@
     font-size: 22px;
   }
   @media #{$mq_lg} {
-    font-size: 22px;
+    font-size: 28px;
   }
   @media #{$mq_xl} {
     font-size: 22px;
@@ -110,6 +110,9 @@
       font-size: 1em;
       line-height: 1.625;
       max-width: 65ch; // accessibility recommendation is 80 max
+      @media #{$mq_lg} {
+        font-weight: 300;
+      }
     }
     p:not(:last-of-type) {
       margin-bottom: 1.5em;
@@ -382,6 +385,9 @@
     }
     p {
       @extend .f_small;
+      @media #{$mq_md} {
+        font-size: 14px;
+      }
       a {
         white-space: nowrap;
       }
@@ -419,7 +425,7 @@
     @extend .f_largest;
     font-weight: 500;
     margin-bottom: 1em;
-    &[class*="i_"]::before {
+    &::before {
       font-size: 0.625em;
       margin-right: 0.25em;
     }
@@ -445,7 +451,6 @@
 
   .read-more-container {
     .post-footer_header {
-      @extend .i_star;
     }
   }
   .srpw-li {
@@ -463,6 +468,7 @@
   }
   .srpw-content {
     @extend .thumbnail-overlay;
+    width: 100%;
   }
   .srpw-title {
     @extend .entry-title;
@@ -565,6 +571,8 @@
     }
 
     .respond-container {
+      margin: 0 auto;
+      max-width: 450px;
 
       .comment-reply-title {
         @extend .f_largest;
