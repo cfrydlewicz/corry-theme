@@ -155,7 +155,6 @@ $gutter_lg: 24px;
         padding-left: $gutter_lg;
         padding-right: $gutter_lg;
       }
-      width: fit-content;
       &:hover {
         @extend .grainy;
         svg path {
