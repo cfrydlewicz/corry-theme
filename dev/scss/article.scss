@@ -30,7 +30,7 @@
       @media #{$mq_lg} {
         margin-left: auto;
         margin-right: auto;
-        max-width: 1024px; // Thumbnail Widths
+        max-width: $thumbnail_width;
       }
     }
     .title-container {
@@ -465,7 +465,7 @@
   @media #{$mq_lg} {
     @extend .bezel--horizontal--at-lg;
     margin: 48px auto 36px;
-    max-width: 1024px + $gutter_lg*2;
+    max-width: $thumbnail_width + $gutter_lg*2;
   }
 
   section {
@@ -510,7 +510,7 @@
   .read-more-container {
     .widget-area {
       margin: 0 auto;
-      max-width: 1024px;
+      max-width: $thumbnail_width;
     }
   }
   .srpw-li {
