@@ -34,7 +34,7 @@ body.archive {
 
 // Article Cards
 .article-card {
-  margin-bottom: 24px;
+  margin-bottom: 48px;
   position: relative;
 
   .entry-header {
@@ -63,6 +63,7 @@ body.archive {
 
   .entry-content {
     @extend .bezel;
+    @extend .grainy;
     padding: 12px 0;
   }
 
@@ -82,6 +83,7 @@ body.archive {
 
   .entry-footer {
     @extend .bezel;
+    @extend .grainy;
     padding: 8px 0;
     .inner-wrapper {
       flex-direction: column;

@@ -16,40 +16,46 @@ body {
 }
 
 /* sizes */
-.f_small {
-  font-size: .875rem;
+.f_smallest {
+  font-size: 0.625rem;
   .article-content & {
-    font-size: .875em;
+    font-size: 0.75em;
   }
 }
 .f_smaller {
-  font-size: .75rem;
+  font-size: 0.75rem;
   .article-content & {
-    font-size: .75em;
+    font-size: 0.875em;
   }
 }
-.f_smallest {
-  font-size: .625rem;
+.f_small {
+  font-size: 0.875rem;
   .article-content & {
-    font-size: .625em;
+    font-size: 1em;
+  }
+}
+.f_medium {
+  font-size: 1.125rem;
+  .article-content & {
+    font-size: 1.125em;
   }
 }
 .f_large {
   font-size: 1.125rem;
   .article-content & {
-    font-size: .1.125em;
+    font-size: 1.25em;
   }
 }
 .f_larger {
   font-size: 1.25rem;
   .article-content & {
-    font-size: 1.25em;
+    font-size: 1.375em;
   }
 }
 .f_largest {
   font-size: 1.5rem;
   .article-content & {
-    font-size: 1.5em;
+    font-size: 1.625em;
   }
 }
 
