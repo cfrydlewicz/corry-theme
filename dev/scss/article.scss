@@ -546,7 +546,11 @@
     }
   }
   .srpw-more-link {
-    @extend .button;
+    @extend .button--big;
+    @extend .i_arrow-right--after;
+    bottom: 0;
+    position: absolute;
+    right: -2%;
   }
 
   // Comments
