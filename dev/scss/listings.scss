@@ -91,10 +91,10 @@ body.archive {
       right: 0;
     }
     @media #{$mq_mouse} {
-      .excerpt-container a::after {
+      a::after {
         transition: all 0.2s ease-in-out;
       }
-      .excerpt-container a:hover::after {
+      a:hover::after {
         margin: 0 0 0 0.75em;
       }
     }
