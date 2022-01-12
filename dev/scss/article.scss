@@ -1,13 +1,13 @@
 .article-content {
   font-size: 16px;  // establishes em basis
   @media #{$mq_md} {
-    font-size: 18px;
+    font-size: 22px;
   }
   @media #{$mq_lg} {
-    font-size: 20px;
+    font-size: 22px;
   }
   @media #{$mq_xl} {
-    font-size: 20px;
+    font-size: 22px;
   }
 
   .entry-header {
@@ -84,6 +84,12 @@
       display: inline-block;
       font-family: monospace;
       font-size: 12px;
+      @media #{$mq_md} {
+        font-size: 16px;
+      }
+      @media #{$mq_lg} {
+        font-size: 20px;
+      }
       margin-right: 0.25em;
     }
     h2::before {
@@ -119,7 +125,7 @@
       color: $c_truewhite;
       strong,
       em {
-        color: mix(white, $c_accent, 80%);
+        color: mix(white, $c_accent, 60%);
       }
     }
     del {
@@ -395,11 +401,13 @@
   flex-wrap: wrap;
   @media #{$mq_md} {
     flex-direction: row;
+    justify-content: space-between;
   }
 
   section {
     @extend .grainy;
     @extend .bezel--vertical;
+    flex-grow: 1;
     padding: 24px 16px;
     &:last-of-type {
       padding-bottom: 36px;
