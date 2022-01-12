@@ -122,21 +122,17 @@ $thumbnail_width: 1024px;
       display: flex;
       height: 30px;
       justify-content: space-between;
-      @media #{$mq_sm2} {
-        padding-left: $gutter;
-        padding-right: $gutter;
-      }
-      @media #{$mq_lg} {
-        padding-left: $gutter_lg;
-        padding-right: $gutter_lg;
-      }
     }
     a {
+      @extend .bezel--horizontal;
       align-items: center;
       display: flex;
       height: 100%;
       min-width: 40px;
-      padding: 4px;
+      padding: 4px $gutter;
+      &:hover {
+        @extend .grainy;
+      }
     }
     .title {
       flex-grow: 1;
