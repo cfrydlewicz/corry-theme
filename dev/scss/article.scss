@@ -6,9 +6,6 @@
   @media #{$mq_lg} {
     font-size: 28px;
   }
-  @media #{$mq_xl} {
-    font-size: 22px;
-  }
 
   .entry-header {
     overflow-x: hidden;
@@ -33,6 +30,9 @@
     }
     .entry-title {
       font-size: 2.5em;
+      @media #{$mq_lg} {
+        font-size: 3em;
+      }
       font-weight: 500;
       line-height: 1;
       margin-bottom: 4px;
@@ -157,6 +157,9 @@
     a[target="_blank"]::after {
       @extend .f_smallest;
       vertical-align: text-top;
+      @media #{$mq_md} {
+        font-size: 0.625em;
+      }
     }
     a[href^="#a_"]::after {
       content: '#';
@@ -190,6 +193,10 @@
     a[href*="drive.google.com"] {
       @extend .i_gdrive;
     }
+    a[href*="github.com"],
+    a[href*="github.io"] {
+      @extend .i_github;
+    }
     a[href*="facebook.com"] {
       @extend .i_facebook;
     }
@@ -216,7 +223,7 @@
       padding-left: 2em;
       margin-bottom: 1.5em;
       ul, ol {
-        border-color: $c_grey40;
+        border-color: $c_grey80;
         border-style: solid;
         border-width: 1px 0;
         margin: 0.25em 2em 1em 0;
@@ -224,9 +231,9 @@
         padding-right: 0.25em;
         padding-top: 0.25em;
         ul, ol {
-          border-color: $c_grey60;
+          border-color: $c_grey70;
           ul, ol {
-            border-color: $c_grey80;
+            border-color: $c_grey60;
           }
         }
       }
