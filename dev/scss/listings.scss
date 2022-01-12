@@ -79,8 +79,12 @@ body.archive {
     padding-bottom: 44px;
     position: relative;
     width: 100%;
+    @media #{$mq_md} {
+      padding-bottom: 0;
+    }
     p {
       margin: 0;
+      max-width: 60ch;
     }
     a {
       @extend .button;

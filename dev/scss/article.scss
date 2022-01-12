@@ -535,14 +535,18 @@
   }
   .srpw-summary {
     line-height: inherit;
+/*
     padding: 0;
+*/
     position: relative;
     width: 100%;
+/*
     @media #{$mq_md} {
       p {
         max-width: 60ch;
       }
     }
+*/
     a {
       right: -2%;
     }
@@ -553,6 +557,14 @@
     bottom: 0;
     position: absolute;
     right: -2%;
+    @media #{$mq_mouse} {
+      a::after {
+        transition: all 0.2s ease-in-out;
+      }
+      a:hover::after {
+        margin: 0 0 0 0.75em;
+      }
+    }
   }
 
   // Comments
