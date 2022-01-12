@@ -25,14 +25,6 @@
     display: initial;
   }
 }
-@media #{$mq_xl} {
-  .u_hide--xl {
-    display: none;
-  }
-  .u_show--xl {
-    display: initial;
-  }
-}
 
 // Text
 .u_uppercase {
@@ -143,23 +135,6 @@
     }
   }
 }
-@media #{$mq_xl} {
-  .u_flex {
-    &.u_flex--row-nowrap--xl {
-      -webkit-flex-flow: row nowrap;
-      flex-flow: row nowrap;
-    }
-    &.u_flex--row-wrap--xl {
-      -webkit-flex-flow: row wrap;
-      flex-flow: row wrap;
-    }
-    &.u_flex--col--xl {
-      -webkit-flex-flow: column wrap;
-      flex-flow: column wrap;
-    }
-  }
-}
-
 
 // Float & Clear
 .u_clear {
