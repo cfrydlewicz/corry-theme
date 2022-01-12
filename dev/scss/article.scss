@@ -12,6 +12,11 @@
   .entry-header {
     overflow-x: hidden;
     position: relative;
+    @media #{$mq_lg} {
+      @extend .bezel--vertical--at-lg;
+      background: linear-gradient(320deg, rgba($c_grey20,0.625), rgba($c_grey80,0.625));
+    }
+
     img {
       // Post Thumbnail
       height: 80vh;
@@ -460,9 +465,7 @@
   }
   @media #{$mq_lg} {
     @extend .bezel--horizontal--at-lg;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 48px;
+    margin: 48px auto 36px;
     max-width: 1024px + $gutter_lg*2;
   }
 
