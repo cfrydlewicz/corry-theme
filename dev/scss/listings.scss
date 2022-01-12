@@ -57,6 +57,7 @@ body.archive {
   position: relative;
 
   .entry-header {
+    overflow: hidden;
     position: relative;
 
     &:hover a {
@@ -68,7 +69,6 @@ body.archive {
       margin-right: auto;
     }
     @media only screen and (max-width: 1023px) and (pointer: fine) {
-      overflow: hidden;
       img {
         transition: all 0.2s ease-in-out;
       }
@@ -183,12 +183,11 @@ body.archive {
       max-width: none;
       transform: translateX(-10%);
       width: auto;
-      @media #{$mq_md} {
-        height: auto;
+      @media only screen and (min-width: $mq_lg*0.9 ) {
         transform: none;
-        width: 100%;
       }
       @media #{$mq_lg} {
+        height: auto;
         max-height: 80vh;
         width: auto;
       }
