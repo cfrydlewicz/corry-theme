@@ -85,6 +85,9 @@ body.archive {
     p {
       margin: 0;
       max-width: 60ch;
+      @media #{$mq_lg} {
+        font-family: 'Montserrat', 'Arimo', sans-serif;
+      }
     }
     a {
       @extend .button;
@@ -184,17 +187,17 @@ body.archive {
     }
     .excerpt-container {
       padding-bottom: 16px;
+      @media #{$mq_md} {
+        padding-bottom: 0;
+      }
 
       a {
         bottom: -16px;
         padding: 8px 16px;
         right: 2%;
         transform: rotate(2.5deg) scale(1.25);
-      }
-
-      @media #{$mq_lg} {
-        p {
-          font-family: 'Montserrat', 'Arimo', sans-serif;
+        @media #{$mq_md} {
+          bottom: -10px;
         }
       }
 
