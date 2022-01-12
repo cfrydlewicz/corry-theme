@@ -42,11 +42,6 @@ body.archive {
 .article-card {
   margin-bottom: 48px;
   position: relative;
-  @media #{$mq_lg} {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: $thumbnail_width;
-  }
 
   .entry-header {
     position: relative;
@@ -154,8 +149,11 @@ body.archive {
 
   // First Card (and Read More Card)
   &:first-of-type {
+
     @media #{$mq_lg} {
-      background: linear-gradient(0deg, rgba($c_grey20,0.625), rgba($c_grey80,0.625));
+      .entry-header {
+        background: linear-gradient(0deg, rgba($c_grey20,0.625), rgba($c_grey80,0.625));
+      }
     }
 
     img {
@@ -186,12 +184,20 @@ body.archive {
     }
     .excerpt-container {
       padding-bottom: 16px;
+
       a {
         bottom: -16px;
         padding: 8px 16px;
         right: 2%;
         transform: rotate(2.5deg) scale(1.25);
       }
+
+      @media #{$mq_lg} {
+        p {
+          font-family: 'Montserrat', 'Arimo', sans-serif;
+        }
+      }
+
     }
   }
 

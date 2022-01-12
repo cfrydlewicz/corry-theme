@@ -518,7 +518,7 @@
     margin-bottom: 24px;
     &:hover {
       .srpw-more-link {
-        @extend .button:hover;
+        @extend .srpw-more-link:hover;
       }
     }
   }
