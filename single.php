@@ -38,7 +38,7 @@
         </div>
       </section>
 
-      <footer id="a_end-of-article" class="entry-footer">
+      <footer id="a_end-of-article" class="entry-footer t_slides-up">
         <div class="inner-wrapper">
           <div class="thanks-header">Thanks for reading!</div>
           <p class="post-categories">Categories: <?php the_category(', '); ?></p>
