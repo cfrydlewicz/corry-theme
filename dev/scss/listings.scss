@@ -8,6 +8,9 @@
     display: flex;
     justify-content: space-between;
     padding: 0;
+    @media #{$mq_lg} {
+      max-width: $thumbnail_width;
+    }
   }
 
   a {
