@@ -206,9 +206,6 @@ $gutter_lg: 24px;
 
 }
 
-main {
-}
-
 .site-footer {
   @extend .bezel--vertical;
   @extend .grainy;
@@ -217,14 +214,22 @@ main {
     align-items: stretch;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+    section {
+      padding: 4px 0;
+    }
+    .site-footer-text {
+      @extend .f_smallest;
+    }
+
     @media #{$mq_md} {
       flex-wrap: nowrap;
+      .site-footer-text {
+        display: inline-block;
+        margin-top: 5px;
+      }
     }
-    justify-content: space-between;
-  }
 
-  section {
-    padding: 4px 0;
   }
 
   .follow-container {
