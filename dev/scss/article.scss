@@ -1,7 +1,9 @@
 .article-content {
   font-size: 16px;  // establishes em basis
   @media #{$mq_md} {
+    font-family: 'Montserrat', 'Arimo', sans-serif;
     font-size: 22px;
+    font-weight: 300;
   }
   @media #{$mq_lg} {
     font-size: 28px;
@@ -17,6 +19,7 @@
       transform: translateX(-10%);
       width: auto;
       @media #{$mq_md} {
+        height: auto;
         transform: none;
         width: 100%;
       }
@@ -31,8 +34,10 @@
     .entry-title {
       font-family: 'Montserrat', 'Arimo', sans-serif;
       font-size: 2.5em;
+      font-weight: 400;
       @media #{$mq_md} {
-        font-size: 2.75em;
+        font-size: 2.625em;
+        font-weight: 300;
       }
       @media #{$mq_lg} {
         font-size: 3em;
@@ -56,12 +61,18 @@
       font-weight: 500;
       margin-top: 2em;
       margin-bottom: 0.5em;
+      @media #{$mq_md} {
+        font-weight: 600;
+      }
     }
     h3 {
       @extend .f_larger;
       line-height: 1.375;
       margin-top: 1.75em;
       margin-bottom: 0.5em;
+      @media #{$mq_md} {
+        font-weight: 400;
+      }
     }
     h4 {
       @extend .f_large;
@@ -399,6 +410,7 @@
       @extend .f_small;
       @media #{$mq_md} {
         font-size: 14px;
+        font-weight: 400;
       }
       a {
         white-space: nowrap;
@@ -489,6 +501,12 @@
     @extend .excerpt-container;
     line-height: inherit;
     padding: 0;
+    @media #{$mq_md} {
+      padding-bottom: 0px;
+      p {
+        max-width: 60ch;
+      }
+    }
     a {
       right: -2%;
     }
