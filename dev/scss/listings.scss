@@ -1,4 +1,11 @@
 // Listing Pages
+.listing-page {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .pagination-container {
   @extend .bezel--vertical;
   color: transparent; // hide dash between links
