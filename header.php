@@ -95,9 +95,9 @@
           <div class="screen-reader-nav u_visually-hidden">
             <ul>
               <li><a href="#a_skip-to-content">Jump to content</a></li>
-              <?php if ( is_single() ) : ?>
-                <li><a href="#a_end-of-article">Jump to end of article</a></li>
-                <li><a href="#a_comments_top">Jump to comments</a></li>
+              <?php if ( is_singular() ) : ?>
+                <li><a href="#a_end-of-article">Jump to the end of the article</a></li>
+                <li><a href="#a_comments_top">Jump to the comments</a></li>
               <?php endif; ?>
               <li><a href="#a_footer">Jump to footer</a></li>
             </ul>
@@ -118,18 +118,18 @@
     <section id="site-header-secondary" class="site-header-secondary">
       <div class="inner-wrapper">
         <?php if ( is_singular() ) : ?>
-          <a href="#a_skip-to-content" class="title i_arrow-up"><?php the_title(); ?></a>
+          <a title="Jump to the beginning of the page" href="#a_skip-to-content" class="title i_arrow-up"><?php the_title(); ?></a>
           <?php if ( !empty(get_comments_number()) ) : ?>
-            <a title="Jump to Comments" class="i_chat i_arrow-down--after" href="#a_comments_top"><span class="u_visually-hidden">Comments: </span><?php echo get_comments_number(); ?></a>
+            <a title="Jump to the comments" class="i_chat i_arrow-down--after" href="#a_comments_top"><span class="u_visually-hidden">Comments: </span><?php echo get_comments_number(); ?></a>
           <?php else : ?>
-            <a title="Jump to End of Content" class="i_chat i_arrow-down--after" href="#a_end-of-article"><span class="u_visually-hidden">End of Article</a>
+            <a title="Jump to the end of the page" class="i_chat i_arrow-down--after" href="#a_end-of-article"><span class="u_visually-hidden">End of Article</a>
           <?php endif; ?>
         <?php elseif ( is_category() ) : ?>
-          <a href="#a_skip-to-content" class="title i_arrow-up">Category: <strong><?php single_cat_title(); ?></strong></a>
+          <a title="Jump to the beginning of the page" href="#a_skip-to-content" class="title i_arrow-up">Category: <strong><?php single_cat_title(); ?></strong></a>
         <?php elseif ( is_tag() ) : ?>
-          <a href="#a_skip-to-content" class="title i_arrow-up">Tag: <strong><?php single_tag_title(); ?></strong></a>
+          <a title="Jump to the beginning of the page" href="#a_skip-to-content" class="title i_arrow-up">Tag: <strong><?php single_tag_title(); ?></strong></a>
         <?php elseif ( is_search() ) : ?>
-          <a href="#a_skip-to-content" class="title i_arrow-up">Search: <strong><?php echo esc_html($_GET['s']); ?></strong></a>
+          <a title="Jump to the beginning of the page" href="#a_skip-to-content" class="title i_arrow-up">Search: <strong><?php echo esc_html($_GET['s']); ?></strong></a>
         <?php endif; ?>
       </div>
     </section>
