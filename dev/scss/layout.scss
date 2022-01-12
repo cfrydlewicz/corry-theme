@@ -238,6 +238,11 @@ $gutter_lg: 24px;
       align-items: center;
       display: flex;
     }
+    @media #{$mq_lg} {
+      @extend .bezel--horizontal--at-lg;
+      padding-left: $gutter_lg;
+      padding-right: $gutter_lg;
+    }
   }
 
   .site-footer-text {
