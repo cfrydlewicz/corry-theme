@@ -58,8 +58,10 @@
 
     <?php endwhile; ?>
 
-    <div class="pagination-container inner-wrapper">
-      <?php posts_nav_link('', 'Previous Page', 'Next Page'); ?>
+    <div class="pagination-container">
+      <div class="inner-wrapper">
+        <?php posts_nav_link('', 'Previous Page', 'Next Page'); ?>
+      </div>
     </div>
 
   <?php else : ?>

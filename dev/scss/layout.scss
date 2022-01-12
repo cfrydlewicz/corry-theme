@@ -252,6 +252,10 @@ $thumbnail_width: 1024px;
       @extend .bezel--horizontal--at-md;
       align-items: center;
       display: flex;
+      padding-left: $gutter;
+      padding-right: $gutter;
+    }
+    @media #{$mq_lg} {
       padding-left: $gutter_lg;
       padding-right: $gutter_lg;
     }
