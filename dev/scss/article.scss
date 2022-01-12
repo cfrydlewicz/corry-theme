@@ -514,11 +514,11 @@
     @extend .entry-title;
   }
   .srpw-summary {
-    @extend .excerpt-container;
     line-height: inherit;
     padding: 0;
+    position: relative;
+    width: 100%;
     @media #{$mq_md} {
-      padding-bottom: 0px;
       p {
         max-width: 60ch;
       }
