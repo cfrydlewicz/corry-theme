@@ -48,15 +48,6 @@ $gutter_lg: 24px;
   border-style: solid;
   border-top-color: $c_light20;
 }
-@media #{$mq_lg} {
-  .bezel--horizontal--at-lg {
-    border-bottom-color: $c_grey50;
-    border-left-color: $c_light20;
-    border-right-color: $c_grey50;
-    border-style: solid;
-    border-top-color: $c_light20;
-  }
-}
 .bezel {
   border-width: 1px;
 }
@@ -65,6 +56,16 @@ $gutter_lg: 24px;
 }
 .bezel--horizontal {
   border-width: 0 1px;
+}
+@media #{$mq_lg} {
+  .bezel--horizontal--at-lg {
+    border-bottom-color: $c_grey50;
+    border-left-color: $c_light20;
+    border-right-color: $c_grey50;
+    border-style: solid;
+    border-top-color: $c_light20;
+    border-width: 0 1px;
+  }
 }
 
 .total-wrapper {
@@ -229,6 +230,11 @@ $gutter_lg: 24px;
     justify-content: space-between;
     @media #{$mq_md} {
       flex-wrap: nowrap;
+    }
+    @media #{$mq_lg} {
+      flex-wrap: nowrap;
+      padding-left: 0;
+      padding-right: 0;
     }
   }
 

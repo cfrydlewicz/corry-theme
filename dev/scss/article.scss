@@ -460,6 +460,8 @@
   }
   @media #{$mq_lg} {
     @extend .bezel--horizontal--at-lg;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 48px;
     max-width: 1024px + $gutter_lg*2;
   }
