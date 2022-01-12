@@ -19,7 +19,6 @@ $gutter_lg: 24px;
   .inner-wrapper,
   .inner-wrapper--at-md,
   .inner-wrapper--at-lg {
-    @extend .bezel--horizontal--at-lg;
     margin: 0 auto;
     max-width: 1024px + $gutter_lg*2;
     padding: 0 $gutter_lg;
@@ -87,19 +86,21 @@ $gutter_lg: 24px;
     padding-left: 0;
     padding-right: 0;
   }
-  > section > .inner-wrapper {
-    background: linear-gradient(320deg, rgba($c_grey20,0.625), rgba($c_dark-base,0.625));
+
+  > section {
+    background: linear-gradient(320deg, rgba($c_grey20,0.625), rgba($c_grey80,0.625));
+    &:hover {
+      background: linear-gradient(320deg, rgba($c_grey20,0.75), rgba($c_grey80,0.75));
+    }
   }
 
   &-primary {
     @extend .bezel--vertical;
-    &:hover {
-      @extend .grainy;
-    }
     .inner-wrapper {
       height: $header_height;
     }
   }
+
   &-secondary {
     display: none; // show with JS
     .inner-wrapper {
