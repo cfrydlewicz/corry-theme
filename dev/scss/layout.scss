@@ -58,13 +58,19 @@ $gutter_lg: 24px;
   border-width: 0 1px;
 }
 @media #{$mq_lg} {
-  .bezel--horizontal--at-lg {
+  .bezel--horizontal--at-lg,
+  .bezel--vertical--at-lg {
     border-bottom-color: $c_grey50;
     border-left-color: $c_light20;
     border-right-color: $c_grey50;
     border-style: solid;
     border-top-color: $c_light20;
+  }
+  .bezel--horizontal--at-lg {
     border-width: 0 1px;
+  }
+  .bezel--vertical--at-lg {
+    border-width: 1px 0;
   }
 }
 
@@ -253,6 +259,9 @@ $gutter_lg: 24px;
 
   .site-footer-text {
     @extend .f_smallest;
+    @media #{$mq_md} {
+      font-size: 0.75rem;
+    }
   }
 
   .follow-container {
