@@ -1,8 +1,10 @@
 // Listing Pages
 .pagination-container {
+  @extend .bezel--vertical;
   display: flex;
   justify-content: space-between;
-  margin: 0 auto 24px;
+  margin: 0 auto 48px;
+  padding: 8px 0;
   a:last-child {
     @extend .i_arrow-right--after;
     margin-left: auto;
@@ -39,7 +41,11 @@ body.archive {
 
   .entry-header {
     position: relative;
-    @media #{$mq_mouse} {
+    img {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @media only screen and (max-width: 1024px) and (pointer: fine) {
       overflow: hidden;
       img {
         transition: all 0.2s ease-in-out;
@@ -70,6 +76,7 @@ body.archive {
   .excerpt-container {
     padding-bottom: 44px;
     position: relative;
+    width: 100%;
     p {
       margin: 0;
     }
@@ -79,6 +86,14 @@ body.archive {
       position: absolute;
       right: 0;
     }
+    @media #{$mq_mouse} {
+      .excerpt-container a::after {
+        transition: all 0.2s ease-in-out;
+      }
+      .excerpt-container a:hover::after {
+        margin: 0 0 0 0.75em;
+      }
+    }
   }
 
   .entry-footer {
@@ -86,6 +101,7 @@ body.archive {
     @extend .grainy;
     padding: 8px 0;
     .inner-wrapper {
+      display: flex;
       flex-direction: column;
       @media #{$mq_md} {
         flex-direction: row;
@@ -129,7 +145,6 @@ body.archive {
         width: 100%;
       }
     }
-
     .excerpt-container {
       padding-bottom: 16px;
       a {
@@ -139,18 +154,6 @@ body.archive {
         transform: rotate(2.5deg) scale(1.25);
       }
     }
-    @media #{$mq_mouse} {
-      .excerpt-container a::after {
-        transition: all 0.2s ease-in-out;
-      }
-      .excerpt-container a:hover::after {
-        margin: 0 0 0 0.75em;
-      }
-    }
-
   }
 
-}
-
-.listing-page .article-card {
 }
