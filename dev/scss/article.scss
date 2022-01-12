@@ -519,6 +519,9 @@
   .comments-container {
     .post-footer_header {
       @extend .i_chat;
+      @media #{$mq_md} {
+        width: 100%;
+      }
     }
   }
 
@@ -651,8 +654,19 @@
     }
 
     .comments-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
       order: 5;
       width: 100%;
+    }
+
+    .comment-list,
+    .comment-list ~ .respond-container {
+      width: 48%;
+    }
+    .comment-list {
+      margin-right: 24px;
     }
 
   }
