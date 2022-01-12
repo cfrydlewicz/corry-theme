@@ -215,21 +215,21 @@ $gutter_lg: 24px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    section {
-      padding: 4px 0;
-    }
-    .site-footer-text {
-      @extend .f_smallest;
-    }
-
     @media #{$mq_md} {
       flex-wrap: nowrap;
-      .site-footer-text {
-        display: inline-block;
-        margin-top: 5px;
-      }
     }
+  }
 
+  section {
+    padding: 4px 0;
+    @media #{$mq_md} {
+      align-items: center;
+      display: flex;
+    }
+  }
+
+  .site-footer-text {
+    @extend .f_smallest;
   }
 
   .follow-container {
