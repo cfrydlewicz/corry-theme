@@ -76,7 +76,6 @@ $gutter_lg: 24px;
 
 .site-header {
   // Above-the-fold and nav elements should be considered for critical css
-  @extend .bezel--vertical;
   backface-visibility: hidden; // fixed position fix for old mobile browsers
   position: fixed;
   width: 100vw;
@@ -93,6 +92,7 @@ $gutter_lg: 24px;
   }
 
   &-primary {
+    @extend .bezel--vertical;
     &:hover {
       @extend .grainy;
     }
@@ -101,13 +101,20 @@ $gutter_lg: 24px;
     }
   }
   &-secondary {
-    @extend .bezel--horizontal; // compensate for bezel on primary header for easy horizontal alignment
     display: none; // show with JS
     .inner-wrapper {
       @extend .f_smaller;
       display: flex;
       height: 30px;
       justify-content: space-between;
+      @media #{$mq_sm2} {
+        padding-left: $gutter;
+        padding-right: $gutter;
+      }
+      @media #{$mq_lg} {
+        padding-left: $gutter_lg;
+        padding-right: $gutter_lg;
+      }
     }
     a {
       align-items: center;
@@ -140,9 +147,11 @@ $gutter_lg: 24px;
       padding: 4px;
       @media #{$mq_sm2} {
         padding-left: $gutter;
+        padding-right: $gutter;
       }
       @media #{$mq_lg} {
         padding-left: $gutter_lg;
+        padding-right: $gutter_lg;
       }
       width: fit-content;
       &:hover {
