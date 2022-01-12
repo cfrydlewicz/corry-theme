@@ -540,7 +540,10 @@
   }
   .srpw-img {
     @extend .entry-header;
-    overflow: hidden;
+    img {
+      height: auto;
+      width: 1024px;
+    }
   }
   .srpw-content {
     @extend .thumbnail-overlay;
