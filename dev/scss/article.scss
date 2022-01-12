@@ -13,8 +13,7 @@
     overflow-x: hidden;
     position: relative;
     @media #{$mq_lg} {
-      @extend .bezel--vertical--at-lg;
-      background: linear-gradient(320deg, rgba($c_grey20,0.625), rgba($c_grey80,0.625));
+      background: linear-gradient(0deg, rgba($c_grey20,0.625), rgba($c_grey80,0.625));
     }
 
     img {
