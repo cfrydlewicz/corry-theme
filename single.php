@@ -12,7 +12,7 @@
 
       <header class="entry-header">
         <div class="inner-wrapper--at-lg">
-          <a href="<?php get_the_post_thumbnail_url(); ?>">
+          <a href="<?php the_post_thumbnail_url(); ?>">
             <?php post_thumbnail(); ?>
           </a>
           <div class="title-container">
