@@ -84,9 +84,18 @@ a,
 }
 
 // General Copy
+h1,
+h2,
+h3,
+h4,
+h5,
 p,
-li {
-  //font-size: 1rem;
+li,
+figcaption {
+  // Prevent orphaned words
+  &::nth-last-word(2) { // maybe someday <3 https://css-tricks.com/a-call-for-nth-everything/
+    white-space: nowrap;
+  }
 }
 p {
   line-height: 1.5; // Accessibility standards recommend 1.5 - 2.0
