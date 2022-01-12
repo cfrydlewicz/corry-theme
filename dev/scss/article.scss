@@ -67,7 +67,7 @@
       margin-bottom: 0.5em;
     }
     h5 {
-      font-size: 1rem;
+      font-size: 1em;
       line-height: 1.125;
       font-weight: 500;
       margin-top: 1.625em;
@@ -101,7 +101,7 @@
 
     p,
     li {
-      font-size: 1rem;
+      font-size: 1em;
       line-height: 1.625;
       max-width: 65ch; // accessibility recommendation is 80 max
     }
@@ -404,11 +404,6 @@
     &:last-of-type {
       padding-bottom: 36px;
     }
-
-    ul {
-      list-style: none;
-    }
-
   }
 
   // headers
@@ -566,7 +561,7 @@
 
   @media #{$mq_md} {
 
-    .discuss-container {
+    .discussion-container {
       order: 1;
       width: 33%;
     }
