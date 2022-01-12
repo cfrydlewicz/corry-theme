@@ -47,9 +47,9 @@
   <section class="follow-container">
     <div class="post-footer_header">Follow This Blog</div>
     <ul>
-      <li><a class="i_rss" href="<?php bloginfo('rss2_url'); ?>" target="_blank">My RSS Feed</a> is an easy way to follow <em>only new articles</em>.</li>
-      <li><a class="i_facebook" href="https://www.facebook.com/groups/4912504758808432/?ref=share" target="_blank" rel="noreferrer" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://www.facebook.com']);">My Facebook Group</a> is where I share <em>all content I create</em> and host discussions about it.</li>
-      <li>If you don't have those, I share links to new posts on <a class="i_twitter"  href="http://www.twitter.com/cfrydlewicz" target="_blank" rel="noreferrer" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://www.twitter.com']);">Twitter</a> as well.</li>
+      <li><a class="i_rss" href="<?php bloginfo('rss2_url'); ?>" target="_blank">My RSS Feed</a> is an easy way to follow <em>new articles</em>.</li>
+      <li>I share <em>all my content</em> and host discussions about it in <a class="i_facebook" href="https://www.facebook.com/groups/4912504758808432/?ref=share" target="_blank" rel="noreferrer" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://www.facebook.com']);">My Facebook Group</a>.</li>
+      <li>I share links to new posts on <a class="i_twitter"  href="http://www.twitter.com/cfrydlewicz" target="_blank" rel="noreferrer" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://www.twitter.com']);">Twitter</a>.</li>
     </ul>
   </section>
 
