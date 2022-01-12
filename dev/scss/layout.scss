@@ -76,6 +76,7 @@ $gutter_lg: 24px;
 
 .site-header {
   // Above-the-fold and nav elements should be considered for critical css
+  @extend .bezel--vertical;
   backface-visibility: hidden; // fixed position fix for old mobile browsers
   position: fixed;
   width: 100vw;
@@ -124,7 +125,6 @@ $gutter_lg: 24px;
   }
 
   .header-logo {
-    @extend .bezel;
     flex-grow: 1;
     svg {
       height: 150%; // let the y dangle over
@@ -134,6 +134,7 @@ $gutter_lg: 24px;
       }
     }
     a {
+      @extend .bezel--horizontal;
       display: block;
       height: 100%;
       padding: 4px;
@@ -145,6 +146,7 @@ $gutter_lg: 24px;
       }
       width: fit-content;
       &:hover {
+        @extend .grainy;
         svg path {
           fill: $c_hover;
         }
@@ -165,7 +167,7 @@ $gutter_lg: 24px;
         display: flex;
         margin: 0;
         a {
-          @extend .bezel;
+          @extend .bezel--horizontal;
           align-items: center;
           display: flex;
           padding: 0 8px;
@@ -184,7 +186,7 @@ $gutter_lg: 24px;
   }
 
   .header-search {
-    @extend .bezel;
+    @extend .bezel--horizontal;
     padding: 0 4px 0 8px;
     @media #{$mq_sm2} {
       padding: 0 $gutter;
