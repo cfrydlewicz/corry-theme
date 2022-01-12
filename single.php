@@ -23,17 +23,6 @@
       <section class="entry-content">
         <div class="inner-wrapper">
 
-          <div class=" TODO disclaimer-container u_hidden">
-            <div>
-              <h2>PHP Sandbox</h2>
-              <p><?php
-
-echo get_post_meta(get_post_thumbnail_id( $post->ID ), '_wp_attachment_image_alt', true);
-
-              ?></p>
-            </div>
-          </div>
-
           <?php if ( has_tag('old-post') ) : ?>
             <div class="disclaimer_old-posts disclaimer-container">
               <div>
@@ -42,6 +31,7 @@ echo get_post_meta(get_post_thumbnail_id( $post->ID ), '_wp_attachment_image_alt
               </div>
             </div>
           <?php endif; ?>
+
           <?php the_content(); ?>
         </div>
       </section>
