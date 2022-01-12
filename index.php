@@ -26,13 +26,15 @@
       <article id="post-<?php the_ID(); ?>" <?php post_class('article-card'); ?>>
 
         <header class="entry-header">
-          <a href="<?php the_permalink(); ?>"><?php post_thumbnail(); ?></a>
-          <div class="title-container">
-            <?php if ( is_singular() ) : ?>
-              <h1 id="sticky-title" class="entry-title"><?php the_title(); ?></h1>
-            <?php else : ?>
-              <h2 class="entry-title"><?php the_title( sprintf( '<a href="%s">', esc_url( get_permalink() ) ), '</a>' ); ?></h2>
-            <?php endif; ?>
+          <div class="inner-wrapper--at-lg">
+            <a href="<?php the_permalink(); ?>"><?php post_thumbnail(); ?></a>
+            <div class="title-container">
+              <?php if ( is_singular() ) : ?>
+                <h1 id="sticky-title" class="entry-title"><?php the_title(); ?></h1>
+              <?php else : ?>
+                <h2 class="entry-title"><?php the_title( sprintf( '<a href="%s">', esc_url( get_permalink() ) ), '</a>' ); ?></h2>
+              <?php endif; ?>
+            </div>
           </div>
         </header>
 
