@@ -36,6 +36,9 @@
     .title-container {
       @extend .thumbnail-overlay;
       padding-bottom: 16px;
+      @media #{$mq_lg} {
+        max-width: $thumbnail_width + $gutter_lg*2;
+      }
     }
     .entry-title {
       font-family: 'Montserrat', 'Arimo', sans-serif;
