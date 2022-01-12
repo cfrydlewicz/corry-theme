@@ -248,10 +248,14 @@ $thumbnail_width: 1024px;
 
   section {
     padding: 4px 0;
+    &:hover {
+      @extend .grainy;
+    }
     @media #{$mq_md} {
       @extend .bezel--horizontal--at-md;
       align-items: center;
       display: flex;
+      flex-grow: 1;
       padding-left: $gutter;
       padding-right: $gutter;
     }
