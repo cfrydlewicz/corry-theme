@@ -30,6 +30,9 @@
     }
     .entry-title {
       font-size: 2.5em;
+      @media #{$mq_md} {
+        font-family: 'Montserrat', 'Arimo', sans-serif;
+      }
       @media #{$mq_lg} {
         font-size: 3em;
       }

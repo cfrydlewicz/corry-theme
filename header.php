@@ -65,10 +65,13 @@
 
   <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,700;1,400;1,700&family=Montserrat:wght@100;200;300;400&display=swap" rel="stylesheet">
+
   <style>/* critical css */body{font-family:Arimo,helvetica,sans-serif}</style>
   <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url');?>/style.css">
 
-  <link href='http://fonts.googleapis.com/css?family=Arimo:200,300,400,500,700,300italic,400italic,700italic' rel='stylesheet' type='text/css'>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
   <script type="text/javascript" src="<?php bloginfo('template_url');?>/scripts.js"></script>
 
