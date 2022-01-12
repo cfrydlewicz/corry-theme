@@ -6,7 +6,7 @@
     font-weight: 300;
   }
   @media #{$mq_lg} {
-    font-size: 28px;
+    font-size: 24px;
   }
 
   .entry-header {
@@ -292,7 +292,11 @@
 
     // Images
     img {
+      height: auto;
       margin: 0 auto;
+      max-height: 80vh;
+      max-width: 100%;
+      width: auto;
     }
     .wp-block-image {
       margin-bottom: 1.5em;
@@ -325,6 +329,9 @@
         margin-left: auto;
         margin-right: auto;
         min-height: 220px;
+        @media #{$mq_md} {
+          min-height: 280px;
+        }
       }
     }
 
@@ -433,6 +440,12 @@
     @extend .grainy;
     padding: 36px 0;
     // width: 100%;
+
+    @media #{$mq_lg} {
+      .inner-wrapper {
+        max-width: $thumbnail_width;
+      }
+    }
 
     .thanks-header {
       font-size: 1.25em;
@@ -545,9 +558,6 @@
         max-width: 60ch;
       }
     }
-    a {
-      right: -2%;
-    }
   }
   .srpw-more-link {
     @extend .button--big;
@@ -562,6 +572,9 @@
       &:hover::after {
         margin: 0 0 0 0.75em;
       }
+    }
+    @media #{$mq_md} {
+      right: -1%;
     }
   }
 
