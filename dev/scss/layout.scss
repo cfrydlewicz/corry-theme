@@ -96,6 +96,9 @@ $thumbnail_width: 1024px;
     display: flex;
     padding-left: 0;
     padding-right: 0;
+    @media #{$mq_lg} {
+      max-width: $thumbnail_width;
+    }
   }
 
   > section {
@@ -241,6 +244,9 @@ $thumbnail_width: 1024px;
       flex-wrap: nowrap;
       padding-left: 0;
       padding-right: 0;
+    }
+    @media #{$mq_lg} {
+      max-width: $thumbnail_width;
     }
   }
 

@@ -465,7 +465,7 @@
   @media #{$mq_lg} {
     @extend .bezel--horizontal--at-lg;
     margin: 48px auto 36px;
-    max-width: $thumbnail_width + $gutter_lg*2;
+    max-width: $thumbnail_width;
   }
 
   section {
