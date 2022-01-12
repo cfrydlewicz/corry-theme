@@ -143,6 +143,15 @@ body.archive {
     }
   }
 
+  @media #{$mq_lg} {
+    .entry-content,
+    .entry-footer {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: $thumbnail_width;
+    }
+  }
+
   // First Card (and Read More Card)
   &:first-of-type {
     @media #{$mq_lg} {
