@@ -1,6 +1,7 @@
 // Listing Pages
 .pagination-container {
   @extend .bezel--vertical;
+  color: transparent; // hide dash between links
   margin-bottom: 48px;
 
   .inner-wrapper {
