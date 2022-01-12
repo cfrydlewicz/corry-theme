@@ -11,12 +11,14 @@
     <article id="post-<?php the_ID(); ?>" <?php post_class('article-content'); ?>>
 
       <header class="entry-header">
-        <a href="<?php get_the_post_thumbnail_url(); ?>">
-          <?php post_thumbnail(); ?>
-        </a>
-        <div class="title-container">
-          <h1 id="sticky-title" class="entry-title"><?php the_title(); ?></h1>
-          <div class="post-meta"><span class="word-count"><?php word_count(); ?> words</span> published on <span class="post-date"><?php the_date(); ?></span></div>
+        <div class="inner-wrapper--at-lg">
+          <a href="<?php get_the_post_thumbnail_url(); ?>">
+            <?php post_thumbnail(); ?>
+          </a>
+          <div class="title-container">
+            <h1 id="sticky-title" class="entry-title"><?php the_title(); ?></h1>
+            <div class="post-meta"><span class="word-count"><?php word_count(); ?> words</span> published on <span class="post-date"><?php the_date(); ?></span></div>
+          </div>
         </div>
       </header>
 
