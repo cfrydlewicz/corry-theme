@@ -540,8 +540,10 @@
   }
   .srpw-img {
     @extend .entry-header;
+    overflow: hidden;
     img {
       height: auto;
+      max-width: none;
       width: 1024px;
     }
   }
@@ -551,6 +553,9 @@
   }
   .srpw-title {
     @extend .entry-title;
+    font-size: 2.5em;
+    font-weight: 400;
+    line-height: 1;
   }
   .srpw-summary {
     line-height: inherit;
