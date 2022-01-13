@@ -735,7 +735,7 @@
         align-items: center;
         display: flex;
         justify-content: space-between;
-        margin-bottom: 0.25em;
+        margin-bottom: 0.75em;
       }
       label {
         font-size: 0.875em;
@@ -751,6 +751,38 @@
       input[type="checkbox"] {
         order: 2;
       }
+
+      // checkbox styling hack
+      div[class^="comment-form-"] {
+        position: relative; // TODO: Needed?
+      }
+      input[type="checkbox"]:not(:checked),
+      input[type="checkbox"]:checked {
+        opacity: 0.1;
+        position: absolute;
+        right: 0;
+        & + label {
+          padding-right: 2.25em;
+          position: relative;
+          &::before {
+            border: 1px solid #fff;
+            border-radius: $border-radius/2;
+            content: '';
+            height: 24px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            transition: all 0.2s;
+            width: 24px;
+          }
+          &::after {
+            content: '\ed6f';
+            font-family: 'icomoon';
+
+          }
+        }
+      }
+
     }
 
     .form-submit {
@@ -760,6 +792,10 @@
         margin-right: 8px;
         margin-top: -16px;
       }
+    }
+    .comment-form-author ~ .form-submit {
+      // When user is not logged in
+      margin-top: 24px;
     }
 
     p[class*="akismet"] {

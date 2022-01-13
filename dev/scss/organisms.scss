@@ -145,6 +145,10 @@ input[type="checkbox"] {
     border-color: $c_active;
     outline-width: 0;
   }
+  &:disabled {
+    border-color: $c_grey30;
+    cursor: not-allowed;
+  }
 }
 
 // Thumbnail Overlays
