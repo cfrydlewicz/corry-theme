@@ -549,7 +549,8 @@
     padding-right: 0;
 
     .post-footer_header {
-      margin: 0 $gutter;
+      margin-left: $gutter;
+      margin-right: $gutter;
     }
 
     .widget-area {
