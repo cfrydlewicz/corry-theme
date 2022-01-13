@@ -45,6 +45,9 @@ body.admin-bar.logged-in {
     background-color: $c_trueblack;
     margin-top: $header_height;
   }
+  a[data-slb-active="1"] {
+    cursor: zoom-in;
+  }
   .slb_details {
     line-height: 1.125;
     margin: 4px auto 0;
