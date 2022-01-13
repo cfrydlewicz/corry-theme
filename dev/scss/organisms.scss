@@ -54,6 +54,8 @@ input[type="submit"] {
 // Text Fields
 input[type="text"],
 input[type="search"],
+input[type="email"],
+input[type="url"],
 textarea {
   background-color: $c_grey30;
   border-bottom-color: $c_black;
@@ -122,6 +124,26 @@ label {
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
     font-size: 16px;
+  }
+}
+
+// Checkboxes
+input[type="checkbox"] {
+  background-color: $c_grey30;
+  border-bottom-color: $c_black;
+  border-left-color: $c_trueblack;
+  border-right-color: $c_black;
+  border-top-color: $c_trueblack;
+  border-radius: $border-radius/2;
+  border-style: solid;
+  border-width: 2px;
+  color: $c_truewhite;
+  font-size: 1rem;
+  &:focus,
+  &:focus-visible {
+    background-color: $c_trueblack;
+    border-color: $c_active;
+    outline-width: 0;
   }
 }
 

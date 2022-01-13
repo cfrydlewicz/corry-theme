@@ -716,12 +716,41 @@
       }
     }
 
+    .comment-notes {
+      font-size: 0.75em;
+      font-weight: 300;
+      margin-bottom: 0.5em;
+    }
+
     label[for="comment"] {
       display: none;
     }
 
     .comment-form-comment {
       margin-bottom: 4px;
+    }
+
+    .comment-form {
+      div[class^="comment-form-"] {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0.25em;
+      }
+      label {
+        font-size: 0.875em;
+        &:first-child {
+          flex-grow: 1;
+          margin-right: 0.75em;
+          text-align: right;
+        }
+        &:last-child {
+          order: 1;
+        }
+      }
+      input[type="checkbox"] {
+        order: 2;
+      }
     }
 
     .form-submit {
