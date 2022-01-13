@@ -545,11 +545,20 @@
   }
 
   .read-more-container {
+    padding-left: 0;
+    padding-right: 0;
+
+    .post-footer_header {
+      margin: 0 $gutter;
+    }
+
     .widget-area {
       margin: 0 auto;
       max-width: $thumbnail_width;
     }
+
   }
+
   .srpw-li {
     margin-bottom: 24px;
     position: relative;
@@ -599,7 +608,7 @@
     @extend .i_arrow-right--after;
     bottom: -32px;
     position: absolute;
-    right: -2%;
+    right: 2%;
     @media #{$mq_mouse} {
       &::after {
         transition: all 0.2s ease-in-out;
