@@ -149,6 +149,7 @@ $thumbnail_width: 1024px;
     flex-grow: 1;
     svg {
       height: 150%; // let the y dangle over
+      max-height: 48px;
       z-index: 2;
       path {
         fill: $c_link;
