@@ -32,17 +32,16 @@
     }
     .title-container {
       @extend .thumbnail-overlay;
+      max-width: 100%;
       padding-bottom: 16px;
-      @media #{$mq_lg} {
-        max-width: $thumbnail_width + $gutter_lg*2;
-      }
     }
     .entry-title {
       font-family: 'Montserrat', 'Arimo', sans-serif;
       font-size: 2.5em;
       font-weight: 400;
       line-height: 1;
-      margin-bottom: 4px;
+      margin: 0 auto 4px;
+      max-width: 1024px;
       @media #{$mq_md} {
         font-size: 2.625em;
         font-weight: 300;
@@ -53,6 +52,8 @@
     }
     .post-meta {
       font-size: 1em;
+      margin: 0 auto;
+      max-width: 1024px;
       @media #{$mq_md} {
         font-size: 0.75em;
       }
