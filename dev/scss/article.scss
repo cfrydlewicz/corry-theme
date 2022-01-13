@@ -530,8 +530,8 @@
     }
   }
   .srpw-li {
-    @extend .article-card;
     margin-bottom: 24px;
+    position: relative;
     &:hover {
       .srpw-more-link {
         @extend .srpw-more-link:hover;
@@ -554,9 +554,11 @@
   }
   .srpw-summary {
     line-height: inherit;
+    padding-bottom: 16px;
     position: relative;
     width: 100%;
     @media #{$mq_md} {
+      padding-bottom: 0;
       p {
         max-width: 60ch;
       }
