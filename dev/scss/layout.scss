@@ -211,13 +211,6 @@ $thumbnail_width: 1024px;
 
   .header-search {
     @extend .bezel--horizontal;
-    padding: 0 4px 0 8px;
-    @media #{$mq_sm2} {
-      padding: 0 $gutter;
-    }
-    @media #{$mq_lg} {
-      padding: 0 $gutter_lg;
-    }
     &:hover,
     &:focus-within {
       @extend .grainy;
@@ -225,7 +218,26 @@ $thumbnail_width: 1024px;
     .search-container {
       height: 100%;
       label {
-        padding: 6px 0;
+        padding-bottom: 6px;
+        padding-top: 6px;
+        &:first-of-type {
+          padding-left: 8px;
+          @media #{$mq_sm2} {
+            padding-left: $gutter;
+          }
+          @media #{$mq_lg} {
+            padding-left: $gutter_lg;
+          }
+        }
+        &:last-of-type {
+          padding-right: 4px;
+          @media #{$mq_sm2} {
+            padding-right: $gutter;
+          }
+          @media #{$mq_lg} {
+            padding-right: $gutter_lg;
+          }
+        }
       }
     }
   }
