@@ -35,6 +35,11 @@ body.admin-bar.logged-in {
 }
 
 // Plug-In: Simple Lightbox
+.article-content {
+  a[data-slb-active="1"] {
+    cursor: zoom-in;
+  }
+}
 #slb_viewer_wrap .slb_theme_slb_baseline.slb_theme_slb_baseline,
 #slb_viewer_wrap .slb_theme_slb_black.slb_theme_slb_black,
 #slb_viewer_wrap .slb_theme_slb_default.slb_theme_slb_default {
@@ -44,9 +49,6 @@ body.admin-bar.logged-in {
   .slb_container {
     background-color: $c_trueblack;
     margin-top: $header_height;
-  }
-  a[data-slb-active="1"] {
-    cursor: zoom-in;
   }
   .slb_details {
     line-height: 1.125;
