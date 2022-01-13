@@ -72,8 +72,9 @@ body.archive {
     }
 
     img {
-      margin-left: auto;
-      margin-right: auto;
+      left: 50%;
+      position: relative;
+      transform: translateX(-50%);
     }
     @media only screen and (max-width: 1023px) and (pointer: fine) {
       img {
@@ -188,11 +189,7 @@ body.archive {
     img {
       height: 65vh;
       max-width: none;
-      transform: translateX(-10%);
       width: auto;
-      @media only screen and (min-width: 920px ) {  // 1024 * 0.9 is roughly this
-        transform: none;
-      }
       @media #{$mq_lg} {
         height: auto;
         max-height: 80vh;

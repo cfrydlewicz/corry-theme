@@ -19,8 +19,10 @@
     img {
       // Post Thumbnail
       height: 80vh;
+      left: 50%;
       max-width: none;
-      transform: translateX(-10%);
+      position: relative;
+      transform: translateX(-50%);
       width: auto;
       @media #{$mq_md} {
         height: auto;
@@ -541,9 +543,13 @@
   .srpw-img {
     @extend .entry-header;
     overflow: hidden;
+    position: relative;
     img {
       height: auto;
+      left: 50%;
       max-width: none;
+      position: relative;
+      transform: translateX(-50%);
       width: 1024px;
     }
   }
