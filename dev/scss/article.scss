@@ -565,7 +565,7 @@
   .srpw-more-link {
     @extend .button--big;
     @extend .i_arrow-right--after;
-    bottom: 0;
+    bottom: -32px;
     position: absolute;
     right: -2%;
     @media #{$mq_mouse} {
@@ -577,6 +577,7 @@
       }
     }
     @media #{$mq_md} {
+      bottom: 0;
       right: -1%;
     }
   }
