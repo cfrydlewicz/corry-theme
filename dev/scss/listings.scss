@@ -64,6 +64,7 @@ body.archive {
   position: relative;
 
   .entry-header {
+    background: linear-gradient(0deg, rgba($c_grey20,0.625), rgba($c_grey80,0.625));
     overflow: hidden;
     position: relative;
 
@@ -72,9 +73,12 @@ body.archive {
     }
 
     img {
+      height: 40vh;
       left: 50%;
+      max-width: 1024px;
       position: relative;
       transform: translateX(-50%);
+      width: auto;
     }
     @media only screen and (max-width: 1023px) and (pointer: fine) {
       img {
@@ -175,12 +179,6 @@ body.archive {
 
   // First Card (and Read More Card)
   &:first-of-type {
-
-    @media #{$mq_lg} {
-      .entry-header {
-        background: linear-gradient(0deg, rgba($c_grey20,0.625), rgba($c_grey80,0.625));
-      }
-    }
 
     img {
       height: 65vh;
