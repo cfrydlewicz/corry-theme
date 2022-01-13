@@ -53,7 +53,7 @@ a,
   }
   &:active {
     color: $c_active;
-    cursor: wait; // TODO trying this out
+    cursor: wait;
   }
   &::after,
   &::before {
