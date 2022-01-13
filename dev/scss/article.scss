@@ -754,7 +754,7 @@
 
       // checkbox styling hack
       div[class^="comment-form-"] {
-        position: relative; // TODO: Needed?
+        position: relative;
       }
       input[type="checkbox"]:not(:checked),
       input[type="checkbox"]:checked {
@@ -762,25 +762,41 @@
         position: absolute;
         right: 0;
         & + label {
-          padding-right: 2.25em;
+          padding-right: 32px;
           position: relative;
           &::before {
-            border: 1px solid #fff;
+            border-color: $c_white;
+            border-style: solid;
+            border-width: 2px;
             border-radius: $border-radius/2;
             content: '';
             height: 24px;
             position: absolute;
             right: 0;
-            top: 0;
+            top: 2;
             transition: all 0.2s;
             width: 24px;
           }
           &::after {
+            color: $c_accent;
             content: '\ed6f';
             font-family: 'icomoon';
-
+            font-size: 1em;
+            left: 4px;
+            line-height: 0;
+            position: absolute;
+            top: 7px;
+            transition: all 0.2s;
           }
         }
+      }
+      input[type="checkbox"]:not(:checked) + label::after {
+        opacity: 0;
+        transform: scale(0) rotate(45deg);
+      }
+      input[type="checkbox"]:checked + label::after {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
       }
 
     }
