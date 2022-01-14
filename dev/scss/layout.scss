@@ -206,105 +206,104 @@ blockquote {
       white-space: nowrap;
     }
   }
+}
 
-  .header-logo {
-    flex-grow: 1;
-    svg {
-      height: 150%; // let the y dangle over
-      max-height: 48px;
-      z-index: 2;
-      path {
-        fill: $c_link;
-      }
-    }
-    a {
-      @extend .bezel--horizontal;
-      display: block;
-      height: 100%;
-      padding: 4px;
-      @media #{$mq_sm2} {
-        padding-left: $gutter;
-        padding-right: $gutter;
-      }
-      @media #{$mq_lg} {
-        padding-left: $gutter_lg;
-        padding-right: $gutter_lg;
-      }
-      &:hover {
-        @extend .grainy;
-        svg path {
-          fill: $c_hover;
-        }
-      }
+.header-logo {
+  flex-grow: 1;
+  svg {
+    height: 150%; // let the y dangle over
+    max-height: 48px;
+    z-index: 2;
+    path {
+      fill: $c_link;
     }
   }
-
-  .header-nav {
-    > div {
-      height: 100%;
-    }
-    ul {
-      display: flex;
-      height: 100%;
-      list-style: none;
-      li {
-        align-items: stretch;
-        display: flex;
-        margin: 0;
-        a {
-          @extend .bezel--horizontal;
-          align-items: center;
-          display: flex;
-          font-size: 1rem;
-          font-weight: 500;
-          padding: 0 8px;
-          @media #{$mq_sm2} {
-            padding: 0 $gutter;
-          }
-          @media #{$mq_lg} {
-            padding: 0 $gutter_lg;
-          }
-          &:hover {
-            @extend .grainy;
-          }
-        }
-      }
-    }
-  }
-
-  .header-search {
+  a {
     @extend .bezel--horizontal;
-    &:hover,
-    &:focus-within {
-      @extend .grainy;
+    display: block;
+    height: 100%;
+    padding: 4px;
+    @media #{$mq_sm2} {
+      padding-left: $gutter;
+      padding-right: $gutter;
     }
-    .search-container {
-      height: 100%;
-      label {
-        padding-bottom: 6px;
-        padding-top: 6px;
-        &:first-of-type {
-          padding-left: 8px;
-          @media #{$mq_sm2} {
-            padding-left: $gutter;
-          }
-          @media #{$mq_lg} {
-            padding-left: $gutter_lg;
-          }
+    @media #{$mq_lg} {
+      padding-left: $gutter_lg;
+      padding-right: $gutter_lg;
+    }
+    &:hover {
+      @extend .grainy;
+      svg path {
+        fill: $c_hover;
+      }
+    }
+  }
+}
+
+.header-nav {
+  > div {
+    height: 100%;
+  }
+  ul {
+    display: flex;
+    height: 100%;
+    list-style: none;
+    li {
+      align-items: stretch;
+      display: flex;
+      margin: 0;
+      a {
+        @extend .bezel--horizontal;
+        align-items: center;
+        display: flex;
+        font-size: 1rem;
+        font-weight: 500;
+        padding: 0 8px;
+        @media #{$mq_sm2} {
+          padding: 0 $gutter;
         }
-        &:last-of-type {
-          padding-right: 4px;
-          @media #{$mq_sm2} {
-            padding-right: $gutter;
-          }
-          @media #{$mq_lg} {
-            padding-right: $gutter_lg;
-          }
+        @media #{$mq_lg} {
+          padding: 0 $gutter_lg;
+        }
+        &:hover {
+          @extend .grainy;
         }
       }
     }
   }
+}
 
+.header-search {
+  @extend .bezel--horizontal;
+  &:hover,
+  &:focus-within {
+    @extend .grainy;
+  }
+  .search-container {
+    height: 100%;
+    label {
+      padding-bottom: 6px;
+      padding-top: 6px;
+      &:first-of-type {
+        padding-left: 8px;
+        @media #{$mq_sm2} {
+          padding-left: $gutter;
+        }
+        @media #{$mq_lg} {
+          padding-left: $gutter_lg;
+        }
+      }
+      &:last-of-type {
+        padding-right: 4px;
+        @media #{$mq_sm2} {
+          padding-right: $gutter;
+        }
+        @media #{$mq_lg} {
+          padding-right: $gutter_lg;
+        }
+      }
+    }
+  }
 }
 
 .site-footer {
