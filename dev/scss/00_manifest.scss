@@ -5,21 +5,13 @@ SCSS MANIFEST
 Concatenate the files in the following order.
 */
 
-// Reset
+// See Critical CSS
 
-/* TEST CRITICAL CSS
+@import "mixins.scss";
 
-@import "reset.scss";
-
-// Variables
-@import "breakpoints.scss";
-
-// High-Level Styling
-@import "colors.scss";
-@import "fonts.scss";
-@import "icons.scss";
-@import "layout.scss";
+// Site-wide Style
 @import "organisms.scss";
+@import "texture.scss";
 
 // Listings
 @import "listings.scss";
@@ -30,18 +22,11 @@ Concatenate the files in the following order.
 //@import "article_mtg-deck.scss";
 //@import "article_recipe.scss";
 
-// Pages
-//@import "page.scss";
-//@import "page_about.scss";
-//@import "page_404.scss";
-
 // Wordpress Tweaks
 @import "wordpress.scss";
 
 // Utility Classes
-@import "utility.scss";
+//@import "utility.scss";
 
 // Feature: Tones
 //@import "tones.scss";
-
-*/
