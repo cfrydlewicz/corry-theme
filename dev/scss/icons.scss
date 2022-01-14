@@ -32,14 +32,12 @@
 .i_arrow-right--after::after,
 .i_arrow-up::before,
 .i_arrow-up--after::after,
-.i_bubbles::before,
 .i_chat::before,
 .i_calendar::before,
 .i_checkbox::before,
 .i_checkbox--unchecked::before,
 .i_checkmark::before,
 .i_code::before,
-.i_cross::before,
 .i_close::before,
 .i_exit::before,
 .i_facebook::before,
@@ -92,7 +90,6 @@
 .i_arrow-up--after::after {
   content: "\edb7";
 }
-.i_bubbles::before,
 .i_chat::before {
   content: "\eac5";
 }
@@ -111,7 +108,6 @@
 .i_code::before {
   content: "\eecd";
 }
-.i_cross::before,
 .i_close::before {
   content: "\ed6c";
 }
