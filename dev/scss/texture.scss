@@ -133,21 +133,50 @@
 
 // Article Cards
 .article-card {
+
+  // Zoom thumbnails on hover
+  @media only screen and (max-width: 1023px) and (pointer: fine) {
+    .entry-header {
+      img {
+        transition: all 0.2s ease-in-out;
+      }
+      &:hover img {
+        transform: scale(1.125);
+      }
+    }
+  }
+
   .entry-content,
   .entry-footer {
     @extend .bezel;
     @extend .grainy;
   }
+
 }
 
 
-// Flashy Buttons
+// Funky CTA Positioning
 .article-card:first-of-type .excerpt-container {
   a {
     bottom: -16px;
     right: 2%;
     @media #{$mq_md} {
       bottom: 7px;
+    }
+  }
+}
+
+
+// Flashy Buttons
+@media #{$mq_mouse} {
+  // Hover Icon Animation
+  .article-card .excerpt-container a,
+  .srpw-more-link {
+    &::after {
+      transition: all 0.2s ease-in-out;
+    }
+    &:hover::after {
+      margin: 0 0 0 0.75em;
     }
   }
 }

@@ -76,14 +76,7 @@ body.archive {
       transform: translateX(-50%);
       width: auto;
     }
-    @media only screen and (max-width: 1023px) and (pointer: fine) {
-      img {
-        transition: all 0.2s ease-in-out;
-      }
-      &:hover img {
-        transform: scale(1.125);
-      }
-    }
+
   }
   .title-container {
     @include overlay;
@@ -117,14 +110,6 @@ body.archive {
       font-weight: 800;
       position: absolute;
       right: 0;
-    }
-    @media #{$mq_mouse} {
-      a::after {
-        transition: all 0.2s ease-in-out;
-      }
-      a:hover::after {
-        margin: 0 0 0 0.75em;
-      }
     }
   }
 

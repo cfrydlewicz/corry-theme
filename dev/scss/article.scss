@@ -619,14 +619,6 @@
     bottom: -32px;
     position: absolute;
     right: 2%;
-    @media #{$mq_mouse} {
-      &::after {
-        transition: all 0.2s ease-in-out;
-      }
-      &:hover::after {
-        margin: 0 0 0 0.75em;
-      }
-    }
     @media #{$mq_md} {
       bottom: 0;
       right: 0;
