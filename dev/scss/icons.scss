@@ -1,4 +1,4 @@
-// https://icomoon.io/app/
+// Icons - https://icomoon.io/app/
 @font-face {
   font-display: swap;
   font-family: 'icomoon';
@@ -10,6 +10,18 @@
     url('assets/fonts/icomoon.woff?byte2f') format('woff'),
     url('assets/fonts/icomoon.svg?byte2f#icomoon') format('svg');
 }
+
+@mixin icomoon {
+  display: inline-block;
+  font-family: 'icomoon';
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  text-transform: none;
+  speak: none;
+}
+
 
 .u_icomoon::after,
 .u_icomoon::before,
