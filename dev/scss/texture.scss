@@ -1,4 +1,4 @@
-// Sitewide Styling
+// Sitewide Non-Critical Styling
 
 .grainy {
 // https://grainy-gradients.vercel.app/
@@ -71,32 +71,32 @@
     }
   }
 
-  .header-logo {
-    a {
-      @extend .bezel--horizontal;
-      &:hover {
-        @extend .grainy;
-      }
-    }
-  }
+}
 
-  .header-nav {
-    a {
-      @extend .bezel--horizontal;
-      &:hover {
-        @extend .grainy;
-      }
-    }
-  }
-
-  .header-search {
+.header-logo {
+  a {
     @extend .bezel--horizontal;
-    &:hover,
-    &:focus-within {
+    &:hover {
       @extend .grainy;
     }
   }
+}
 
+.header-nav {
+  a {
+    @extend .bezel--horizontal;
+    &:hover {
+      @extend .grainy;
+    }
+  }
+}
+
+.header-search {
+  @extend .bezel--horizontal;
+  &:hover,
+  &:focus-within {
+    @extend .grainy;
+  }
 }
 
 .site-footer {
