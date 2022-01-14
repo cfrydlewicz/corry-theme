@@ -22,54 +22,6 @@
   speak: none;
 }
 
-
-.u_icomoon::after,
-.u_icomoon::before,
-.i_arrow-down::before,
-.i_arrow-down--after::after,
-.i_arrow-left::before,
-.i_arrow-right::before,
-.i_arrow-right--after::after,
-.i_arrow-up::before,
-.i_arrow-up--after::after,
-.i_chat::before,
-.i_calendar::before,
-.i_checkbox::before,
-.i_checkbox--unchecked::before,
-.i_checkmark::before,
-.i_code::before,
-.i_close::before,
-.i_exit::before,
-.i_facebook::before,
-.i_gdrive::before,
-.i_github::before,
-.i_heart::before,
-.i_home::before,
-.i_instagram::before,
-.i_linkedin::before,
-.i_mail::before,
-.i_minus::before,
-.i_movie::before,
-.i_music::before,
-.i_nophone::before,
-.i_pinterest::before,
-.i_plus::before,
-.i_rss::before,
-.i_search::before,
-.i_share::before,
-.i_shopping::before,
-.i_spotify::before,
-.i_stackoverflow::before,
-.i_star::before,
-.i_steam::before,
-.i_twitch::before,
-.i_twitter::before,
-.i_youtube::before,
-.i_warning::before,
-.i_wordpress::before {
-  @include icomoon;
-}
-
 // define each icon (assume \e)
 $icons: (
   arrow-down: dbf,
@@ -116,7 +68,8 @@ $icons: (
   @each $label, $hex in $icons {
     &#{$label}::before,
     &#{$label}--after::after {
-      content: #{'"\\' + $hex + '"'};
+      @include icomoon;
+      content: #{'"\\e' + $hex + '"'};
     }
   }
 }
