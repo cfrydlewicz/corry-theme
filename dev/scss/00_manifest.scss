@@ -6,21 +6,22 @@ Concatenate the files in the following order.
 */
 
 @import "mixins.scss";
-
-/*// Critical CSS
-@import "reset.scss";
-@import "layout.scss";
 @import "icons.scss";
 
+// Critical CSS
+//@import "reset.scss";
+//@import "layout.scss";
+
 // Critical Utility
-.u_visually-hidden {
-  @include visually-hidden;
-}
+//.u_visually-hidden {
+//  @include visually-hidden;
+//}
 
 // -------------------------------- */
 
 // Site-wide Style
 @import "organisms.scss";
+@import "texture.scss";
 
 // Listings
 @import "listings.scss";
