@@ -394,6 +394,13 @@ body.archive {
 
   .title-container {
     @include overlay;
+
+    @media #{$mq_lg} {
+      max-width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
   }
 
   .entry-title {
@@ -482,14 +489,6 @@ body.archive {
         height: auto;
         max-height: 80vh;
         width: auto;
-      }
-    }
-
-    @media #{$mq_lg} {
-      .title-container {
-        max-width: 100%;
-        padding-left: 0;
-        padding-right: 0;
       }
     }
 
