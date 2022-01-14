@@ -407,6 +407,8 @@ body.archive {
     font-size: 2.125em;
     font-weight: 400;
     line-height: 1;
+    margin: 0 auto;
+    max-width: 1024px;
   }
 
   .entry-content {
@@ -493,8 +495,6 @@ body.archive {
     }
 
     .entry-title {
-      margin: 0 auto;
-      max-width: 1024px;
       @media #{$mq_md} {
         font-size: 3.5em;
         font-weight: 300;
