@@ -112,3 +112,42 @@
     }
   }
 }
+
+
+// Listing Pages
+.pagination-container {
+  @extend .bezel--vertical;
+
+  a {
+    @extend .bezel--horizontal;
+    &:last-child {
+      @extend .i_arrow-right--after;
+    }
+    &:first-child:not(:last-child) {
+      @extend .i_arrow-left;
+    }
+  }
+
+}
+
+
+// Article Cards
+.article-card {
+  .entry-content,
+  .entry-footer {
+    @extend .bezel;
+    @extend .grainy;
+  }
+}
+
+
+// Flashy Buttons
+.article-card:first-of-type .excerpt-container {
+  a {
+    bottom: -16px;
+    right: 2%;
+    @media #{$mq_md} {
+      bottom: 7px;
+    }
+  }
+}

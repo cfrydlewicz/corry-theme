@@ -7,7 +7,6 @@
 }
 
 .pagination-container {
-  @extend .bezel--vertical;
   color: transparent; // hide dash between links
   margin-bottom: 48px;
 
@@ -21,18 +20,15 @@
   }
 
   a {
-    @extend .bezel--horizontal;
     padding: 8px $gutter;
     @media #{$mq_lg} {
       padding-left: $gutter_lg;
       padding-right: $gutter_lg;
     }
     &:last-child {
-      @extend .i_arrow-right--after;
       margin-left: auto;
     }
     &:first-child:not(:last-child) {
-      @extend .i_arrow-left;
       margin-right: auto;
     }
   }
@@ -99,8 +95,6 @@ body.archive {
   }
 
   .entry-content {
-    @extend .bezel;
-    @extend .grainy;
     padding: 12px 0;
   }
 
@@ -135,8 +129,6 @@ body.archive {
   }
 
   .entry-footer {
-    @extend .bezel;
-    @extend .grainy;
     padding: 8px 0;
     .inner-wrapper {
       display: flex;
@@ -220,13 +212,8 @@ body.archive {
       }
 
       a {
-        bottom: -16px;
         padding: 8px 16px;
-        right: 2%;
         transform: rotate(2.5deg) scale(1.25);
-        @media #{$mq_md} {
-          bottom: 7px;
-        }
       }
 
     }
