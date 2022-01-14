@@ -60,7 +60,7 @@ body.admin-bar.logged-in {
   }
   .slb_data_title,
   .slb_group_status {
-    @extend .f_small;
+    @include f_small;
     color: $c_white;
     font-family: inherit;
   }

@@ -121,7 +121,7 @@ $thumbnail_width: 1024px;
   &-secondary {
     display: none; // show with JS
     .inner-wrapper {
-      @extend .f_smaller;
+      @include f_smaller;
       display: flex;
       height: 30px;
       justify-content: space-between;
@@ -283,13 +283,6 @@ $thumbnail_width: 1024px;
     }
   }
 
-  .site-footer-text {
-    @extend .f_smallest;
-    @media #{$mq_md} {
-      font-size: 0.75rem;
-    }
-  }
-
   .follow-container {
     width: 100%;
     @media #{$mq_md} {
@@ -312,4 +305,11 @@ $thumbnail_width: 1024px;
     }
   }
 
+}
+
+.site-footer-text {
+  @include f_smallest;
+  @media #{$mq_md} {
+    font-size: 0.75rem;
+  }
 }

@@ -191,7 +191,7 @@
       text-decoration: underline;
     }
     a[target="_blank"] {
-      @extend .u_icomoon;
+      @include icomoon;
     }
     a[href^="#a_"]::after,
     a[target="_blank"]::after {
