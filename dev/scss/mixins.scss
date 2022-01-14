@@ -1,0 +1,174 @@
+// Mixins and Variables
+
+// Theme Base Colors
+$c_primary:   #7dfcd6; // cyan
+$c_secondary: #fd32db; // magenta
+$c_accent:    #d6622b; // orange
+$c_dark-base: #2e3c41; // murk
+
+// Shade Colors
+$c_trueblack: mix(black, $c_dark-base, 99%);
+$c_black:     mix(black, $c_dark-base, 90%);
+$c_grey20:    mix(black, $c_dark-base, 80%);
+$c_grey30:    mix(black, $c_dark-base, 70%);
+$c_grey40:    mix(black, $c_dark-base, 60%);
+$c_grey50:    mix(black, $c_dark-base, 50%);
+$c_grey60:    mix(black, $c_dark-base, 40%);
+$c_grey70:    mix(black, $c_dark-base, 30%);
+$c_grey80:    mix(black, $c_dark-base, 20%);
+$c_grey90:    mix(black, $c_dark-base, 10%);
+$c_light10:   mix(white, $c_dark-base, 10%);
+$c_light20:   mix(white, $c_dark-base, 20%);
+$c_light30:   mix(white, $c_dark-base, 30%);
+$c_light40:   mix(white, $c_dark-base, 40%);
+$c_light50:   mix(white, $c_dark-base, 50%);
+$c_light60:   mix(white, $c_dark-base, 60%);
+$c_light70:   mix(white, $c_dark-base, 70%);
+$c_light80:   mix(white, $c_dark-base, 80%);
+$c_white:     mix(white, $c_dark-base, 90%);
+$c_truewhite: mix(white, $c_dark-base, 99%);
+
+// Functional Color Designations
+$c_basetext:  $c_white;
+$c_link:      $c_primary;
+$c_hover:     $c_secondary;
+$c_active:    $c_accent;
+
+
+// Breakpoints
+$bp_min: 360px; // Samsung S6+, Samsung Note, iPhone 12 Mini
+$bp_sm:  375px; // iPhone 6+
+$bp_sm2: 412px; // iPhone 11+
+$bp_md:  768px; // iPad
+$bp_lg:  1024px; // Landscape Tablets, Laptops
+
+// Media Query Shortcuts
+//$mq_sm-only : "only screen and (max-width: #{$bp_md - 1})" !default;
+$mq_sm      : "only screen and (min-width: #{$bp_sm})" !default;
+$mq_sm2     : "only screen and (min-width: #{$bp_sm2})" !default;
+$mq_md      : "only screen and (min-width: #{$bp_md})" !default;
+$mq_lg      : "only screen and (min-width: #{$bp_lg})" !default;
+$mq_touch   : "only screen and (pointer: coarse)" !default;
+$mq_mouse   : "only screen and (pointer: fine)" !default;
+
+
+// Sizing and Spacing
+$header_height:   40px;
+$gutter:          16px;
+$gutter_lg:       24px;
+$thumbnail_width: 1024px;
+
+
+// Font Sizes
+@mixin f_smallest {
+  font-size: 12px;
+}
+@mixin f_smaller {
+  font-size: 0.75rem;
+}
+@mixin f_small {
+  font-size: 0.875rem;
+}
+@mixin f_medium {
+  font-size: 1.125rem;
+}
+@mixin f_large {
+  font-size: 1.125rem;
+}
+@mixin f_larger {
+  font-size: 1.25rem;
+}
+@mixin f_largest {
+  font-size: 1.5rem;
+}
+
+
+// Icons - https://icomoon.io/app/
+@font-face {
+  font-display: swap;
+  font-family: 'icomoon';
+  font-style: normal;
+  font-weight: normal;
+  src:url('assets/fonts/icomoon.eot?byte2f');
+  src:url('assets/fonts/icomoon.eot?byte2f#iefix') format('embedded-opentype'),
+    url('assets/fonts/icomoon.ttf?byte2f') format('truetype'),
+    url('assets/fonts/icomoon.woff?byte2f') format('woff'),
+    url('assets/fonts/icomoon.svg?byte2f#icomoon') format('svg');
+}
+@mixin icomoon {
+  display: inline-block;
+  font-family: 'icomoon';
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  text-transform: none;
+  speak: none;
+}
+// define each icon without its \e
+$icons: (
+  arrow-down: dbf,
+  arrow-left: dc3,
+  arrow-right: dbb,
+  arrow-up: db7,
+  chat: ac5,
+  calendar: a60,
+  checkbox: e6e,
+  checkbox-unchecked: e6f,
+  checkmark: d6f,
+  code: ecd,
+  close: d6c,
+  gdrive: eee,
+  exit: d7b,
+  facebook: ef0,
+  github: f0f,
+  heart: cef,
+  home: 904,
+  instagram: ef1,
+  linkedin: f28,
+  mail: a30,
+  minus: d5c,
+  movie: 959,
+  music: 94c,
+  nophone: a1e,
+  pinterest: f30,
+  plus: d5b,
+  rss: efa,
+  search: b30,
+  share: ec8,
+  shopping: a02,
+  spotify: ef3,
+  stackoverflow: f2f,
+  star: ce5,
+  steam: f0c,
+  twitch: efe,
+  twitter: ef5,
+  youtube: efc,
+  warning: d50,
+  wordpress: f13
+);
+@mixin icon-definitions {
+  @each $label, $hex in $icons {
+    &#{$label} {
+      @include icomoon;
+    }
+    &#{$label}::before,
+    &#{$label}--after::after {
+      content: #{'"\\' + $hex + '"'};
+    }
+  }
+}
+.i_ {
+  @include icon-definitions;
+}
+
+
+// Accessibility
+@mixin visually-hidden {
+  height: 1px;
+  left: -10000px;
+  overflow: hidden;
+  position: absolute;
+  top: auto;
+  width: 1px;
+}
