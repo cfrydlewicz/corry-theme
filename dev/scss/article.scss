@@ -421,21 +421,6 @@
       padding: 8px;
     }
 
-    // Special Article Features
-    p.disclaimer {
-      @extend .i_warning;
-      background-color: mix(black, $c_accent, 80%);
-      border-color: $c_accent;
-      border-style: solid;
-      border-width: 1px;
-      margin-bottom: 1.25em;
-      padding: 12px;
-      &::before {
-        font-size: 24px;
-        margin-right: 12px;
-      }
-    }
-
   }
 
   .entry-footer {
