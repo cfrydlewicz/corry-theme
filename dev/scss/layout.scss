@@ -249,6 +249,10 @@ blockquote {
 }
 
 .site-footer {
+  @include f_smallest;
+  @media #{$mq_md} {
+    font-size: 0.75rem;
+  }
 
   .inner-wrapper {
     align-items: stretch;
@@ -297,16 +301,6 @@ blockquote {
     li {
       margin: 0;
     }
-    a {
-      font-size: 24px;
-    }
   }
 
-}
-
-.site-footer-text {
-  @include f_smallest;
-  @media #{$mq_md} {
-    font-size: 0.75rem;
-  }
 }

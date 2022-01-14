@@ -81,6 +81,10 @@ label {
     border-top-left-radius: 0;
     font-size: 16px;
   }
+  button.i_search {
+    // don't show the replacement button until icons load
+    display: none;
+  }
 }
 
 // Checkboxes

@@ -76,3 +76,22 @@ $icons: (
 .i_ {
   @include icon-definitions;
 }
+
+// Show Icons When Ready and Hide ALT text (for critical css)
+.search-container {
+  input[type="search"] {
+    @include visually-hidden;
+  }
+  button.i_search {
+    display: inline-block;
+  }
+}
+
+.site-footer {
+  .follow-container a {
+    font-size: 24px;
+    span {
+      @include visually-hidden;
+    }
+  }
+}
