@@ -69,14 +69,7 @@
 .i_youtube::before,
 .i_warning::before,
 .i_wordpress::before {
-  display: inline-block;
-  font-family: 'icomoon';
-  font-style: normal;
-  font-variant: normal;
-  font-weight: normal;
-  line-height: 1;
-  text-transform: none;
-  speak: none;
+  @include icomoon;
 }
 .i_arrow-down::before {
   content: "\edbf";
