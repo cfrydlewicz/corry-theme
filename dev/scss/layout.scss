@@ -295,14 +295,14 @@ blockquote {
     }
     ul {
       display: flex;
+      flex-wrap: wrap; // wrap until icons load
       justify-content: center;
       @media #{$mq_md} {
         justify-content: flex-end;
       }
-      list-style: none;
     }
-    li {
-      margin: 0;
+    li:not(:last-child) {
+      margin-right: 4px;
     }
   }
 

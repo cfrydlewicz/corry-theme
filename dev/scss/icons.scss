@@ -91,12 +91,19 @@ $icons: (
   @extend .i_warning;
 }
 
-.site-footer {
-  .follow-container a {
+.site-footer .follow-container {
+// wrapping text until icons load
+  ul {
+    flex-wrap: nowrap;
+  }
+  li {
+    margin-bottom: 0;
+  }
+  a {
     font-size: 24px;
-    span {
-      @include visually-hidden;
-    }
+  }
+  span {
+    @include visually-hidden;
   }
 }
 
