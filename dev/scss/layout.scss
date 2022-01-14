@@ -1,5 +1,18 @@
 // Environment Only - No Content Styling
 
+body {
+  color: $c_basetext;
+  font-family: 'Montserrat', helvetica, sans-serif; // critical
+  font-size: 16px;  // establishes rem basis
+  @media #{$mq_md} {
+    font-size: 16px;
+  }
+  @media #{$mq_lg} {
+    font-size: 18px;
+  }
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 .inner-wrapper {
   padding: 0 $gutter;
@@ -35,6 +48,58 @@
   position: relative;
 }
 
+// General Definitions
+strong {
+  font-weight: bold;
+}
+em {
+  font-style: italic;
+}
+a {
+  color: $c_link;
+  text-decoration: none;
+  &:hover {
+    color: $c_hover;
+  }
+  &:active {
+    color: $c_active;
+    cursor: wait;
+  }
+  &::after,
+  &::before {
+    // for links with icons
+    font-size: 0.75em;
+    margin: 0 0.375em;
+  }
+}
+p {
+  line-height: 1.5; // Accessibility standards recommend 1.5 - 2.0
+  &:not(:last-child) {
+    margin-bottom: 0.5em;
+  }
+}
+li {
+  line-height: 1.2;
+  &:not(:last-child) {
+    margin-bottom: 0.5em;
+  }
+}
+blockquote {
+  quotes: "\201C""\201D""\2018""\2019";
+  p {
+    display: inline-block;
+  }
+  cite ~ p:first-of-type::before {
+    @include visually-hidden;
+    content: open-quote;
+  }
+  cite ~ p:last-of-type::after {
+    @include visually-hidden;
+    content: close-quote;
+  }
+}
+
+// Specific Zones
 .site-header {
   // Above-the-fold and nav elements should be considered for critical css
   backface-visibility: hidden; // fixed position fix for old mobile browsers
@@ -52,7 +117,8 @@
     }
   }
 
-  > section {
+  &-primary,
+  &-secondary {
     background: linear-gradient(320deg, rgba($c_grey20,0.875), rgba($c_grey80,0.875));
     @media #{$mq_mouse} {
       background: linear-gradient(320deg, rgba($c_grey20,0.625), rgba($c_grey80,0.625));
