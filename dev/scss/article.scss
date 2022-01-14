@@ -551,6 +551,11 @@
     .post-footer_header {
       @extend .i_share;
     }
+    a {
+      overflow-wrap: break-word;
+      word-break: break-word;
+      word-wrap: break-word;
+    }
 
     @media #{$mq_md} {
       order: 2;
