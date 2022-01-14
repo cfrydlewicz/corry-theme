@@ -38,6 +38,10 @@ video {
   height: auto;
   max-width: 100%;
 }
+ul,
+ol {
+  list-style: none;
+}
 table {
   border-collapse: separate;
   border-spacing: 0;

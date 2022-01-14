@@ -175,7 +175,6 @@
       color: $c_light70;
     }
     a,
-    .fakelink,
     span[style*="color:"] { // Exception for when color is manually changed in the WP editor
       strong,
       em,
@@ -185,10 +184,11 @@
     }
 
     // Text Links
-    a,
-    .fakelink {
-      @extend .u_break-line;
+    a {
+      overflow-wrap: break-word;
       text-decoration: underline;
+      word-break: break-word;
+      word-wrap: break-word;
     }
     a[target="_blank"] {
       @include icomoon;
