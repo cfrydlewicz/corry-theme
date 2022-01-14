@@ -9,12 +9,18 @@ Concatenate the files in the following order.
 
 // Critical CSS
 @import "reset.scss";
+@import "layout.scss";
 
-// Variables
+// Critical Utility
+.u_visually-hidden {
+  @include visually-hidden;
+}
 
 // High-Level Styling
 @import "icons.scss";
-@import "layout.scss";
+// --------------------------------
+
+// Site-wide Style
 @import "organisms.scss";
 
 // Listings
@@ -28,9 +34,6 @@ Concatenate the files in the following order.
 
 // Wordpress Tweaks
 @import "wordpress.scss";
-
-// Utility Classes
-@import "utility.scss";
 
 // Feature: Tones
 //@import "tones.scss";
