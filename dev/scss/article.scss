@@ -193,69 +193,16 @@
       word-break: break-word;
       word-wrap: break-word;
     }
-    a[href^="#a_"]::after,
-    a[target="_blank"]::after {
+    a[href^="#a_"]::after {
+      content: '#';
+      display: inline-block;
       font-size: 0.75em;
+      margin: 0 0.25em;
+      speak: none;
       vertical-align: text-top;
       @media #{$mq_md} {
         font-size: 0.625em;
       }
-    }
-    a[href^="#a_"]::after {
-      content: '#';
-      display: inline-block;
-      margin: 0 0.25em;
-      speak: none;
-    }
-    a[target="_blank"]::after {
-      @include icomoon;
-      content: "\ed7b";
-      margin: 0.125em 0 0 0.375em;
-    }
-    a[href*="amazon.com"] {
-      @extend .i_shopping;
-    }
-    a[href*="disneyplus.com"],
-    a[href*="hbogo.com"],
-    a[href*="hbomax.com"],
-    a[href*="hbonow.com"],
-    a[href*="hulu.com"],
-    a[href*="netflix.com"] {
-      @extend .i_movie;
-    }
-    a[href*="spotify.com"] {
-      @extend .i_spotify;
-    }
-    a[href*="youtube.com"],
-    a[href*="youtu.be"] {
-      @extend .i_youtube;
-    }
-    a[href*="docs.google.com"],
-    a[href*="drive.google.com"] {
-      @extend .i_gdrive;
-    }
-    a[href*="github.com"],
-    a[href*="github.io"] {
-      @extend .i_github;
-    }
-    a[href*="facebook.com"] {
-      @extend .i_facebook;
-    }
-    a[href*="instagram.com"] {
-      @extend .i_instagram;
-    }
-    a[href*="linkedin.com"] {
-      @extend .i_linkedin;
-    }
-    a[href*="pinterest.com"],
-    a[href*="pin.it"] {
-      @extend .i_pinterest;
-    }
-    a[href*="twitch.tv"] {
-      @extend .i_twitch;
-    }
-    a[href*="twitter.com"] {
-      @extend .i_twitter;
     }
 
     // lists
@@ -376,8 +323,6 @@
       margin: 2em auto;
       padding: 0;
       blockquote {
-        @extend .bezel;
-        @extend .grainy;
         margin: 0;
         padding: 0.75em 0.75em 1.25em;
         text-align: center;
@@ -415,7 +360,6 @@
 
     // pre-formatted
     pre {
-      @extend .grainy;
       border: 1px solid $c_grey50;
       margin-bottom: 1em;
       padding: 8px;
@@ -425,10 +369,7 @@
 
   .entry-footer {
     // article-specific meta section (categories, tags)
-    @extend .bezel--vertical;
-    @extend .grainy;
     padding: 36px 0;
-    // width: 100%;
 
     @media #{$mq_lg} {
       .inner-wrapper {
@@ -474,14 +415,11 @@
     justify-content: space-between;
   }
   @media #{$mq_lg} {
-    @extend .bezel--horizontal--at-lg;
     margin: 48px auto 36px;
     max-width: $thumbnail_width;
   }
 
   section {
-    @extend .grainy;
-    @extend .bezel--vertical;
     flex-grow: 1;
     padding: 24px 16px;
     &:last-of-type {
@@ -505,53 +443,35 @@
     }
   }
 
-  .discussion-container {
-
-    .post-footer_header {
-      @extend .i_chat;
-    }
-
-    @media #{$mq_md} {
+  @media #{$mq_md} {
+    .discussion-container {
       order: 1;
       width: 33%;
     }
-
-  }
-
-  .follow-container {
-
-    .post-footer_header {
-      @extend .i_heart;
-    }
-
-    @media #{$mq_md} {
-      order: 3;
-      width: 33%;
-    }
-
-  }
-
-  .share-container {
-
-    .post-footer_header {
-      @extend .i_share;
-    }
-    a {
-      overflow-wrap: break-word;
-      word-break: break-word;
-      word-wrap: break-word;
-    }
-
-    @media #{$mq_md} {
+    .share-container {
       order: 2;
       width: 33%;
     }
+    .follow-container {
+      order: 3;
+      width: 33%;
+    }
+  }
 
+  .share-container a {
+    overflow-wrap: break-word;
+    word-break: break-word;
+    word-wrap: break-word;
   }
 
   .read-more-container {
     padding-left: 0;
     padding-right: 0;
+
+    @media #{$mq_md} {
+      order: 4;
+      width: 100%;
+    }
 
     .post-footer_header {
       margin-left: $gutter;
@@ -561,11 +481,6 @@
     .widget-area {
       margin: 0 auto;
       max-width: $thumbnail_width;
-    }
-
-    @media #{$mq_md} {
-      order: 4;
-      width: 100%;
     }
 
   }
@@ -579,6 +494,7 @@
       }
     }
   }
+
   .srpw-img {
     @extend .entry-header;
     overflow: hidden;
@@ -592,15 +508,18 @@
       width: 1024px;
     }
   }
+
   .srpw-content {
     @include overlay;
   }
+
   .srpw-title {
     @extend .entry-title;
     font-size: 2.5em;
     font-weight: 400;
     line-height: 1;
   }
+
   .srpw-summary {
     line-height: inherit;
     padding-bottom: 16px;
@@ -613,27 +532,16 @@
       }
     }
   }
+
   .srpw-more-link {
     @include button(big);
-    @extend .i_arrow-right--after;
-    bottom: -32px;
-    position: absolute;
-    right: 2%;
-    @media #{$mq_md} {
-      bottom: 0;
-      right: 0;
-    }
   }
 
 }
 
 // Comments
-.comments-container {
-  .post-footer_header {
-    @extend .i_chat;
-  }
-
-  @media #{$mq_md} {
+@media #{$mq_md} {
+  .comments-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -645,7 +553,6 @@
     }
 
   }
-
 }
 
 .comment-list {
@@ -668,8 +575,6 @@
   }
 
   article {
-    @extend .bezel;
-    @extend .grainy;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -804,7 +709,6 @@
           position: absolute;
           right: 0;
           top: 2;
-          transition: all 0.2s;
           width: 24px;
         }
         &::after {
@@ -816,7 +720,6 @@
           position: absolute;
           right: 6px;
           top: 14px;
-          transition: all 0.2s;
         }
       }
     }
