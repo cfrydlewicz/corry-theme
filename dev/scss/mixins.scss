@@ -1,21 +1,12 @@
 // Mixins and Variables
 
-// Accessibility
-@mixin visually-hidden {
-  height: 1px;
-  left: -10000px;
-  overflow: hidden;
-  position: absolute;
-  top: auto;
-  width: 1px;
-}
-
 
 // Theme Base Colors
 $c_primary:   #7dfcd6; // cyan
 $c_secondary: #fd32db; // magenta
 $c_accent:    #d6622b; // orange
 $c_dark-base: #2e3c41; // murk
+
 
 // Shade Colors
 $c_trueblack: mix(black, $c_dark-base, 99%);
@@ -39,6 +30,7 @@ $c_light80:   mix(white, $c_dark-base, 80%);
 $c_white:     mix(white, $c_dark-base, 90%);
 $c_truewhite: mix(white, $c_dark-base, 99%);
 
+
 // Functional Color Designations
 $c_basetext:  $c_white;
 $c_link:      $c_primary;
@@ -53,12 +45,11 @@ $bp_sm2: 412px; // iPhone 11+
 $bp_md:  768px; // iPad
 $bp_lg:  1024px; // Landscape Tablets, Laptops
 
+
 // Media Query Shortcuts
-//$mq_sm-only : "only screen and (max-width: #{$bp_md - 1})" !default;
 $mq_sm      : "only screen and (min-width: #{$bp_sm})" !default;
 $mq_sm2     : "only screen and (min-width: #{$bp_sm2})" !default;
 $mq_md      : "only screen and (min-width: #{$bp_md})" !default;
-//$mq_md-only : "only screen and (min-width: #{$bp_md}) and (max-width: #{$bp_lg - 1})" !default;
 $mq_lg      : "only screen and (min-width: #{$bp_lg})" !default;
 $mq_touch   : "only screen and (pointer: coarse)" !default;
 $mq_mouse   : "only screen and (pointer: fine)" !default;
@@ -95,81 +86,12 @@ $thumbnail_width: 1024px;
 }
 
 
-// Icons - https://icomoon.io/app/
-@font-face {
-  font-display: swap;
-  font-family: 'icomoon';
-  font-style: normal;
-  font-weight: normal;
-  src:url('assets/fonts/icomoon.eot?byte2f');
-  src:url('assets/fonts/icomoon.eot?byte2f#iefix') format('embedded-opentype'),
-    url('assets/fonts/icomoon.ttf?byte2f') format('truetype'),
-    url('assets/fonts/icomoon.woff?byte2f') format('woff'),
-    url('assets/fonts/icomoon.svg?byte2f#icomoon') format('svg');
-}
-@mixin icomoon {
-  display: inline-block;
-  font-family: 'icomoon';
-  font-style: normal;
-  font-variant: normal;
-  font-weight: normal;
-  line-height: 1;
-  text-transform: none;
-  speak: none;
-}
-// define each icon without its \e
-$icons: (
-  arrow-down: dbf,
-  arrow-left: dc3,
-  arrow-right: dbb,
-  arrow-up: db7,
-  chat: ac5,
-  calendar: a60,
-  checkbox: e6e,
-  checkbox-unchecked: e6f,
-  checkmark: d6f,
-  code: ecd,
-  close: d6c,
-  gdrive: eee,
-  exit: d7b,
-  facebook: ef0,
-  github: f0f,
-  heart: cef,
-  home: 904,
-  instagram: ef1,
-  linkedin: f28,
-  mail: a30,
-  minus: d5c,
-  movie: 959,
-  music: 94c,
-  nophone: a1e,
-  pinterest: f30,
-  plus: d5b,
-  rss: efa,
-  search: b30,
-  share: ec8,
-  shopping: a02,
-  spotify: ef3,
-  stackoverflow: f2f,
-  star: ce5,
-  steam: f0c,
-  twitch: efe,
-  twitter: ef5,
-  youtube: efc,
-  warning: d50,
-  wordpress: f13
-);
-@mixin icon-definitions {
-  @each $label, $hex in $icons {
-    &#{$label} {
-      @include icomoon;
-    }
-    &#{$label}::before,
-    &#{$label}--after::after {
-      content: #{'"\\' + $hex + '"'};
-    }
-  }
-}
-.i_ {
-  @include icon-definitions;
+// Accessibility
+@mixin visually-hidden {
+  height: 1px;
+  left: -10000px;
+  overflow: hidden;
+  position: absolute;
+  top: auto;
+  width: 1px;
 }

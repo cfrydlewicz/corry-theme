@@ -1,0 +1,78 @@
+// Icons - https://icomoon.io/app/
+@font-face {
+  font-display: swap;
+  font-family: 'icomoon';
+  font-style: normal;
+  font-weight: normal;
+  src:url('assets/fonts/icomoon.eot?byte2f');
+  src:url('assets/fonts/icomoon.eot?byte2f#iefix') format('embedded-opentype'),
+    url('assets/fonts/icomoon.ttf?byte2f') format('truetype'),
+    url('assets/fonts/icomoon.woff?byte2f') format('woff'),
+    url('assets/fonts/icomoon.svg?byte2f#icomoon') format('svg');
+}
+
+@mixin icomoon {
+  display: inline-block;
+  font-family: 'icomoon';
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  text-transform: none;
+  speak: none;
+}
+
+// define each icon (assume \e)
+$icons: (
+  arrow-down: dbf,
+  arrow-left: dc3,
+  arrow-right: dbb,
+  arrow-up: db7,
+  chat: ac5,
+  calendar: a60,
+  checkbox: e6e,
+  checkbox-unchecked: e6f,
+  checkmark: d6f,
+  code: ecd,
+  close: d6c,
+  gdrive: eee,
+  exit: d7b,
+  facebook: ef0,
+  github: f0f,
+  heart: cef,
+  home: 904,
+  instagram: ef1,
+  linkedin: f28,
+  mail: a30,
+  minus: d5c,
+  movie: 959,
+  music: 94c,
+  nophone: a1e,
+  pinterest: f30,
+  plus: d5b,
+  rss: efa,
+  search: b30,
+  share: ec8,
+  shopping: a02,
+  spotify: ef3,
+  stackoverflow: f2f,
+  star: ce5,
+  steam: f0c,
+  twitch: efe,
+  twitter: ef5,
+  youtube: efc,
+  warning: d50,
+  wordpress: f13
+);
+@mixin icon-definitions {
+  @each $label, $hex in $icons {
+    &#{$label}::before,
+    &#{$label}--after::after {
+      @include icomoon;
+      content: #{'"\\e' + $hex + '"'};
+    }
+  }
+}
+.i_ {
+  @include icon-definitions;
+}
