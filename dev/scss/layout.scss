@@ -214,9 +214,9 @@ blockquote {
     height: 150%; // let the y dangle over
     max-height: 48px;
     z-index: 2;
-    path {
-      fill: $c_link;
-    }
+  }
+  path {
+    fill: $c_link;
   }
   a {
     @extend .bezel--horizontal;
@@ -233,7 +233,7 @@ blockquote {
     }
     &:hover {
       @extend .grainy;
-      svg path {
+      path {
         fill: $c_hover;
       }
     }
