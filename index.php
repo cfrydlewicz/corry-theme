@@ -12,7 +12,7 @@
         <?php elseif ( is_search() ) : ?>
           <h1 id="sticky-title" class="page-title">Search Results for <strong><?php echo esc_html($_GET['s']); ?></strong></h1>
         <?php else : ?>
-          <div class="page-title u_hidden">Unknown Page Type</div>
+          <!--Unknown Page Type-->
         <?php endif; ?>
       </div>
     </header>
