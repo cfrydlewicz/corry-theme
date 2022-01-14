@@ -95,3 +95,25 @@ $thumbnail_width: 1024px;
   top: auto;
   width: 1px;
 }
+
+
+// Overlays
+@mixin overlay {
+  background-color: rgba($c_black,0.5);
+  bottom: 0;
+  height: min-content;
+  left: 50%;
+  max-width: $thumbnail_width;
+  padding: 12px $gutter;
+  pointer-events: none;
+  position: absolute;
+  transform: translateX(-50%);
+  width: 100%;
+  @supports (backdrop-filter: blur(10px)) {
+    backdrop-filter: blur(10px);
+  }
+  @media #{$mq_lg} {
+    padding-left: $gutter_lg;
+    padding-right: $gutter_lg;
+  }
+}

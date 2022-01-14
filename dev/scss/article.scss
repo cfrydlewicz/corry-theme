@@ -32,7 +32,7 @@
   }
 
   .title-container {
-    @extend .thumbnail-overlay;
+    @include overlay;
     max-width: 100%;
     padding-bottom: 16px;
   }
@@ -608,8 +608,7 @@
     }
   }
   .srpw-content {
-    @extend .thumbnail-overlay;
-    width: 100%;
+    @include overlay;
   }
   .srpw-title {
     @extend .entry-title;
