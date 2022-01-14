@@ -1,10 +1,12 @@
 // Mixins and Variables
 
+
 // Theme Base Colors
 $c_primary:   #7dfcd6; // cyan
 $c_secondary: #fd32db; // magenta
 $c_accent:    #d6622b; // orange
 $c_dark-base: #2e3c41; // murk
+
 
 // Shade Colors
 $c_trueblack: mix(black, $c_dark-base, 99%);
@@ -28,6 +30,7 @@ $c_light80:   mix(white, $c_dark-base, 80%);
 $c_white:     mix(white, $c_dark-base, 90%);
 $c_truewhite: mix(white, $c_dark-base, 99%);
 
+
 // Functional Color Designations
 $c_basetext:  $c_white;
 $c_link:      $c_primary;
@@ -42,8 +45,8 @@ $bp_sm2: 412px; // iPhone 11+
 $bp_md:  768px; // iPad
 $bp_lg:  1024px; // Landscape Tablets, Laptops
 
+
 // Media Query Shortcuts
-//$mq_sm-only : "only screen and (max-width: #{$bp_md - 1})" !default;
 $mq_sm      : "only screen and (min-width: #{$bp_sm})" !default;
 $mq_sm2     : "only screen and (min-width: #{$bp_sm2})" !default;
 $mq_md      : "only screen and (min-width: #{$bp_md})" !default;
