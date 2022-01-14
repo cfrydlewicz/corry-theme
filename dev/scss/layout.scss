@@ -1,9 +1,18 @@
 // Environment Only - No Content Styling
 
-$header_height:   40px;
-$gutter:          16px;
-$gutter_lg:       24px;
-$thumbnail_width: 1024px;
+body {
+  color: $c_basetext;
+  font-family: 'Montserrat', helvetica, sans-serif; // critical
+  font-size: 16px;  // establishes rem basis
+  @media #{$mq_md} {
+    font-size: 16px;
+  }
+  @media #{$mq_lg} {
+    font-size: 18px;
+  }
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 .inner-wrapper {
   padding: 0 $gutter;
@@ -26,6 +35,12 @@ $thumbnail_width: 1024px;
   .inner-wrapper--at-lg {
     width: 100%;
   }
+}
+
+.total-wrapper {
+  background-color: $c_dark-base;
+  min-width: $bp_min;
+  position: relative;
 }
 
 // Anchor Links Accommodate Fixed Header
@@ -78,12 +93,59 @@ $thumbnail_width: 1024px;
   }
 }
 
-.total-wrapper {
-  background-color: $c_dark-base;
-  min-width: $bp_min;
-  position: relative;
+
+// General Definitions
+strong {
+  font-weight: bold;
+}
+em {
+  font-style: italic;
+}
+a {
+  color: $c_link;
+  text-decoration: none;
+  &:hover {
+    color: $c_hover;
+  }
+  &:active {
+    color: $c_active;
+    cursor: wait;
+  }
+  &::after,
+  &::before {
+    // for links with icons
+    font-size: 0.75em;
+    margin: 0 0.375em;
+  }
+}
+p {
+  line-height: 1.5; // Accessibility standards recommend 1.5 - 2.0
+  &:not(:last-child) {
+    margin-bottom: 0.5em;
+  }
+}
+li {
+  line-height: 1.2;
+  &:not(:last-child) {
+    margin-bottom: 0.5em;
+  }
+}
+blockquote {
+  quotes: "\201C""\201D""\2018""\2019";
+  p {
+    display: inline-block;
+  }
+  cite ~ p:first-of-type::before {
+    @include visually-hidden;
+    content: open-quote;
+  }
+  cite ~ p:last-of-type::after {
+    @include visually-hidden;
+    content: close-quote;
+  }
 }
 
+// Specific Zones
 .site-header {
   // Above-the-fold and nav elements should be considered for critical css
   backface-visibility: hidden; // fixed position fix for old mobile browsers
@@ -101,7 +163,8 @@ $thumbnail_width: 1024px;
     }
   }
 
-  > section {
+  &-primary,
+  &-secondary {
     background: linear-gradient(320deg, rgba($c_grey20,0.875), rgba($c_grey80,0.875));
     @media #{$mq_mouse} {
       background: linear-gradient(320deg, rgba($c_grey20,0.625), rgba($c_grey80,0.625));
@@ -121,7 +184,7 @@ $thumbnail_width: 1024px;
   &-secondary {
     display: none; // show with JS
     .inner-wrapper {
-      @extend .f_smaller;
+      @include f_smaller;
       display: flex;
       height: 30px;
       justify-content: space-between;
@@ -145,99 +208,101 @@ $thumbnail_width: 1024px;
     }
   }
 
-  .header-logo {
-    flex-grow: 1;
-    svg {
-      height: 150%; // let the y dangle over
-      max-height: 48px;
-      z-index: 2;
-      path {
-        fill: $c_link;
-      }
-    }
-    a {
-      @extend .bezel--horizontal;
-      display: block;
-      height: 100%;
-      padding: 4px;
-      @media #{$mq_sm2} {
-        padding-left: $gutter;
-        padding-right: $gutter;
-      }
-      @media #{$mq_lg} {
-        padding-left: $gutter_lg;
-        padding-right: $gutter_lg;
-      }
-      &:hover {
-        @extend .grainy;
-        svg path {
-          fill: $c_hover;
-        }
-      }
-    }
-  }
+}
 
-  .header-nav {
-    > div {
-      height: 100%;
-    }
-    ul {
-      display: flex;
-      height: 100%;
-      list-style: none;
-      li {
-        align-items: stretch;
-        display: flex;
-        margin: 0;
-        a {
-          @extend .bezel--horizontal;
-          align-items: center;
-          display: flex;
-          font-size: 1rem;
-          font-weight: 500;
-          padding: 0 8px;
-          @media #{$mq_sm2} {
-            padding: 0 $gutter;
-          }
-          @media #{$mq_lg} {
-            padding: 0 $gutter_lg;
-          }
-          &:hover {
-            @extend .grainy;
-          }
-        }
-      }
-    }
+.header-logo {
+  flex-grow: 1;
+  svg {
+    height: 150%; // let the y dangle over
+    max-height: 48px;
+    z-index: 2;
   }
-
-  .header-search {
+  path {
+    fill: $c_link;
+  }
+  a {
     @extend .bezel--horizontal;
-    &:hover,
-    &:focus-within {
+    display: block;
+    height: 100%;
+    padding: 4px;
+    @media #{$mq_sm2} {
+      padding-left: $gutter;
+      padding-right: $gutter;
+    }
+    @media #{$mq_lg} {
+      padding-left: $gutter_lg;
+      padding-right: $gutter_lg;
+    }
+    &:hover {
+      @extend .grainy;
+      path {
+        fill: $c_hover;
+      }
+    }
+  }
+}
+
+.header-nav {
+  > div {
+    height: 100%;
+  }
+  ul {
+    display: flex;
+    height: 100%;
+    list-style: none;
+  }
+  li {
+    align-items: stretch;
+    display: flex;
+    margin: 0;
+  }
+  a {
+    @extend .bezel--horizontal;
+    align-items: center;
+    display: flex;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0 8px;
+    @media #{$mq_sm2} {
+      padding: 0 $gutter;
+    }
+    @media #{$mq_lg} {
+      padding: 0 $gutter_lg;
+    }
+    &:hover {
       @extend .grainy;
     }
-    .search-container {
-      height: 100%;
-      label {
-        padding-bottom: 6px;
-        padding-top: 6px;
-        &:first-of-type {
-          padding-left: 8px;
-          @media #{$mq_sm2} {
-            padding-left: $gutter;
-          }
-          @media #{$mq_lg} {
-            padding-left: $gutter_lg;
-          }
+  }
+}
+
+.header-search {
+  @extend .bezel--horizontal;
+  &:hover,
+  &:focus-within {
+    @extend .grainy;
+  }
+
+  .search-container {
+    height: 100%;
+    label {
+      padding-bottom: 6px;
+      padding-top: 6px;
+      &:first-of-type {
+        padding-left: 8px;
+        @media #{$mq_sm2} {
+          padding-left: $gutter;
         }
-        &:last-of-type {
-          padding-right: 4px;
-          @media #{$mq_sm2} {
-            padding-right: $gutter;
-          }
-          @media #{$mq_lg} {
-            padding-right: $gutter_lg;
-          }
+        @media #{$mq_lg} {
+          padding-left: $gutter_lg;
+        }
+      }
+      &:last-of-type {
+        padding-right: 4px;
+        @media #{$mq_sm2} {
+          padding-right: $gutter;
+        }
+        @media #{$mq_lg} {
+          padding-right: $gutter_lg;
         }
       }
     }
@@ -283,13 +348,6 @@ $thumbnail_width: 1024px;
     }
   }
 
-  .site-footer-text {
-    @extend .f_smallest;
-    @media #{$mq_md} {
-      font-size: 0.75rem;
-    }
-  }
-
   .follow-container {
     width: 100%;
     @media #{$mq_md} {
@@ -306,10 +364,17 @@ $thumbnail_width: 1024px;
     }
     li {
       margin: 0;
-      a {
-        font-size: 24px;
-      }
+    }
+    a {
+      font-size: 24px;
     }
   }
 
+}
+
+.site-footer-text {
+  @include f_smallest;
+  @media #{$mq_md} {
+    font-size: 0.75rem;
+  }
 }

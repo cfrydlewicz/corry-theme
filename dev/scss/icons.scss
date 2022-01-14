@@ -1,4 +1,4 @@
-// https://icomoon.io/app/
+// Icons - https://icomoon.io/app/
 @font-face {
   font-display: swap;
   font-family: 'icomoon';
@@ -11,52 +11,7 @@
     url('assets/fonts/icomoon.svg?byte2f#icomoon') format('svg');
 }
 
-.u_icomoon::after,
-.u_icomoon::before,
-.i_arrow-down::before,
-.i_arrow-down--after::after,
-.i_arrow-left::before,
-.i_arrow-right::before,
-.i_arrow-right--after::after,
-.i_arrow-up::before,
-.i_arrow-up--after::after,
-.i_bubbles::before,
-.i_chat::before,
-.i_calendar::before,
-.i_checkbox::before,
-.i_checkbox--unchecked::before,
-.i_checkmark::before,
-.i_code::before,
-.i_cross::before,
-.i_close::before,
-.i_exit::before,
-.i_facebook::before,
-.i_gdrive::before,
-.i_github::before,
-.i_heart::before,
-.i_home::before,
-.i_instagram::before,
-.i_linkedin::before,
-.i_mail::before,
-.i_minus::before,
-.i_movie::before,
-.i_music::before,
-.i_nophone::before,
-.i_pinterest::before,
-.i_plus::before,
-.i_rss::before,
-.i_search::before,
-.i_share::before,
-.i_shopping::before,
-.i_spotify::before,
-.i_stackoverflow::before,
-.i_star::before,
-.i_steam::before,
-.i_twitch::before,
-.i_twitter::before,
-.i_youtube::before,
-.i_warning::before,
-.i_wordpress::before {
+@mixin icomoon {
   display: inline-block;
   font-family: 'icomoon';
   font-style: normal;
@@ -66,131 +21,58 @@
   text-transform: none;
   speak: none;
 }
-.i_arrow-down::before {
-  content: "\edbf";
+
+// define each icon (assume \e)
+$icons: (
+  arrow-down: dbf,
+  arrow-left: dc3,
+  arrow-right: dbb,
+  arrow-up: db7,
+  chat: ac5,
+  calendar: a60,
+  checkbox: e6e,
+  checkbox-unchecked: e6f,
+  checkmark: d6f,
+  code: ecd,
+  close: d6c,
+  gdrive: eee,
+  exit: d7b,
+  facebook: ef0,
+  github: f0f,
+  heart: cef,
+  home: 904,
+  instagram: ef1,
+  linkedin: f28,
+  mail: a30,
+  minus: d5c,
+  movie: 959,
+  music: 94c,
+  nophone: a1e,
+  pinterest: f30,
+  plus: d5b,
+  rss: efa,
+  search: b30,
+  share: ec8,
+  shopping: a02,
+  spotify: ef3,
+  stackoverflow: f2f,
+  star: ce5,
+  steam: f0c,
+  twitch: efe,
+  twitter: ef5,
+  youtube: efc,
+  warning: d50,
+  wordpress: f13
+);
+@mixin icon-definitions {
+  @each $label, $hex in $icons {
+    &#{$label}::before,
+    &#{$label}--after::after {
+      @include icomoon;
+      content: #{'"\\e' + $hex + '"'};
+    }
+  }
 }
-.i_arrow-down--after::after {
-  content: "\edbf";
-}
-.i_arrow-left::before {
-  content: "\edc3";
-}
-.i_arrow-right::before {
-  content: "\edbb";
-}
-.i_arrow-right--after::after {
-  content: "\edbb";
-}
-.i_arrow-up::before {
-  content: "\edb7";
-}
-.i_arrow-up--after::after {
-  content: "\edb7";
-}
-.i_bubbles::before,
-.i_chat::before {
-  content: "\eac5";
-}
-.i_calendar::before {
-  content: "\ea60";
-}
-.i_checkbox::before {
-  content: "\ee6e";
-}
-.i_checkbox--unchecked::before {
-  content: "\ee6f";
-}
-.i_checkmark::before {
-  content: "\ed6f";
-}
-.i_code::before {
-  content: "\eecd";
-}
-.i_cross::before,
-.i_close::before {
-  content: "\ed6c";
-}
-.i_gdrive::before {
-  content: "\eeee";
-}
-.i_exit::before {
-  content: "\ed7b";
-}
-.i_facebook::before {
-  content: "\eef0";
-}
-.i_github::before {
-  content: "\ef0f";
-}
-.i_heart::before {
-  content: "\ecef";
-}
-.i_home::before {
-  content: "\e904";
-}
-.i_instagram::before {
-  content: "\eef1";
-}
-.i_linkedin::before {
-  content: "\ef28";
-}
-.i_mail::before {
-  content: "\ea30";
-}
-.i_minus::before {
-  content: "\ed5c";
-}
-.i_movie::before {
-  content: "\e959";
-}
-.i_music::before {
-  content: "\e94c";
-}
-.i_nophone::before {
-  content: "\ea1e";
-}
-.i_pinterest::before {
-  content: "\ef30";
-}
-.i_plus::before {
-  content: "\ed5b";
-}
-.i_rss::before {
-  content: "\eefa";
-}
-.i_search::before {
-  content: "\eb30";
-}
-.i_share::before {
-  content: "\eec8";
-}
-.i_shopping::before {
-  content: "\ea02";
-}
-.i_spotify::before {
-  content: "\eef3";
-}
-.i_stackoverflow::before {
-  content: "\ef2f";
-}
-.i_star::before {
-  content: "\ece5";
-}
-.i_steam::before {
-  content: "\ef0c";
-}
-.i_twitch::before {
-  content: "\eefe";
-}
-.i_twitter::before {
-  content: "\eef5";
-}
-.i_youtube::before {
-  content: "\eefc";
-}
-.i_warning::before {
-  content: "\ed50";
-}
-.i_wordpress::before {
-  content: "\ef13";
+.i_ {
+  @include icon-definitions;
 }
