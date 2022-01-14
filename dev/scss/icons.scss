@@ -87,6 +87,10 @@ $icons: (
   }
 }
 
+.disclaimer {
+  @extend .i_warning;
+}
+
 .site-footer {
   .follow-container a {
     font-size: 24px;
