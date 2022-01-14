@@ -1,8 +1,15 @@
 // Critical CSS
 // Inserted into a <style> tag in the <head> so it loads instantly
 
-// Overall Layout
+@import "reset.scss";
 
-// Above-the-fold Spacing
-// TODO
+// SASS Structure
+@import "mixins.scss";
 
+// Skeleton
+@import "layout.scss";
+
+// Critical Utility
+.u_visually-hidden {
+  @include visually-hidden;
+}
