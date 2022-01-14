@@ -5,17 +5,17 @@ SCSS MANIFEST
 Concatenate the files in the following order.
 */
 
+@import "reset.scss";
 @import "mixins.scss";
 @import "icons.scss";
 
 // Critical CSS
-//@import "reset.scss";
-//@import "layout.scss";
+@import "layout.scss";
 
 // Critical Utility
-//.u_visually-hidden {
-//  @include visually-hidden;
-//}
+.u_visually-hidden {
+  @include visually-hidden;
+}
 
 // -------------------------------- */
 
