@@ -129,7 +129,7 @@
         <?php if ( is_singular() ) : ?>
           <a title="Jump to the beginning of the page" href="#a_skip-to-content" class="title i_arrow-up"><?php the_title(); ?></a>
           <?php if ( !empty(get_comments_number()) ) : ?>
-            <a title="Jump to the comments" class="i_chat i_arrow-down--after" href="#a_comments_top"><span class="u_visually-hidden">Comments: </span><?php echo get_comments_number(); ?></a>
+            <a title="Jump to the comments" class="i_chat i_arrow-down--after" href="#a_comments_top"><span class="u_visually-hidden">Comments:&nbsp;</span><?php echo get_comments_number(); ?></a>
           <?php else : ?>
             <a title="Jump to the end of the page" class="i_chat i_arrow-down--after" href="#a_end-of-article"><span class="u_visually-hidden">End of Article</a>
           <?php endif; ?>
