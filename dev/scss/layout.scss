@@ -75,7 +75,7 @@ $thumbnail_width: 1024px;
   &-secondary {
     display: none; // show with JS
     .inner-wrapper {
-      @extend .f_smaller;
+      @include f_smaller;
       display: flex;
       height: 30px;
       justify-content: space-between;

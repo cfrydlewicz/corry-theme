@@ -28,7 +28,7 @@ $border-radius: 12px;
   }
   &--small {
     @extend .button;
-    @extend .f_small;
+    @include f_small;
     padding: 6px 4px;
   }
   &--big {
@@ -187,6 +187,6 @@ input[type="checkbox"] {
     margin-right: 12px;
   }
   > div {
-    @extend .f_small;
+    @include f_small;
   }
 }

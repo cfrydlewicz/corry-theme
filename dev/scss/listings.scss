@@ -53,7 +53,7 @@ body.archive {
     padding: 8px 0;
   }
   .page-title {
-    @extend .f_larger;
+    @include f_larger;
   }
 
 }
@@ -118,7 +118,7 @@ body.archive {
     }
     a {
       @extend .button;
-      @extend .f_medium;
+      @include f_medium;
       bottom: 0;
       font-weight: 800;
       position: absolute;
@@ -148,7 +148,7 @@ body.archive {
     }
     .post-stats,
     .post-categories a {
-      @extend .f_small;
+      @include f_small;
     }
     .post-categories {
       display: flex;
