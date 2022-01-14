@@ -206,6 +206,7 @@ blockquote {
       white-space: nowrap;
     }
   }
+
 }
 
 .header-logo {
@@ -279,6 +280,7 @@ blockquote {
   &:focus-within {
     @extend .grainy;
   }
+
   .search-container {
     height: 100%;
     label {
@@ -304,6 +306,7 @@ blockquote {
       }
     }
   }
+
 }
 
 .site-footer {
@@ -360,9 +363,9 @@ blockquote {
     }
     li {
       margin: 0;
-      a {
-        font-size: 24px;
-      }
+    }
+    a {
+      font-size: 24px;
     }
   }
 
