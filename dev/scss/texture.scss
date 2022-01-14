@@ -1,0 +1,115 @@
+// Sitewide Styling
+
+.grainy {
+// https://grainy-gradients.vercel.app/
+  background:
+    linear-gradient(320deg, rgba($c_grey30,1), rgba($c_dark-base,1)),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 375 375' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.75' numOctaves='1' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+.bezel,
+.bezel--vertical,
+.bezel--horizontal {
+  border-bottom-color: $c_grey50;
+  border-left-color: $c_light20;
+  border-right-color: $c_grey50;
+  border-style: solid;
+  border-top-color: $c_light20;
+}
+.bezel {
+  border-width: 1px;
+}
+.bezel--vertical {
+  border-width: 1px 0;
+}
+.bezel--horizontal {
+  border-width: 0 1px;
+}
+@media #{$mq_md} {
+  .bezel--horizontal--at-md {
+    border-bottom-color: $c_grey50;
+    border-left-color: $c_light20;
+    border-right-color: $c_grey50;
+    border-style: solid;
+    border-top-color: $c_light20;
+    border-width: 0 1px;
+  }
+}
+@media #{$mq_lg} {
+  .bezel--horizontal--at-lg {
+    border-bottom-color: $c_grey50;
+    border-left-color: $c_light20;
+    border-right-color: $c_grey50;
+    border-style: solid;
+    border-top-color: $c_light20;
+    border-width: 0 1px;
+  }
+}
+
+.site-header {
+
+  &-primary,
+  &-secondary {
+    background: linear-gradient(320deg, rgba($c_grey20,0.875), rgba($c_grey80,0.875));
+    @media #{$mq_mouse} {
+      background: linear-gradient(320deg, rgba($c_grey20,0.625), rgba($c_grey80,0.625));
+      &:hover {
+        background: linear-gradient(320deg, rgba($c_grey20,0.75), rgba($c_grey80,0.75));
+      }
+    }
+  }
+
+  &-primary {
+    @extend .bezel--vertical;
+  }
+
+  &-secondary {
+    a {
+      @extend .bezel--horizontal;
+      &:hover {
+        @extend .grainy;
+      }
+    }
+  }
+
+  .header-logo {
+    a {
+      @extend .bezel--horizontal;
+      &:hover {
+        @extend .grainy;
+      }
+    }
+  }
+
+  .header-nav {
+    a {
+      @extend .bezel--horizontal;
+      &:hover {
+        @extend .grainy;
+      }
+    }
+  }
+
+  .header-search {
+    @extend .bezel--horizontal;
+    &:hover,
+    &:focus-within {
+      @extend .grainy;
+    }
+  }
+
+}
+
+.site-footer {
+  @extend .bezel--vertical;
+  @extend .grainy;
+
+  section {
+    &:hover {
+      @extend .grainy;
+    }
+    @media #{$mq_md} {
+      @extend .bezel--horizontal--at-md;
+    }
+  }
+
+}
