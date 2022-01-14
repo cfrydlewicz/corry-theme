@@ -117,7 +117,7 @@ body.archive {
       max-width: 60ch;
     }
     a {
-      @extend .button;
+      @include button;
       @include f_medium;
       bottom: 0;
       font-weight: 800;

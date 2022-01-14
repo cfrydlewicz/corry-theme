@@ -56,6 +56,7 @@ $mq_mouse   : "only screen and (pointer: fine)" !default;
 
 
 // Sizing and Spacing
+$border-radius:   12px;
 $header_height:   40px;
 $gutter:          16px;
 $gutter_lg:       24px;
@@ -94,6 +95,46 @@ $thumbnail_width: 1024px;
   position: absolute;
   top: auto;
   width: 1px;
+}
+
+
+// Buttons
+@mixin button($size:null) {
+  background-color: $c_primary;
+  border-color: mix(black, $c_primary, 25%);
+  border-radius: $border-radius;
+  border-style: solid;
+  border-width: 2px;
+  color: $c_trueblack;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  &:hover {
+    background-color: $c_hover;
+    border-color: mix(black, $c_hover, 25%);
+    color: $c_trueblack;
+  }
+  &:active {
+    background-color: $c_active;
+    border-color: mix(black, $c_active, 25%);
+    color: $c_trueblack;
+  }
+
+  @if $size == 'big' {
+    padding: 8px 16px;
+    transform: rotate(2.5deg) scale(1.25);
+
+  } @else if $size == 'small' {
+    @include f_small;
+    padding: 6px 4px;
+
+  } @else {
+    padding: 8px;
+  }
+
 }
 
 

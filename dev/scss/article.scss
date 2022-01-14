@@ -629,7 +629,7 @@
     }
   }
   .srpw-more-link {
-    @extend .button--big;
+    @include button(big);
     @extend .i_arrow-right--after;
     bottom: -32px;
     position: absolute;
@@ -705,7 +705,7 @@
       text-align: right;
       width: 40%;
       a {
-        @extend .button--small;
+        @include button(small);
       }
     }
 
@@ -859,7 +859,7 @@
   .form-submit {
     text-align: right;
     input[type="submit"] {
-      @extend .button--big;
+      @include button(big);
       margin-right: 8px;
       margin-top: -16px;
     }
