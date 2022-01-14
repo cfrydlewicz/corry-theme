@@ -11,6 +11,7 @@ Concatenate the files in the following order.
 
 // Critical CSS
 //@import "layout.scss";
+//@import "organisms.scss";
 
 // Critical Utility
 //.u_visually-hidden {
@@ -20,7 +21,6 @@ Concatenate the files in the following order.
 // -------------------------------- */
 
 // Site-wide Style
-@import "organisms.scss";
 @import "texture.scss";
 
 // Listings
