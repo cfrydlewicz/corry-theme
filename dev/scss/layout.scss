@@ -248,27 +248,27 @@ blockquote {
     display: flex;
     height: 100%;
     list-style: none;
-    li {
-      align-items: stretch;
-      display: flex;
-      margin: 0;
-      a {
-        @extend .bezel--horizontal;
-        align-items: center;
-        display: flex;
-        font-size: 1rem;
-        font-weight: 500;
-        padding: 0 8px;
-        @media #{$mq_sm2} {
-          padding: 0 $gutter;
-        }
-        @media #{$mq_lg} {
-          padding: 0 $gutter_lg;
-        }
-        &:hover {
-          @extend .grainy;
-        }
-      }
+  }
+  li {
+    align-items: stretch;
+    display: flex;
+    margin: 0;
+  }
+  a {
+    @extend .bezel--horizontal;
+    align-items: center;
+    display: flex;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0 8px;
+    @media #{$mq_sm2} {
+      padding: 0 $gutter;
+    }
+    @media #{$mq_lg} {
+      padding: 0 $gutter_lg;
+    }
+    &:hover {
+      @extend .grainy;
     }
   }
 }
