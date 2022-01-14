@@ -149,11 +149,9 @@ $icons: (
 );
 @mixin icon-definitions {
   @each $label, $hex in $icons {
-    &#{$label} {
-      @include icomoon;
-    }
     &#{$label}::before,
     &#{$label}--after::after {
+      @include icomoon;
       content: #{'"\\' + $hex + '"'};
     }
   }
