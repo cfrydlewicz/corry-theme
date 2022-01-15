@@ -102,9 +102,15 @@ $icons: (
   }
   li {
     margin-bottom: 0;
+    &:not(:last-child) {
+      margin-right: 12px;
+    }
   }
   a {
     font-size: 24px;
+    &::before {
+      margin: 0;
+    }
   }
   span {
     @include visually-hidden;
