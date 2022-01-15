@@ -122,13 +122,8 @@ blockquote {
 
   &-primary,
   &-secondary {
-    background: linear-gradient(320deg, rgba($c_grey20,0.875), rgba($c_grey80,0.875));
-    @media #{$mq_mouse} {
-      background: linear-gradient(320deg, rgba($c_grey20,0.625), rgba($c_grey80,0.625));
-      &:hover {
-        background: linear-gradient(320deg, rgba($c_grey20,0.75), rgba($c_grey80,0.75));
-      }
-    }
+    // opaque until textures
+    background-color: $c_grey40;
   }
 
   &-primary .inner-wrapper {
@@ -255,6 +250,8 @@ blockquote {
 
 .site-footer {
   @include f_smallest;
+  background-color: $c_grey40;
+
   @media #{$mq_md} {
     font-size: 0.75rem;
   }
