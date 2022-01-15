@@ -534,14 +534,22 @@ body.archive {
   @extend .entry-header;
   overflow: hidden;
   position: relative;
+
   img {
-    height: auto;
+    height: 60vh;
     left: 50%;
     max-width: none;
     position: relative;
     transform: translateX(-50%);
-    width: 1024px;
+    width: auto;
+
+    @media #{$mq_md} {
+      height: auto;
+      width: 1024px;
+    }
+
   }
+
 }
 
 .srpw-content {
@@ -550,13 +558,23 @@ body.archive {
 
 .srpw-title {
   @extend .entry-title;
-  font-size: 2.5em;
+  font-size: 2em;
   font-weight: 400;
   line-height: 1;
+
+  @media #{$mq_md} {
+    font-size: 2.5em;
+    font-weight: 400;
+  }
+
 }
 
-.srpw-summary {
+.srpw-summary.srpw-summary {
+  // overrides
   line-height: inherit;
+  padding-top: 0;
+}
+.srpw-summary {
   padding-bottom: 16px;
   position: relative;
   width: 100%;
@@ -569,7 +587,11 @@ body.archive {
 }
 
 .srpw-more-link.srpw-more-link {
+  // overrides
   @include button(big);
+}
+.srpw-more-link {
+  bottom: -28px;
   position: absolute;
   right: 2%;
 }
