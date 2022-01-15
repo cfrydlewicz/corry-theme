@@ -380,16 +380,31 @@ body.archive {
       @extend a:hover;
     }
 
+  }
+
+  img {
+    height: 40vh;
+    left: 50%;
+    max-width: 1024px;
+    position: relative;
+    transform: translateX(-50%);
+    width: auto;
+  }
+
+  &:first-of-type {
+    // First Card
+
     img {
-      height: 40vh;
-      left: 50%;
-      max-width: 1024px;
-      position: relative;
-      transform: translateX(-50%);
-      width: auto;
+      height: 65vh;
+      max-width: none;
+      @media #{$mq_lg} {
+        height: auto;
+        max-height: 80vh;
+      }
     }
 
   }
+
 
   .title-container {
     @include overlay;
@@ -408,6 +423,21 @@ body.archive {
     line-height: 1;
     margin: 0 auto;
     max-width: 1024px;
+  }
+
+  &:first-of-type {
+    // First Card
+
+    .entry-title {
+      @media #{$mq_md} {
+        font-size: 3.5em;
+        font-weight: 300;
+      }
+      @media #{$mq_lg} {
+        font-size: 3em;
+      }
+    }
+
   }
 
   .entry-content {
@@ -433,6 +463,23 @@ body.archive {
       position: absolute;
       right: 0;
     }
+  }
+
+  // First Card
+  &:first-of-type {
+
+    .excerpt-container {
+      padding-bottom: 28px;
+
+      a {
+        @include button(big);
+        bottom: -15%;
+        font-weight: 800;
+        right: 2%;
+      }
+
+    }
+
   }
 
   .entry-footer {
@@ -478,47 +525,8 @@ body.archive {
     }
   }
 
-  // First Card (and Read More Card)
-  &:first-of-type {
-
-    img {
-      height: 65vh;
-      max-width: none;
-      width: auto;
-      @media #{$mq_lg} {
-        height: auto;
-        max-height: 80vh;
-        width: auto;
-      }
-    }
-
-    .entry-title {
-      @media #{$mq_md} {
-        font-size: 3.5em;
-        font-weight: 300;
-      }
-      @media #{$mq_lg} {
-        font-size: 3em;
-      }
-    }
-
-    .excerpt-container {
-      padding-bottom: 28px;
-      @media #{$mq_md} {
-        padding-bottom: 0;
-      }
-
-      a {
-        @include button(big);
-        bottom: -15%;
-        font-weight: 800;
-        right: 2%;
-      }
-
-    }
-  }
-
 }
+
 
 // Widget Article Cards
 .srpw-li {
