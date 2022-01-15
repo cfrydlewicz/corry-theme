@@ -317,6 +317,7 @@ blockquote {
 }
 
 .pagination-container {
+  background-color: $c_grey40;
   color: transparent; // hide dash between links
   margin-bottom: 48px;
 
@@ -455,6 +456,12 @@ body.archive {
     p {
       margin: 0;
       max-width: 60ch;
+      @media #{$mq_md} {
+        max-width: 52ch;
+      }
+      @media #{$mq_lg} {
+        max-width: 60ch;
+      }
     }
     a {
       @include button;
@@ -647,6 +654,7 @@ body.archive {
   }
 
   .entry-content {
+    overflow-x: hidden; // preventing horizontal scrolling for edge cases
     padding: 24px 0 36px;
   }
 

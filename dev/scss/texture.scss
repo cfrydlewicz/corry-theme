@@ -117,6 +117,7 @@
 // Listing Pages
 .pagination-container {
   @extend .bezel--vertical;
+  background-color: transparent;  // undo placeholder background
 
   a {
     @extend .bezel--horizontal;
