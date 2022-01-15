@@ -394,7 +394,7 @@ body.archive {
   .title-container {
     @include overlay;
 
-    @media #{$mq_lg} {
+    @media #{$mq_xl} {
       max-width: 100%;
       padding-left: 0;
       padding-right: 0;
