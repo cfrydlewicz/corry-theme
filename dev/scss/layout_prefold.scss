@@ -236,6 +236,12 @@ li {
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
+
+  @media #{$mq_lg} {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
 }
 
 // non-homepage listing pages
@@ -260,8 +266,17 @@ body.archive {
 
 // Article Cards
 .article-card {
+  display: flex;
+  flex-direction: column;
   margin-bottom: 48px;
   position: relative;
+
+  @media #{$mq_lg} {
+    width: 46%;
+    &:first-of-type {
+      width: 100%;
+    }
+  }
 
   .entry-header {
     background: linear-gradient(0deg, rgba($c_grey20,0.625), rgba($c_grey80,0.625));
@@ -296,7 +311,6 @@ body.archive {
     }
 
   }
-
 
   .title-container {
     @include overlay;
@@ -334,6 +348,11 @@ body.archive {
 
   .entry-content {
     padding: 12px 0;
+
+    @media #{$mq_lg} {
+      flex-grow: 1;
+    }
+
   }
 
   .excerpt-container {
@@ -382,6 +401,7 @@ body.archive {
 
   .entry-footer {
     padding: 8px 0;
+    width: 100%;
     .inner-wrapper {
       display: flex;
       flex-direction: column;
