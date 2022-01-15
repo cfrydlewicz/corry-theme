@@ -10,7 +10,7 @@ Concatenate the files in the following order.
 @import "icons.scss";
 
 // Critical CSS
-//@import "layout.scss";
+//@import "layout_prefold.scss";
 //@import "organisms.scss";
 //@import "article.scss";
 
@@ -22,6 +22,7 @@ Concatenate the files in the following order.
 // -------------------------------- */
 
 // Site-wide Style
+@import "layout.scss";
 @import "texture.scss";
 
 // Articles
