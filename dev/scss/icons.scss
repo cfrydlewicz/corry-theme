@@ -87,6 +87,10 @@ $icons: (
   }
 }
 
+.site-header-secondary .i_chat span {
+  @include visually-hidden;
+}
+
 .disclaimer {
   @extend .i_warning;
 }
