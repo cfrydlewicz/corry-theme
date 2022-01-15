@@ -5,8 +5,9 @@
 
 // Critical CSS
 @import "reset.scss";
-@import "layout.scss";
-@import "icons.scss";
+@import "layout_prefold.scss";
+@import "organisms.scss";
+@import "article.scss";
 
 // Critical Utility
 .u_visually-hidden {

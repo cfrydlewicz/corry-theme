@@ -2,53 +2,9 @@
 $border-radius: 12px;
 
 // Buttons
-.button {
-  background-color: $c_primary;
-  border-color: mix(black, $c_primary, 25%);
-  border-radius: $border-radius;
-  border-style: solid;
-  border-width: 2px;
-  color: $c_trueblack;
-  cursor: pointer;
-  display: inline-block;
-  font-weight: bold;
-  padding: 8px;
-  text-align: center;
-  text-decoration: none;
-  vertical-align: middle;
-  &:hover {
-    background-color: $c_hover;
-    border-color: mix(black, $c_hover, 25%);
-    color: $c_trueblack;
-  }
-  &:active {
-    background-color: $c_active;
-    border-color: mix(black, $c_active, 25%);
-    color: $c_trueblack;
-  }
-  &--small {
-    @extend .button;
-    @include f_small;
-    padding: 6px 4px;
-  }
-  &--big {
-    @extend .button;
-    padding: 8px 16px;
-    transform: rotate(2.5deg) scale(1.25);
-  }
-  @media #{$mq_touch} {
-    min-height: 32px;
-    min-width: 32px;
-    label & {
-      // exception for when label covers interaction
-      min-height: 0;
-      min-width: 0;
-    }
-  }
-}
 button,
 input[type="submit"] {
-  @extend .button;
+  @include button;
 }
 
 // Text Fields
@@ -125,6 +81,10 @@ label {
     border-top-left-radius: 0;
     font-size: 16px;
   }
+  button.i_search {
+    // don't show the replacement button until icons load
+    display: none;
+  }
 }
 
 // Checkboxes
@@ -151,42 +111,20 @@ input[type="checkbox"] {
   }
 }
 
-// Thumbnail Overlays
-.thumbnail-overlay {
-  background-color: rgba($c_black,0.5);
-  bottom: 0;
-  height: min-content;
-  left: 50%;
-  max-width: $thumbnail_width;
-  padding: 12px $gutter;
-  pointer-events: none;
-  position: absolute;
-  transform: translateX(-50%);
-  width: 100%;
-  @supports (backdrop-filter: blur(10px)) {
-    backdrop-filter: blur(10px);
-  }
-  @media #{$mq_lg} {
-    padding-left: $gutter_lg;
-    padding-right: $gutter_lg;
-  }
-}
-
 // Alert / Warning Boxes
-.disclaimer-container {
-  @extend .i_warning;
+.disclaimer {
+  @include f_small;
   background-color: mix(black, $c_accent, 80%);
   border-color: $c_accent;
   border-style: solid;
   border-width: 1px;
-  display: flex;
   margin-bottom: 1.25em;
   padding: 12px;
   &::before {
     font-size: 24px;
     margin-right: 12px;
   }
-  > div {
-    @include f_small;
-  }
+}
+div.disclaimer {
+  display: flex;
 }

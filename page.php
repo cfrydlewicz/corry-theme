@@ -12,8 +12,10 @@
 
       <header class="entry-header">
         <div class="inner-wrapper--at-lg">
-          <?php post_thumbnail(); ?>
-          <div class="thumbnail-overlay">
+          <a href="<?php the_post_thumbnail_url(); ?>">
+            <?php post_thumbnail(); ?>
+          </a>
+          <div class="title-container">
             <h1 id="sticky-title" class="entry-title"><?php the_title(); ?></h1>
           </div>
         </div>
@@ -25,7 +27,7 @@
         </div>
       </section>
 
-      <footer id="a_end-of-article" class="entry-footer">
+      <footer id="a_end-of-article" class="entry-footer t_slides-up">
         <div class="inner-wrapper">
           <div class="thanks-header">Thanks for reading!</div>
         </div>

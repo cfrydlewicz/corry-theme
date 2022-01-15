@@ -1,0 +1,144 @@
+/* UTILITY CLASSES */
+
+// Display
+.u_hidden {
+  display: none;
+}
+.u_show--md,
+.u_show--lg,
+.u_show--xl {
+  display: none;
+}
+@media #{$mq_md} {
+  .u_hide--md {
+    display: none;
+  }
+  .u_show--md {
+    display: initial;
+  }
+}
+@media #{$mq_lg} {
+  .u_hide--lg {
+    display: none;
+  }
+  .u_show--lg {
+    display: initial;
+  }
+}
+
+// Text
+.u_uppercase {
+  text-transform: uppercase;
+}
+.u_lowercase {
+  text-transform: lowercase;
+}
+.u_nowrap {
+  white-space: nowrap;
+}
+.u_break-line {
+  // Let long space-less text (like URLs) break lines
+  overflow-wrap: break-word;
+  word-break: break-word;
+  word-wrap: break-word;
+}
+
+/* Accessibility */
+.u_visually-hidden {
+  @include visually-hidden;
+}
+
+/* Clickable non-<a> elements */
+.u_clickable {
+  cursor: pointer;
+}
+
+/* Flex box */
+.u_flex {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  /* flows */
+  &.u_flex--row-wrap {
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+  }
+  &.u_flex--col {
+    -webkit-flex-flow: column wrap;
+    flex-flow: column wrap;
+  }
+
+  /* alignment & spacing */
+  &.u_flex--space-around {
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+  }
+  &.u_flex--space-between {
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+  }
+  &.u_flex--center {
+    -webkit-justify-content: center;
+    justify-content: center;
+  }
+  &.u_flex--vertcenter {
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    align-items: center;
+  }
+
+  /* Flexbox child elements */
+  > .u_flex--grow1 {
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+  }
+
+}
+@media #{$mq_md} {
+  .u_flex {
+    &.u_flex--row-nowrap--md {
+      -webkit-flex-flow: row nowrap;
+      flex-flow: row nowrap;
+    }
+    &.u_flex--row-wrap--md {
+      -webkit-flex-flow: row wrap;
+      flex-flow: row wrap;
+    }
+    &.u_flex--col--md {
+      -webkit-flex-flow: column wrap;
+      flex-flow: column wrap;
+    }
+  }
+}
+@media #{$mq_lg} {
+  .u_flex {
+    &.u_flex--row-nowrap--lg {
+      -webkit-flex-flow: row nowrap;
+      flex-flow: row nowrap;
+    }
+    &.u_flex--row-wrap--lg {
+      -webkit-flex-flow: row wrap;
+      flex-flow: row wrap;
+    }
+    &.u_flex--col--lg {
+      -webkit-flex-flow: column wrap;
+      flex-flow: column wrap;
+    }
+  }
+}
+
+// Float & Clear
+.u_clear {
+  clear: both;
+}
+.u_clearfix::after {
+  clear: both;
+  content: '';
+  visibility: hidden;
+  display: block;
+  height: 0px;
+}
