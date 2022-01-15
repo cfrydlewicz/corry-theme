@@ -79,7 +79,7 @@ $icons: (
 
 // Show Icons When Ready and Hide ALT text (for critical css)
 .search-container {
-  input[type="search"] {
+  input[type="submit"] {
     @include visually-hidden;
   }
   button.i_search {
