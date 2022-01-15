@@ -429,8 +429,6 @@ body.archive {
     a {
       @include button;
       @include f_medium;
-      bottom: 0;
-      font-weight: 800;
       position: absolute;
       right: 0;
     }
@@ -511,6 +509,9 @@ body.archive {
 
       a {
         @include button(big);
+        bottom: -15%;
+        font-weight: 800;
+        right: 2%;
       }
 
     }
@@ -569,6 +570,8 @@ body.archive {
 
 .srpw-more-link.srpw-more-link {
   @include button(big);
+  position: absolute;
+  right: 2%;
 }
 
 
