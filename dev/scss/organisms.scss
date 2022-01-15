@@ -51,7 +51,6 @@ label {
   label {
     align-items: center;
     display: flex;
-    padding: 4px 4px 4px 0;
     @media #{$mq_touch} {
       min-height: 32px;
       min-width: 32px;
