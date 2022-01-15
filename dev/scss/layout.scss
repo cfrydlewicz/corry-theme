@@ -668,6 +668,11 @@ body.archive {
     padding-left: 0;
     padding-right: 0;
 
+    .post-footer_header {
+      margin-left: $gutter;
+      margin-right: $gutter;
+    }
+
     .widget-area {
       margin: 0 auto;
       max-width: $thumbnail_width;
