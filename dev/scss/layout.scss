@@ -429,6 +429,7 @@ body.archive {
     a {
       @include button;
       @include f_medium;
+      bottom: 0;
       position: absolute;
       right: 0;
     }
