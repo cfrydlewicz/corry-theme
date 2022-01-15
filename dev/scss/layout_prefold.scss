@@ -440,6 +440,7 @@ body.archive {
       // Post Thumbnail
       height: 80vh;
       left: 50%;
+      max-height: 80vh;
       max-width: none;
       position: relative;
       transform: translateX(-50%);
@@ -447,7 +448,6 @@ body.archive {
       @media #{$mq_md} {
         height: auto;
         max-width: $thumbnail_width;
-        width: $thumbnail_width;
       }
     }
 
