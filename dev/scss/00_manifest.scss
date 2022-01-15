@@ -5,28 +5,27 @@ SCSS MANIFEST
 Concatenate the files in the following order.
 */
 
+//@import "reset.scss";
 @import "mixins.scss";
-
-// Critical CSS
-@import "reset.scss";
-@import "layout.scss";
 @import "icons.scss";
 
-// Critical Utility
-.u_visually-hidden {
-  @include visually-hidden;
-}
+// Critical CSS
+//@import "layout_prefold.scss";
+//@import "organisms.scss";
+//@import "article.scss";
 
-// --------------------------------
+// Critical Utility
+//.u_visually-hidden {
+//  @include visually-hidden;
+//}
+
+// -------------------------------- */
 
 // Site-wide Style
-@import "organisms.scss";
-
-// Listings
-@import "listings.scss";
+@import "layout.scss";
+@import "texture.scss";
 
 // Articles
-@import "article.scss";
 //@import "article_animosity.scss";
 //@import "article_mtg-deck.scss";
 //@import "article_recipe.scss";

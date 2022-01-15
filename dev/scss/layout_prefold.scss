@@ -1,0 +1,474 @@
+// Above the fold layout
+
+body {
+  color: $c_basetext;
+  font-family: 'Montserrat', helvetica, sans-serif; // critical
+  font-size: 16px;  // establishes rem basis
+  @media #{$mq_md} {
+    font-size: 16px;
+  }
+  @media #{$mq_lg} {
+    font-size: 18px;
+  }
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.inner-wrapper {
+  padding: 0 $gutter;
+  width: 100%;
+}
+@media #{$mq_md} {
+  .inner-wrapper--at-md {
+    padding: 0 $gutter;
+    width: 100%;
+  }
+}
+@media #{$mq_lg} {
+  .inner-wrapper,
+  .inner-wrapper--at-md,
+  .inner-wrapper--at-lg {
+    margin: 0 auto;
+    max-width: $thumbnail_width + $gutter_lg*2;
+    padding: 0 $gutter_lg;
+  }
+  .inner-wrapper--at-lg {
+    width: 100%;
+  }
+}
+
+
+.total-wrapper {
+  background-color: $c_dark-base;
+  min-width: $bp_min;
+  position: relative;
+}
+
+
+// General Definitions
+strong {
+  font-weight: bold;
+}
+em {
+  font-style: italic;
+}
+a {
+  color: $c_link;
+  text-decoration: none;
+  &:hover {
+    color: $c_hover;
+  }
+  &:active {
+    color: $c_active;
+    cursor: wait;
+  }
+  &::after,
+  &::before {
+    // for links with icons
+    font-size: 0.75em;
+    margin: 0 0.375em;
+  }
+}
+p {
+  line-height: 1.5; // Accessibility standards recommend 1.5 - 2.0
+  &:not(:last-child) {
+    margin-bottom: 0.5em;
+  }
+}
+li {
+  line-height: 1.2;
+  &:not(:last-child) {
+    margin-bottom: 0.5em;
+  }
+}
+
+
+// Specific Zones
+.site-header {
+  // Above-the-fold and nav elements should be considered for critical css
+  backface-visibility: hidden; // fixed position fix for old mobile browsers
+  position: fixed;
+  width: 100vw;
+  z-index: 1;
+
+  .inner-wrapper {
+    align-items: stretch;
+    display: flex;
+    padding-left: 0;
+    padding-right: 0;
+    @media #{$mq_lg} {
+      max-width: $thumbnail_width;
+    }
+  }
+
+  &-primary,
+  &-secondary {
+    // opaque until textures
+    background-color: $c_grey40;
+  }
+
+  &-primary .inner-wrapper {
+    height: $header_height;
+  }
+
+  &-secondary {
+    display: none; // show with JS
+
+    .inner-wrapper {
+      @include f_smaller;
+      display: flex;
+      height: 30px;
+      justify-content: space-between;
+    }
+
+    a {
+      align-items: center;
+      display: flex;
+      height: 100%;
+      min-width: 40px;
+      padding: 4px $gutter;
+    }
+
+    .title {
+      flex-grow: 1;
+      overflow-x: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+  }
+
+}
+
+.header-logo {
+  flex-grow: 1;
+  svg {
+    height: 150%; // let the y dangle over
+    max-height: 48px;
+    z-index: 2;
+  }
+  path {
+    fill: $c_link;
+  }
+  a {
+    display: block;
+    height: 100%;
+    padding: 4px;
+    @media #{$mq_sm2} {
+      padding-left: $gutter;
+      padding-right: $gutter;
+    }
+    @media #{$mq_lg} {
+      padding-left: $gutter_lg;
+      padding-right: $gutter_lg;
+    }
+    &:hover {
+      path {
+        fill: $c_hover;
+      }
+    }
+  }
+}
+
+.header-nav {
+  > div {
+    height: 100%;
+  }
+  ul {
+    display: flex;
+    height: 100%;
+    list-style: none;
+  }
+  li {
+    align-items: stretch;
+    display: flex;
+    margin: 0;
+  }
+  a {
+    align-items: center;
+    display: flex;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0 8px;
+    @media #{$mq_sm2} {
+      padding: 0 $gutter;
+    }
+    @media #{$mq_lg} {
+      padding: 0 $gutter_lg;
+    }
+  }
+}
+
+.header-search {
+
+  .search-container {
+    height: 100%;
+    label {
+      padding-bottom: 6px;
+      padding-top: 6px;
+      &:first-of-type {
+        padding-left: 8px;
+        @media #{$mq_sm2} {
+          padding-left: $gutter;
+        }
+        @media #{$mq_lg} {
+          padding-left: $gutter_lg;
+        }
+      }
+      &:last-of-type {
+        padding-right: 4px;
+        @media #{$mq_sm2} {
+          padding-right: $gutter;
+        }
+        @media #{$mq_lg} {
+          padding-right: $gutter_lg;
+        }
+      }
+    }
+  }
+
+}
+
+
+// Listing Pages
+.listing-page {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+// non-homepage listing pages
+body.category,
+body.tag,
+body.search,
+body.archive {
+
+  main {
+    padding-top: $header_height + 8;
+  }
+
+  .listing-page-header {
+    padding: 8px 0;
+  }
+  .page-title {
+    @include f_larger;
+  }
+
+}
+
+
+// Article Cards
+.article-card {
+  margin-bottom: 48px;
+  position: relative;
+
+  .entry-header {
+    background: linear-gradient(0deg, rgba($c_grey20,0.625), rgba($c_grey80,0.625));
+    overflow: hidden;
+    position: relative;
+
+    &:hover a {
+      @extend a:hover;
+    }
+
+  }
+
+  img {
+    height: 40vh;
+    left: 50%;
+    max-width: 1024px;
+    position: relative;
+    transform: translateX(-50%);
+    width: auto;
+  }
+
+  &:first-of-type {
+    // First Card
+
+    img {
+      height: 65vh;
+      max-width: none;
+      @media #{$mq_lg} {
+        height: auto;
+        max-height: 80vh;
+      }
+    }
+
+  }
+
+
+  .title-container {
+    @include overlay;
+
+    @media #{$mq_xl} {
+      max-width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+  }
+
+  .entry-title {
+    font-size: 2.125em;
+    font-weight: 400;
+    line-height: 1;
+    margin: 0 auto;
+    max-width: 1024px;
+  }
+
+  &:first-of-type {
+    // First Card
+
+    .entry-title {
+      @media #{$mq_md} {
+        font-size: 3.5em;
+        font-weight: 300;
+      }
+      @media #{$mq_lg} {
+        font-size: 3em;
+      }
+    }
+
+  }
+
+  .entry-content {
+    padding: 12px 0;
+  }
+
+  .excerpt-container {
+    padding-bottom: 44px;
+    position: relative;
+    width: 100%;
+    @media #{$mq_md} {
+      min-height: 38px; // enough space for CTA
+      padding-bottom: 0;
+    }
+    p {
+      margin: 0;
+      max-width: 60ch;
+      @media #{$mq_md} {
+        max-width: 52ch;
+      }
+      @media #{$mq_lg} {
+        max-width: 60ch;
+      }
+    }
+    a {
+      @include button;
+      @include f_medium;
+      bottom: 0;
+      position: absolute;
+      right: 0;
+    }
+  }
+
+  // First Card
+  &:first-of-type {
+
+    .excerpt-container {
+      padding-bottom: 28px;
+
+      a {
+        @include button(big);
+        bottom: -15%;
+        font-weight: 800;
+        right: 2%;
+      }
+
+    }
+
+  }
+
+  .entry-footer {
+    padding: 8px 0;
+    .inner-wrapper {
+      display: flex;
+      flex-direction: column;
+      @media #{$mq_md} {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+    .post-stats,
+    .post-categories a {
+      @include f_small;
+    }
+    .post-categories {
+      display: flex;
+      flex-wrap: wrap;
+      @media #{$mq_md} {
+        flex-wrap: nowrap;
+      }
+      li {
+        display: inline;
+        margin-bottom: 0;
+        &:not(:last-child)::after {
+          content: ', ';
+          margin-right: 0.25em;
+        }
+      }
+      a {
+        white-space: nowrap;
+      }
+    }
+  }
+
+  @media #{$mq_lg} {
+    .entry-content,
+    .entry-footer {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: $thumbnail_width;
+    }
+  }
+
+}
+
+
+// Article and Page Structure
+.article-content {
+
+  .entry-header {
+    overflow-x: hidden;
+    position: relative;
+    @media #{$mq_lg} {
+      background: linear-gradient(0deg, rgba($c_grey20,0.625), rgba($c_grey80,0.625));
+    }
+
+    img {
+      // Post Thumbnail
+      height: 80vh;
+      left: 50%;
+      max-width: none;
+      position: relative;
+      transform: translateX(-50%);
+      width: auto;
+      @media #{$mq_md} {
+        height: auto;
+        max-width: $thumbnail_width;
+        width: $thumbnail_width;
+      }
+    }
+
+  }
+
+  .title-container {
+    @include overlay;
+    max-width: 100%;
+    padding-bottom: 16px;
+  }
+
+  .entry-title,
+  .post-meta {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1024px;
+  }
+
+  .entry-content {
+    overflow-x: hidden; // preventing horizontal scrolling for edge cases
+    padding: 24px 0 36px;
+  }
+
+}
