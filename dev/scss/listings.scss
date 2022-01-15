@@ -1,0 +1,235 @@
+// Listing Pages
+.listing-page {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.pagination-container {
+  @extend .bezel--vertical;
+  color: transparent; // hide dash between links
+  margin-bottom: 48px;
+
+  .inner-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    @media #{$mq_lg} {
+      max-width: $thumbnail_width;
+    }
+  }
+
+  a {
+    @extend .bezel--horizontal;
+    padding: 8px $gutter;
+    @media #{$mq_lg} {
+      padding-left: $gutter_lg;
+      padding-right: $gutter_lg;
+    }
+    &:last-child {
+      @extend .i_arrow-right--after;
+      margin-left: auto;
+    }
+    &:first-child:not(:last-child) {
+      @extend .i_arrow-left;
+      margin-right: auto;
+    }
+  }
+
+}
+
+// non-homepage listing pages
+body.category,
+body.tag,
+body.search,
+body.archive {
+
+  main {
+    padding-top: $header_height + 8;
+  }
+
+  .listing-page-header {
+    padding: 8px 0;
+  }
+  .page-title {
+    @include f_larger;
+  }
+
+}
+
+// Article Cards
+.article-card {
+  margin-bottom: 48px;
+  position: relative;
+
+  .entry-header {
+    background: linear-gradient(0deg, rgba($c_grey20,0.625), rgba($c_grey80,0.625));
+    overflow: hidden;
+    position: relative;
+
+    &:hover a {
+      @extend a:hover;
+    }
+
+    img {
+      height: 40vh;
+      left: 50%;
+      max-width: 1024px;
+      position: relative;
+      transform: translateX(-50%);
+      width: auto;
+    }
+    @media only screen and (max-width: 1023px) and (pointer: fine) {
+      img {
+        transition: all 0.2s ease-in-out;
+      }
+      &:hover img {
+        transform: scale(1.125);
+      }
+    }
+  }
+  .title-container {
+    @extend .thumbnail-overlay;
+  }
+  .entry-title {
+    font-size: 2.125em;
+    font-weight: 400;
+    line-height: 1;
+  }
+
+  .entry-content {
+    @extend .bezel;
+    @extend .grainy;
+    padding: 12px 0;
+  }
+
+  .excerpt-container {
+    padding-bottom: 44px;
+    position: relative;
+    width: 100%;
+    @media #{$mq_md} {
+      min-height: 38px; // enough space for CTA
+      padding-bottom: 0;
+    }
+    p {
+      margin: 0;
+      max-width: 60ch;
+    }
+    a {
+      @extend .button;
+      @include f_medium;
+      bottom: 0;
+      font-weight: 800;
+      position: absolute;
+      right: 0;
+    }
+    @media #{$mq_mouse} {
+      a::after {
+        transition: all 0.2s ease-in-out;
+      }
+      a:hover::after {
+        margin: 0 0 0 0.75em;
+      }
+    }
+  }
+
+  .entry-footer {
+    @extend .bezel;
+    @extend .grainy;
+    padding: 8px 0;
+    .inner-wrapper {
+      display: flex;
+      flex-direction: column;
+      @media #{$mq_md} {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+    .post-stats,
+    .post-categories a {
+      @include f_small;
+    }
+    .post-categories {
+      display: flex;
+      flex-wrap: wrap;
+      @media #{$mq_md} {
+        flex-wrap: nowrap;
+      }
+      li {
+        display: inline;
+        margin-bottom: 0;
+        &:not(:last-child)::after {
+          content: ', ';
+          margin-right: 0.25em;
+        }
+      }
+      a {
+        white-space: nowrap;
+      }
+    }
+  }
+
+  @media #{$mq_lg} {
+    .entry-content,
+    .entry-footer {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: $thumbnail_width;
+    }
+  }
+
+  // First Card (and Read More Card)
+  &:first-of-type {
+
+    img {
+      height: 65vh;
+      max-width: none;
+      width: auto;
+      @media #{$mq_lg} {
+        height: auto;
+        max-height: 80vh;
+        width: auto;
+      }
+    }
+
+    @media #{$mq_lg} {
+      .title-container {
+        max-width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+
+    .entry-title {
+      margin: 0 auto;
+      max-width: 1024px;
+      @media #{$mq_md} {
+        font-size: 3.5em;
+        font-weight: 300;
+      }
+      @media #{$mq_lg} {
+        font-size: 3em;
+      }
+    }
+
+    .excerpt-container {
+      padding-bottom: 28px;
+      @media #{$mq_md} {
+        padding-bottom: 0;
+      }
+
+      a {
+        bottom: -16px;
+        padding: 8px 16px;
+        right: 2%;
+        transform: rotate(2.5deg) scale(1.25);
+        @media #{$mq_md} {
+          bottom: 7px;
+        }
+      }
+
+    }
+  }
+
+}
