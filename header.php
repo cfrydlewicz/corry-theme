@@ -74,8 +74,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,800;1,300;1,400;1,500&display=swap" rel="stylesheet">
 
-  <link rel="preload" type="text/css" href="<?php bloginfo('template_url');?>/critical.min.css">
-  <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url');?>/critical.min.css">
+  <link rel="preload" as="style" onload="this.rel='stylesheet'" type="text/css" href="<?php bloginfo('template_url');?>/critical.min.css">
+  <noscript>
+    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url');?>/critical.min.css">
+  </noscript>
   <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url');?>/style.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
