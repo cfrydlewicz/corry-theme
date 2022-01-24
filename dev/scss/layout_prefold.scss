@@ -365,6 +365,11 @@ body.archive {
     @media #{$mq_lg} {
       flex-grow: 1;
       width: 100%;
+
+      .inner-wrapper {
+        height: 100%;
+      }
+
     }
 
   }
@@ -378,6 +383,7 @@ body.archive {
       padding-bottom: 0;  // side-by-side CTA and excerpt
     }
     @media #{$mq_lg} {
+      height: 100%;
       padding-bottom: 44px;
     }
     p {
