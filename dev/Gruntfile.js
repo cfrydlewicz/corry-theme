@@ -46,7 +46,7 @@ module.exports = function(grunt) {
       },
       mincritical: {
         src: 'css/critical.concat.css',
-        dest: 'css/critical.min.css'
+        dest: '../critical.min.css'
       }
     },
 
