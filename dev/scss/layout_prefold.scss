@@ -324,20 +324,24 @@ body.archive {
   }
 
   .entry-title {
-    -webkit-box-orient: vertical;
-    color: $c_link; // for the ellipsis
-    display: -webkit-box;
     font-size: 2.125em;
     font-weight: 400;
-    -webkit-line-clamp: 5;
     line-height: 1;
     margin: 0 auto;
     max-width: 1024px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    &:hover {
-      color: $c_hover; // for the ellipsis
+
+    @supports (-webkit-line-clamp: 5) {
+      -webkit-box-orient: vertical;
+      color: $c_link; // for the ellipsis
+      display: -webkit-box;
+      -webkit-line-clamp: 5;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      &:hover {
+        color: $c_hover; // for the ellipsis
+      }
     }
+
   }
 
   &:first-of-type {
