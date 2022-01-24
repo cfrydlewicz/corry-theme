@@ -71,7 +71,6 @@
   margin-bottom: 48px;
 
   @media #{$mq_lg} {
-    border-width: 0;
     width: 46%;
 
     .inner-wrapper {
@@ -80,8 +79,16 @@
     }
 
     a {
-      border-width: 1px;
       margin-right: auto;
+    }
+
+    &.pagination-container {  // overpower the previous selector
+      border-width: 0;
+
+      a {
+        border-width: 1px;
+      }
+
     }
 
   }
