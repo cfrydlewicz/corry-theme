@@ -1,0 +1,74 @@
+// Critical Inline CSS
+// Inserted into a <style> tag in the <head> so it loads instantly
+
+@import "reset.scss";
+@import "mixins.scss";
+
+// Critical Utility
+.u_visually-hidden {
+  @include visually-hidden;
+}
+
+// Skeleton
+body {
+  font-family: 'Montserrat', helvetica, sans-serif; // critical
+  font-size: 16px;  // establishes rem basis
+  @media #{$mq_md} {
+    font-size: 16px;
+  }
+  @media #{$mq_lg} {
+    font-size: 18px;
+  }
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.inner-wrapper {
+  padding: 0 $gutter;
+  width: 100%;
+}
+@media #{$mq_md} {
+  .inner-wrapper--at-md {
+    padding: 0 $gutter;
+    width: 100%;
+  }
+}
+@media #{$mq_lg} {
+  .inner-wrapper,
+  .inner-wrapper--at-md,
+  .inner-wrapper--at-lg {
+    margin: 0 auto;
+    max-width: $thumbnail_width + $gutter_lg*2;
+    padding: 0 $gutter_lg;
+  }
+  .inner-wrapper--at-lg {
+    width: 100%;
+  }
+}
+
+.total-wrapper {
+  min-width: $bp_min;
+  position: relative;
+}
+
+.site-header {
+  backface-visibility: hidden; // fixed position fix for old mobile browsers
+  position: fixed;
+  width: 100vw;
+  z-index: 1;
+
+  .inner-wrapper {
+    align-items: stretch;
+    display: flex;
+    padding-left: 0;
+    padding-right: 0;
+    @media #{$mq_lg} {
+      max-width: $thumbnail_width;
+    }
+  }
+
+  &-primary .inner-wrapper {
+    height: $header_height;
+  }
+
+}
