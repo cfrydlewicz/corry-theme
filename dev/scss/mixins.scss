@@ -56,13 +56,13 @@ $bp_xl:  1024px + $gutter_lg*2; // Laptops, Desktops
 
 
 // Media Query Shortcuts
-$mq_sm      : "only screen and (min-width: #{$bp_sm})" !default;
-$mq_sm2     : "only screen and (min-width: #{$bp_sm2})" !default;
-$mq_md      : "only screen and (min-width: #{$bp_md})" !default;
-$mq_lg      : "only screen and (min-width: #{$bp_lg})" !default;
-$mq_xl      : "only screen and (min-width: #{$bp_xl})" !default;
-$mq_touch   : "only screen and (pointer: coarse)" !default;
-$mq_mouse   : "only screen and (pointer: fine)" !default;
+$mq_sm      : "only screen and (min-width: #{$bp_sm})";
+$mq_sm2     : "only screen and (min-width: #{$bp_sm2})";
+$mq_md      : "only screen and (min-width: #{$bp_md})";
+$mq_lg      : "only screen and (min-width: #{$bp_lg})";
+$mq_xl      : "only screen and (min-width: #{$bp_xl})";
+$mq_touch   : "only screen and (pointer: coarse)";
+$mq_mouse   : "only screen and (pointer: fine)";
 
 
 // Font Sizes

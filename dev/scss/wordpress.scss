@@ -3,17 +3,6 @@
 // Backend Helpers
 body.admin-bar.logged-in {
 
-  // Switch Off the WP Admin bar
-  /*
-  margin-top: -32px !important;
-  @media only screen and (max-width: 782px) {
-    margin-top: -46px !important;
-  }
-  #wpadminbar {
-    display: none;
-  }
-  */
-
   &.single,
   &.page {
 
