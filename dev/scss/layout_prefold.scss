@@ -371,7 +371,10 @@ body.archive {
     width: 100%;
     @media #{$mq_md} {
       min-height: 38px; // enough space for CTA
-      padding-bottom: 0;
+      padding-bottom: 0;  // side-by-side CTA and excerpt
+    }
+    @media #{$mq_lg} {
+      padding-bottom: 44px;
     }
     p {
       margin: 0;
