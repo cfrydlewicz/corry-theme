@@ -216,7 +216,13 @@ body.error404 {
 body.error404 {
 
   main {
-    margin-bottom: 48px;
+    padding-bottom: 48px;
+  }
+
+  .article-card:first-of-type img {
+    height: auto;
+    max-width: 1024px;
+    width: 100%;
   }
 
   .site-footer {

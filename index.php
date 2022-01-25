@@ -78,8 +78,8 @@
       <div class="entry-content">
         <div class="inner-wrapper">
           <div class="excerpt-container">
-            <p>I couldn't find what you're looking for. Please <a href="#a_search" onclick="$('#header-search-field').focus();">try another search</a> or ...</p>
-            <a href="/" class="i_arrow-right--after">Return to the Homepage</a>
+            <p>I couldn't find what you're looking for. Please try another search or return to the ...</p>
+            <a href="/" class="i_arrow-right--after">Homepage</a>
           </div>
         </div>
       </div><!--.entry-content-->
