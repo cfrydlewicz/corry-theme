@@ -71,16 +71,16 @@
       <header class="entry-header">
         <img src="<?php bloginfo('template_url');?>/assets/404.jpg">
         <div class="title-container">
-          <h2 class="entry-title">No Results Found</h2>
+          <h1 class="entry-title">No Results Found</h1>
         </div>
       </header>
 
       <div class="entry-content">
         <div class="inner-wrapper">
-          <div class="title-container">
-            <div class="entry-title">Sorry!</div>
+          <div class="excerpt-container">
+            <p>I couldn't find what you're looking for. Please <a href="#a_search" onclick="$('#header-search-field').focus();">try another search</a> or ...</p>
+            <a href="/" class="i_arrow-right--after">Return to the Homepage</a>
           </div>
-          <p>I couldn't find what you're looking for. Please <a href="#a_search" onclick="$('#header-search-field').focus();">try another search</a> or <a href="/">return to the home page</a>.</p>
         </div>
       </div><!--.entry-content-->
 
