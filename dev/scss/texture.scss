@@ -135,9 +135,18 @@
 // Article Cards
 .article-card {
 
-  // Zoom thumbnails on hover
-  @media only screen and (max-width: 1023px) and (pointer: fine) {
-    .entry-header {
+  .entry-content,
+  .entry-footer {
+    @extend .bezel;
+    @extend .grainy;
+  }
+
+}
+
+// Zoom thumbnails on hover
+@media only screen and (max-width: 1023px) and (pointer: fine) {
+  body:not(.error404) { // exceptions
+    .article-card .entry-header {
       img {
         transition: all 0.2s ease-in-out;
       }
@@ -146,13 +155,6 @@
       }
     }
   }
-
-  .entry-content,
-  .entry-footer {
-    @extend .bezel;
-    @extend .grainy;
-  }
-
 }
 
 
