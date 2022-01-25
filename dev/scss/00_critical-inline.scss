@@ -153,3 +153,10 @@ body {
   }
 
 }
+
+.article-card {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 48px;
+  position: relative;
+}
