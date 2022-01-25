@@ -87,6 +87,10 @@ body {
       height: 100%;
       min-width: 40px;
       padding: 4px $gutter;
+      @media #{$mq_lg} {
+        padding-left: $gutter_lg;
+        padding-right: $gutter_lg;
+      }
     }
 
     .title {
