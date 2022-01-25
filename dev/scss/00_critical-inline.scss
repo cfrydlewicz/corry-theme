@@ -192,7 +192,8 @@ body {
 body.category,
 body.tag,
 body.search,
-body.archive {
+body.archive,
+body.error404 {
 
   main {
     padding-top: $header_height + 8;
@@ -206,6 +207,16 @@ body.archive {
 
   .page-title {
     @include f_larger;
+  }
+
+}
+
+
+// 404 Page
+body.error404 {
+
+  main {
+    margin-bottom: 48px;
   }
 
 }

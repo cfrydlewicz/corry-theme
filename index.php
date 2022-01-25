@@ -12,7 +12,7 @@
         <?php elseif ( is_search() ) : ?>
           <h1 id="sticky-title" class="page-title">Search Results for <strong><?php echo esc_html($_GET['s']); ?></strong></h1>
         <?php else : ?>
-          <!--Unknown Page Type-->
+          <div class="page-title">Oops!</div>
         <?php endif; ?>
       </div>
     </header>
@@ -66,7 +66,7 @@
 
   <?php else : ?>
 
-    <article id="post error404">
+    <article id="error404" class="article-card">
 
       <header class="entry-header">
         <img src="<?php bloginfo('template_url');?>/assets/404.jpg">
