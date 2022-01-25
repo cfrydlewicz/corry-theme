@@ -122,6 +122,11 @@ $icons: (
     }
   }
 
+  // Email links
+  a[href*="mailto:"] {
+    @extend .i_mail;
+  }
+
   // URL Detection
   a[href*="amazon.com"] {
     @extend .i_shopping;
