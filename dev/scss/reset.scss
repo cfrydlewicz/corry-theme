@@ -47,6 +47,10 @@ caption, th, td {
   text-align: left;
   font-weight: normal;
 }
+button {
+  border-width: 0;
+  padding: 0;
+}
 blockquote::before, blockquote::after,
 q::before, q::after {
   content: none;

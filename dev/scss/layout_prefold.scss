@@ -204,6 +204,7 @@ li {
   .search-container {
     height: 100%;
     label {
+      display: inline-block;
       padding-bottom: 6px;
       padding-top: 6px;
       &:first-of-type {
