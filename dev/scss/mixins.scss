@@ -65,20 +65,6 @@ $mq_touch   : "only screen and (pointer: coarse)";
 $mq_mouse   : "only screen and (pointer: fine)";
 
 
-// Font-face declarations
-@font-face {
-  font-display: swap;
-  font-family: 'icomoon';
-  font-style: normal;
-  font-weight: normal;
-  src:url('assets/fonts/icomoon.eot?byte2f');
-  src:url('assets/fonts/icomoon.eot?byte2f#iefix') format('embedded-opentype'),
-    url('assets/fonts/icomoon.ttf?byte2f') format('truetype'),
-    url('assets/fonts/icomoon.woff?byte2f') format('woff'),
-    url('assets/fonts/icomoon.svg?byte2f#icomoon') format('svg');
-}
-
-
 // Font Sizes
 @mixin f_smallest {
   font-size: 12px;

@@ -13,9 +13,6 @@
 body {
   font-family: 'Montserrat', helvetica, sans-serif; // critical
   font-size: 16px;  // establishes rem basis
-  @media #{$mq_md} {
-    font-size: 16px;
-  }
   @media #{$mq_lg} {
     font-size: 18px;
   }
@@ -27,21 +24,12 @@ body {
   padding: 0 $gutter;
   width: 100%;
 }
-@media #{$mq_md} {
-  .inner-wrapper--at-md {
-    padding: 0 $gutter;
-    width: 100%;
-  }
-}
 @media #{$mq_lg} {
   .inner-wrapper,
-  .inner-wrapper--at-md,
   .inner-wrapper--at-lg {
     margin: 0 auto;
     max-width: $thumbnail_width + $gutter_lg*2;
     padding: 0 $gutter_lg;
-  }
-  .inner-wrapper--at-lg {
     width: 100%;
   }
 }
@@ -156,49 +144,37 @@ body {
   }
 }
 
-.header-search {
-
-  .search-container {
-    height: 100%;
-    label {
-      display: inline-block;
-      padding-bottom: 6px;
-      padding-top: 6px;
-      &:first-of-type {
-        padding-left: 8px;
-        @media #{$mq_sm2} {
-          padding-left: $gutter;
-        }
-        @media #{$mq_lg} {
-          padding-left: $gutter_lg;
-        }
+.header-search .search-container {
+  height: 100%;
+  label {
+    display: inline-block;
+    padding-bottom: 6px;
+    padding-top: 6px;
+    &:first-of-type { // Search field
+      padding-left: 8px;
+      @media #{$mq_sm2} {
+        padding-left: $gutter;
       }
-      &:last-of-type {
-        padding-right: 4px;
-        @media #{$mq_sm2} {
-          padding-right: $gutter;
-        }
-        @media #{$mq_lg} {
-          padding-right: $gutter_lg;
-        }
+      @media #{$mq_lg} {
+        padding-left: $gutter_lg;
+      }
+    }
+    &:last-of-type { // Search button
+      padding-right: 4px;
+      @media #{$mq_sm2} {
+        padding-right: $gutter;
+      }
+      @media #{$mq_lg} {
+        padding-right: $gutter_lg;
       }
     }
   }
-
 }
 
 
 // non-homepage listing pages
-body.category,
-body.tag,
-body.search,
-body.archive,
-body.error404 {
-
-  main {
-    padding-top: $header_height + 8;
-  }
-
+body:not(.home) main.listing-page {
+  padding-top: $header_height + 8;
 }
 
 .listing-page-header {
@@ -216,6 +192,7 @@ body.error404 {
 body.error404 {
 
   main {
+    // short page
     padding-bottom: 48px;
   }
 
