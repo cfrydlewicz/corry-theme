@@ -71,6 +71,33 @@ body {
     height: $header_height;
   }
 
+  &-secondary {
+    display: none; // show with JS
+
+    .inner-wrapper {
+      @include f_smaller;
+      display: flex;
+      height: 30px;
+      justify-content: space-between;
+    }
+
+    a {
+      align-items: center;
+      display: flex;
+      height: 100%;
+      min-width: 40px;
+      padding: 4px $gutter;
+    }
+
+    .title {
+      flex-grow: 1;
+      overflow-x: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+  }
+
 }
 
 .header-logo {
