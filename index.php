@@ -78,7 +78,7 @@
       <div class="entry-content">
         <div class="inner-wrapper">
           <div class="excerpt-container">
-            <p>I couldn't find what you're looking for. Please try another search or return to the ...</p>
+            <p>I couldn't find what you're looking for. Please try another search or <span style="white-space: nowrap;">return to the ...</span></p>
             <a href="/" class="i_arrow-right--after">Homepage</a>
           </div>
         </div>
