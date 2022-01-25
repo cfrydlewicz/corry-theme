@@ -186,6 +186,31 @@ body {
 
 }
 
+
+// non-homepage listing pages
+body.category,
+body.tag,
+body.search,
+body.archive {
+
+  main {
+    padding-top: $header_height + 8;
+  }
+
+}
+
+.listing-page-header {
+  padding: 8px 0;
+  width: 100%;
+
+  .page-title {
+    @include f_larger;
+  }
+
+}
+
+
+// Article Cards
 .article-card {
   display: flex;
   flex-direction: column;
