@@ -112,18 +112,13 @@ li {
     width: auto;
   }
 
-  &:first-of-type {
-    // First Card
-
-    img {
-      height: 65vh;
-      max-width: none;
-      @media #{$mq_lg} {
-        height: auto;
-        max-height: 80vh;
-      }
+  &:first-of-type img {
+    height: 65vh;
+    max-width: none;
+    @media #{$mq_lg} {
+      height: auto;
+      max-height: 80vh;
     }
-
   }
 
   .title-container {
@@ -131,10 +126,15 @@ li {
 
     @media #{$mq_xl} {
       max-width: 100%;
+    }
+
+  }
+
+  &:first-of-type .title-container {
+    @media #{$mq_xl} {
       padding-left: 0;
       padding-right: 0;
     }
-
   }
 
   .entry-title {
@@ -158,19 +158,14 @@ li {
 
   }
 
-  &:first-of-type {
-    // First Card
-
-    .entry-title {
-      @media #{$mq_md} {
-        font-size: 3.5em;
-        font-weight: 300;
-      }
-      @media #{$mq_lg} {
-        font-size: 3em;
-      }
+  &:first-of-type .entry-title {
+    @media #{$mq_md} {
+      font-size: 3.5em;
+      font-weight: 300;
     }
-
+    @media #{$mq_lg} {
+      font-size: 3em;
+    }
   }
 
   .entry-content {
@@ -219,19 +214,14 @@ li {
     }
   }
 
-  // First Card
-  &:first-of-type {
+  &:first-of-type .excerpt-container {
+    padding-bottom: 28px;
 
-    .excerpt-container {
-      padding-bottom: 28px;
-
-      a {
-        @include button(big);
-        bottom: -15%;
-        font-weight: 800;
-        right: 2%;
-      }
-
+    a {
+      @include button(big);
+      bottom: -15%;
+      font-weight: 800;
+      right: 2%;
     }
 
   }
