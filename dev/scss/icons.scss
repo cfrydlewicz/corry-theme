@@ -51,6 +51,7 @@ $icons: (
   twitter: ef5,
   youtube: efc,
   warning: d50,
+  wiki: f27,
   wordpress: f13
 );
 @mixin icon-definitions {
@@ -166,6 +167,9 @@ $icons: (
   }
   a[href*="twitter.com"] {
     @extend .i_twitter;
+  }
+  a[href*="wikipedia.org"] {
+    @extend .i_wiki;
   }
 
 }
