@@ -2,46 +2,10 @@
 
 body {
   color: $c_basetext;
-  font-family: 'Montserrat', helvetica, sans-serif; // critical
-  font-size: 16px;  // establishes rem basis
-  @media #{$mq_md} {
-    font-size: 16px;
-  }
-  @media #{$mq_lg} {
-    font-size: 18px;
-  }
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
-
-.inner-wrapper {
-  padding: 0 $gutter;
-  width: 100%;
-}
-@media #{$mq_md} {
-  .inner-wrapper--at-md {
-    padding: 0 $gutter;
-    width: 100%;
-  }
-}
-@media #{$mq_lg} {
-  .inner-wrapper,
-  .inner-wrapper--at-md,
-  .inner-wrapper--at-lg {
-    margin: 0 auto;
-    max-width: $thumbnail_width + $gutter_lg*2;
-    padding: 0 $gutter_lg;
-  }
-  .inner-wrapper--at-lg {
-    width: 100%;
-  }
-}
-
 
 .total-wrapper {
   background-color: $c_dark-base;
-  min-width: $bp_min;
-  position: relative;
 }
 
 
@@ -85,21 +49,6 @@ li {
 
 // Specific Zones
 .site-header {
-  // Above-the-fold and nav elements should be considered for critical css
-  backface-visibility: hidden; // fixed position fix for old mobile browsers
-  position: fixed;
-  width: 100vw;
-  z-index: 1;
-
-  .inner-wrapper {
-    align-items: stretch;
-    display: flex;
-    padding-left: 0;
-    padding-right: 0;
-    @media #{$mq_lg} {
-      max-width: $thumbnail_width;
-    }
-  }
 
   &-primary,
   &-secondary {
@@ -107,126 +56,17 @@ li {
     background-color: $c_grey40;
   }
 
-  &-primary .inner-wrapper {
-    height: $header_height;
-  }
-
-  &-secondary {
-    display: none; // show with JS
-
-    .inner-wrapper {
-      @include f_smaller;
-      display: flex;
-      height: 30px;
-      justify-content: space-between;
-    }
-
-    a {
-      align-items: center;
-      display: flex;
-      height: 100%;
-      min-width: 40px;
-      padding: 4px $gutter;
-    }
-
-    .title {
-      flex-grow: 1;
-      overflow-x: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-
-  }
-
 }
 
 .header-logo {
-  flex-grow: 1;
-  svg {
-    height: 150%; // let the y dangle over
-    max-height: 48px;
-    z-index: 2;
-  }
   path {
     fill: $c_link;
   }
-  a {
-    display: block;
-    height: 100%;
-    padding: 4px;
-    @media #{$mq_sm2} {
-      padding-left: $gutter;
-      padding-right: $gutter;
-    }
-    @media #{$mq_lg} {
-      padding-left: $gutter_lg;
-      padding-right: $gutter_lg;
-    }
-    &:hover {
-      path {
-        fill: $c_hover;
-      }
+  a:hover {
+    path {
+      fill: $c_hover;
     }
   }
-}
-
-.header-nav {
-  > div {
-    height: 100%;
-  }
-  ul {
-    display: flex;
-    height: 100%;
-    list-style: none;
-  }
-  li {
-    align-items: stretch;
-    display: flex;
-    margin: 0;
-  }
-  a {
-    align-items: center;
-    display: flex;
-    font-size: 1rem;
-    font-weight: 500;
-    padding: 0 8px;
-    @media #{$mq_sm2} {
-      padding: 0 $gutter;
-    }
-    @media #{$mq_lg} {
-      padding: 0 $gutter_lg;
-    }
-  }
-}
-
-.header-search {
-
-  .search-container {
-    height: 100%;
-    label {
-      padding-bottom: 6px;
-      padding-top: 6px;
-      &:first-of-type {
-        padding-left: 8px;
-        @media #{$mq_sm2} {
-          padding-left: $gutter;
-        }
-        @media #{$mq_lg} {
-          padding-left: $gutter_lg;
-        }
-      }
-      &:last-of-type {
-        padding-right: 4px;
-        @media #{$mq_sm2} {
-          padding-right: $gutter;
-        }
-        @media #{$mq_lg} {
-          padding-right: $gutter_lg;
-        }
-      }
-    }
-  }
-
 }
 
 
@@ -244,35 +84,9 @@ li {
 
 }
 
-// non-homepage listing pages
-body.category,
-body.tag,
-body.search,
-body.archive {
-
-  main {
-    padding-top: $header_height + 8;
-  }
-
-}
-
-.listing-page-header {
-  padding: 8px 0;
-  width: 100%;
-
-  .page-title {
-    @include f_larger;
-  }
-
-}
-
 
 // Article Cards
 .article-card {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 48px;
-  position: relative;
 
   @media #{$mq_lg} {
     width: 46%;

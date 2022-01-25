@@ -25,9 +25,6 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  // Dark Mode
-  background-color: black;
-  color: white;
   line-height: 1;
 }
 embed,
@@ -49,6 +46,10 @@ table {
 caption, th, td {
   text-align: left;
   font-weight: normal;
+}
+button {
+  border-width: 0;
+  padding: 0;
 }
 blockquote::before, blockquote::after,
 q::before, q::after {
