@@ -236,6 +236,12 @@ li {
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
+
+  @media #{$mq_lg} {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
 }
 
 // non-homepage listing pages
@@ -260,8 +266,17 @@ body.archive {
 
 // Article Cards
 .article-card {
+  display: flex;
+  flex-direction: column;
   margin-bottom: 48px;
   position: relative;
+
+  @media #{$mq_lg} {
+    width: 46%;
+    &:first-of-type {
+      width: 100%;
+    }
+  }
 
   .entry-header {
     background: linear-gradient(0deg, rgba($c_grey20,0.625), rgba($c_grey80,0.625));
@@ -297,7 +312,6 @@ body.archive {
 
   }
 
-
   .title-container {
     @include overlay;
 
@@ -315,6 +329,19 @@ body.archive {
     line-height: 1;
     margin: 0 auto;
     max-width: 1024px;
+
+    @supports (-webkit-line-clamp: 5) {
+      -webkit-box-orient: vertical;
+      color: $c_link; // for the ellipsis
+      display: -webkit-box;
+      -webkit-line-clamp: 5;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      &:hover {
+        color: $c_hover; // for the ellipsis
+      }
+    }
+
   }
 
   &:first-of-type {
@@ -334,6 +361,17 @@ body.archive {
 
   .entry-content {
     padding: 12px 0;
+
+    @media #{$mq_lg} {
+      flex-grow: 1;
+      width: 100%;
+
+      .inner-wrapper {
+        height: 100%;
+      }
+
+    }
+
   }
 
   .excerpt-container {
@@ -342,7 +380,11 @@ body.archive {
     width: 100%;
     @media #{$mq_md} {
       min-height: 38px; // enough space for CTA
-      padding-bottom: 0;
+      padding-bottom: 0;  // side-by-side CTA and excerpt
+    }
+    @media #{$mq_lg} {
+      height: 100%;
+      padding-bottom: 44px;
     }
     p {
       margin: 0;
@@ -382,6 +424,7 @@ body.archive {
 
   .entry-footer {
     padding: 8px 0;
+    width: 100%;
     .inner-wrapper {
       display: flex;
       flex-direction: column;

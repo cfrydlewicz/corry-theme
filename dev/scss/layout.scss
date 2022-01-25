@@ -70,6 +70,30 @@
   color: transparent; // hide dash between links
   margin-bottom: 48px;
 
+  @media #{$mq_lg} {
+    width: 46%;
+
+    .inner-wrapper {
+      align-items: center;
+      height: 100%;
+    }
+
+    a {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    &.pagination-container {  // overpower the previous selector
+      border-width: 0;
+
+      a {
+        border-width: 1px;
+      }
+
+    }
+
+  }
+
   .inner-wrapper {
     display: flex;
     justify-content: space-between;
