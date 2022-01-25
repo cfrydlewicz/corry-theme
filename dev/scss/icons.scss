@@ -190,6 +190,10 @@ $icons: (
   }
   a[href*="wikipedia.org"] {
     @extend .i_wiki;
+    &::before {
+      margin-left: 0.25em;
+      margin-right: 0.25em;
+    }
   }
 
 }
