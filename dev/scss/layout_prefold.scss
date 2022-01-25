@@ -254,9 +254,12 @@ body.archive {
     padding-top: $header_height + 8;
   }
 
-  .listing-page-header {
-    padding: 8px 0;
-  }
+}
+
+.listing-page-header {
+  padding: 8px 0;
+  width: 100%;
+
   .page-title {
     @include f_larger;
   }
