@@ -130,16 +130,19 @@
     }
 
     // emphasis
-    strong {
+    strong,
+    b {
       font-weight: 600;
       @media #{$mq_md} {
         font-weight: 500;
       }
     }
     strong,
+    b,
     em {
       color: $c_truewhite;
       strong,
+      b,
       em {
         color: mix(white, $c_accent, 60%);
       }
@@ -150,6 +153,7 @@
     a,
     span[style*="color:"] { // Exception for when color is manually changed in the WP editor
       strong,
+      b,
       em,
       del {
         color: inherit;
