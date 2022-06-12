@@ -45,6 +45,10 @@
     }
   }
 
+  ul {
+    list-style-type: none;
+  }
+
   .follow-container {
     width: 100%;
     @media #{$mq_md} {
@@ -239,6 +243,10 @@
     &:last-of-type {
       padding-bottom: 36px;
     }
+  }
+
+  ul {
+    list-style-type: none;
   }
 
   .share-container a {
