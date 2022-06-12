@@ -267,6 +267,11 @@
     .widget-area {
       margin: 0 auto;
       max-width: $thumbnail_width;
+
+      li {
+        list-style-type: none; // fix idiotic markup from plugin
+      }
+
     }
 
   }
