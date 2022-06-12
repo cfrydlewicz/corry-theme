@@ -127,6 +127,7 @@ $icons: (
 
   // Exit Links
   a[target="_blank"]::after {
+    // External links without a specific icon
     @include icomoon;
     content: "\ed7b";
     font-size: 0.75em;
@@ -139,12 +140,12 @@ $icons: (
 
   // Email links
   a[href*="mailto:"] {
-    @extend .i_mail;
+    @extend .i_mail--after;
   }
 
   // URL Detection
   a[href*="amazon.com"] {
-    @extend .i_shopping;
+    @extend .i_shopping--after;
   }
   a[href*="disneyplus.com"],
   a[href*="hbogo.com"],
@@ -152,45 +153,45 @@ $icons: (
   a[href*="hbonow.com"],
   a[href*="hulu.com"],
   a[href*="netflix.com"] {
-    @extend .i_movie;
+    @extend .i_movie--after;
   }
   a[href*="spotify.com"] {
-    @extend .i_spotify;
+    @extend .i_spotify--after;
   }
   a[href*="youtube.com"],
   a[href*="youtu.be"] {
-    @extend .i_youtube;
+    @extend .i_youtube--after;
   }
   a[href*="docs.google.com"],
   a[href*="drive.google.com"] {
-    @extend .i_gdrive;
+    @extend .i_gdrive--after;
   }
   a[href*="github.com"],
   a[href*="github.io"] {
-    @extend .i_github;
+    @extend .i_github--after;
   }
   a[href*="facebook.com"] {
-    @extend .i_facebook;
+    @extend .i_facebook--after;
   }
   a[href*="instagram.com"] {
-    @extend .i_instagram;
+    @extend .i_instagram--after;
   }
   a[href*="linkedin.com"] {
-    @extend .i_linkedin;
+    @extend .i_linkedin--after;
   }
   a[href*="pinterest.com"],
   a[href*="pin.it"] {
-    @extend .i_pinterest;
+    @extend .i_pinterest--after;
   }
   a[href*="twitch.tv"] {
-    @extend .i_twitch;
+    @extend .i_twitch--after;
   }
   a[href*="twitter.com"] {
-    @extend .i_twitter;
+    @extend .i_twitter--after;
   }
   a[href*="wikipedia.org"] {
-    @extend .i_wiki;
-    &::before {
+    @extend .i_wiki--after;
+    &::after {
       margin-left: 0.25em;
       margin-right: 0.25em;
     }
