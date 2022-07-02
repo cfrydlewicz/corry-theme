@@ -459,6 +459,7 @@
         text-align: right;
       }
       &:last-child {
+        display: block;
         order: 1;
       }
     }
@@ -489,7 +490,7 @@
           height: 24px;
           position: absolute;
           right: 0;
-          top: 2;
+          top: 2px;
           width: 24px;
         }
         &::after {
