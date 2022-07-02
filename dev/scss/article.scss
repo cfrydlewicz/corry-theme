@@ -144,7 +144,8 @@
       strong,
       b,
       em {
-        color: mix(white, $c_accent, 60%);
+        color: #fff;
+        font-size: 1.05em; // tiny bump in emphasis
       }
     }
     del {
