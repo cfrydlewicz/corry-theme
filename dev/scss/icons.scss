@@ -127,6 +127,7 @@ $icons: (
 
   // Exit Links
   a[target="_blank"]::after {
+    // External links without a specific icon
     @include icomoon;
     content: "\ed7b";
     font-size: 0.75em;
@@ -135,65 +136,66 @@ $icons: (
     @media #{$mq_md} {
       font-size: 0.625em;
     }
-  }
 
-  // Email links
-  a[href*="mailto:"] {
-    @extend .i_mail;
-  }
-
-  // URL Detection
-  a[href*="amazon.com"] {
-    @extend .i_shopping;
-  }
-  a[href*="disneyplus.com"],
-  a[href*="hbogo.com"],
-  a[href*="hbomax.com"],
-  a[href*="hbonow.com"],
-  a[href*="hulu.com"],
-  a[href*="netflix.com"] {
-    @extend .i_movie;
-  }
-  a[href*="spotify.com"] {
-    @extend .i_spotify;
-  }
-  a[href*="youtube.com"],
-  a[href*="youtu.be"] {
-    @extend .i_youtube;
-  }
-  a[href*="docs.google.com"],
-  a[href*="drive.google.com"] {
-    @extend .i_gdrive;
-  }
-  a[href*="github.com"],
-  a[href*="github.io"] {
-    @extend .i_github;
-  }
-  a[href*="facebook.com"] {
-    @extend .i_facebook;
-  }
-  a[href*="instagram.com"] {
-    @extend .i_instagram;
-  }
-  a[href*="linkedin.com"] {
-    @extend .i_linkedin;
-  }
-  a[href*="pinterest.com"],
-  a[href*="pin.it"] {
-    @extend .i_pinterest;
-  }
-  a[href*="twitch.tv"] {
-    @extend .i_twitch;
-  }
-  a[href*="twitter.com"] {
-    @extend .i_twitter;
-  }
-  a[href*="wikipedia.org"] {
-    @extend .i_wiki;
-    &::before {
-      margin-left: 0.25em;
-      margin-right: 0.25em;
+    // Email links
+    &[href*="mailto:"] {
+      @extend .i_mail--after;
     }
+
+    // URL Detection
+    &[href*="amazon.com"] {
+      @extend .i_shopping--after;
+    }
+    &[href*="disneyplus.com"],
+    &[href*="hbogo.com"],
+    &[href*="hbomax.com"],
+    &[href*="hbonow.com"],
+    &[href*="hulu.com"],
+    &[href*="netflix.com"] {
+      @extend .i_movie--after;
+    }
+    &[href*="spotify.com"] {
+      @extend .i_spotify--after;
+    }
+    &[href*="youtube.com"],
+    &[href*="youtu.be"] {
+      @extend .i_youtube--after;
+    }
+    &[href*="docs.google.com"],
+    &[href*="drive.google.com"] {
+      @extend .i_gdrive--after;
+    }
+    &[href*="github.com"],
+    &[href*="github.io"] {
+      @extend .i_github--after;
+    }
+    &[href*="facebook.com"] {
+      @extend .i_facebook--after;
+    }
+    &[href*="instagram.com"] {
+      @extend .i_instagram--after;
+    }
+    &[href*="linkedin.com"] {
+      @extend .i_linkedin--after;
+    }
+    &[href*="pinterest.com"],
+    &[href*="pin.it"] {
+      @extend .i_pinterest--after;
+    }
+    &[href*="twitch.tv"] {
+      @extend .i_twitch--after;
+    }
+    &[href*="twitter.com"] {
+      @extend .i_twitter--after;
+    }
+    &[href*="wikipedia.org"] {
+      @extend .i_wiki--after;
+      &::after {
+        margin-left: 0.25em;
+        margin-right: 0.25em;
+      }
+    }
+
   }
 
 }
