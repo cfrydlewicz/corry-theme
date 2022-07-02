@@ -452,7 +452,6 @@
     }
 
     label {
-      display: block;
       font-size: 0.875em;
       &:first-child {
         flex-grow: 1;
@@ -460,6 +459,7 @@
         text-align: right;
       }
       &:last-child {
+        display: block;
         order: 1;
       }
     }
