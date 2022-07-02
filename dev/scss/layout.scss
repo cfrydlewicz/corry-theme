@@ -452,6 +452,7 @@
     }
 
     label {
+      display: block;
       font-size: 0.875em;
       &:first-child {
         flex-grow: 1;
@@ -489,7 +490,7 @@
           height: 24px;
           position: absolute;
           right: 0;
-          top: 2;
+          top: 2px;
           width: 24px;
         }
         &::after {
