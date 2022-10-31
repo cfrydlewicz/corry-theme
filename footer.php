@@ -17,6 +17,9 @@
           <li><a class="i_facebook"      title="My Facebook Profile"            href="https://www.facebook.com/groups/4912504758808432/?ref=share"              rel="noreferrer" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://www.facebook.com']);"></a></li>
           <li><a class="i_instagram"     title="EdibleReviews on Instagram"     href="https://www.instagram.com/ediblereviews/"                                 rel="noreferrer" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://www.instagram.com']);"></a></li>
           <!--li><a class="i_twitter"       title="My Twitter Profile"             href="http://www.twitter.com/cfrydlewicz"                                       rel="noreferrer" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://www.twitter.com']);"></a></li-->
+          <li class="u_visually-hidden">
+            <a class="i_mastodon"      title="My Mastodon Profile"            href="https://twipped.social/@cfrydlewicz"                                      rel="me"         target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://twipped.social']);">Mastodon</a>
+          </li>
           <li><a class="i_pinterest"     title="My Pinterest Boards"            href="https://pin.it/6KWV73o"                                                   rel="noreferrer" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://www.pinterest.com']);"></a></li>
           <li><a class="i_github"        title="My GitHub Profile"              href="https://github.com/cfrydlewicz"                                           rel="noreferrer" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://github.com']);"></a></li>
           <li><a class="i_stackoverflow" title="My StackOverflow Profile"       href="http://stackoverflow.com/users/967727/cfrydlewicz"                        rel="noreferrer" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://stackoverflow.com']);"></a></li>
@@ -26,9 +29,6 @@
           <li><a class="i_lol"           title="My League of Legends Profile"   href="https://www.leagueofgraphs.com/summoner/na/Ultros"                        rel="noreferrer" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://www.leagueofgraphs.com/']);"></a></li>
        <!--li><a class="i_psn"           title="My PlayStation Network Profile" href="https://us.playstation.com/publictrophy/?onlinename=Hand_Banana51"        rel="noreferrer" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://us.playstation.com']);"></a></li-->
        <!--li><a class="i_xbl"           title="My Xbox Live Profile"           href="http://www.xboxgamertag.com/search/viciouslobo/"                          rel="noreferrer" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://www.xboxgamertag.com']);"></a></li-->
-          <li class="u_visually-hidden">
-            <a class="i_mastodon"      title="My Mastodon Profile"            href="https://twipped.social/@cfrydlewicz"                                      rel="me"         target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://twipped.social']);">Mastodon</a>
-          </li>
         </ul>
       </section>
 
