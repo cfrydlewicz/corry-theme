@@ -26,6 +26,9 @@
           <li><a class="i_lol"           title="My League of Legends Profile"   href="https://www.leagueofgraphs.com/summoner/na/Ultros"                        rel="noreferrer" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://www.leagueofgraphs.com/']);"></a></li>
        <!--li><a class="i_psn"           title="My PlayStation Network Profile" href="https://us.playstation.com/publictrophy/?onlinename=Hand_Banana51"        rel="noreferrer" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://us.playstation.com']);"></a></li-->
        <!--li><a class="i_xbl"           title="My Xbox Live Profile"           href="http://www.xboxgamertag.com/search/viciouslobo/"                          rel="noreferrer" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://www.xboxgamertag.com']);"></a></li-->
+          <li class="u_visually-hidden">
+            <a class="i_mastodon"      title="My Mastodon Profile"            href="https://twipped.social/@cfrydlewicz"                                      rel="me"         target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://twipped.social']);">Mastodon</a>
+          </li>
         </ul>
       </section>
 
