@@ -83,6 +83,21 @@ li {
 }
 
 
+// General Entry Headers
+.entry-header {
+
+  .stretched-bg {
+    background-repeat: no-repeat;
+    background-size: 200% 100%;  //stretch
+    filter: blur(10px);
+    height: 100%;
+    position: absolute;
+    width: 100%;
+  }
+
+}
+
+
 // Article Cards
 .article-card {
 
@@ -301,15 +316,6 @@ li {
       @media #{$mq_lg} {
         max-height: 50vh;
       }
-    }
-
-    .stretched-bg {
-      background-repeat: no-repeat;
-      background-size: 200% 100%;  //stretch
-      filter: blur(10px);
-      height: 100%;
-      position: absolute;
-      width: 100%;
     }
 
   }
