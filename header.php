@@ -1,5 +1,7 @@
 <!doctype html>
-<html lang="en">
+<?php // Detect Save-Data Headers
+$saveData = (isset($_SERVER["HTTP_SAVE_DATA"]) && stristr($_SERVER["HTTP_SAVE_DATA"], "on") !== false) ? true : false; ?>
+<html lang="en" class="<?php if ($saveData === true) : ?>save-data<?php endif; ?>">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
