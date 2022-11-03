@@ -26,6 +26,7 @@
       <article id="post-<?php the_ID(); ?>" <?php post_class('article-card'); ?>>
 
         <header class="entry-header">
+          <div class="stretched-bg" style="background-image: url('<?php the_post_thumbnail_url(); ?>'');"></div>
           <div class="inner-wrapper--at-lg" data-thumbnail="<?php the_post_thumbnail_url(); ?>">
             <a href="<?php the_permalink(); ?>"><?php post_thumbnail(); ?></a>
             <div class="title-container">
