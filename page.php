@@ -11,6 +11,7 @@
     <article id="post-<?php the_ID(); ?>" <?php post_class('article-content'); ?>>
 
       <header class="entry-header">
+        <div class="stretched-bg" style="background-image: url('<?php the_post_thumbnail_url(); ?>'');"></div>
         <div class="inner-wrapper--at-lg">
           <a href="<?php the_post_thumbnail_url(); ?>">
             <?php post_thumbnail(); ?>
