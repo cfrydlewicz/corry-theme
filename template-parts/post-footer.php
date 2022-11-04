@@ -47,8 +47,9 @@
   <section class="follow-container">
     <div class="post-footer_header">Follow This Blog</div>
     <ul>
-      <li><a class="i_rss" href="<?php bloginfo('rss2_url'); ?>" target="_blank">My RSS Feed</a> is the best way to follow <em>new blog posts</em>. Bookmark it or add it to your reader app!</li>
+      <li><a class="i_rss" href="<?php bloginfo('rss2_url'); ?>" target="_blank">My RSS Feed</a> is the best way to follow <em>new blog posts</em>. Bookmark it or add it to <a href="https://www.google.com/search?q=rss+feed+reader" target="_blank">your reader app</a>!</li>
       <!--li>I also share links to <em>new blog posts</em> on <a class="i_twitter"  href="http://www.twitter.com/cfrydlewicz" target="_blank" rel="noreferrer" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://www.twitter.com']);">Twitter</a>.</li-->
+      <li><a class="i_mail" href="mailto:cfrydlewicz@gmail.com?subject=Corry's%20Blog%20Mailing%20List&body=Hi%20Corry!%20I%20want%20you%20to%20email%20me%20when%20you%20post%20new%20content%20on%20your%20website.%20My%20email%20address%20is%20_____%2C%20and%20my%20name%20is%20_____.%20I'll%20let%20you%20know%20if%20I%20change%20my%20mind." target="_blank">Get notified by email</a> when I post new content on this site (and <a href="/about/#a_privacy" title="Corry's Privacy Policies">not for anything else</a>).</li>
       <li>I share <em>all my content</em> and host discussions about it in <a class="i_facebook" href="https://www.facebook.com/groups/4912504758808432/?ref=share" target="_blank" rel="noreferrer" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://www.facebook.com']);">My Facebook Group</a>.</li>
     </ul>
   </section>

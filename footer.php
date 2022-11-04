@@ -13,10 +13,16 @@
         <h3 class="u_visually-hidden">Follow or Add Me:</h3>
         <ul>
           <li><a class="i_rss"           title="My RSS Feed"                    href="<?php bloginfo('rss2_url'); ?>"></a></li>
+          <li><a class="i_mail"          title="My Email Newsletter"            
+            href="mailto:cfrydlewicz@gmail.com?subject=Corry's%20Blog%20Mailing%20List&body=Hi%20Corry!%20I%20want%20you%20to%20email%20me%20when%20you%20post%20new%20content%20on%20your%20website.%20My%20email%20address%20is%20_____%2C%20and%20my%20name%20is%20_____.%20I'll%20let%20you%20know%20if%20I%20change%20my%20mind."
+            target="_blank"></a></li>
           <li><a class="i_linkedin"      title="My LinkedIn Profile"            href="http://www.linkedin.com/in/corryfrydlewicz"                               rel="noreferrer" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://www.linkedin.com']);"></a></li>
-          <li><a class="i_facebook"      title="My Facebook Profile"            href="https://www.facebook.com/groups/4912504758808432/?ref=share"              rel="noreferrer" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://www.facebook.com']);"></a></li>
+          <li><a class="i_facebook"      title="My Facebook Group"              href="https://www.facebook.com/groups/4912504758808432/?ref=share"              rel="noreferrer" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://www.facebook.com']);"></a></li>
           <li><a class="i_instagram"     title="EdibleReviews on Instagram"     href="https://www.instagram.com/ediblereviews/"                                 rel="noreferrer" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://www.instagram.com']);"></a></li>
-          <!--li><a class="i_twitter"       title="My Twitter Profile"             href="http://www.twitter.com/cfrydlewicz"                                       rel="noreferrer" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://www.twitter.com']);"></a></li-->
+       <!--li><a class="i_twitter"       title="My Twitter Profile"             href="http://www.twitter.com/cfrydlewicz"                                       rel="noreferrer" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://www.twitter.com']);"></a></li-->
+          <li class="u_visually-hidden">
+            <a class="i_mastodon"        title="My Mastodon Profile"            href="https://twipped.social/@cfrydlewicz"                                      rel="me"         target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://twipped.social']);">Mastodon</a>
+          </li>
           <li><a class="i_pinterest"     title="My Pinterest Boards"            href="https://pin.it/6KWV73o"                                                   rel="noreferrer" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://www.pinterest.com']);"></a></li>
           <li><a class="i_github"        title="My GitHub Profile"              href="https://github.com/cfrydlewicz"                                           rel="noreferrer" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://github.com']);"></a></li>
           <li><a class="i_stackoverflow" title="My StackOverflow Profile"       href="http://stackoverflow.com/users/967727/cfrydlewicz"                        rel="noreferrer" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://stackoverflow.com']);"></a></li>

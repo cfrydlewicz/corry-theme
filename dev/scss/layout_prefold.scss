@@ -83,6 +83,21 @@ li {
 }
 
 
+// General Entry Headers
+.entry-header {
+
+  .stretched-bg {
+    background-repeat: no-repeat;
+    background-size: 200% 100%;  //stretch
+    filter: blur(10px) brightness(0.5);
+    height: 100%;
+    position: absolute;
+    width: 100%;
+  }
+
+}
+
+
 // Article Cards
 .article-card {
 
@@ -278,8 +293,10 @@ li {
 .article-content {
 
   .entry-header {
-    overflow-x: hidden;
+    max-height: 60vh;
+    overflow: hidden;
     position: relative;
+
     @media #{$mq_lg} {
       background: linear-gradient(0deg, rgba($c_grey20,0.625), rgba($c_grey80,0.625));
     }
@@ -298,7 +315,8 @@ li {
         max-width: $thumbnail_width;
       }
       @media #{$mq_lg} {
-        max-height: 50vh;
+        max-height: none;
+        width: 100%;
       }
     }
 
