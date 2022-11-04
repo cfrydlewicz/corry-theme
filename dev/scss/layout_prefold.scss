@@ -89,7 +89,7 @@ li {
   .stretched-bg {
     background-repeat: no-repeat;
     background-size: 200% 100%;  //stretch
-    filter: blur(10px);
+    filter: blur(10px) brightness(0.5);
     height: 100%;
     position: absolute;
     width: 100%;
@@ -293,7 +293,8 @@ li {
 .article-content {
 
   .entry-header {
-    overflow-x: hidden;
+    max-height: 60vh;
+    overflow: hidden;
     position: relative;
 
     @media #{$mq_lg} {
@@ -314,7 +315,8 @@ li {
         max-width: $thumbnail_width;
       }
       @media #{$mq_lg} {
-        max-height: 50vh;
+        max-height: none;
+        width: 100%;
       }
     }
 
