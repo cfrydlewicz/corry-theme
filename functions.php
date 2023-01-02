@@ -47,7 +47,7 @@ function post_thumbnail() {
   if ( has_post_thumbnail() ) {
     the_post_thumbnail();
   } else {
-    echo '<img alt="null" src="'.bloginfo('template_url').'/assets/thumbnail-default.jpg">';
+    echo '<img alt="null" src="'.bloginfo('template_url').'<?php bloginfo('template_url'); ?>/assets/thumbnail-default.jpg">';
   }
 }
 
