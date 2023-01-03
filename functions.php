@@ -46,6 +46,8 @@ add_filter( 'wp_title', function($title) {
 function post_thumbnail() {
   if ( has_post_thumbnail() ) {
     the_post_thumbnail();
+  } elseif ( has_category('microblog') ) {
+    echo '<img alt="null" src="/wp-content/themes/corry/assets/thumbnail-microblog.jpg">';
   } else {
     echo '<img alt="null" src="/wp-content/themes/corry/assets/thumbnail-default.jpg">';
   }

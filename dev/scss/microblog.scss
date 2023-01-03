@@ -1,0 +1,30 @@
+// Single Posts
+.article-content.category-microblog {
+
+  .article-content .entry-header img {
+    max-height: 400px;
+  }
+  
+  .entry-content {
+
+    .wp-block-pullquote {
+
+      &,
+      blockquote p {
+        // keep pullquotes normal size
+        font-size: 1em;
+      }
+
+    }
+
+  }
+
+}
+
+
+// Microblogging Listing Page (Feed)
+// https://corryfrydlewicz.com/category/microblog/
+body.category-microblog {
+
+
+}

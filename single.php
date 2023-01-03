@@ -35,6 +35,14 @@
             </div>
           <?php endif; ?>
 
+          <?php if ( has_tag('microblog') ) : ?>
+            <div class="disclaimer_microblog disclaimer">
+              <div>
+                <p>This post is a <a href="/microblogging/">microblog</a>, which is an experimental new feature.</p>
+              </div>
+            </div>
+          <?php endif; ?>
+
           <?php the_content(); ?>
         </div>
       </section>
