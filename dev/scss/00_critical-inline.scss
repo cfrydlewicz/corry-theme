@@ -196,6 +196,15 @@ body:not(.home) main.listing-page {
 
   .page-title {
     @include f_larger;
+
+    &:not(:last-child) {
+      margin-bottom: 0.25em;
+    }
+
+  }
+
+  p {
+    @include f_smaller;
   }
 
 }

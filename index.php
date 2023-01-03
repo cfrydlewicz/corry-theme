@@ -7,6 +7,7 @@
       <div class="inner-wrapper">
         <?php if ( is_category() ) : ?>
           <h1 id="sticky-title" class="page-title">Category: <strong><?php single_cat_title(); ?></strong></h1>
+          <?php echo category_description(); ?>
         <?php elseif ( is_tag() ) : ?>
           <h1 id="sticky-title" class="page-title">Tag <strong><?php single_tag_title(); ?></strong></h1>
         <?php elseif ( is_search() ) : ?>
