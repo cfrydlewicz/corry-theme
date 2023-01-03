@@ -171,12 +171,12 @@
     a[href^="#a_"]::after {
       content: '#';
       display: inline-block;
-      font-size: 0.75em;
+      font-size: 0.5em;
       margin: 0 0.25em;
       speak: none;
       vertical-align: text-top;
       @media #{$mq_md} {
-        font-size: 0.625em;
+        font-size: 0.375em;
       }
     }
 
