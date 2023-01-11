@@ -115,6 +115,27 @@
 
 
 // Listing Pages
+.listing-page-header {
+  background: linear-gradient(320deg, rgba($c_grey20,0.875), rgba($c_grey80,0.875));
+  @extend .bezel;
+  //@extend .bezel--horizontal;
+  //@extend .bezel--vertical;
+
+  @media #{$mq_mouse} {
+    background: linear-gradient(320deg, rgba($c_grey20,0.625), rgba($c_grey80,0.625));
+
+    &:hover {
+      background: linear-gradient(320deg, rgba($c_grey20,0.75), rgba($c_grey80,0.75));
+    }
+
+  }
+
+  &:hover {
+    @extend .grainy;
+  }
+
+}
+
 .pagination-container {
   @extend .bezel--vertical;
   background-color: transparent;  // undo placeholder background

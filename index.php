@@ -6,14 +6,14 @@
     <header class="listing-page-header">
       <div class="inner-wrapper">
         <?php if ( is_category() ) : ?>
-          <h1 id="sticky-title" class="page-title">Category: <strong><?php single_cat_title(); ?></strong></h1>
+          <h1 id="sticky-title" class="page-title"><span>Category:</span> <strong><?php single_cat_title(); ?></strong></h1>
           <?php echo category_description(); ?>
         <?php elseif ( is_tag() ) : ?>
-          <h1 id="sticky-title" class="page-title">Tag <strong><?php single_tag_title(); ?></strong></h1>
+          <h1 id="sticky-title" class="page-title"><span>Tag:</span> <strong><?php single_tag_title(); ?></strong></h1>
         <?php elseif ( is_search() ) : ?>
-          <h1 id="sticky-title" class="page-title">Search Results for <strong><?php echo esc_html($_GET['s']); ?></strong></h1>
+          <h1 id="sticky-title" class="page-title"><span>Search Results for</span> <strong><?php echo esc_html($_GET['s']); ?></strong></h1>
         <?php else : ?>
-          <div class="page-title">Oops!</div>
+          <div class="page-title"><strong>Oops!</strong></div>
         <?php endif; ?>
       </div>
     </header>

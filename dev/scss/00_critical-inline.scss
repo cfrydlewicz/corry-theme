@@ -203,18 +203,30 @@ body {
 
 // non-homepage listing pages
 body:not(.home) main.listing-page {
-  padding-top: $header_height + 8;
+  padding-top: $header_height + 2;  // 2px for bezel borders
 }
 
 .listing-page-header {
   padding: 8px 0;
   width: 100%;
 
+  @media #{$mq_lg} {
+    padding: 12px 0;
+  }
+
   .page-title {
     @include f_larger;
 
     &:not(:last-child) {
       margin-bottom: 0.25em;
+    }
+
+    span {
+      font-size: 0.75em;
+    }
+
+    strong {
+      font-weight: 600;
     }
 
   }
