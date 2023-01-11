@@ -63,7 +63,9 @@ body {
 
 .site-header {
   backface-visibility: hidden; // fixed position fix for old mobile browsers
+  left: 50%;
   position: fixed;
+  transform: translateX(-50%);
   width: 100vw;
   z-index: 1;
 
@@ -148,15 +150,21 @@ body {
   li {
     align-items: stretch;
     display: flex;
-    margin: 0;
+
+    &,
+    &:not(:last-child) {  // override general list item styling
+      margin: 0;
+    }
+
   }
   a {
     align-items: center;
     display: flex;
-    font-size: 1rem;
+    font-size: 0.875rem;
     font-weight: 500;
     padding: 0 8px;
     @media #{$mq_sm2} {
+      font-size: 1rem;
       padding: 0 $gutter;
     }
     @media #{$mq_lg} {
