@@ -124,10 +124,12 @@ body {
     z-index: 2;
   }
   a {
-    display: block;
+    align-items: center;
+    display: flex;
     height: 100%;
     padding: 4px;
-    @media #{$mq_sm2} {
+    @media #{$mq_sm3} {
+      align-items: unset;
       padding-left: $gutter;
       padding-right: $gutter;
     }
@@ -163,7 +165,7 @@ body {
     font-size: 0.875rem;
     font-weight: 500;
     padding: 0 8px;
-    @media #{$mq_sm2} {
+    @media #{$mq_sm3} {
       font-size: 1rem;
       padding: 0 $gutter;
     }
@@ -222,10 +224,13 @@ body:not(.home) main.listing-page {
     }
 
     span {
-      font-size: 0.75em;
+      color: $c_light50;
+      display: block;
+      @include f_smallest;
     }
 
     strong {
+      display: block;
       font-weight: 600;
     }
 
