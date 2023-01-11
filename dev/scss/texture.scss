@@ -117,9 +117,7 @@
 // Listing Pages
 .listing-page-header {
   background: linear-gradient(320deg, rgba($c_grey20,0.875), rgba($c_grey80,0.875));
-  @extend .bezel;
-  //@extend .bezel--horizontal;
-  //@extend .bezel--vertical;
+  @extend .bezel--vertical;
 
   @media #{$mq_mouse} {
     background: linear-gradient(320deg, rgba($c_grey20,0.625), rgba($c_grey80,0.625));
