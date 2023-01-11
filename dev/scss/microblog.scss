@@ -26,5 +26,30 @@
 // https://corryfrydlewicz.com/category/microblog/
 body.category-microblog {
 
+  .article-card {
+
+    img {
+      height: 25vh;
+      max-width: 100%;
+      width: 100%;
+    }
+
+    .entry-title {
+      font-size: 1.5em;
+    }
+
+    &:first-of-type {
+
+      img {
+        height: 25vh;  // override
+      }
+
+      .entry-title {
+        font-size: 1.75em;
+      }
+
+    }
+
+  }
 
 }
