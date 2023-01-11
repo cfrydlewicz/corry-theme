@@ -29,7 +29,7 @@ body.category-microblog {
   .article-card {
 
     img {
-      height: 25vh;
+      height: auto;
       max-width: 100%;
       width: auto;
     }
@@ -41,11 +41,23 @@ body.category-microblog {
     &:first-of-type {
 
       img {
-        height: 25vh;  // override
+        height: auto;  // override
       }
 
       .entry-title {
         font-size: 1.75em;
+      }
+
+    }
+
+    &:not(:first-of-type) {
+
+      @media #{$mq_lg} {
+        width: 46%;  // 2 per row
+      }
+
+      @media #{$mq_xl} {
+        width: 21%;  // 4 per row
       }
 
     }

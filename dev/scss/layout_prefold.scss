@@ -102,10 +102,21 @@ li {
 .article-card {
 
   @media #{$mq_lg} {
-    width: 46%;
-    &:first-of-type {
-      width: 100%;
+    width: 100%;
+
+    &:not(:first-of-type) {
+      max-width: 512px;
+      width: 46%;
     }
+
+  }
+
+  @media #{$mq_xl} {
+
+    &:not(:first-of-type) {
+      width: 46%;
+    }
+
   }
 
   .entry-header {
@@ -121,10 +132,8 @@ li {
 
   img {
     height: 40vh;
-    left: 50%;
     max-width: 1024px;
     position: relative;
-    transform: translateX(-50%);
     width: auto;
   }
 
