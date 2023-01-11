@@ -48,9 +48,17 @@ body {
 }
 
 .total-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: $bp_max;
   min-height: 100vh;
   min-width: $bp_min;
   position: relative;
+
+  @media #{$mq_max} {
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.25);
+  }
+
 }
 
 .site-header {

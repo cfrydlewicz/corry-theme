@@ -53,6 +53,7 @@ $bp_sm2: 412px; // iPhone 11+
 $bp_md:  768px; // iPad
 $bp_lg:  1024px; // Landscape Tablets, Laptops
 $bp_xl:  1024px + $gutter_lg*2; // Laptops, Desktops
+$bp_max: 1600px; // site width cap
 
 
 // Media Query Shortcuts
@@ -61,6 +62,7 @@ $mq_sm2     : "only screen and (min-width: #{$bp_sm2})";
 $mq_md      : "only screen and (min-width: #{$bp_md})";
 $mq_lg      : "only screen and (min-width: #{$bp_lg})";
 $mq_xl      : "only screen and (min-width: #{$bp_xl})";
+$mq_max     : "only screen and (min-width: #{$bp_max})";
 $mq_touch   : "only screen and (pointer: coarse)";
 $mq_mouse   : "only screen and (pointer: fine)";
 
