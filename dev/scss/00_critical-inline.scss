@@ -110,6 +110,11 @@ body {
       overflow-x: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
+
+      strong {
+        font-weight: 600;
+      }
+
     }
 
   }
@@ -224,14 +229,16 @@ body:not(.home) main.listing-page {
     }
 
     span {
+      @include f_smallest;
       color: $c_light50;
       display: block;
-      @include f_smallest;
+      font-family: monospace;
+      margin-bottom: 0.125em;
     }
 
     strong {
       display: block;
-      font-weight: 600;
+      font-weight: 500;
     }
 
   }
