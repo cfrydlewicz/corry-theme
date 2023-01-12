@@ -41,7 +41,7 @@ body {
   .inner-wrapper,
   .inner-wrapper--at-lg {
     margin: 0 auto;
-    max-width: $thumbnail_width + $gutter_lg*2;
+    max-width: $thumbnail_width;
     padding: 0 $gutter_lg;
     width: 100%;
   }
@@ -72,11 +72,9 @@ body {
   .inner-wrapper {
     align-items: stretch;
     display: flex;
+    max-width: $bp_max;
     padding-left: 0;
     padding-right: 0;
-    @media #{$mq_lg} {
-      max-width: $thumbnail_width;
-    }
   }
 
   &-primary .inner-wrapper {

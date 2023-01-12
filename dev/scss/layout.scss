@@ -26,7 +26,7 @@
       padding-right: 0;
     }
     @media #{$mq_lg} {
-      max-width: $thumbnail_width;
+      max-width: $bp_max;
     }
   }
 

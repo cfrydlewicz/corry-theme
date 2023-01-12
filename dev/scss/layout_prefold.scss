@@ -128,7 +128,7 @@ li {
   img {
     margin-left: auto;
     margin-right: auto;
-    max-width: 100%;
+    max-width: $thumbnail_width;
     position: relative;
     width: 100%;
   }
@@ -229,6 +229,7 @@ li {
       flex-direction: column;
 
       @media #{$mq_md} {
+        align-items: center;
         flex-direction: row;
         justify-content: space-between;
       }
