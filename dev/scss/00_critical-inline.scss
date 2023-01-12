@@ -41,7 +41,7 @@ body {
   .inner-wrapper,
   .inner-wrapper--at-lg {
     margin: 0 auto;
-    max-width: $thumbnail_width;
+    max-width: $bp_max;
     padding: 0 $gutter_lg;
     width: 100%;
   }
@@ -258,8 +258,6 @@ body.error404 {
   }
 
   .article-card:first-of-type img {
-    height: auto;
-    max-width: 1024px;
     padding-bottom: 40px;
     width: 100%;
   }

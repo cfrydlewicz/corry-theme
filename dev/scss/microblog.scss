@@ -40,6 +40,12 @@ body.category-microblog {
       font-size: 1.5em;
     }
 
+    .word-count,
+    .post-date {
+      display: block;
+      margin-bottom: 0.125em;
+    }
+
     .published-on {
       display: none;
     }
