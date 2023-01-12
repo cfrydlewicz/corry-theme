@@ -28,6 +28,10 @@ body.category-microblog {
 
   .article-card {
 
+    .entry-header {
+      min-height: 146px;
+    }
+
     .entry-title {
       font-size: 1.5em;
     }
@@ -68,8 +72,20 @@ body.category-microblog {
 
     }
 
+    @media #{$mq_xl} {
+
+      .entry-header {
+        min-height: 190px;
+      }
+
+    }
+
     @media #{$mq_xxl} {
       width: calc( 25vw - #{$gutter_lg + 2px} );  // 4 per row
+
+      .entry-header {
+        min-height: 170px;
+      }
 
       // Feature first two
       &:nth-of-type(-n+2) {

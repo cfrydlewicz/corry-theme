@@ -238,6 +238,19 @@ li {
         justify-content: space-between;
       }
 
+      @media #{$mq_lg} {
+        flex-wrap: wrap;
+      }
+
+    }
+
+    .post-stats,
+    .post-categories {
+
+      @media #{$mq_xxl} {
+        min-width: 40%;
+      }
+
     }
 
     .post-stats,
