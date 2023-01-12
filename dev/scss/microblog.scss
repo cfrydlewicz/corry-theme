@@ -67,15 +67,27 @@ body.category-microblog {
 
     @media #{$mq_xl} {
       width: 21%;  // 4 per row
+      width: calc( 25vw - #{$gutter_lg * 2 + 2px} );  // 2 per row
 
       // Feature first two
       &:nth-of-type(-n+2) {
-        width: 46%;  // 2 per row
+        width: calc( 50vw - #{$gutter_lg * 2 + 2px} );  // 2 per row
 
         .entry-title {
           font-size: 1.75em;
         }
 
+      }
+
+    }
+
+    @media #{$mq_max} {
+      width: 21%;  // 4 per row
+      width: #{$bp_max / 4 - $gutter_lg * 2 + 2px};  // 2 per row
+
+      // Feature first two
+      &:nth-of-type(-n+2) {
+        width: #{$bp_max / 2 - $gutter_lg * 2 + 2px};  // 2 per row
       }
 
     }

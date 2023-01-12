@@ -127,12 +127,10 @@ body {
     z-index: 2;
   }
   a {
-    align-items: center;
     display: flex;
     height: 100%;
     padding: 4px;
-    @media #{$mq_sm3} {
-      align-items: unset;
+    @media #{$mq_sm2} {
       padding-left: $gutter;
       padding-right: $gutter;
     }
@@ -159,6 +157,13 @@ body {
     &,
     &:not(:last-child) {  // override general list item styling
       margin: 0;
+    }
+
+    @media only screen and (max-width: #{$bp_sm3 - 1}) {
+      // hide some nav items until screen is wide enough
+      &:not(:first-child) {
+        display: none;
+      }
     }
 
   }
