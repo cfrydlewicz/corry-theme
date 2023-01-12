@@ -32,6 +32,11 @@ body.category-microblog {
       height: auto;
       max-width: 100%;
       width: auto;
+
+      @media #{$mq_lg} {
+        max-height: 30vh;
+      }
+
     }
 
     .entry-title {
@@ -42,6 +47,7 @@ body.category-microblog {
 
       img {
         height: auto;  // override
+        max-height: 30vh;
       }
 
       .entry-title {
@@ -50,13 +56,33 @@ body.category-microblog {
 
     }
 
-    &:not(:first-of-type) {
+    @media #{$mq_lg} {
 
-      @media #{$mq_lg} {
+      &:not(:first-of-type) {
         width: 46%;  // 2 per row
       }
 
-      @media #{$mq_xl} {
+    }
+
+    @media #{$mq_xl} {
+
+      &:nth-of-type(-n+2) {
+        // first two
+        width: 46%;  // 2 per row
+
+        img {
+          height: auto;  // override
+          max-height: 30vh;
+        }
+
+        .entry-title {
+          font-size: 1.75em;
+        }
+
+      }
+
+      &:nth-of-type(n+2) {
+        // the rest
         width: 21%;  // 4 per row
       }
 
