@@ -28,12 +28,9 @@ body.category-microblog {
 
   .article-card {
 
-    img {
-      height: auto;
-      max-width: 100%;
-      width: auto;
+    @media #{$mq_lg} {
 
-      @media #{$mq_lg} {
+      .entry-header {
         max-height: 30vh;
       }
 
@@ -43,10 +40,15 @@ body.category-microblog {
       font-size: 1.5em;
     }
 
+    .published-on {
+      display: none;
+    }
+
+
+    // Featured
     &:first-of-type {
 
-      img {
-        height: auto;  // override
+      .entry-header {
         max-height: 30vh;
       }
 
@@ -56,34 +58,18 @@ body.category-microblog {
 
     }
 
-    @media #{$mq_lg} {
-
-      &:not(:first-of-type) {
-        width: 46%;  // 2 per row
-      }
-
-    }
 
     @media #{$mq_xl} {
+      width: 21%;  // 4 per row
 
+      // Feature first two
       &:nth-of-type(-n+2) {
-        // first two
         width: 46%;  // 2 per row
-
-        img {
-          height: auto;  // override
-          max-height: 30vh;
-        }
 
         .entry-title {
           font-size: 1.75em;
         }
 
-      }
-
-      &:nth-of-type(n+2) {
-        // the rest
-        width: 21%;  // 4 per row
       }
 
     }
