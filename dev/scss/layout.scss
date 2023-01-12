@@ -75,7 +75,7 @@
   margin-bottom: 48px;
 
   @media #{$mq_lg} {
-    width: calc( 50vw - #{$gutter_lg * 2 + 2px} );  // 2 per row
+    width: calc( 50vw - #{$gutter_lg + 2px} );  // 2 per row
 
     .inner-wrapper {
       align-items: center;
@@ -99,7 +99,7 @@
   }
 
   @media #{$mq_max} {
-    width: #{$bp_max / 2 - $gutter_lg * 2 + 2px};  // 2 per row
+    width: #{$bp_max / 2 - $gutter_lg + 2px};  // 2 per row
   }
 
   .inner-wrapper {
