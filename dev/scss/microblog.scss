@@ -28,14 +28,6 @@ body.category-microblog {
 
   .article-card {
 
-    @media #{$mq_lg} {
-
-      .entry-header {
-        max-height: 30vh;
-      }
-
-    }
-
     .entry-title {
       font-size: 1.5em;
     }
@@ -64,10 +56,20 @@ body.category-microblog {
 
     }
 
+    @media #{$mq_lg} {
 
-    @media #{$mq_xl} {
-      width: 21%;  // 4 per row
-      width: calc( 25vw - #{$gutter_lg * 2 + 2px} );  // 2 per row
+      .entry-header {
+        max-height: 30vh;
+      }
+
+      .post-date {
+        margin-bottom: 0;
+      }
+
+    }
+
+    @media #{$mq_xxl} {
+      width: calc( 25vw - #{$gutter_lg * 2 + 2px} );  // 4 per row
 
       // Feature first two
       &:nth-of-type(-n+2) {
@@ -77,13 +79,24 @@ body.category-microblog {
           font-size: 1.75em;
         }
 
+        .excerpt-container {
+          padding-bottom: 28px;
+
+          a {
+            @include button(big);
+            bottom: -15%;
+            font-weight: 800;
+            right: 2%;
+          }
+
+        }
+
       }
 
     }
 
     @media #{$mq_max} {
-      width: 21%;  // 4 per row
-      width: #{$bp_max / 4 - $gutter_lg * 2 + 2px};  // 2 per row
+      width: #{$bp_max / 4 - $gutter_lg * 2 + 2px};  // 4 per row
 
       // Feature first two
       &:nth-of-type(-n+2) {

@@ -113,7 +113,11 @@ li {
   width: 100%;
 
   @media #{$mq_lg} {
-    width: 46%;
+    width: calc( 50vw - #{$gutter_lg * 2 + 2px} );  // 2 per row
+  }
+
+  @media #{$mq_max} {
+    width: #{$bp_max / 2 - $gutter_lg * 2 + 2px};  // 2 per row
   }
 
 
