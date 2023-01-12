@@ -61,6 +61,7 @@ $bp_max: 1600px; // site width cap
 $mq_sm      : "only screen and (min-width: #{$bp_sm})";
 $mq_sm2     : "only screen and (min-width: #{$bp_sm2})";
 $mq_sm3     : "only screen and (min-width: #{$bp_sm3})";
+$mq_sm-only : "only screen and (max-width: #{$bp_md - 1})";
 $mq_md      : "only screen and (min-width: #{$bp_md})";
 $mq_lg      : "only screen and (min-width: #{$bp_lg})";
 $mq_xl      : "only screen and (min-width: #{$bp_xl})";
