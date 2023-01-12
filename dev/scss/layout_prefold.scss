@@ -86,6 +86,15 @@ li {
 // General Entry Headers
 .entry-header {
 
+  @media #{$mq_lg} {
+
+    .inner-wrapper--at-lg {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+  }
+
   .stretched-bg {
     background-repeat: no-repeat;
     background-size: 200% 100%;  //stretch
@@ -220,16 +229,26 @@ li {
       height: 100%;
       padding-bottom: 44px;
     }
+
     p {
+      box-orient: vertical;
+      display: flex;
+      line-clamp: 5;
       margin: 0;
       max-width: 60ch;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
       @media #{$mq_md} {
         max-width: 52ch;
       }
+
       @media #{$mq_lg} {
         max-width: 60ch;
       }
+
     }
+
     a {
       @include button;
       @include f_medium;
@@ -237,6 +256,7 @@ li {
       position: absolute;
       right: 0;
     }
+
   }
 
   &:first-of-type .excerpt-container {
