@@ -61,8 +61,8 @@
 
         <footer class="entry-footer">
           <div class="inner-wrapper">
-            <div class="post-stats"><span class="word-count"><?php word_count(); ?> words</span> published on <span class="post-date"><?php the_date(); ?></span></div>
-            <?php the_category(); ?>
+            <div class="post-stats"><span class="word-count"><?php word_count(); ?> words</span> <span class="published-on">published on</span> <span class="post-date"><?php the_date(); ?></span></div>
+            <div class="post-categories"><span class="u_visually-hidden">Categories:&nbsp;</span><?php the_category(',&nbsp;'); ?></div>
           </div>
         </footer>
 
