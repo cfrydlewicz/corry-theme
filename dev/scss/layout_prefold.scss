@@ -109,7 +109,6 @@ li {
 
 // Article Cards
 .article-card {
-  // standard (non-featured)
   width: 100%;
 
   @media #{$mq_lg} {
@@ -134,6 +133,7 @@ li {
     margin-right: auto;
     max-width: $thumbnail_width;
     position: relative;
+    transition: transform 0.2s ease-in-out;
     width: 100%;
   }
 
@@ -154,9 +154,19 @@ li {
       -webkit-line-clamp: 5;
       overflow: hidden;
       text-overflow: ellipsis;
-      &:hover {
-        color: $c_hover; // for the ellipsis
+    }
+
+  }
+
+  .entry-content,
+  .entry-footer {
+
+    .inner-wrapper {
+
+      @media #{$mq_lg} {
+        max-width: $thumbnail_width;
       }
+
     }
 
   }
@@ -261,7 +271,7 @@ li {
     .post-categories {
 
       @media #{$mq_md} {
-        flex-wrap: nowrap;
+        text-align: right;
       }
 
       a {
@@ -273,12 +283,21 @@ li {
   }
 
 
-
   // Article Card Hover State
   &:hover {
 
     .entry-header {
       @extend a:hover;
+
+      // Zoom thumbnails on hover
+      img {
+        transform: scale(1.125);
+      }
+
+    }
+
+    .entry-title {
+      color: $c_hover; // for the ellipsis
     }
 
   }

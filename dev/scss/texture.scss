@@ -168,20 +168,6 @@
 
 }
 
-// Zoom thumbnails on hover
-@media only screen and (max-width: 1023px) and (pointer: fine) {
-  body:not(.error404) { // exceptions
-    .article-card .entry-header {
-      img {
-        transition: all 0.2s ease-in-out;
-      }
-      &:hover img {
-        transform: scale(1.125);
-      }
-    }
-  }
-}
-
 
 // Funky CTA Positioning
 .article-card:first-of-type .excerpt-container {
@@ -206,16 +192,22 @@
 
 // Flashy Buttons
 @media #{$mq_mouse} {
-  // Hover Icon Animation
+
   .article-card .excerpt-container a,
   .srpw-more-link {
+
     &::after {
       transition: all 0.2s ease-in-out;
     }
-    &:hover::after {
-      margin: 0 0 0 0.75em;
-    }
+
   }
+
+  // Hover Icon Animation
+  .article-card:hover .excerpt-container a::after,
+  .srpw-more-link:hover::after {
+    margin: 0 0 0 0.75em;
+  }
+
 }
 
 
