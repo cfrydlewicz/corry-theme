@@ -284,24 +284,23 @@ li {
   }
 
 
-  // Article Card Hover State
+  // Article Card Hover States
   &:hover {
 
-    .entry-header {
-      @extend a:hover;
-
-      // Zoom thumbnails on hover
-      img {
-        transform: scale(1.125);
-      }
-
+    // Zoom thumbnails on hover
+    .entry-header img {
+      transform: scale(1.125);
     }
+
+  }
+
+  .entry-header a:hover {
 
     .entry-title {
 
       &,
       a {
-        color: $c_hover; // for the ellipsis
+        color: $c_hover; // for the overflow ellipsis
       }
 
     }
