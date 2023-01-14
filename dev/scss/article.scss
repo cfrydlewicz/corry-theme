@@ -32,6 +32,10 @@
   // Main Article Content
   .entry-content {
 
+    .inner-wrapper {
+      max-width: $bp_xl;
+    }
+
     h2 {
       font-size: 2em;
       line-height: 1.125;

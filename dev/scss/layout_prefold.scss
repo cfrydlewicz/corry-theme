@@ -153,6 +153,7 @@ li {
       display: -webkit-box;
       -webkit-line-clamp: 5;
       overflow: hidden;
+      padding-bottom: 0.05em;  // prevent descenders from being cut off
       text-overflow: ellipsis;
     }
 
@@ -297,7 +298,12 @@ li {
     }
 
     .entry-title {
-      color: $c_hover; // for the ellipsis
+
+      &,
+      a {
+        color: $c_hover; // for the ellipsis
+      }
+
     }
 
   }

@@ -211,10 +211,19 @@ body {
 }
 
 
-// non-homepage listing pages
-body:not(.home) main.listing-page {
+// listing pages
+main.listing-page {
   padding-top: $header_height + 2;  // 2px for bezel borders
 }
+
+@media #{$mq_md} {
+
+  body.home main.listing-page {
+    padding-top: 0;
+  }
+
+}
+
 
 .listing-page-header {
   margin-bottom: 12px;
