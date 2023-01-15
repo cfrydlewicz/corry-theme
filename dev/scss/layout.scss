@@ -32,6 +32,7 @@
 
   section {
     padding: 4px 0;
+
     @media #{$mq_md} {
       align-items: center;
       display: flex;
@@ -39,30 +40,42 @@
       padding-left: $gutter;
       padding-right: $gutter;
     }
+
     @media #{$mq_lg} {
       padding-left: $gutter_lg;
       padding-right: $gutter_lg;
     }
+
   }
 
   ul {
     list-style-type: none;
   }
 
+  .copyright-footer .site-footer-text,
+  .back-to-top a {
+    white-space: nowrap;
+  }
+
   .follow-container {
     width: 100%;
+
     @media #{$mq_md} {
       justify-content: flex-end;
       width: auto;
     }
+
     ul {
       display: flex;
       flex-wrap: wrap; // wrap until icons load
       justify-content: center;
+
       @media #{$mq_md} {
         justify-content: flex-end;
       }
+
     }
+
   }
 
 }
