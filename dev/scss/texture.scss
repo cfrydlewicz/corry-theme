@@ -179,22 +179,12 @@
     }
   }
 }
-.srpw-more-link {
-  bottom: -32px;
-  position: absolute;
-  right: 2%;
-  @media #{$mq_md} {
-    bottom: 0;
-    right: 0;
-  }
-}
 
 
 // Flashy Buttons
 @media #{$mq_mouse} {
 
-  .article-card .excerpt-container a,
-  .srpw-more-link {
+  .article-card .excerpt-container a {
 
     &::after {
       transition: all 0.2s ease-in-out;
@@ -203,8 +193,7 @@
   }
 
   // Hover Icon Animation
-  .article-card:hover .excerpt-container a::after,
-  .srpw-more-link:hover::after {
+  .article-card:hover .excerpt-container a::after {
     margin: 0 0 0 0.75em;
   }
 

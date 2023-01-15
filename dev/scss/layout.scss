@@ -200,10 +200,29 @@
   // overrides
   @include button(big);
 }
+
 .srpw-more-link {
   bottom: -28px;
   position: absolute;
-  right: 2%;
+  right: 5%;
+
+  @media #{$mq_md} {
+    bottom: -32px;
+    right: 2%;
+  }
+
+  @media #{$mq_mouse} {
+
+    &::after {
+      transition: all 0.2s ease-in-out;
+    }
+
+    &:hover::after {
+      margin: 0 0 0 0.75em;
+    }
+
+  }
+
 }
 
 
