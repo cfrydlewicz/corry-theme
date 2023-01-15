@@ -26,18 +26,23 @@
 body {
   font-family: 'Montserrat', helvetica, sans-serif; // critical
   font-size: 16px;  // establishes rem basis
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;  // lazy way to prevent horizontal scrollbars
+
   @media #{$mq_lg} {
     font-size: 18px;
   }
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
 }
 
 .inner-wrapper {
   padding: 0 $gutter;
   width: 100%;
 }
+
 @media #{$mq_lg} {
+
   .inner-wrapper,
   .inner-wrapper--at-lg {
     margin: 0 auto;
@@ -45,6 +50,7 @@ body {
     padding: 0 $gutter_lg;
     width: 100%;
   }
+
 }
 
 .total-wrapper {
