@@ -282,23 +282,28 @@
 
   @media #{$mq_md} {
 
+    .comments-container {
+      //order: 1;
+      width: 100%;
+    }
+
     .discussion-container {
-      order: 1;
+      //order: 2;
       width: 33%;
     }
 
     .share-container {
-      order: 2;
+      //order: 3;
       width: 33%;
     }
 
     .follow-container {
-      order: 3;
+      //order: 4;
       width: 33%;
     }
 
     .read-more-container {
-      order: 4;
+      //order: 5;
       width: 100%;
     }
 
@@ -330,8 +335,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    order: 5;
-    width: 100%;
 
     .post-footer_header {
       width: 100%;
