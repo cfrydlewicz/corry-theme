@@ -263,9 +263,11 @@
   section {
     flex-grow: 1;
     padding: 24px 16px;
+
     &:last-of-type {
-      padding-bottom: 36px;
+      padding-bottom: 64px;
     }
+
   }
 
   ul {
