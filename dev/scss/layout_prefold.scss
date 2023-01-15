@@ -77,7 +77,7 @@ li {
 
   @media #{$mq_lg} {
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
   }
 
 }
@@ -85,6 +85,15 @@ li {
 
 // General Entry Headers
 .entry-header {
+
+  @media #{$mq_lg} {
+
+    .inner-wrapper--at-lg {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+  }
 
   .stretched-bg {
     background-repeat: no-repeat;
@@ -100,57 +109,36 @@ li {
 
 // Article Cards
 .article-card {
+  width: 100%;
 
   @media #{$mq_lg} {
-    width: 46%;
-    &:first-of-type {
-      width: 100%;
-    }
+    width: calc( 50vw - #{$gutter_lg + 2px} );  // 2 per row
   }
 
+  @media #{$mq_max} {
+    width: #{$bp_max / 2 - $gutter_lg + 2px};  // 2 per row
+  }
+
+
+  // Inner Elements
   .entry-header {
     background: linear-gradient(0deg, rgba($c_grey20,0.625), rgba($c_grey80,0.625));
+    max-height: 40vh;
     overflow: hidden;
     position: relative;
-
-    &:hover a {
-      @extend a:hover;
-    }
-
   }
 
   img {
-    height: 40vh;
-    left: 50%;
-    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $thumbnail_width;
     position: relative;
-    transform: translateX(-50%);
-    width: auto;
-  }
-
-  &:first-of-type img {
-    height: 65vh;
-    max-width: none;
-    @media #{$mq_lg} {
-      height: auto;
-      max-height: 80vh;
-    }
+    transition: transform 0.2s ease-in-out;
+    width: 100%;
   }
 
   .title-container {
     @include overlay;
-
-    @media #{$mq_xl} {
-      max-width: 100%;
-    }
-
-  }
-
-  &:first-of-type .title-container {
-    @media #{$mq_xl} {
-      padding-left: 0;
-      padding-right: 0;
-    }
   }
 
   .entry-title {
@@ -158,7 +146,6 @@ li {
     font-weight: 400;
     line-height: 1;
     margin: 0 auto;
-    max-width: 1024px;
 
     @supports (-webkit-line-clamp: 5) {
       -webkit-box-orient: vertical;
@@ -166,33 +153,34 @@ li {
       display: -webkit-box;
       -webkit-line-clamp: 5;
       overflow: hidden;
+      padding-bottom: 0.05em;  // prevent descenders from being cut off
       text-overflow: ellipsis;
-      &:hover {
-        color: $c_hover; // for the ellipsis
-      }
     }
 
   }
 
-  &:first-of-type .entry-title {
-    @media #{$mq_md} {
-      font-size: 3.5em;
-      font-weight: 300;
+  .entry-content,
+  .entry-footer {
+
+    .inner-wrapper {
+
+      @media #{$mq_lg} {
+        max-width: $thumbnail_width;
+      }
+
     }
-    @media #{$mq_lg} {
-      font-size: 3em;
-    }
+
   }
 
   .entry-content {
     padding: 12px 0;
 
     @media #{$mq_lg} {
-      flex-grow: 1;
-      width: 100%;
+      flex-grow: 1;  // make tiles fill height of the row
+      width: 100%;  // needed?
 
       .inner-wrapper {
-        height: 100%;
+        height: 100%;  // make inner-wrapper fill the space too
       }
 
     }
@@ -203,24 +191,40 @@ li {
     padding-bottom: 44px;
     position: relative;
     width: 100%;
+
     @media #{$mq_md} {
       min-height: 38px; // enough space for CTA
       padding-bottom: 0;  // side-by-side CTA and excerpt
     }
+
     @media #{$mq_lg} {
       height: 100%;
       padding-bottom: 44px;
     }
+
     p {
+      // Actual excerpt text
       margin: 0;
       max-width: 60ch;
+      text-overflow: ellipsis;
+
+      @supports (-webkit-line-clamp: 5) {
+        -webkit-box-orient: vertical;
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        overflow: hidden;
+      }
+
       @media #{$mq_md} {
-        max-width: 52ch;
+        max-width: 52ch;  // Needed?
       }
+
       @media #{$mq_lg} {
-        max-width: 60ch;
+        max-width: 60ch;  // Needed?
       }
+
     }
+
     a {
       @include button;
       @include f_medium;
@@ -228,62 +232,124 @@ li {
       position: absolute;
       right: 0;
     }
-  }
-
-  &:first-of-type .excerpt-container {
-    padding-bottom: 28px;
-
-    a {
-      @include button(big);
-      bottom: -15%;
-      font-weight: 800;
-      right: 2%;
-    }
 
   }
 
   .entry-footer {
     padding: 8px 0;
     width: 100%;
+
     .inner-wrapper {
       display: flex;
       flex-direction: column;
+
       @media #{$mq_md} {
+        align-items: center;
         flex-direction: row;
         justify-content: space-between;
       }
+
+      @media #{$mq_lg} {
+        flex-wrap: wrap;
+      }
+
     }
+
+    .post-stats,
+    .post-categories {
+
+      @media #{$mq_xxl} {
+        min-width: 40%;
+      }
+
+    }
+
     .post-stats,
     .post-categories a {
       @include f_small;
     }
+
     .post-categories {
-      display: flex;
-      flex-wrap: wrap;
+
       @media #{$mq_md} {
-        flex-wrap: nowrap;
+        text-align: right;
       }
-      li {
-        display: inline;
-        margin-bottom: 0;
-        &:not(:last-child)::after {
-          content: ', ';
-          margin-right: 0.25em;
-        }
-      }
+
       a {
         white-space: nowrap;
       }
+
     }
+
   }
 
-  @media #{$mq_lg} {
-    .entry-content,
-    .entry-footer {
-      margin-left: auto;
-      margin-right: auto;
-      max-width: $thumbnail_width;
+
+  // Article Card Hover States
+  &:hover {
+
+    // Zoom thumbnails on hover
+    .entry-header img {
+      transform: scale(1.125);
     }
+
+  }
+
+  .entry-header:hover {
+
+    .entry-title {
+
+      &,
+      a {
+        color: $c_hover; // for the overflow ellipsis
+      }
+
+    }
+
+  }
+
+
+  // featured post
+  &:first-of-type {
+    width: 100%;
+
+    @media #{$mq_lg} {
+      width: 100%;
+    }
+
+    .entry-header {
+      max-height: 65vh;
+
+      @media #{$mq_lg} {
+        max-height: 80vh;
+      }
+
+    }
+
+    .entry-title {
+  
+      @media #{$mq_md} {
+        font-size: 3.5em;
+        font-weight: 300;
+      }
+  
+      @media #{$mq_lg} {
+        font-size: 3em;
+      }
+
+    }
+
+    .excerpt-container {
+      padding-bottom: 28px;
+
+      a {
+        @include button(big);
+        bottom: -15%;
+        font-weight: 800;
+        right: 2%;
+      }
+
+    }
+
   }
 
 }

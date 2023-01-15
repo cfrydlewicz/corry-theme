@@ -6,16 +6,20 @@
     <header class="listing-page-header">
       <div class="inner-wrapper">
         <?php if ( is_category() ) : ?>
-          <h1 id="sticky-title" class="page-title">Category: <strong><?php single_cat_title(); ?></strong></h1>
+          <h1 id="sticky-title" class="page-title"><span>Category:</span> <strong><?php single_cat_title(); ?></strong></h1>
+          <?php echo category_description(); ?>
         <?php elseif ( is_tag() ) : ?>
-          <h1 id="sticky-title" class="page-title">Tag <strong><?php single_tag_title(); ?></strong></h1>
+          <h1 id="sticky-title" class="page-title"><span>Tag:</span> <strong><?php single_tag_title(); ?></strong></h1>
         <?php elseif ( is_search() ) : ?>
-          <h1 id="sticky-title" class="page-title">Search Results for <strong><?php echo esc_html($_GET['s']); ?></strong></h1>
+          <h1 id="sticky-title" class="page-title"><span>Search Results for</span> <strong><?php echo esc_html($_GET['s']); ?></strong></h1>
         <?php else : ?>
-          <div class="page-title">Oops!</div>
+          <div class="page-title"><strong>Oops!</strong></div>
+          <p>Sorry, I couldn't find what you were looking for. Try a search maybe?</p>
         <?php endif; ?>
       </div>
     </header>
+  <?php else : ?>
+    <?php query_posts('cat=-700'); // exclude microblogs from homepage ?>
   <?php endif; ?>
 
   <?php if ( have_posts() ) : ?>
@@ -26,7 +30,15 @@
       <article id="post-<?php the_ID(); ?>" <?php post_class('article-card'); ?>>
 
         <header class="entry-header">
-          <div class="stretched-bg" style="background-image: url('<?php the_post_thumbnail_url(); ?>');"></div>
+          <div class="stretched-bg" style="background-image: url('<?php 
+            if ( has_post_thumbnail() ) {
+              the_post_thumbnail_url();
+            } else if ( is_category(700) ) {
+              echo "/wp-content/themes/corry/assets/thumbnail-microblog.jpg";
+            } else {
+              echo "/wp-content/themes/corry/assets/thumbnail-default.jpg";
+            }
+          ?>');"></div>
           <div class="inner-wrapper--at-lg" data-thumbnail="<?php the_post_thumbnail_url(); ?>">
             <a href="<?php the_permalink(); ?>"><?php post_thumbnail(); ?></a>
             <div class="title-container">
@@ -50,8 +62,8 @@
 
         <footer class="entry-footer">
           <div class="inner-wrapper">
-            <div class="post-stats"><span class="word-count"><?php word_count(); ?> words</span> published on <span class="post-date"><?php the_date(); ?></span></div>
-            <?php the_category(); ?>
+            <div class="post-stats"><span class="word-count"><?php word_count(); ?> words</span> <span class="published-on">published on</span> <span class="post-date"><?php the_date(); ?></span></div>
+            <div class="post-categories"><span class="u_visually-hidden">Categories:&nbsp;</span><?php the_category(',&nbsp;'); ?></div>
           </div>
         </footer>
 

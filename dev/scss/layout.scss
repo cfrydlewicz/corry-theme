@@ -26,7 +26,7 @@
       padding-right: 0;
     }
     @media #{$mq_lg} {
-      max-width: $thumbnail_width;
+      max-width: $bp_max;
     }
   }
 
@@ -75,7 +75,7 @@
   margin-bottom: 48px;
 
   @media #{$mq_lg} {
-    width: 46%;
+    width: calc( 50vw - #{$gutter_lg + 2px} );  // 2 per row
 
     .inner-wrapper {
       align-items: center;
@@ -96,6 +96,10 @@
 
     }
 
+  }
+
+  @media #{$mq_max} {
+    width: #{$bp_max / 2 - $gutter_lg + 2px};  // 2 per row
   }
 
   .inner-wrapper {
@@ -150,7 +154,7 @@
 
     @media #{$mq_md} {
       height: auto;
-      width: 1024px;
+      width: $thumbnail_width;
     }
 
   }
@@ -166,7 +170,7 @@
   font-weight: 400;
   line-height: 1;
   margin: 0 auto;
-  max-width: 1024px;
+  max-width: $thumbnail_width;
 
   @media #{$mq_md} {
     font-size: 2.5em;
@@ -278,23 +282,28 @@
 
   @media #{$mq_md} {
 
+    .comments-container {
+      //order: 1;
+      width: 100%;
+    }
+
     .discussion-container {
-      order: 1;
+      //order: 2;
       width: 33%;
     }
 
     .share-container {
-      order: 2;
+      //order: 3;
       width: 33%;
     }
 
     .follow-container {
-      order: 3;
+      //order: 4;
       width: 33%;
     }
 
     .read-more-container {
-      order: 4;
+      //order: 5;
       width: 100%;
     }
 
@@ -326,8 +335,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    order: 5;
-    width: 100%;
 
     .post-footer_header {
       width: 100%;
@@ -337,6 +344,7 @@
 }
 
 .comment-list {
+  list-style-type: none;
   margin-bottom: 36px;
 
   @media #{$mq_md} {
@@ -414,6 +422,12 @@
     // comment admin
     display: block;
   }
+}
+
+a.comment-edit-link {
+  color: $c_accent;
+  font-size: 0.75em;
+  text-transform: uppercase;
 }
 
 .respond-container {

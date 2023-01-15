@@ -41,32 +41,40 @@ body {
   .inner-wrapper,
   .inner-wrapper--at-lg {
     margin: 0 auto;
-    max-width: $thumbnail_width + $gutter_lg*2;
+    max-width: $bp_max;
     padding: 0 $gutter_lg;
     width: 100%;
   }
 }
 
 .total-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: $bp_max;
   min-height: 100vh;
   min-width: $bp_min;
   position: relative;
+
+  @media #{$mq_max} {
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.25);
+  }
+
 }
 
 .site-header {
   backface-visibility: hidden; // fixed position fix for old mobile browsers
+  left: 50%;
   position: fixed;
+  transform: translateX(-50%);
   width: 100vw;
   z-index: 1;
 
   .inner-wrapper {
     align-items: stretch;
     display: flex;
+    max-width: $bp_max;
     padding-left: 0;
     padding-right: 0;
-    @media #{$mq_lg} {
-      max-width: $thumbnail_width;
-    }
   }
 
   &-primary .inner-wrapper {
@@ -100,6 +108,11 @@ body {
       overflow-x: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
+
+      strong {
+        font-weight: 600;
+      }
+
     }
 
   }
@@ -114,7 +127,7 @@ body {
     z-index: 2;
   }
   a {
-    display: block;
+    display: flex;
     height: 100%;
     padding: 4px;
     @media #{$mq_sm2} {
@@ -140,15 +153,28 @@ body {
   li {
     align-items: stretch;
     display: flex;
-    margin: 0;
+
+    &,
+    &:not(:last-child) {  // override general list item styling
+      margin: 0;
+    }
+
+    @media only screen and (max-width: #{$bp_sm3 - 1}) {
+      // hide some nav items until screen is wide enough
+      &:not(:first-child) {
+        display: none;
+      }
+    }
+
   }
   a {
     align-items: center;
     display: flex;
-    font-size: 1rem;
+    font-size: 0.875rem;
     font-weight: 500;
     padding: 0 8px;
-    @media #{$mq_sm2} {
+    @media #{$mq_sm3} {
+      font-size: 1rem;
       padding: 0 $gutter;
     }
     @media #{$mq_lg} {
@@ -185,17 +211,53 @@ body {
 }
 
 
-// non-homepage listing pages
-body:not(.home) main.listing-page {
-  padding-top: $header_height + 8;
+// listing pages
+main.listing-page {
+  padding-top: $header_height + 2;  // 2px for bezel borders
 }
 
+@media #{$mq_md} {
+
+  body.home main.listing-page {
+    padding-top: 0;
+  }
+
+}
+
+
 .listing-page-header {
+  margin-bottom: 12px;
   padding: 8px 0;
   width: 100%;
 
+  @media #{$mq_lg} {
+    padding: 12px 0;
+  }
+
   .page-title {
     @include f_larger;
+
+    &:not(:last-child) {
+      margin-bottom: 0.25em;
+    }
+
+    span {
+      @include f_smallest;
+      color: $c_light50;
+      display: block;
+      font-family: monospace;
+      margin-bottom: 0.125em;
+    }
+
+    strong {
+      display: block;
+      font-weight: 500;
+    }
+
+  }
+
+  p {
+    @include f_smaller;
   }
 
 }
@@ -210,8 +272,6 @@ body.error404 {
   }
 
   .article-card:first-of-type img {
-    height: auto;
-    max-width: 1024px;
     padding-bottom: 40px;
     width: 100%;
   }

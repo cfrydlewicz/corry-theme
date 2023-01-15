@@ -27,6 +27,7 @@ $icons: (
   arrow-left: dc3,
   arrow-right: dbb,
   arrow-up: db7,
+  cards: d47,
   chat: ac5,
   calendar: a62,
   checkbox: e6e,
@@ -34,6 +35,7 @@ $icons: (
   checkmark: d6f,
   code: ecd,
   close: d6c,
+  discord: ac5,
   exit: d7b,
   facebook: ef0,
   game: 96d,
@@ -44,7 +46,9 @@ $icons: (
   instagram: ef1,
   linkedin: f28,
   lol: d3a,
+  magic: b6e,
   mail: a34,
+  mastodon: ef5,
   minus: d5c,
   movie: 961,
   music: 94e,
@@ -127,11 +131,11 @@ $icons: (
     // External links without a specific icon
     @include icomoon;
     content: "\ed7b";
-    font-size: 0.75em;
-    margin: 0.125em 0 0 0.375em;
+    font-size: 0.5em;
+    margin: 0.5em 0 0 0.375em;
     vertical-align: text-top;
     @media #{$mq_md} {
-      font-size: 0.625em;
+      font-size: 0.375em;
     }
 
     // Email links

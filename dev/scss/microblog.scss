@@ -1,0 +1,126 @@
+// Single Posts
+.article-content.category-microblog {
+
+  .article-content .entry-header img {
+    max-height: 400px;
+  }
+  
+  .entry-content {
+
+    .wp-block-pullquote {
+
+      &,
+      blockquote p {
+        // keep pullquotes normal size
+        font-size: 1em;
+      }
+
+    }
+
+  }
+
+}
+
+
+// Microblogging Listing Page (Feed)
+// https://corryfrydlewicz.com/category/microblog/
+body.category-microblog {
+
+  .article-card {
+
+    .entry-header {
+      min-height: 146px;
+    }
+
+    .entry-title {
+      font-size: 1.5em;
+    }
+
+    .word-count,
+    .post-date {
+      display: block;
+      margin-bottom: 0.125em;
+    }
+
+    .published-on {
+      display: none;
+    }
+
+
+    // Featured
+    &:first-of-type {
+
+      .entry-header {
+        max-height: 30vh;
+      }
+
+      .entry-title {
+        font-size: 1.75em;
+      }
+
+    }
+
+    @media #{$mq_lg} {
+
+      .entry-header {
+        max-height: 30vh;
+      }
+
+      .post-date {
+        margin-bottom: 0;
+      }
+
+    }
+
+    @media #{$mq_xl} {
+
+      .entry-header {
+        min-height: 190px;
+      }
+
+    }
+
+    @media #{$mq_xxl} {
+      width: calc( 25vw - #{$gutter_lg + 2px} );  // 4 per row
+
+      .entry-header {
+        min-height: 170px;
+      }
+
+      // Feature first two
+      &:nth-of-type(-n+2) {
+        width: calc( 50vw - #{$gutter_lg + 2px} );  // 2 per row
+
+        .entry-title {
+          font-size: 1.75em;
+        }
+
+        .excerpt-container {
+          padding-bottom: 28px;
+
+          a {
+            @include button(big);
+            bottom: -15%;
+            font-weight: 800;
+            right: 2%;
+          }
+
+        }
+
+      }
+
+    }
+
+    @media #{$mq_max} {
+      width: #{$bp_max / 4 - $gutter_lg + 2px};  // 4 per row
+
+      // Feature first two
+      &:nth-of-type(-n+2) {
+        width: #{$bp_max / 2 - $gutter_lg + 2px};  // 2 per row
+      }
+
+    }
+
+  }
+
+}
