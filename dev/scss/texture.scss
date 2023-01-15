@@ -104,13 +104,25 @@
   @extend .grainy;
 
   section {
+
     &:hover {
       @extend .grainy;
     }
+
+    @media #{$mq_sm-only} {
+
+      &:hover {
+        background: transparent;
+      }
+
+    }
+
     @media #{$mq_md} {
       @extend .bezel--horizontal--at-md;
     }
+
   }
+
 }
 
 
