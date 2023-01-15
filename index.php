@@ -14,6 +14,7 @@
           <h1 id="sticky-title" class="page-title"><span>Search Results for</span> <strong><?php echo esc_html($_GET['s']); ?></strong></h1>
         <?php else : ?>
           <div class="page-title"><strong>Oops!</strong></div>
+          <p>Sorry, I couldn't find what you were looking for. Try a search maybe?</p>
         <?php endif; ?>
       </div>
     </header>
