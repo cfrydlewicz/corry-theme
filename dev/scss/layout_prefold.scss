@@ -318,11 +318,6 @@ li {
 
     .entry-header {
       max-height: 65vh;
-
-      @media #{$mq_lg} {
-        max-height: 80vh;
-      }
-
     }
 
     .entry-title {
