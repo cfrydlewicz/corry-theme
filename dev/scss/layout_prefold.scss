@@ -20,6 +20,9 @@ a {
   &:hover {
     color: $c_hover;
   }
+  &:focus {
+    outline: 1px dotted $c_primary;
+  }
   &:active {
     color: $c_active;
     cursor: wait;
@@ -289,7 +292,7 @@ li {
 
     // Zoom thumbnails on hover
     .entry-header img {
-      transform: scale(1.125);
+      transform: scale(1.05);
     }
 
   }
