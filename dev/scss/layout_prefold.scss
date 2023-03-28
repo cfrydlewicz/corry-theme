@@ -34,6 +34,9 @@ a {
     margin: 0 0.375em;
   }
 }
+figure > a {
+  display: block;  // force the box model of a tags wrapped around images to behave (not links in captions though)
+}
 p {
   line-height: 1.5; // Accessibility standards recommend 1.5 - 2.0
   &:not(:last-child) {
