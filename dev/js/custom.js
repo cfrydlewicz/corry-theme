@@ -28,7 +28,6 @@ $(document).ready( function() {
 
     // Detect scrolling (up or down)
     $(window).on("scroll", function() {
-      jQuery(window).scrollTop();
 
       // Set Width of Progress Bar
       progressBarWidth = jQuery(window).scrollTop() / postEndPosition * 100;
