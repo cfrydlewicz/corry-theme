@@ -31,7 +31,7 @@ $(document).ready( function() {
       jQuery(window).scrollTop();
 
       // Set Width of Progress Bar
-      progressBarWidth = jQuery(window).scrollTop() / postEndPosition;
+      progressBarWidth = jQuery(window).scrollTop() / postEndPosition * 100;
       $('#article-progress-bar').css('width', progressBarWidth + '%');
 
     });
