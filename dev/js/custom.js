@@ -34,6 +34,12 @@ $(document).ready( function() {
       progressBarWidth = jQuery(window).scrollTop() / postEndPosition * 100;
       $('#article-progress-bar').css('width', progressBarWidth + '%');
 
+      if (progressBarWidth >= 100) {
+        $('#jump-to-footer').fadeOut();
+      } else {
+        $('#jump-to-footer').fadeIn();
+      }
+
     });
 
   }
