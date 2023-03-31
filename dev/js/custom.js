@@ -18,4 +18,24 @@ $(document).ready( function() {
 
   }
 
+  // Article Progress Bar
+  // Only on Single Post Pages
+  if ( $('body').hasClass('single') ) {
+
+    // Detect article height
+    var postEndPosition = $('#a_end-of-article').offset().top;
+    var progressBarWidth;
+
+    // Detect scrolling (up or down)
+    $(window).on("scroll", function() {
+      jQuery(window).scrollTop();
+
+      // Set Width of Progress Bar
+      progressBarWidth = jQuery(window).scrollTop() / postEndPosition;
+      $('#article-progress-bar').css('width', progressBarWidth + '%');
+
+    });
+
+  }
+
 });

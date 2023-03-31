@@ -146,6 +146,7 @@ $saveData = (isset($_SERVER["HTTP_SAVE_DATA"]) && stristr($_SERVER["HTTP_SAVE_DA
           <?php else : ?>
             <a title="Jump to the end of the page" class="i_chat i_arrow-down--after" href="#a_end-of-article">End of Article</a>
           <?php endif; ?>
+          <div id="article-progress-bar" class="article-progress-bar"></div>
         <?php elseif ( is_category() ) : ?>
           <a title="Jump to the beginning of the page" href="#a_skip-to-content" class="title i_arrow-up"><span>Category:&nbsp;</span><strong><?php single_cat_title(); ?></strong></a>
         <?php elseif ( is_tag() ) : ?>
