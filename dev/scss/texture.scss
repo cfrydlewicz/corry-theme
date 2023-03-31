@@ -63,12 +63,30 @@
   }
 
   &-secondary {
+
+    .inner-wrapper {
+      position: relative;
+    }
+
     a {
       @extend .bezel--horizontal;
+
       &:hover {
         @extend .grainy;
       }
+
     }
+
+  }
+
+  // Article Progress Bar
+  .article-progress-bar {
+    background: linear-gradient(90deg, $c_dark-base 0%, $c_primary 100%);
+    bottom: -4px;
+    height: 4px;
+    max-width: 100%;
+    position: absolute;
+    transition: width 0.25s ease-out;
   }
 
 }

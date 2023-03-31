@@ -18,4 +18,30 @@ $(document).ready( function() {
 
   }
 
+  // Article Progress Bar
+  // Only on Single Post Pages
+  if ( $('body').hasClass('single') ) {
+
+    // Detect article height
+    var postEndPosition = $('#a_end-of-article').offset().top;
+    var progressBarWidth;
+
+    // Detect scrolling (up or down)
+    $(window).on("scroll", function() {
+      postEndPosition = $('#a_end-of-article').offset().top;  // update article height for any late pop-in elements
+
+      // Set Width of Progress Bar
+      progressBarWidth = jQuery(window).scrollTop() / postEndPosition * 100;
+      $('#article-progress-bar').css('width', progressBarWidth + '%');
+
+      if (progressBarWidth >= 100) {
+        $('#jump-to-footer').fadeOut();
+      } else {
+        $('#jump-to-footer').fadeIn();
+      }
+
+    });
+
+  }
+
 });
