@@ -89,13 +89,13 @@ $saveData = (isset($_SERVER["HTTP_SAVE_DATA"]) && stristr($_SERVER["HTTP_SAVE_DA
   <script type="text/javascript" src="<?php bloginfo('template_url');?>/scripts.js"></script>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9NLMGBMZWT"></script>
+  <!--script async src="https://www.googletagmanager.com/gtag/js?id=G-9NLMGBMZWT"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-9NLMGBMZWT');
-  </script>
+  </script-->
 
   <?php wp_head(); ?>
 </head>
