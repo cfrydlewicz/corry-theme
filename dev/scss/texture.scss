@@ -81,9 +81,11 @@
 
   // Article Progress Bar
   .article-progress-bar {
+    background-color: $c_primary;
     bottom: -4px;
     height: 4px;
     max-width: 100%;
+    //min-width: 0;
     position: absolute;
   }
 
