@@ -28,6 +28,7 @@ $(document).ready( function() {
 
     // Detect scrolling (up or down)
     $(window).on("scroll", function() {
+      postEndPosition = $('#a_end-of-article').offset().top;  // update article height for any late pop-in elements
 
       // Set Width of Progress Bar
       progressBarWidth = jQuery(window).scrollTop() / postEndPosition * 100;
