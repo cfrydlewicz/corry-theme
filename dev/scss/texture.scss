@@ -86,6 +86,7 @@
     height: 4px;
     max-width: 100%;
     position: absolute;
+    transition: width 0.25s ease-out 0;
   }
 
 }
