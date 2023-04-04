@@ -82,33 +82,32 @@
     }
 
     // header effects
-    h2::before,
-    h3::before,
-    h4::before,
-    h5::before {
-      color: $c_light50;
-      display: inline-block;
-      font-family: monospace;
-      font-size: 12px;
-      @media #{$mq_md} {
-        font-size: 16px;
+    h2,
+    h3,
+    h4,
+    h5 {
+      position: relative;
+
+      &::before {
+        color: $c_light30;
+        font-family: monospace;
+        font-size: 12px;
+        transform: rotate(270deg) translate(-40%,-1.75em);
       }
-      @media #{$mq_lg} {
-        font-size: 20px;
-      }
-      margin-right: 0.25em;
+
     }
+
     h2::before {
-      content: 'h2';
+      content: '<h2>';
     }
     h3::before {
-      content: 'h3';
+      content: '<h3>';
     }
     h4::before {
-      content: 'h4';
+      content: '<h4>';
     }
     h5::before {
-      content: 'h5';
+      content: '<h5>';
     }
 
     p,
