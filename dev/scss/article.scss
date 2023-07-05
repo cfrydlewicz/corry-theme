@@ -185,21 +185,31 @@
     ol {
       padding-left: 2em;
       margin-bottom: 1.5em;
+
+      &::marker {
+        color: $c_light20;
+      }
+
       ul, ol {
         border-color: $c_grey80;
         border-style: solid;
-        border-width: 1px 0;
+        border-width: 0;
         margin: 0.25em 2em 1em 0;
         padding-bottom: 0.25em;
         padding-right: 0.25em;
         padding-top: 0.25em;
+
         ul, ol {
           border-color: $c_grey70;
+
           ul, ol {
             border-color: $c_grey60;
           }
+
         }
+
       }
+
     }
     ul {
       list-style-type: disc;
