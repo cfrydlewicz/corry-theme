@@ -28,7 +28,10 @@ body {
   font-size: 16px;  // establishes rem basis
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;  // lazy way to prevent horizontal scrollbars
+
+  @media #{$mq_sm} {
+    overflow-x: hidden;  // prevent horizontal scrollbars above minimum spec
+  }
 
   @media #{$mq_lg} {
     font-size: 18px;
