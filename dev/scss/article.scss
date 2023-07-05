@@ -186,10 +186,6 @@
       padding-left: 2em;
       margin-bottom: 1.5em;
 
-      &::marker {
-        color: $c_light20;
-      }
-
       ul, ol {
         border-color: $c_grey80;
         border-style: solid;
@@ -211,6 +207,7 @@
       }
 
     }
+
     ul {
       list-style-type: disc;
       ul {
@@ -220,6 +217,7 @@
         }
       }
     }
+
     ol {
       list-style-type: decimal-leading-zero;
       ol {
@@ -231,6 +229,14 @@
           }
         }
       }
+    }
+
+    li {
+
+      &::marker {
+        color: $c_light40;
+      }
+
     }
 
     // Images
