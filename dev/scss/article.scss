@@ -220,6 +220,15 @@
 
     ol {
       list-style-type: decimal-leading-zero;
+
+      li {
+
+        &::marker {
+          font-size: 0.875em;
+        }
+
+      }
+
       ol {
         list-style-type: upper-alpha;
         ol {
