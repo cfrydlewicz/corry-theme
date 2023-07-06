@@ -2,10 +2,16 @@
 
 
 // Theme Base Colors
-$c_primary:   #7dfcd6; // cyan
-$c_secondary: #fd32db; // magenta
-$c_accent:    #d6622b; // orange
+$c_primary:   oklch(90.78% 0.153 180.5); // cyan
+$c_secondary: oklch(71.2% 0.346 336.4); // magenta
+$c_accent:    oklch(71.5% 0.234 40.6); // orange
 $c_dark-base: #2e3c41; // murk
+
+
+// Variations
+$c_primary-dim: oklch(73.24% 0.15 180.5);
+$c_accent-dim:  oklch(51.36% 0.169 43.84);
+$c_accent-dark: oklch(28.8% 0.089 47);
 
 
 // Shade Colors
@@ -110,7 +116,7 @@ $mq_mouse   : "only screen and (pointer: fine)";
 // Buttons
 @mixin button($size:null) {
   background-color: $c_primary;
-  border-color: mix(black, $c_primary, 25%);
+  border-color: $c_primary-dim;
   border-radius: $border-radius;
   border-style: solid;
   border-width: 2px;
@@ -123,12 +129,12 @@ $mq_mouse   : "only screen and (pointer: fine)";
   vertical-align: middle;
   &:hover {
     background-color: $c_hover;
-    border-color: mix(black, $c_hover, 25%);
+    border-color: $c_accent-dim;
     color: $c_trueblack;
   }
   &:active {
     background-color: $c_active;
-    border-color: mix(black, $c_active, 25%);
+    border-color: $c_accent-dim;
     color: $c_trueblack;
   }
 

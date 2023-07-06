@@ -113,7 +113,7 @@ input[type="checkbox"] {
 // Alert / Warning Boxes
 .disclaimer {
   @include f_small;
-  background-color: mix(black, $c_accent, 80%);
+  background-color: $c_accent-dark;
   border-color: $c_accent;
   border-style: solid;
   border-width: 1px;
