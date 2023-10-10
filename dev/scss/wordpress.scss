@@ -9,11 +9,18 @@ body.admin-bar.logged-in {
     // Content Area
     main > article .entry-content {
 
+      // Mark images without ALT text
+      img:not([alt]),
+      img[alt=""] {
+        outline: 2px dashed $c_accent;
+      }
+
       // Mark unlinked post images
       img:not(.emoji) {
         outline: 2px dashed $c_accent;
       }
-      a img:not(.emoji) {
+
+      a img[alt]:not([alt=""]):not(.emoji) {
         outline: none;
       }
 
