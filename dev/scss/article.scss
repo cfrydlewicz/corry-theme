@@ -257,6 +257,11 @@
       width: auto;
     }
 
+    // inline emojis
+    p img {
+      display: inline;
+    }
+
     .wp-block-image {
       margin-bottom: 1.5em;
     }
