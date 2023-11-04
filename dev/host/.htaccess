@@ -2,6 +2,48 @@ RewriteEngine On
 RewriteCond %{HTTPS} !on
 RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
 
+# BEGIN Custom Redirects
+
+  # Bluesky
+  Redirect 301 /bluesky https://bsky.app/profile/cfrydlewicz.bsky.social
+  # Redirect 301 /twitter https://bsky.app/profile/cfrydlewicz.bsky.social
+
+  # Contact
+  Redirect 301 /contact /about/#a_contact
+
+  # Discord
+  Redirect 301 /discord https://discord.gg/WgMga84
+
+  # Facebook
+  Redirect 301 /facebook https://www.facebook.com/cfrydlewicz/
+
+  # Instagram
+  Redirect 301 /instagram https://www.instagram.com/corryfrydlewicz/
+
+  # LinkedIn
+  Redirect 301 /linkedin https://www.linkedin.com/in/corryfrydlewicz/
+
+  # Magic: The Gathering Decks
+  Redirect 301 /mtgdecks https://www.moxfield.com/users/ultros
+
+  # Mastodon
+  Redirect 301 /mastodon https://sfba.social/@cfrydlewicz
+  Redirect 301 /twitter https://sfba.social/@cfrydlewicz
+
+  # Music
+  Redirect 301 /music https://open.spotify.com/playlist/59TxdkMRHa3DL54uXp9Y3c?si=396bd51db7324ecc
+
+  # PayPal
+  Redirect 301 /paypal https://paypal.me/CFrydlewicz?country.x=US&locale.x=en_US
+
+  # Resume
+  Redirect 301 /resume /uploads/misc/resume_CorryFrydlewicz.html
+
+  # Venmo
+  Redirect 301 /venmo https://venmo.com/u/Corry-Frydlewicz
+
+# END Custom Redirects
+
 <IfModule mod_deflate.c>
     SetOutputFilter DEFLATE
     <IfModule mod_setenvif.c>
