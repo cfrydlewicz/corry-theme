@@ -31,6 +31,14 @@ module.exports = function(grunt) {
       }
     },
 
+    cmq: {
+      your_target: {
+        files: {
+          'css': ['css/*.concat.css']
+        }
+      }
+    },
+
     autoprefixer: {
       options: {
         browsers: ['last 2 version']
@@ -101,6 +109,6 @@ module.exports = function(grunt) {
   });
 
   // Default task(s).
-  grunt.registerTask('default', ['devUpdate', 'sass', 'autoprefixer', 'cssmin', 'concat', 'jshint', 'uglify']);
+  grunt.registerTask('default', ['devUpdate', 'sass', 'cmq', 'autoprefixer', 'cssmin', 'concat', 'jshint', 'uglify']);
 
 };
