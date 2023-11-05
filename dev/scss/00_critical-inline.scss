@@ -86,6 +86,11 @@ body {
     padding-right: 0;
   }
 
+  &-primary,
+  &-secondary {
+    background-color: $c_grey40; // opaque until textures load
+  }
+
   &-primary .inner-wrapper {
     height: $header_height;
   }

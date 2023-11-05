@@ -52,16 +52,6 @@ li {
 
 
 // Specific Zones
-.site-header {
-
-  &-primary,
-  &-secondary {
-    // opaque until textures
-    background-color: $c_grey40;
-  }
-
-}
-
 .header-logo {
   path {
     fill: $c_link;
