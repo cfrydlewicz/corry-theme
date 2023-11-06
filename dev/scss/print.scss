@@ -1,15 +1,109 @@
 @media print {
 
-  // Append Link URLs in print
-  a[href^="http"]:not([href*="mywebsite.com"])::after {
-    content: " [" attr(href) "]";
-  }
-
   // Hide elements that are irrelevant in print
+  .header-nav,
   .header-search,
   .navigation-container,
-  .footer-links-container {
-    display: none;
+  .site-header-secondary,
+  .footer-links-container
+  {
+    display: none !important;
+  }
+
+  body {
+    background-color: #fff;
+    color: #000;
+
+    a {
+      color: $c_primary-dark;
+    }
+
+  }
+
+  .site-header {
+    margin-bottom: 1rem;
+    position: relative;
+  }
+
+  .site-header-primary {
+    background: none;
+    border-width: 0;
+  }
+
+  .header-logo {
+
+    > a {
+      border-width: 0;
+    }
+
+    path {
+      fill: $c_primary-dark;
+    }
+
+    &::after {
+      content: '[ corryfrydlewicz.com ]';
+    }
+
+  }
+
+  // Single Article Content
+  .article-content {
+
+    // Place Article Titles Above Thumbnail Images
+    .entry-header {
+
+      .stretched-bg {
+        display: none;
+      }
+
+      .inner-wrapper--at-lg {
+        display: flex;
+        flex-flow: column wrap;
+
+        .title-container {
+          background: transparent;
+          order: 1;
+          padding-left: 0;
+          position: relative;
+        }
+
+        > a {
+          // Thumbnail
+          order: 2;
+
+          img {
+            height: auto;
+            left: 0;
+            margin-bottom: 1rem;
+            max-height: none;
+            max-width: 100%;
+            transform: none;
+          }
+
+        }
+
+      }
+
+    }
+
+    // Append External Link URLs in print
+    .entry-content {
+
+      a[href^="http"]:not([href*="corryfrydlewicz.com"])::after {
+        color: #000;
+        content: " [" attr(href) "]";
+        display: inline;
+        font-family: Consolas, sans-serif;
+        font-size: 1em;
+        margin-top: 0;
+      }
+
+      strong {
+        color: #000;
+      }
+
+    }
+
   }
 
 }
