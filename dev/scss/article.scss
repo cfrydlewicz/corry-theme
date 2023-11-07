@@ -357,21 +357,33 @@
     }
 
     // Tables
+    .wp-block-table {
+      // WP container element
+      margin-bottom: 3em;
+
+      figcaption {
+        height: 2.375em;  // attempt to prevent unwanted scrollbars
+      }
+
+    }
+
     table {
       border-collapse: collapse;
       font-size: 1em;
       line-height: 1.2;
       max-width: 100%;
-      margin-bottom: 3em;
+
       th,
       td {
         padding: 0.25rem;
         border: 1px solid $c_grey50;
       }
+
       th {
         font-weight: 600;
         text-transform: uppercase;
       }
+
     }
 
     // pre-formatted
