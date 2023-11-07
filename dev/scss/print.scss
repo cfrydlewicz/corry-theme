@@ -8,6 +8,7 @@
   .article-content .entry-footer,
   .post-footer .respond-container,
   .post-footer .discussion-container,
+  .comment-list article .reply,
   .post-footer .share-container li:not(:first-child),
   .post-footer .follow-container,
   .post-footer .read-more-container,
@@ -95,10 +96,10 @@
 
     }
 
-    // Append External Link URLs in print
     .entry-content {
 
       a[href^="http"]:not([href*="corryfrydlewicz.com"])::after {
+        // Append External Link URLs in print
         color: #000;
         content: " [" attr(href) "]";
         display: inline;
@@ -110,6 +111,10 @@
       a[href^="http"][href*="facebook.com"]:not([href*="corryfrydlewicz.com"])::after {
         // override Facebook URLs - they're too long and fuck Meta
         content: " [https://www.facebook.com/groups/4912504758808432/?ref=share]";
+      }
+
+      p {
+        max-width: 100%;  // may make it less readable, but will waste less paper
       }
 
       b,
@@ -129,15 +134,71 @@
 
   .comment-list article {
     background: transparent;
+    page-break-inside: avoid;
   }
 
   .site-footer {
     // move copyright to top-right
-    background-color: #fff;
+    background: transparent;
     border-width: 0;
     position: absolute;
     right: 0;
     top: 0;
+  }
+
+  // in the odd edge case where someone wants to print an index page...
+  .listing-page {
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding-top: 0;
+
+    .article-card {
+      width: 49% !important;
+
+      .title-container {
+        background-color: rgba(255,255,255,0.75);
+
+        h2 a {
+          color: #000;
+        }
+
+      }
+      .entry-content {
+        background: transparent;
+
+        .excerpt-container {
+          padding-bottom: 0;
+
+          a {
+            display: none;
+          }
+
+        }
+
+      }
+
+      .entry-footer {
+        background: transparent;
+        border-top-width: 0;
+
+        .post-categories .u_visually-hidden {
+          // Add context for print
+          font-size: 0.875rem;
+          font-weight: 500;
+          height: auto;
+          left: 0;
+          position: relative;
+          width: auto;
+        }
+
+      }
+
+    }
+
+    .pagination-container {
+      display: none;
+    }
+
   }
 
 }
