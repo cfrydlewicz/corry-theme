@@ -5,7 +5,14 @@
   .header-search,
   .navigation-container,
   .site-header-secondary,
-  .footer-links-container
+  .article-content .entry-footer,
+  .post-footer .respond-container,
+  .post-footer .discussion-container,
+  .post-footer .share-container li:not(:first-child),
+  .post-footer .follow-container,
+  .post-footer .read-more-container,
+  .site-footer .back-to-top,
+  .site-footer .follow-container
   {
     display: none !important;
   }
@@ -34,14 +41,17 @@
 
     > a {
       border-width: 0;
+  
+      &::after {
+        align-self: center;
+        color: #000;
+        content: ' [corryfrydlewicz.com]';
+      }
+  
     }
 
     path {
       fill: $c_primary-dark;
-    }
-
-    &::after {
-      content: '[ corryfrydlewicz.com ]';
     }
 
   }
@@ -63,7 +73,6 @@
         .title-container {
           background: transparent;
           order: 1;
-          padding-left: 0;
           position: relative;
         }
 
@@ -95,15 +104,40 @@
         display: inline;
         font-family: Consolas, sans-serif;
         font-size: 1em;
-        margin-top: 0;
+        margin: 0;
       }
 
+      a[href^="http"][href*="facebook.com"]:not([href*="corryfrydlewicz.com"])::after {
+        // override Facebook URLs - they're too long and fuck Meta
+        content: " [https://www.facebook.com/groups/4912504758808432/?ref=share]";
+      }
+
+      b,
+      em,
       strong {
         color: #000;
       }
 
     }
 
+  }
+
+  .post-footer section {
+    background: transparent;
+    border-width: 1px 0 0;
+  }
+
+  .comment-list article {
+    background: transparent;
+  }
+
+  .site-footer {
+    // move copyright to top-right
+    background-color: #fff;
+    border-width: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
   }
 
 }
