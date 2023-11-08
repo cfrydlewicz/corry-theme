@@ -119,11 +119,18 @@ input[type="checkbox"] {
   border-width: 1px;
   margin-bottom: 1.25em;
   padding: 12px;
+
   &::before {
     font-size: 24px;
     margin-right: 12px;
   }
+
+  &.f_smallest {
+    @include f_smallest;
+  }
+
 }
+
 div.disclaimer {
   display: flex;
   margin-left: auto;
