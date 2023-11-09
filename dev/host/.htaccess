@@ -33,6 +33,9 @@ RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
   # Music
   Redirect 301 /music https://open.spotify.com/playlist/59TxdkMRHa3DL54uXp9Y3c?si=396bd51db7324ecc
 
+  # Patreon
+  Redirect 301 /patreon https://patreon.com/CorryFrydlewicz
+
   # PayPal
   Redirect 301 /paypal https://paypal.me/CFrydlewicz?country.x=US&locale.x=en_US
 
