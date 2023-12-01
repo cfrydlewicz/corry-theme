@@ -147,6 +147,10 @@
 
   &:hover {
 
+    .srpw-title {
+      color: $c_hover;
+    }
+
     .srpw-more-link {
       @extend .srpw-more-link:hover;
     }
