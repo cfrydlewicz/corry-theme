@@ -23,6 +23,7 @@ $saveData = (isset($_SERVER["HTTP_SAVE_DATA"]) && stristr($_SERVER["HTTP_SAVE_DA
   <meta name="twitter:site" content="@cfrydlewicz">
 
   <?php if ( is_singular() ) : ?>
+    <link rel="canonical" href="<?php echo wp_get_canonical_url(); ?>">
     <meta name="description" content="<?php echo get_the_excerpt(); ?>">
     <meta name="og:description" property="og:description" content="<?php echo get_the_excerpt(); ?>">
     <meta name="twitter:description" content="<?php echo get_the_excerpt(); ?>">
