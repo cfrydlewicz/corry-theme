@@ -283,11 +283,8 @@ li {
   // Article Card Hover States
   &:hover {
 
-    // Zoom CTAs on hover
+    // Zoom & Rotate CTAs on hover
     .excerpt-container a {
-      background-color: $c_hover;
-      border-color: $c_accent-dim;
-      color: $c_trueblack;
       transform: rotate(2.5deg) scale(1.25);
     }
 
