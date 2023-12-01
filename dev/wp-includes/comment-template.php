@@ -1941,7 +1941,7 @@ function get_comment_id_fields( $post_id = 0 ) {
 	}
 
 	$reply_to_id = isset( $_GET['replytocom'] ) ? (int) $_GET['replytocom'] : 0;
-	$result      = "<input type='hidden' name='comment_post_ID' value='$post_id' id='comment_post_ID' />\n";
+	$result      = "<input type='hidden' name='comment_post_ID' id='comment_post_ID' value='$post_id' />\n";
 	$result     .= "<input type='hidden' name='comment_parent' id='comment_parent' value='$reply_to_id' />\n";
 
 	/**
