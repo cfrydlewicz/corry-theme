@@ -151,8 +151,9 @@
       color: $c_hover;
     }
 
-    .srpw-more-link {
+    .srpw-more-link.srpw-more-link {
       @extend .srpw-more-link:hover;
+      transform: rotate(2.5deg) scale(1.25);
     }
 
   }
@@ -186,6 +187,7 @@
 }
 
 .srpw-title {
+  display: block;
   font-size: 2em;
   font-weight: 400;
   line-height: 1;
@@ -205,29 +207,28 @@
   padding-top: 0;
 }
 .srpw-summary {
-  padding-bottom: 16px;
+  padding-bottom: 48px;
   position: relative;
   width: 100%;
-  @media #{$mq_md} {
-    padding-bottom: 0;
-    p {
-      max-width: 60ch;
-    }
+
+  p {
+    max-width: 60ch;
   }
+
 }
 
 .srpw-more-link.srpw-more-link {
   // overrides
   @include button(big);
+  transition: all 0.2s ease-in-out;
 }
 
 .srpw-more-link {
-  bottom: -28px;
+  bottom: 0;
   position: absolute;
   right: 5%;
 
   @media #{$mq_md} {
-    bottom: -32px;
     right: 2%;
   }
 
