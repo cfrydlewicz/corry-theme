@@ -284,7 +284,8 @@ li {
   &:hover {
 
     // Zoom & Rotate CTAs on hover
-    .excerpt-container a {
+    .excerpt-container a,
+    &:first-of-type .excerpt-container a {
       font-weight: 700;
       transform: rotate(2.5deg) scale(1.25);
     }

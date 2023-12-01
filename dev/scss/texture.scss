@@ -215,6 +215,7 @@
 @media #{$mq_mouse} {
 
   .article-card .excerpt-container a {
+    transition: all 0.2s ease-in-out;
 
     &::after {
       transition: all 0.2s ease-in-out;
