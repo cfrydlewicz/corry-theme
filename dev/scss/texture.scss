@@ -223,6 +223,7 @@
   }
 
   // Hover Icon Animation
+  .article-card.excerpt-container a:hover::after,
   .article-card:hover .excerpt-container a::after {
     margin: 0 0 0 0.75em;
   }
