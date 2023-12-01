@@ -285,6 +285,7 @@ li {
 
     // Zoom & Rotate CTAs on hover
     .excerpt-container a {
+      font-weight: 700;
       transform: rotate(2.5deg) scale(1.25);
     }
 
@@ -335,7 +336,7 @@ li {
       a {
         @include button(big);
         bottom: -15%;
-        font-weight: 800;
+        font-weight: 700;
         right: 2%;
       }
 
