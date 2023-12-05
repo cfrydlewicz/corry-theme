@@ -293,9 +293,18 @@
 
 
     // Embeds
-    .wp-block-embed iframe {
-      margin-left: auto;
-      margin-right: auto;
+    .wp-block-embed {
+
+      iframe {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      &.is-type-video iframe {
+        min-height: 140px;  // google standard
+        min-width: 140px;  // google standard
+      }
+
     }
 
 
