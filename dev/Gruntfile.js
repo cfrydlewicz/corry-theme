@@ -80,6 +80,20 @@ module.exports = function(grunt) {
       }
     },
 
+    'string-replace': {
+      dist: {
+        files: {
+          '../header.php': 'header.php'
+        },
+        options: {
+          replacements: [{
+            pattern: '<!--INJECT CRITICAL INLINE CSS HERE -->',
+            replacement: "<%= grunt.file.read('css/critical-inline.min.css') %>"
+          }]
+        }
+      }
+    },
+
     jshint: {
       all: ['Gruntfile.js', 'js/custom.js']
     },
@@ -109,6 +123,6 @@ module.exports = function(grunt) {
   });
 
   // Default task(s).
-  grunt.registerTask('default', ['devUpdate', 'sass', 'cmq', 'autoprefixer', 'cssmin', 'concat', 'jshint', 'uglify']);
+  grunt.registerTask('default', ['devUpdate', 'sass', 'cmq', 'autoprefixer', 'cssmin', 'concat', 'string-replace', 'jshint', 'uglify']);
 
 };

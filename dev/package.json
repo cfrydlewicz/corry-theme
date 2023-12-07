@@ -13,6 +13,7 @@
     "grunt-contrib-uglify": "*",
     "grunt-dev-update": "*",
     "grunt-sass": "*",
+    "grunt-string-replace": "*",
     "node-sass": "*"
   },
   "dependencies": {
