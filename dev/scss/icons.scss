@@ -89,7 +89,8 @@ $icons: (
     @include visually-hidden;
   }
   button.i_search {
-    display: inline-block;
+    align-items: center;
+    display: flex;
   }
 }
 
