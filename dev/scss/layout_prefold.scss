@@ -108,6 +108,7 @@ li {
   width: 100%;
 
   @media #{$mq_lg} {
+    margin-bottom: #{($gutter_lg + 2px)/2};
     width: calc( 50vw - #{$gutter_lg + 2px} );  // 2 per row
   }
 
