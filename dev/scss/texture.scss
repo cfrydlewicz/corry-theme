@@ -199,18 +199,6 @@
 }
 
 
-// Funky CTA Positioning
-.article-card:first-of-type .excerpt-container {
-  a {
-    bottom: -16px;
-    right: 2%;
-    @media #{$mq_md} {
-      bottom: 7px;
-    }
-  }
-}
-
-
 // Flashy Buttons
 @media #{$mq_mouse} {
 
