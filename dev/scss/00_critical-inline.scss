@@ -276,15 +276,15 @@ body.error404 {
     padding-bottom: 48px;
   }
 
-  .article-card:first-of-type img {
-    padding-bottom: 40px;
-    width: 100%;
-  }
-
   .site-footer {
     bottom: 0;
     position: absolute;
     width: 100%;
+  }
+
+  .article-card {
+    padding-bottom: 40px;
+    width: 100% !important;
   }
 
 }
