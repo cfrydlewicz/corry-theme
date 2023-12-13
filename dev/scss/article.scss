@@ -419,6 +419,26 @@
       padding: 8px;
     }
 
+    .spoiler-text {
+      background-color: $c_basetext;
+      //color: $c_basetext;
+
+      &::before {
+        background-color: $c_black;
+        content: '[highlight this text to read spoilers] ';
+        display: inline;
+      }
+
+      a,
+      strong,
+      b,
+      em,
+      i {
+        color: $c_basetext;
+      }
+
+    }
+
   }
 
   .entry-footer {
