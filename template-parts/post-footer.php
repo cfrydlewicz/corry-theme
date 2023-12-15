@@ -36,7 +36,7 @@
       <ul>
         <li>Short URL: <a href="<?php echo $thisPostShortUrl; ?>"><?php echo $thisPostShortUrl; ?></a></li>
         <li><a class="i_mail" href="mailto:?subject=<?php echo $thisPostTitle; ?>&body=<?php echo $thisPostShortUrl; ?>" target="_blank">Share via Email</a></li>
-        <!--li><a class="i_mastodon" href="https://toot.kytta.dev/?text=%40cfrydlewicz%20Re%3A%20<?php echo get_permalink(); ?>" target="_blank">Toot This Post</a></li-->
+        <li><a class="i_mastodon" href="https://toot.kytta.dev/?text=%40cfrydlewicz%20Re%3A%20<?php echo get_permalink(); ?>" target="_blank">Toot This Post</a></li>
         <li><a class="i_facebook" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $thisPostShortUrl; ?>" target="_blank">Share on Facebook</a></li>
       </ul>
     </section>
