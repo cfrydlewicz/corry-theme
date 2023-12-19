@@ -49,7 +49,7 @@
       <li><a class="i_rss" href="/subscribe-to-corrys-blog-with-rss/" target="_blank">My RSS Feed</a> is the next best way to follow <em>new blog posts</em>.</li>
       <!--li>I also share links to <em>new blog posts</em> on <a class="i_mastodon nowrap" href="https://sfba.social/@cfrydlewicz" target="_blank" rel="noreferrer" style="white-space: nowrap;">Mastodon</a>.</li-->
       <li>I share <em>all my content</em> and host discussions about it in <a class="i_facebook" href="https://www.facebook.com/groups/4912504758808432/?ref=share" target="_blank" rel="noreferrer" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://www.facebook.com']);" style="white-space: nowrap;">My Facebook Group</a>.</li>
-      <li>Finally, I have <a href="https://www.patreon.com/CorryFrydlewicz" target="_blank" rel="noreferrer" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://www.patreon.com']);">Patreon</a> for anyone who'd like to support my content and help me decide what to work on!</li>
+      <li>Finally, I have <a class="i_heart" href="https://www.patreon.com/CorryFrydlewicz" target="_blank" rel="noreferrer" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://www.patreon.com']);">Patreon</a> for anyone who'd like to support my content and help me decide what to work on!</li>
     </ul>
   </section>
 
