@@ -18,8 +18,6 @@
         <?php endif; ?>
       </div>
     </header>
-  <?php else : ?>
-    <?php query_posts('cat=-700'); // exclude microblogs from homepage ?>
   <?php endif; ?>
 
   <?php if ( have_posts() ) : ?>

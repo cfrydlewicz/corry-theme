@@ -38,6 +38,16 @@ function theme_setup() {
 }
 add_action( 'after_setup_theme', 'theme_setup' );
 
+
+// Exclude Microblogs from Main Loop
+add_action( 'pre_get_posts', 'exclude_microblogs' );
+function exclude_microblogs( $query ) {
+  if ( $query->is_home() && $query->is_main_query() ) {
+    $query->set( 'cat', '-700' );
+  }
+}
+
+
 // Remove spaces from front of title
 add_filter( 'wp_title', function($title) {
   return trim( $title );
