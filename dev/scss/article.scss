@@ -167,6 +167,16 @@
     // de-emphasis
     sub {
       @include f_smallest;
+
+      a {
+        color: $c_primary-dim;
+
+        &[target="_blank"]::after {
+          display: none;
+        }
+
+      }
+
     }
 
     // Text Links
