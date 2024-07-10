@@ -164,6 +164,11 @@
       }
     }
 
+    // de-emphasis
+    sub {
+      @include f_smallest;
+    }
+
     // Text Links
     a {
       overflow-wrap: break-word;
