@@ -166,6 +166,7 @@
 
     // de-emphasis
     sub {
+      display: block;  // break to a new line
       @include f_smallest;
 
       a {
