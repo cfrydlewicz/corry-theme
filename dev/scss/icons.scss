@@ -128,7 +128,7 @@ $icons: (
 .article-content .entry-content {
 
   // Exit Links
-  a[target="_blank"]::after {
+  a[target="_blank"]:not([href*="corryfrydlewicz.com"])::after {
     // External links without a specific icon
     @include icomoon;
     content: "\ed7b";
