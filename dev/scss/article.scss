@@ -321,6 +321,13 @@
         min-width: 140px;  // google standard
       }
 
+      // Vertical Videos
+      &.wp-embed-aspect-9-16 iframe {
+        // expanded header height = 72px, multiply by 2 for some buffer space for vertical scrolling to center
+        height: calc(100vh - 144px);
+        width: 100%; // allow side letterboxing
+      }
+
     }
 
     // Galleries
