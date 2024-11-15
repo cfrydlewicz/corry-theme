@@ -26,8 +26,9 @@
         <li><a class="i_chat" href="#a_respond">Leave a Comment</a></li>
       <?php endif; ?>
       <!--li><a class="i_mastodon" href="https://toot.kytta.dev/?text=%40cfrydlewicz%20Re%3A%20<?php echo get_permalink(); ?>" target="_blank">Discuss on Mastodon</a></li-->
-      <li>I share <em>all my content</em> and host discussions about it in <a class="i_facebook" href="https://www.facebook.com/groups/4912504758808432/?ref=share" target="_blank" rel="noreferrer" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://www.facebook.com']);" style="white-space: nowrap;">My Facebook Group</a>.</li>
-      <li>I have <a class="i_heart" href="https://www.patreon.com/CorryFrydlewicz" target="_blank" rel="noreferrer" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://www.patreon.com']);">Patreon</a> for anyone who'd like to support my content and help me decide what to work on!</li>
+      <li><a class="i_bluesky" href="https://bsky.app/intent/compose?text=@cfrydlewicz.bsky.social%0A<?php echo $thisPostShortUrl; ?>" target="_blank" rel="noreferrer" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://bsky.app']);" style="white-space: nowrap;">Discuss on Bluesky</a></li>
+      <li><a class="i_facebook" href="https://www.facebook.com/groups/4912504758808432/?ref=share" target="_blank" rel="noreferrer" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://www.facebook.com']);" style="white-space: nowrap;">My Facebook Group</a></li>
+      <li><a class="i_heart" href="https://www.patreon.com/CorryFrydlewicz" target="_blank" rel="noreferrer" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://www.patreon.com']);">Patreon</a> for anyone who'd like to support my content and help me decide what to focus on!</li>
     </ul>
   </section>
 
@@ -37,6 +38,7 @@
       <ul>
         <li>Short URL: <a href="<?php echo $thisPostShortUrl; ?>"><?php echo $thisPostShortUrl; ?></a></li>
         <li><a class="i_mail" href="mailto:?subject=<?php echo $thisPostTitle; ?>&body=<?php echo $thisPostShortUrl; ?>" target="_blank">Share via Email</a></li>
+        <li><a class="i_bluesky" href="https://bsky.app/intent/compose?text=<?php echo $thisPostShortUrl; ?>" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://bsky.app']);">Share on Bluesky</a></li>
         <!--li><a class="i_mastodon" href="https://toot.kytta.dev/?text=%40cfrydlewicz%20Re%3A%20<?php echo get_permalink(); ?>" target="_blank">Toot This Post</a></li-->
         <li><a class="i_facebook" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $thisPostShortUrl; ?>" target="_blank">Share on Facebook</a></li>
       </ul>

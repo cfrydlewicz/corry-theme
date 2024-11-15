@@ -27,6 +27,7 @@ $icons: (
   arrow-left: dc3,
   arrow-right: dbb,
   arrow-up: db7,
+  bluesky: ef5,  // currently using Twitter icon
   cards: d47,
   chat: ac5,
   calendar: a62,
@@ -188,6 +189,7 @@ $icons: (
     &[href*="twitch.tv"] {
       @extend .i_twitch--after;
     }
+    &[href*="bsky.app"],
     &[href*="twitter.com"] {
       @extend .i_twitter--after;
     }
