@@ -42,6 +42,9 @@ RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
   # Resume
   Redirect 301 /resume /uploads/misc/resume_CorryFrydlewicz.html
 
+  # Newsletter
+  Redirect 301 /emailsubscribe mailto:cfrydlewicz@gmail.com?subject=Corry's%20Blog%20Emails&body=I'd%20like%20to%20receive%20an%20occasional%20email%20when%20you%20post%20on%20your%20blog!%20%0AMy%20name%20is%20___
+
   # Venmo
   Redirect 301 /venmo https://venmo.com/u/Corry-Frydlewicz
 

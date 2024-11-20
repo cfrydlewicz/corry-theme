@@ -12,9 +12,7 @@
       <section class="follow-container">
         <h3 class="u_visually-hidden">Follow or Add Me:</h3>
         <ul>
-          <li><a class="i_mail"          title="My Email Newsletter"            
-            href="mailto:cfrydlewicz@gmail.com?subject=Corry's%20Blog%20Mailing%20List&body=Hi%20Corry!%20I%20want%20you%20to%20email%20me%20when%20you%20post%20new%20content%20on%20your%20website.%20My%20email%20address%20is%20_____%2C%20and%20my%20name%20is%20_____."
-            target="_blank"></a></li>
+          <li><a class="i_mail"          title="Get Emails When I Post"         href="/emailsubscribe?utm_source=site-footer" target="_blank"></a></li>
           <li><a class="i_rss"           title="My RSS Feed"                    href="/subscribe-to-corrys-blog-with-rss/"></a></li>
           <li><a class="i_heart"         title="My Patreon"                     href="https://www.patreon.com/CorryFrydlewicz"                                        rel="noreferrer" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://www.patreon.com']);"></a></li>
           <li><a class="i_discord"       title="My Discord Server"              href="https://discord.gg/WgMga84"                                                     rel="noreferrer" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://discord.gg']);"></a></li>
