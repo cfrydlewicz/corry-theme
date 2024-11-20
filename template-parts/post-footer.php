@@ -37,7 +37,7 @@
       <div class="post-footer_header">Share</div>
       <ul>
         <li>Short URL: <a href="<?php echo $thisPostShortUrl; ?>"><?php echo $thisPostShortUrl; ?></a></li>
-        <li><a class="i_mail" href="mailto:?subject=<?php echo $thisPostTitle; ?>&body=<?php echo $thisPostShortUrl; ?>" target="_blank">Share via Email</a></li>
+        <li><a class="i_mail" href="mailto:%20?subject=<?php echo $thisPostTitle; ?>&body=<?php echo $thisPostShortUrl; ?>" target="_blank">Share via Email</a></li>
         <li><a class="i_bluesky" href="https://bsky.app/intent/compose?text=<?php echo $thisPostShortUrl; ?>" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://bsky.app']);">Share on Bluesky</a></li>
         <!--li><a class="i_mastodon" href="https://toot.kytta.dev/?text=%40cfrydlewicz%20Re%3A%20<?php echo get_permalink(); ?>" target="_blank">Toot This Post</a></li-->
         <li><a class="i_facebook" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $thisPostShortUrl; ?>" target="_blank">Share on Facebook</a></li>
@@ -52,7 +52,7 @@
       <li><a class="i_rss" href="/subscribe-to-corrys-blog-with-rss/" target="_blank">My RSS Feed</a> is the next best way to follow <em>new blog posts</em>.</li>
       <li>I'll also share them <a class="i_bluesky" href="https://bsky.app/profile/cfrydlewicz.bsky.social" rel="noreferrer" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://bsky.app']);">@cfrydlewicz on Bluesky</a>.</li>
       <!--li>I also share links to <em>new blog posts</em> on <a class="i_mastodon nowrap" href="https://sfba.social/@cfrydlewicz" target="_blank" rel="noreferrer" style="white-space: nowrap;">Mastodon</a>.</li-->
-      <li><a class="i_heart" href="https://www.patreon.com/CorryFrydlewicz" target="_blank" rel="noreferrer" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://www.patreon.com']);">Patreon</a> is where I'll share more once I have a few subscribers.</li>
+      <!--li><a class="i_heart" href="https://www.patreon.com/CorryFrydlewicz" target="_blank" rel="noreferrer" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://www.patreon.com']);">Patreon</a> is where I'll share more once I have a few subscribers.</li-->
     </ul>
   </section>
 
