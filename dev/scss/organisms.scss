@@ -145,3 +145,37 @@ div.disclaimer {
   margin-right: auto;
   width: fit-content;
 }
+
+// asides (Shakespearean style)
+.aside {
+  background-color: $c_grey80;
+  border-bottom-left-radius: $border-radius;
+  border-top-left-radius: $border-radius;
+  border-color: $c_grey60;
+  border-style: solid;
+  border-width: 1px 0 1px 8px;
+  margin: 2em (-1 * $gutter) 2em auto !important;
+  padding: 0.75em ($gutter + 12px) 1.25em 1.25em;
+  position: relative;
+  width: 95%;
+
+  &::before {
+    color: $c_light30;
+    content: 'aside';
+    font-family: monospace;
+    font-size: 12px;
+    left: -0.375em;
+    position: absolute;
+    top: 1.5em;
+    transform: rotate(270deg);
+  }
+
+  @media #{$mq_lg} {
+    border-bottom-right-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+    border-right-width: 1px;
+    margin-right: (-1 * $gutter_lg);
+    padding-right: ($gutter_lg + 18px);
+  }
+
+}
