@@ -217,6 +217,16 @@ a.i_bluesky--after:hover::after {
     }
   }
 
+  // Comment Prompts
+  a[href="#a_respond"] {
+    @extend .i_chat;
+
+    &::after {
+      content: '';  // override the anchor icon
+    }
+
+  }
+
 }
 
 // Post Footer
