@@ -180,6 +180,14 @@
 
     }
 
+    // highlighting
+    mark {
+      background-color: mix(white, #ff26e5, 25%);
+      color: #000;
+      font-weight: 500;
+      padding: 3px 6px;
+    }
+
     // Text Links
     a {
       overflow-wrap: break-word;
