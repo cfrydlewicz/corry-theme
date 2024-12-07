@@ -67,7 +67,8 @@ function get_post_thumbnail_url() { // requires $post to be initialized
   $thumbnail = '';
   if (function_exists('has_post_thumbnail')) {
     if ( has_post_thumbnail() ) {
-      $thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 5600,1000 ), false, '' );
+      $post_id = get_queried_object_id();
+      $thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id($post_id), array( 5600,1000 ), false, '' );
       echo $thumbnail[0];
     }
   }
