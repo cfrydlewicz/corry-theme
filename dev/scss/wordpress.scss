@@ -31,6 +31,7 @@ body.admin-bar.logged-in {
 }
 
 // Plug-In: Simple Lightbox
+/*
 .article-content {
   a[data-slb-active="1"] {
     cursor: zoom-in;
@@ -72,6 +73,14 @@ body.admin-bar.logged-in {
     display: inline-block;
   }
 }
+*/
+
+// FirelightWP Lightbox
+#fancybox-content {
+  border-color: $c_dark-base !important;
+}
+
+// Plug-In: Smart Recent Posts Widget
 .srpw-aligncenter.srpw-aligncenter {
   margin: 0;
 }
