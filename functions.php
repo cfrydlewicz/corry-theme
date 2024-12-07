@@ -74,7 +74,8 @@ function get_post_thumbnail_url() { // requires $post to be initialized
 }
 
 function word_count() {
-  $content = get_post_field( 'post_content', $post->ID );
+  $post_id = get_queried_object_id();
+  $content = get_post_field( 'post_content', $post_id );
   $decode_content = html_entity_decode( $content );
   $filter_shortcode = do_shortcode( $decode_content );
   $strip_tags = wp_strip_all_tags( $filter_shortcode, true );
