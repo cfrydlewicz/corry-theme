@@ -461,6 +461,10 @@
         height: 2.375em;  // attempt to prevent unwanted scrollbars
       }
 
+      &.is-style-stripes tbody tr:nth-child(odd) {
+        background-color: $c_grey50;
+      }
+
     }
 
     table {
