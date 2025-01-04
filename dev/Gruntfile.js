@@ -83,13 +83,20 @@ module.exports = function(grunt) {
     'string-replace': {
       dist: {
         files: {
-          '../header.php': 'header.php'
+          '../header.php': 'header.php',
+          '../style.css': '../style.css'
         },
         options: {
-          replacements: [{
-            pattern: '<!--INJECT CRITICAL INLINE CSS HERE -->',
-            replacement: "<%= grunt.file.read('css/critical-inline.min.css') %>"
-          }]
+          replacements: [
+            {
+              pattern: '<!--INJECT CRITICAL INLINE CSS HERE -->',
+              replacement: "<%= grunt.file.read('css/critical-inline.min.css') %>"
+            },
+            {
+              pattern: '<!--THEME VERSION-->',
+              replacement: "<%= grunt.template.today('yy.mm.dd') %>"
+            }
+          ]
         }
       }
     },
