@@ -23,12 +23,12 @@ $c_accent-lightest: oklch(93.2% 0.057 66.18);
 $c_trueblack: mix(black, $c_dark-base, 99%);
 $c_black:     mix(black, $c_dark-base, 90%);
 $c_grey20:    mix(black, $c_dark-base, 80%);
-$c_grey30:    mix(black, $c_dark-base, 70%);
+$c_grey30:    mix(black, $c_dark-base, 70%); // #0e1214
 $c_grey40:    mix(black, $c_dark-base, 60%);
-$c_grey50:    mix(black, $c_dark-base, 50%);
+$c_grey50:    mix(black, $c_dark-base, 50%); // #171e21
 $c_grey60:    mix(black, $c_dark-base, 40%);
 $c_grey70:    mix(black, $c_dark-base, 30%);
-$c_grey80:    mix(black, $c_dark-base, 20%);
+$c_grey80:    mix(black, $c_dark-base, 20%); // #253034
 $c_grey90:    mix(black, $c_dark-base, 10%);
 $c_light10:   mix(white, $c_dark-base, 10%);
 $c_light20:   mix(white, $c_dark-base, 20%);
