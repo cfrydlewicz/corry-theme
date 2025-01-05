@@ -111,6 +111,23 @@
       content: '<h5>';
     }
 
+    table {
+
+      h2::before,
+      h3::before,
+      h4::before,
+      h5::before {
+        content: '';
+      }
+
+      h5 {
+        margin-bottom: 0;
+        margin-top: 0;
+        text-transform: none;
+      }
+
+    }
+
     p,
     li {
       font-size: 1em;
@@ -462,7 +479,7 @@
       }
 
       &.is-style-stripes tbody tr:nth-child(odd) {
-        background-color: $c_grey50;
+        background-color: $c_grey80;
       }
 
     }
