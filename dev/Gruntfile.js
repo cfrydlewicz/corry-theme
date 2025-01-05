@@ -72,6 +72,14 @@ module.exports = function(grunt) {
         ],
         dest: '../style.css'
       },
+      css2: {
+        // append WordPress Theme info
+        src: [
+          'corry.wpinfo.css',
+          '../critical.min.css'
+        ],
+        dest: '../critical.min.css'
+      },
       js : {
         src : [
           'js/custom.js'
@@ -84,7 +92,8 @@ module.exports = function(grunt) {
       dist: {
         files: {
           '../header.php': 'header.php',
-          '../style.css': '../style.css'
+          '../style.css': '../style.css',
+          '../critical.min.css': '../critical.min.css'
         },
         options: {
           replacements: [
