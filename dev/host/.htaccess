@@ -5,8 +5,8 @@ RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
 # BEGIN Custom Redirects
 
   # Bluesky
-  Redirect 301 /bluesky https://bsky.app/profile/cfrydlewicz.bsky.social
-  # Redirect 301 /twitter https://bsky.app/profile/cfrydlewicz.bsky.social
+  Redirect 301 /bluesky https://bsky.app/profile/corry.us
+  # Redirect 301 /twitter https://bsky.app/profile/corry.us
 
   # Contact
   Redirect 301 /contact /about/#a_contact
