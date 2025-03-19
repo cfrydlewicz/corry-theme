@@ -6,7 +6,8 @@ RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
 
   # Bluesky
   Redirect 301 /bluesky https://bsky.app/profile/corry.us
-  # Redirect 301 /twitter https://bsky.app/profile/corry.us
+  Redirect 301 /mastodon https://bsky.app/profile/corry.us
+  Redirect 301 /twitter https://bsky.app/profile/corry.us
 
   # Contact
   Redirect 301 /contact /about/#a_contact
@@ -25,10 +26,6 @@ RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
 
   # Magic: The Gathering Decks
   Redirect 301 /mtgdecks https://www.moxfield.com/users/ultros
-
-  # Mastodon
-  Redirect 301 /mastodon https://sfba.social/@cfrydlewicz
-  Redirect 301 /twitter https://sfba.social/@cfrydlewicz
 
   # Music
   Redirect 301 /music https://open.spotify.com/user/1232018881?si=2dd1be0bb2304895
