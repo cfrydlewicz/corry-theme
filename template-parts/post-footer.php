@@ -34,9 +34,10 @@
     <section class="share-container">
       <div class="post-footer_header">Share</div>
       <ul>
-        <li>Short URL: <a href="<?php echo $thisPostShortUrl; ?>"><?php echo $thisPostShortUrl; ?></a></li>
         <li><a class="i_mail" href="mailto:%20?subject=<?php echo $thisPostTitle; ?>&body=<?php echo $thisPostShortUrl; ?>" target="_blank">Share via Email</a></li>
         <li><a class="i_bluesky" href="https://bsky.app/intent/compose?text=<?php echo $thisPostShortUrl; ?>" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://bsky.app']);">Share on Bluesky</a></li>
+        <li>URL: <a href="<?php echo $thisPostShortUrl; ?>" class="f_small">https://corry.us/<?php echo $post->post_name; ?>/</a></li>
+        <li>Short: <a href="<?php echo $thisPostShortUrl; ?>" class="f_small"><?php echo $thisPostShortUrl; ?></a></li>
       </ul>
     </section>
   <?php endif; ?>
