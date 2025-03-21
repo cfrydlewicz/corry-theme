@@ -9,6 +9,15 @@
   @include visually-hidden;
 }
 
+.f_small {
+  @include f_small;
+}
+.f_smaller {
+  @include f_smaller;
+}
+.f_smallest {
+  @include f_smallest;
+}
 
 // Font-face declarations
 @font-face {

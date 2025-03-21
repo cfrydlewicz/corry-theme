@@ -126,7 +126,6 @@ input[type="checkbox"] {
   }
 
   &.f_smallest {
-    @include f_smallest;
     background-color: $c_primary-dark;
     border-color: $c_primary-dim;
     max-width: 100%;
