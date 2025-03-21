@@ -6,6 +6,8 @@ RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
 
   # Bluesky
   Redirect 301 /bluesky https://bsky.app/profile/corry.us
+  Redirect 301 /facebook https://bsky.app/profile/corry.us
+  Redirect 301 /instagram https://bsky.app/profile/corry.us
   Redirect 301 /mastodon https://bsky.app/profile/corry.us
   Redirect 301 /twitter https://bsky.app/profile/corry.us
 
@@ -14,12 +16,6 @@ RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
 
   # Discord
   Redirect 301 /discord https://discord.gg/WgMga84
-
-  # Facebook
-  Redirect 301 /facebook https://www.facebook.com/cfrydlewicz/
-
-  # Instagram
-  Redirect 301 /instagram https://www.instagram.com/corryfrydlewicz/
 
   # LinkedIn
   Redirect 301 /linkedin https://www.linkedin.com/in/corryfrydlewicz/

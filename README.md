@@ -24,5 +24,5 @@ Instead of leaving decisions about how my site works to the user, I'm going to b
 - My writing style has been evolving, and one of the changes I'm making is removing qualifications. My perspective is the only one I need to platform here.
 
 
-### Fuck Facebook
-This version of my site will not be sharing data with any social media platforms directly. They can send users my way and get nothing in return.
+### Fuck Meta and X
+This version of my site will not be sharing data with shitty social media platforms directly. They can send users my way and get nothing in return.
