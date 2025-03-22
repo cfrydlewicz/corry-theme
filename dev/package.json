@@ -12,7 +12,7 @@
     "grunt-contrib-jshint": "*",
     "grunt-contrib-uglify": "*",
     "grunt-dev-update": "*",
-    "grunt-sass": "*",
+    "grunt-sass": "3.1.0",
     "grunt-string-replace": "*",
     "node-sass": "*"
   },
