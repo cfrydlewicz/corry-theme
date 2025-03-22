@@ -35,7 +35,7 @@
         <div class="inner-wrapper">
 
           <?php if ( has_tag('old-post') ) : ?>
-            <div class="disclaimer_old-posts disclaimer">
+            <div class="disclaimer_old-posts alert disclaimer">
               <div>
                 <p><strong>This post is old and contains outdated information.</strong> I <em>only remove harmful content</em> and try to keep old posts visible &mdash; even if they're embarrassing or no longer relevant. I want to look back and see my growth over the years, and I don't want to hide that growth from others. Thanks for considering this as you read.</p>
                 <p>(<a href="#a_respond" class="i_chat">Leave a comment</a> if you want an update about this subject matter)</p>

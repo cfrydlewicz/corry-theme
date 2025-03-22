@@ -115,8 +115,37 @@ a.i_bluesky--after:hover::after {
   @include visually-hidden;
 }
 
-.disclaimer {
-  @extend .i_warning;
+// Alert boxes
+.disclaimer { // deprecated
+  @extend .i_alert;
+}
+
+.alert {
+
+  &.attention {
+    @extend .i_star;
+  }
+
+  &.disclaimer {
+    @extend .i_alert;
+  }
+
+  &.info {
+    @extend .i_info;
+  }
+
+  &.question {
+    @extend .i_question;
+  }
+
+  &.stop {
+    @extend .i_stop;
+  }
+
+  &.warning {
+    @extend .i_warning;
+  }
+
 }
 
 .site-footer .follow-container {

@@ -111,7 +111,57 @@ input[type="checkbox"] {
 }
 
 // Alert / Warning Boxes
+.alert {
+  border-style: solid;
+  border-width: 1px;
+  display: flex;
+  margin-bottom: 1.25em;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  padding: 12px;
+  width: fit-content;
+
+  &::before {
+    font-size: 24px;
+    margin-right: 12px;
+  }
+
+  &.attention {
+    background-color: $c_secondary-dark;
+    border-color: $c_secondary;
+    border-radius: 0.25rem;
+  }
+
+  &.disclaimer {
+    @include f_smallest;
+    background-color: $c_primary-dark;
+    border-color: $c_primary-dim;
+    border-radius: 0;
+
+    &::before {
+      font-size: 12px;
+    }
+
+  }
+
+  &.info {
+    background-color: $c_primary-dark;
+    border-color: $c_primary;
+    border-radius: 0.25rem;
+  }
+
+  &.stop,
+  &.warning {
+    background-color: $c_accent-dark;
+    border-color: $c_accent;
+    border-radius: 0;
+  }
+
+}
+
 .disclaimer {
+  /* deprecated without alert class */
   @include f_small;
   background-color: $c_accent-dark;
   border-color: $c_accent;
