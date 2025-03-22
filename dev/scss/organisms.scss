@@ -114,13 +114,9 @@ input[type="checkbox"] {
 .alert {
   border-style: solid;
   border-width: 1px;
-  display: flex;
   margin-bottom: 1.25em;
-  margin-left: auto;
-  margin-right: auto;
   max-width: 100%;
   padding: 12px;
-  width: fit-content;
 
   &::before {
     font-size: 24px;
@@ -160,9 +156,16 @@ input[type="checkbox"] {
 
 }
 
-.disclaimer {
-  /* deprecated without alert class */
-  @include f_small;
+div.disclaimer, // deprecated without alert class
+div.alert {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+}
+
+.disclaimer {  // deprecated without alert class
+  @include f_smallest;
   background-color: $c_accent-dark;
   border-color: $c_accent;
   border-style: solid;
@@ -186,13 +189,6 @@ input[type="checkbox"] {
 
   }
 
-}
-
-div.disclaimer {
-  display: flex;
-  margin-left: auto;
-  margin-right: auto;
-  width: fit-content;
 }
 
 // asides (Shakespearean style)
