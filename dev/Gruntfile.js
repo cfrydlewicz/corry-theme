@@ -92,6 +92,7 @@ module.exports = function(grunt) {
       dist: {
         files: {
           '../header.php': 'header.php',
+          'style-guide.html': 'style-guide.html',
           '../style.css': '../style.css',
           '../critical.min.css': '../critical.min.css'
         },
