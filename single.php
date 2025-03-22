@@ -60,6 +60,7 @@
           <div class="thanks-header">Thanks for reading!</div>
           <p class="post-categories">Categories: <?php the_category(', '); ?></p>
           <p class="post-tags"><?php the_tags(); ?></p>
+          <div class="reverse-canary f_smallest">I have not been required to disclose data to the government under duress. If that changes and I'm able, I will remove this text.</div>
         </div>
       </footer>
 
