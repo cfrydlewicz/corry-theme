@@ -127,6 +127,11 @@ input[type="checkbox"] {
     background-color: $c_secondary-dark;
     border-color: $c_secondary;
     border-radius: 0.25rem;
+
+    &::before {
+      color: $c_secondary;
+    }
+
   }
 
   &.disclaimer {
@@ -136,6 +141,7 @@ input[type="checkbox"] {
     border-radius: 0;
 
     &::before {
+      color: $c_primary-dim;
       font-size: 12px;
     }
 
@@ -145,6 +151,11 @@ input[type="checkbox"] {
     background-color: $c_primary-dark;
     border-color: $c_primary;
     border-radius: 0.25rem;
+
+    &::before {
+      color: $c_primary;
+    }
+
   }
 
   &.stop,
@@ -152,6 +163,11 @@ input[type="checkbox"] {
     background-color: $c_accent-dark;
     border-color: $c_accent;
     border-radius: 0;
+
+    &::before {
+      color: $c_accent;
+    }
+
   }
 
 }
