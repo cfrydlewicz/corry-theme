@@ -136,12 +136,12 @@ input[type="checkbox"] {
 
   &.disclaimer {
     @include f_smallest;
-    background-color: $c_primary-dark;
-    border-color: $c_primary-dim;
+    background-color: $c_primary-darker;
+    border-color: $c_primary-dark;
     border-radius: 0;
 
     &::before {
-      color: $c_primary-dim;
+      color: $c_primary-dark;
       font-size: 12px;
     }
 

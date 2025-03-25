@@ -9,18 +9,19 @@ $c_dark-base:  #2e3c41; // murky teal
 $c_light-base: #d6f3f0; // pale teal
 
 // Variations
-$c_primary-dim:      oklch(73.24% 0.15 180.5);
+$c_primary-darker:   oklch(25% 0.111 180.5);
 $c_primary-dark:     oklch(46.6% 0.111 180.5);
+$c_primary-dim:      oklch(73.24% 0.15 180.5);
 $c_primary-light:    oklch(94.4% 0.083 180.5);
 $c_primary-lightest: oklch(97.3% 0.019 180.5);
 
-$c_secondary-dim:      oklch(73.24% 0.15 336.4);
 $c_secondary-dark:     oklch(46.6% 0.111 336.4);
+$c_secondary-dim:      oklch(73.24% 0.15 336.4);
 $c_secondary-light:    oklch(94.4% 0.083 336.4);
 $c_secondary-lightest: oklch(97.3% 0.019 336.4);
 
-$c_accent-dim:      oklch(51.36% 0.169 43.84);
 $c_accent-dark:     oklch(28.8% 0.089 47);
+$c_accent-dim:      oklch(51.36% 0.169 43.84);
 $c_accent-light:    oklch(89.56% 0.091 66.18);
 $c_accent-lightest: oklch(93.2% 0.057 66.18);
 
