@@ -16,7 +16,6 @@
   font-style: normal;
   font-variant: normal;
   font-weight: normal;
-  line-height: 1;
   text-transform: none;
   speak: none;
 }
@@ -85,6 +84,14 @@ $icons: (
 }
 .i_ {
   @include icon-definitions;
+}
+
+// inline text icons
+p,
+li {
+  a[class^="i_"]{
+    line-height: 1;
+  }
 }
 
 // non-icomoon icons
