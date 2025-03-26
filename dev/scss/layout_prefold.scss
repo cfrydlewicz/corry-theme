@@ -17,6 +17,9 @@ em {
 a {
   color: $c_link;
   text-decoration: none;
+  &:visited {
+    color: $c_visited;
+  }
   &:hover {
     color: $c_hover;
   }
