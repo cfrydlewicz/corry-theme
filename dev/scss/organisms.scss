@@ -135,7 +135,7 @@ input[type="checkbox"] {
   }
 
   &.disclaimer {
-    @include f_smallest;
+    @include f_smaller;
     background-color: $c_primary-darker;
     border-color: $c_primary-dark;
     border-radius: 0;
@@ -170,14 +170,29 @@ input[type="checkbox"] {
 
   }
 
+  a {
+    // better contrast for links
+    color: $c_primary-light;
+
+    &:visited {
+      color: $c_primary;
+    }
+
+    &:hover,
+    &:active {
+      color: $c_accent-light;
+    }
+
+  }
+
 }
 
 div.disclaimer, // deprecated without alert class
 div.alert {
   display: flex;
+  justify-content: center;
   margin-left: auto;
   margin-right: auto;
-  width: fit-content;
 }
 
 .disclaimer {  // deprecated without alert class
