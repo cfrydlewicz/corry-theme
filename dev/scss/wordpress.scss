@@ -9,26 +9,18 @@ body.admin-bar.logged-in {
     // Content Area
     main > article .entry-content {
 
-      // Images
-      img:not([alt]),
-      img[alt=""],
-      img:not(.emoji) {
-        outline-style: dashed;
-        outline-width: 2px;
-      }
-      a img[alt]:not([alt=""]):not(.emoji) {
-        outline: none;
-      }
-
       // Mark images without ALT text
       img:not([alt]),
       img[alt=""] {
-        outline-color: $c_accent;
+        outline: 2px dashed $c_accent;
       }
 
       // Mark unlinked post images
       img:not(.emoji) {
-        outline-color: $c_secondary;
+        outline: 2px dashed $c_secondary;
+      }
+      a img[alt]:not([alt=""]):not(.emoji) {
+        outline: none;
       }
 
     }
