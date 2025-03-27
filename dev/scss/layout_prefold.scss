@@ -9,18 +9,18 @@ body {
   color: $c_basetext;
 }
 
+// bg texture
 .total-wrapper {
-  // wavy grid background
-  $texturescale: 288px;
-  $textureforeground: rgba(46, 60, 65, 0.5); // $c_dark-base w/ opacity
-  $texturebg: transparent;
+  --bgtxfg: rgba(46, 60, 65, 0.25); // foreground - $c_dark-base w/ opacity
+  --bgtxbg: transparent; // background
+  --bgtxlines: 54%; // blurriness - 52% original value
   background: 
-    radial-gradient(farthest-side at -33.33% 50%,#0000 52%,rgba(37, 48, 52, 0.25) 54% 57%,#0000 59%) 0 calc($texturescale/2),
-    radial-gradient(farthest-side at 50% 133.33%,#0000 52%,rgba(37, 48, 52, 0.25) 54% 57%,#0000 59%) calc($texturescale/2) 0,
-    radial-gradient(farthest-side at 133.33% 50%,#0000 52%,rgba(37, 48, 52, 0.25) 54% 57%,#0000 59%),
-    radial-gradient(farthest-side at 50% -33.33%,#0000 52%,rgba(37, 48, 52, 0.25) 54% 57%,#0000 59%),
-    $texturebg;
-  background-size: calc($texturescale/4.667) $texturescale,$texturescale calc($texturescale/4.667);
+    radial-gradient(farthest-side at -33.33% 50%,#0000 var(--bgtxlines),var(--bgtxfg) 54% 57%,#0000 59%) 0 144px,
+    radial-gradient(farthest-side at 50% 133.33%,#0000 var(--bgtxlines),var(--bgtxfg) 54% 57%,#0000 59%) 144px 0,
+    radial-gradient(farthest-side at 133.33% 50%,#0000 var(--bgtxlines),var(--bgtxfg) 54% 57%,#0000 59%),
+    radial-gradient(farthest-side at 50% -33.33%,#0000 var(--bgtxlines),var(--bgtxfg) 54% 57%,#0000 59%),
+    var(--bgtxbg);
+  background-size: 61.71px 288px, 288px 61.71px;
 }
 
 // General Definitions
