@@ -10,10 +10,19 @@
 .bezel--vertical,
 .bezel--horizontal {
   border-bottom-color: $c_grey50;
-  border-left-color: $c_light20;
-  border-right-color: $c_grey50;
+  border-left-color: $c_grey80;
+  border-right-color: rgba(255, 226, 193,0.05); // accent-lightest w/ opacity
   border-style: solid;
-  border-top-color: $c_light20;
+  border-top-color: rgba(255, 226, 193,0.125); // accent-lightest w/ opacity
+
+  &.high {
+    // header area - light angle slightly different
+    border-bottom-color: rgba(255, 226, 193,0.05); // accent-lightest w/ opacity
+    border-left-color: $c_grey80;
+    border-right-color: rgba(255, 226, 193,0.125); // accent-lightest w/ opacity
+    border-top-color: $c_grey50;
+  }
+
 }
 .bezel {
   border-width: 1px;
@@ -47,19 +56,9 @@
 
 .site-header {
 
-  &-primary,
-  &-secondary {
-    background: linear-gradient(320deg, rgba($c_grey20,0.875), rgba($c_grey80,0.875));
-    @media #{$mq_mouse} {
-      background: linear-gradient(320deg, rgba($c_grey20,0.625), rgba($c_grey80,0.625));
-      &:hover {
-        background: linear-gradient(320deg, rgba($c_grey20,0.75), rgba($c_grey80,0.75));
-      }
-    }
-  }
-
   &-primary {
     @extend .bezel--vertical;
+    @extend .high;
   }
 
   &-secondary {
@@ -75,6 +74,7 @@
         @extend .grainy;
       }
 
+      @extend .high;
     }
 
   }
@@ -94,6 +94,7 @@
 .header-logo {
   a {
     @extend .bezel--horizontal;
+    @extend .high;
     &:hover {
       @extend .grainy;
     }
@@ -103,6 +104,7 @@
 .header-nav {
   a {
     @extend .bezel--horizontal;
+    @extend .high;
     &:hover {
       @extend .grainy;
     }
@@ -111,6 +113,7 @@
 
 .header-search {
   @extend .bezel--horizontal;
+  @extend .high;
   &:hover,
   &:focus-within {
     @extend .grainy;
@@ -162,6 +165,7 @@
     @extend .grainy;
   }
 
+  @extend .high;
 }
 
 .pagination-container {
