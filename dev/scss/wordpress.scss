@@ -34,6 +34,16 @@ body.admin-bar.logged-in {
 // Plug-In: FirelightWP Lightbox
 #fancybox-content {
   border-color: $c_dark-base !important;
+  height: auto !important;
+}
+.fancybox-title-over {
+  // move alt text beneath image in lightbox
+  position: relative !important;
+}
+#fancybox-title {
+  @include f_small;
+  background-color: $c_dark-base !important;
+  padding: 12px 2px 4px !important;
 }
 
 // Plug-In: Smart Recent Posts Widget
