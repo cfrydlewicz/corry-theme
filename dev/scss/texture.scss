@@ -225,11 +225,6 @@
 
   .entry-content {
 
-    .wp-block-pullquote blockquote {
-      @extend .bezel;
-      @extend .grainy;
-    }
-
     pre {
       @extend .grainy;
     }
