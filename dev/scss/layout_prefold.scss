@@ -2,6 +2,10 @@
 
 body {
   background-color: $c_dark-base;
+  background: linear-gradient(180deg, 
+    $c_dark-base 0%, 
+    $c_grey50 85%, // 85% is just above the post footer on single posts
+    $c_black 95%);
   color: $c_basetext;
 }
 

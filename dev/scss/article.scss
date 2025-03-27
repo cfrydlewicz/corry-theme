@@ -358,8 +358,8 @@
 
     // Quotes
     .wp-block-quote {
-      background-color: $c_grey80;
-      border-left: 8px solid $c_grey60;
+      background: radial-gradient(ellipse at right top, rgba(0,0,0,0.125) 0%, rgba(0,0,0,0.25) 100%);
+      border-left: 8px solid $c_primary-dark;
       margin: 2em 0;
       padding: 0.75em 0.75em 1.25em 1.25em;
       position: relative;
