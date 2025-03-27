@@ -9,6 +9,19 @@ body {
   color: $c_basetext;
 }
 
+.total-wrapper {
+  // wavy grid background
+  $texturescale: 288px;
+  $textureforeground: rgba(37, 48, 52, 0.25);
+  $texturebg: transparent;
+  background: 
+      radial-gradient(farthest-side at -33.33% 50%,#0000 52%,rgba(37, 48, 52, 0.25) 54% 57%,#0000 59%) 0 calc($texturescale/2),
+      radial-gradient(farthest-side at 50% 133.33%,#0000 52%,rgba(37, 48, 52, 0.25) 54% 57%,#0000 59%) calc($texturescale/2) 0,
+      radial-gradient(farthest-side at 133.33% 50%,#0000 52%,rgba(37, 48, 52, 0.25) 54% 57%,#0000 59%),
+      radial-gradient(farthest-side at 50% -33.33%,#0000 52%,rgba(37, 48, 52, 0.25) 54% 57%,#0000 59%),
+      $texturebg;
+  background-size: calc($texturescale/4.667) $texturescale,$texturescale calc($texturescale/4.667);
+}
 
 // General Definitions
 strong,
