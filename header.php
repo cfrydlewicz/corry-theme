@@ -144,9 +144,9 @@ $saveData = (isset($_SERVER["HTTP_SAVE_DATA"]) && stristr($_SERVER["HTTP_SAVE_DA
         <?php if ( is_singular() ) : ?>
           <a title="Jump to the beginning of the page" href="#a_skip-to-content" class="title i_arrow-up"><?php the_title(); ?></a>
           <?php if ( !empty(get_comments_number()) ) : ?>
-            <a id="jump-to-footer" title="Jump to the comments" class="i_chat i_arrow-down--after" href="#a_comments_top"><span>Comments:&nbsp;</span><?php echo get_comments_number(); ?></a>
+            <a id="jump-to-footer" title="Jump to the end of the content" class="i_chat i_arrow-down--after" href="#a_comments_top"><?php echo get_comments_number(); ?><span class="u_visually-hidden">&nbsp;Comments</span></a>
           <?php else : ?>
-            <a id="jump-to-footer" title="Jump to the end of the page" class="i_chat i_arrow-down--after" href="#a_end-of-article">End of Article</a>
+            <a id="jump-to-footer" title="Jump to the end of the content" class="i_arrow-down" href="#a_end-of-article"><span class="u_visually-hidden">End of Article</span></a>
           <?php endif; ?>
           <div id="article-progress-bar" class="article-progress-bar"></div>
         <?php elseif ( is_category() ) : ?>

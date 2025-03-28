@@ -118,10 +118,6 @@ a.i_bluesky--after:hover::after {
   }
 }
 
-.site-header-secondary .i_chat span {
-  @include visually-hidden;
-}
-
 // Alert boxes
 .disclaimer { // deprecated
   @extend .i_alert;
