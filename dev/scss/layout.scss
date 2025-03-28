@@ -269,6 +269,7 @@
   flex-direction: column;
   flex-wrap: wrap;
   margin-bottom: 36px;
+  min-height: 80vh;  // ensure footer is fat
 
   @media #{$mq_md} {
     flex-direction: row;

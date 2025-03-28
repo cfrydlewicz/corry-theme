@@ -19,8 +19,8 @@ $(document).ready( function() {
   }
 
   // Article Progress Bar
-  // Only on Single Post Pages
-  if ( $('body').hasClass('single') ) {
+  // Only on Posts & Pages
+  if ( $('body').hasClass('single') || $('body').hasClass('page') ) {
 
     // Detect article height
     var postEndPosition = $('#a_end-of-article').offset().top;
@@ -34,7 +34,7 @@ $(document).ready( function() {
       progressBarWidth = jQuery(window).scrollTop() / postEndPosition * 100;
       $('#article-progress-bar').css('width', progressBarWidth + '%');
 
-      if (progressBarWidth >= 100) {
+      if (progressBarWidth >= 95) {
         $('#jump-to-footer').fadeOut();
       } else {
         $('#jump-to-footer').fadeIn();
