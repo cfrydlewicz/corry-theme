@@ -99,23 +99,21 @@
 
 
 // Listing Pages
-.listing-page-header {
-  background: linear-gradient(320deg, rgba($c_grey20,0.875), rgba($c_grey80,0.875));
-  @extend .bezel--vertical;
-}
-
 .pagination-container {
   @extend .bezel--vertical;
-  background-color: transparent;  // undo placeholder background
+  @extend .grainy;
 
   a {
     @extend .bezel--horizontal;
+
     &:last-child {
       @extend .i_arrow-right--after;
     }
+
     &:first-child:not(:last-child) {
       @extend .i_arrow-left;
     }
+
   }
 
 }
@@ -127,6 +125,7 @@
   .entry-content,
   .entry-footer {
     @extend .bezel;
+    @extend .grainy;
 
     @media #{$mq_sm-only} {
       border-left-width: 0;
@@ -172,6 +171,7 @@
 
   .entry-footer {
     @extend .bezel--vertical;
+    @extend .grainy;
   }
 
 }
