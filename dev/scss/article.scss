@@ -525,12 +525,6 @@
     }
 
     p {
-      font-size: 1em;
-      font-weight: 400;
-      @media #{$mq_md} {
-        font-size: 14px;
-        font-weight: 400;
-      }
       a {
         white-space: nowrap;
       }
