@@ -30,15 +30,6 @@
   border-right-color: rgba(255, 226, 193,0.05); // accent-lightest w/ opacity
   border-style: solid;
   border-top-color: rgba(255, 226, 193,0.125); // accent-lightest w/ opacity
-
-  &.high {
-    // header area - light angle slightly different
-    border-bottom-color: rgba(255, 226, 193,0.05); // accent-lightest w/ opacity
-    border-left-color: $c_grey80;
-    border-right-color: rgba(255, 226, 193,0.125); // accent-lightest w/ opacity
-    border-top-color: $c_grey50;
-  }
-
 }
 .bezel {
   border-width: 1px;
@@ -74,20 +65,7 @@
 
   &-primary {
     @extend .bezel--vertical;
-    @extend .high;
-  }
-
-  &-secondary {
-
-    .inner-wrapper {
-      position: relative;
-    }
-
-    a {
-      @extend .bezel--horizontal;
-      @extend .high;
-    }
-
+    @extend .grainy;
   }
 
   // Article Progress Bar
@@ -102,23 +80,11 @@
 
 }
 
-.header-logo {
-  a {
-    @extend .bezel--horizontal;
-    @extend .high;
-  }
-}
-
-.header-nav {
-  a {
-    @extend .bezel--horizontal;
-    @extend .high;
-  }
-}
-
-.header-search {
+.header-logo a,
+.header-nav a,
+.header-search
+.site-header-secondary a {
   @extend .bezel--horizontal;
-  @extend .high;
 }
 
 .site-footer {
@@ -136,7 +102,6 @@
 .listing-page-header {
   background: linear-gradient(320deg, rgba($c_grey20,0.875), rgba($c_grey80,0.875));
   @extend .bezel--vertical;
-  @extend .high;
 }
 
 .pagination-container {

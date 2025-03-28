@@ -50,6 +50,7 @@ body {
 
 .inner-wrapper {
   padding: 0 $gutter;
+  position: relative;
   width: 100%;
 }
 
@@ -109,7 +110,7 @@ body {
   }
 
   &-secondary {
-    background: linear-gradient(180deg, rgba($c_grey80,1), rgba($c_grey80,0.875));
+    background: linear-gradient(180deg, rgba($c_grey50,1), rgba($c_grey50,0.75));
     display: none; // show with JS
 
     .inner-wrapper {
@@ -132,7 +133,7 @@ body {
     }
 
     .title {
-      flex-grow: 1;
+      //flex-grow: 1;
       overflow-x: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;

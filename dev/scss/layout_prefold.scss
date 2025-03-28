@@ -11,7 +11,7 @@ body {
 
 // bg texture
 .total-wrapper {
-  --bgtxfg: rgba(46, 60, 65, 0.25); // foreground - $c_dark-base w/ opacity
+  --bgtxfg: rgba($c_dark-base, 0.25); // foreground
   --bgtxbg: transparent; // background
   --bgtxlines: 54%; // blurriness - 52% original value
   background: 
