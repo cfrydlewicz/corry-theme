@@ -2,18 +2,27 @@
 
 
 // Theme Base Colors
-$c_primary:    oklch(90.78% 0.153 180.5); // cyan (#3effe5)
-$c_secondary:  oklch(71.2% 0.346 336.4); // magenta (#ff26e5)
-$c_accent:     oklch(71.5% 0.234 40.6); // orange (#ff681e)
-$c_dark-base:  #2e3c41; // murky teal
-$c_light-base: #d6f3f0; // pale teal
+$c_primary:            oklch(90.78% 0.153 180.5); // cyan
+  $c_primary-hex:      #3effe5;
+$c_secondary:          oklch(71.2% 0.346 336.4); // magenta
+  $c_secondary-hex:    #ff26e5;
+$c_accent:             oklch(71.5% 0.234 40.6); // orange
+  $c_accent-hex:       #ff681e;
+$c_dark-base:    #2e3c41; // murky teal
+  $c_dark-base-oklch:  oklch(34.58% 0.0203 221.65);
+  $c_dark-base-hex:    #2e3c41;
+  $c_dark-base-rgb:    rgb(46, 60, 65);
+$c_light-base:         #d6f3f0; // pale teal
 
 // Variations
-$c_primary-darker:   oklch(25% 0.111 180.5);
-$c_primary-dark:     oklch(46.6% 0.111 180.5);
-$c_primary-dim:      oklch(73.24% 0.15 180.5);
-$c_primary-light:    oklch(94.4% 0.083 180.5);
-$c_primary-lightest: oklch(97.3% 0.019 180.5);
+$c_primary-darker:      oklch(25% 0.111 180.5);
+$c_primary-dark:        oklch(46.6% 0.111 180.5);
+  $c_primary-dark-rgb:  #006c5c;
+$c_primary-dim:         oklch(73.24% 0.15 180.5);
+  $c_primary-dim-hex:   #00c6ad;
+  $c_primary-dim-rgb:   rgb(0, 198, 173);
+$c_primary-light:       oklch(94.4% 0.083 180.5);
+$c_primary-lightest:    oklch(97.3% 0.019 180.5);
 
 $c_secondary-dark:     oklch(46.6% 0.111 336.4);
 $c_secondary-dim:      oklch(73.24% 0.15 336.4);
@@ -34,7 +43,7 @@ $c_grey40:    mix(black, $c_dark-base, 60%);
 $c_grey50:    mix(black, $c_dark-base, 50%); // #171e21
 $c_grey60:    mix(black, $c_dark-base, 40%);
 $c_grey70:    mix(black, $c_dark-base, 30%);
-$c_grey80:    mix(black, $c_dark-base, 20%); // #253034
+$c_grey80:    mix(black, $c_dark-base, 20%); // #253034 - rgb(37, 48, 52)
 $c_grey90:    mix(black, $c_dark-base, 10%);
 $c_light10:   mix(white, $c_dark-base, 10%);
 $c_light20:   mix(white, $c_dark-base, 20%);
