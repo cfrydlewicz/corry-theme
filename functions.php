@@ -4,7 +4,8 @@ function theme_setup() {
 
   // Enable support for Post Thumbnails
   add_theme_support( 'post-thumbnails' );
-  set_post_thumbnail_size( 1024, 9999 ); // Unlimited height, soft crop
+  add_image_size( 'featured-large', 1024, 9999, false );
+  add_image_size( 'featured-small', 768, 768, true );
 
   // Let Pages use excerpts
   add_post_type_support( 'page', 'excerpt' );
