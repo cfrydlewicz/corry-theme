@@ -422,6 +422,18 @@
         text-align: center;
       }
 
+      // when they're cited, they are quotes
+      cite {
+        @include f_medium;
+        color: $c_light80;
+        font-style: italic;
+
+        &::before {
+          content: '― ';
+        }
+
+      }
+
     }
 
     // Horizontal Rules
