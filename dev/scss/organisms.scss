@@ -121,7 +121,7 @@ input[type="checkbox"] {
   &::before {
     font-size: 24px;
     line-height: 1.5;
-    margin-right: 12px;
+    margin-right: 0.5em;
   }
 
   &.attention {
@@ -138,11 +138,11 @@ input[type="checkbox"] {
   &.disclaimer {
     @include f_smaller;
     background-color: $c_light10;
-    border-color: $c_primary-dark;
+    border-color: $c_primary-dim;
     border-radius: 0;
 
     &::before {
-      color: $c_primary-dark;
+      color: $c_primary;
       font-size: 12px;
     }
 
@@ -197,7 +197,7 @@ div.alert {
   margin-right: auto;
 }
 
-.disclaimer {  // deprecated without alert class
+.disclaimer:not(.alert) {  // deprecated without alert class
   @include f_small;
   background-color: $c_light10;
   border-color: $c_primary-dim;
