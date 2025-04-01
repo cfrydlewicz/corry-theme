@@ -135,11 +135,14 @@ input[type="checkbox"] {
 
   }
 
+  &.aside,
   &.disclaimer {
     @include f_smaller;
     background-color: $c_light10;
     border-color: $c_primary-dim;
     border-radius: 0;
+    margin-bottom: 3em !important;
+    margin-left: auto;
 
     &::before {
       color: $c_primary;
@@ -204,7 +207,6 @@ div.alert {
   border-radius: 0;
   border-style: solid;
   border-width: 1px;
-  margin-bottom: 3em !important;
   padding: 12px;
 
   &::before {
