@@ -127,7 +127,7 @@ input[type="checkbox"] {
   &.attention {
     background-color: $c_secondary-dark;
     border-color: $c_secondary;
-    border-radius: 0.25rem;
+    border-radius: 1em;
 
     &::before {
       color: $c_secondary;
@@ -138,7 +138,7 @@ input[type="checkbox"] {
   &.aside,
   &.disclaimer {
     @include f_smaller;
-    background-color: $c_light10;
+    background-color: $c_dark-base;
     border-color: $c_primary-dim;
     border-radius: 0;
     margin-bottom: 3em !important;
@@ -154,7 +154,7 @@ input[type="checkbox"] {
   &.info {
     background-color: $c_primary-darker;
     border-color: $c_primary;
-    border-radius: 0.25rem;
+    border-radius: 1em;
 
     &::before {
       color: $c_primary;
