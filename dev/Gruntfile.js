@@ -26,7 +26,8 @@ module.exports = function(grunt) {
         files: {
           'css/corry.concat.css' : 'scss/00_manifest.scss',
           'css/critical.concat.css' : 'scss/00_critical.scss',
-          'css/critical-inline.concat.css' : 'scss/00_critical-inline.scss'
+          'css/critical-inline.concat.css' : 'scss/00_critical-inline.scss',
+          'css/wp-backend.concat.css' : 'scss/00_backend.scss'
         }
       }
     },
@@ -60,6 +61,10 @@ module.exports = function(grunt) {
       mincriticalinline: {
         src: 'css/critical-inline.concat.css',
         dest: 'css/critical-inline.min.css'
+      },
+      minbackend: {
+        src: 'css/wp-backend.concat.css',
+        dest: 'css/wp-backend.concat.min.css'
       }
     },
 
@@ -79,6 +84,13 @@ module.exports = function(grunt) {
           '../critical.min.css'
         ],
         dest: '../critical.min.css'
+      },
+      css3: {
+        src: [
+          'corry.wpinfo.css',
+          'css/wp-backend.concat.min.css'
+        ],
+        dest: '../wp-backend.min.css'
       },
       js : {
         src : [

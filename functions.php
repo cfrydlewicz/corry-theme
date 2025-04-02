@@ -36,6 +36,9 @@ function theme_setup() {
   add_theme_support( 'widgets' );
   add_theme_support( 'widgets-block-editor' );
 
+  // Style the editor
+  add_editor_style( 'wp-backend.min.css' );
+
 }
 add_action( 'after_setup_theme', 'theme_setup' );
 

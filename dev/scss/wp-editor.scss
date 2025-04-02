@@ -1,0 +1,27 @@
+// add_editor_style( 'editor-style.css' ); to functions.php
+.wp-block {
+
+  // custom classes
+  &.alert {
+    border: 1px solid $c_primary-dim;
+    padding: 4px 8px;
+  }
+
+}
+
+blockquote.wp-block {
+  border-left: 8px solid $c_primary-dark;
+  padding-left: 1rem;
+  position: relative; // probably redundant, but necessary
+
+  &::before {
+    color: $c_primary-dark;
+    content: '“';
+    font-family: Georgia, serif;
+    font-size: 36px;
+    left: -30px;
+    position: absolute;
+    top: -8px;
+  }
+
+}
