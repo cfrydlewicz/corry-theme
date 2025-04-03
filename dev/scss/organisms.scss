@@ -130,11 +130,13 @@ input[type="checkbox"] {
     border-color: $c_primary-dim;
     margin-bottom: 3em !important;
     margin-left: auto;
+    width: fit-content;
   }
 
   &.aside {
     @include f_small;
     border-radius: 1em;
+    text-align: right;
   }
 
   &.attention {
