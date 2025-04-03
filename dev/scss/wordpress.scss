@@ -25,6 +25,7 @@ body.admin-bar.logged-in {
         outline: none;
       }
 
+      .aside:not(.alert),  // deprecated without alert class
       .disclaimer:not(.alert) {  // deprecated without alert class
         outline: 2px solid $c_accent;
         outline-offset: 0.5em;

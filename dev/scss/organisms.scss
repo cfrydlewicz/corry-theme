@@ -124,6 +124,19 @@ input[type="checkbox"] {
     margin-right: 0.5em;
   }
 
+  &.aside,
+  &.disclaimer {
+    background-color: $c_dark-base;
+    border-color: $c_primary-dim;
+    margin-bottom: 3em !important;
+    margin-left: auto;
+  }
+
+  &.aside {
+    @include f_small;
+    border-radius: 1em;
+  }
+
   &.attention {
     background-color: $c_secondary-dark;
     border-color: $c_secondary;
@@ -135,14 +148,9 @@ input[type="checkbox"] {
 
   }
 
-  &.aside,
   &.disclaimer {
     @include f_smaller;
-    background-color: $c_dark-base;
-    border-color: $c_primary-dim;
     border-radius: 0;
-    margin-bottom: 3em !important;
-    margin-left: auto;
 
     &::before {
       color: $c_primary;
@@ -227,7 +235,7 @@ div.alert {
 }
 
 // asides (Shakespearean style)
-.aside {
+.aside:not(.alert) {  // deprecated without alert class
   background-color: $c_grey80;
   border-bottom-left-radius: $border-radius;
   border-top-left-radius: $border-radius;
@@ -239,17 +247,6 @@ div.alert {
   padding: 0.75em ($gutter + 12px) 1.25em 28px;
   position: relative;
   width: fit-content;
-
-  &::before {
-    color: $c_light30;
-    content: 'aside';
-    font-family: monospace;
-    font-size: 12px;
-    left: -0.375em;
-    position: absolute;
-    top: 1.5em;
-    transform: rotate(270deg);
-  }
 
   @media #{$mq_lg} {
     border-bottom-right-radius: $border-radius;
