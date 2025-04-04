@@ -2,17 +2,17 @@
 
 
 // Theme Base Colors
-$c_primary:            oklch(90.78% 0.153 180.5); // cyan
-  $c_primary-hex:      #3effe5;
-$c_secondary:          oklch(71.2% 0.346 336.4); // magenta
-  $c_secondary-hex:    #ff26e5;
-$c_accent:             oklch(71.5% 0.234 40.6); // orange
-  $c_accent-hex:       #ff681e;
-$c_dark-base:    #2e3c41; // murky teal
-  $c_dark-base-oklch:  oklch(34.58% 0.0203 221.65);
-  $c_dark-base-hex:    #2e3c41;
-  $c_dark-base-rgb:    rgb(46, 60, 65);
-$c_light-base:         #d6f3f0; // pale teal
+$c_primary:             oklch(90.78% 0.153 180.5); // cyan
+  $c_primary-hex:       #3effe5;
+$c_secondary:           oklch(71.2% 0.346 336.4); // magenta
+  $c_secondary-hex:     #ff26e5;
+$c_accent:              oklch(71.5% 0.234 40.6); // orange
+  $c_accent-hex:        #ff681e;
+$c_dark-base:           #2e3c41; // murky teal
+  $c_dark-base-oklch:   oklch(34.58% 0.0203 221.65);
+  $c_dark-base-hex:     #2e3c41;
+  $c_dark-base-rgb:     rgb(46, 60, 65);
+$c_light-base:          #d6f3f0; // pale teal
 
 // Variations
 $c_primary-darker:      oklch(25% 0.111 180.5);
@@ -24,15 +24,19 @@ $c_primary-dim:         oklch(73.24% 0.15 180.5);
 $c_primary-light:       oklch(94.4% 0.083 180.5);
 $c_primary-lightest:    oklch(97.3% 0.019 180.5);
 
-$c_secondary-dark:     oklch(46.6% 0.111 336.4);
-$c_secondary-dim:      oklch(73.24% 0.15 336.4);
-$c_secondary-light:    oklch(94.4% 0.083 336.4);
-$c_secondary-lightest: oklch(97.3% 0.019 336.4);
+$c_secondary-dark:      oklch(46.6% 0.111 336.4);
+$c_secondary-dim:       oklch(73.24% 0.15 336.4);
+$c_secondary-light:     oklch(94.4% 0.083 336.4);
+$c_secondary-lightest:  oklch(97.3% 0.019 336.4);
 
-$c_accent-dark:     oklch(28.8% 0.089 47);
-$c_accent-dim:      oklch(51.36% 0.169 43.84);
-$c_accent-light:    oklch(89.56% 0.091 66.18);
-$c_accent-lightest: oklch(93.2% 0.057 66.18);
+$c_accent-dark:         oklch(28.8% 0.089 47);
+$c_accent-dim:          oklch(51.36% 0.169 43.84);
+$c_accent-light:        oklch(89.56% 0.091 66.18);
+$c_accent-lightest:     oklch(93.2% 0.057 66.18);
+
+$c_accent2:             oklch(0.93 0.2442 122.83); // "gross" lime green
+  $c_accent2-hex:       #ccff00;
+  $c_accent2-rgb:       rgb(204,255,0);
 
 // Shade Colors
 $c_trueblack: mix(black, $c_dark-base, 99%);
