@@ -338,6 +338,7 @@ li {
   .entry-header {
     max-height: 60vh;
     overflow: hidden;
+    padding-top: $header_height;
     position: relative;
 
     @media #{$mq_lg} {
