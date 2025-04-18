@@ -455,6 +455,12 @@ body.single {
   width: 100%;
   p {
     line-height: 1.375;
+    a {
+      overflow-wrap: break-word;
+      text-decoration: underline;
+      word-break: break-word;
+      word-wrap: break-word;
+    }
   }
 }
 
