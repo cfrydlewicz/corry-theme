@@ -3,7 +3,7 @@
   <ol class="comment-list">
     <?php wp_list_comments( array(
       'avatar_size'       => 48,
-      'reverse_top_level' => true,
+      'reverse_top_level' => false,
       'style'             => 'ol',
       'short_ping'        => true,
     ) ); ?>
