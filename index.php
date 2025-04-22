@@ -32,9 +32,9 @@
             if ( has_post_thumbnail() ) {
               the_post_thumbnail_url();
             } else if ( is_category(700) ) {
-              echo "/wp-content/themes/corry/assets/thumbnail-microblog.jpg";
+              echo "/wp-content/themes/corry/assets/images/thumbnail-microblog.jpg";
             } else {
-              echo "/wp-content/themes/corry/assets/thumbnail-default.jpg";
+              echo "/wp-content/themes/corry/assets/images/thumbnail-default.jpg";
             }
           ?>');"></div>
           <div class="inner-wrapper--at-lg" data-thumbnail="<?php the_post_thumbnail_url(); ?>">
@@ -80,7 +80,7 @@
     <article id="error404" class="article-card">
 
       <header class="entry-header">
-        <img src="<?php bloginfo('template_url');?>/assets/404.jpg">
+        <img src="<?php bloginfo('template_url');?>/assets/images/404.jpg">
         <div class="title-container">
           <h1 class="entry-title">No Results Found</h1>
         </div>
