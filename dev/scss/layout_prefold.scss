@@ -114,12 +114,18 @@ li {
   }
 
   .stretched-bg {
-    background-repeat: no-repeat;
-    background-size: 100% auto;  //stretch
-    filter: blur(10px) brightness(0.75);
+    display: none;
     height: 100%;
     position: absolute;
     width: 100%;
+
+    @media #{$mq_lg} {
+      background-repeat: no-repeat;
+      background-size: 100% auto;  //stretch
+      display: block;
+      filter: blur(10px) brightness(0.75);
+    }
+
   }
 
 }
