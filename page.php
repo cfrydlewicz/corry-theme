@@ -53,6 +53,27 @@
 
     <footer class="post-footer t_slides-up">
 
+      <?php if ( comments_open() ) : ?>
+        <section id="a_comments_top" class="comments-container t_slides-up">
+          <?php if ( $thisPostCommentNum > 0 ) : ?>
+            <div class="post-footer_header">Comments <span class="comments-count">(<?php echo $thisPostCommentNum; ?>)</span></div>
+          <?php endif; ?>
+          <?php comments_template(); ?>
+        </section>
+
+        <section class="discussion-container">
+          <div class="post-footer_header">Discuss</div>
+          <ul>
+            <?php if ( $thisPostCommentNum > 0 ) : ?>
+              <li><a class="i_arrow-up" href="#a_comments_top">View Comments (<?php echo $thisPostCommentNum; ?>)</a></li>
+            <?php endif; ?>
+            <li><a class="i_chat" href="#a_respond">Leave a Comment</a></li>
+            <li><a class="i_bluesky" href="https://bsky.app/intent/compose?text=@corry.us%0A<?php echo $thisPostShortUrl; ?>" target="_blank" rel="noreferrer" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://bsky.app']);" style="white-space: nowrap;">Discuss on Bluesky</a></li>
+            <li><a class="i_heart" href="https://www.patreon.com/CorryFrydlewicz" target="_blank" rel="noreferrer" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://www.patreon.com']);">Patreon</a> for anyone who'd like to support my content and help me decide what to focus on!</li>
+          </ul>
+        </section>
+      <?php endif; ?>
+
       <?php if ( !empty($thisPostShortUrl) ) : ?>
         <section class="share-container">
           <div class="post-footer_header">Share</div>
