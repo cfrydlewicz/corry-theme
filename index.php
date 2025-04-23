@@ -80,7 +80,10 @@
     <article id="error404" class="article-card">
 
       <header class="entry-header">
-        <img src="<?php bloginfo('template_url');?>/assets/images/404.jpg">
+        <picture>
+          <source media="(min-width: 769px)" srcset="<?php bloginfo('template_url');?>/assets/images/404_1024x512.jpg">
+          <img src="<?php bloginfo('template_url');?>/assets/images/404_512x512.jpg" alt="Mega Man enters a boss stage only to find a 404 Boss Not found instead">
+        </picture>
         <div class="title-container">
           <h1 class="entry-title">No Results Found</h1>
         </div>
