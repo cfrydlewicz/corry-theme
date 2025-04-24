@@ -325,13 +325,8 @@ li {
 
   .entry-header:hover {
 
-    .entry-title {
-
-      &,
-      a {
-        color: $c_hover; // for the overflow ellipsis
-      }
-
+    .entry-title a {
+      color: $c_hover;
     }
 
   }
