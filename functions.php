@@ -39,6 +39,38 @@ function theme_setup() {
   // Style the editor
   add_theme_support( 'editor-style' );
   add_editor_style( 'editor-style.css' );
+  add_theme_support( 'editor-color-palette', array(
+    array(
+      'name' => esc_attr__( 'Primary', 'themeLangDomain'),
+      'slug' => 'corry_primary',
+      'color' => 'oklch(90.78% 0.153 180.5)' // #3effe5
+    ),
+    array(
+      'name' => esc_attr__( 'Secondary', 'themeLangDomain'),
+      'slug' => 'corry_secondary',
+      'color' => 'oklch(71.2% 0.346 336.4)' // #ff26e5
+    ),
+    array(
+      'name' => esc_attr__( 'Accent', 'themeLangDomain'),
+      'slug' => 'corry_accent',
+      'color' => 'oklch(71.5% 0.234 40.6)' // #ff681e
+    ),
+    array(
+      'name' => esc_attr__( 'Accent2', 'themeLangDomain'),
+      'slug' => 'corry_accent2',
+      'color' => 'oklch(0.93 0.2442 122.83)' // #ccff00
+    ),
+    array(
+      'name' => esc_attr__( 'Dark Base', 'themeLangDomain'),
+      'slug' => 'corry_dark-base',
+      'color' => 'oklch(34.58% 0.0203 221.65)' // #2e3c41
+    ),
+    array(
+      'name' => esc_attr__( 'Light Base', 'themeLangDomain'),
+      'slug' => 'corry_light-base',
+      'color' => '#d6f3f0'
+    ),
+  ));
 
 }
 add_action( 'after_setup_theme', 'theme_setup' );
