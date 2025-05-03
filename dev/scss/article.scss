@@ -291,6 +291,26 @@
 
     }
 
+    // WP Color Palette
+    .has-corry-primary-color {
+      color: $c_primary;
+    }
+    .has-corry-secondary-color {
+      color: $c_secondary;
+    }
+    .has-corry-accent-color {
+      color: $c_accent;
+    }
+    .has-corry-accent-2-color {
+      color: $c_accent2;
+    }
+    .has-corry-dark-base-color {
+      color: $c_dark-base;
+    }
+    .has-corry-light-base-color {
+      color: $c_light-base;
+    }
+
     // Force center alignment on mobile
     @media #{$mq_sm-only} {
       .alignleft,
