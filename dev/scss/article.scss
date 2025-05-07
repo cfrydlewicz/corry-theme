@@ -141,8 +141,8 @@
     }
 
     // de-emphasis
-    sub {
-      display: block;  // break to a new line
+    sub,
+    sup {
       @include f_smallest;
 
       a {
@@ -154,6 +154,12 @@
 
       }
 
+    }
+    sub {
+      display: block;  // break to a new line
+    }
+    sup {
+      vertical-align: super;
     }
 
     // highlighting
