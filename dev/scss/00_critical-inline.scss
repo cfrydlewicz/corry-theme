@@ -84,10 +84,10 @@ body {
 
 .site-header {
   backface-visibility: hidden; // fixed position fix for old mobile browsers
-  left: 50%;
+  left: 0;
   position: fixed;
-  transform: translateX(-50%);
-  width: 100vw;
+  right: 0;
+  top: 0;
   z-index: 3;
 
   .inner-wrapper {
