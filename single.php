@@ -40,7 +40,7 @@
                 <p class="f_small"><strong>This post contains outdated information.</strong> I only remove <em>harmful</em> content and try to keep old posts visible &mdash; even if they're embarrassing. I want to look back and see my growth over the years, and don't want to hide it from others. Thanks for considering this as you read. (<a href="#a_respond" class="i_chat">comment</a> or <a href="mailto:cfrydlewicz@gmail.com" class="i_mail">contact me</a> to request an update about its subject matter)</p>
               </div>
             </div>
-          <?php else if ( has_tag('unfinished') ) : ?>
+          <?php elseif ( has_tag('unfinished') ) : ?>
             <div class="disclaimer_unfinished alert warning">
               <div>
                 <p class="f_small"><strong>This post is unfinished.</strong> I published it anyway because I believe it still has <em>some</em> value. On the bright side, it'll probably be short! 😇 (<a href="#a_respond" class="i_chat">comment</a> or <a href="mailto:cfrydlewicz@gmail.com" class="i_mail">contact me</a> to request an update about its subject matter)</p>
