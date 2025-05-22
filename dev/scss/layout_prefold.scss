@@ -59,6 +59,20 @@ a {
 figure > a {
   display: block;  // force the box model of a tags wrapped around images to behave (not links in captions though)
 }
+
+button {
+
+  &:focus {
+    outline: 1px dashed $c_primary;
+    outline-offset: 4px;
+  }
+
+  &:active {
+    cursor: wait;
+  }
+
+}
+
 p {
   line-height: 1.5; // Accessibility standards recommend 1.5 - 2.0
   &:not(:last-child) {
