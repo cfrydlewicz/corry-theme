@@ -283,15 +283,6 @@ li {
     }
 
     .post-stats,
-    .post-categories {
-
-      @media #{$mq_xxl} {
-        min-width: 40%;
-      }
-
-    }
-
-    .post-stats,
     .post-categories a {
       @include f_small;
     }
