@@ -179,8 +179,7 @@ body {
     font-size: 20px;
     font-weight: 700;
     height: $header_height;
-    padding-bottom: 0;
-    padding-top: 0;
+    padding: 0 12px;
 
     &:not(:hover):not(:active) {
       background-color: transparent;
@@ -207,6 +206,12 @@ body {
 
   &[aria-expanded="true"] {
 
+    > button {
+      background-color: $c_active;
+      border-color: $c_accent-dim;
+      color: $c_trueblack;
+    }
+
     > nav {
       top: $header_height;
       visibility: visible;
@@ -214,40 +219,18 @@ body {
 
   }
 
-  .menu-primary-navigation-container a {
-    border-color: $c_primary-dark;
-    border-left-color: $c_primary;
-    border-style: solid;
-    border-width: 0 0 0 2px;
-    padding: 0 8px;
-
-    &:hover {
-      border-left-color: $c_hover;
-    }
-
-  }
-
   ul {
     display: flex;
+    flex-flow: column wrap;
     height: 100%;
     list-style: none;
   }
 
   li {
-    align-items: stretch;
-    display: flex;
-    width: 100%;
+    margin: 0; // override general list item styling
 
-    &,
-    &:not(:last-child) {  // override general list item styling
+    &:not(:last-child) { // override general list item styling
       margin: 0;
-    }
-
-    @media only screen and (max-width: #{$bp_sm3 - 1}) {
-      // hide some nav items until screen is wide enough
-      &:not(:first-child) {
-        display: none;
-      }
     }
 
   }
@@ -269,6 +252,23 @@ body {
       padding: 0 $gutter_lg;
     }
 
+  }
+
+  .menu-primary-navigation-container a {
+    border-color: $c_primary-dark;
+    border-left-color: $c_primary;
+    border-style: solid;
+    border-width: 0 0 0 2px;
+    padding: 4px 16px;
+
+    &:hover {
+      border-left-color: $c_hover;
+    }
+
+  }
+
+  .menu-primary-navigation-container li li a {
+    padding-left: 32px;
   }
 
 }
