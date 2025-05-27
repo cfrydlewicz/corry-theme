@@ -6,9 +6,21 @@ $(document).ready( function() {
     if ( $('.header-nav').hasClass("open") ) {
       $('.header-nav').attr("aria-expanded","false").removeClass("open");
       $('body').removeClass("shadow-on");
+      $('main#a_skip-to-content a').each(function() {
+        $(this).attr("tabindex","");
+      });
+      $('footer.site-footer a').each(function() {
+        $(this).attr("tabindex","");
+      });
     } else {
       $('.header-nav').attr("aria-expanded","true").addClass("open").focus();
       $('body').addClass("shadow-on");
+      $('main#a_skip-to-content a').each(function() {
+        $(this).attr("tabindex","-1");
+      });
+      $('footer.site-footer a').each(function() {
+        $(this).attr("tabindex","-1");
+      });
     }
 
   });
