@@ -128,13 +128,14 @@ $saveData = (isset($_SERVER["HTTP_SAVE_DATA"]) && stristr($_SERVER["HTTP_SAVE_DA
           </div><!--.screen-reader-nav-->
         </section><!--.header-logo-->
 
-        <section class="header-nav">
-          <?php wp_nav_menu('primary'); ?>
-        </section>
-
         <section class="header-search">
           <div class="search-container"><?php get_search_form(); ?></div>
         </section><!--.header-search-->
+
+        <section class="header-nav">
+          <button class="nav-trigger">☰<span class="u_visually-hidden"> Menu</span></button>
+          <?php wp_nav_menu('primary'); ?>
+        </section>
 
       </div>
     </section>
@@ -160,4 +161,5 @@ $saveData = (isset($_SERVER["HTTP_SAVE_DATA"]) && stristr($_SERVER["HTTP_SAVE_DA
     </section>
 
   </header>
+  <div id="shadow" class="nav-trigger"></div>
 <!--.total-wrapper ends in footer.php -->

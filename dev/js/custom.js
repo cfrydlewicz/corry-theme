@@ -1,5 +1,18 @@
 $(document).ready( function() {
 
+  // Nav Menu
+  $(".nav-trigger").click(function(){
+
+    if ( $('.header-nav').hasClass("open") ) {
+      $('.header-nav').attr("aria-expanded","false").removeClass("open");
+      $('body').removeClass("shadow-on");
+    } else {
+      $('.header-nav').attr("aria-expanded","true").addClass("open").focus();
+      $('body').addClass("shadow-on");
+    }
+
+  });
+
   // Secondary site header
   // For single posts
   if( $("#sticky-title").length > 0 ) {

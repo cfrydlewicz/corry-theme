@@ -173,9 +173,38 @@ body {
 }
 
 .header-nav {
-  > div {
-    height: 100%;
+  position: relative;
+
+  > button {
   }
+
+  .menu-full-menu-container {
+    border-color: $c_primary-dark;
+    border-style: solid;
+    border-width: 0 0 0 2px;
+    bottom: 0;
+    max-width: 80vw;
+    overflow-y: scroll;
+    position: fixed;
+    right: -200px;
+    top: 0;
+    transition-duration: 0.25s;
+    transition-property: right;
+    transition-timing-function: ease-in;
+    visibility: hidden;
+    width: 200px;
+    z-index: 2;
+  }
+
+  &[aria-expanded="true"] {
+
+    .menu-full-menu-container {
+      right: 0;
+      visibility: visible;
+    }
+
+  }
+
   ul {
     display: flex;
     height: 100%;
@@ -241,6 +270,23 @@ body {
   }
 }
 
+#shadow {
+  background-color: rgba(0,0,0,0);
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition-duration: 0.25s;
+  transition-property: background-color;
+  transition-timing-function: ease-in;
+  z-index: 1;
+}
+
+body.shadow-on #shadow {
+  background-color: rgba(0,0,0,0.1);
+  cursor: pointer;
+}
 
 // listing pages
 main.listing-page {
