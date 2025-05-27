@@ -30,66 +30,61 @@ strong,
 b {
   font-weight: 600;
 }
+
 em {
   font-style: italic;
 }
+
 a {
   color: $c_link;
   text-decoration: none;
+
   &:visited {
     color: $c_visited;
   }
+
   &:hover {
     color: $c_hover;
   }
+
   &:focus {
     outline: 1px dotted $c_primary;
   }
+
   &:active {
     color: $c_active;
     cursor: wait;
   }
+
   &::after,
   &::before {
     // for links with icons
     font-size: 0.75em;
     margin: 0 0.375em;
   }
+
 }
+
 figure > a {
   display: block;  // force the box model of a tags wrapped around images to behave (not links in captions though)
 }
 
-button {
-
-  &:visited {
-  }
-
-  &:hover {
-  }
-
-  &:focus {
-    outline: 1px dashed $c_primary;
-    outline-offset: 4px;
-  }
-
-  &:active {
-    cursor: wait;
-  }
-
-}
-
 p {
   line-height: 1.5; // Accessibility standards recommend 1.5 - 2.0
+
   &:not(:last-child) {
     margin-bottom: 0.5em;
   }
+
 }
+
 li {
   line-height: 1.2;
+
   &:not(:last-child) {
     margin-bottom: 0.5em;
   }
+
 }
 
 

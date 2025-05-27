@@ -150,15 +150,22 @@ $mq_mouse   : "only screen and (pointer: fine)";
   text-align: center;
   text-decoration: none;
   vertical-align: middle;
+
   &:hover {
     background-color: $c_hover;
     border-color: $c_accent-dim;
     color: $c_trueblack;
   }
+
   &:active {
     background-color: $c_active;
     border-color: $c_accent-dim;
     color: $c_trueblack;
+  }
+
+  &:focus {
+    outline: 1px dashed $c_primary;
+    outline-offset: 4px;
   }
 
   @if $size == 'big' {
