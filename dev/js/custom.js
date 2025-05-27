@@ -25,6 +25,25 @@ $(document).ready( function() {
 
   });
 
+  // Escape Key Detection
+  $(document).keyup(function(e) {
+   if (e.key === "Escape") {
+
+      // Close Primary Nav
+      if ( $('.header-nav').hasClass("open") ) {
+        $('.header-nav').attr("aria-expanded","false").removeClass("open");
+        $('body').removeClass("shadow-on");
+
+        $('a').each(function() {
+          if ( $(this).parents('#site-header-primary').length == 0 ) {
+            $(this).attr("tabindex","");
+          }
+        });
+      }
+
+    }
+  });
+
   // Secondary site header
   // For single posts
   if( $("#sticky-title").length > 0 ) {
