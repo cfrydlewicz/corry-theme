@@ -323,6 +323,13 @@ body {
   z-index: 2;
 }
 
+body.shadow-on {
+  overflow: hidden; // prevent scrolling
+}
+body.shadow-on main,
+body.shadow-on footer {
+  filter: blur(2px);
+}
 body.shadow-on #shadow {
   background-color: rgba(0,0,0,0.5);
   cursor: pointer;
