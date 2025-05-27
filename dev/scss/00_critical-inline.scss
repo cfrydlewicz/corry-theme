@@ -37,6 +37,7 @@ body {
   font-size: 16px;  // establishes rem basis
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  position: relative;
   text-wrap: balance;  // prevent orphaned text (browser support fallback)
   text-wrap: pretty; // prevent orphaned text
 
