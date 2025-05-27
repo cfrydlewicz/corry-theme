@@ -89,7 +89,7 @@ body {
   position: fixed;
   right: 0;
   top: 0;
-  z-index: 3;
+  z-index: 4;
 
   .inner-wrapper {
     align-items: stretch;
@@ -198,7 +198,7 @@ body {
     right: 0;
     top: -100vh;
     transition-duration: 0.25s;
-    transition-property: top;
+    transition-property: top, visibility;
     transition-timing-function: ease-in;
     visibility: hidden;
     width: 240px;
