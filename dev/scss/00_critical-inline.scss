@@ -176,18 +176,25 @@ body {
   position: relative;
 
   > button {
+    border-radius: 0;
+    font-size: 20px;
+    font-weight: 700;
+    height: $header_height;
+    padding-bottom: 0;
+    padding-top: 0;
   }
 
-  .menu-full-menu-container {
+  .menu-primary-navigation-container {
+    background-color: $c_dark-base;
     border-color: $c_primary-dark;
     border-style: solid;
     border-width: 0 0 0 2px;
     bottom: 0;
     max-width: 80vw;
     overflow-y: scroll;
-    position: fixed;
+    position: absolute;
     right: -200px;
-    top: 0;
+    top: $header_height;
     transition-duration: 0.25s;
     transition-property: right;
     transition-timing-function: ease-in;
@@ -284,7 +291,7 @@ body {
 }
 
 body.shadow-on #shadow {
-  background-color: rgba(0,0,0,0.1);
+  background-color: rgba(0,0,0,0.5);
   cursor: pointer;
 }
 

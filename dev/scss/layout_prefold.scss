@@ -62,6 +62,12 @@ figure > a {
 
 button {
 
+  &:visited {
+  }
+
+  &:hover {
+  }
+
   &:focus {
     outline: 1px dashed $c_primary;
     outline-offset: 4px;
