@@ -155,7 +155,6 @@ body {
   svg {
     height: 150%; // let the y dangle over
     max-height: 48px;
-    z-index: 2;
   }
   a {
     display: flex;
@@ -182,32 +181,47 @@ body {
     height: $header_height;
     padding-bottom: 0;
     padding-top: 0;
+
+    &:not(:hover),
+    &:not(:active) {
+      background-color: transparent;
+      color: $c_white;
+    }
+
   }
 
-  .menu-primary-navigation-container {
+  > nav {
     background-color: $c_dark-base;
-    border-color: $c_primary-dark;
-    border-style: solid;
-    border-width: 0 0 0 2px;
-    bottom: 0;
     max-width: 80vw;
     overflow-y: scroll;
     position: absolute;
-    right: -200px;
-    top: $header_height;
+    right: 0;
+    top: -100vh;
     transition-duration: 0.25s;
     transition-property: right;
     transition-timing-function: ease-in;
     visibility: hidden;
-    width: 200px;
-    z-index: 2;
+    width: 240px;
+    z-index: 3;
   }
 
   &[aria-expanded="true"] {
 
-    .menu-full-menu-container {
-      right: 0;
+    > nav {
+      top: $header_height;
       visibility: visible;
+    }
+
+  }
+
+  .menu-primary-navigation-container a {
+    border-color: $c_primary-dark;
+    border-left-color: $c_primary;
+    border-style: solid;
+    border-width: 0 0 0 2px;
+
+    &:hover {
+      border-left-color: $c_hover;
     }
 
   }
@@ -287,7 +301,7 @@ body {
   transition-duration: 0.25s;
   transition-property: background-color;
   transition-timing-function: ease-in;
-  z-index: 1;
+  z-index: 2;
 }
 
 body.shadow-on #shadow {

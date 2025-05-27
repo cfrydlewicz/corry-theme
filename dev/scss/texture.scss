@@ -81,8 +81,9 @@
 }
 
 .header-logo a,
+.header-search,
 .header-nav a,
-.header-search
+.header-nav > button,
 .site-header-secondary a {
   @extend .bezel--horizontal;
 }
