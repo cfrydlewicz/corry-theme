@@ -206,7 +206,7 @@ body {
 
   &[aria-expanded="true"] {
 
-    > button {
+    > button:not(:hover):not(:active) {
       background-color: $c_active;
       border-color: $c_accent-dim;
       color: $c_trueblack;
@@ -258,8 +258,17 @@ body {
     border-color: $c_primary-dark;
     border-left-color: $c_primary;
     border-style: solid;
-    border-width: 0 0 0 2px;
+    border-width: 0 0 0 4px;
     padding: 4px 16px;
+
+    @media #{$mq_lg} {
+      padding-bottom: 8px;
+      padding-top: 8px;
+    }
+
+    &:not(:hover):not(:active) {
+      color: $c_white;
+    }
 
     &:hover {
       border-left-color: $c_hover;
