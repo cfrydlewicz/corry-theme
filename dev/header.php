@@ -161,5 +161,4 @@ $saveData = (isset($_SERVER["HTTP_SAVE_DATA"]) && stristr($_SERVER["HTTP_SAVE_DA
     </section>
 
   </header>
-  <div id="shadow" class="nav-trigger"></div>
 <!--.total-wrapper ends in footer.php -->

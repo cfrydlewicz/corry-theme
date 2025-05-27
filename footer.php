@@ -39,5 +39,7 @@
 <!-- BEGIN elements opened in header.php -->
 </div><!-- /.total-wrapper -->
 
+<div id="shadow" class="nav-trigger"></div>
+
 <?php wp_footer(); ?>
 </body></html>
