@@ -176,6 +176,11 @@
       text-decoration: underline;
       word-break: break-word;
       word-wrap: break-word;
+
+      &:visited:not(:hover):not(:active):not(:focus) {
+        color: $c_visited;
+      }
+
     }
     a[href^="#a_"]::after {
       content: '#';
