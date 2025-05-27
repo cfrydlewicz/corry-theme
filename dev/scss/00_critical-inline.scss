@@ -191,14 +191,14 @@ body {
 
   > nav {
     background-color: $c_dark-base;
-    max-width: 80vw;
+    max-width: 90vw;
     overflow-y: scroll;
     padding: 4px 0;
     position: absolute;
     right: 0;
     top: -100vh;
     transition-duration: 0.25s;
-    transition-property: right;
+    transition-property: top;
     transition-timing-function: ease-in;
     visibility: hidden;
     width: 240px;
@@ -260,12 +260,7 @@ body {
     border-left-color: $c_primary;
     border-style: solid;
     border-width: 0 0 0 4px;
-    padding: 4px 16px;
-
-    @media #{$mq_lg} {
-      padding-bottom: 8px;
-      padding-top: 8px;
-    }
+    padding: 8px 16px;
 
     &:not(:hover):not(:active) {
       color: $c_white;
@@ -314,12 +309,14 @@ body {
   background-color: rgba(0,0,0,0);
   bottom: 0;
   left: 0;
+  pointer-events: none;
   position: absolute;
   right: 0;
   top: 0;
   transition-duration: 0.25s;
   transition-property: background-color;
   transition-timing-function: ease-in;
+  visibility: hidden;
   z-index: 2;
 }
 
@@ -333,6 +330,8 @@ body.shadow-on footer {
 body.shadow-on #shadow {
   background-color: rgba(0,0,0,0.5);
   cursor: pointer;
+  pointer-events: all;
+  visibility: visible;
 }
 
 // listing pages
