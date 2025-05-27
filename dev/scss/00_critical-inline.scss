@@ -182,8 +182,7 @@ body {
     padding-bottom: 0;
     padding-top: 0;
 
-    &:not(:hover),
-    &:not(:active) {
+    &:not(:hover):not(:active) {
       background-color: transparent;
       color: $c_white;
     }
