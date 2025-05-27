@@ -4,11 +4,11 @@
 body.admin-bar.logged-in {
 
   .site-header {
-    top: 46px; /* height of mobile admin bar */
+    top: 46px; // height of mobile admin bar
 
     @media only screen and (min-width: 783px) {
-      /* when the WP Admin Bar changes */
-      top: 32px; /* height of desktop admin bar */
+      // when the WP Admin Bar changes
+      top: 32px; // height of desktop admin bar
     }
 
   }
