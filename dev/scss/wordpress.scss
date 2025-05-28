@@ -1,5 +1,9 @@
 // WordPress Tweaks
 
+html[lang] {
+  margin-top: 0 !important; // override WP Admin bar
+}
+
 // Backend Helpers
 body.admin-bar.logged-in {
 
