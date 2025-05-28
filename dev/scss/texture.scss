@@ -101,11 +101,8 @@
 
 // Listing Pages
 .pagination-container {
-  @extend .bezel--vertical;
-  @extend .grainy;
 
   a {
-    @extend .bezel--horizontal;
 
     &:last-child {
       @extend .i_arrow-right--after;
