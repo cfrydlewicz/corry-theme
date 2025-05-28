@@ -5,22 +5,22 @@ $(document).ready( function() {
     $('.header-nav').attr("aria-expanded","true").addClass("open").focus();
     $('body').addClass("shadow-on");
 
-    $('a').each(function() {
-      if ( $(this).parents('#site-header-primary').length == 0 ) {
-        $(this).attr("tabindex","-1");
-      }
-    });
+    $('main#a_skip-to-content').attr("inert","");
+    $('#site-header-secondary').attr("inert","");
+    $('footer#a_footer').attr("inert","");
+    $('#wpadminbar').attr("inert","");
+
   }
 
   function closeNav() {
     $('.header-nav').attr("aria-expanded","false").removeClass("open");
     $('body').removeClass("shadow-on");
 
-    $('a').each(function() {
-      if ( $(this).parents('#site-header-primary').length == 0 ) {
-        $(this).attr("tabindex","");
-      }
-    });
+    $('main#a_skip-to-content').removeAttr("inert");
+    $('#site-header-secondary').removeAttr("inert");
+    $('footer#a_footer').removeAttr("inert");
+    $('#wpadminbar').removeAttr("inert");
+
   }
 
   $(".nav-trigger").click(function(){
