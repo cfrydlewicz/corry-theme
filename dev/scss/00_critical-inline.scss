@@ -190,18 +190,19 @@ body {
   }
 
   > nav {
-    background-color: $c_dark-base;
+    background-color: $c_grey80;
     max-width: 90vw;
+    opacity: 0;
     overflow-y: scroll;
     padding: 4px 0;
     position: absolute;
-    right: 0;
-    top: -100vh;
+    right: -320px;
+    top: $header_height;
     transition-duration: 0.25s;
-    transition-property: top, visibility;
+    transition-property: opacity, right, visibility;
     transition-timing-function: ease-in;
     visibility: hidden;
-    width: 240px;
+    width: 320px;
     z-index: 3;
   }
 
@@ -214,7 +215,8 @@ body {
     }
 
     > nav {
-      top: $header_height;
+      opacity: 1;
+      right: 0;
       visibility: visible;
     }
 
