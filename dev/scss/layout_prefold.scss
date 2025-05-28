@@ -170,7 +170,6 @@ li {
     margin-right: auto;
     max-width: $thumbnail_width;
     position: relative;
-    //transition: transform 0.2s ease-in-out;
     width: 100%;
   }
 
@@ -229,14 +228,8 @@ li {
     position: relative;
     width: 100%;
 
-    @media #{$mq_md} {
-      min-height: 38px; // enough space for CTA
-      padding-bottom: 0;  // side-by-side CTA and excerpt
-    }
-
     @media #{$mq_lg} {
       height: 100%;
-      padding-bottom: 44px;
     }
 
     p {
@@ -252,14 +245,6 @@ li {
         overflow: hidden;
       }
 
-      @media #{$mq_md} {
-        max-width: 52ch;  // Needed?
-      }
-
-      @media #{$mq_lg} {
-        max-width: 60ch;  // Needed?
-      }
-
     }
 
     a {
@@ -267,7 +252,8 @@ li {
       @include f_medium;
       bottom: 0;
       position: absolute;
-      right: 0;
+      right: 16px;
+      white-space: nowrap;
       z-index: 1;
     }
 
@@ -312,23 +298,26 @@ li {
 
   }
 
+  @media #{$mq_mouse} {
 
-  // Article Card Hover States
-  &:hover {
+    // Article Card Hover States
+    &:hover {
 
-    // Zoom & Rotate CTAs on hover
-    .excerpt-container a,
-    &:first-of-type .excerpt-container a {
-      font-weight: 700;
-      transform: rotate(2.5deg) scale(1.25);
+      // Zoom & Rotate CTAs on hover
+      .excerpt-container a,
+      &:first-of-type .excerpt-container a {
+        font-weight: 700;
+        transform: rotate(2.5deg) scale(1.25);
+      }
+
     }
 
-  }
+    .entry-header:hover {
 
-  .entry-header:hover {
+      .entry-title a {
+        color: $c_hover;
+      }
 
-    .entry-title a {
-      color: $c_hover;
     }
 
   }

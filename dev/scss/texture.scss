@@ -139,10 +139,14 @@
 @media #{$mq_mouse} {
 
   .article-card .excerpt-container a {
-    transition: all 0.2s ease-in-out;
+    transition-duration: 0.2s;
+    transition-property: font-weight, transform;
+    transition-timing-function: linear;
 
     &::after {
-      transition: all 0.2s ease-in-out;
+      transition-duration: 0.2s;
+      transition-property: margin;
+      transition-timing-function: ease-in;
     }
 
   }
@@ -159,12 +163,8 @@
 // Articles
 .article-content {
 
-  .entry-content {
-
-    pre {
-      @extend .grainy;
-    }
-
+  .entry-content pre {
+    @extend .grainy;
   }
 
   .entry-footer {
