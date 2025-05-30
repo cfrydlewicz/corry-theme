@@ -317,6 +317,33 @@ body {
 
 }
 
+.main-columns-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: $gutter;
+
+  @media #{$mq_lg} {
+    gap: $gutter_lg;
+  }
+
+  > main {
+    flex-grow: 1;
+  }
+
+  > aside {
+    display: flex;
+    flex-direction: row;
+
+    @media #{$mq_lg} {
+      flex-direction: column;
+      min-width: 240px;
+      width: 25%;
+    }
+
+  }
+
+}
+
 #shadow {
   background-color: rgba(0,0,0,0);
   bottom: 0;
