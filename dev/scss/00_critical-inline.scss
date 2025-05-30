@@ -52,7 +52,11 @@ body {
 }
 
 .inner-wrapper {
-  padding: 0 $gutter;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: $bp_max;
+  padding-left: $gutter;
+  padding-right: $gutter;
   position: relative;
   width: 100%;
 }
@@ -61,9 +65,15 @@ body {
 
   .inner-wrapper,
   .inner-wrapper--at-lg {
-    margin: 0 auto;
+    padding-left: $gutter_lg;
+    padding-right: $gutter_lg;
+  }
+
+  .inner-wrapper--at-lg {
+    margin-left: auto;
+    margin-right: auto;
     max-width: $bp_max;
-    padding: 0 $gutter_lg;
+    position: relative;
     width: 100%;
   }
 
