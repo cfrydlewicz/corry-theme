@@ -149,17 +149,6 @@ li {
 
 // Article Cards
 .article-card {
-  width: 100%;
-
-  @media #{$mq_lg} {
-    margin-bottom: #{($gutter_lg + 2px)/2};
-    width: calc( 50vw - #{$gutter_lg + 2px} );  // 2 per row
-  }
-
-  @media #{$mq_max} {
-    width: #{$bp_max / 2 - $gutter_lg + 2px};  // 2 per row
-  }
-
 
   // Inner Elements
   .entry-header {

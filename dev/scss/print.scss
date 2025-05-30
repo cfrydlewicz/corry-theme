@@ -148,12 +148,9 @@
 
   // in the odd edge case where someone wants to print an index page...
   .listing-page {
-    flex-flow: row wrap;
-    justify-content: space-between;
     padding-top: 0;
 
     .article-card {
-      width: 49% !important;
 
       .title-container {
         background-color: rgba(255,255,255,0.75);
