@@ -1,20 +1,5 @@
 <?php get_header(); ?>
 
-<?php if ( ! is_home() ) : ?>
-  <header class="listing-page-header">
-    <div class="inner-wrapper">
-      <?php if ( is_category() ) : ?>
-        <h1 id="sticky-title" class="page-title"><span>Category:</span> <strong><?php single_cat_title(); ?></strong></h1>
-        <?php echo category_description(); ?>
-      <?php elseif ( is_tag() ) : ?>
-        <h1 id="sticky-title" class="page-title"><span>Tag:</span> <strong><?php single_tag_title(); ?></strong></h1>
-      <?php elseif ( is_search() ) : ?>
-        <h1 id="sticky-title" class="page-title"><span>Search Results for</span> <strong><?php echo esc_html($_GET['s']); ?></strong></h1>
-      <?php endif; ?>
-    </div>
-  </header>
-<?php endif; ?>
-
 <div class="main-columns-wrapper inner-wrapper">
 
   <main id="a_skip-to-content" class="listing-page">
