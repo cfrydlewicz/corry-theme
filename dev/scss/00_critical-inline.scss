@@ -168,14 +168,21 @@ body {
 
   > button {
     border-radius: 0;
-    font-size: 20px;
-    font-weight: 700;
     height: $header_height;
     padding: 0 12px;
 
     &:not(:hover):not(:active) {
       background-color: transparent;
       color: $c_white;
+    }
+
+    .nav-menu-icon {
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .nav-menu-text {
+      //@extend .u_visually-hidden;
     }
 
   }
