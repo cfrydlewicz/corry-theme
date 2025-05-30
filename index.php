@@ -15,7 +15,7 @@
   </header>
 <?php endif; ?>
 
-<div class="main-columns-wrapper">
+<div class="main-columns-wrapper inner-wrapper">
 
   <main id="a_skip-to-content" class="listing-page">
     <?php if ( have_posts() ) : ?>
