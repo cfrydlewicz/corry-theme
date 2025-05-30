@@ -291,34 +291,6 @@ li {
 
   }
 
-  @media #{$mq_mouse} {
-
-    .excerpt-container a {
-      right: 16px;
-    }
-
-    // Article Card Hover States
-    &:hover {
-
-      // Zoom & Rotate CTAs on hover
-      .excerpt-container a,
-      &:first-of-type .excerpt-container a {
-        font-weight: 700;
-        transform: rotate(2.5deg) scale(1.25);
-      }
-
-    }
-
-    .entry-header:hover {
-
-      .entry-title a {
-        color: $c_hover;
-      }
-
-    }
-
-  }
-
 }
 
 

@@ -132,29 +132,58 @@
 
   }
 
-}
+  .cta-container {
 
-
-// Flashy Buttons
-@media #{$mq_mouse} {
-
-  .article-card .excerpt-container a {
-    transition-duration: 0.2s;
-    transition-property: font-weight, transform;
-    transition-timing-function: linear;
-
-    &::after {
-      transition-duration: 0.2s;
-      transition-property: margin;
-      transition-timing-function: ease-in;
+    a {
+      //right: 16px;
     }
 
   }
 
-  // Hover Icon Animation
-  .article-card.excerpt-container a:hover::after,
-  .article-card:hover .excerpt-container a::after {
-    margin: 0 0 0 0.75em;
+  // Flashy Button Hovers
+  @media #{$mq_mouse} {
+
+    // Article Card Hover States
+    &:hover {
+
+      // Zoom & Rotate CTAs on hover
+      .excerpt-container a,
+      &:first-of-type .excerpt-container a {
+      }
+
+    }
+
+    .cta-container a {
+      transition-duration: 0.2s;
+      transition-property: font-weight, transform;
+      transition-timing-function: linear;
+
+      &::after {
+        transition-duration: 0.2s;
+        transition-property: margin;
+        transition-timing-function: ease-in;
+      }
+
+      //&:hover {
+      //  color: $c_hover;
+      //}
+
+    }
+
+    &:hover {
+
+      .cta-container a {
+        font-weight: 700;
+        transform: rotate(2.5deg) scale(1.25);
+
+        &::after {
+          margin: 0 0 0 0.75em;
+        }
+
+      }
+
+    }
+
   }
 
 }

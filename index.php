@@ -11,42 +11,35 @@
         <article id="post-<?php the_ID(); ?>" <?php post_class('article-card'); ?>>
 
           <header class="entry-header">
-            <div class="inner-wrapper--at-lg">
-              <a href="<?php the_permalink(); ?>"><?php post_thumbnail(); ?></a>
-              <div class="title-container">
-                <?php if ( is_singular() ) : ?>
-                  <h1 id="sticky-title" class="entry-title"><?php the_title(); ?></h1>
-                <?php else : ?>
-                  <h2 class="entry-title"><?php the_title( sprintf( '<a href="%s">', esc_url( get_permalink() ) ), '</a>' ); ?></h2>
-                <?php endif; ?>
-              </div>
-            </div>
+            <a href="<?php the_permalink(); ?>"><?php post_thumbnail(); ?></a>
           </header>
-
-          <div class="entry-content">
-            <div class="inner-wrapper">
-              <div class="excerpt-container">
-                <?php the_excerpt(); ?>
-                <a href="<?php echo str_replace(home_url(), '', get_permalink()); ?>" class="i_arrow-right--after">Read it Now!</a>
-              </div>
+          <div class="entry-content sp_padding">
+            <div class="title-container">
+              <?php if ( is_singular() ) : ?>
+                <h1 id="sticky-title" class="entry-title"><?php the_title(); ?></h1>
+              <?php else : ?>
+                <h2 class="entry-title"><?php the_title( sprintf( '<a href="%s">', esc_url( get_permalink() ) ), '</a>' ); ?></h2>
+              <?php endif; ?>
+            </div>
+            <div class="excerpt-container">
+              <?php the_excerpt(); ?>
+            </div>
+            <div class="cta-container">
+              <a href="<?php echo str_replace(home_url(), '', get_permalink()); ?>" class="i_arrow-right--after">Read it Now!</a>
             </div>
           </div><!--.entry-content-->
 
-          <footer class="entry-footer">
-            <div class="inner-wrapper">
-              <div class="post-stats"><span class="post-date"><?php the_date(); ?></span> <span class="separator">|</span> <span class="word-count"><?php word_count(); ?> words</span></div>
-              <div class="post-categories"><span class="u_visually-hidden">Categories:&nbsp;</span><?php the_category(',&nbsp;'); ?></div>
-            </div>
+          <footer class="entry-footer sp_padding">
+            <div class="post-stats"><span class="post-date"><?php the_date(); ?></span> <span class="separator">|</span> <span class="word-count"><?php word_count(); ?> words</span></div>
+            <div class="post-categories"><span class="u_visually-hidden">Categories:&nbsp;</span><?php the_category(',&nbsp;'); ?></div>
           </footer>
 
         </article>
 
       <?php endwhile; ?>
 
-      <div class="pagination-container">
-        <div class="inner-wrapper">
-          <?php posts_nav_link('', 'Previous Page', 'Next Page'); ?>
-        </div>
+      <div class="pagination-container inner-wrapper">
+        <?php posts_nav_link('', 'Previous Page', 'Next Page'); ?>
       </div>
 
     <?php else : ?>
