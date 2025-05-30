@@ -41,6 +41,16 @@
   }
 
 }
+.separator {
+  margin-left: 4px;
+  margin-right: 4px;
+  opacity: 0.875;
+
+  &:empty::before {
+    content: '|';
+  }
+
+}
 
 // Font-face declarations
 @font-face {
