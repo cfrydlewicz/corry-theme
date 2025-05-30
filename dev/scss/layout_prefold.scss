@@ -203,7 +203,6 @@ li {
   }
 
   .entry-content {
-    padding: 12px 0;
 
     @media #{$mq_lg} {
       flex-grow: 1;  // make tiles fill height of the row

@@ -19,6 +19,7 @@
   @include f_smallest;
 }
 
+.sp_padding,
 .sp_horizontal-padding {
   padding-left: $gutter;
   padding-right: $gutter;
@@ -26,6 +27,17 @@
   @media #{$mq_lg} {
     padding-left: $gutter_lg;
     padding-right: $gutter_lg;
+  }
+
+}
+.sp_padding,
+.sp_vertical-padding {
+  padding-bottom: $gutter;
+  padding-top: $gutter;
+
+  @media #{$mq_lg} {
+    padding-bottom: $gutter_lg;
+    padding-top: $gutter_lg;
   }
 
 }
