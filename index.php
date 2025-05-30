@@ -32,7 +32,7 @@
           </div><!--.entry-content-->
 
           <footer class="entry-footer sp_padding">
-            <div class="post-stats"><span class="post-date"><?php the_date(); ?></span> <span class="separator">|</span> <span class="word-count"><?php word_count(); ?> words</span></div>
+            <div class="post-stats"><span class="post-date"><?php the_date(); ?></span> <span class="separator"></span> <span class="word-count"><?php word_count(); ?> words</span></div>
             <div class="post-categories"><span class="u_visually-hidden">Categories:&nbsp;</span><?php the_category(',&nbsp;'); ?></div>
           </footer>
 
@@ -74,7 +74,7 @@
         </div><!--.entry-content-->
         <footer class="entry-footer">
           <div class="inner-wrapper">
-            <div class="post-stats"><span class="post-date">20XX</span> <span class="separator">|</span> <span class="word-count">0 words</span></div>
+            <div class="post-stats"><span class="post-date">20XX</span> <span class="separator"></span> <span class="word-count">0 words</span></div>
             <div class="post-categories"><span class="u_visually-hidden">Categories:&nbsp;</span>404 Page</div>
           </div>
         </footer>
