@@ -28,7 +28,9 @@
       <article id="post-<?php the_ID(); ?>" <?php post_class('article-card'); ?>>
 
         <header class="entry-header">
-          <div class="stretched-bg"<?php if ( has_post_thumbnail() ) : ?> style="background-image: url('<?php the_post_thumbnail_url(); ?>');"<?php endif;?>></div>
+          <?php if ( has_post_thumbnail() ) : ?>
+            <div class="stretched-bg" style="background-image: url('<?php the_post_thumbnail_url(); ?>');"></div>
+          <?php endif;?>
           <div class="inner-wrapper--at-lg">
             <a href="<?php the_permalink(); ?>"><?php post_thumbnail(); ?></a>
             <div class="title-container">
