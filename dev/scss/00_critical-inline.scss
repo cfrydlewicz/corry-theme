@@ -317,13 +317,15 @@ body {
 
   @media #{$mq_lg} {
     gap: $gutter_lg;
+    flex-direction: row;
+    flex-wrap: nowrap;
   }
 
   > main {
     flex-grow: 1;
   }
 
-  > aside {
+  > aside:not(:empty) {
     display: flex;
     flex-direction: row;
 

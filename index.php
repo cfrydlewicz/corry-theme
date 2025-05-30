@@ -108,8 +108,7 @@
 
   </main>
 
-  <aside class="sidebar">
-  </aside>
+  <aside class="sidebar"></aside>
 
 </div><!--.main-columns-wrapper-->
 <?php get_footer(); ?>
