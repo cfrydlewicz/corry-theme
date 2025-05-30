@@ -28,16 +28,8 @@
       <article id="post-<?php the_ID(); ?>" <?php post_class('article-card'); ?>>
 
         <header class="entry-header">
-          <div class="stretched-bg" style="background-image: url('<?php 
-            if ( has_post_thumbnail() ) {
-              the_post_thumbnail_url();
-            } else if ( is_category(700) ) {
-              echo "/wp-content/themes/corry/assets/images/thumbnail-microblog.jpg";
-            } else {
-              echo "/wp-content/themes/corry/assets/images/thumbnail-default.jpg";
-            }
-          ?>');"></div>
-          <div class="inner-wrapper--at-lg" data-thumbnail="<?php the_post_thumbnail_url(); ?>">
+          <div class="stretched-bg"<?php if ( has_post_thumbnail() ) : ?> style="background-image: url('<?php the_post_thumbnail_url(); ?>');"<?php endif;?>></div>
+          <div class="inner-wrapper--at-lg">
             <a href="<?php the_permalink(); ?>"><?php post_thumbnail(); ?></a>
             <div class="title-container">
               <?php if ( is_singular() ) : ?>
@@ -80,7 +72,7 @@
     <article id="error404" class="article-card">
       <header class="entry-header">
         <div class="stretched-bg" style="background-image: url('<?php bloginfo('template_url');?>/assets/images/404_1024x512.jpg');"></div>
-        <div class="inner-wrapper--at-lg" data-thumbnail="<?php the_post_thumbnail_url(); ?>">
+        <div class="inner-wrapper--at-lg">
           <a href="/">
             <picture>
               <source media="(min-width: 769px)" srcset="<?php bloginfo('template_url');?>/assets/images/404_1024x512.jpg">

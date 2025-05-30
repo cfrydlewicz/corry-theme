@@ -125,10 +125,15 @@ li {
   }
 
   .stretched-bg {
+    background-image: url('/wp-content/themes/corry/assets/images/thumbnail-default.jpg'); // overridden inline by post thumbnails
     display: none;
     height: 100%;
     position: absolute;
     width: 100%;
+
+    body.category-microblog & {
+      background-image: url('/wp-content/themes/corry/assets/images/thumbnail-microblog.jpg');
+    }
 
     @media #{$mq_lg} {
       background-repeat: no-repeat;
