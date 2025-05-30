@@ -84,12 +84,6 @@ body {
 
 @media #{$mq_lg} {
 
-  .inner-wrapper,
-  .inner-wrapper--at-lg {
-    padding-left: $gutter_lg;
-    padding-right: $gutter_lg;
-  }
-
   .inner-wrapper--at-lg {
     margin-left: auto;
     margin-right: auto;
