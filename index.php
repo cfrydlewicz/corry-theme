@@ -3,7 +3,7 @@
 <div class="main-columns-wrapper inner-wrapper">
 
   <?php if ( !is_home() ) : ?>
-    <div class="listing-page-header sp_padding">
+    <div class="listing-page-header sp_horizontal-padding">
       <?php if ( is_category() ) : ?>
         <h1 id="sticky-title" class="page-title"><span>Category:&nbsp;</span><strong><?php single_cat_title(); ?></strong></h1>
       <?php elseif ( is_tag() ) : ?>

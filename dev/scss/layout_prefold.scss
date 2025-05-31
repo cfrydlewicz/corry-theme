@@ -102,10 +102,12 @@ li {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  gap: $gutter*2;
   justify-content: center;
 
   @media #{$mq_lg} {
     flex-direction: row;
+    gap: $gutter_lg*2;
     justify-content: space-evenly;
   }
 
@@ -172,6 +174,7 @@ li {
     left: 0;
     padding: 8px $gutter;
     position: absolute;
+    z-index: 1;
 
     @supports (backdrop-filter: blur(10px)) {
       backdrop-filter: blur(10px);

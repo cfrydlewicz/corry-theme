@@ -531,7 +531,7 @@ body.shadow-on #shadow {
 }
 
 .listing-page-header {
-  margin-bottom: 12px;
+  padding-top: $gutter;
   width: 100%;
 
   .page-title {
@@ -584,6 +584,5 @@ body.error404 {
 .article-card {
   display: flex;
   flex-direction: column;
-  margin-bottom: 48px;
   position: relative;
 }
