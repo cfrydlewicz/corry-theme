@@ -375,11 +375,24 @@ body {
     display: flex;
     flex-direction: row;
 
-    // temporary
-    outline: 1px dashed $c_secondary;
-    &::before {
-      color: $c_secondary;
-      content: 'sidebar being built';
+    h3 {
+      font-size: 1.25em;
+      line-height: 1.375;
+      font-weight: 500;
+      margin-top: 1.625em;
+      margin-bottom: 0.5em;
+      @media #{$mq_md} {
+        font-size: 1.25em;
+        font-weight: 400;
+      }
+    }
+
+    li {
+
+      &::marker {
+        content: ''; // no list style
+      }
+
     }
 
     @media #{$mq_lg} {

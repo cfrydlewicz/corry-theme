@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="main-columns-wrapper">
+<div class="main-columns-wrapper inner-wrapper">
 
   <main id="a_skip-to-content"> 
     <?php while ( have_posts() ) : ?>
