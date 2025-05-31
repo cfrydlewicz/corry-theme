@@ -151,32 +151,17 @@ $saveData = (isset($_SERVER["HTTP_SAVE_DATA"]) && stristr($_SERVER["HTTP_SAVE_DA
           <?php endif; ?>
           <div id="article-progress-bar" class="article-progress-bar"></div>
         <?php elseif ( is_category() ) : ?>
-          <a title="Jump to the beginning of the page" href="#a_skip-to-content" class="title i_arrow-up"><span>Category:&nbsp;</span><strong><?php single_cat_title(); ?></strong></a>
+          <h1 id="sticky-title" class="page-title"><a title="Jump to the beginning of the page" href="#a_skip-to-content" class="title i_arrow-up"><span>Category:&nbsp;</span><strong><?php single_cat_title(); ?></strong></a></h1>
         <?php elseif ( is_tag() ) : ?>
-          <a title="Jump to the beginning of the page" href="#a_skip-to-content" class="title i_arrow-up"><span>Tag:&nbsp;</span><strong><?php single_tag_title(); ?></strong></a>
+          <h1 id="sticky-title" class="page-title"><a title="Jump to the beginning of the page" href="#a_skip-to-content" class="title i_arrow-up"><span>Tag:&nbsp;</span><strong><?php single_tag_title(); ?></strong></a></h1>
         <?php elseif ( is_search() ) : ?>
-          <a title="Jump to the beginning of the page" href="#a_skip-to-content" class="title i_arrow-up"><span>Search:&nbsp;</span><strong><?php echo esc_html($_GET['s']); ?></strong></a>
+          <h1 id="sticky-title" class="page-title"><a title="Jump to the beginning of the page" href="#a_skip-to-content" class="title i_arrow-up"><span>Search:&nbsp;</span><strong><?php echo esc_html($_GET['s']); ?></strong></a></h1>
+        <?php else : ?>
+          <div class="page-title"><strong>Oops!</strong></div>
+          <p>Sorry, I couldn't find what you were looking for. Try a search maybe?</p>
         <?php endif; ?>
       </div>
     </section>
-
-    <?php if ( !is_singular() && !is_home() ) : ?>
-      <section class="listing-page-header">
-        <div class="inner-wrapper sp_horizontal-padding">
-          <?php if ( is_category() ) : ?>
-            <h1 id="sticky-title" class="page-title"><span>Category:</span> <strong><?php single_cat_title(); ?></strong></h1>
-            <?php echo category_description(); ?>
-          <?php elseif ( is_tag() ) : ?>
-            <h1 id="sticky-title" class="page-title"><span>Tag:</span> <strong><?php single_tag_title(); ?></strong></h1>
-          <?php elseif ( is_search() ) : ?>
-            <h1 id="sticky-title" class="page-title"><span>Search Results for</span> <strong><?php echo esc_html($_GET['s']); ?></strong></h1>
-          <?php else : ?>
-            <div class="page-title"><strong>Oops!</strong></div>
-            <p>Sorry, I couldn't find what you were looking for. Try a search maybe?</p>
-          <?php endif; ?>
-        </div>
-      </section>
-    <?php endif; ?>
 
   </header>
 <!--.total-wrapper ends in footer.php -->
