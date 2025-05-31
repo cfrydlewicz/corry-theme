@@ -9,9 +9,9 @@
         <?php the_post(); ?>
 
         <article id="post-<?php the_ID(); ?>" <?php post_class('article-card'); ?>>
-
           <header class="entry-header">
             <a href="<?php the_permalink(); ?>"><?php post_thumbnail(); ?></a>
+            <div class="post-categories"><span class="u_visually-hidden">Categories:&nbsp;</span><?php the_category('<span class="separator"></span>'); ?></div>
           </header>
           <div class="entry-content sp_padding">
             <div class="title-container">
@@ -30,12 +30,9 @@
               </a>
             </div>
           </div><!--.entry-content-->
-
           <footer class="entry-footer sp_padding">
             <div class="post-stats"><span class="post-date"><?php the_date(); ?></span> <span class="separator"></span> <span class="word-count"><?php word_count(); ?> words</span></div>
-            <div class="post-categories"><span class="u_visually-hidden">Categories:&nbsp;</span><?php the_category(',&nbsp;'); ?></div>
           </footer>
-
         </article>
 
       <?php endwhile; ?>

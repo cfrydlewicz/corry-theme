@@ -230,7 +230,6 @@ body {
     background-color: $c_grey80;
     max-width: 90vw;
     opacity: 0;
-    overflow-y: scroll;
     padding: 4px 0;
     position: absolute;
     right: -320px;
@@ -374,6 +373,13 @@ body {
   > aside {
     display: flex;
     flex-direction: row;
+
+    // temporary
+    outline: 1px dashed $c_secondary;
+    &::before {
+      color: $c_secondary;
+      content: 'sidebar being built';
+    }
 
     @media #{$mq_lg} {
       flex-direction: column;

@@ -167,22 +167,35 @@ li {
     width: 100%;
   }
 
+  .post-categories {
+    @include f_small;
+    background-color: rgba($c_black,0.5);
+    bottom: 0;
+    display: inline-block;
+    left: 0;
+    padding: 8px $gutter;
+    position: absolute;
+
+    @supports (backdrop-filter: blur(10px)) {
+      backdrop-filter: blur(10px);
+    }
+
+    @media #{$mq_lg} {
+      padding-left: $gutter_lg;
+      padding-right: $gutter_lg;
+    }
+
+    a {
+      white-space: nowrap;
+    }
+
+  }
+
   .entry-title {
     font-size: 2.125em;
     font-weight: 400;
     line-height: 1;
-    margin: 0 auto;
-
-    @supports (-webkit-line-clamp: 5) {
-      -webkit-box-orient: vertical;
-      color: $c_link; // for the ellipsis
-      display: -webkit-box;
-      -webkit-line-clamp: 5;
-      overflow: hidden;
-      padding-bottom: 0.05em;  // prevent descenders from being cut off
-      text-overflow: ellipsis;
-    }
-
+    margin-bottom: 0.25em;
   }
 
   .entry-content,
@@ -213,15 +226,10 @@ li {
   }
 
   .excerpt-container {
-    padding-bottom: 44px;
+    padding-bottom: $gutter;
     width: 100%;
 
-    @media #{$mq_lg} {
-      height: 100%;
-    }
-
     p {
-      // Actual excerpt text
       margin: 0;
       max-width: 60ch;
       text-overflow: ellipsis;
@@ -235,14 +243,25 @@ li {
 
     }
 
-    a {
-      @include button;
-      @include f_medium;
+  }
+
+  .cta-container {
+    height: 2rem;
+    position: relative;
+
+    button {
       bottom: 0;
+      font-size: 1.25rem;
+      font-weight: 800;
       position: absolute;
       right: 0;
       white-space: nowrap;
       z-index: 1;
+
+      &::after {
+        margin-left: 0.375em;
+      }
+
     }
 
   }
@@ -250,37 +269,8 @@ li {
   .entry-footer {
     width: 100%;
 
-    .inner-wrapper {
-      display: flex;
-      flex-direction: column;
-
-      @media #{$mq_md} {
-        align-items: center;
-        flex-direction: row;
-        justify-content: space-between;
-      }
-
-      @media #{$mq_lg} {
-        flex-wrap: wrap;
-      }
-
-    }
-
-    .post-stats,
-    .post-categories a {
+    .post-stats {
       @include f_small;
-    }
-
-    .post-categories {
-
-      @media #{$mq_md} {
-        text-align: right;
-      }
-
-      a {
-        white-space: nowrap;
-      }
-
     }
 
   }

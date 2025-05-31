@@ -125,62 +125,23 @@
   .entry-footer {
     @extend .bezel;
     @extend .grainy;
-
-    @media #{$mq_sm-only} {
-      border-left-width: 0;
-      border-right-width: 0;
-    }
-
-  }
-
-  .cta-container {
-
-    a {
-      //right: 16px;
-    }
-
   }
 
   // Flashy Button Hovers
   @media #{$mq_mouse} {
 
     // Article Card Hover States
-    &:hover {
-
-      // Zoom & Rotate CTAs on hover
-      .excerpt-container a,
-      &:first-of-type .excerpt-container a {
-      }
-
-    }
-
-    .cta-container a {
+    .cta-container button {
       transition-duration: 0.2s;
-      transition-property: font-weight, transform;
-      transition-timing-function: linear;
-
-      &::after {
-        transition-duration: 0.2s;
-        transition-property: margin;
-        transition-timing-function: ease-in;
-      }
-
-      //&:hover {
-      //  color: $c_hover;
-      //}
-
+      transition-property: right, transform;
+      transition-timing-function: ease-in;
     }
 
     &:hover {
 
-      .cta-container a {
-        font-weight: 700;
+      .cta-container button {
+        right: $gutter;
         transform: rotate(2.5deg) scale(1.25);
-
-        &::after {
-          margin: 0 0 0 0.75em;
-        }
-
       }
 
     }
