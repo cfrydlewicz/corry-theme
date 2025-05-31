@@ -14,9 +14,8 @@
 
         <header class="entry-header">
           <?php if ( has_post_thumbnail() ) : ?>
-            <div class="stretched-bg" style="background-image: url('<?php the_post_thumbnail_url(); ?>');">
-              <a href="<?php the_permalink(); ?>"><?php post_thumbnail(); ?></a>
-            </div>
+            <div class="stretched-bg" style="background-image: url('<?php the_post_thumbnail_url(); ?>');"><?php post_thumbnail(); ?></div>
+            <a href="<?php the_permalink(); ?>"><?php post_thumbnail(); ?></a>
           <?php endif; ?>
           <div class="post-categories"><span class="u_visually-hidden">Categories:&nbsp;</span><?php the_category('<span class="separator"></span>'); ?></div>
           <div class="title-container">

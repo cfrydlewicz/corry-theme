@@ -288,39 +288,14 @@ li {
 
   .entry-header {
     max-height: 60vh;
-    overflow: hidden;
     position: relative;
 
-    @media #{$mq_lg} {
-      background: linear-gradient(0deg, rgba($c_grey20,0.625), rgba($c_grey80,0.625));
+    .stretched-bg {
     }
 
     img {
-      // Post Thumbnail
-      height: 80vh;
-      left: 50%;
-      max-height: 80vh;
-      max-width: none;
-      position: relative;
-      transform: translateX(-50%);
-      width: auto;
-      @media #{$mq_md} {
-        height: auto;
-        max-width: $thumbnail_width;
-      }
-      @media #{$mq_lg} {
-        max-height: none;
-        width: 100%;
-      }
     }
 
-  }
-
-  .entry-title,
-  .post-meta {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1024px;
   }
 
   .entry-content {
