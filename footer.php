@@ -1,5 +1,5 @@
-  <div class="reverse-canary inner-wrapper">
-    <p class="f_smallest">I have not been required to disclose data to the government under duress. If that changes and I'm able, I will remove this text. (last update: 2025-05-31)</p>
+  <div class="reverse-canary inner-wrapper sp_padding">
+    <p class="f_smallest" style="text-align: center;">I have not been required to disclose data to the government under duress. If that changes and I'm able, I will remove this text. (last update: 2025-05-31)</p>
   </div>
 
   <footer id="a_footer" class="site-footer">
