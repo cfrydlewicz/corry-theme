@@ -23,7 +23,7 @@
         <header class="entry-header">
           <?php if ( has_post_thumbnail() ) : ?>
             <?php post_thumbnail(); ?>
-          <?php else if ( is_category(700) ) : ?>
+          <?php elseif ( is_category(700) ) : ?>
             <img alt="default microblog thumbnail" src="/wp-content/themes/corry/assets/images/thumbnail-microblog.jpg">
           <?php else : ?>
             <img alt="default thumbnail" src="/wp-content/themes/corry/assets/images/thumbnail-default.jpg">
