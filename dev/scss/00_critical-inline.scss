@@ -386,9 +386,6 @@ body {
   }
 
   > aside {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     max-width: 1024px;
     padding-top: $gutter;
     width: 100%;
@@ -399,10 +396,30 @@ body {
       border-style: solid;
       border-width: 1px;
       border-radius: 0.5em;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
       padding: $gutter $gutter $gutter*2;
+
+      @media #{$mq_mouse} {
+        opacity: 0.75;
+        transition-duration: 0.2s;
+        transition-property: opacity;
+
+        &:hover {
+          opacity: 1.0;
+        }
+
+      }
+
     }
 
-    h3 {
+    section {
+      margin-bottom: 1rem;
+    }
+
+    h3,
+    .sidebar-header {
       font-size: 1.25em;
       line-height: 1.375;
       font-weight: 500;
@@ -444,14 +461,14 @@ body {
     }
 
     @media #{$mq_lg} {
-      flex-direction: column;
       max-width: 240px;
       width: 25%;
-    }
 
-    &.sticky {
+      .sidebar-inner {
+        flex-direction: column;
+      }
 
-      @media #{$mq_lg} {
+      &.sticky {
 
         .sidebar-inner {
           max-height: calc(100vh - 130px); // screen height - top - rough footer height
@@ -460,7 +477,7 @@ body {
         }
 
         body.single & {
-          padding-top: 100vh;
+          padding-top: 84vh;
         }
 
       }

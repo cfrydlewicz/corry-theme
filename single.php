@@ -63,15 +63,12 @@
       <div class="sidebar-inner">
 
         <section class="post-meta">
-          <p><span class="word-count"><?php word_count(); ?> words</span><br>
-            <span class="post-date"><?php the_date(); ?></span></p>
-          <p class="post-categories">Categories: <?php the_category(', '); ?></p>
-          <p class="post-tags"><?php the_tags(); ?></p>
+          <p class="post-date f_small"><?php the_date(); ?></p>
+          <p class="word-count f_small"><?php word_count(); ?> words</p>
         </section>
 
         <?php if ( !empty($thisPostShortUrl) ) : ?>
           <section class="share-container">
-            <div class="sidebar_header">Share This</div>
             <ul>
               <li><a class="i_mail" href="mailto:%20?subject=<?php echo $thisPostTitle; ?>&body=<?php echo $thisPostShortUrl; ?>" target="_blank">Share via Email</a></li>
               <li><a class="i_bluesky" href="https://bsky.app/intent/compose?text=<?php echo $thisPostShortUrl; ?>" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://bsky.app']);">Share on Bluesky</a></li>
@@ -82,12 +79,12 @@
         <?php endif; ?>
 
         <section class="follow-container">
-          <div class="sidebar_header">Follow This Blog</div>
+          <div class="sidebar_header">Follow</div>
           <ul>
-            <li><a class="i_mail" href="/emailsubscribe?utm_source=post-footer" target="_blank">Email me</a> at <a href="mailto:cfrydlewicz@gmail.com" target="_blank">cfrydlewicz@gmail.com</a> to be notified when I post a new article.</li>
-            <li><a class="i_rss" href="/subscribe-to-corrys-blog-with-rss/" target="_blank">My RSS Feed</a> is the next best way to follow <em>new blog posts</em>.</li>
-            <li>I also share them on <a class="i_bluesky" href="/bluesky" rel="noreferrer" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://bsky.app']);">Bluesky</a>.</li>
-            <!--li><a class="i_heart" href="https://www.patreon.com/CorryFrydlewicz" target="_blank" rel="noreferrer" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://www.patreon.com']);">Patreon</a> is where I'll share more once I have a few subscribers.</li-->
+            <li><a class="i_mail" href="/emailsubscribe?utm_source=post-footer" target="_blank">Email Newsletter</a></li>
+            <li><a class="i_rss" href="/subscribe-to-corrys-blog-with-rss/" target="_blank">RSS Feed</a></li>
+            <li><a class="i_bluesky" href="/bluesky" rel="noreferrer" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://bsky.app']);">Bluesky</a></li>
+            <!--li><a class="i_heart" href="https://www.patreon.com/CorryFrydlewicz" target="_blank" rel="noreferrer" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://www.patreon.com']);">Patreon</a></li-->
           </ul>
         </section>
 
@@ -106,6 +103,10 @@
 
     <section class="thanks-for-reading">
       <div class="thanks-header">Thanks for reading!</div>
+      <div class="post-stats f_small">
+        <p class="post-categories">Categories: <?php the_category(', '); ?></p>
+        <p class="post-tags"><?php the_tags(); ?></p>
+      </div>
     </section>
 
     <?php if ( comments_open() ) : ?>
