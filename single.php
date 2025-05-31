@@ -1,9 +1,10 @@
 <?php get_header(); ?>
 
+<?php if ( has_post_thumbnail() ) : ?>
+  <div class="stretched-bg" style="background-image: url('<?php the_post_thumbnail_url(); ?>');"><?php post_thumbnail(); ?></div>
+<?php endif; ?>
+
 <div class="main-columns-wrapper inner-wrapper">
-  <?php if ( has_post_thumbnail() ) : ?>
-    <div class="stretched-bg" style="background-image: url('<?php the_post_thumbnail_url(); ?>');"><?php post_thumbnail(); ?></div>
-  <?php endif; ?>
 
   <main id="a_skip-to-content"> 
     <?php while ( have_posts() ) : ?>
@@ -132,14 +133,16 @@
   </main>
 
   <aside class="sidebar">
-    <div class="post-meta"><span class="word-count"><?php word_count(); ?> words</span> <span class="separator"></span> <span class="post-date"><?php the_date(); ?></span></div>
-    <?php if ( is_active_sidebar( 'widget_post-sidebar1' ) ) : ?>
-      <div class="widget-area" role="complementary">
-        <?php dynamic_sidebar( 'widget_post-sidebar1' ); ?>
-      </div>
-    <?php else : ?>
-      <div><a href="/tag/favorite-post/">My Favorite Posts</a></div>
-    <?php endif; ?>
+    <div class="sidebar-inner">
+      <div class="post-meta"><span class="word-count"><?php word_count(); ?> words</span> <span class="separator"></span> <span class="post-date"><?php the_date(); ?></span></div>
+      <?php if ( is_active_sidebar( 'widget_post-sidebar1' ) ) : ?>
+        <div class="widget-area" role="complementary">
+          <?php dynamic_sidebar( 'widget_post-sidebar1' ); ?>
+        </div>
+      <?php else : ?>
+        <div><a href="/tag/favorite-post/">My Favorite Posts</a></div>
+      <?php endif; ?>
+    </div>
   </aside>
 
 </div><!--.main-columns-wrapper-->

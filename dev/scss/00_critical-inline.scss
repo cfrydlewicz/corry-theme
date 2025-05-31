@@ -378,6 +378,12 @@ body {
     max-width: 1024px;
     width: 100%;
 
+    .sidebar-inner {
+      max-height: calc(100vh - $header_height - 2px - 34px); // fixed header, minus borders, minus footer height
+      position: sticky;
+      top: 0;
+    }
+
     h3 {
       font-size: 1.25em;
       line-height: 1.375;
