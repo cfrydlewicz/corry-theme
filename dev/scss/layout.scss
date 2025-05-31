@@ -84,43 +84,12 @@
 // Listing Pages
 .pagination-container {
   color: transparent; // hide dash between links
+  display: flex;
+  justify-content: space-between;
   margin-bottom: 48px;
 
   @media #{$mq_lg} {
-    width: calc( 50vw - #{$gutter_lg + 2px} );  // 2 per row
-
-    .inner-wrapper {
-      align-items: center;
-      height: 100%;
-    }
-
-    a {
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    &.pagination-container {  // overpower the previous selector
-      border-width: 0;
-
-      a {
-        border-width: 1px;
-      }
-
-    }
-
-  }
-
-  @media #{$mq_max} {
-    width: #{$bp_max / 2 - $gutter_lg + 2px};  // 2 per row
-  }
-
-  .inner-wrapper {
-    display: flex;
-    justify-content: space-between;
-    padding: 0;
-    @media #{$mq_lg} {
-      max-width: $thumbnail_width;
-    }
+    max-width: $thumbnail_width;
   }
 
   a {
