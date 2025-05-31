@@ -95,9 +95,13 @@
 
   <aside class="sidebar">
     <div class="sidebar-inner">
-      <?php if ( is_active_sidebar( 'widget_listing-sidebar1' ) ) : ?>
+      <?php if ( is_active_sidebar( 'widget_listing-sidebar1' ) && !is_category(700) ) : ?>
         <ul class="widget-area" role="complementary">
           <?php dynamic_sidebar( 'widget_listing-sidebar1' ); ?>
+        </ul>
+      <?php elseif ( is_active_sidebar( 'widget_listing-sidebar2' ) && is_category(700) ) : ?>
+        <ul class="widget-area" role="complementary">
+          <?php dynamic_sidebar( 'widget_listing-sidebar2' ); ?>
         </ul>
       <?php else : ?>
         <ul role="complementary u_attn">

@@ -165,9 +165,17 @@ function corry_widgets_init() {
       'before_title'  => '<div class="post-footer_header widget-title">',
       'after_title'   => '</div>',
     );
+    $sidebar4 = array(
+      'name'          => __( 'Microblog Listing Page Sidebar', 'corry' ),
+      'id'            => 'widget_listing-sidebar2',
+      'description'   => __( 'Appears beneath or alongside listings.', 'corry' ),
+      'before_title'  => '<div class="sidebar_header widget-title">',
+      'after_title'   => '</div>',
+    );  
     register_sidebar($sidebar1);
     register_sidebar($sidebar2);
     register_sidebar($sidebar3);
+    register_sidebar($sidebar4);
   }
 }
 add_action( 'widgets_init', 'corry_widgets_init' );
