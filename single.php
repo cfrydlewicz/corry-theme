@@ -26,7 +26,7 @@
           <?php elseif ( is_category(700) ) : ?>
             <img alt="default microblog thumbnail" src="/wp-content/themes/corry/assets/images/thumbnail-microblog.jpg">
           <?php else : ?>
-            <img alt="default thumbnail" src="/wp-content/themes/corry/assets/images/thumbnail-default.jpg">
+            <img alt="default thumbnail" src="/wp-content/themes/corry/assets/images/thumbnail-default.jpg" class="u_attn">
           <?php endif; ?>
           <div class="title-container">
             <h1 id="sticky-title" class="entry-title"><?php the_title(); ?></h1>
@@ -160,8 +160,17 @@
           <?php dynamic_sidebar( 'widget_single-post-footer1' ); ?>
         </div>
       <?php else : ?>
-        <div class="widget-title">Read More</div>
-        <div><a href="/tag/favorite-post/">My Favorite Posts</a></div>
+        <ul class="u_attn">
+          <li>
+            <div class="post-footer_header widget-title">Continue Reading</div>
+            <div>
+              <ul>
+                <li><a href="/tag/favorite-post/">My Favorite Posts</a></li>
+                <li><a href="/top-tens/">My Top Ten <em>Everything</em></a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
       <?php endif; ?>
     </section>
 

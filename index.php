@@ -28,7 +28,7 @@
           <div class="entry-content sp_padding">
             <div class="title-container">
               <?php if ( is_singular() ) : ?>
-                <h1 id="sticky-title" class="entry-title"><?php the_title(); ?></h1>
+                <h1 id="sticky-title" class="entry-title u_attn"><?php the_title(); ?></h1>
               <?php else : ?>
                 <h2 class="entry-title"><?php the_title( sprintf( '<a href="%s">', esc_url( get_permalink() ) ), '</a>' ); ?></h2>
               <?php endif; ?>
@@ -55,7 +55,7 @@
 
     <?php else : ?>
 
-      <article id="error404" class="article-card">
+      <article id="error404" class="article-card u_attn">
         <header class="entry-header">
           <div class="inner-wrapper--at-lg">
             <a href="/">
@@ -100,7 +100,9 @@
           <?php dynamic_sidebar( 'widget_listing-sidebar1' ); ?>
         </ul>
       <?php else : ?>
-        <div><a href="/tag/favorite-post/">My Favorite Posts</a></div>
+        <ul role="complementary u_attn">
+          <li><a href="/tag/favorite-post/">My Favorite Posts</a></li>
+        </ul>
       <?php endif; ?>
     </div>
   </aside>

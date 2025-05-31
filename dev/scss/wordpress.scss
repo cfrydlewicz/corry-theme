@@ -17,6 +17,11 @@ body.admin-bar.logged-in {
 
   }
 
+  .u_attn {
+    outline: 2px dashed $c_accent2;
+    outline-offset: 0.5em;
+  }
+
   &.single,
   &.page {
 
