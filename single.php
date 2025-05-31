@@ -63,17 +63,19 @@
       <div class="sidebar-inner">
 
         <section class="post-meta">
-          <p class="post-date f_small"><?php the_date(); ?></p>
-          <p class="word-count f_small"><?php word_count(); ?> words</p>
+          <p class="f_small">
+            <span class="post-date"><?php the_date(); ?></span><br>
+            <span class="word-count"><?php word_count(); ?> words</span>
+          </p>
         </section>
 
         <?php if ( !empty($thisPostShortUrl) ) : ?>
           <section class="share-container">
+            <div class="sidebar_header">Share</div>
             <ul>
-              <li><a class="i_mail" href="mailto:%20?subject=<?php echo $thisPostTitle; ?>&body=<?php echo $thisPostShortUrl; ?>" target="_blank">Share via Email</a></li>
-              <li><a class="i_bluesky" href="https://bsky.app/intent/compose?text=<?php echo $thisPostShortUrl; ?>" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://bsky.app']);">Share on Bluesky</a></li>
-              <li>URL: <a href="https://corry.us/<?php echo $post->post_name; ?>/" class="f_small">https://corry.us/<?php echo $post->post_name; ?>/</a></li>
-              <li>Short: <a href="<?php echo $thisPostShortUrl; ?>" class="f_small"><?php echo $thisPostShortUrl; ?></a></li>
+              <li><a class="i_mail" href="mailto:%20?subject=<?php echo $thisPostTitle; ?>&body=<?php echo $thisPostShortUrl; ?>" target="_blank">Email</a></li>
+              <li><a class="i_bluesky" href="https://bsky.app/intent/compose?text=<?php echo $thisPostShortUrl; ?>" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://bsky.app']);">Bluesky</a></li>
+              <li class="f_small">URL: <a href="https://corry.us/<?php echo $post->post_name; ?>/">https://corry.us/<?php echo $post->post_name; ?>/</a></li>
             </ul>
           </section>
         <?php endif; ?>
@@ -136,10 +138,9 @@
       <section class="share-container">
         <div class="post-footer_header">Share</div>
         <ul>
-          <li><a class="i_mail" href="mailto:%20?subject=<?php echo $thisPostTitle; ?>&body=<?php echo $thisPostShortUrl; ?>" target="_blank">Share via Email</a></li>
-          <li><a class="i_bluesky" href="https://bsky.app/intent/compose?text=<?php echo $thisPostShortUrl; ?>" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://bsky.app']);">Share on Bluesky</a></li>
-          <li>URL: <a href="https://corry.us/<?php echo $post->post_name; ?>/" class="f_small">https://corry.us/<?php echo $post->post_name; ?>/</a></li>
-          <li>Short: <a href="<?php echo $thisPostShortUrl; ?>" class="f_small"><?php echo $thisPostShortUrl; ?></a></li>
+          <li><a class="i_mail" href="mailto:%20?subject=<?php echo $thisPostTitle; ?>&body=<?php echo $thisPostShortUrl; ?>" target="_blank">Email</a></li>
+          <li><a class="i_bluesky" href="https://bsky.app/intent/compose?text=<?php echo $thisPostShortUrl; ?>" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://bsky.app']);">Bluesky</a></li>
+          <li class="f_small">URL: <a href="https://corry.us/<?php echo $post->post_name; ?>/">https://corry.us/<?php echo $post->post_name; ?>/</a></li>
         </ul>
       </section>
     <?php endif; ?>
@@ -156,9 +157,9 @@
 
     <section class="read-more-container">
       <?php if ( is_active_sidebar( 'widget_single-post-footer1' ) ) : ?>
-        <div class="widget-area" role="complementary">
+        <ul class="widget-area" role="complementary">
           <?php dynamic_sidebar( 'widget_single-post-footer1' ); ?>
-        </div>
+        </ul>
       <?php else : ?>
         <ul class="u_attn">
           <li>

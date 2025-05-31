@@ -380,6 +380,11 @@ body {
     flex-wrap: wrap;
   }
 
+  body:not(.wp-singular) & > main,
+   > aside {
+    padding-top: $gutter;    
+  }
+
   > main {
     flex-grow: 1;
     max-width: 1024px;
@@ -387,7 +392,6 @@ body {
 
   > aside {
     max-width: 1024px;
-    padding-top: $gutter;
     width: 100%;
 
     .sidebar-inner {
@@ -402,7 +406,8 @@ body {
       padding: $gutter $gutter $gutter*2;
 
       @media #{$mq_mouse} {
-        opacity: 0.75;
+        background-color: rgba(0,0,0,0.5);
+        opacity: 0.5;
         transition-duration: 0.2s;
         transition-property: opacity;
 
@@ -414,8 +419,8 @@ body {
 
     }
 
-    section {
-      margin-bottom: 1rem;
+    section:not(:last-child) {
+      margin-bottom: 2rem;
     }
 
     h3,
@@ -477,7 +482,7 @@ body {
         }
 
         body.single & {
-          padding-top: 84vh;
+          //padding-top: 84vh;
         }
 
       }
