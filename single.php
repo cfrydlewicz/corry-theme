@@ -59,7 +59,7 @@
       </article>
     </main>
 
-    <aside class="sidebar sticky">
+    <aside class="sidebar sticky" role="complementary">
       <div class="sidebar-inner">
 
         <section class="post-meta">
@@ -91,7 +91,7 @@
         </section>
 
         <?php if ( is_active_sidebar( 'widget_post-sidebar1' ) ) : ?>
-          <ul class="widget-area" role="complementary">
+          <ul class="widget-area">
             <?php dynamic_sidebar( 'widget_post-sidebar1' ); ?>
           </ul>
         <?php endif; ?>
@@ -120,7 +120,7 @@
       </section>
     <?php endif; ?>
 
-    <section class="discussion-container">
+    <section class="discussion-container" role="complementary">
       <div class="post-footer_header">Discuss</div>
       <ul>
         <?php if ( comments_open() ) : ?>
@@ -135,7 +135,7 @@
     </section>
 
     <?php if ( !empty($thisPostShortUrl) ) : ?>
-      <section class="share-container">
+      <section class="share-container" role="complementary">
         <div class="post-footer_header">Share</div>
         <ul>
           <li><a class="i_mail" href="mailto:%20?subject=<?php echo $thisPostTitle; ?>&body=<?php echo $thisPostShortUrl; ?>" target="_blank">Email</a></li>
@@ -145,7 +145,7 @@
       </section>
     <?php endif; ?>
 
-    <section class="follow-container">
+    <section class="follow-container" role="complementary">
       <div class="post-footer_header">Follow This Blog</div>
       <ul>
         <li><a class="i_mail" href="/emailsubscribe?utm_source=post-footer" target="_blank">Email me</a> at <a href="mailto:cfrydlewicz@gmail.com" target="_blank">cfrydlewicz@gmail.com</a> to be notified when I post a new article.</li>
@@ -155,9 +155,9 @@
       </ul>
     </section>
 
-    <section class="read-more-container">
+    <section class="read-more-container" role="complementary">
       <?php if ( is_active_sidebar( 'widget_single-post-footer1' ) ) : ?>
-        <ul class="widget-area" role="complementary">
+        <ul class="widget-area">
           <?php dynamic_sidebar( 'widget_single-post-footer1' ); ?>
         </ul>
       <?php else : ?>

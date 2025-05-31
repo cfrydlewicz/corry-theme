@@ -93,10 +93,10 @@
 
   </main>
 
-  <aside class="sidebar">
+  <aside class="sidebar" role="complementary">
     <div class="sidebar-inner">
       <?php if ( is_active_sidebar( 'widget_listing-sidebar1' ) && !is_category(700) ) : ?>
-        <ul class="widget-area" role="complementary">
+        <ul class="widget-area">
           <?php dynamic_sidebar( 'widget_listing-sidebar1' ); ?>
         </ul>
       <?php elseif ( is_active_sidebar( 'widget_listing-sidebar2' ) && is_category(700) ) : ?>
@@ -104,7 +104,7 @@
           <?php dynamic_sidebar( 'widget_listing-sidebar2' ); ?>
         </ul>
       <?php else : ?>
-        <ul role="complementary u_attn">
+        <ul class="u_attn">
           <li><a href="/tag/favorite-post/">My Favorite Posts</a></li>
         </ul>
       <?php endif; ?>
