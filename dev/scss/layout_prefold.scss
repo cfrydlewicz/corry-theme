@@ -186,6 +186,10 @@ li {
       padding-right: $gutter_lg;
     }
 
+    &:hover {
+      background-color: $c_grey50;
+    }
+
     a {
       white-space: nowrap;
     }

@@ -42,12 +42,13 @@
 
 }
 .separator {
-  margin-left: 0.25em;
-  margin-right: 0.25em;
-  opacity: 0.375;
+  margin-left: 0.375em;
+  margin-right: 0.375em;
+  opacity: 0.5;
 
   &:empty::before {
     content: '•';
+    font-size: 1.125;
     font-weight: 500;
   }
 
