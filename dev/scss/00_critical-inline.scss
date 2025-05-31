@@ -391,8 +391,27 @@ body {
   }
 
   > aside {
-    max-width: 1024px;
-    width: 100%;
+    display: none;
+    max-width: 240px;
+    width: 25%;
+
+    @media #{$mq_lg} {
+      display: initial;
+    }
+
+    &.sticky {
+
+      .sidebar-inner {
+        max-height: calc(100vh - $header_height--max - $footer_height);
+        position: sticky;
+        top: 90px;
+      }
+
+      body.single & {
+        //padding-top: 84vh; // start beneath header image
+      }
+
+    }
 
     .sidebar-inner {
       background-color: rgba(0,0,0,0.25);
@@ -401,7 +420,7 @@ body {
       border-width: 1px;
       border-radius: 0.5em;
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       flex-wrap: wrap;
       padding: $gutter $gutter $gutter*2;
 
@@ -427,23 +446,21 @@ body {
     .sidebar_header {
       font-size: 1.25em;
       line-height: 1.375;
-      font-weight: 500;
+      font-weight: 400;
       margin-top: 1.625em;
       margin-bottom: 0.5em;
-      @media #{$mq_md} {
-        font-size: 1.25em;
-        font-weight: 400;
-      }
     }
 
     li {
+      list-style: none;
 
-      &::marker {
-        content: ''; // no list style
-      }
+      &:first-child {
 
-      &:first-child h3 {
-        margin-top: 0;
+        h3,
+        .sidebar_header {
+          margin-top: 0;
+        }
+
       }
 
     }
@@ -461,30 +478,6 @@ body {
         margin-left: 0.375em;
         text-transform: none;
         speak: none;
-      }
-
-    }
-
-    @media #{$mq_lg} {
-      max-width: 240px;
-      width: 25%;
-
-      .sidebar-inner {
-        flex-direction: column;
-      }
-
-      &.sticky {
-
-        .sidebar-inner {
-          max-height: calc(100vh - $header_height--max - $footer_height);
-          position: sticky;
-          top: 90px;
-        }
-
-        body.single & {
-          //padding-top: 84vh;
-        }
-
       }
 
     }
