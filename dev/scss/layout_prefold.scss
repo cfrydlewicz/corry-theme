@@ -124,24 +124,29 @@ li {
 
   }
 
-  .stretched-bg {
-    background-image: url('/wp-content/themes/corry/assets/images/thumbnail-default.jpg'); // overridden inline by post thumbnails
-    display: none;
-    height: 100%;
-    position: absolute;
-    width: 100%;
+  img {
+    z-index: 1;
+  }
 
-    body.category-microblog & {
-      background-image: url('/wp-content/themes/corry/assets/images/thumbnail-microblog.jpg');
-    }
+}
 
-    @media #{$mq_lg} {
-      background-repeat: no-repeat;
-      background-size: 100% auto;  //stretch
-      display: block;
-      filter: blur(10px) brightness(0.75);
-    }
+// Stretched Background Elements
+.stretched-bg {
+  background-image: url('/wp-content/themes/corry/assets/images/thumbnail-default.jpg'); // overridden inline by post thumbnails
+  background-repeat: no-repeat;
+  background-size: 100% auto;  //stretch
+  display: none;
+  filter: blur(10px) brightness(0.75);
+  position: absolute;
+  width: 100vw;
+  z-index: 0;
 
+  body.category-microblog & {
+    background-image: url('/wp-content/themes/corry/assets/images/thumbnail-microblog.jpg');
+  }
+
+  @media #{$mq_lg} {
+    display: block;
   }
 
 }
@@ -287,7 +292,6 @@ li {
 .article-content {
 
   .entry-header {
-    max-height: 60vh;
     position: relative;
 
     .stretched-bg {

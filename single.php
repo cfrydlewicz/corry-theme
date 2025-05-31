@@ -1,6 +1,9 @@
 <?php get_header(); ?>
 
 <div class="main-columns-wrapper inner-wrapper">
+  <?php if ( has_post_thumbnail() ) : ?>
+    <div class="stretched-bg" style="background-image: url('<?php the_post_thumbnail_url(); ?>');"><?php post_thumbnail(); ?></div>
+  <?php endif; ?>
 
   <main id="a_skip-to-content"> 
     <?php while ( have_posts() ) : ?>
@@ -14,8 +17,9 @@
 
         <header class="entry-header">
           <?php if ( has_post_thumbnail() ) : ?>
-            <div class="stretched-bg" style="background-image: url('<?php the_post_thumbnail_url(); ?>');"><?php post_thumbnail(); ?></div>
-            <a href="<?php the_permalink(); ?>"><?php post_thumbnail(); ?></a>
+            <?php post_thumbnail(); ?>
+          <?php else : ?>
+            <img alt="" src="">
           <?php endif; ?>
           <div class="post-categories"><span class="u_visually-hidden">Categories:&nbsp;</span><?php the_category('<span class="separator"></span>'); ?></div>
           <div class="title-container">
