@@ -546,6 +546,12 @@
 .thanks-for-reading {
   background-color: $c_grey40;
 
+  @media only screen and (min-width: $bp_md) and (min-height: 480px + $header_height--max) {
+    // tall screens only
+    position: sticky;
+    top: $header_height--max;
+  }
+
   .thanks-header {
     font-size: 1.625em;
     font-weight: 300;
