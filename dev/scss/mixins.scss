@@ -70,11 +70,14 @@ $c_visited:   $c_primary-dim;
 
 
 // Sizing and Spacing
-$border-radius:   12px;
-$header_height:   40px;
-$gutter:          16px;
-$gutter_lg:       24px;
-$thumbnail_width: 1024px;
+$border-radius:             12px;
+$footer_height:             34px; // primary footer (lg breakpoint is only predictable height)
+$header_height:             40px; // primary fixed header
+$header_height--secondary:  30px; // secondary fixed header
+$header_height--max:        $header_height + 2px + $header_height--secondary; // +2 for borders
+$gutter:                    16px;
+$gutter_lg:                 24px;
+$thumbnail_width:           1024px;
 
 
 // Breakpoints

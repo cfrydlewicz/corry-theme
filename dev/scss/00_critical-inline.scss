@@ -159,7 +159,7 @@ body {
     .inner-wrapper {
       @include f_smaller;
       display: flex;
-      height: 30px;
+      height: $header_height--secondary;
       justify-content: space-between;
     }
 
@@ -476,7 +476,7 @@ body {
       &.sticky {
 
         .sidebar-inner {
-          max-height: calc(100vh - 130px); // screen height - top - rough footer height
+          max-height: calc(100vh - $header_height--max - $footer_height);
           position: sticky;
           top: 90px;
         }
