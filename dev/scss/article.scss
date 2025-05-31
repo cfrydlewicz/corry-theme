@@ -555,28 +555,18 @@
 
   }
 
-  .entry-footer {
-    // article-specific meta section (categories, tags)
-    background-color: $c_grey40;
+}
 
-    .thanks-header {
-      font-size: 1.625em;
-      font-weight: 300;
-      text-align: center;
-      @media #{$mq_md} {
-        font-size: 1.25em;
-      }
+.thanks-for-reading {
+  background-color: $c_grey40;
+
+  .thanks-header {
+    font-size: 1.625em;
+    font-weight: 300;
+    text-align: center;
+    @media #{$mq_md} {
+      font-size: 1.25em;
     }
-
-    p {
-      a {
-        white-space: nowrap;
-      }
-      &:first-of-type {
-        margin-top: 2em;
-      }
-    }
-
   }
 
 }

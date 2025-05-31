@@ -214,24 +214,6 @@
 }
 
 
-// Article and Page Structure
-.article-content {
-
-  .entry-footer {
-    // article-specific meta section (categories, tags)
-    padding: 36px 0;
-
-    @media #{$mq_lg} {
-      .inner-wrapper {
-        max-width: $thumbnail_width;
-      }
-    }
-
-  }
-
-}
-
-
 // Post Footer
 .post-footer {
   display: flex;

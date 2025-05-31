@@ -101,7 +101,7 @@
 
   </div><!--.main-columns-wrapper-->
 
-  <footer id="a_end-of-article" class="entry-footer inner-wrapper">
+  <footer id="a_end-of-article" class="post-footer inner-wrapper">
 
     <section class="thanks-for-reading">
       <div class="thanks-header">Thanks for reading!</div>
