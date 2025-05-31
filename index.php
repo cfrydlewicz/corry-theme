@@ -1,18 +1,18 @@
 <?php get_header(); ?>
 
-<?php if ( !is_home() ) : ?>
-  <div class="listing-page-header inner-wrapper sp_padding">
-    <?php if ( is_category() ) : ?>
-      <h1 id="sticky-title" class="page-title"><a title="Jump to the beginning of the page" href="#a_skip-to-content" class="title i_arrow-up"><span>Category:&nbsp;</span><strong><?php single_cat_title(); ?></strong></a></h1>
-    <?php elseif ( is_tag() ) : ?>
-      <h1 id="sticky-title" class="page-title"><a title="Jump to the beginning of the page" href="#a_skip-to-content" class="title i_arrow-up"><span>Tag:&nbsp;</span><strong><?php single_tag_title(); ?></strong></a></h1>
-    <?php elseif ( is_search() ) : ?>
-      <h1 id="sticky-title" class="page-title"><a title="Jump to the beginning of the page" href="#a_skip-to-content" class="title i_arrow-up"><span>Search:&nbsp;</span><strong><?php echo esc_html($_GET['s']); ?></strong></a></h1>
-    <?php endif; ?>
-  </div>
-<?php endif; ?>
-
 <div class="main-columns-wrapper inner-wrapper">
+
+  <?php if ( !is_home() ) : ?>
+    <div class="listing-page-header sp_padding">
+      <?php if ( is_category() ) : ?>
+        <h1 id="sticky-title" class="page-title"><span>Category:&nbsp;</span><strong><?php single_cat_title(); ?></strong></h1>
+      <?php elseif ( is_tag() ) : ?>
+        <h1 id="sticky-title" class="page-title"><span>Tag:&nbsp;</span><strong><?php single_tag_title(); ?></strong></h1>
+      <?php elseif ( is_search() ) : ?>
+        <h1 id="sticky-title" class="page-title"><span>Search:&nbsp;</span><strong><?php echo esc_html($_GET['s']); ?></strong></h1>
+      <?php endif; ?>
+    </div>
+  <?php endif; ?>
 
   <main id="a_skip-to-content" class="listing-page">
     <?php if ( have_posts() ) : ?>

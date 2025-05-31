@@ -364,7 +364,7 @@ body {
   @media #{$mq_lg} {
     gap: $gutter_lg;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
   }
 
   > main {
@@ -436,12 +436,7 @@ body.shadow-on #shadow {
 
 .listing-page-header {
   margin-bottom: 12px;
-  padding: 8px 0;
   width: 100%;
-
-  @media #{$mq_lg} {
-    padding: 12px 0;
-  }
 
   .page-title {
     @include f_larger;
