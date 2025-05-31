@@ -13,23 +13,14 @@
       <article id="post-<?php the_ID(); ?>" <?php post_class('article-content'); ?>>
 
         <header class="entry-header">
-          <div class="stretched-bg" style="background-image: url('<?php 
-            if ( has_post_thumbnail() ) {
-              the_post_thumbnail_url();
-            } else if ( is_category(700) ) {
-              echo "/wp-content/themes/corry/assets/images/thumbnail-microblog.jpg";
-            } else {
-              echo "/wp-content/themes/corry/assets/images/thumbnail-default.jpg";
-            }
-          ?>');"></div>
-          <div class="inner-wrapper--at-lg">
-            <a href="<?php the_post_thumbnail_url(); ?>">
-              <?php post_thumbnail(); ?>
-            </a>
-            <div class="title-container">
-              <h1 id="sticky-title" class="entry-title"><?php the_title(); ?></h1>
-              <div class="post-meta"><span class="word-count"><?php word_count(); ?> words</span> published on <span class="post-date"><?php the_date(); ?></span></div>
+          <?php if ( has_post_thumbnail() ) : ?>
+            <div class="stretched-bg" style="background-image: url('<?php the_post_thumbnail_url(); ?>');">
+              <a href="<?php the_permalink(); ?>"><?php post_thumbnail(); ?></a>
             </div>
+          <?php endif; ?>
+          <div class="post-categories"><span class="u_visually-hidden">Categories:&nbsp;</span><?php the_category('<span class="separator"></span>'); ?></div>
+          <div class="title-container">
+            <h1 id="sticky-title" class="entry-title"><?php the_title(); ?></h1>
           </div>
         </header>
 
@@ -138,6 +129,14 @@
   </main>
 
   <aside class="sidebar">
+    <div class="post-meta"><span class="word-count"><?php word_count(); ?> words</span> <span class="separator"></span> <span class="post-date"><?php the_date(); ?></span></div>
+    <?php if ( is_active_sidebar( 'widget_post-sidebar1' ) ) : ?>
+      <div class="widget-area" role="complementary">
+        <?php dynamic_sidebar( 'widget_post-sidebar1' ); ?>
+      </div>
+    <?php else : ?>
+      <div><a href="/tag/favorite-post/">My Favorite Posts</a></div>
+    <?php endif; ?>
   </aside>
 
 </div><!--.main-columns-wrapper-->

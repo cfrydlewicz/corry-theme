@@ -143,13 +143,32 @@ function list_categories_tags() {
 }
 
 function corry_widgets_init() {
-  register_sidebar( array(
-    'name'          => __( 'Single Post Footer', 'corry' ),
-    'id'            => 'widget_single-post-footer1',
-    'description'   => __( 'Appears beneath single posts.', 'corry' ),
-    'before_title'  => '<div class="post-footer_header widget-title">',
-    'after_title'   => '</div>',
-  ) );
+  if ( function_exists('register_sidebar') ) {
+    $sidebar1 = array(
+      'name'          => __( 'Listing Page Sidebar', 'corry' ),
+      'id'            => 'widget_listing-sidebar1',
+      'description'   => __( 'Appears beneath or alongside listings.', 'corry' ),
+      'before_title'  => '<div class="sidebar_header widget-title">',
+      'after_title'   => '</div>',
+    );  
+    $sidebar2 = array(
+      'name'          => __( 'Single Post Sidebar', 'corry' ),
+      'id'            => 'widget_post-sidebar1',
+      'description'   => __( 'Appears beneath or alongside blog posts.', 'corry' ),
+      'before_title'  => '<div class="sidebar_header widget-title">',
+      'after_title'   => '</div>',
+    );
+    $sidebar3 = array(
+      'name'          => __( 'Single Post Footer', 'corry' ),
+      'id'            => 'widget_single-post-footer1',
+      'description'   => __( 'Appears beneath single posts.', 'corry' ),
+      'before_title'  => '<div class="post-footer_header widget-title">',
+      'after_title'   => '</div>',
+    );
+    register_sidebar($sidebar1);
+    register_sidebar($sidebar2);
+    register_sidebar($sidebar3);
+  }
 }
 add_action( 'widgets_init', 'corry_widgets_init' );
 
