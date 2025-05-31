@@ -384,10 +384,23 @@ body {
       border-style: solid;
       border-width: 1px;
       border-radius: 0.5em;
-      max-height: calc(100vh - 130px); // screen height - top - rough footer height
       padding: $gutter;
-      position: sticky;
-      top: 90px;
+
+      &.sticky {
+
+        @media #{$mq_lg} {
+          max-height: calc(100vh - 130px); // screen height - top - rough footer height
+          position: sticky;
+          top: 90px;
+
+          body.single & {
+            padding-top: 100vh;
+          }
+
+        }
+
+      }
+
     }
 
     h3 {
