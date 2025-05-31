@@ -105,7 +105,6 @@
 
     <section class="thanks-for-reading">
       <div class="thanks-header">Thanks for reading!</div>
-      <p class="reverse-canary f_smallest">I have not been required to disclose data to the government under duress. If that changes and I'm able, I will remove this text. (last update: 2025-03-22)</p>
     </section>
 
     <?php if ( comments_open() ) : ?>
