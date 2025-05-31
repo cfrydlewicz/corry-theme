@@ -94,13 +94,15 @@
   </main>
 
   <aside class="sidebar">
-    <?php if ( is_active_sidebar( 'widget_listing-sidebar1' ) ) : ?>
-      <div class="widget-area" role="complementary">
-        <?php dynamic_sidebar( 'widget_listing-sidebar1' ); ?>
-      </div>
-    <?php else : ?>
-      <div><a href="/tag/favorite-post/">My Favorite Posts</a></div>
-    <?php endif; ?>
+    <div class="sidebar-inner">
+      <?php if ( is_active_sidebar( 'widget_listing-sidebar1' ) ) : ?>
+        <div class="widget-area" role="complementary">
+          <?php dynamic_sidebar( 'widget_listing-sidebar1' ); ?>
+        </div>
+      <?php else : ?>
+        <div><a href="/tag/favorite-post/">My Favorite Posts</a></div>
+      <?php endif; ?>
+    </div>
   </aside>
 
 </div><!--.main-columns-wrapper-->

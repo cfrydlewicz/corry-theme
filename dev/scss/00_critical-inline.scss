@@ -359,6 +359,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: $gutter;
+  justify-content: space-between;
   padding-top: $header_height + 2;  // 2px for bezel borders
 
   @media #{$mq_lg} {
@@ -375,6 +376,7 @@ body {
   > aside {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     max-width: 1024px;
     width: 100%;
 
@@ -385,22 +387,6 @@ body {
       border-width: 1px;
       border-radius: 0.5em;
       padding: $gutter;
-
-      &.sticky {
-
-        @media #{$mq_lg} {
-          max-height: calc(100vh - 130px); // screen height - top - rough footer height
-          position: sticky;
-          top: 90px;
-
-          body.single & {
-            padding-top: 100vh;
-          }
-
-        }
-
-      }
-
     }
 
     h3 {
@@ -423,10 +409,45 @@ body {
 
     }
 
+    .sidebar_read-more a {
+      //@extend i_arrow-right--after;
+
+      &::after {
+        content: "\edbb";
+        display: inline-block;
+        font-family: icomoon;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: 400;
+        margin-left: 0.375em;
+        text-transform: none;
+        speak: none;
+      }
+
+    }
+
     @media #{$mq_lg} {
       flex-direction: column;
       max-width: 240px;
       width: 25%;
+    }
+
+    &.sticky {
+
+      @media #{$mq_lg} {
+
+        .sidebar-inner {
+          max-height: calc(100vh - 130px); // screen height - top - rough footer height
+          position: sticky;
+          top: 90px;
+        }
+
+        body.single & {
+          padding-top: 100vh;
+        }
+
+      }
+
     }
 
   }
