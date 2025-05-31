@@ -424,7 +424,7 @@ body {
     }
 
     h3,
-    .sidebar-header {
+    .sidebar_header {
       font-size: 1.25em;
       line-height: 1.375;
       font-weight: 500;
@@ -485,6 +485,14 @@ body {
           //padding-top: 84vh;
         }
 
+      }
+
+    }
+
+    .wp-block-latest-posts {
+
+      li {
+        margin-bottom: 2rem;
       }
 
     }
