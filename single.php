@@ -23,10 +23,11 @@
         <header class="entry-header">
           <?php if ( has_post_thumbnail() ) : ?>
             <?php post_thumbnail(); ?>
+          <?php else if ( is_category(700) ) : ?>
+            <img alt="default microblog thumbnail" src="/wp-content/themes/corry/assets/images/thumbnail-microblog.jpg">
           <?php else : ?>
-            <img alt="" src="">
+            <img alt="default thumbnail" src="/wp-content/themes/corry/assets/images/thumbnail-default.jpg">
           <?php endif; ?>
-          <div class="post-categories"><span class="u_visually-hidden">Categories:&nbsp;</span><?php the_category('<span class="separator"></span>'); ?></div>
           <div class="title-container">
             <h1 id="sticky-title" class="entry-title"><?php the_title(); ?></h1>
           </div>

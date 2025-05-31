@@ -141,6 +141,11 @@ li {
   width: 100vw;
   z-index: 0;
 
+  img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   body.category-microblog & {
     background-image: url('/wp-content/themes/corry/assets/images/thumbnail-microblog.jpg');
   }
@@ -155,26 +160,8 @@ li {
 
 }
 
-
-// Article Cards
-.article-card {
-
-  // Inner Elements
-  .entry-header {
-    background: linear-gradient(0deg, rgba($c_grey20,0.625), rgba($c_grey80,0.625));
-    max-height: 40vh;
-    overflow: hidden;
-    position: relative;
-  }
-
-  img {
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: $thumbnail_width;
-    position: relative;
-    width: 100%;
-  }
+.entry-header {
+  position: relative;
 
   .post-categories {
     @include f_small;
@@ -203,6 +190,28 @@ li {
       white-space: nowrap;
     }
 
+  }
+
+}
+
+
+// Article Cards
+.article-card {
+
+  // Inner Elements
+  .entry-header {
+    background: linear-gradient(0deg, rgba($c_grey20,0.625), rgba($c_grey80,0.625));
+    max-height: 40vh;
+    overflow: hidden;
+  }
+
+  img {
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $thumbnail_width;
+    position: relative;
+    width: 100%;
   }
 
   .entry-title {
@@ -298,10 +307,9 @@ li {
   .entry-header {
     position: relative;
 
-    .stretched-bg {
-    }
-
     img {
+      margin-left: auto;
+      margin-right: auto;
     }
 
   }
