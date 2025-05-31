@@ -377,7 +377,7 @@ body {
   @media #{$mq_lg} {
     gap: $gutter_lg;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
   }
 
   body:not(.wp-singular) & > main,
