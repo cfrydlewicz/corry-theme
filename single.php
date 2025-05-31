@@ -58,8 +58,8 @@
       </article>
     </main>
 
-    <aside class="sidebar">
-      <div class="sidebar-inner sticky">
+    <aside class="sidebar sticky">
+      <div class="sidebar-inner">
 
         <section class="post-meta">
           <p><span class="word-count"><?php word_count(); ?> words</span><br>

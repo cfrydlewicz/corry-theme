@@ -378,6 +378,7 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     max-width: 1024px;
+    padding-top: $gutter;
     width: 100%;
 
     .sidebar-inner {
@@ -386,7 +387,7 @@ body {
       border-style: solid;
       border-width: 1px;
       border-radius: 0.5em;
-      padding: $gutter;
+      padding: $gutter $gutter $gutter*2;
     }
 
     h3 {
@@ -405,6 +406,10 @@ body {
 
       &::marker {
         content: ''; // no list style
+      }
+
+      &:first-child h3 {
+        margin-top: 0;
       }
 
     }
