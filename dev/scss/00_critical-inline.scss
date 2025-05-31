@@ -9,6 +9,7 @@
   @include visually-hidden;
 }
 
+// font sizes
 .f_small {
   @include f_small;
 }
@@ -19,6 +20,16 @@
   @include f_smallest;
 }
 
+// spacing
+.sp_right_sm {
+  margin-right: 0.5rem;
+}
+.sp_right_md {
+  margin-right: 1rem;
+}
+.sp_right_lg {
+  margin-right: 1.5rem;
+}
 .sp_padding,
 .sp_horizontal-padding {
   padding-left: $gutter;
@@ -41,6 +52,7 @@
   }
 
 }
+
 .separator {
   margin-left: 0.375em;
   margin-right: 0.375em;
