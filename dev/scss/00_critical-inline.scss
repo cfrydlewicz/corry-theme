@@ -369,11 +369,14 @@ body {
 
   > main {
     flex-grow: 1;
+    max-width: 1024px;
   }
 
   > aside {
     display: flex;
     flex-direction: row;
+    max-width: 1024px;
+    width: 100%;
 
     h3 {
       font-size: 1.25em;
@@ -397,7 +400,7 @@ body {
 
     @media #{$mq_lg} {
       flex-direction: column;
-      min-width: 240px;
+      max-width: 240px;
       width: 25%;
     }
 
