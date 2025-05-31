@@ -25,7 +25,7 @@
             <a href="<?php the_permalink(); ?>"><?php post_thumbnail(); ?></a>
             <div class="post-categories"><span class="u_visually-hidden">Categories:&nbsp;</span><?php the_category('<span class="separator"></span>'); ?></div>
           </header>
-          <div class="entry-content sp_padding">
+          <div class="entry-content sp_horizontal-padding">
             <div class="title-container">
               <?php if ( is_singular() ) : ?>
                 <h1 id="sticky-title" class="entry-title u_attn"><?php the_title(); ?></h1>
@@ -42,7 +42,7 @@
               </a>
             </div>
           </div><!--.entry-content-->
-          <footer class="entry-footer sp_padding">
+          <footer class="entry-footer sp_horizontal-padding">
             <div class="post-stats"><span class="post-date"><?php the_date(); ?></span> <span class="separator"></span> <span class="word-count"><?php word_count(); ?> words</span></div>
           </footer>
         </article>
