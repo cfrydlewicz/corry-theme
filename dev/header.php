@@ -151,11 +151,11 @@ $saveData = (isset($_SERVER["HTTP_SAVE_DATA"]) && stristr($_SERVER["HTTP_SAVE_DA
           <?php endif; ?>
           <div id="article-progress-bar" class="article-progress-bar"></div>
         <?php elseif ( is_category() ) : ?>
-          <h1 id="sticky-title" class="page-title"><a title="Jump to the beginning of the page" href="#a_skip-to-content" class="title i_arrow-up"><span>Category:&nbsp;</span><strong><?php single_cat_title(); ?></strong></a></h1>
+          <a title="Jump to the beginning of the page" href="#a_skip-to-content" class="title i_arrow-up"><span>Category:&nbsp;</span><strong><?php single_cat_title(); ?></strong></a>
         <?php elseif ( is_tag() ) : ?>
-          <h1 id="sticky-title" class="page-title"><a title="Jump to the beginning of the page" href="#a_skip-to-content" class="title i_arrow-up"><span>Tag:&nbsp;</span><strong><?php single_tag_title(); ?></strong></a></h1>
+          <a title="Jump to the beginning of the page" href="#a_skip-to-content" class="title i_arrow-up"><span>Tag:&nbsp;</span><strong><?php single_tag_title(); ?></strong></a>
         <?php elseif ( is_search() ) : ?>
-          <h1 id="sticky-title" class="page-title"><a title="Jump to the beginning of the page" href="#a_skip-to-content" class="title i_arrow-up"><span>Search:&nbsp;</span><strong><?php echo esc_html($_GET['s']); ?></strong></a></h1>
+          <a title="Jump to the beginning of the page" href="#a_skip-to-content" class="title i_arrow-up"><span>Search:&nbsp;</span><strong><?php echo esc_html($_GET['s']); ?></strong></a>
         <?php else : ?>
           <div class="page-title"><strong>Oops!</strong></div>
           <p>Sorry, I couldn't find what you were looking for. Try a search maybe?</p>
