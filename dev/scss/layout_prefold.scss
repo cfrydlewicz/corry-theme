@@ -170,6 +170,7 @@ li {
   .post-categories {
     @include f_small;
     background-color: rgba($c_black,0.5);
+    border-top-right-radius: 0.75em;
     bottom: 0;
     display: inline-block;
     left: 0;
@@ -246,15 +247,15 @@ li {
   }
 
   .cta-container {
-    height: 2rem;
+    height: 0.25rem;
     position: relative;
 
     button {
-      bottom: 0;
       font-size: 1.25rem;
       font-weight: 800;
       position: absolute;
       right: 0;
+      top: 0;
       white-space: nowrap;
       z-index: 1;
 
