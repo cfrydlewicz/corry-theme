@@ -380,6 +380,11 @@ body {
     flex-wrap: nowrap;
   }
 
+  body.archive &,
+  body.search & {
+    padding-top: $gutter; // listing pages with title sections
+  }
+
   body:not(.wp-singular) & > main,
   > aside {
     padding-top: $gutter;
