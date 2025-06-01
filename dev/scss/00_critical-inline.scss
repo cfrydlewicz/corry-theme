@@ -523,7 +523,7 @@ body.shadow-on #shadow {
 }
 
 .listing-page-header {
-  padding-top: $gutter;
+  padding-top: $header_height + 2 + $gutter;  // 2px for bezel borders
   width: 100%;
 
   .page-title {
