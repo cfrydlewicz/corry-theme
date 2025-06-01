@@ -138,15 +138,10 @@ li {
   background-repeat: no-repeat;
   background-size: 100% auto;  //stretch
   display: none;
-  filter: blur(10px) brightness(0.75);
+  filter: blur(10px);
   position: absolute;
   width: 100vw;
   z-index: 0;
-
-  img {
-    margin-left: auto;
-    margin-right: auto;
-  }
 
   body.category-microblog & {
     background-image: url('/wp-content/themes/corry/assets/images/thumbnail-microblog.jpg');
@@ -316,17 +311,49 @@ li {
 
   .entry-header {
     position: relative;
+  }
+
+  .entry-header,
+  .stretched-bg {
 
     img {
+      height: auto;
       margin-left: auto;
       margin-right: auto;
+      max-height: 76vh;
+      width: auto;
+    }
+
+  }
+
+  .title-container {
+    background: linear-gradient(0deg, rgba(0,0,0,0.1), rgba(0,0,0,0.5));
+    padding-bottom: 0.25em;
+    padding-top: 0.25em;
+    position: relative;
+    top: -0.75em; // overlap featured image a little
+
+    @supports (backdrop-filter: blur(10px)) {
+      backdrop-filter: blur(10px);
+    }
+
+  }
+
+  .title-container,
+  .entry-content {
+    padding-left: $gutter;
+    padding-right: $gutter;
+
+    @media #{$mq_lg} {
+      padding-left: 0;
+      padding-right: 0;
     }
 
   }
 
   .entry-content {
-    overflow-x: hidden; // preventing horizontal scrolling for edge cases
-    padding: 24px 0 72px;
+    padding-bottom: 72px;
+    padding-top: 24px;
   }
 
 }
