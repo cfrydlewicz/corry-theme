@@ -47,11 +47,11 @@ body.category-microblog {
     }
 
     @media #{$mq_md} {
-      width: calc(50% - $gutter); // subtract half of parent gap setting
+      width: calc(50% - #{$gutter}); // subtract half of parent gap setting
     }
 
     @media #{$mq_lg} {
-      width: calc(50% - $gutter_lg); // subtract half of parent gap setting
+      width: calc(50% - #{$gutter_lg}); // subtract half of parent gap setting
 
       .entry-header {
         max-height: 30vh;
