@@ -145,7 +145,7 @@ body {
   }
 
   &-primary {
-    background: radial-gradient(ellipse at right top, $c_dark-base 0%, $c_grey80 100%);    
+    background: radial-gradient(ellipse at right top, $c_dark-base 0%, $c_grey80 100%);
   }
 
   &-primary .inner-wrapper {
@@ -381,8 +381,8 @@ body {
   }
 
   body:not(.wp-singular) & > main,
-   > aside {
-    padding-top: $gutter;    
+  > aside {
+    padding-top: $gutter;
   }
 
   > main {

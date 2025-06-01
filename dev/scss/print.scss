@@ -42,13 +42,13 @@
 
     > a {
       border-width: 0;
-  
+
       &::after {
         align-self: center;
         color: #000;
         content: ' [corryfrydlewicz.com]';
       }
-  
+
     }
 
     path {

@@ -2,8 +2,8 @@
 
 body {
   background-color: $c_dark-base;
-  background: linear-gradient(180deg, 
-    $c_dark-base 0%, 
+  background: linear-gradient(180deg,
+    $c_dark-base 0%,
     $c_grey80 15%,
     $c_grey50 50%,
     $c_grey50 85%, // 85% is just above the post footer on single posts
@@ -16,7 +16,7 @@ body {
   --bgtxfg: rgba(46, 60, 65, 0.25); // foreground - $c_dark-base-rgb
   --bgtxbg: transparent; // background
   --bgtxlines: 54%; // blurriness - 52% original value
-  background: 
+  background:
     radial-gradient(farthest-side at -33.33% 50%,#0000 var(--bgtxlines),var(--bgtxfg) 54% 57%,#0000 59%) 0 144px,
     radial-gradient(farthest-side at 50% 133.33%,#0000 var(--bgtxlines),var(--bgtxfg) 54% 57%,#0000 59%) 144px 0,
     radial-gradient(farthest-side at 133.33% 50%,#0000 var(--bgtxlines),var(--bgtxfg) 54% 57%,#0000 59%),

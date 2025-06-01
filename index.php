@@ -120,7 +120,7 @@
         <section class="latest-articles">
           <h3><?php if ( !is_category(700) ) : ?>
               <span>Latest Articles</span>
-            <?php else : ?> 
+            <?php else : ?>
               <span>Latest Microblogs</span>
           <?php endif; ?></h3>
           <?php while ($recent_posts->have_posts()) : $recent_posts->the_post(); ?>

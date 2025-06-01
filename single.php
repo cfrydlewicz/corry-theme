@@ -17,7 +17,7 @@
 
   <div class="main-columns-wrapper inner-wrapper">
 
-    <main id="a_skip-to-content"> 
+    <main id="a_skip-to-content">
       <article id="post-<?php the_ID(); ?>" <?php post_class('article-content'); ?>>
 
         <header class="entry-header">

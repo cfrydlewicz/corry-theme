@@ -150,7 +150,7 @@ function corry_widgets_init() {
       'description'   => __( 'Appears beneath or alongside listings.', 'corry' ),
       'before_title'  => '<div class="sidebar_header widget-title">',
       'after_title'   => '</div>',
-    );  
+    );
     $sidebar2 = array(
       'name'          => __( 'Single Post Sidebar', 'corry' ),
       'id'            => 'widget_post-sidebar1',
@@ -171,7 +171,7 @@ function corry_widgets_init() {
       'description'   => __( 'Appears beneath or alongside listings.', 'corry' ),
       'before_title'  => '<div class="sidebar_header widget-title">',
       'after_title'   => '</div>',
-    );  
+    );
     register_sidebar($sidebar1);
     register_sidebar($sidebar2);
     register_sidebar($sidebar3);
