@@ -13,9 +13,9 @@
 body.category-microblog {
 
   .article-card {
+    // in both main and sidebar
 
     .entry-header {
-      min-height: 146px;
 
       .post-categories {
 
@@ -29,21 +29,16 @@ body.category-microblog {
 
     }
 
-    .entry-title {
-      font-size: 1.5em;
+  }
+
+  main .article-card {
+
+    .entry-header {
+      min-height: 146px;
     }
 
-    // Featured
-    &:first-of-type {
-
-      .entry-header {
-        max-height: 30vh;
-      }
-
-      .entry-title {
-        font-size: 1.75em;
-      }
-
+    .entry-title {
+      font-size: 1.5em;
     }
 
     @media #{$mq_md} {
@@ -55,18 +50,6 @@ body.category-microblog {
 
       .entry-header {
         max-height: 30vh;
-      }
-
-      .post-date {
-        margin-bottom: 0;
-      }
-
-    }
-
-    @media #{$mq_xl} {
-
-      .entry-header {
-        min-height: 190px;
       }
 
     }
