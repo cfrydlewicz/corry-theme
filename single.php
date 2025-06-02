@@ -104,7 +104,22 @@
   <footer id="a_end-of-article" class="post-footer inner-wrapper">
 
     <section class="thanks-for-reading">
-      <div class="thanks-header">Thanks for reading!</div>
+      <div class="thanks-main">
+        <div class="thanks-header">Thanks for reading!</div>
+        <div class="discuss">Discuss: 
+          <?php if ( comments_open() ) : ?>
+            <a class="i_chat" href="#a_end-of-article"><span class="u_visually-hidden">Comment</span><?php if ( $thisPostCommentNum > 0 ) { echo '(',$thisPostCommentNum,')' ?></a>
+          <?php endif; ?>
+          <a class="i_bluesky" href="https://bsky.app/intent/compose?text=@corry.us%0A<?php echo $thisPostShortUrl; ?>" target="_blank" rel="noreferrer" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://bsky.app']);"><span class="u_visually-hidden">Discuss on Bluesky</span></a>
+        </div>
+        <?php if ( !empty($thisPostShortUrl) ) : ?>
+          <div class="share">Share: 
+            <a class="i_mail" href="mailto:%20?subject=<?php echo $thisPostTitle; ?>&body=<?php echo $thisPostShortUrl; ?>" target="_blank"><span class="u_visually-hidden">Email</span></a>
+            <a class="i_bluesky" href="https://bsky.app/intent/compose?text=<?php echo $thisPostShortUrl; ?>" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://bsky.app']);"><span class="u_visually-hidden">Bluesky</span></a>
+            <a href="https://corry.us/<?php echo $post->post_name; ?>/">https://corry.us/<?php echo $post->post_name; ?>/</a>
+          </div>
+        <?php endif; ?>
+      </div>
       <div class="post-stats f_small">
         <p class="post-categories">Categories: <?php the_category(', '); ?></p>
         <p class="post-tags"><?php the_tags(); ?></p>
@@ -117,31 +132,6 @@
           <div class="post-footer_header">Comments <span class="comments-count">(<?php echo $thisPostCommentNum; ?>)</span></div>
         <?php endif; ?>
         <?php comments_template(); ?>
-      </section>
-    <?php endif; ?>
-
-    <section class="discussion-container" role="complementary">
-      <div class="post-footer_header">Discuss</div>
-      <ul>
-        <?php if ( comments_open() ) : ?>
-          <?php if ( $thisPostCommentNum > 0 ) : ?>
-            <li><a class="i_arrow-up" href="#a_comments_top">View Comments (<?php echo $thisPostCommentNum; ?>)</a></li>
-          <?php endif; ?>
-          <li><a class="i_chat" href="#a_respond">Leave a Comment</a></li>
-        <?php endif; ?>
-        <li><a class="i_bluesky" href="https://bsky.app/intent/compose?text=@corry.us%0A<?php echo $thisPostShortUrl; ?>" target="_blank" rel="noreferrer" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://bsky.app']);" style="white-space: nowrap;">Discuss on Bluesky</a></li>
-        <li><a class="i_heart" href="https://www.patreon.com/CorryFrydlewicz" target="_blank" rel="noreferrer" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://www.patreon.com']);">Patreon</a> for anyone who'd like to support my content and help me decide what to focus on!</li>
-      </ul>
-    </section>
-
-    <?php if ( !empty($thisPostShortUrl) ) : ?>
-      <section class="share-container" role="complementary">
-        <div class="post-footer_header">Share</div>
-        <ul>
-          <li><a class="i_mail" href="mailto:%20?subject=<?php echo $thisPostTitle; ?>&body=<?php echo $thisPostShortUrl; ?>" target="_blank">Email</a></li>
-          <li><a class="i_bluesky" href="https://bsky.app/intent/compose?text=<?php echo $thisPostShortUrl; ?>" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://bsky.app']);">Bluesky</a></li>
-          <li class="f_small">URL: <a href="https://corry.us/<?php echo $post->post_name; ?>/">https://corry.us/<?php echo $post->post_name; ?>/</a></li>
-        </ul>
       </section>
     <?php endif; ?>
 

@@ -544,7 +544,36 @@
 }
 
 .thanks-for-reading {
+  align-items: center;
   background-color: $c_grey40;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: $gutter;
+  justify-content: space-between;
+
+  .thanks-main {
+    flex-grow: 1;
+  }
+
+  .thanks-header {
+    font-size: 1.625em;
+    font-weight: 300;
+    text-align: center;
+  }
+
+  @media #{$mq_md} {
+
+    .thanks-header {
+      font-size: 1.25em;
+      text-align: left;
+    }
+
+    .post-stats {
+      width: 66%;
+    }
+
+  }
 
   @media only screen and (min-width: $bp_md) and (min-height: 480px + $header_height--max) {
     // tall screens only
@@ -553,13 +582,8 @@
     z-index: 1;
   }
 
-  .thanks-header {
-    font-size: 1.625em;
-    font-weight: 300;
-    text-align: center;
-    @media #{$mq_md} {
-      font-size: 1.25em;
-    }
+  @media #{$mq_lg} {
+    gap: $gutter_lg;
   }
 
 }
