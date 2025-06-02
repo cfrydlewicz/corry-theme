@@ -550,6 +550,7 @@
     // tall screens only
     position: sticky;
     top: $header_height--max;
+    z-index: 1;
   }
 
   .thanks-header {
