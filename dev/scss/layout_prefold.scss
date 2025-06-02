@@ -386,8 +386,8 @@ li {
     padding-right: $gutter;
 
     @media #{$mq_lg} {
-      padding-left: 0;
-      padding-right: 0;
+      padding-left: $gutter_lg;
+      padding-right: $gutter_lg;
     }
 
   }
