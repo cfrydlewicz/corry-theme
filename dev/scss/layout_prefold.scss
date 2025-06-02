@@ -171,7 +171,7 @@ li {
     bottom: 0;
     display: inline-block;
     left: 0;
-    padding: 8px $gutter;
+    padding: $gutter*0.5 $gutter;
     position: absolute;
     z-index: 1;
 
@@ -190,6 +190,7 @@ li {
 
     aside & {
       @include f_smaller;
+      padding: $gutter*0.25 $gutter*0.5;
     }
 
     &:hover {
