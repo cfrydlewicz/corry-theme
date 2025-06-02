@@ -374,7 +374,7 @@ body {
   justify-content: space-between;
   padding-top: $header_height + 2;  // 2px for bezel borders
 
-  @media #{$mq_lg} {
+  @media #{$mq_cols} {
     gap: $gutter_lg;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -400,7 +400,7 @@ body {
     max-width: 240px;
     width: 25%;
 
-    @media #{$mq_lg} {
+    @media #{$mq_cols} {
       display: initial;
     }
 
