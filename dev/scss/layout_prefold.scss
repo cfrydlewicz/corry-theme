@@ -143,6 +143,10 @@ li {
   width: 100vw;
   z-index: 0;
 
+  @media print {
+    display: none;
+  }
+
   body.category-microblog & {
     background-image: url('/wp-content/themes/corry/assets/images/thumbnail-microblog.jpg');
   }
@@ -347,12 +351,27 @@ li {
 
   }
 
+  .stretched-bg {
+    display: none;
+
+    @media #{$mq_lg} {
+      display: block;
+
+      img {
+        // match main column width
+        width: calc(75% - #{gutter_lg});
+      }
+
+    }
+
+  }
+
   .title-container {
-    background: linear-gradient(0deg, rgba(0,0,0,0.1), rgba(0,0,0,0.5));
+    background: linear-gradient(0deg, rgba(0,0,0,0), rgba(0,0,0,0.5));
     padding-bottom: 0.25em;
     padding-top: 0.25em;
     position: relative;
-    top: -0.75em; // overlap featured image a little
+    top: -1.75em; // overlap featured image a little
 
     @supports (backdrop-filter: blur(10px)) {
       backdrop-filter: blur(10px);
