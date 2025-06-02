@@ -175,9 +175,17 @@ li {
       backdrop-filter: blur(10px);
     }
 
-    @media #{$mq_lg} {
-      padding-left: $gutter_lg;
-      padding-right: $gutter_lg;
+    main & {
+
+      @media #{$mq_lg} {
+        padding-left: $gutter_lg;
+        padding-right: $gutter_lg;
+      }
+
+    }
+
+    aside & {
+      @include f_smaller;
     }
 
     &:hover {
@@ -217,6 +225,11 @@ li {
     font-weight: 400;
     line-height: 1;
     margin-bottom: 0.25em;
+
+    aside & {
+      font-size: 1.25em;
+    }
+
   }
 
   .entry-content,
@@ -267,6 +280,14 @@ li {
         display: -webkit-box;
         -webkit-line-clamp: 5;
         overflow: hidden;
+      }
+
+      aside & {
+
+        @supports (-webkit-line-clamp: 3) {
+          -webkit-line-clamp: 3;
+        }
+
       }
 
     }
