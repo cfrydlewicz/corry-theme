@@ -1,6 +1,17 @@
-  <div class="reverse-canary inner-wrapper sp_padding">
-    <p class="f_smallest" style="text-align: center;">I have not been required to disclose data to the government under duress. If that changes and I'm able, I will remove this text. (last update: 2025-05-31)</p>
-  </div>
+  <footer class="pre-footer">
+    <section class="follow-container" role="complementary">
+      <div class="post-footer_header">Follow This Blog</div>
+      <ul>
+        <li><a class="i_mail" href="/emailsubscribe?utm_source=post-footer" target="_blank">Email me</a> at <a href="mailto:cfrydlewicz@gmail.com" target="_blank">cfrydlewicz@gmail.com</a> to be notified when I post a new article.</li>
+        <li><a class="i_rss" href="/subscribe-to-corrys-blog-with-rss/" target="_blank">My RSS Feed</a> is the next best way to follow <em>new blog posts</em>.</li>
+        <li>I also share them on <a class="i_bluesky" href="/bluesky" rel="noreferrer" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://bsky.app']);">Bluesky</a>.</li>
+        <!--li><a class="i_heart" href="https://www.patreon.com/CorryFrydlewicz" target="_blank" rel="noreferrer" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://www.patreon.com']);">Patreon</a> is where I'll share more once I have a few subscribers.</li-->
+      </ul>
+    </section>
+    <div class="reverse-canary inner-wrapper sp_padding">
+      <p class="f_smallest" style="text-align: center;">I have not been required to disclose data to the government under duress. If that changes and I'm able, I will remove this text. (last update: 2025-05-31)</p>
+    </div>
+  </footer>
 
   <footer id="a_footer" class="site-footer">
     <div class="inner-wrapper">
