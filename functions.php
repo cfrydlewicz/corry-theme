@@ -14,9 +14,12 @@ function theme_setup() {
   add_theme_support( 'automatic-feed-links' );
 
   // This theme uses wp_nav_menu() in two locations.
-  register_nav_menus( array(
-    'primary' => __( 'Top primary menu' )
-  ) );
+  register_nav_menus(
+    array(
+      'primary-site-nav' => __( 'Primary Site Nav' ),
+      'campaign-site-nav' => __( 'Campaign Site Nav' )
+    )
+  );
 
   // Switch default core markup to HTML5
   add_theme_support(

@@ -134,7 +134,7 @@ $saveData = (isset($_SERVER["HTTP_SAVE_DATA"]) && stristr($_SERVER["HTTP_SAVE_DA
 
         <section class="header-nav">
           <button class="nav-trigger"><span class="nav-menu-icon">☰</span> <span class="nav-menu-text"> Menu</span></button>
-          <nav><?php wp_nav_menu('primary'); ?></nav>
+          <nav><?php wp_nav_menu( array( 'theme-location' => 'primary-site-nav' ) ); ?>
         </section>
 
       </div>
