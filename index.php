@@ -97,7 +97,8 @@
     <div class="sidebar-inner">
 
       <?php if ( !is_category(700) ) : ?>
-        <?php $args = array(
+        <?php wp_reset_query();
+        $args = array(
           // latest Microblog posts
           'post_type' => 'post',
           'post_status' => 'publish',
