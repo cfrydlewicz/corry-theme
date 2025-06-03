@@ -215,6 +215,41 @@ body {
 .header-nav {
   position: relative;
 
+  ul {
+    display: flex;
+    flex-flow: column wrap;
+    height: 100%;
+    list-style: none;
+  }
+
+  li {
+    margin: 0; // override general list item styling
+
+    &:not(:last-child) { // override general list item styling
+      margin: 0;
+    }
+
+  }
+
+  a {
+    align-items: center;
+    display: flex;
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 0 8px;
+    width: 100%;
+
+    @media #{$mq_sm3} {
+      font-size: 1rem;
+      padding: 0 $gutter;
+    }
+
+    @media #{$mq_lg} {
+      padding: 0 $gutter_lg;
+    }
+
+  }
+
   > button {
     border-radius: 0;
     height: $header_height;
@@ -253,6 +288,28 @@ body {
     visibility: hidden;
     width: 320px;
     z-index: 3;
+
+    a {
+      border-color: $c_primary-dark;
+      border-left-color: $c_primary;
+      border-style: solid;
+      border-width: 0 0 0 4px;
+      padding: 8px 16px;
+
+      &:not(:hover):not(:active) {
+        color: $c_white;
+      }
+
+      &:hover {
+        border-left-color: $c_hover;
+      }
+
+    }
+
+    li li a {
+      padding-left: 32px;
+    }
+
   }
 
   &[aria-expanded="true"] {
@@ -269,62 +326,6 @@ body {
       visibility: visible;
     }
 
-  }
-
-  ul {
-    display: flex;
-    flex-flow: column wrap;
-    height: 100%;
-    list-style: none;
-  }
-
-  li {
-    margin: 0; // override general list item styling
-
-    &:not(:last-child) { // override general list item styling
-      margin: 0;
-    }
-
-  }
-
-  a {
-    align-items: center;
-    display: flex;
-    font-size: 0.875rem;
-    font-weight: 500;
-    padding: 0 8px;
-    width: 100%;
-
-    @media #{$mq_sm3} {
-      font-size: 1rem;
-      padding: 0 $gutter;
-    }
-
-    @media #{$mq_lg} {
-      padding: 0 $gutter_lg;
-    }
-
-  }
-
-  .menu-primary-navigation-container a {
-    border-color: $c_primary-dark;
-    border-left-color: $c_primary;
-    border-style: solid;
-    border-width: 0 0 0 4px;
-    padding: 8px 16px;
-
-    &:not(:hover):not(:active) {
-      color: $c_white;
-    }
-
-    &:hover {
-      border-left-color: $c_hover;
-    }
-
-  }
-
-  .menu-primary-navigation-container li li a {
-    padding-left: 32px;
   }
 
 }
