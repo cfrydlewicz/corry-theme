@@ -108,15 +108,18 @@
         <div class="thanks-header">Thanks for reading!</div>
         <div class="discuss">Discuss: 
           <?php if ( comments_open() ) : ?>
-            <a class="i_chat" href="#a_end-of-article"><span class="u_visually-hidden">Comment</span><?php if ( $thisPostCommentNum > 0 ) { echo '(',$thisPostCommentNum,')' ?></a>
+            <a class="i_chat" href="#a_end-of-article"><span class="u_visually-hidden">Comment</span></a>
+            <?php if ( $thisPostCommentNum > 0 ) : ?>
+              <span class="comments-count"><?php echo $thisPostCommentNum; ?></span>
+            <?php endif; ?>
           <?php endif; ?>
           <a class="i_bluesky" href="https://bsky.app/intent/compose?text=@corry.us%0A<?php echo $thisPostShortUrl; ?>" target="_blank" rel="noreferrer" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://bsky.app']);"><span class="u_visually-hidden">Discuss on Bluesky</span></a>
         </div>
         <?php if ( !empty($thisPostShortUrl) ) : ?>
           <div class="share">Share: 
             <a class="i_mail" href="mailto:%20?subject=<?php echo $thisPostTitle; ?>&body=<?php echo $thisPostShortUrl; ?>" target="_blank"><span class="u_visually-hidden">Email</span></a>
-            <a class="i_bluesky" href="https://bsky.app/intent/compose?text=<?php echo $thisPostShortUrl; ?>" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://bsky.app']);"><span class="u_visually-hidden">Bluesky</span></a>
-            <a href="https://corry.us/<?php echo $post->post_name; ?>/">https://corry.us/<?php echo $post->post_name; ?>/</a>
+            <a class="i_bluesky" href="https://bsky.app/intent/compose?text=<?php echo $thisPostShortUrl; ?>" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://bsky.app']);"><span class="u_visually-hidden">Bluesky</span></a><br>
+            <a class="f_small"> href="https://corry.us/<?php echo $post->post_name; ?>">corry.us/<?php echo $post->post_name; ?></a>
           </div>
         <?php endif; ?>
       </div>
