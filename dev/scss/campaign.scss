@@ -1,0 +1,23 @@
+/* Campaign Template */
+
+body.page-template-page_campaign-template {
+  background-color: $c_white;
+  color: $c_black;
+
+  a {
+    color: $c_primary-dark;
+
+    &:hover {
+      color: $c_accent-dark;
+    }
+
+  }
+
+  // header
+  .logo-supplement-header {
+    display: inline-block;
+    font-size: 1.875rem;
+    margin-left: 0.375em;
+  }
+
+}
