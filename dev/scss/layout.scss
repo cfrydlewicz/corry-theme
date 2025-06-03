@@ -7,6 +7,21 @@
 
 
 // Specific Zones
+.pre-footer {
+
+  .site-footer_header {
+    font-size: 1.25em;
+    line-height: 1.375;
+    font-weight: 400;
+    margin-bottom: .5em;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+}
+
 .site-footer {
   @include f_smallest;
   background-color: $c_grey40;
