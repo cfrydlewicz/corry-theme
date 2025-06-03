@@ -557,15 +557,22 @@
 
     > div:not(:last-child) {
       margin-bottom: 0.25em;
+
+      &.thanks-header {
+        margin-bottom: 0.75em;
+      }
+
     }
 
   }
 
   .thanks-header {
     font-size: 1.625em;
-    font-weight: 300;
-    margin-bottom: 0.5em;
     text-align: center;
+  }
+
+  .label {
+    font-weight: 300;
   }
 
   .comments-count {

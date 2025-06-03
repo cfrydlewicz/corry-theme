@@ -106,20 +106,22 @@
     <section class="thanks-for-reading">
       <div class="thanks-main">
         <div class="thanks-header">Thanks for reading!</div>
-        <div class="discuss">Discuss: 
+        <div class="discuss">
+          <span class="label">Discuss: </span>
           <?php if ( comments_open() ) : ?>
-            <a class="i_chat" href="#a_end-of-article"><span class="u_visually-hidden">Comment</span></a>
+            <a class="i_chat" href="#a_end-of-article" title="Leave a Comment"><span class="u_visually-hidden">Leave a Comment</span></a>
             <?php if ( $thisPostCommentNum > 0 ) : ?>
-              <span class="comments-count"><?php echo $thisPostCommentNum; ?></span>
+              <span class="comments-count"><?php echo $thisPostCommentNum; ?><span class="u_visually-hidden"> Comments</span></span>
             <?php endif; ?>
           <?php endif; ?>
-          <a class="i_bluesky" href="https://bsky.app/intent/compose?text=@corry.us%0A<?php echo $thisPostShortUrl; ?>" target="_blank" rel="noreferrer" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://bsky.app']);"><span class="u_visually-hidden">Discuss on Bluesky</span></a>
+          <a class="i_bluesky" href="https://bsky.app/intent/compose?text=@corry.us%0A<?php echo $thisPostShortUrl; ?>" target="_blank" rel="noreferrer" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://bsky.app']);" title="Discuss on Bluesky"><span class="u_visually-hidden">Discuss on Bluesky</span></a>
         </div>
         <?php if ( !empty($thisPostShortUrl) ) : ?>
-          <div class="share">Share: 
-            <a class="i_mail" href="mailto:%20?subject=<?php echo $thisPostTitle; ?>&body=<?php echo $thisPostShortUrl; ?>" target="_blank"><span class="u_visually-hidden">Email</span></a>
-            <a class="i_bluesky" href="https://bsky.app/intent/compose?text=<?php echo $thisPostShortUrl; ?>" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://bsky.app']);"><span class="u_visually-hidden">Bluesky</span></a><br>
-            <a class="f_small"> href="https://corry.us/<?php echo $post->post_name; ?>">corry.us/<?php echo $post->post_name; ?></a>
+          <div class="share">
+            <span class="label">Share: </span>
+            <a class="i_mail" href="mailto:%20?subject=<?php echo $thisPostTitle; ?>&body=<?php echo $thisPostShortUrl; ?>" target="_blank" title="Share via Email"><span class="u_visually-hidden">Share via Email</span></a>
+            <a class="i_bluesky" href="https://bsky.app/intent/compose?text=<?php echo $thisPostShortUrl; ?>" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://bsky.app']);" title="Share on Bluesky"><span class="u_visually-hidden">Share on Bluesky</span></a><br>
+            <a class="f_small" href="https://corry.us/<?php echo $post->post_name; ?>">corry.us/<?php echo $post->post_name; ?></a>
           </div>
         <?php endif; ?>
       </div>
