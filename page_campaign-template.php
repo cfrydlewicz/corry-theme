@@ -13,15 +13,6 @@
     <article id="post-<?php the_ID(); ?>" <?php post_class('article-content'); ?>>
 
       <header class="entry-header">
-        <div class="stretched-bg" style="background-image: url('<?php
-          if ( has_post_thumbnail() ) {
-            the_post_thumbnail_url();
-          } else if ( is_category(700) ) {
-            echo "/wp-content/themes/corry/assets/images/thumbnail-microblog.jpg";
-          } else {
-            echo "/wp-content/themes/corry/assets/images/thumbnail-default.jpg";
-          }
-        ?>');"></div>
         <div class="inner-wrapper--at-lg">
           <a href="<?php the_post_thumbnail_url(); ?>">
             <?php post_thumbnail(); ?>
@@ -94,16 +85,6 @@
           <li><a class="i_rss" href="/subscribe-to-corrys-blog-with-rss/" target="_blank">My RSS Feed</a> is the next best way to follow <em>new blog posts</em>.</li>
           <li>I also share them on <a class="i_bluesky" href="/bluesky" rel="noreferrer" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://bsky.app']);">Bluesky</a>.</li>
           <!--li><a class="i_heart" href="https://www.patreon.com/CorryFrydlewicz" target="_blank" rel="noreferrer" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://www.patreon.com']);">Patreon</a> is where I'll share more once I have a few subscribers.</li-->
-        </ul>
-      </section>
-
-      <section class="read-more-container">
-        <div class="post-footer_header">Read More</div>
-        <ul>
-          <li><a href="/about/">About Me</a></li>
-          <li><a href="/tag/favorite-post/">My Favorite Posts</a></li>
-          <li><a href="/">All Blog Posts</a></li>
-          <li><a href="/category/microblog/">Microblog</a></li>
         </ul>
       </section>
 
