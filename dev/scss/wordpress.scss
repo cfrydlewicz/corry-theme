@@ -7,19 +7,28 @@ html[lang] {
 // Backend Helpers
 body.admin-bar.logged-in {
 
-  .site-header {
-    top: 46px; // height of mobile admin bar
+  .u_attn {
+    outline: 2px dashed $c_accent2;
+    outline-offset: 0.5em;
+  }
 
-    @media only screen and (min-width: 783px) {
+  .site-header {
+    top: $admin-bar-height--sm;
+
+    @media #{$mq_admin} {
       // when the WP Admin Bar changes
-      top: 32px; // height of desktop admin bar
+      top: $admin-bar-height--lg; // height of desktop admin bar
     }
 
   }
 
-  .u_attn {
-    outline: 2px dashed $c_accent2;
-    outline-offset: 0.5em;
+  .main-columns-wrapper {
+    padding-top: $admin-bar-height--sm + $header_height + 2;
+
+    @media #{$mq_admin} {
+      padding-top: $admin-bar-height--lg + $header_height + 2;
+    }
+
   }
 
   &.single,

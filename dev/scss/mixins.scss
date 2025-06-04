@@ -70,6 +70,8 @@ $c_visited:   $c_primary-dim;
 
 
 // Sizing and Spacing
+$admin-bar-height--sm:      46px;
+$admin-bar-height--lg:      32px;
 $border-radius:             12px;
 $footer_height:             34px; // primary footer (lg breakpoint is only predictable height)
 $header_height:             40px; // primary fixed header
@@ -81,15 +83,16 @@ $thumbnail_width:           1024px;
 
 
 // Breakpoints
-$bp_min:  360px; // Samsung S6+, Samsung Note, iPhone 12 Mini
-$bp_sm:   375px; // iPhone 6+
-$bp_sm2:  412px; // iPhone 11+
-$bp_sm3:  480px;
-$bp_md:   768px; // iPad
-$bp_lg:   1024px; // Landscape Tablets, Laptops
-$bp_xl:   1024px + $gutter_lg*2; // Laptops, Desktops
-$bp_cols: $bp_xl; // when sidebar appears
-$bp_max:  1336px; // site width cap
+$bp_min:   360px; // Samsung S6+, Samsung Note, iPhone 12 Mini
+$bp_sm:    375px; // iPhone 6+
+$bp_sm2:   412px; // iPhone 11+
+$bp_sm3:   480px;
+$bp_md:    768px; // iPad
+$bp_admin: 783px; // when the admin bar switches to desktop mode
+$bp_lg:    1024px; // Landscape Tablets, Laptops
+$bp_xl:    1024px + $gutter_lg*2; // Laptops, Desktops
+$bp_cols:  $bp_xl; // when sidebar appears
+$bp_max:   1336px; // site width cap
 
 
 // Media Query Shortcuts
@@ -98,6 +101,7 @@ $mq_sm2     : "only screen and (min-width: #{$bp_sm2})";
 $mq_sm3     : "only screen and (min-width: #{$bp_sm3})";
 $mq_sm-only : "only screen and (max-width: #{$bp_md - 1})";
 $mq_md      : "only screen and (min-width: #{$bp_md})";
+$mq_admin   : "only screen and (min-width: #{$bp_admin})";
 $mq_lg      : "only screen and (min-width: #{$bp_lg})";
 $mq_xl      : "only screen and (min-width: #{$bp_xl})";
 $mq_cols    : "only screen and (min-width: #{$bp_cols})";

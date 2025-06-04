@@ -381,11 +381,8 @@ body {
     flex-wrap: nowrap;
   }
 
-  body.archive &,
-  body.search & {
-    padding-top: $gutter; // listing pages with title sections
-  }
-
+  body.archive &, // listing pages with title sections
+  body.search &, // listing pages with title sections
   body:not(.wp-singular) & > main,
   > aside {
     padding-top: $gutter;
@@ -493,9 +490,6 @@ body {
         margin-bottom: 2rem;
       }
 
-    }
-
-    .article-card {
     }
 
   }
