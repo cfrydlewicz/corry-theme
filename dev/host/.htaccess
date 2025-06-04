@@ -44,6 +44,9 @@ RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
   # Voting
   Redirect 301 /vote /tag/voting/
 
+  # Emeryville Campaign Sign Up Form
+  Redirect 301 /emeryville/signup https://docs.google.com/forms/d/e/1FAIpQLSfTFqmrz0ihuW0tNXddwZVkAzbDDB-HFAFfv-86y6uwuiCj1g/viewform?usp=dialog
+
 # END Custom Redirects
 
 # BEGIN AVIF Support
