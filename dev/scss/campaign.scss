@@ -112,4 +112,23 @@ body.page-template-page_campaign-template {
 
   }
 
+  // Footer
+  .site-footer {
+    background-color: $c_white;
+    border-width: 0;
+
+    &::before {
+      content: '';
+    }
+
+    section {
+      border-width: 0;
+    }
+
+    .back-to-top {
+      text-align: right;
+    }
+
+  }
+
 }
