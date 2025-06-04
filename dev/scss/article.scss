@@ -40,11 +40,16 @@
       font-size: 2em;
       line-height: 1.125;
       font-weight: 400;
-      margin-top: 2em;
       margin-bottom: 0.5em;
+
+      &:not(:first-child) {
+        margin-top: 2em;
+      }
+
       @media #{$mq_md} {
         font-size: 1.625em;
       }
+
     }
     h3 {
       font-size: 1.75em;
