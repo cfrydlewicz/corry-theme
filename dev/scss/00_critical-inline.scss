@@ -266,6 +266,40 @@ body {
 
   }
 
+  > nav {
+    background-color: $c_grey80;
+    padding: 4px 0;
+    z-index: 3;
+
+    a {
+      border-color: $c_primary-dark;
+      border-left-color: $c_primary;
+      border-style: solid;
+      border-width: 0 0 0 4px;
+      padding: 8px 16px;
+
+      &:not(:hover):not(:active):not(:focus) {
+        color: $c_white;
+      }
+
+      &:hover,
+      &:focus {
+        border-left-color: $c_hover;
+        color: $c_hover;
+      }
+
+    }
+
+    li li a {
+      padding-left: 32px;
+    }
+
+  }
+
+}
+
+.header-nav {
+
   > button {
     border-radius: 0;
     height: $header_height;
@@ -291,10 +325,8 @@ body {
   }
 
   > nav {
-    background-color: $c_grey80;
     max-width: 90vw;
     opacity: 0;
-    padding: 4px 0;
     position: absolute;
     right: -320px;
     top: $header_height;
@@ -303,29 +335,6 @@ body {
     transition-timing-function: ease-in;
     visibility: hidden;
     width: 320px;
-    z-index: 3;
-
-    a {
-      border-color: $c_primary-dark;
-      border-left-color: $c_primary;
-      border-style: solid;
-      border-width: 0 0 0 4px;
-      padding: 8px 16px;
-
-      &:not(:hover):not(:active) {
-        color: $c_white;
-      }
-
-      &:hover {
-        border-left-color: $c_hover;
-      }
-
-    }
-
-    li li a {
-      padding-left: 32px;
-    }
-
   }
 
   &[aria-expanded="true"] {
