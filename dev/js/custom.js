@@ -5,8 +5,9 @@ $(document).ready( function() {
     $('.header-nav').attr("aria-expanded","true").addClass("open").focus();
     $('body').addClass("shadow-on");
 
-    $('main#a_skip-to-content').attr("inert","");
     $('#site-header-secondary').attr("inert","");
+    $('main#a_skip-to-content').attr("inert","");
+    $('aside.sidebar').attr("inert","");
     $('footer#a_footer').attr("inert","");
     $('#wpadminbar').attr("inert","");
 
@@ -16,8 +17,9 @@ $(document).ready( function() {
     $('.header-nav').attr("aria-expanded","false").removeClass("open");
     $('body').removeClass("shadow-on");
 
-    $('main#a_skip-to-content').removeAttr("inert");
     $('#site-header-secondary').removeAttr("inert");
+    $('main#a_skip-to-content').removeAttr("inert");
+    $('aside.sidebar').removeAttr("inert");
     $('footer#a_footer').removeAttr("inert");
     $('#wpadminbar').removeAttr("inert");
 
