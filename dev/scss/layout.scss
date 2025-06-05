@@ -56,7 +56,7 @@
       padding-right: $gutter;
     }
 
-    @media #{$mq_lg} {
+    @media #{$mq_xl} {
       padding-left: $gutter_lg;
       padding-right: $gutter_lg;
     }
@@ -109,16 +109,20 @@
 
   a {
     padding: 8px $gutter;
-    @media #{$mq_lg} {
+
+    @media #{$mq_xl} {
       padding-left: $gutter_lg;
       padding-right: $gutter_lg;
     }
+
     &:last-child {
       margin-left: auto;
     }
+
     &:first-child:not(:last-child) {
       margin-right: auto;
     }
+
   }
 
 }

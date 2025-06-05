@@ -35,7 +35,7 @@
   padding-left: $gutter;
   padding-right: $gutter;
 
-  @media #{$mq_lg} {
+  @media #{$mq_xl} {
     padding-left: $gutter_lg;
     padding-right: $gutter_lg;
   }
@@ -46,7 +46,7 @@
   padding-bottom: $gutter;
   padding-top: $gutter;
 
-  @media #{$mq_lg} {
+  @media #{$mq_xl} {
     padding-bottom: $gutter_lg;
     padding-top: $gutter_lg;
   }
@@ -169,7 +169,7 @@ body {
       height: 100%;
       min-width: 40px;
       padding: 4px $gutter;
-      @media #{$mq_lg} {
+      @media #{$mq_xl} {
         padding-left: $gutter_lg;
         padding-right: $gutter_lg;
       }
@@ -205,7 +205,7 @@ body {
       padding-left: $gutter;
       padding-right: $gutter;
     }
-    @media #{$mq_lg} {
+    @media #{$mq_xl} {
       padding-left: $gutter_lg;
       padding-right: $gutter_lg;
     }
@@ -236,7 +236,8 @@ body {
     display: flex;
     font-size: 0.875rem;
     font-weight: 500;
-    padding: 0 8px;
+    padding-left: 8px;
+    padding-right: 8px;
     width: 100%;
 
     @media #{$mq_sm3} {
@@ -244,8 +245,9 @@ body {
       padding: 0 $gutter;
     }
 
-    @media #{$mq_lg} {
-      padding: 0 $gutter_lg;
+    @media #{$mq_xl} {
+      padding-left: $gutter_lg;
+      padding-right: $gutter_lg;
     }
 
   }
@@ -345,7 +347,7 @@ body {
         padding-left: $gutter;
       }
 
-      @media #{$mq_lg} {
+      @media #{$mq_xl} {
         padding-left: $gutter_lg;
       }
 
@@ -358,7 +360,7 @@ body {
         padding-right: $gutter;
       }
 
-      @media #{$mq_lg} {
+      @media #{$mq_xl} {
         padding-right: $gutter_lg;
       }
 

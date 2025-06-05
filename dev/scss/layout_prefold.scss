@@ -137,7 +137,7 @@ li {
 // General Entry Headers
 .entry-header {
 
-  @media #{$mq_lg} {
+  @media #{$mq_xl} {
 
     .inner-wrapper--at-lg {
       padding-left: 0;
@@ -201,7 +201,7 @@ li {
 
     main & {
 
-      @media #{$mq_lg} {
+      @media #{$mq_xl} {
         padding-left: $gutter_lg;
         padding-right: $gutter_lg;
       }
@@ -419,7 +419,7 @@ li {
     padding-left: $gutter;
     padding-right: $gutter;
 
-    @media #{$mq_lg} {
+    @media #{$mq_xl} {
       padding-left: $gutter_lg;
       padding-right: $gutter_lg;
     }
