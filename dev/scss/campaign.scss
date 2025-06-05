@@ -115,12 +115,14 @@ body.page-template-page_campaign-template {
         fill: var(--cmpn_link);
       }
 
-      &:hover path {
-        fill: var(--cmpn_hover);
-      }
+      &:hover,
+      &:active {
+        color: var(--cmpn_hover);
 
-      &:active path {
-        fill: var(--cmpn_active);
+        path {
+          fill: var(--cmpn_hover);
+        }
+
       }
 
     }
