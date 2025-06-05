@@ -121,8 +121,8 @@ body.page-template-page_campaign-template {
 
       }
 
-      &:active {
-        outline: 2px dashed var(--cmpn_active);
+      &:focus {
+        outline: 1px dashed var(--cmpn_active);
         outline-offset: -0.25em;
       }
 
@@ -139,8 +139,13 @@ body.page-template-page_campaign-template {
 
     .logo-supplement-header {
       display: inline-block;
-      font-size: 1.875rem;
+      font-size: 1.5rem;
       margin-left: 0.375em;
+
+      @media #{$mq_md} {
+        font-size: 1.875rem;
+      }
+
     }
 
     .header-nav {
@@ -240,7 +245,11 @@ body.page-template-page_campaign-template {
       }
 
       .entry-title {
-        font-size: 2em;
+        font-size: 1.5em;
+
+        @media #{$mq_md} {
+          font-size: 2em;
+        }
 
         @media #{$mq_lg} {
           font-size: 2.5em;
