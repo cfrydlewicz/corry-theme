@@ -5,7 +5,7 @@
 @import "mixins.scss";
 
 // Critical Utility
-.u_visually-hidden {
+.u_visually-hidden:not(:focus):not(:focus-within) {
   @include visually-hidden;
 }
 
@@ -225,6 +225,7 @@ body {
 
 }
 
+.screen-reader-nav,
 .header-nav {
   position: relative;
 
