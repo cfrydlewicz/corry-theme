@@ -197,23 +197,32 @@ body {
 
 .header-logo {
   flex-grow: 1;
-  svg {
-    height: 150%; // let the y dangle over
-    max-height: 48px;
-  }
+
   a {
+    // consider logo suffixes on some parts of site
+    align-items: center;
     display: flex;
     height: 100%;
     padding: 4px;
+
     @media #{$mq_sm2} {
       padding-left: $gutter;
       padding-right: $gutter;
     }
+
     @media #{$mq_xl} {
       padding-left: $gutter_lg;
       padding-right: $gutter_lg;
     }
+
   }
+
+  svg {
+    align-self: baseline;
+    height: 150%; // let the y dangle over
+    max-height: 48px;
+  }
+
 }
 
 .header-nav {
