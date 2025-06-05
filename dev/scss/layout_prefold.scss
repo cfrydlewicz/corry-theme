@@ -113,6 +113,26 @@ li {
 
 }
 
+.article-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: $gutter;
+
+  @media #{$mq_lg} {
+    gap: $gutter_lg;
+  }
+
+  main & {
+    gap: $gutter*2;
+
+    @media #{$mq_lg} {
+      gap: $gutter_lg*2;
+    }
+
+  }
+
+}
 
 // General Entry Headers
 .entry-header {
@@ -300,15 +320,11 @@ li {
   }
 
   .cta-container {
-    height: 0.5rem; // vertically center on dividing line between content and footer
-    position: relative;
+    text-align: right;
 
     button {
-      font-size: 1.25rem;
-      font-weight: 800;
-      position: absolute;
-      right: 0;
-      top: 0;
+      font-size: 1rem;
+      font-weight: 700;
       white-space: nowrap;
       z-index: 1;
 
@@ -318,10 +334,28 @@ li {
 
     }
 
+    main & {
+      height: 0.5rem; // vertically center on dividing line between content and footer
+      position: relative;
+
+      button {
+        font-size: 1.25rem;
+        font-weight: 800;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+
+    }
+
   }
 
   .entry-footer {
     width: 100%;
+
+    aside & {
+      display: none;
+    }
 
     .post-stats {
       @include f_small;

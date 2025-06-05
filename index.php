@@ -111,26 +111,28 @@
         if ($recent_posts->have_posts()) : ?>
           <section class="latest-articles">
             <h3>Latest Microblogs</h3>
-            <?php while ($recent_posts->have_posts()) : $recent_posts->the_post(); ?>
-              <article id="post-<?php the_ID(); ?>" <?php post_class('article-card'); ?>>
-                <header class="entry-header">
-                  <a href="<?php the_permalink(); ?>"><?php post_thumbnail(); ?></a>
-                  <div class="post-categories"><span class="u_visually-hidden">Categories:&nbsp;</span><?php the_category('<span class="separator"></span>'); ?></div>
-                </header>
-                <div class="entry-content">
-                  <div class="title-container">
-                    <div class="entry-title"><?php the_title( sprintf( '<a href="%s">', esc_url( get_permalink() ) ), '</a>' ); ?></div>
-                  </div>
-                  <div class="excerpt-container"><?php the_excerpt(); ?></div>
-                  <div class="cta-container">
-                    <a href="<?php the_permalink(); ?>"><button class="i_arrow-right--after">Read it Now!</button></a>
-                  </div>
-                </div><!--.entry-content-->
-                <footer class="entry-footer">
-                  <div class="post-stats"><span class="post-date"><?php the_date(); ?></span> <span class="separator"></span> <span class="word-count"><?php word_count(); ?> words</span></div>
-                </footer>
-              </article>
-            <?php endwhile; wp_reset_postdata(); ?>
+            <div class="article-list">
+              <?php while ($recent_posts->have_posts()) : $recent_posts->the_post(); ?>
+                <article id="post-<?php the_ID(); ?>" <?php post_class('article-card'); ?>>
+                  <header class="entry-header">
+                    <a href="<?php the_permalink(); ?>"><?php post_thumbnail(); ?></a>
+                    <div class="post-categories"><span class="u_visually-hidden">Categories:&nbsp;</span><?php the_category('<span class="separator"></span>'); ?></div>
+                  </header>
+                  <div class="entry-content">
+                    <div class="title-container">
+                      <div class="entry-title"><?php the_title( sprintf( '<a href="%s">', esc_url( get_permalink() ) ), '</a>' ); ?></div>
+                    </div>
+                    <div class="excerpt-container"><?php the_excerpt(); ?></div>
+                    <div class="cta-container">
+                      <a href="<?php the_permalink(); ?>"><button class="i_arrow-right--after">Read it Now!</button></a>
+                    </div>
+                  </div><!--.entry-content-->
+                  <footer class="entry-footer">
+                    <div class="post-stats"><span class="post-date"><?php the_date(); ?></span> <span class="separator"></span> <span class="word-count"><?php word_count(); ?> words</span></div>
+                  </footer>
+                </article>
+              <?php endwhile; wp_reset_postdata(); ?>
+            </div>
           </section>
         <?php endif; ?>
 
@@ -147,26 +149,28 @@
         if ($recent_posts->have_posts()) : ?>
           <section class="latest-articles">
             <h3>Latest Articles</h3>
-            <?php while ($recent_posts->have_posts()) : $recent_posts->the_post(); ?>
-              <article id="post-<?php the_ID(); ?>" <?php post_class('article-card'); ?>>
-                <header class="entry-header">
-                  <a href="<?php the_permalink(); ?>"><?php post_thumbnail(); ?></a>
-                  <div class="post-categories"><span class="u_visually-hidden">Categories:&nbsp;</span><?php the_category('<span class="separator"></span>'); ?></div>
-                </header>
-                <div class="entry-content">
-                  <div class="title-container">
-                    <div class="entry-title"><?php the_title( sprintf( '<a href="%s">', esc_url( get_permalink() ) ), '</a>' ); ?></div>
-                  </div>
-                  <div class="excerpt-container"><?php the_excerpt(); ?></div>
-                  <div class="cta-container">
-                    <a href="<?php the_permalink(); ?>"><button class="i_arrow-right--after">Read it Now!</button></a>
-                  </div>
-                </div><!--.entry-content-->
-                <footer class="entry-footer">
-                  <div class="post-stats"><span class="post-date"><?php the_date(); ?></span> <span class="separator"></span> <span class="word-count"><?php word_count(); ?> words</span></div>
-                </footer>
-              </article>
-            <?php endwhile; wp_reset_postdata(); ?>
+            <div class="article-list">
+              <?php while ($recent_posts->have_posts()) : $recent_posts->the_post(); ?>
+                <article id="post-<?php the_ID(); ?>" <?php post_class('article-card'); ?>>
+                  <header class="entry-header">
+                    <a href="<?php the_permalink(); ?>"><?php post_thumbnail(); ?></a>
+                    <div class="post-categories"><span class="u_visually-hidden">Categories:&nbsp;</span><?php the_category('<span class="separator"></span>'); ?></div>
+                  </header>
+                  <div class="entry-content">
+                    <div class="title-container">
+                      <div class="entry-title"><?php the_title( sprintf( '<a href="%s">', esc_url( get_permalink() ) ), '</a>' ); ?></div>
+                    </div>
+                    <div class="excerpt-container"><?php the_excerpt(); ?></div>
+                    <div class="cta-container">
+                      <a href="<?php the_permalink(); ?>"><button class="i_arrow-right--after">Read it Now!</button></a>
+                    </div>
+                  </div><!--.entry-content-->
+                  <footer class="entry-footer">
+                    <div class="post-stats"><span class="post-date"><?php the_date(); ?></span> <span class="separator"></span> <span class="word-count"><?php word_count(); ?> words</span></div>
+                  </footer>
+                </article>
+              <?php endwhile; wp_reset_postdata(); ?>
+            </div>
           </section>
         <?php else : ?>
           <section class="latest-articles u_attn">
