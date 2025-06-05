@@ -27,7 +27,8 @@ body.page-template-page_campaign-template {
   a {
     color: var(--cmpn_link);
 
-    &:hover {
+    &:hover,
+    &:focus {
       color: var(--cmpn_hover);
     }
 
@@ -35,6 +36,14 @@ body.page-template-page_campaign-template {
       color: var(--cmpn_active);
     }
 
+    &:visited:not(:hover):not(:active):not(:focus) {
+      color: var(--cmpn_link);
+    }
+
+  }
+
+  .article-content .entry-content a:visited:not(:hover):not(:active):not(:focus) {
+    color: var(--cmpn_link); // override
   }
 
   button {
