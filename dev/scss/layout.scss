@@ -101,7 +101,8 @@
   color: transparent; // hide dash between links
   display: flex;
   justify-content: space-between;
-  margin-bottom: 48px;
+  margin-bottom: 3rem;
+  margin-top: 1.5rem;
 
   @media #{$mq_lg} {
     max-width: $thumbnail_width;
