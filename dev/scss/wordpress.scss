@@ -31,7 +31,8 @@ body.admin-bar.logged-in {
 
   }
 
-  .main-columns-wrapper {
+  .main-columns-wrapper,
+  .total-wrapper > main {
     padding-top: $admin-bar-height--sm + $header_height + 2;
 
     @media #{$mq_admin} {
