@@ -133,6 +133,9 @@
                 </article>
               <?php endwhile; wp_reset_postdata(); ?>
             </div>
+            <div class="more-link">
+              <a class="i_arrow-right--after" href="/category/microblog/">More Microblogs</a>
+            </div>
           </section>
         <?php endif; ?>
 

@@ -22,6 +22,15 @@ body.admin-bar.logged-in {
 
   }
 
+  .listing-page-header {
+    padding-top: $admin-bar-height--sm + $header_height + 2 + $gutter;
+
+    @media #{$mq_admin} {
+      padding-top: $admin-bar-height--lg + $header_height + 2 + $gutter;
+    }
+
+  }
+
   .main-columns-wrapper {
     padding-top: $admin-bar-height--sm + $header_height + 2;
 
@@ -57,6 +66,19 @@ body.admin-bar.logged-in {
       .disclaimer:not(.alert) {  // deprecated without alert class
         outline: 2px solid $c_accent;
         outline-offset: 0.5em;
+      }
+
+    }
+
+  }
+
+  &.archive {
+
+    .main-columns-wrapper {
+      padding-top: $gutter;
+
+      @media #{$mq_xl} {
+        padding-top: $gutter_lg;
       }
 
     }
