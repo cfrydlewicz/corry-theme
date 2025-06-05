@@ -206,15 +206,6 @@ body.page-template-page_campaign-template {
 
   }
 
-  main {
-    padding-top: $header_height + 1;
-
-    @media #{$mq_lg} {
-      padding-top: $header_height + 1;
-    }
-
-  }
-
   // Page Content
   .article-content {
 

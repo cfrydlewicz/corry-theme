@@ -511,6 +511,16 @@ body {
 
 }
 
+.total-wrapper > main {
+  // layouts without a sidebar
+  padding-top: $header_height + 1;
+
+  @media #{$mq_lg} {
+    padding-top: $header_height + 1;
+  }
+
+}
+
 #shadow {
   background-color: rgba(0,0,0,0);
   bottom: 0;
