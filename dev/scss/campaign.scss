@@ -279,6 +279,21 @@ body.page-template-page_campaign-template {
   }
 
   // Footer
+  footer {
+
+    .inner-wrapper {
+      padding-left: $gutter;
+      padding-right: $gutter;
+
+      @media #{$mq_lg} {
+        padding-left: $gutter_lg;
+        padding-right: $gutter_lg;
+      }
+
+    }
+
+  }
+
   .pre-footer {
     text-align: center;
 
