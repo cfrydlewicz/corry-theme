@@ -121,7 +121,9 @@ $saveData = (isset($_SERVER["HTTP_SAVE_DATA"]) && stristr($_SERVER["HTTP_SAVE_DA
                 <li><a href="#a_skip-to-content">Jump to content</a></li>
                 <?php if ( is_singular() ) : ?>
                   <li><a href="#a_end-of-article">Jump to the end of the article</a></li>
-                  <li><a href="#a_comments_top">Jump to the comments</a></li>
+                  <?php if ( comments_open() ) : ?>
+                    <li><a href="#a_comments_top">Jump to the comments</a></li>
+                  <?php endif; ?>
                 <?php endif; ?>
                 <li><a href="#a_footer">Jump to footer</a></li>
               </ul>
@@ -156,7 +158,9 @@ $saveData = (isset($_SERVER["HTTP_SAVE_DATA"]) && stristr($_SERVER["HTTP_SAVE_DA
                 <li><a href="#a_skip-to-content">Jump to content</a></li>
                 <?php if ( is_singular() ) : ?>
                   <li><a href="#a_end-of-article">Jump to the end of the article</a></li>
-                  <li><a href="#a_comments_top">Jump to the comments</a></li>
+                  <?php if ( comments_open() ) : ?>
+                    <li><a href="#a_comments_top">Jump to the comments</a></li>
+                  <?php endif; ?>
                 <?php endif; ?>
                 <li><a href="#a_footer">Jump to footer</a></li>
               </ul>
