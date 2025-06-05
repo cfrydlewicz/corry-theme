@@ -133,7 +133,7 @@ body {
   position: fixed;
   right: 0;
   top: 0;
-  z-index: 4;
+  z-index: $z_header;
 
   .inner-wrapper {
     align-items: stretch;
@@ -269,7 +269,7 @@ body {
   > nav {
     background-color: $c_grey80;
     padding: 4px 0;
-    z-index: 3;
+    z-index: $z_nav;
 
     a {
       border-color: $c_primary-dark;
@@ -296,6 +296,10 @@ body {
 
   }
 
+}
+
+.screen-reader-nav > nav {
+  z-index: $z_nav+1; // edge case when primary nav and this nav are both open
 }
 
 .header-nav {
@@ -545,7 +549,7 @@ body {
   transition-property: background-color;
   transition-timing-function: ease-in;
   visibility: hidden;
-  z-index: 2;
+  z-index: $z_shadow;
 }
 
 body.shadow-on {

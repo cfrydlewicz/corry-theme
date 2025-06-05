@@ -613,7 +613,7 @@
     // tall screens only
     position: sticky;
     top: $header_height--max;
-    z-index: 1;
+    z-index: $z_cta+1;
   }
 
   @media #{$mq_lg} {

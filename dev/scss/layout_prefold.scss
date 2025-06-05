@@ -136,7 +136,7 @@ li {
   }
 
   img {
-    z-index: 1;
+    z-index: $z_cta;
   }
 
 }
@@ -150,7 +150,7 @@ li {
   filter: blur(10px);
   position: absolute;
   width: 100vw;
-  z-index: 0;
+  z-index: $z_base;
 
   @media print {
     display: none;
@@ -182,7 +182,7 @@ li {
     left: 0;
     padding: $gutter*0.5 $gutter;
     position: absolute;
-    z-index: 1;
+    z-index: $z_cta;
 
     @supports (backdrop-filter: blur(10px)) {
       backdrop-filter: blur(10px);
@@ -322,7 +322,7 @@ li {
       font-weight: 700;
       padding: 4px 8px;
       white-space: nowrap;
-      z-index: 1;
+      z-index: $z_cta;
 
       &::after {
         margin-left: 0.375em;

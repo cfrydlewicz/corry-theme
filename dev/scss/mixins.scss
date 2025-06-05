@@ -110,6 +110,15 @@ $mq_touch   : "only screen and (pointer: coarse)";
 $mq_mouse   : "only screen and (pointer: fine)";
 
 
+// z-indexes
+$z_base:   0;
+$z_cta:    1;
+$z_shadow: 2;
+$z_modal:  3;
+$z_nav:    4;
+$z_header: 5;
+
+
 // Font Sizes - use important tags to override without overly complex selectors
 @mixin f_smallest {
   font-size: 12px !important;
