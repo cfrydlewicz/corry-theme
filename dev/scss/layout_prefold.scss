@@ -44,7 +44,7 @@ a {
   }
 
   &:focus {
-    outline: 1px dotted $c_primary;
+    outline: 1px dashed $c_link;
   }
 
   &:active {

@@ -22,7 +22,7 @@
 
           <article id="post-<?php the_ID(); ?>" <?php post_class('article-card'); ?>>
             <header class="entry-header">
-              <a href="<?php the_permalink(); ?>"><?php post_thumbnail(); ?></a>
+              <a href="<?php the_permalink(); ?>" tabindex="-1"><?php post_thumbnail(); ?></a>
               <div class="post-categories"><span class="u_visually-hidden">Categories:&nbsp;</span><?php the_category('<span class="separator"></span>'); ?></div>
             </header>
             <div class="entry-content sp_horizontal-padding">
@@ -37,7 +37,7 @@
                 <?php the_excerpt(); ?>
               </div>
               <div class="cta-container">
-                <a href="<?php echo str_replace(home_url(), '', get_permalink()); ?>">
+                <a href="<?php echo str_replace(home_url(), '', get_permalink()); ?>" tabindex="-1">
                   <button class="i_arrow-right--after">Read it Now!</button>
                 </a>
               </div>
@@ -57,7 +57,7 @@
 
       <article id="error404" class="article-card u_attn">
         <header class="entry-header">
-          <a href="/">
+          <a href="/" tabindex="-1">
             <picture>
               <source media="(min-width: 769px)" srcset="<?php bloginfo('template_url');?>/assets/images/404_1024x512.jpg">
               <img src="<?php bloginfo('template_url');?>/assets/images/404_512x512.jpg" alt="Mega Man enters a boss stage only to find a 404 Boss Not found instead">
@@ -77,7 +77,7 @@
             <p>I couldn't find what you're looking for. Please try searching in another way or check out my homepage. If you think something's broken and have a minute to <a href="mailto:cfrydlewicz@gmail.com" class="u_nowrap">let me know</a>, I'd appreciate it.</p>
           </div>
           <div class="cta-container">
-            <a href="/">
+            <a href="/" tabindex="-1">
               <button class="i_arrow-right--after">Latest Posts</button>
             </a>
           </div>
@@ -113,7 +113,7 @@
               <?php while ($recent_posts->have_posts()) : $recent_posts->the_post(); ?>
                 <article id="post-<?php the_ID(); ?>" <?php post_class('article-card'); ?>>
                   <header class="entry-header">
-                    <a href="<?php the_permalink(); ?>"><?php post_thumbnail(); ?></a>
+                    <a href="<?php the_permalink(); ?>" tabindex="-1"><?php post_thumbnail(); ?></a>
                     <div class="post-categories"><span class="u_visually-hidden">Categories:&nbsp;</span><?php the_category('<span class="separator"></span>'); ?></div>
                   </header>
                   <div class="entry-content">
@@ -122,7 +122,7 @@
                     </div>
                     <div class="excerpt-container"><?php the_excerpt(); ?></div>
                     <div class="cta-container">
-                      <a href="<?php the_permalink(); ?>"><button class="i_arrow-right--after">Read it Now!</button></a>
+                      <a href="<?php the_permalink(); ?>" tabindex="-1"><button class="i_arrow-right--after">Read it Now!</button></a>
                     </div>
                   </div><!--.entry-content-->
                   <footer class="entry-footer">
@@ -154,7 +154,7 @@
               <?php while ($recent_posts->have_posts()) : $recent_posts->the_post(); ?>
                 <article id="post-<?php the_ID(); ?>" <?php post_class('article-card'); ?>>
                   <header class="entry-header">
-                    <a href="<?php the_permalink(); ?>"><?php post_thumbnail(); ?></a>
+                    <a href="<?php the_permalink(); ?>" tabindex="-1"><?php post_thumbnail(); ?></a>
                     <div class="post-categories"><span class="u_visually-hidden">Categories:&nbsp;</span><?php the_category('<span class="separator"></span>'); ?></div>
                   </header>
                   <div class="entry-content">
@@ -163,7 +163,7 @@
                     </div>
                     <div class="excerpt-container"><?php the_excerpt(); ?></div>
                     <div class="cta-container">
-                      <a href="<?php the_permalink(); ?>"><button class="i_arrow-right--after">Read it Now!</button></a>
+                      <a href="<?php the_permalink(); ?>" tabindex="-1"><button class="i_arrow-right--after">Read it Now!</button></a>
                     </div>
                   </div><!--.entry-content-->
                   <footer class="entry-footer">
