@@ -117,10 +117,10 @@ li {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  gap: $gutter;
+  gap: $gutter*1.5;
 
   @media #{$mq_lg} {
-    gap: $gutter_lg;
+    gap: $gutter_lg*1.5;
   }
 
   main & {
@@ -307,7 +307,12 @@ li {
         overflow: hidden;
       }
 
-      aside & {
+    }
+
+    aside & {
+      padding-bottom: $gutter*0.5;
+
+      p {
 
         @supports (-webkit-line-clamp: 3) {
           -webkit-line-clamp: 3;
@@ -325,6 +330,7 @@ li {
     button {
       font-size: 1rem;
       font-weight: 700;
+      padding: 4px 8px;
       white-space: nowrap;
       z-index: 1;
 
@@ -341,6 +347,7 @@ li {
       button {
         font-size: 1.25rem;
         font-weight: 800;
+        padding: 8px 12px;
         position: absolute;
         right: 0;
         top: 0;

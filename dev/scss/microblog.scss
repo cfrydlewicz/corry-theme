@@ -12,10 +12,10 @@
 // https://corryfrydlewicz.com/category/microblog/
 body.category-microblog {
 
-  .article-card {
-    // in both main and sidebar
+  main .article-card {
 
     .entry-header {
+      min-height: 146px;
 
       .post-categories {
 
@@ -27,14 +27,6 @@ body.category-microblog {
 
       }
 
-    }
-
-  }
-
-  main .article-card {
-
-    .entry-header {
-      min-height: 146px;
     }
 
     .entry-title {
