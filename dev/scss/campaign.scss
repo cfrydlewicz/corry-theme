@@ -2,12 +2,12 @@
 
 :root {
   // campaign site color vars
-  --cmpn_teal:      $c_primary-dark;
-  --cmpn_paleteal:  color-mix(#{$c_primary-dark} 100%, #fff 100%);
-  --cmpn_orange:    $c_accent-dark;
-  --cmpn_link:      $c_primary-dark;
-  --cmpn_hover:     $c_accent-dark;
-  --cmpn_active:    $c_secondary-dark;
+  --cmpn_teal:      #{$c_primary-dark};
+  --cmpn_paleteal:  color-mix(in lab, #{$c_primary-dark} 25%, #fff 100%);
+  --cmpn_orange:    #{$c_accent-dark};
+  --cmpn_link:      #{$c_primary-dark};
+  --cmpn_hover:     #{$c_accent-dark};
+  --cmpn_active:    #{$c_secondary-dark};
 }
 
 body.page-template-page_campaign-template {
