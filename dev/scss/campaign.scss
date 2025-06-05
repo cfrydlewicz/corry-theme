@@ -15,6 +15,15 @@ body.page-template-page_campaign-template {
   background-color: $c_white;
   color: $c_black;
 
+  a,
+  button {
+
+    &:focus {
+      outline-color: var(--cmpn_link);
+    }
+
+  }
+
   a {
     color: var(--cmpn_link);
 
