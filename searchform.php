@@ -7,6 +7,6 @@
   </label>
   <label>
     <button class="i_search"></button>
-    <input type="submit" class="search-submit" id="header-search-button" value="Search">
+    <input type="submit" class="search-submit" id="header-search-button" value="Search" tabindex="-1">
   </label>
 </form>
