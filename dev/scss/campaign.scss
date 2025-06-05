@@ -79,16 +79,21 @@ body.page-template-page_campaign-template {
   }
 
   .article-content .entry-content .cta {
+    display: flex;
 
     a {
+      align-items: center;
       background-color: var(--cmpn_orange);
       border-radius: 0.75em;
       color: $c_truewhite;
+      display: flex;
       font-size: 1.25em;
       font-weight: 500;
       line-height: 1;
       padding: $gutter*0.5 $gutter;
       text-decoration: none;
+      word-break: normal;
+      word-wrap: normal;
 
       // @extend .i_arrow-right--after; and animate
       &::after,
@@ -96,12 +101,14 @@ body.page-template-page_campaign-template {
         content: "\edbb";
         display: inline-block;
         font-family: icomoon;
+        font-size: 1em;
         font-style: normal;
         font-variant: normal;
         font-weight: 400;
         margin-left: .375em;
+        margin-top: 0;
         text-transform: none;
-        transition-duration: 0.25s;
+        transition-duration: 0.125s;
         transition-property: margin-left;
         transition-timing-function: ease-in;
         speak: none;
@@ -110,12 +117,21 @@ body.page-template-page_campaign-template {
       &:hover,
       &:focus,
       &:active {
-        background-color: var(--cmpn_active);
 
-        &::after {
-          margin-left: 0.5em;
+        &::after,
+        &[target="_blank"]:not([href*="corryfrydlewicz.com"])::after { // override
+          margin-left: 0.75em;
         }
 
+      }
+
+      &:hover,
+      &:focus {
+        background-color: var(--cmpn_link);
+      }
+
+      &:active {
+        background-color: var(--cmpn_active);
       }
 
       &:focus {
