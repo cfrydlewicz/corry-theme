@@ -16,39 +16,39 @@
 
   <main id="a_skip-to-content" class="listing-page">
     <?php if ( have_posts() ) : ?>
+      <div class="article-list">
+        <?php while ( have_posts() ) : ?>
+          <?php the_post(); ?>
 
-      <?php while ( have_posts() ) : ?>
-        <?php the_post(); ?>
+          <article id="post-<?php the_ID(); ?>" <?php post_class('article-card'); ?>>
+            <header class="entry-header">
+              <a href="<?php the_permalink(); ?>"><?php post_thumbnail(); ?></a>
+              <div class="post-categories"><span class="u_visually-hidden">Categories:&nbsp;</span><?php the_category('<span class="separator"></span>'); ?></div>
+            </header>
+            <div class="entry-content sp_horizontal-padding">
+              <div class="title-container">
+                <?php if ( is_singular() ) : ?>
+                  <h1 id="sticky-title" class="entry-title u_attn"><?php the_title(); ?></h1>
+                <?php else : ?>
+                  <h2 class="entry-title"><?php the_title( sprintf( '<a href="%s">', esc_url( get_permalink() ) ), '</a>' ); ?></h2>
+                <?php endif; ?>
+              </div>
+              <div class="excerpt-container">
+                <?php the_excerpt(); ?>
+              </div>
+              <div class="cta-container">
+                <a href="<?php echo str_replace(home_url(), '', get_permalink()); ?>">
+                  <button class="i_arrow-right--after">Read it Now!</button>
+                </a>
+              </div>
+            </div><!--.entry-content-->
+            <footer class="entry-footer sp_horizontal-padding">
+              <div class="post-stats"><span class="post-date"><?php the_date(); ?></span> <span class="separator"></span> <span class="word-count"><?php word_count(); ?> words</span></div>
+            </footer>
+          </article>
 
-        <article id="post-<?php the_ID(); ?>" <?php post_class('article-card'); ?>>
-          <header class="entry-header">
-            <a href="<?php the_permalink(); ?>"><?php post_thumbnail(); ?></a>
-            <div class="post-categories"><span class="u_visually-hidden">Categories:&nbsp;</span><?php the_category('<span class="separator"></span>'); ?></div>
-          </header>
-          <div class="entry-content sp_horizontal-padding">
-            <div class="title-container">
-              <?php if ( is_singular() ) : ?>
-                <h1 id="sticky-title" class="entry-title u_attn"><?php the_title(); ?></h1>
-              <?php else : ?>
-                <h2 class="entry-title"><?php the_title( sprintf( '<a href="%s">', esc_url( get_permalink() ) ), '</a>' ); ?></h2>
-              <?php endif; ?>
-            </div>
-            <div class="excerpt-container">
-              <?php the_excerpt(); ?>
-            </div>
-            <div class="cta-container">
-              <a href="<?php echo str_replace(home_url(), '', get_permalink()); ?>">
-                <button class="i_arrow-right--after">Read it Now!</button>
-              </a>
-            </div>
-          </div><!--.entry-content-->
-          <footer class="entry-footer sp_horizontal-padding">
-            <div class="post-stats"><span class="post-date"><?php the_date(); ?></span> <span class="separator"></span> <span class="word-count"><?php word_count(); ?> words</span></div>
-          </footer>
-        </article>
-
-      <?php endwhile; wp_reset_postdata(); ?>
-
+        <?php endwhile; wp_reset_postdata(); ?>
+      </div>
       <div class="pagination-container inner-wrapper">
         <?php posts_nav_link('', 'Previous Page', 'Next Page'); ?>
       </div>

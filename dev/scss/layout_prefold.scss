@@ -97,27 +97,13 @@ li {
 }
 
 
-// Listing Pages
-.listing-page {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  gap: $gutter*2;
-  justify-content: center;
-
-  @media #{$mq_lg} {
-    flex-direction: row;
-    gap: $gutter_lg*2;
-    justify-content: space-evenly;
-  }
-
-}
-
+// Listing Pages and Widgets
 .article-list {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   gap: $gutter*1.5;
+  justify-content: space-between;
 
   @media #{$mq_lg} {
     gap: $gutter_lg*1.5;
@@ -127,6 +113,7 @@ li {
     gap: $gutter*2;
 
     @media #{$mq_lg} {
+      flex-direction: row;
       gap: $gutter_lg*2;
     }
 
