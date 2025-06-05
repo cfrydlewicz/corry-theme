@@ -271,7 +271,7 @@ body {
     height: $header_height;
     padding: 0 12px;
 
-    &:not(:hover):not(:active) {
+    &:not(:hover):not(:active):not(:focus) {
       background-color: transparent;
       color: $c_white;
     }
@@ -330,7 +330,7 @@ body {
 
   &[aria-expanded="true"] {
 
-    > button:not(:hover):not(:active) {
+    > button:not(:hover):not(:active):not(:focus) {
       background-color: $c_active;
       border-color: $c_accent-dim;
       color: $c_trueblack;
@@ -449,7 +449,9 @@ body {
         transition-duration: 0.2s;
         transition-property: opacity;
 
-        &:hover {
+        &:hover,
+        &:focus,
+        &:focus-within {
           opacity: 1.0;
         }
 

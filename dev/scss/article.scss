@@ -386,7 +386,8 @@
           transition: opacity 0.5s ease-in-out;
         }
 
-        &:hover {
+        &:hover,
+        &:focus {
 
           figcaption {
             opacity: 1.0;

@@ -161,14 +161,9 @@ $mq_mouse   : "only screen and (pointer: fine)";
   text-decoration: none;
   vertical-align: middle;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: $c_hover;
-    border-color: $c_accent-dim;
-    color: $c_trueblack;
-  }
-
-  &:active {
-    background-color: $c_active;
     border-color: $c_accent-dim;
     color: $c_trueblack;
   }
@@ -176,6 +171,12 @@ $mq_mouse   : "only screen and (pointer: fine)";
   &:focus {
     outline: 1px dashed $c_primary;
     outline-offset: 4px;
+  }
+
+  &:active {
+    background-color: $c_active;
+    border-color: $c_accent-dim;
+    color: $c_trueblack;
   }
 
   @if $size == 'big' {

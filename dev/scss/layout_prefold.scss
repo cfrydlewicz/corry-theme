@@ -39,7 +39,8 @@ a {
   color: $c_link;
   text-decoration: none;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: $c_hover;
   }
 
@@ -89,7 +90,8 @@ li {
   path {
     fill: $c_link;
   }
-  a:hover {
+  a:hover,
+  a:focus {
     path {
       fill: $c_hover;
     }
@@ -200,7 +202,8 @@ li {
       padding: $gutter*0.25 $gutter*0.5;
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: $c_grey50;
     }
 
