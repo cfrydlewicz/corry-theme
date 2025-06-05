@@ -12,7 +12,7 @@
               <li><a class="i_rss" href="/subscribe-to-corrys-blog-with-rss/" target="_blank">RSS</a> is the next best way to follow <em>new posts</em>.</li>
               <!--li><a class="i_heart" href="https://www.patreon.com/CorryFrydlewicz" target="_blank" rel="noreferrer" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://www.patreon.com']);">Patreon</a> is where I'll share more once I have a few subscribers.</li-->
             <?php endif; ?>
-              <li><a class="i_bluesky" href="/bluesky" rel="noreferrer" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://bsky.app']);">Bluesky</a></li>
+              <li><a class="i_bluesky u_nowrap" href="/bluesky" rel="noreferrer" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://bsky.app']);">Bluesky</a></li>
           </ul>
         </section>
         <?php if ( is_page_template( 'page_campaign-template.php' ) ) : ?>
