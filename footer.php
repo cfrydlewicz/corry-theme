@@ -1,39 +1,37 @@
-  <footer class="pre-footer inner-wrapper">
-    <section class="follow-container sp_horizontal padding" role="complementary">
-      <div class="site-footer_header">Follow Me</div>
-      <ul>
-        <?php if ( is_page_template( 'page_campaign-template.php' ) ) : ?>
-          <li><a class="i_mail" href="https://forms.gle/6pbe5HsXqWkBfeDj6" target="_blank">Newsletter Sign Up</a></li>
-        <?php else : ?>
-          <li><a class="i_mail" href="/emailsubscribe?utm_source=site-footer" target="_blank">Email me</a> to join my newsletter.</li>
-          <li><a class="i_rss" href="/subscribe-to-corrys-blog-with-rss/" target="_blank">RSS</a> is the next best way to follow <em>new posts</em>.</li>
-          <!--li><a class="i_heart" href="https://www.patreon.com/CorryFrydlewicz" target="_blank" rel="noreferrer" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://www.patreon.com']);">Patreon</a> is where I'll share more once I have a few subscribers.</li-->
-        <?php endif; ?>
-          <li><a class="i_bluesky" href="/bluesky" rel="noreferrer" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://bsky.app']);">Bluesky</a></li>
-      </ul>
-    </section>
-    <?php if ( is_page_template( 'page_campaign-template.php' ) ) : ?>
-      <div class="paid-for sp_padding">
-        <p class="f_smallest" style="text-align: center;">This site was paid for, designed, and coded by Corry Frydlewicz.</p>
-      </div>
-    <?php else : ?>
-      <div class="reverse-canary sp_padding">
-        <p class="f_smallest" style="text-align: center;">I have not been required to disclose data to the government under duress. If that changes and I'm able, I will remove this text. (last update: 2025-05-31)</p>
-      </div>
-    <?php endif; ?>
-  </footer>
+  <footer id="a_footer" class="footer-container">
 
-  <footer id="a_footer" class="site-footer">
-    <div class="inner-wrapper">
+    <div class="pre-footer inner-wrapper">
+      <section class="follow-container sp_horizontal padding" role="complementary">
+        <div class="site-footer_header">Follow Me</div>
+        <ul>
+          <?php if ( is_page_template( 'page_campaign-template.php' ) ) : ?>
+            <li><a class="i_mail" href="https://forms.gle/6pbe5HsXqWkBfeDj6" target="_blank">Newsletter Sign Up</a></li>
+          <?php else : ?>
+            <li><a class="i_mail" href="/emailsubscribe?utm_source=site-footer" target="_blank">Email me</a> to join my newsletter.</li>
+            <li><a class="i_rss" href="/subscribe-to-corrys-blog-with-rss/" target="_blank">RSS</a> is the next best way to follow <em>new posts</em>.</li>
+            <!--li><a class="i_heart" href="https://www.patreon.com/CorryFrydlewicz" target="_blank" rel="noreferrer" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://www.patreon.com']);">Patreon</a> is where I'll share more once I have a few subscribers.</li-->
+          <?php endif; ?>
+            <li><a class="i_bluesky" href="/bluesky" rel="noreferrer" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://bsky.app']);">Bluesky</a></li>
+        </ul>
+      </section>
+      <?php if ( is_page_template( 'page_campaign-template.php' ) ) : ?>
+        <section class="paid-for sp_padding">
+          <p class="f_smallest" style="text-align: center;">This site was paid for, designed, and coded by Corry Frydlewicz.</p>
+        </section>
+      <?php else : ?>
+        <section class="reverse-canary sp_padding">
+          <p class="f_smallest" style="text-align: center;">I have not been required to disclose data to the government under duress. If that changes and I'm able, I will remove this text. (last update: 2025-05-31)</p>
+        </section>
+      <?php endif; ?>
+    </div>
 
+    <div class="site-footer inner-wrapper">
       <section class="copyright-footer">
         <span class="site-footer-text">&copy;<span itemprop="copyrightYear"><?php echo date('Y'); ?></span> <a href="mailto:cfrydlewicz@gmail.com" target="_blank"><span itemprop="copyrightHolder">Corry Frydlewicz</span></a></span>
       </section>
-
       <section class="back-to-top">
         <span class="site-footer-text"><a href="#" class="i_arrow-up--after">Back to Top</a></span>
       </section>
-
       <?php if ( !is_page_template( 'page_campaign-template.php' ) ) : ?>
         <section class="follow-container">
           <h3 class="u_visually-hidden">Follow or Add Me:</h3>
@@ -59,12 +57,11 @@
           </ul>
         </section>
       <?php endif; ?>
-
     </div>
+
   </footer>
 
-<!-- BEGIN elements opened in header.php -->
-</div><!-- /.total-wrapper -->
+</div><!-- /.total-wrapper (opened in header.php) -->
 
 <div id="shadow" class="nav-trigger"></div>
 
