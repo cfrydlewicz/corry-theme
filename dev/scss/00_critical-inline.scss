@@ -408,6 +408,8 @@ body {
     gap: $gutter_lg;
     flex-direction: row;
     flex-wrap: nowrap;
+    padding-left: $gutter_lg;
+    padding-right: $gutter_lg;
   }
 
   body.archive &, // listing pages with title sections
@@ -419,12 +421,15 @@ body {
 
   > main {
     flex-grow: 1;
-    max-width: 1024px;
+
+    @media #{$mq_cols} {
+      width: 75%;
+    }
+
   }
 
   > aside {
     display: none;
-    max-width: 240px;
     width: 25%;
 
     @media #{$mq_cols} {

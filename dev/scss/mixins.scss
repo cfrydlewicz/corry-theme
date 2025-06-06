@@ -91,8 +91,8 @@ $bp_md:    768px; // iPad
 $bp_admin: 783px; // when the admin bar switches to desktop mode
 $bp_lg:    1024px; // Landscape Tablets, Laptops
 $bp_xl:    1024px + $gutter_lg*2; // Laptops, Desktops
-$bp_cols:  $bp_xl; // when sidebar appears
 $bp_max:   1336px; // site width cap
+$bp_cols:  $bp_lg; // when sidebar appears
 
 
 // Media Query Shortcuts
