@@ -63,6 +63,9 @@
             </div>
           <?php endif; ?>
         </div>
+        <div class="cta">
+          <a href="/emeryville/join-me/">Join Me</a>
+        </div>
       </section>
 
       <?php if ( comments_open() ) : ?>

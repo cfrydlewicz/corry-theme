@@ -68,7 +68,7 @@ body.page-template-page_campaign-template {
 
   }
 
-  .article-content .entry-content .cta {
+  .cta {
     display: flex;
 
     a {
@@ -416,8 +416,17 @@ body.page-template-page_campaign-template {
 
   }
 
+  .post-footer {
+    display: contents;  // makes sticky work
+  }
+
   .thanks-for-reading {
     background-color: transparent;
+
+    > .cta {
+      width: 50%;
+    }
+
   }
 
   .pre-footer {
