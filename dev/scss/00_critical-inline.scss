@@ -321,6 +321,40 @@ body {
   z-index: $z_nav+1; // edge case when primary nav and this nav are both open
 }
 
+.exposed-nav {
+  display: none;
+
+  li {
+    display: none;
+  }
+
+  @media #{$mq_sm2} {
+    display: block;
+
+    li:first-child {
+      display: block;
+    }
+
+  }
+
+  @media #{$mq_md} {
+
+    li:nth-child(1) {
+      display: block;
+    }
+
+  }
+
+  @media #{$mq_lg} {
+
+    li {
+      display: block;
+    }
+
+  }
+
+}
+
 .header-nav {
 
   > button {
