@@ -157,10 +157,6 @@ body {
 
   }
 
-  > footer {
-    padding-bottom: $footer_height;
-  }
-
   body.wp-singular & > footer {
     min-height: calc(100vh - #{$header_height}); // ensure footer is fat (for secondary header scripts)
   }

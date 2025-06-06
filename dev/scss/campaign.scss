@@ -434,11 +434,15 @@ body.page-template-page_campaign-template {
   }
 
   .site-footer {
+    background: none;
     background-color: transparent;
     border-width: 0;
+    filter: none;
 
-    &::before {
+    &::before { // override texture
+      background: none;
       content: '';
+      display: none;
     }
 
     section {
