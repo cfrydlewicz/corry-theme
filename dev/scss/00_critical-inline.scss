@@ -460,13 +460,13 @@ body {
     max-width: 90vw;
     opacity: 0;
     position: absolute;
-    right: -320px;
+    right: -1*$nav_width;
     top: $header_height;
     transition-duration: 0.25s;
     transition-property: opacity, right, visibility;
     transition-timing-function: ease-in;
     visibility: hidden;
-    width: 320px;
+    width: $nav_width;
   }
 
   &[aria-expanded="true"] {

@@ -156,13 +156,13 @@ body.page-template-page_campaign-template {
   }
 
   .inner-wrapper {
-    max-width: 1072px;
+    max-width: $bp_xl;
   }
 
   @media #{$mq_lg} {
 
     .inner-wrapper--at-lg {
-      max-width: 1072px;
+      max-width: $bp_xl;
     }
 
   }
