@@ -9,7 +9,7 @@
               <li><a class="i_mail" href="https://forms.gle/6pbe5HsXqWkBfeDj6" target="_blank">Newsletter Sign Up</a></li>
             <?php else : ?>
               <li><a class="i_mail" href="/emailsubscribe?utm_source=site-footer" target="_blank">Email me</a> to join my newsletter.</li>
-              <li><a class="i_rss" href="/subscribe-to-corrys-blog-with-rss/" target="_blank">RSS</a> is the next best way to follow <em>new posts</em>.</li>
+              <li><a class="i_rss" href="/subscribe-to-corrys-blog-with-rss/" target="_blank">RSS</a> is the best way to follow <em>new posts</em>.</li>
               <!--li><a class="i_heart" href="https://www.patreon.com/CorryFrydlewicz" target="_blank" rel="noreferrer" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://www.patreon.com']);">Patreon</a> is where I'll share more once I have a few subscribers.</li-->
             <?php endif; ?>
               <li><a class="i_bluesky u_nowrap" href="/bluesky" rel="noreferrer" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://bsky.app']);">Bluesky</a></li>
@@ -39,13 +39,13 @@
           <section class="follow-container">
             <h3 class="u_visually-hidden">Follow or Add Me:</h3>
             <ul>
-              <li><a class="i_mail"          title="Get Emails When I Post"         href="/emailsubscribe?utm_source=site-footer" target="_blank"></a></li>
+              <li><a class="i_mail"          title="Email Newsletter"               href="/emailsubscribe?utm_source=site-footer" target="_blank"></a></li>
               <li><a class="i_rss"           title="My RSS Feed"                    href="/subscribe-to-corrys-blog-with-rss/"></a></li>
            <!--li><a class="i_heart"         title="My Patreon"                     href="/patreon"                                                                       rel="noreferrer" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://www.patreon.com']);"></a></li-->
               <li><a class="i_bluesky"       title="cfrydlewicz on Bluesky"         href="/bluesky"                                                                       rel="noreferrer" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://bsky.app']);"></a></li>
               <li><a class="i_discord"       title="My Discord Server"              href="/discord"                                                                       rel="noreferrer" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://discord.gg']);"></a></li>
            <!--li><a class="i_mastodon"      title="Follow Me on Mastodon"          href="https://sfba.social/@cfrydlewicz"                                               rel="me"         target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://twipped.social']);"></a></li-->
-              <li><a class="i_pinterest"     title="My Refern Boards"               href="https://my.refern.app/corry"                                                    rel="noreferrer" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://www.refern.app']);"></a></li>
+           <!--li><a class="i_pinterest"     title="My Refern Boards"               href="https://my.refern.app/corry"                                                    rel="noreferrer" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://www.refern.app']);"></a></li-->
               <li><a class="i_spotify"       title="My Spotify Profile & Playlists" href="https://open.spotify.com/user/1232018881?si=2dd1be0bb2304895"                   rel="noreferrer" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://spotify.com/']);"></a></li>
               <li><a class="i_steam"         title="My Steam Profile"               href="https://steamcommunity.com/id/cfrydlewicz/"                                     rel="noreferrer" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://steamcommunity.com']);"></a></li>
            <!--li><a class="i_game"          title="My Final Fantasy XIV Character" href="https://na.finalfantasyxiv.com/lodestone/character/2240266/"                    rel="noreferrer" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://na.finalfantasyxiv.com']);"></a></li-->
