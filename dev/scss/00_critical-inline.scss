@@ -444,13 +444,9 @@ body {
     &.sticky {
 
       .sidebar-inner {
-        max-height: calc(100vh - $header_height--max - $footer_height);
+        max-height: calc(100vh - #{$header_height--max} - #{$footer_height});
         position: sticky;
         top: 90px;
-      }
-
-      body.single & {
-        //padding-top: 84vh; // start beneath header image
       }
 
     }
