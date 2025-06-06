@@ -347,7 +347,11 @@ body {
 
   li {
     display: none;
-    margin: 0;
+
+    &:not(:last-child) {
+      margin-bottom: 0; // override
+    }
+
   }
 
   @media #{$mq_sm3} {

@@ -41,7 +41,9 @@
 .bezel--horizontal {
   border-width: 0 1px;
 }
+
 @media #{$mq_md} {
+
   .bezel--horizontal--at-md {
     border-bottom-color: $c_grey50;
     border-left-color: $c_light20;
@@ -50,8 +52,11 @@
     border-top-color: $c_light20;
     border-width: 0 1px;
   }
+
 }
+
 @media #{$mq_lg} {
+
   .bezel--horizontal--at-lg {
     border-bottom-color: $c_grey50;
     border-left-color: $c_light20;
@@ -60,6 +65,7 @@
     border-top-color: $c_light20;
     border-width: 0 1px;
   }
+
 }
 
 .site-header {
@@ -82,6 +88,7 @@
 }
 
 .header-logo a,
+.exposed-nav > button,
 .header-search,
 .header-nav a,
 .header-nav > button,
@@ -147,15 +154,19 @@ main .article-card {
 
 // Comments
 .comment-list {
+
   article {
     @extend .bezel;
     @extend .grainy;
   }
+
 }
 
 .respond-container .comment-form input[type="checkbox"] + label {
+
   &::before,
   &::after {
     transition: all 0.2s;
   }
+
 }
