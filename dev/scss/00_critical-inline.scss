@@ -8,12 +8,19 @@
 :root {
 
   // theme colors
-  --c_primary:      $c_primary;
-  --c_secondary:    $c_secondary;
-  --c_accent:       $c_accent;
-  --c_accent2:      $c_accent2;
-  --c_dark-base:    $c_dark-base;
-  --c_light-base:   $c_light-base;
+  --c_primary:      #{$c_primary};
+  --c_secondary:    #{$c_secondary};
+  --c_accent:       #{$c_accent};
+  --c_accent2:      #{$c_accent2};
+  --c_dark-base:    #{$c_dark-base};
+  --c_light-base:   #{$c_light-base};
+
+  // theme color uses
+  --c_basetext:     #{$c_basetext};
+  --c_link:         #{$c_link};
+  --c_hover:        #{$c_hover};
+  --c_active:       #{$c_active};
+  --c_visited:      #{$c_visited};
 
   // campaign site color vars
   --cmpn_teal:      #{$c_primary-dark};
@@ -346,7 +353,6 @@ body {
 
   &:not(:hover):not(:active):not(:focus) {
     background-color: transparent;
-    color: $c_white;
   }
 
 }
@@ -365,20 +371,31 @@ body {
       margin-bottom: 0; // override
     }
 
-    button {
-      font-weight: 500;
+  }
+
+  button {
+    color: var(--c_link);
+    font-weight: 500;
+
+    &:not(:hover):not(:active):not(:focus) {
+      color: var(--c_link);
     }
 
-    &.emeryville {
-      background-color: var(--cmpn_paleteal);
-      background: linear-gradient(0deg, var(--cmpn_palerteal) 0%, var(--cmpn_paleteal) 100%);
-      color: var(--cmpn_link);
+    &:hover {
+      background-color: var(--c_hover);
+      color: $c_truewhite;
+    }
 
-      &:hover {
-        background-color: var(--cmpn_hover);
-        color: $c_truewhite;
-      }
+  }
 
+  li.emeryville  button {
+    background-color: var(--cmpn_paleteal);
+    background: linear-gradient(0deg, var(--cmpn_palerteal) 0%, var(--cmpn_paleteal) 100%);
+    color: var(--cmpn_link);
+
+    &:hover {
+      background-color: var(--cmpn_hover);
+      color: $c_truewhite;
     }
 
   }
@@ -413,6 +430,10 @@ body {
 .header-nav {
 
   > button {
+
+    &:not(:hover):not(:active):not(:focus) {
+      color: $c_truewhite;
+    }
 
     .nav-menu-icon {
       font-size: 20px;
