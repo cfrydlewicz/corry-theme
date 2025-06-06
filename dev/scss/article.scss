@@ -478,8 +478,11 @@
     hr {
       margin: 2em auto;
       width: 60%;
-      border: none;
-      border-top: 1px solid $c_accent;
+      border-color: $c_accent;
+      border-image-slice: 1;
+      border-image-source: linear-gradient( 90deg, rgba($c_accent-hex,0) 0%, rgba($c_accent-hex, 1) 50%, rgba($c_accent-hex,0) 100%);
+      border-style: solid;
+      border-width: 1px 0 0;
     }
 
     // Tables
