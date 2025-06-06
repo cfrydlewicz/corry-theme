@@ -195,4 +195,8 @@
   </aside>
 
 </div><!--.main-columns-wrapper-->
+
+<footer>
+<!--/footer> ENDs in footer.php -->
+
 <?php get_footer(); ?>

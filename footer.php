@@ -1,4 +1,4 @@
-  <footer id="a_footer" class="footer-container">
+  <div id="a_footer" class="footer-container">
 
     <div class="pre-footer">
       <div class="inner-wrapper">
@@ -63,8 +63,9 @@
       </div>
     </div>
 
-  </footer>
+  </div>
 
+</footer><!-- (opened in content templates) -->
 </div><!-- /.total-wrapper (opened in header.php) -->
 
 <div id="shadow" class="nav-trigger"></div>
