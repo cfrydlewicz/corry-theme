@@ -1,16 +1,25 @@
 // Single Posts
 .article-content.category-microblog {
-
-  .article-content .entry-header img {
-    max-height: 400px;
-  }
-
 }
 
 
 // Microblogging Listing Page (Feed)
 // https://corryfrydlewicz.com/category/microblog/
 body.category-microblog {
+
+  main .article-list {
+
+    @media #{$mq_md} {
+      padding-left: $gutter;
+      padding-right: $gutter;
+    }
+
+    @media #{$mq_cols} {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+  }
 
   main .article-card {
 
