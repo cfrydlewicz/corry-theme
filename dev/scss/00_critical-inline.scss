@@ -356,6 +356,7 @@ body {
 .exposed-nav button,
 .header-nav > button {
   border-radius: 0;
+  border-width: 2px;
   height: $header_height;
   padding: 0 12px;
 
@@ -383,7 +384,6 @@ body {
 
   button {
     color: var(--c_link);
-    font-weight: 500;
 
     &:not(:hover):not(:active):not(:focus) {
       color: var(--c_link);
@@ -391,6 +391,7 @@ body {
 
     &:hover {
       background-color: var(--c_hover);
+      border-color: var(--c_hover-dark);
       color: $c_truewhite;
     }
 
@@ -398,11 +399,17 @@ body {
 
   li.emeryville  button {
     background-color: var(--cmpn_paleteal);
-    background: linear-gradient(0deg, var(--cmpn_palerteal) 0%, var(--cmpn_paleteal) 100%);
-    color: var(--cmpn_link);
+    background: linear-gradient(180deg, var(--cmpn_palerteal) 0%, var(--cmpn_paleteal) 100%);
+    border-color: var(--cmpn_paleteal);
+
+    &:not(:hover):not(:active):not(:focus) {
+      color: var(--cmpn_link);
+    }
 
     &:hover {
       background-color: var(--cmpn_hover);
+      background: linear-gradient(180deg, var(--cmpn_hover) 0%, var(--cmpn_hover-dark) 100%);
+      border-color: var(--cmpn_hover-dark);
       color: $c_truewhite;
     }
 
