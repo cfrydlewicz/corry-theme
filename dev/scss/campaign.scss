@@ -10,7 +10,9 @@ body.page-template-page_campaign-template {
 
     &:focus {
       outline-color: var(--cmpn_link);
+      outline-offset: 4px;
       outline-style: dashed;
+      outline-width: 2px;
     }
 
   }
@@ -37,12 +39,19 @@ body.page-template-page_campaign-template {
     color: var(--cmpn_link); // override
   }
 
-  button {
+  button,
+  .cta a {
     background-color: var(--cmpn_link);
+    border-color: var(--cmpn_link-dark);
+    border-radius: 0.75em;
+    border-style: solid;
+    border-width: 2px;
+    color: $c_truewhite !important;
 
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: var(--cmpn_hover);
-      border-color: var(--cmpn_hover-dark);
+      border-color: var(--cmpn_hover-dark) !important;
       color: $c_truewhite;
     }
 
@@ -52,94 +61,76 @@ body.page-template-page_campaign-template {
       color: $c_truewhite;
     }
 
-    &.cta {
-      background-color: var(--cmpn_active);
-      border-color: var(--cmpn_active-dark);
-      color: $c_truewhite;
+  }
 
-      &:hover {
-        background-color: var(--cmpn_link);
-        border-color: var(--cmpn_link-dark);
-        color: $c_truewhite;
-      }
+  button.cta,
+  .cta a {
+    background-color: var(--cmpn_active);
+    border-color: var(--cmpn_active-dark);
+    color: $c_truewhite;
+    font-size: 1.25em;
+    font-weight: 500;
+    line-height: 1;
+    padding: $gutter*0.5 $gutter;
 
-      &:active {
-        background-color: var(--cmpn_active);
-        border-color: var(--cmpn_active-dark);
-        color: $c_truewhite;
+    @media #{$mq_lg} {
+      padding: $gutter_lg*0.5 $gutter_lg;
+    }
+
+    // @extend .i_arrow-right--after; and animate
+    &::after,
+    &[target="_blank"]:not([href*="corryfrydlewicz.com"])::after { // override
+      content: "\edbb";
+      display: inline-block;
+      font-family: icomoon;
+      font-size: 1em;
+      font-style: normal;
+      font-variant: normal;
+      font-weight: 400;
+      margin-left: .375em;
+      margin-top: 0;
+      text-transform: none;
+      transition-duration: 0.125s;
+      transition-property: margin-left;
+      transition-timing-function: ease-in;
+      speak: none;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+
+      &::after,
+      &[target="_blank"]:not([href*="corryfrydlewicz.com"])::after { // override
+        margin-left: 0.75em;
       }
 
     }
 
+    &:hover,
+    &:focus {
+      background-color: var(--cmpn_link);
+      border-color: var(--cmpn_link-dark);
+      color: $c_truewhite;
+    }
+
+    &:active {
+      background-color: var(--cmpn_active);
+      border-color: var(--cmpn_active-dark);
+      color: $c_truewhite;
+    }
+
   }
 
-  .cta {
+  .cta:not[button] {
     display: flex;
 
     a {
       align-items: center;
-      background-color: var(--cmpn_orange);
-      border-radius: 0.75em;
-      color: $c_truewhite !important;
       display: flex;
-      font-size: 1.25em;
-      font-weight: 500;
-      line-height: 1;
-      padding: $gutter*0.5 $gutter;
       text-decoration: none;
       word-break: normal;
       word-wrap: normal;
-
-      // @extend .i_arrow-right--after; and animate
-      &::after,
-      &[target="_blank"]:not([href*="corryfrydlewicz.com"])::after { // override
-        content: "\edbb";
-        display: inline-block;
-        font-family: icomoon;
-        font-size: 1em;
-        font-style: normal;
-        font-variant: normal;
-        font-weight: 400;
-        margin-left: .375em;
-        margin-top: 0;
-        text-transform: none;
-        transition-duration: 0.125s;
-        transition-property: margin-left;
-        transition-timing-function: ease-in;
-        speak: none;
-      }
-
-      &:hover,
-      &:focus,
-      &:active {
-
-        &::after,
-        &[target="_blank"]:not([href*="corryfrydlewicz.com"])::after { // override
-          margin-left: 0.75em;
-        }
-
-      }
-
-      &:hover,
-      &:focus {
-        background-color: var(--cmpn_link);
-        border-color: var(--cmpn_link-dark);
-      }
-
-      &:active {
-        background-color: var(--cmpn_active);
-        border-color: var(--cmpn_active-dark);
-      }
-
-      &:focus {
-        outline-offset: 4px;
-        outline-width: 2px;
-      }
-
-      @media #{$mq_lg} {
-        padding: $gutter_lg*0.5 $gutter_lg;
-      }
-
     }
 
   }
@@ -239,7 +230,7 @@ body.page-template-page_campaign-template {
     .header-nav {
 
       > button {
-        border-color: var(--cmph_paleteal);
+        border-color: transparent;
 
         &:not(:hover):not(:active):not(:focus) {
           color: var(--cmpn_link);
@@ -251,6 +242,7 @@ body.page-template-page_campaign-template {
 
         > button:not(:hover):not(:active):not(:focus) {
           background-color: var(--cmpn_active);
+          border-color: var(--cmpn_active-dark);
           color: $c_truewhite;
         }
 
@@ -290,7 +282,7 @@ body.page-template-page_campaign-template {
     }
 
     .article-progress-bar {
-      background: linear-gradient(90deg, var(--cmpn_paleteal) 0, var(--cmpn_teal) 100%);
+      background: linear-gradient(90deg, var(--cmpn_lightteal) 0, var(--cmpn_teal) 100%);
     }
 
   }

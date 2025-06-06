@@ -159,8 +159,8 @@ $z_header: 5;
 
 // Buttons
 @mixin button($size:null) {
-  background-color: $c_primary;
-  border-color: $c_primary-dim;
+  background-color: $c_link;
+  border-color: $c_link-dark;
   border-radius: $border-radius;
   border-style: solid;
   border-width: 2px;
@@ -176,19 +176,19 @@ $z_header: 5;
   &:hover,
   &:focus {
     background-color: $c_hover;
-    border-color: $c_accent-dim;
-    color: $c_trueblack;
+    border-color: $c_hover-dark;
+    color: $c_truewhite;
   }
 
   &:focus {
-    outline: 1px dashed $c_primary;
+    outline: 2px dashed $c_primary;
     outline-offset: 4px;
   }
 
   &:active {
     background-color: $c_active;
     border-color: $c_accent-dim;
-    color: $c_trueblack;
+    color: $c_truewhite;
   }
 
   @if $size == 'big' {
