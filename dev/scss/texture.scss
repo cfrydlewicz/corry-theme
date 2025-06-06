@@ -144,18 +144,6 @@ main .article-card {
 
 }
 
-.post-footer {
-
-  section {
-    @extend .bezel--vertical;
-  }
-
-  @media #{$mq_lg} {
-    @extend .bezel--horizontal--at-lg;
-  }
-
-}
-
 
 // Comments
 .comment-list {
