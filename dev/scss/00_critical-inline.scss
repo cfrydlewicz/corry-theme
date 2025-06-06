@@ -321,14 +321,36 @@ body {
   z-index: $z_nav+1; // edge case when primary nav and this nav are both open
 }
 
+.exposed-nav,
+.header-nav {
+
+  > button {
+    border-radius: 0;
+    height: $header_height;
+    padding: 0 12px;
+
+    &:not(:hover):not(:active):not(:focus) {
+      background-color: transparent;
+      color: $c_white;
+    }
+
+  }
+
+}
+
 .exposed-nav {
   display: none;
 
-  li {
-    display: none;
+  ul {
+    display: flex;
   }
 
-  @media #{$mq_sm2} {
+  li {
+    display: none;
+    margin: 0;
+  }
+
+  @media #{$mq_sm3} {
     display: block;
 
     li:first-child {
@@ -358,14 +380,6 @@ body {
 .header-nav {
 
   > button {
-    border-radius: 0;
-    height: $header_height;
-    padding: 0 12px;
-
-    &:not(:hover):not(:active):not(:focus) {
-      background-color: transparent;
-      color: $c_white;
-    }
 
     .nav-menu-icon {
       font-size: 20px;
