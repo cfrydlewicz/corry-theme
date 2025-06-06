@@ -42,25 +42,30 @@ body.page-template-page_campaign-template {
 
     &:hover {
       background-color: var(--cmpn_hover);
+      border-color: var(--cmpn_hover-dark);
       color: $c_truewhite;
     }
 
     &:active {
       background-color: var(--cmpn_active);
+      border-color: var(--cmpn_active-dark);
       color: $c_truewhite;
     }
 
     &.cta {
-      background-color: var(--cmpn_orange);
+      background-color: var(--cmpn_active);
+      border-color: var(--cmpn_active-dark);
       color: $c_truewhite;
 
       &:hover {
-        background-color: var(--cmpn_teal);
+        background-color: var(--cmpn_link);
+        border-color: var(--cmpn_link-dark);
         color: $c_truewhite;
       }
 
       &:active {
         background-color: var(--cmpn_active);
+        border-color: var(--cmpn_active-dark);
         color: $c_truewhite;
       }
 
@@ -118,10 +123,12 @@ body.page-template-page_campaign-template {
       &:hover,
       &:focus {
         background-color: var(--cmpn_link);
+        border-color: var(--cmpn_link-dark);
       }
 
       &:active {
         background-color: var(--cmpn_active);
+        border-color: var(--cmpn_active-dark);
       }
 
       &:focus {
@@ -232,7 +239,7 @@ body.page-template-page_campaign-template {
     .header-nav {
 
       > button {
-        border-width: 0;
+        border-color: var(--cmph_paleteal);
 
         &:not(:hover):not(:active):not(:focus) {
           color: var(--cmpn_link);

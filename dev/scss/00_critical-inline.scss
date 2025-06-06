@@ -402,7 +402,7 @@ body {
 
   li.emeryville  button {
     background-color: var(--cmpn_paleteal);
-    background: linear-gradient(180deg, var(--cmpn_palerteal) 0%, var(--cmpn_paleteal) 100%);
+    background: linear-gradient(180deg, var(--cmpn_paleteal) 0%, var(--cmpn_lightteal) 100%);
     border-color: var(--cmpn_paleteal);
 
     &:not(:hover):not(:active):not(:focus) {
@@ -410,10 +410,10 @@ body {
     }
 
     &:hover {
-      background-color: var(--cmpn_hover);
-      background: linear-gradient(180deg, var(--cmpn_hover) 0%, var(--cmpn_hover-dark) 100%);
-      border-color: var(--cmpn_hover-dark);
-      color: $c_truewhite;
+      background: none;
+      background-color: var(--c_hover);
+      border-color: var(--c_hover-dark);
+      //color: $c_truewhite;
     }
 
   }
