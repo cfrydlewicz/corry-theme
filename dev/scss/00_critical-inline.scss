@@ -8,28 +8,36 @@
 :root {
 
   // theme colors
-  --c_primary:      #{$c_primary};
-  --c_secondary:    #{$c_secondary};
-  --c_accent:       #{$c_accent};
-  --c_accent2:      #{$c_accent2};
-  --c_dark-base:    #{$c_dark-base};
-  --c_light-base:   #{$c_light-base};
+  --c_primary:         #{$c_primary};
+  --c_secondary:       #{$c_secondary};
+  --c_accent:          #{$c_accent};
+  --c_accent2:         #{$c_accent2};
+  --c_dark-base:       #{$c_dark-base};
+  --c_light-base:      #{$c_light-base};
 
   // theme color uses
-  --c_basetext:     #{$c_basetext};
-  --c_link:         #{$c_link};
-  --c_hover:        #{$c_hover};
-  --c_active:       #{$c_active};
-  --c_visited:      #{$c_visited};
+  --c_basetext:        #{$c_basetext};
+  --c_link:            #{$c_link};
+  --c_link-dark:       #{$c_link-dark};
+  --c_hover:           #{$c_hover};
+  --c_hover-dark:      #{$c_hover-dark};
+  --c_active:          #{$c_active};
+  --c_active-dark:     #{$c_active-dark};
+  --c_visited:         #{$c_visited};
 
   // campaign site color vars
-  --cmpn_teal:      #{$c_primary-dark};
-  --cmpn_paleteal:  color-mix(in lab, #{$c_primary-dark} 25%, #fff 100%);
-  --cmpn_palerteal: color-mix(in lab, #{$c_primary-dark} 12.5%, #fff 100%);
-  --cmpn_orange:    #{$c_accent};
-  --cmpn_link:      #{$c_primary-dark};
-  --cmpn_hover:     #{$c_accent};
-  --cmpn_active:    #{$c_secondary-dark};
+  --cmpn_teal:         #{$c_primary-dark};
+  --cmpn_paleteal:     color-mix(in lab, #{$c_primary-dark} 25%, #fff 100%);
+  --cmpn_palerteal:    color-mix(in lab, #{$c_primary-dark} 12.5%, #fff 100%);
+  --cmpn_orange:       #{$c_accent};
+  --cmpn_darkorange:   #{$c_accent-dark};
+  --cmpn_link:         #{$c_primary-dark};
+  --cmpn_link-dark:    #{$c_primary-darker};
+  --cmpn_hover:        #{$c_accent};
+  --cmpn_hover-dark:   #{$c_accent-dark};
+  --cmpn_active:       #{$c_secondary-dark};
+  --cmpn_active-dark:  #{$c_secondary-dark};
+
 }
 
 // Critical Utility
