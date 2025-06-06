@@ -49,11 +49,11 @@ $c_grey60:    mix(black, $c_dark-base, 40%);
 $c_grey70:    mix(black, $c_dark-base, 30%);
 $c_grey80:    mix(black, $c_dark-base, 20%); // #253034 - rgb(37, 48, 52)
 $c_grey90:    mix(black, $c_dark-base, 10%);
-$c_light10:   mix(white, $c_dark-base, 10%);
-$c_light20:   mix(white, $c_dark-base, 20%);
+$c_light10:   mix(white, $c_dark-base, 10%); // #435054
+$c_light20:   mix(white, $c_dark-base, 20%); // #586367
 $c_light30:   mix(white, $c_dark-base, 30%);
 $c_light40:   mix(white, $c_dark-base, 40%);
-$c_light50:   mix(white, $c_dark-base, 50%);
+$c_light50:   mix(white, $c_dark-base, 50%); // #979ea0
 $c_light60:   mix(white, $c_dark-base, 60%);
 $c_light70:   mix(white, $c_dark-base, 70%);
 $c_light80:   mix(white, $c_dark-base, 80%);
