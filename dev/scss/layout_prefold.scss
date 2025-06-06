@@ -394,13 +394,18 @@ li {
   }
 
   // Flashy Button Hovers
-  @media #{$mq_mouse} {
+  main & {
 
-    &:hover {
+    @media #{$mq_mouse} {
 
-      .cta-container button {
+      &:hover .cta-container button {
         right: $gutter_lg*2;
         transform: rotate(2.5deg) scale(1.25);
+
+        @media #{$mq_cols} {
+          right: $gutter_lg;
+        }
+
       }
 
     }
