@@ -184,9 +184,11 @@
       <?php endif; // Microblog or not ?>
 
       <?php if ( is_active_sidebar( 'widget_listing-sidebar1' ) ) : ?>
-        <ul class="widget-area">
-          <?php dynamic_sidebar( 'widget_listing-sidebar1' ); ?>
-        </ul>
+        <section>
+          <ul class="widget-area">
+            <?php dynamic_sidebar( 'widget_listing-sidebar1' ); ?>
+          </ul>
+        </section>
       <?php endif; ?>
 
     </div>
