@@ -7,7 +7,7 @@
       'style'             => 'ol',
       'short_ping'        => true,
     ) ); ?>
-  </ol><!-- .comment-list -->
+  </ol>
 
   <?php the_comments_pagination(); ?>
 

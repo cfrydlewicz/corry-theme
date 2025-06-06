@@ -52,11 +52,10 @@
               <li><a class="i_linkedin"      title="My LinkedIn Profile"            href="https://www.linkedin.com/in/corryfrydlewicz"                                    rel="noreferrer" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://www.linkedin.com']);"></a></li>
               <li><a class="i_github"        title="My GitHub Profile"              href="https://github.com/cfrydlewicz"                                                 rel="noreferrer" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://github.com']);"></a></li>
            <!--li><a class="i_stackoverflow" title="My StackOverflow Profile"       href="https://stackoverflow.com/users/967727/cfrydlewicz"                             rel="noreferrer" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://stackoverflow.com']);"></a></li-->
-           <!--li><a class="i_magic"         title="My Magic: The Gathering Decks"  href="https://www.moxfield.com/users/ultros"                                          rel="noreferrer" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://www.moxfield.com']);"></a></li-->
+              <li><a class="i_magic"         title="My Magic: The Gathering Decks"  href="https://www.moxfield.com/users/ultros"                                          rel="noreferrer" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://www.moxfield.com']);"></a></li>
            <!--li><a class="i_lol"           title="My League of Legends Profile"   href="https://www.leagueofgraphs.com/summoner/na/Ultros"                              rel="noreferrer" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://www.leagueofgraphs.com/']);"></a></li-->
            <!--li><a class="i_twitch"        title="Ultros_the_Octopus on Twitch"   href="https://www.twitch.tv/ultros_the_octopus"                                       rel="noreferrer" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://www.twitch.tv']);"></a></li-->
            <!--li><a class="i_psn"           title="My PlayStation Network Profile" href="https://us.playstation.com/publictrophy/?onlinename=Hand_Banana51"              rel="noreferrer" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://us.playstation.com']);"></a></li-->
-           <!--li><a class="i_xbl"           title="My Xbox Live Profile"           href="https://www.xboxgamertag.com/search/viciouslobo/"                               rel="noreferrer" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://www.xboxgamertag.com']);"></a></li-->
             </ul>
           </section>
         <?php endif; ?>
@@ -65,8 +64,8 @@
 
   </div>
 
-</footer><!-- (opened in content templates) -->
-</div><!-- /.total-wrapper (opened in header.php) -->
+</footer>
+</div>
 
 <div id="shadow" class="nav-trigger"></div>
 

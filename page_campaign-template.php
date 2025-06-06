@@ -76,7 +76,6 @@
 
     </div>
 
-  <!--/footer> ENDs in footer.php -->
-
 <?php endwhile; wp_reset_postdata(); ?>
-<?php get_footer(); ?>
+<?php // <footer> ENDs in footer.php
+  get_footer(); ?>

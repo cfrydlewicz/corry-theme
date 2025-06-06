@@ -41,7 +41,7 @@
                   <button class="i_arrow-right--after">Read it Now!</button>
                 </a>
               </div>
-            </div><!--.entry-content-->
+            </div>
             <footer class="entry-footer sp_horizontal-padding">
               <div class="post-stats"><span class="post-date"><?php the_date(); ?></span> <span class="separator"></span> <span class="word-count"><?php word_count(); ?> words</span></div>
             </footer>
@@ -81,7 +81,7 @@
               <button class="i_arrow-right--after">Latest Posts</button>
             </a>
           </div>
-        </div><!--.entry-content-->
+        </div>
         <footer class="entry-footer sp_horizontal-padding">
           <div class="post-stats"><span class="post-date">20XX</span> <span class="separator"></span> <span class="word-count">0 words</span></div>
         </footer>
@@ -124,7 +124,7 @@
                     <div class="cta-container">
                       <a href="<?php the_permalink(); ?>" tabindex="-1"><button class="i_arrow-right--after">Read it Now!</button></a>
                     </div>
-                  </div><!--.entry-content-->
+                  </div>
                   <footer class="entry-footer">
                     <div class="post-stats"><span class="post-date"><?php the_date(); ?></span> <span class="separator"></span> <span class="word-count"><?php word_count(); ?> words</span></div>
                   </footer>
@@ -165,7 +165,7 @@
                     <div class="cta-container">
                       <a href="<?php the_permalink(); ?>" tabindex="-1"><button class="i_arrow-right--after">Read it Now!</button></a>
                     </div>
-                  </div><!--.entry-content-->
+                  </div>
                   <footer class="entry-footer">
                     <div class="post-stats"><span class="post-date"><?php the_date(); ?></span> <span class="separator"></span> <span class="word-count"><?php word_count(); ?> words</span></div>
                   </footer>
@@ -194,9 +194,9 @@
     </div>
   </aside>
 
-</div><!--.main-columns-wrapper-->
+</div>
 
 <footer>
-<!--/footer> ENDs in footer.php -->
 
-<?php get_footer(); ?>
+<?php // <footer> ENDs in footer.php
+  get_footer(); ?>

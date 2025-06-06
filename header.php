@@ -23,7 +23,6 @@ $saveData = (isset($_SERVER["HTTP_SAVE_DATA"]) && stristr($_SERVER["HTTP_SAVE_DA
   <meta name="twitter:site" content="@cfrydlewicz">
 
   <?php if ( is_singular() ) : ?>
-    <!--link rel="canonical" href="<?php echo wp_get_canonical_url(); ?>"-->
     <meta name="description" content="<?php echo get_the_excerpt(); ?>">
     <meta name="og:description" property="og:description" content="<?php echo get_the_excerpt(); ?>">
     <meta name="twitter:description" content="<?php echo get_the_excerpt(); ?>">
@@ -116,7 +115,7 @@ $saveData = (isset($_SERVER["HTTP_SAVE_DATA"]) && stristr($_SERVER["HTTP_SAVE_DA
               <svg xmlns="https://www.w3.org/2000/svg" xml:space="preserve" viewBox="1 1.3 249.3 100.9"><title>Corry</title><path d="M28.3 68.8c-7.6 0-14-2.7-19.3-7.9-5.3-5.3-8-11.7-8-19.3V28.8c0-7.5 2.7-14 8-19.3a26.3 26.3 0 0 1 19.3-7.9c7.6 0 14 2.7 19.3 8a26.3 26.3 0 0 1 8 18.2H42.8c-.2-3.5-1.6-6.6-4.2-9.2a14 14 0 0 0-10.3-4.2c-4 0-7.5 1.4-10.3 4.2a13.9 13.9 0 0 0-4.2 10.2v12.8c0 4 1.4 7.4 4.2 10.2A14 14 0 0 0 28.3 56c4 0 7.4-1.5 10.3-4.4 2.5-2.6 3.9-5.8 4.2-9.6h12.8a27.3 27.3 0 0 1-27.3 26.8zm60.6 0c-7.6 0-14-2.7-19.3-7.9-5.3-5.3-8-11.7-8-19.3V28.5c0-7.4 2.7-13.8 8-19.1a26 26 0 0 1 19.3-8.1 26 26 0 0 1 19.3 8.1c5.3 5.4 8 11.8 8 19.1v13.1c0 7.6-2.7 14-8 19.3a26.3 26.3 0 0 1-19.3 7.9zm14.5-40.3c0-3.8-1.4-7.2-4.2-10.1a13.7 13.7 0 0 0-10.3-4.3c-4 0-7.5 1.4-10.3 4.3a14.2 14.2 0 0 0-4.2 10.1v13.1c0 3.8 1.4 7.2 4.2 10.1 2.8 2.9 6.2 4.3 10.3 4.3 4 0 7.4-1.4 10.3-4.3 2.8-2.9 4.2-6.3 4.2-10.1V28.5zm46.1-14.4c-4 0-7.5 1.4-10.3 4.2a14 14 0 0 0-4.2 10.3v40.2h-12.8v-40c0-7.5 2.7-14 8-19.4a26 26 0 0 1 19.3-8.1h9.2v12.8h-9.2zm37.3 0a14.3 14.3 0 0 0-14.5 14.5v40.2h-12.8v-40c0-7.5 2.7-14 8-19.4a26.1 26.1 0 0 1 19.3-8.1h9.2v12.8h-9.2zm63.5 60.8c0 7.6-2.7 14-8.2 19.3a28 28 0 0 1-20.3 8V89.4c4.5 0 8.3-1.4 11.2-4.3 3-2.8 4.5-6.3 4.5-10.4v-6h-8.7a26 26 0 0 1-19.3-8.1c-5.3-5.4-8-11.8-8-19.2V1.3h12.8v40.5c0 3.9 1.4 7.2 4.2 10a14 14 0 0 0 10.3 4.2h8.7V1.3h12.8v73.6z"/></svg>
               <div class="logo-supplement-header"><span class="u_visually-hidden">Corry Frydlewicz</span> for Emeryville<span class="u_visually-hidden"> City Council</span></div>
             </a>
-          </section><!--.header-logo-->
+          </section>
 
           <section class="screen-reader-nav u_visually-hidden">
             <nav>
@@ -131,7 +130,7 @@ $saveData = (isset($_SERVER["HTTP_SAVE_DATA"]) && stristr($_SERVER["HTTP_SAVE_DA
                 <li><a href="#a_footer">Jump to footer</a></li>
               </ul>
             </nav>
-          </section><!--.screen-reader-nav-->
+          </section>
 
           <section class="header-nav">
             <button class="nav-trigger"><span class="nav-menu-icon">☰</span> <span class="nav-menu-text"> Menu</span></button>
@@ -156,7 +155,7 @@ $saveData = (isset($_SERVER["HTTP_SAVE_DATA"]) && stristr($_SERVER["HTTP_SAVE_DA
               <?php endif; ?>
               <svg xmlns="https://www.w3.org/2000/svg" xml:space="preserve" viewBox="1 1.3 249.3 100.9"><title>Corry</title><path d="M28.3 68.8c-7.6 0-14-2.7-19.3-7.9-5.3-5.3-8-11.7-8-19.3V28.8c0-7.5 2.7-14 8-19.3a26.3 26.3 0 0 1 19.3-7.9c7.6 0 14 2.7 19.3 8a26.3 26.3 0 0 1 8 18.2H42.8c-.2-3.5-1.6-6.6-4.2-9.2a14 14 0 0 0-10.3-4.2c-4 0-7.5 1.4-10.3 4.2a13.9 13.9 0 0 0-4.2 10.2v12.8c0 4 1.4 7.4 4.2 10.2A14 14 0 0 0 28.3 56c4 0 7.4-1.5 10.3-4.4 2.5-2.6 3.9-5.8 4.2-9.6h12.8a27.3 27.3 0 0 1-27.3 26.8zm60.6 0c-7.6 0-14-2.7-19.3-7.9-5.3-5.3-8-11.7-8-19.3V28.5c0-7.4 2.7-13.8 8-19.1a26 26 0 0 1 19.3-8.1 26 26 0 0 1 19.3 8.1c5.3 5.4 8 11.8 8 19.1v13.1c0 7.6-2.7 14-8 19.3a26.3 26.3 0 0 1-19.3 7.9zm14.5-40.3c0-3.8-1.4-7.2-4.2-10.1a13.7 13.7 0 0 0-10.3-4.3c-4 0-7.5 1.4-10.3 4.3a14.2 14.2 0 0 0-4.2 10.1v13.1c0 3.8 1.4 7.2 4.2 10.1 2.8 2.9 6.2 4.3 10.3 4.3 4 0 7.4-1.4 10.3-4.3 2.8-2.9 4.2-6.3 4.2-10.1V28.5zm46.1-14.4c-4 0-7.5 1.4-10.3 4.2a14 14 0 0 0-4.2 10.3v40.2h-12.8v-40c0-7.5 2.7-14 8-19.4a26 26 0 0 1 19.3-8.1h9.2v12.8h-9.2zm37.3 0a14.3 14.3 0 0 0-14.5 14.5v40.2h-12.8v-40c0-7.5 2.7-14 8-19.4a26.1 26.1 0 0 1 19.3-8.1h9.2v12.8h-9.2zm63.5 60.8c0 7.6-2.7 14-8.2 19.3a28 28 0 0 1-20.3 8V89.4c4.5 0 8.3-1.4 11.2-4.3 3-2.8 4.5-6.3 4.5-10.4v-6h-8.7a26 26 0 0 1-19.3-8.1c-5.3-5.4-8-11.8-8-19.2V1.3h12.8v40.5c0 3.9 1.4 7.2 4.2 10a14 14 0 0 0 10.3 4.2h8.7V1.3h12.8v73.6z"/></svg>
             </a>
-          </section><!--.header-logo-->
+          </section>
 
           <section class="screen-reader-nav u_visually-hidden">
             <nav>
@@ -171,7 +170,7 @@ $saveData = (isset($_SERVER["HTTP_SAVE_DATA"]) && stristr($_SERVER["HTTP_SAVE_DA
                 <li><a href="#a_footer">Jump to footer</a></li>
               </ul>
             <nav>
-          </section><!--.screen-reader-nav-->
+          </section>
 
           <section class="exposed-nav">
             <nav>
@@ -187,7 +186,7 @@ $saveData = (isset($_SERVER["HTTP_SAVE_DATA"]) && stristr($_SERVER["HTTP_SAVE_DA
 
           <section class="header-search">
             <div class="search-container"><?php get_search_form(); ?></div>
-          </section><!--.header-search-->
+          </section>
 
           <section class="header-nav">
             <button class="nav-trigger"><span class="nav-menu-icon">☰</span> <span class="nav-menu-text"> Menu</span></button>
@@ -222,4 +221,4 @@ $saveData = (isset($_SERVER["HTTP_SAVE_DATA"]) && stristr($_SERVER["HTTP_SAVE_DA
     </section>
 
   </header>
-<!--.total-wrapper ends in footer.php -->
+<?php // .total-wrapper ends in footer.php ?>

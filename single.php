@@ -101,7 +101,7 @@
       </div>
     </aside>
 
-  </div><!--.main-columns-wrapper-->
+  </div>
 
   <footer>
 
@@ -166,8 +166,7 @@
 
     </div>
 
-  <!--/footer> ENDs in footer.php -->
-
 <?php endwhile; ?>
 
-<?php get_footer(); ?>
+<?php // <footer> ENDs in footer.php
+  get_footer(); ?>

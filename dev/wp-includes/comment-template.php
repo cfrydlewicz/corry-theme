@@ -2716,7 +2716,7 @@ function comment_form( $args = array(), $post_id = null ) {
 
 		endif;
 		?>
-	</div><!-- #respond -->
+	</div>
 	<?php
 
 	/**
