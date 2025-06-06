@@ -70,6 +70,18 @@ body.admin-bar.logged-in {
 
     }
 
+    .thanks-for-reading {
+
+      @media only screen and (min-width: $bp_md) and (min-height: 480px + $header_height--max) {
+        top: $header_height--max + $admin-bar-height--sm;
+      }
+
+      @media only screen and (min-width: $bp_admin) and (min-height: 480px + $header_height--max) {
+        top: $header_height--max + $admin-bar-height--lg;
+      }
+
+    }
+
   }
 
   &.archive {
