@@ -57,10 +57,6 @@
           </div>
         <?php endif; ?>
       </div>
-      <div class="post-stats f_small">
-        <p class="post-categories">Categories: <?php the_category(', '); ?></p>
-        <p class="post-tags"><?php the_tags(); ?></p>
-      </div>
     </section>
 
     <?php if ( comments_open() ) : ?>
@@ -72,25 +68,6 @@
       </section>
     <?php endif; ?>
 
-    <section class="read-more-container" role="complementary">
-      <?php if ( is_active_sidebar( 'widget_single-post-footer1' ) ) : ?>
-        <ul class="widget-area">
-          <?php dynamic_sidebar( 'widget_single-post-footer1' ); ?>
-        </ul>
-      <?php else : ?>
-        <ul class="u_attn">
-          <li>
-            <div class="post-footer_header widget-title">Continue Reading</div>
-            <div>
-              <ul>
-                <li><a href="/tag/favorite-post/">My Favorite Posts</a></li>
-                <li><a href="/top-tens/">My Top Ten <em>Everything</em></a></li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-      <?php endif; ?>
-    </section>
 
   </footer>
 
