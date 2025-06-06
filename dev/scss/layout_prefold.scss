@@ -175,7 +175,7 @@ li {
 
   .post-categories {
     @include f_small;
-    background-color: rgba($c_black,0.5);
+    background-color: rgba($c_grey50,0.75);
     border-top-right-radius: 0.75em;
     bottom: 0;
     display: inline-block;
@@ -186,6 +186,15 @@ li {
 
     @supports (backdrop-filter: blur(10px)) {
       backdrop-filter: blur(10px);
+    }
+
+    @media #{$mq_mouse} {
+      background-color: rgba($c_grey50,0.625);
+
+      &:hover {
+        background-color: $c_grey50;
+      }
+
     }
 
     main & {
@@ -202,8 +211,7 @@ li {
       padding: $gutter*0.25 $gutter*0.5;
     }
 
-    &:hover,
-    &:focus {
+    &:focus-within {
       background-color: $c_grey50;
     }
 
@@ -282,8 +290,12 @@ li {
   }
 
   .excerpt-container {
-    padding-bottom: $gutter;
+    padding-bottom: $gutter*0.5;
     width: 100%;
+
+    @media #{$mq_md} {
+      padding-bottom: $gutter;
+    }
 
     p {
       margin: 0;
@@ -321,6 +333,8 @@ li {
       font-size: 1rem;
       font-weight: 700;
       padding: 4px 8px;
+      position: relative;
+      right: $gutter;
       white-space: nowrap;
       z-index: $z_cta;
 
@@ -331,16 +345,49 @@ li {
     }
 
     main & {
-      height: 0.5rem; // vertically center on dividing line between content and footer
-      position: relative;
 
       button {
         font-size: 1.25rem;
         font-weight: 800;
         padding: 8px 12px;
-        position: absolute;
-        right: 0;
-        top: 0;
+
+        // Flashy Button Hovers
+        @media #{$mq_mouse} {
+          transition-duration: 0.2s;
+          transition-property: right, transform;
+          transition-timing-function: ease-in;
+        }
+
+      }
+
+      @media #{$mq_md} {
+        height: 1rem; // vertically center on dividing line between content and footer
+        position: relative;
+
+        button {
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+
+      }
+
+      @media #{$mq_lg} {
+        height: 0.5rem; // vertically center on dividing line between content and footer
+      }
+
+    }
+
+    // Flashy Button Hovers
+    @media #{$mq_mouse} {
+
+      &:hover {
+
+        .cta-container button {
+          right: $gutter_lg*2;
+          transform: rotate(2.5deg) scale(1.25);
+        }
+
       }
 
     }

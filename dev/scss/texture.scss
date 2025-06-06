@@ -127,27 +127,6 @@ main .article-card {
     @extend .grainy;
   }
 
-  // Flashy Button Hovers
-  @media #{$mq_mouse} {
-
-    // Article Card Hover States
-    .cta-container button {
-      transition-duration: 0.2s;
-      transition-property: right, transform;
-      transition-timing-function: ease-in;
-    }
-
-    &:hover {
-
-      .cta-container button {
-        right: $gutter;
-        transform: rotate(2.5deg) scale(1.25);
-      }
-
-    }
-
-  }
-
 }
 
 
