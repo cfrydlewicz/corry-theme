@@ -338,19 +338,15 @@ body {
   z-index: $z_nav+1; // edge case when primary nav and this nav are both open
 }
 
-.exposed-nav,
-.header-nav {
+.exposed-nav button,
+.header-nav > button {
+  border-radius: 0;
+  height: $header_height;
+  padding: 0 12px;
 
-  > button {
-    border-radius: 0;
-    height: $header_height;
-    padding: 0 12px;
-
-    &:not(:hover):not(:active):not(:focus) {
-      background-color: transparent;
-      color: $c_white;
-    }
-
+  &:not(:hover):not(:active):not(:focus) {
+    background-color: transparent;
+    color: $c_white;
   }
 
 }
@@ -367,6 +363,22 @@ body {
 
     &:not(:last-child) {
       margin-bottom: 0; // override
+    }
+
+    button {
+      font-weight: 500;
+    }
+
+    &.emeryville {
+      background-color: var(--cmpn_paleteal);
+      background: linear-gradient(0deg, var(--cmpn_palerteal) 0%, var(--cmpn_paleteal) 100%);
+      color: var(--cmpn_link);
+
+      &:hover {
+        background-color: var(--cmpn_hover);
+        color: $c_truewhite;
+      }
+
     }
 
   }
