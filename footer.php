@@ -2,7 +2,7 @@
 
     <div class="pre-footer">
       <div class="inner-wrapper">
-        <section class="follow-container sp_horizontal padding" role="complementary">
+        <section class="follow-container sp_horizontal-padding" role="complementary">
           <div class="site-footer_header">Follow Me</div>
           <ul>
             <?php if ( is_page_template( 'page_campaign-template.php' ) ) : ?>
