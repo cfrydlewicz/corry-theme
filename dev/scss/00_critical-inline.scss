@@ -93,7 +93,7 @@ body {
   text-wrap: pretty; // prevent orphaned text
 
   @media #{$mq_sm} {
-    overflow-x: hidden;  // prevent horizontal scrollbars above minimum spec
+    //overflow-x: hidden;  // prevent horizontal scrollbars above minimum spec
   }
 
   @media #{$mq_lg} {

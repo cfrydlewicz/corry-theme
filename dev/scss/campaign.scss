@@ -86,7 +86,7 @@ body.page-template-page_campaign-template {
       align-items: center;
       background-color: var(--cmpn_orange);
       border-radius: 0.75em;
-      color: $c_truewhite;
+      color: $c_truewhite !important;
       display: flex;
       font-size: 1.25em;
       font-weight: 500;
@@ -412,6 +412,7 @@ body.page-template-page_campaign-template {
 
   // Footer
   footer {
+    background-color: $c_light80;
 
     .inner-wrapper {
       padding-left: $gutter;
@@ -424,6 +425,10 @@ body.page-template-page_campaign-template {
 
     }
 
+  }
+
+  .thanks-for-reading {
+    background-color: transparent;
   }
 
   .pre-footer {

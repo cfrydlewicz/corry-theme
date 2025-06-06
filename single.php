@@ -8,6 +8,8 @@
     echo $thisPostId[0];
     $thisPostTitle = get_the_title($thisPostId);
     $thisPostShortUrl = "https://corry.us/?p=".get_the_ID($thisPostId);
+    $thisPostShortDescUrl = "https://corry.us/".$post->post_name;
+    $thisPostShortPrettyUrl = "corry.us/".$post->post_name;
     $thisPostCommentNum = get_comments_number($thisPostId);
   ?>
 
@@ -123,7 +125,7 @@
               <span class="label">Share: </span>
               <a class="i_mail" href="mailto:%20?subject=<?php echo $thisPostTitle; ?>&body=<?php echo $thisPostShortUrl; ?>" target="_blank" title="Share via Email"><span class="u_visually-hidden">Share via Email</span></a>
               <a class="i_bluesky" href="https://bsky.app/intent/compose?text=<?php echo $thisPostShortUrl; ?>" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://bsky.app']);" title="Share on Bluesky"><span class="u_visually-hidden">Share on Bluesky</span></a><br>
-              <a class="f_small" href="https://corry.us/<?php echo $post->post_name; ?>">corry.us/<?php echo $post->post_name; ?></a>
+              <a class="f_small" href="<?php echo $thisPostShortDescUrl; ?>"><?php echo $thisPostShortPrettyUrl; ?></a>
             </div>
           <?php endif; ?>
         </div>
