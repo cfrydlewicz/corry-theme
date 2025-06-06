@@ -125,6 +125,11 @@ body {
 .total-wrapper {
   min-height: 100vh;
   position: relative;
+
+  body.wp-singular & > footer {
+    min-height: calc(100vh - #{$header_height}); // ensure footer is fat (for secondary header scripts)
+  }
+
 }
 
 .site-header {
