@@ -136,6 +136,10 @@ body {
 
   }
 
+  > footer {
+    padding-bottom: $footer_height;
+  }
+
   body.wp-singular & > footer {
     min-height: calc(100vh - #{$header_height}); // ensure footer is fat (for secondary header scripts)
   }
@@ -630,12 +634,6 @@ body.error404 {
   .main-columns-wrapper {
     // short page
     padding-bottom: 48px;
-  }
-
-  .site-footer {
-    bottom: 0;
-    position: absolute;
-    width: 100%;
   }
 
 }

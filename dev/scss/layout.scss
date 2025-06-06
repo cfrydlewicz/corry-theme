@@ -25,6 +25,9 @@
 .site-footer {
   @include f_smallest;
   background-color: $c_grey40;
+  bottom: 0;
+  position: absolute;
+  width: 100%;
 
   @media #{$mq_md} {
     font-size: 0.75rem;
