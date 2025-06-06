@@ -126,6 +126,16 @@ body {
   min-height: 100vh;
   position: relative;
 
+  > main {
+    // layouts without a sidebar
+    padding-top: $header_height + 1;
+
+    @media #{$mq_lg} {
+      padding-top: $header_height + 1;
+    }
+
+  }
+
   body.wp-singular & > footer {
     min-height: calc(100vh - #{$header_height}); // ensure footer is fat (for secondary header scripts)
   }
@@ -548,16 +558,6 @@ body {
 
     }
 
-  }
-
-}
-
-.total-wrapper > main {
-  // layouts without a sidebar
-  padding-top: $header_height + 1;
-
-  @media #{$mq_lg} {
-    padding-top: $header_height + 1;
   }
 
 }
