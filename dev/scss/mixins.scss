@@ -100,6 +100,7 @@ $bp_cols:  $bp_lg; // when sidebar appears
 
 
 // Media Query Shortcuts
+$mq_submin  : "only screen and (max-width: #{$bp_min - 1})";
 $mq_sm      : "only screen and (min-width: #{$bp_sm})";
 $mq_sm2     : "only screen and (min-width: #{$bp_sm2})";
 $mq_sm3     : "only screen and (min-width: #{$bp_sm3})";

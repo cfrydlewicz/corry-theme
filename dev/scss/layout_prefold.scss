@@ -249,6 +249,10 @@ li {
     line-height: 1;
     margin-bottom: 0.25em;
 
+    @media #{$mq_submin} {
+      font-size: 1.25em;
+    }
+
     aside & {
       font-size: 1.25em;
     }
@@ -350,6 +354,11 @@ li {
         font-size: 1.25rem;
         font-weight: 800;
         padding: 8px 12px;
+
+        @media #{$mq_submin} {
+          font-size: 1rem;
+        }
+
       }
 
     }
