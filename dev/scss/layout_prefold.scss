@@ -101,8 +101,8 @@ li {
 
 // Listing Pages and Widgets
 .article-list {
+  align-items: center;
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
   gap: $gutter*1.5;
   justify-content: space-between;
@@ -351,6 +351,10 @@ li {
         font-weight: 800;
         padding: 8px 12px;
       }
+
+    }
+
+    body:not(.category-microblog) main & {
 
       @media #{$mq_md} {
         height: 1rem; // vertically center on dividing line between content and footer
