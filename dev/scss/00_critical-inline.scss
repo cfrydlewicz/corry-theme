@@ -356,12 +356,20 @@ body {
 .exposed-nav button,
 .header-nav > button {
   border-radius: 0;
-  border-width: 2px;
+  border-left-width: 2px !important; // keep the width from jumping on hover
+  border-right-width: 2px !important;
   height: $header_height;
   padding: 0 12px;
 
   &:not(:hover):not(:active):not(:focus) {
     background-color: transparent;
+  }
+
+  &:hover {
+    background-color: var(--c_hover);
+    border-color: var(--c_hover-dark) !important;
+    border-width: 2px !important;
+    color: $c_truewhite;
   }
 
 }
@@ -387,12 +395,6 @@ body {
 
     &:not(:hover):not(:active):not(:focus) {
       color: var(--c_link);
-    }
-
-    &:hover {
-      background-color: var(--c_hover);
-      border-color: var(--c_hover-dark);
-      color: $c_truewhite;
     }
 
   }
