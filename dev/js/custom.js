@@ -67,7 +67,7 @@ $(document).ready( function() {
 
   // Article Progress Bar
   // Only on Posts & Pages
-  if ( $('body').hasClass('single') || $('body').hasClass('page') ) {
+  if ( $('body').hasClass('wp-singular') ) {
 
     // Detect article height
     var postEndPosition = $('#a_end-of-article').offset().top;
