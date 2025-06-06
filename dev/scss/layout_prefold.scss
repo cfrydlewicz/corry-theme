@@ -160,7 +160,7 @@ li {
     background-image: url('/wp-content/themes/corry/assets/images/thumbnail-microblog.jpg');
   }
 
-  body.single & {
+  body.wp-singular & {
     top: $header_height + 2;  // 2px for bezel borders
   }
 
