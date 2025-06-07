@@ -8,7 +8,7 @@ $(document).ready( function() {
     $('#site-header-secondary').attr("inert","");
     $('main#a_skip-to-content').attr("inert","");
     $('aside.sidebar').attr("inert","");
-    $('footer#a_footer').attr("inert","");
+    $('footer').attr("inert","");
     $('#wpadminbar').attr("inert","");
 
   }
@@ -20,7 +20,7 @@ $(document).ready( function() {
     $('#site-header-secondary').removeAttr("inert");
     $('main#a_skip-to-content').removeAttr("inert");
     $('aside.sidebar').removeAttr("inert");
-    $('footer#a_footer').removeAttr("inert");
+    $('footer').removeAttr("inert");
     $('#wpadminbar').removeAttr("inert");
 
   }

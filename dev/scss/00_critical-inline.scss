@@ -257,6 +257,11 @@ body {
     height: 100%;
     padding: 4px;
 
+    &:focus {
+      outline-offset: 4px;
+      outline-width: 2px;
+    }
+
     @media #{$mq_sm2} {
       padding-left: $gutter;
       padding-right: $gutter;
@@ -402,11 +407,11 @@ body {
       color: var(--cmpn_link);
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
       background: none;
       background-color: var(--c_hover);
       border-color: var(--c_hover-dark);
-      //color: $c_truewhite;
     }
 
   }

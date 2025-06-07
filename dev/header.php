@@ -176,12 +176,12 @@ $saveData = (isset($_SERVER["HTTP_SAVE_DATA"]) && stristr($_SERVER["HTTP_SAVE_DA
             <nav>
               <ul>
                 <?php if ( is_page_template( 'page_campaign-template.php' ) ) : ?>
-                  <li class="issues"><a href="/emeryville/join"><button>Issues</button></a></li>
-                  <li class="donate"><a href="/emeryville/join" title="I will not take your money."><button>Donate</button></a></li>
-                  <li class="join"><a href="/emeryville/join"><button>Join Me</button></a></li>
+                  <li class="issues"><a href="/emeryville/join" tabindex="-1"><button>Issues</button></a></li>
+                  <li class="donate"><a href="/emeryville/join" title="I will not take your money." tabindex="-1"><button>Donate</button></a></li>
+                  <li class="join"><a href="/emeryville/join" tabindex="-1"><button>Join Me</button></a></li>
                 <?php else : ?>
-                  <li class="microblog"><a href="/category/microblog/"><button>Microblog</button></a></li>
-                  <li class="emeryville"><a href="/emeryville/"><button>for Emeryville</button></a></li>
+                  <li class="microblog"><a href="/category/microblog/" tabindex="-1"><button>Microblog</button></a></li>
+                  <li class="emeryville"><a href="/emeryville/" tabindex="-1"><button>for Emeryville</button></a></li>
                 <?php endif; ?>
               </ul>
             </nav>
