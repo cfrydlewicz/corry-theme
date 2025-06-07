@@ -132,6 +132,16 @@ $saveData = (isset($_SERVER["HTTP_SAVE_DATA"]) && stristr($_SERVER["HTTP_SAVE_DA
             </nav>
           </section>
 
+          <section class="exposed-nav">
+            <nav>
+              <ul>
+                <li class="issues"><a href="/emeryville/join" tabindex="-1"><button>Issues</button></a></li>
+                <li class="donate"><a href="/emeryville/join" title="I will not take your money." tabindex="-1"><button>Donate</button></a></li>
+                <li class="join"><a href="/emeryville/join" tabindex="-1"><button>Join Me</button></a></li>
+              </ul>
+            </nav>
+          </section>
+
           <section class="header-nav">
             <button class="nav-trigger"><span class="nav-menu-icon">☰</span> <span class="nav-menu-text"> Menu</span></button>
             <nav>
@@ -175,14 +185,8 @@ $saveData = (isset($_SERVER["HTTP_SAVE_DATA"]) && stristr($_SERVER["HTTP_SAVE_DA
           <section class="exposed-nav">
             <nav>
               <ul>
-                <?php if ( is_page_template( 'page_campaign-template.php' ) ) : ?>
-                  <li class="issues"><a href="/emeryville/join" tabindex="-1"><button>Issues</button></a></li>
-                  <li class="donate"><a href="/emeryville/join" title="I will not take your money." tabindex="-1"><button>Donate</button></a></li>
-                  <li class="join"><a href="/emeryville/join" tabindex="-1"><button>Join Me</button></a></li>
-                <?php else : ?>
-                  <li class="microblog"><a href="/category/microblog/" tabindex="-1"><button>Microblog</button></a></li>
-                  <li class="emeryville"><a href="/emeryville/" tabindex="-1"><button>for Emeryville</button></a></li>
-                <?php endif; ?>
+                <li class="microblog"><a href="/category/microblog/" tabindex="-1"><button>Microblog</button></a></li>
+                <li class="emeryville"><a href="/emeryville/" tabindex="-1"><button>for Emeryville</button></a></li>
               </ul>
             </nav>
           </section>
