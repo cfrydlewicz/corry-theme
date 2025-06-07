@@ -386,7 +386,9 @@ body {
   display: none;
 
   ul {
+    align-items: center;
     display: flex;
+    height: $header_height;
   }
 
   li {

@@ -225,6 +225,81 @@ body.page-template-page_campaign-template {
 
     }
 
+    .exposed-nav {
+
+      ul {
+        gap: $gutter;
+
+        @media #{mq_lg} {
+          gap: $gutter_lg;
+        }
+
+      }
+
+      button {
+        height: $header_height - 6px;
+        text-transform: uppercase;
+
+        &:not(:hover):not(:active):not(:focus) {
+          background-color: var(--cmpn_link);
+          border-color: var(--cmpn_link-dark);
+          color: $c_truewhite;
+        }
+
+      }
+
+      .donate {
+
+        button {
+          @extend .i_close;
+          position: relative;
+
+          &:not(:hover):not(:active):not(:focus) {
+            background-color: $c_grey50;
+            border-color: $c_grey50;
+          }
+
+          &::before {
+            color: red;
+            left: 50%;
+            opacity: 0.75;
+            pointer-events: none;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%) scale(1.5);
+            z-index: 1;
+          }
+
+        }
+
+      }
+
+      @media #{mq_lg} { // when the full exposed nav is visible
+
+        .issues,
+        .donate {
+          // underlap the Join CTA
+          left: 32px;
+          position: relative;
+        }
+
+        .donate {
+          z-index: 0;
+
+          button {
+            transform: rotate(-10deg);
+          }
+
+        }
+
+        .join {
+          z-index: 2;
+        }
+
+      }
+
+    }
+
     .header-nav {
 
       > button {
