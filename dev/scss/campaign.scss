@@ -65,8 +65,8 @@ body.page-template-page_campaign-template {
 
   button.cta,
   .cta a {
-    background-color: var(--cmpn_active);
-    border-color: var(--cmpn_active-dark);
+    background-color: var(--cmpn_hover);
+    border-color: var(--cmpn_hover-dark);
     color: $c_truewhite;
     font-size: 1.25em;
     font-weight: 500;
@@ -178,10 +178,13 @@ body.page-template-page_campaign-template {
     }
 
     .site-header-secondary {
+      background: none;
+      background-color: $c_white;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
       a {
         border-width: 0;
+        font-size: 1rem;
       }
 
     }
@@ -197,11 +200,6 @@ body.page-template-page_campaign-template {
           fill: var(--cmpn_link);
         }
 
-      }
-
-      &:focus {
-        outline: 1px dashed var(--cmpn_active);
-        outline-offset: -0.25em;
       }
 
       &:hover,
@@ -230,9 +228,10 @@ body.page-template-page_campaign-template {
     .header-nav {
 
       > button {
-        border-color: transparent;
+        border-radius: 0;
 
         &:not(:hover):not(:active):not(:focus) {
+          border-color: transparent;
           color: var(--cmpn_link);
         }
 
@@ -267,16 +266,6 @@ body.page-template-page_campaign-template {
           border-left-color: var(--cmpn_active);
         }
 
-      }
-
-    }
-
-    .site-header-secondary {
-      background: none;
-      background-color: $c_white;
-
-      a {
-        font-size: 1rem;
       }
 
     }
