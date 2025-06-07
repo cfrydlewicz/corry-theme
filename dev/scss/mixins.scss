@@ -64,11 +64,11 @@ $c_truewhite: mix(white, $c_dark-base, 99%);
 // Functional Color Designations
 $c_basetext:     $c_white;
 $c_link:         $c_primary;
-$c_link-dark:    $c_primary-dark;
+$c_link-dark:    $c_primary-dim;
 $c_hover:        $c_accent;
-$c_hover-dark:   $c_accent-dark;
+$c_hover-dark:   $c_accent-dim;
 $c_active:       $c_secondary;
-$c_active-dark:  $c_secondary-dark;
+$c_active-dark:  $c_secondary-dim;
 $c_visited:      $c_primary-dim;
 
 
