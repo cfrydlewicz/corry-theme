@@ -127,7 +127,7 @@ input[type="checkbox"] {
   &.disclaimer {
     background-color: $c_dark-base;
     border-color: $c_primary-dim;
-    margin-bottom: 3em !important;
+    margin-bottom: 3em;
     margin-left: auto;
     width: fit-content;
   }
@@ -243,8 +243,8 @@ div.alert {
   border-color: $c_grey60;
   border-style: solid;
   border-width: 1px 0 1px 8px;
-  margin: 2em (-1 * $gutter) 2em auto !important;
-  max-width: 95% !important;
+  margin: 2em (-1 * $gutter) 2em auto;
+  max-width: 95%;
   padding: 0.75em ($gutter + 12px) 1.25em 28px;
   position: relative;
   width: fit-content;

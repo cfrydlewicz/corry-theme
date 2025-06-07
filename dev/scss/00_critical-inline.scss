@@ -362,8 +362,6 @@ body {
 .exposed-nav button,
 .header-nav > button {
   border-radius: 0;
-  border-left-width: 2px !important; // keep the width from jumping on hover
-  border-right-width: 2px !important;
   color: var(--c_link);
   height: $header_height;
   padding: 0 12px;
@@ -375,8 +373,8 @@ body {
 
   &:hover {
     background-color: var(--c_hover);
-    border-color: var(--c_hover-dark) !important;
-    border-width: 2px !important;
+    border-color: var(--c_hover-dark);
+    border-width: 2px;
     color: $c_truewhite;
   }
 
@@ -398,6 +396,11 @@ body {
       margin-bottom: 0; // override
     }
 
+  }
+
+  button {
+    border-left-width: 2px; // keep the width from jumping on hover
+    border-right-width: 2px;
   }
 
   li.emeryville button {
@@ -448,6 +451,12 @@ body {
 .header-nav {
 
   > button {
+
+    &.nav-trigger {
+      // override texture
+      border-left-width: 2px; // keep the width from jumping on hover
+      border-right-width: 2px;
+    }
 
     .nav-menu-icon {
       font-size: 20px;

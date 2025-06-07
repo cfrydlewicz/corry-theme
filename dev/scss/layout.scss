@@ -27,8 +27,12 @@
   @include f_smallest;
   background-color: $c_grey40;
   bottom: 0;
-  position: absolute !important;
   width: 100%;
+
+  &.site-footer {
+    // empower the override
+    position: absolute;
+  }
 
   @media #{$mq_md} {
     font-size: 0.75rem;

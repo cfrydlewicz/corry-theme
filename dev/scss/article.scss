@@ -102,7 +102,7 @@
         font-weight: 300;
       }
     }
-    p:not(:last-of-type) {
+    p:not(:last-of-type):not(.alert) {
       margin-bottom: 1.5em;
     }
     figcaption {
