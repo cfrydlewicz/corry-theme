@@ -29,14 +29,6 @@ body.page-template-page_campaign-template {
       color: var(--cmpn_active);
     }
 
-    &:visited:not(:hover):not(:active):not(:focus) {
-      color: var(--cmpn_link);
-    }
-
-  }
-
-  .article-content .entry-content a:visited:not(:hover):not(:active):not(:focus) {
-    color: var(--cmpn_link); // override
   }
 
   button,
@@ -68,7 +60,6 @@ body.page-template-page_campaign-template {
     background-color: var(--cmpn_hover);
     border-color: var(--cmpn_hover-dark);
     color: $c_truewhite;
-    font-size: 1.25em;
     font-weight: 500;
     line-height: 1;
     padding: $gutter*0.5 $gutter;
@@ -133,6 +124,10 @@ body.page-template-page_campaign-template {
       word-wrap: normal;
     }
 
+  }
+
+  .article-content .entry-content .cta a {
+    text-decoration: none;
   }
 
   .i_bluesky::before,
