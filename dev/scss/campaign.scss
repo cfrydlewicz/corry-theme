@@ -221,6 +221,11 @@ body.page-template-page_campaign-template {
     }
 
     .exposed-nav {
+      margin-right: $gutter;
+
+      @media #{mq_lg} {
+        margin-right: $gutter_lg;
+      }
 
       ul {
         gap: $gutter;
