@@ -196,6 +196,12 @@
       vertical-align: text-top;
     }
 
+    figure a[target="_blank"]:not([href*="corryfrydlewicz.com"])::after {
+      // remove icons from linked media
+      content: '';
+      display: none;
+    }
+
     // lists
     ul,
     ol {
