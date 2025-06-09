@@ -57,7 +57,14 @@ a {
   &::before {
     // for links with icons
     font-size: 0.75em;
-    margin: 0 0.375em;
+  }
+
+  &::after {
+    margin-left: 0.375em;
+  }
+
+  &::before {
+    margin-right: 0.375em;
   }
 
 }
