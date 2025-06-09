@@ -2,6 +2,28 @@
 
     <div class="pre-footer">
       <div class="inner-wrapper">
+
+        <section class="campaign-container sp_horizontal-padding" role="complementary">
+          <?php if ( !is_page_template( 'page_campaign-template.php' ) ) : ?>
+            <div class="site-footer_header">Did You Know I'm Running for City Council?</div>
+          <?php endif; ?>
+          <div class="cta">
+            <a href="/emeryville/join-me/">Join Me</a>
+          </div>
+          <?php if ( is_page_template( 'page_campaign-template.php' ) ) : ?>
+            <div class="share-the-campaign">
+              <div class="site-footer_header">Share The Campaign</div>
+              <ul>
+                <li><a class="i_mail" href="mailto:%20?subject=🗳Corry%20for%20Emeryville&amp;body=Check%20out%20Corry%20Frydlewicz%20for%20Emeryville%20City%20Council" target="_blank" rel="noreferrer noopener">Email</a></li>
+                <li><a href="https://bsky.app/intent/compose?text=https://corry.us/emeryville%20@corry.us" target="_blank" rel="noreferrer noopener nofollow">Bluesky</a></li>
+                <li><a href="https://www.facebook.com/sharer/sharer.php?u=https://corryfrydlewicz.com/emeryville/?utm_source=fb" target="_blank" rel="noreferrer noopener nofollow" class="nofancybox">Facebook</a></li>
+                <li><a href="https://twitter.com/intent/tweet?url=https://corryfrydlewicz.com/emeryville/?utm_source=twitter&amp;text=" target="_blank" rel="noreferrer noopener nofollow">Twitter</a></li>
+                <li><a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://corryfrydlewicz.com/emeryville/?utm_source=linkedin" target="_blank" rel="noreferrer noopener nofollow">LinkedIn</a></li>
+              </ul>
+            </div>
+          <?php endif; ?>
+        </section>
+
         <section class="follow-container sp_horizontal-padding" role="complementary">
           <div class="site-footer_header">Follow Me</div>
           <ul>
@@ -17,7 +39,7 @@
         </section>
         <?php if ( is_page_template( 'page_campaign-template.php' ) ) : ?>
           <section class="paid-for sp_padding">
-            <p class="f_smallest" style="text-align: center;">This site was paid for, designed, and coded by Corry Frydlewicz.</p>
+            <p class="f_smallest" style="text-align: center;">This site was <a href="/emeryville/campaign-finance/">paid for</a>, designed, and coded by Corry Frydlewicz.</p>
           </section>
         <?php else : ?>
           <section class="reverse-canary sp_padding">
