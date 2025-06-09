@@ -154,9 +154,9 @@ body.page-template-page_campaign-template {
     max-width: $bp_xl;
   }
 
-  @media #{$mq_lg} {
+  .inner-wrapper--at-lg {
 
-    .inner-wrapper--at-lg {
+    @media #{$mq_lg} {
       max-width: $bp_xl;
     }
 
@@ -223,14 +223,14 @@ body.page-template-page_campaign-template {
     .exposed-nav {
       margin-right: $gutter;
 
-      @media #{mq_lg} {
+      @media #{$mq_lg} {
         margin-right: $gutter_lg;
       }
 
       ul {
         gap: $gutter;
 
-        @media #{mq_lg} {
+        @media #{$mq_lg} {
           gap: $gutter_lg;
         }
 
@@ -274,7 +274,7 @@ body.page-template-page_campaign-template {
 
       }
 
-      @media #{mq_lg} { // when the full exposed nav is visible
+      @media #{$mq_lg} { // when the full exposed nav is visible
 
         .issues,
         .donate {
