@@ -279,11 +279,15 @@ body.page-template-page_campaign-template {
         .issues,
         .donate {
           // underlap the Join CTA
-          left: 32px;
           position: relative;
         }
 
+        .issues {
+          left: 54px;
+        }
+
         .donate {
+          left: 40px;
           z-index: 0;
 
           button {

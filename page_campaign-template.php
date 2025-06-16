@@ -45,14 +45,16 @@
         <div class="thanks-main">
           <div class="thanks-header">Thanks for reading!</div>
           <div class="discuss">
-            <span class="label">Discuss: </span>
-            <?php if ( comments_open() ) : ?>
-              <a class="i_chat" href="#a_end-of-article" title="Leave a Comment"><span class="u_visually-hidden">Leave a Comment</span></a>
-              <?php if ( $thisPostCommentNum > 0 ) : ?>
-                <span class="comments-count"><?php echo $thisPostCommentNum; ?><span class="u_visually-hidden"> Comments</span></span>
+            <ul>
+              <?php if ( comments_open() ) : ?>
+                <li><a class="i_chat" href="#a_end-of-article">Leave a Comment</a>
+                  <?php if ( $thisPostCommentNum > 0 ) : ?>
+                    &nbsp;(<span class="comments-count"><?php echo $thisPostCommentNum; ?> Comments)</span>
+                  <?php endif; ?>
+                </li>
               <?php endif; ?>
-            <?php endif; ?>
-            <a class="i_bluesky" href="https://bsky.app/intent/compose?text=@corry.us%0A<?php echo $thisPostShortDescUrl; ?>" target="_blank" rel="noreferrer" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://bsky.app']);" title="Discuss on Bluesky"><span class="u_visually-hidden">Discuss on Bluesky</span></a>
+              <li><a class="i_bluesky" href="https://bsky.app/intent/compose?text=@corry.us%0A<?php echo $thisPostShortDescUrl; ?>" target="_blank" rel="noreferrer" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://bsky.app']);">Discuss on Bluesky</a>
+            </ul>
           </div>
           <?php if ( !empty($thisPostShortDescUrl) ) : ?>
             <div class="share">
