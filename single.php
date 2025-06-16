@@ -52,6 +52,13 @@
                     (<a href="#a_respond" class="i_chat">comment</a> or <a href="mailto:cfrydlewicz@gmail.com" class="i_mail">contact me</a> to request an update about its subject matter)</p>
                 </div>
               </div>
+            <?php elseif ( has_tag('social-groups') ) : ?>
+              <div class="alert info">
+                <div>
+                  <p class="f_small"><strong>Social Group Update</strong><br>
+                    This is a casual update for friends in one of <a href="https://docs.google.com/spreadsheets/d/1J-UrZlLQ_k2HyFtOqvnBH0s38iCn1ganTReYEhj-QjI/edit?usp=sharing" target="_blank">my activity groups</a>. If you're interested in joining any of them, <a href="mailto:cfrydlewicz@gmail.com" class="i_mail">let me know</a>!</p>
+                </div>
+              </div>
             <?php endif; ?>
 
             <?php the_content(); ?>
