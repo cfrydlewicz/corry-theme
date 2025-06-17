@@ -3,9 +3,10 @@
     <div class="pre-footer">
       <div class="inner-wrapper">
 
-        <section class="campaign-container sp_horizontal-padding" role="complementary">
+        <section class="campaign-container sp_padding" role="complementary">
           <?php if ( !is_page_template( 'page_campaign-template.php' ) ) : ?>
-            <div class="site-footer_header">Did You Know I'm Running for City Council?</div>
+            <div class="site-footer_header">Did You Know <strong>I'm Running for City Council?</strong></div>
+            <a href="/emeryville/join-me/"><img alt="Corry for Emeryville Logo" src="/wp-content/uploads/corry-emeryville-2026_logo-hi-res-scaled.png" style="max-width: 360px;"></a>
           <?php endif; ?>
           <div class="cta">
             <a href="/emeryville/join-me/">Join Me</a>

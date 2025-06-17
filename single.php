@@ -120,10 +120,13 @@
           <div class="discuss">
             <div class="label">Discuss:</div>
             <?php if ( comments_open() ) : ?>
-              <div><a class="i_chat" href="#a_end-of-article" title="Leave a Comment"><span class="u_visually-hidden">Leave a Comment</span></a></div>
-              <?php if ( $thisPostCommentNum > 0 ) : ?>
-                <span class="comments-count"><?php echo $thisPostCommentNum; ?><span class="u_visually-hidden"> Comments</span></span>
-              <?php endif; ?>
+              <div><a class="i_chat" href="#a_end-of-article">
+                <?php if ( $thisPostCommentNum > 0 ) : ?>
+                  <span class="comments-count"><?php echo $thisPostCommentNum; ?></span><span> Comments</span>
+                <?php else : ?>
+                  <span>Leave a Comment</span>
+                <?php endif; ?>
+              </a></div>
             <?php endif; ?>
             <div><a class="i_bluesky" href="https://bsky.app/intent/compose?text=@corry.us%0A<?php echo $thisPostShortDescUrl; ?>" target="_blank" rel="noreferrer" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://bsky.app']);">Discuss on Bluesky</a></div>
           </div>

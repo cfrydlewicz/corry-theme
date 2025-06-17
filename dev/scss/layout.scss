@@ -21,6 +21,56 @@
     list-style: none;
   }
 
+  .campaign-container,
+  .paid-for {
+    background-color: var(--cmpn_paleteal);
+    border-color: var(--cmpn_teal);
+    border-style: solid;
+    border-width: 1px;
+    color: $c_black;
+    margin: 2rem auto;
+    text-align: center;
+
+    a {
+      color: var(--cmpn_link);
+
+      &:hover {
+        color: var(--cmpn_hover);
+      }
+
+      &:active {
+        color: var(--cmpn_active);
+      }
+
+    }
+
+    .cta a {
+      background-color: var(--cmpn_link);
+      border-color: var(--cmpn_link-dark);
+      color: $c_truewhite;
+
+      &:hover {
+        background-color: var(--cmpn_hover);
+        border-color: var(--cmpn_hover-dark);
+        color: $c_truewhite;
+      }
+
+      &:active {
+        background-color: var(--cmpn_active);
+        border-color: var(--cmpn_active-dark);
+        color: $c_truewhite;
+      }
+
+    }
+
+    img {
+      margin-bottom: 1rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+  }
+
 }
 
 .site-footer {

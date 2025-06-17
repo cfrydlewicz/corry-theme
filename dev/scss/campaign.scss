@@ -492,17 +492,12 @@ body.page-template-page_campaign-template {
 
   }
 
+  .post-footer {
+    margin-top: 0;
+  }
+
   .pre-footer {
     text-align: center;
-
-    .paid-for {
-      background-color: var(--cmpn_paleteal);
-      border-color: var(--cmpn_teal);
-      border-style: solid;
-      border-width: 1px;
-      margin: 2rem auto;
-    }
-
   }
 
   .site-footer {
