@@ -44,6 +44,10 @@
 
     }
 
+    .cta:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+
     .cta a {
       background-color: var(--cmpn_link);
       border-color: var(--cmpn_link-dark);
@@ -71,6 +75,19 @@
 
   }
 
+  .share-the-campaign {
+
+    ul {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-around;
+    }
+
+    a {
+      padding: 0.25em;
+    }
+
+  }
 }
 
 .site-footer {

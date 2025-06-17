@@ -16,10 +16,10 @@
               <div class="site-footer_header">Share The Campaign</div>
               <ul>
                 <li><a class="i_mail" href="mailto:%20?subject=🗳Corry%20for%20Emeryville&amp;body=Check%20out%20Corry%20Frydlewicz%20for%20Emeryville%20City%20Council" target="_blank" rel="noreferrer noopener">Email</a></li>
-                <li><a href="https://bsky.app/intent/compose?text=https://corry.us/emeryville%20@corry.us" target="_blank" rel="noreferrer noopener nofollow">Bluesky</a></li>
-                <li><a href="https://www.facebook.com/sharer/sharer.php?u=https://corryfrydlewicz.com/emeryville/?utm_source=fb" target="_blank" rel="noreferrer noopener nofollow" class="nofancybox">Facebook</a></li>
-                <li><a href="https://twitter.com/intent/tweet?url=https://corryfrydlewicz.com/emeryville/?utm_source=twitter&amp;text=" target="_blank" rel="noreferrer noopener nofollow">Twitter</a></li>
-                <li><a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://corryfrydlewicz.com/emeryville/?utm_source=linkedin" target="_blank" rel="noreferrer noopener nofollow">LinkedIn</a></li>
+                <li><a class="i_bluesky" href="https://bsky.app/intent/compose?text=https://corry.us/emeryville%20@corry.us" target="_blank" rel="noreferrer noopener nofollow">Bluesky</a></li>
+                <li><a class="i_facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://corryfrydlewicz.com/emeryville/?utm_source=fb" target="_blank" rel="noreferrer noopener nofollow" class="nofancybox">Facebook</a></li>
+                <li><a class="i_twitter" href="https://twitter.com/intent/tweet?url=https://corryfrydlewicz.com/emeryville/?utm_source=twitter&amp;text=" target="_blank" rel="noreferrer noopener nofollow">Twitter</a></li>
+                <li><a class="i_linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://corryfrydlewicz.com/emeryville/?utm_source=linkedin" target="_blank" rel="noreferrer noopener nofollow">LinkedIn</a></li>
               </ul>
             </div>
           <?php endif; ?>
