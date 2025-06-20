@@ -311,6 +311,18 @@
         margin-right: 0;
       }
 
+      &.wp-block-embed {
+
+        &.alignleft {
+          float: left;
+        }
+
+        &.alignright {
+          float: right;
+        }
+
+      }
+
     }
 
     // WP Color Palette
