@@ -1,7 +1,4 @@
 User-agent: *
 Disallow: /wp-admin/
-Disallow: /page/
-Disallow: /tag/
 Allow: /wp-admin/admin-ajax.php
-
 Sitemap: https://corryfrydlewicz.com/wp-sitemap.xml
