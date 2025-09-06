@@ -175,6 +175,10 @@ $z_header: 5;
   text-decoration: none;
   vertical-align: middle;
 
+  &:visited:not(:hover):not(:active):not(:focus) {
+    color: $c_trueblack;
+  }
+
   &:hover,
   &:focus {
     background-color: $c_hover;
