@@ -73,8 +73,7 @@
 
         <section class="post-meta">
           <p class="f_small">
-            <span class="post-date"><?php the_date(); ?></span><br>
-            <span class="word-count"><?php word_count(); ?> words</span>
+            <span class="post-date u_nowrap"><?php the_date(); ?></span> <span class="word-count u_nowrap"><?php word_count(); ?> words</span>
           </p>
         </section>
 
