@@ -20,6 +20,7 @@
                 <li><a class="i_facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://corryfrydlewicz.com/emeryville/?utm_source=fb" target="_blank" rel="noreferrer noopener nofollow" class="nofancybox">Facebook</a></li>
                 <li><a class="i_twitter" href="https://twitter.com/intent/tweet?url=https://corryfrydlewicz.com/emeryville/?utm_source=twitter&amp;text=" target="_blank" rel="noreferrer noopener nofollow">Twitter</a></li>
                 <li><a class="i_linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://corryfrydlewicz.com/emeryville/?utm_source=linkedin" target="_blank" rel="noreferrer noopener nofollow">LinkedIn</a></li>
+                <!--li><a class="i_nextdoor" href="https://nextdoor.com/sharekit/?body=https://corryfrydlewicz.com/emeryville/?utm_source=nextdoor" target="_blank" rel="noreferrer noopener nofollow">NextDoor</a></li-->
               </ul>
             </div>
           <?php endif; ?>
@@ -38,6 +39,7 @@
               <li><a class="i_bluesky u_nowrap" href="/bluesky" rel="noreferrer" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://bsky.app']);">Bluesky</a></li>
           </ul>
         </section>
+
         <?php if ( is_page_template( 'page_campaign-template.php' ) ) : ?>
           <section class="paid-for sp_padding">
             <p class="f_smallest" style="text-align: center;">This site was <a href="/emeryville/campaign-finance/">paid for</a>, designed, and coded by Corry Frydlewicz.</p>
@@ -47,6 +49,7 @@
             <p class="f_smallest" style="text-align: center;">I have not been required to disclose data to the government under duress. If that changes and I'm able, I will remove this text. (last update: 2025-05-31)</p>
           </section>
         <?php endif; ?>
+
       </div>
     </div>
 
