@@ -3,8 +3,12 @@ $border-radius: 12px;
 
 // Buttons
 button,
-input[type="submit"] {
+input[type="submit"],
+p.btn > a {
   @include button;
+}
+p.btn.big > a {
+  @include button(big);
 }
 
 // Text Fields
