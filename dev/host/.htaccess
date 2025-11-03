@@ -70,6 +70,7 @@ RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
 
 <IfModule mod_deflate.c>
   SetOutputFilter DEFLATE
+
   <IfModule mod_setenvif.c>
     # Netscape 4.x has some problems...
     BrowserMatch ^Mozilla/4 gzip-only-text/html
@@ -89,8 +90,20 @@ RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
     SetEnvIfNoCase Request_URI .(?:gif|jpe?g|png)$ no-gzip dont-vary
   </IfModule>
 
+# BEGIN WordPress
+  <IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+    RewriteRule ^index\.php$ - [L]
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule . /index.php [L]
+  </IfModule>
+# END WordPress
+
   <IfModule mod_headers.c>
     # Make sure proxies don't deliver the wrong content
     Header append Vary User-Agent env=!dont-vary
   </IfModule>
+
 </IfModule>
