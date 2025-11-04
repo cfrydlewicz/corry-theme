@@ -45,6 +45,9 @@
 .u_visually-hidden:not(:focus):not(:focus-within) {
   @include visually-hidden;
 }
+.u_hidden {
+  display: none !important;
+}
 
 // font sizes
 .f_small {

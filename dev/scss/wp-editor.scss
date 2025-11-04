@@ -1,4 +1,30 @@
 // add_editor_style( 'editor-style.css' ); to functions.php
+.u_visually-hidden,
+.u_hidden {
+  opacity: 0.6;
+  outline: 1px dashed $c_grey50;
+}
+
+.u_attn,
+img:not([alt]),
+img[alt=""],
+.aside:not(.alert), // deprecated without alert class
+.disclaimer:not(.alert) { // deprecated without alert class
+  outline: 2px dashed $c_accent;
+  outline-offset: 0.5em;
+}
+
+// Mark unlinked post images
+img:not(.emoji) {
+  outline: 2px dashed $c_secondary;
+  outline-offset: 0.5em;
+}
+
+// Unmark behaving images
+a img[alt]:not([alt=""]):not(.emoji) {
+  outline: none;
+}
+
 .wp-block {
 
   // custom classes
