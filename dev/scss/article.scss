@@ -329,10 +329,6 @@
     details {
       margin-bottom: 2rem;
 
-      @media #{$mq_max} {
-        margin-left: -1rem;
-      }
-
       &::after {
         /* border-color: $c_link; */
         border-style: solid;
