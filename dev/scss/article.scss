@@ -335,34 +335,41 @@
       }
 
       &::after {
-        border-color: $c_active;
+        border-color: $c_link;
         border-style: solid;
         border-width: 0 0 1px 1px;
         color: transparent;
         content: 'o';
+        display: block;
         height: 1rem;
         width: 1rem;
       }
 
       summary {
-
-        &::marker {
-          color: $c_link;
-
-          &:hover {
-            color: $c_hover;
-          }
-
-        }
+        color: $c_link;
+        cursor: pointer;
 
         * {
           display: inline-block;
         }
 
+        &:last-child {
+          margin-bottom: 0;
+        }
+
       }
 
-      &:last-child {
-        margin-bottom: 0.5rem;
+      &:not([open]):hover {
+
+        summary,
+        summary::marker {
+          color: $c_hover;
+        }
+
+        &::after {
+          border-color: $c_hover;
+        }
+
       }
 
       &[open] {
@@ -371,6 +378,14 @@
           color: $c_active;
         }
 
+        &::after {
+          border-color: $c_active;
+        }
+
+      }
+
+      > *:last-child {
+        margin-bottom: 0;
       }
 
     }
