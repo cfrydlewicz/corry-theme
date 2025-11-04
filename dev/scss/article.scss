@@ -327,9 +327,13 @@
 
     // Details
     details {
+      border-color: $c_link;
+      border-style: dashed;
+      border-width: 0 0 0 1px;
       margin-bottom: 2rem;
+      margin-left: -1rem;
+      padding-left: 1rem;
 
-      &::after,
       summary {
         margin-left: -1.5rem;
       }
@@ -337,11 +341,11 @@
       &::after {
         border-color: $c_link;
         border-style: solid;
-        border-width: 0 0 1px 1px;
+        border-width: 0 0 1px;
         color: transparent;
         content: 'o';
         display: block;
-        height: 1rem;
+        margin-left: -1rem;
         width: 1rem;
       }
 
@@ -351,6 +355,11 @@
 
         * {
           display: inline-block;
+
+          &:first-child {
+            margin-top: 0;
+          }
+
         }
 
         &:last-child {
@@ -360,9 +369,9 @@
       }
 
       &:not([open]):hover {
+        border-color: $c_hover;
 
-        summary,
-        summary::marker {
+        summary {
           color: $c_hover;
         }
 
@@ -373,8 +382,9 @@
       }
 
       &[open] {
+        border-color: $c_active;
 
-        summary::marker {
+        summary {
           color: $c_active;
         }
 
