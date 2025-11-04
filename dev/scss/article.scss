@@ -325,6 +325,56 @@
 
     }
 
+    // Details
+    details {
+      margin-bottom: 2rem;
+
+      &::after,
+      summary {
+        margin-left: -1.5rem;
+      }
+
+      &::after {
+        border-color: $c_active;
+        border-style: solid;
+        border-width: 0 0 1px 1px;
+        color: transparent;
+        content: 'o';
+        height: 1rem;
+        width: 1rem;
+      }
+
+      summary {
+
+        &::marker {
+          color: $c_link;
+
+          &:hover {
+            color: $c_hover;
+          }
+
+        }
+
+        * {
+          display: inline-block;
+        }
+
+      }
+
+      &:last-child {
+        margin-bottom: 0.5rem;
+      }
+
+      &[open] {
+
+        summary::marker {
+          color: $c_active;
+        }
+
+      }
+
+    }
+
     // WP Color Palette
     .has-corry-primary-color {
       color: $c_primary;
