@@ -331,11 +331,19 @@
       border-style: dashed;
       border-width: 0 0 0 1px;
       margin-bottom: 2rem;
-      margin-left: -1rem;
       padding-left: 1rem;
 
+      @media #{$mq_max} {
+        margin-left: -1rem;
+      }
+
       summary {
-        margin-left: -1.5rem;
+        margin-left: -1.325rem;
+
+        @media #{$mq_max} {
+          margin-left: -1.5rem;
+        }
+
       }
 
       &::after {
