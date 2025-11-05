@@ -48,17 +48,24 @@ RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
   Redirect 301 /emeryville/signup https://docs.google.com/forms/d/e/1FAIpQLSfTFqmrz0ihuW0tNXddwZVkAzbDDB-HFAFfv-86y6uwuiCj1g/viewform?usp=dialog
 
   # Redirect Old Categories Hierarchy
+  RedirectMatch 301 /category/personal/page/(.*) /about/
   Redirect 301 /category/personal/fiction/ /category/fiction/
   Redirect 301 /category/personal/games/ /category/games/
   Redirect 301 /category/personal/philosophy/ /category/philosophy/
   Redirect 301 /category/personal/relationships/ /category/relationships/
   Redirect 301 /category/personal/reviews/ /category/reviews/
+  RedirectMatch 301 /category/pro/page/(.*) /looking-for-work/
   Redirect 301 /category/pro/graphics/ /category/design/
   Redirect 301 /category/pro/work /category/work
 
   # Redirect Old Post URLs
   Redirect 301 /2014/05/kiva-blackberry-dark-chocolate-bar/ /kiva-blackberry-dark-chocolate-bar/
   Redirect 301 /2014/04/work-life-balance/ /work-life-balance/
+
+  # Redirect Old Tags
+  Redirect 301 /category/philosophy/spirit/ /tag/spirituality/
+  Redirect 301 /category/reviews/movies/ /tag/movies/
+  Redirect 301 /tag/old-myspace-blog-post/ /tag/myspace-blog/
 
 # END Custom Redirects
 
