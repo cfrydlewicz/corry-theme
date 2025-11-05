@@ -1,2 +1,25 @@
 .article-content.tag-animosity .entry-content {
+
+  .thought {
+
+  }
+
+  .flashback {
+
+  }
+
+}
+
+body.admin-bar.logged-in .entry-content {
+
+  // deprecated fiction classes
+  .speak,
+  .thought-container,
+  .thought-author,
+  .thought-content,
+  .thought-bottom {
+    outline: 2px dashed $c_accent2;
+    outline-offset: 0.25rem;
+  }
+
 }
