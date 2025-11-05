@@ -97,7 +97,7 @@ RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
     SetEnvIfNoCase Request_URI .(?:gif|jpe?g|png)$ no-gzip dont-vary
   </IfModule>
 
-# BEGIN WordPress
+  # BEGIN WordPress
   <IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteBase /
@@ -106,7 +106,7 @@ RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteRule . /index.php [L]
   </IfModule>
-# END WordPress
+  # END WordPress
 
   <IfModule mod_headers.c>
     # Make sure proxies don't deliver the wrong content
@@ -114,3 +114,7 @@ RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
   </IfModule>
 
 </IfModule>
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# This domain inherits the “PHP” package.
+# php -- END cPanel-generated handler, do not edit
