@@ -325,6 +325,11 @@
 
     }
 
+    // Columns
+    .wp-block-columns {
+      clear: both; // in case any floats are nearby
+    }
+
     // Details
     details {
       margin-bottom: 2rem;
