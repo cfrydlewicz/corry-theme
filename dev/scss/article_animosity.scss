@@ -2,10 +2,198 @@
 
   .thought {
     // inner thought bubbles
+    // based on https://codepen.io/quadbaup/pen/rKOKQv
+    $thought-bg: $c_primary-dark;
+    align-items: center;
+    display: flex;
+    background-color: $thought-bg;
+    border-radius: 30px;
+    justify-content: center;
+    max-width: 80%;
+    min-height: 40px;
+    min-width: 40px;
+    padding: 20px;
+    position: relative;
+    text-align: center;
+
+    &::before,
+    &::after {
+      background-color: $thought-bg;
+      border-radius: 50%;
+      content: "";
+      display: block;
+      position: absolute;
+      z-index: -1;
+    }
+
+    &::before {
+      box-shadow: -50px 30px 0 -12px $thought-bg;
+      height: 44px;
+      left: 28px;
+      top: -12px;
+      width: 44px;
+    }
+
+    &::after {
+      bottom: -10px;
+      box-shadow: 40px -34px 0 0 $thought-bg,
+                  -28px -6px 0 -2px $thought-bg,
+                  -24px 17px 0 -6px $thought-bg,
+                  -5px 25px 0 -10px $thought-bg;
+      height: 30px;
+      right: 26px;
+      width: 30px;
+    }
+
   }
 
   .tech-message {
     // messages sent "telepathically" through technology
+    // based on https://codepen.io/josfabre/pen/EBMWwW
+    $tech-bg: $c_primary-darker;
+    $tech-fg: $c_white;
+    $tech-shadow: rgba(0,0,0,0.1);
+    $tech-size: 4px;
+    $tech-border: 0 -1*$tech-size $tech-bg,
+                  0 -2*$tech-size $tech-fg, 
+                  $tech-size 0 $tech-bg, 
+                  $tech-size -1*$tech-size $tech-fg, 
+                  2*$tech-size 0 $tech-fg, 
+                  0 $tech-size $tech-bg, 
+                  0 2*$tech-size $tech-fg, 
+                  -1*$tech-size 0 $tech-bg, 
+                  -1*$tech-size  $tech-size $tech-fg, 
+                  -2*$tech-size 0 $tech-fg, 
+                  -1*$tech-size -1*$tech-size $tech-fg, 
+                  $tech-size $tech-size $tech-fg;
+
+    background-color: $tech-bg;
+    box-shadow: $tech-border, $tech-size 3*$tech-size $shadow, 3*$tech-size $tech-size $shadow, 2*$tech-size 2*$tech-size $shadow; 
+    //box-sizing: border-box;
+    color: $tech-fg;
+    display: flex;
+    font-family: 'Press Start 2P', monospace;
+    //font-size: 16px;
+    // letter-spacing: -0.04em;
+    line-height:1.25;
+    margin: 5*$tech-size;
+    max-width: 80%;
+    min-width:200px;
+    padding: 3*$tech-size;
+    position: relative;
+    text-align: center;
+
+    &::after {
+      //box-sizing: border-box; 
+      content: '';
+      display: block;
+      position: absolute;
+    }
+  
+    &.mini {
+      font-family: monospace;
+      //font-size: 16px;
+      max-width: 60%;
+      min-width: 110px;
+      padding: 4px;
+    }
+
+    &::after {
+    //&.top::after {
+      height: $tech-size;
+      width: $tech-size;
+      top: -2*$tech-size;
+      left: 8*$tech-size;
+      box-shadow: 
+        0 -1*$tech-size $tech-fg, 
+        0 -2*$tech-size $tech-fg, 
+        0 -3*$tech-size $tech-fg, 
+        0 -4*$tech-size $tech-fg, 
+        -1*$tech-size -3*$tech-size $tech-fg, 
+        -2*$tech-size -2*$tech-size $tech-fg, 
+        -3*$tech-size -1*$tech-size $tech-fg, 
+        -1*$tech-size -1*$tech-size $tech-bg, 
+        -2*$tech-size -1*$tech-size $tech-bg, 
+        -1*$tech-size -2*$tech-size $tech-bg, 
+        -1*$tech-size 0 $tech-bg, 
+        -2*$tech-size 0 $tech-bg, 
+        -3*$tech-size 0 $tech-bg;
+    }
+
+    &.has-text-align-right::after {
+      height: $tech-size;
+      width: $tech-size;
+      top: 21*$tech-size;
+      right: -2*$tech-size;
+      background: $tech-bg;
+      box-shadow: 
+        1*$tech-size -1*$tech-size $tech-bg,
+        1*$tech-size 0 $tech-bg,
+        2*$tech-size 0 $tech-bg,
+        0 -2*$tech-size $tech-bg,
+        1*$tech-size 1*$tech-size $tech-fg, 
+        2*$tech-size 1*$tech-size $tech-fg, 
+        3*$tech-size 1*$tech-size $tech-fg, 
+        4*$tech-size 1*$tech-size $tech-fg,
+        3*$tech-size 0 $tech-fg, 
+        2*$tech-size -1*$tech-size $tech-fg, 
+        1*$tech-size -2*$tech-size $tech-fg,
+        0 -1*$tech-size $tech-bg;
+    }
+  
+  /*
+    &.bottom::after {
+      height: $tech-size;
+      width: $tech-size;
+      bottom: -2*$tech-size;
+      left: 8*$tech-size;
+      box-shadow: 
+        0 $tech-size $tech-fg, 
+        0 2*$tech-size $tech-fg, 
+        0 3*$tech-size $tech-fg, 
+        0 4*$tech-size $tech-fg, 
+        -1*$tech-size 3*$tech-size $tech-fg, 
+        -2*$tech-size 2*$tech-size $tech-fg, 
+        -3*$tech-size 1*$tech-size $tech-fg, 
+        -1*$tech-size $tech-size $tech-bg, 
+        -2*$tech-size $tech-size $tech-bg, 
+        -1*$tech-size 2*$tech-size $tech-bg, 
+        -1*$tech-size 0 $tech-bg, 
+        -2*$tech-size 0 $tech-bg, 
+        -3*$tech-size 0 $tech-bg;
+    }
+*/
+
+    &.has-text-align-left::after {
+      height: $tech-size;
+      width: $tech-size;
+      top: 5*$tech-size;
+      left: -2*$tech-size;
+      background: $tech-bg;
+      box-shadow: 
+        -1*$tech-size -1*$tech-size $tech-bg,
+        -1*$tech-size 0 $tech-bg,
+        -2*$tech-size 0 $tech-bg,
+        0 -2*$tech-size $tech-bg,
+        -1*$tech-size 1*$tech-size $tech-fg, 
+        -2*$tech-size 1*$tech-size $tech-fg, 
+        -3*$tech-size 1*$tech-size $tech-fg, 
+        -4*$tech-size 1*$tech-size $tech-fg,
+        -3*$tech-size 0 $tech-fg, 
+        -2*$tech-size -1*$tech-size $tech-fg, 
+        -1*$tech-size -2*$tech-size $tech-fg,
+        0 -1*$tech-size $tech-bg;
+    }
+
+    *:not(cite) {
+      order: 1;
+    }
+
+    cite {
+      @include f_smallest;
+      order: 0;
+    }
+
   }
 
   .flashback {
