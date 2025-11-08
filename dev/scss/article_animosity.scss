@@ -1,11 +1,24 @@
 .article-content.tag-animosity .entry-content {
 
   .thought {
+    // inner thought bubbles
+  }
 
+  .tech-message {
+    // messages sent "telepathically" through technology
   }
 
   .flashback {
+    // Single lines and Groups of flashback copy
+  }
 
+  .glossary {
+    // Group of game bible style world building text
+  }
+
+  .chaotic-text {
+    //<span class="chaotic-text">yoU'vE beEn Doing tHis the whOlE tIme</span>
+    // I need :nth-letter support for this one
   }
 
 }
@@ -17,7 +30,9 @@ body.admin-bar.logged-in .entry-content {
   .thought-container,
   .thought-author,
   .thought-content,
-  .thought-bottom {
+  .thought-bottom,
+  // chaotic text without accessibility
+  .chaotic-text:no[aria-hidden="true"] {
     outline: 2px dashed $c_accent2;
     outline-offset: 0.25rem;
   }
