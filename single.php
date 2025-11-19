@@ -73,8 +73,10 @@
 
         <section class="post-meta">
           <p class="f_small">
-            <span class="post-date u_nowrap"><?php the_date(); ?></span> <span class="word-count u_nowrap"><?php word_count(); ?> words</span>
+            <span class="word-count u_nowrap"><?php word_count(); ?> words</span><br>
+            <span class="post-date u_nowrap"><?php the_date(); ?></span>
           </p>
+          <p class="tags f_small"><?php the_tags(); ?></p>
         </section>
 
         <?php if ( !empty($thisPostShortDescUrl) ) : ?>

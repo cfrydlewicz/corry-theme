@@ -591,16 +591,6 @@ body {
       display: initial;
     }
 
-    &.sticky {
-
-      .sidebar-inner {
-        max-height: calc(100vh - #{$header_height--max} - #{$footer_height});
-        position: sticky;
-        top: 90px;
-      }
-
-    }
-
     .sidebar-inner {
       background-color: rgba(0,0,0,0.25);
       border-color: $c_primary-dark;
@@ -629,7 +619,7 @@ body {
     }
 
     section:not(:last-child) {
-      margin-bottom: 3rem;
+      margin-bottom: 2rem;
     }
 
     hr,
@@ -694,6 +684,18 @@ body {
 
       li {
         margin-bottom: 2rem;
+      }
+
+    }
+
+    &.sticky {
+
+      .sidebar-inner {
+        flex-wrap: nowrap;
+        max-height: calc(100vh - #{$header_height--max} - #{$footer_height});
+        overflow-y: auto;
+        position: sticky;
+        top: 90px;
       }
 
     }
