@@ -68,7 +68,7 @@
                   $tech-size $tech-size $tech-fg;
 
     background-color: $tech-bg;
-    box-shadow: $tech-border, $tech-size 3*$tech-size $shadow, 3*$tech-size $tech-size $shadow, 2*$tech-size 2*$tech-size $shadow; 
+    box-shadow: $tech-border, $tech-size 3*$tech-size $tech-shadow, 3*$tech-size $tech-size $tech-shadow, 2*$tech-size 2*$tech-size $tech-shadow; 
     //box-sizing: border-box;
     color: $tech-fg;
     display: flex;
