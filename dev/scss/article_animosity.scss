@@ -3,10 +3,10 @@
   .thought {
     // inner thought bubbles
     // based on https://codepen.io/quadbaup/pen/rKOKQv
-    $thought-bg: $c_primary-dark;
+    --thought-bg: $c_grey40;
     align-items: center;
     display: flex;
-    background-color: $thought-bg;
+    background-color: var(--thought-bg);
     border-radius: 30px;
     justify-content: center;
     max-width: 80%;
@@ -18,7 +18,7 @@
 
     &::before,
     &::after {
-      background-color: $thought-bg;
+      background-color: var(--thought-bg);
       border-radius: 50%;
       content: "";
       display: block;
@@ -27,7 +27,7 @@
     }
 
     &::before {
-      box-shadow: -50px 30px 0 -12px $thought-bg;
+      box-shadow: -50px 30px 0 -12px var(--thought-bg);
       height: 44px;
       left: 28px;
       top: -12px;
@@ -36,10 +36,10 @@
 
     &::after {
       bottom: -10px;
-      box-shadow: 40px -34px 0 0 $thought-bg,
-                  -28px -6px 0 -2px $thought-bg,
-                  -24px 17px 0 -6px $thought-bg,
-                  -5px 25px 0 -10px $thought-bg;
+      box-shadow: 40px -34px 0 0 var(--thought-bg),
+                  -28px -6px 0 -2px var(--thought-bg),
+                  -24px 17px 0 -6px var(--thought-bg),
+                  -5px 25px 0 -10px var(--thought-bg);
       height: 30px;
       right: 26px;
       width: 30px;
