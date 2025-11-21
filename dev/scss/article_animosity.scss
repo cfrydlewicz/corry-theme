@@ -8,13 +8,22 @@
     display: flex;
     background-color: var(--thought-bg);
     border-radius: 30px;
+    flex-wrap: wrap;
     justify-content: center;
-    max-width: 80%;
     min-height: 40px;
     min-width: 40px;
     padding: 20px;
     position: relative;
     text-align: center;
+
+    &:not(.alignleft):not(.alignright) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @media #{$mq_lg} {
+      max-width: 80%;
+    }
 
     &::before,
     &::after {
@@ -43,6 +52,13 @@
       height: 30px;
       right: 26px;
       width: 30px;
+    }
+
+    cite {
+      bottom: -1.625rem;
+      color: $c_light80;
+      position: absolute;
+      right: 5.25rem;
     }
 
   }
@@ -77,11 +93,14 @@
     // letter-spacing: -0.04em;
     line-height:1.25;
     margin: 5*$tech-size;
-    max-width: 80%;
     min-width:200px;
     padding: 3*$tech-size;
     position: relative;
     text-align: center;
+
+    @media #{$mq_lg} {
+      max-width: 80%;
+    }
 
     &::after {
       //box-sizing: border-box; 
