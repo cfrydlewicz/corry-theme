@@ -3,11 +3,12 @@
   .thought {
     // inner thought bubbles
     // based on https://codepen.io/quadbaup/pen/rKOKQv
-    --thought-bg: $c_grey40;
+    --thought-bg: rgba(0, 0, 0, 0.25);
     align-items: center;
     display: flex;
     background-color: var(--thought-bg);
     border-radius: 30px;
+    border-width: 0;
     flex-wrap: wrap;
     justify-content: center;
     min-height: 40px;
