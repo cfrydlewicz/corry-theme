@@ -221,6 +221,22 @@
 
   .glossary {
     // Group of game bible style world building text
+    border-color: $c_light30;
+    border-radius: 1rem;
+    border-style: solid;
+    border-width: 1px;
+    padding: 0.25rem 1rem 1rem;
+
+    &::before {
+      @include f_smallest;
+      content: 'Glossary';
+      text-transform: uppercase;
+    }
+
+    .wp-block-group__inner-container *:first-child {
+      margin-top: 0;
+    }
+
   }
 
   .chaotic-text {
