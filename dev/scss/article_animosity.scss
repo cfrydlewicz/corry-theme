@@ -67,27 +67,27 @@
   .tech-message {
     // messages sent "telepathically" through technology
     // based on https://codepen.io/josfabre/pen/EBMWwW
-    $tech-bg: $c_primary-darker;
-    $tech-fg: $c_white;
-    $tech-shadow: rgba(0,0,0,0.1);
+    --tech-bg: $c_primary-darker;
+    --tech-fg: $c_white;
+    --tech-shadow: rgba(0,0,0,0.1);
     $tech-size: 4px;
-    $tech-border: 0 -1*$tech-size $tech-bg,
-                  0 -2*$tech-size $tech-fg, 
-                  $tech-size 0 $tech-bg, 
-                  $tech-size -1*$tech-size $tech-fg, 
-                  2*$tech-size 0 $tech-fg, 
-                  0 $tech-size $tech-bg, 
-                  0 2*$tech-size $tech-fg, 
-                  -1*$tech-size 0 $tech-bg, 
-                  -1*$tech-size  $tech-size $tech-fg, 
-                  -2*$tech-size 0 $tech-fg, 
-                  -1*$tech-size -1*$tech-size $tech-fg, 
-                  $tech-size $tech-size $tech-fg;
+    $tech-border: 0 -1*$tech-size var(--tech-bg),
+                  0 -2*$tech-size var(--tech-fg),
+                  $tech-size 0 var(--tech-bg),
+                  $tech-size -1*$tech-size var(--tech-fg),
+                  2*$tech-size 0 var(--tech-fg),
+                  0 $tech-size var(--tech-bg),
+                  0 2*$tech-size var(--tech-fg),
+                  -1*$tech-size 0 var(--tech-bg),
+                  -1*$tech-size  $tech-size var(--tech-fg),
+                  -2*$tech-size 0 var(--tech-fg),
+                  -1*$tech-size -1*$tech-size var(--tech-fg),
+                  $tech-size $tech-size var(--tech-fg);
 
-    background-color: $tech-bg;
-    box-shadow: $tech-border, $tech-size 3*$tech-size $tech-shadow, 3*$tech-size $tech-size $tech-shadow, 2*$tech-size 2*$tech-size $tech-shadow; 
+    box-shadow: $tech-border, $tech-size 3*$tech-size var(--tech-shadow), 3*$tech-size $tech-size var(--tech-shadow), 2*$tech-size 2*$tech-size var(--tech-shadow); 
+    background-color: var(--tech-bg);
     //box-sizing: border-box;
-    color: $tech-fg;
+    color: var(--tech-fg);
     display: flex;
     font-family: 'Press Start 2P', monospace;
     //font-size: 16px;
@@ -125,19 +125,19 @@
       top: -2*$tech-size;
       left: 8*$tech-size;
       box-shadow: 
-        0 -1*$tech-size $tech-fg, 
-        0 -2*$tech-size $tech-fg, 
-        0 -3*$tech-size $tech-fg, 
-        0 -4*$tech-size $tech-fg, 
-        -1*$tech-size -3*$tech-size $tech-fg, 
-        -2*$tech-size -2*$tech-size $tech-fg, 
-        -3*$tech-size -1*$tech-size $tech-fg, 
-        -1*$tech-size -1*$tech-size $tech-bg, 
-        -2*$tech-size -1*$tech-size $tech-bg, 
-        -1*$tech-size -2*$tech-size $tech-bg, 
-        -1*$tech-size 0 $tech-bg, 
-        -2*$tech-size 0 $tech-bg, 
-        -3*$tech-size 0 $tech-bg;
+        0 -1*$tech-size var(--tech-fg), 
+        0 -2*$tech-size var(--tech-fg), 
+        0 -3*$tech-size var(--tech-fg), 
+        0 -4*$tech-size var(--tech-fg), 
+        -1*$tech-size -3*$tech-size var(--tech-fg), 
+        -2*$tech-size -2*$tech-size var(--tech-fg), 
+        -3*$tech-size -1*$tech-size var(--tech-fg), 
+        -1*$tech-size -1*$tech-size var(--tech-bg), 
+        -2*$tech-size -1*$tech-size var(--tech-bg), 
+        -1*$tech-size -2*$tech-size var(--tech-bg), 
+        -1*$tech-size 0 var(--tech-bg), 
+        -2*$tech-size 0 var(--tech-bg), 
+        -3*$tech-size 0 var(--tech-bg);
     }
 
     &.has-text-align-right::after {
@@ -145,20 +145,20 @@
       width: $tech-size;
       top: 21*$tech-size;
       right: -2*$tech-size;
-      background: $tech-bg;
+      background: var(--tech-bg);
       box-shadow: 
-        1*$tech-size -1*$tech-size $tech-bg,
-        1*$tech-size 0 $tech-bg,
-        2*$tech-size 0 $tech-bg,
-        0 -2*$tech-size $tech-bg,
-        1*$tech-size 1*$tech-size $tech-fg, 
-        2*$tech-size 1*$tech-size $tech-fg, 
-        3*$tech-size 1*$tech-size $tech-fg, 
-        4*$tech-size 1*$tech-size $tech-fg,
-        3*$tech-size 0 $tech-fg, 
-        2*$tech-size -1*$tech-size $tech-fg, 
-        1*$tech-size -2*$tech-size $tech-fg,
-        0 -1*$tech-size $tech-bg;
+        1*$tech-size -1*$tech-size var(--tech-bg),
+        1*$tech-size 0 var(--tech-bg),
+        2*$tech-size 0 var(--tech-bg),
+        0 -2*$tech-size var(--tech-bg),
+        1*$tech-size 1*$tech-size var(--tech-fg), 
+        2*$tech-size 1*$tech-size var(--tech-fg), 
+        3*$tech-size 1*$tech-size var(--tech-fg), 
+        4*$tech-size 1*$tech-size var(--tech-fg),
+        3*$tech-size 0 var(--tech-fg), 
+        2*$tech-size -1*$tech-size var(--tech-fg), 
+        1*$tech-size -2*$tech-size var(--tech-fg),
+        0 -1*$tech-size var(--tech-bg);
     }
   
   /*
@@ -168,19 +168,19 @@
       bottom: -2*$tech-size;
       left: 8*$tech-size;
       box-shadow: 
-        0 $tech-size $tech-fg, 
-        0 2*$tech-size $tech-fg, 
-        0 3*$tech-size $tech-fg, 
-        0 4*$tech-size $tech-fg, 
-        -1*$tech-size 3*$tech-size $tech-fg, 
-        -2*$tech-size 2*$tech-size $tech-fg, 
-        -3*$tech-size 1*$tech-size $tech-fg, 
-        -1*$tech-size $tech-size $tech-bg, 
-        -2*$tech-size $tech-size $tech-bg, 
-        -1*$tech-size 2*$tech-size $tech-bg, 
-        -1*$tech-size 0 $tech-bg, 
-        -2*$tech-size 0 $tech-bg, 
-        -3*$tech-size 0 $tech-bg;
+        0 $tech-size var(--tech-fg), 
+        0 2*$tech-size var(--tech-fg), 
+        0 3*$tech-size var(--tech-fg), 
+        0 4*$tech-size var(--tech-fg), 
+        -1*$tech-size 3*$tech-size var(--tech-fg), 
+        -2*$tech-size 2*$tech-size var(--tech-fg), 
+        -3*$tech-size 1*$tech-size var(--tech-fg), 
+        -1*$tech-size $tech-size var(--tech-bg), 
+        -2*$tech-size $tech-size var(--tech-bg), 
+        -1*$tech-size 2*$tech-size var(--tech-bg), 
+        -1*$tech-size 0 var(--tech-bg), 
+        -2*$tech-size 0 var(--tech-bg), 
+        -3*$tech-size 0 var(--tech-bg);
     }
 */
 
@@ -189,20 +189,20 @@
       width: $tech-size;
       top: 5*$tech-size;
       left: -2*$tech-size;
-      background: $tech-bg;
+      background: var(--tech-bg);
       box-shadow: 
-        -1*$tech-size -1*$tech-size $tech-bg,
-        -1*$tech-size 0 $tech-bg,
-        -2*$tech-size 0 $tech-bg,
-        0 -2*$tech-size $tech-bg,
-        -1*$tech-size 1*$tech-size $tech-fg, 
-        -2*$tech-size 1*$tech-size $tech-fg, 
-        -3*$tech-size 1*$tech-size $tech-fg, 
-        -4*$tech-size 1*$tech-size $tech-fg,
-        -3*$tech-size 0 $tech-fg, 
-        -2*$tech-size -1*$tech-size $tech-fg, 
-        -1*$tech-size -2*$tech-size $tech-fg,
-        0 -1*$tech-size $tech-bg;
+        -1*$tech-size -1*$tech-size var(--tech-bg),
+        -1*$tech-size 0 var(--tech-bg),
+        -2*$tech-size 0 var(--tech-bg),
+        0 -2*$tech-size var(--tech-bg),
+        -1*$tech-size 1*$tech-size var(--tech-fg), 
+        -2*$tech-size 1*$tech-size var(--tech-fg), 
+        -3*$tech-size 1*$tech-size var(--tech-fg), 
+        -4*$tech-size 1*$tech-size var(--tech-fg),
+        -3*$tech-size 0 var(--tech-fg), 
+        -2*$tech-size -1*$tech-size var(--tech-fg), 
+        -1*$tech-size -2*$tech-size var(--tech-fg),
+        0 -1*$tech-size var(--tech-bg);
     }
 
     *:not(cite) {
