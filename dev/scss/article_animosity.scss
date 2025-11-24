@@ -198,6 +198,11 @@
 
   .flashback {
     // Single lines and Groups of flashback copy
+    border-color: $c_light30;
+    border-radius: 0.5rem;
+    border-style: dotted;
+    border-width: 1px;
+    padding: 0.25rem 1rem;
   }
 
   .glossary {
