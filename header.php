@@ -26,7 +26,6 @@ $saveData = (isset($_SERVER["HTTP_SAVE_DATA"]) && stristr($_SERVER["HTTP_SAVE_DA
     <meta name="description" content="<?php echo get_the_excerpt(); ?>">
     <meta name="og:description" property="og:description" content="<?php echo get_the_excerpt(); ?>">
     <meta name="twitter:description" content="<?php echo get_the_excerpt(); ?>">
-    <meta name="keywords" content="<?php list_categories_tags(); ?>">
     <meta name="og:type" property="og:type" content="article">
     <meta name="twitter:card" content="summary">
     <?php if ( has_post_thumbnail() ) : ?>
