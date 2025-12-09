@@ -124,27 +124,6 @@ function word_count() {
   echo $count;
 }
 
-function list_categories_tags() {
-  // list them together, unlinked
-  $postcategories = get_the_category();
-  if ($postcategories) {
-    foreach($posttags as $cat) {
-      $list .= $cat->name . ', ';
-    }
-  }
-  $posttags = get_the_tags();
-  if ($posttags) {
-    foreach($posttags as $tag) {
-      $list .= $tag->name . ', ';
-    }
-  }
-  if ($list) {
-    // strip off last separator
-    $list = preg_replace('/(, (?!.*, ))/', '', $list);
-    echo $list;
-  }
-}
-
 function corry_widgets_init() {
   if ( function_exists('register_sidebar') ) {
     $sidebar1 = array(
