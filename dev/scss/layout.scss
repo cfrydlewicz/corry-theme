@@ -206,9 +206,33 @@
 
 }
 
+// Single Post Footer Styling
 
-// Widget Article Cards
+// Read More Widget
+.srpw-block {
+
+  a.srpw-title {
+    overflow: visible; // override
+  }
+
+}
+
+.srpw-ul {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 1rem;
+
+  @media #{$mq_md} {
+    flex-direction: row;
+  }
+
+}
+
 .srpw-li {
+  max-width: $thumbnail_width;
+  min-width: 240px;
   position: relative;
 
   &:hover {
@@ -263,6 +287,11 @@
     font-weight: 400;
   }
 
+}
+
+.srpw-comment {
+  @extend .i_chat;
+  padding-left: 0; // override
 }
 
 .srpw-summary.srpw-summary {
@@ -348,7 +377,6 @@
 
     .widget-area {
       margin: 0 auto;
-      max-width: $thumbnail_width;
 
       li {
         list-style-type: none; // fix idiotic markup from plugin
@@ -424,7 +452,6 @@ body.single {
 
       .widget-area {
         margin: 0 auto;
-        max-width: $thumbnail_width;
 
         li {
           list-style-type: none; // fix idiotic markup from plugin
