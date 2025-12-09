@@ -5,7 +5,7 @@
     the_post();
     // store data for the post footer widgets
     $thisPostId = get_the_ID();
-    echo $thisPostId;
+    echo $thisPostId[0];
     $thisPostTitle = get_the_title($thisPostId);
     $thisPostShortUrl = "https://corry.us/?p=".get_the_ID($thisPostId);
     $thisPostShortDescUrl = "https://corry.us/".$post->post_name;
