@@ -659,7 +659,7 @@ body {
     }
 
     .sidebar_read-more a {
-      //@extend i_arrow-right--after;
+      //@extend .i_arrow-right--after;
 
       &::after {
         content: "\edbb";
