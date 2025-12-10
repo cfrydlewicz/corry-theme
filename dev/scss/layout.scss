@@ -252,22 +252,18 @@
 
 .srpw-img {
   @extend .entry-header;
+  background-color: var(--c_dark-base);
   overflow: hidden;
   position: relative;
+  width: 100%;
 
   img {
-    height: 60vh;
+    height: 240px;
     left: 50%;
     max-width: none;
     position: relative;
     transform: translateX(-50%);
     width: auto;
-
-    @media #{$mq_md} {
-      height: auto;
-      width: $thumbnail_width;
-    }
-
   }
 
 }
@@ -281,12 +277,6 @@
   font-weight: 400;
   line-height: 1;
   margin-bottom: 0.125em;
-
-  @media #{$mq_md} {
-    font-size: 2.5em;
-    font-weight: 400;
-  }
-
 }
 
 .srpw-comment {
