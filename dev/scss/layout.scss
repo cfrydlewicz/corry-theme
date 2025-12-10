@@ -251,7 +251,7 @@
 }
 
 .srpw-img {
-  @extend .entry-header;
+  //@extend .entry-header;
   background-color: var(--c_dark-base);
   overflow: hidden;
   position: relative;
@@ -309,6 +309,11 @@
   // overrides
   @include button(big);
   transition: all 0.2s ease-in-out;
+
+  @media #{$mq_md} {
+    margin-right: 1rem;
+  }
+
 }
 
 .srpw-more-link {
