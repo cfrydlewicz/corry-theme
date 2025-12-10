@@ -211,7 +211,7 @@
 // Read More Widget
 .srpw-block {
 
-  a.srpw-title {
+  a.srpw-title.srpw-title {
     overflow: visible; // override
   }
 
@@ -277,6 +277,11 @@
   font-weight: 400;
   line-height: 1;
   margin-bottom: 0.125em;
+}
+
+.srpw-comment::before,
+.srpw-author::before {
+  color: inherit !important; // override
 }
 
 .srpw-comment {

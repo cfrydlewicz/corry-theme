@@ -79,7 +79,7 @@ $icons: (
     &#{$label}::before,
     &#{$label}--after::after {
       @include icomoon;
-      content: #{'"\\e' + $hex + '"'};
+      content: #{'"\\e' + $hex + '"'} !important;
     }
   }
 }
