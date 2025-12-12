@@ -645,6 +645,15 @@ body {
       margin-bottom: 0.5em;
     }
 
+    p {
+
+      &.tags {
+        max-height: 7em;
+        overflow-y: auto;
+      }
+
+    }
+
     li {
       list-style: none;
     }

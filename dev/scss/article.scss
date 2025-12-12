@@ -719,6 +719,11 @@
     left: -1.125em;
   }
 
+  .post-tags {
+    max-height: 5.25em;
+    overflow-y: auto;
+  }
+
   @media #{$mq_md} {
     flex-direction: row;
     flex-wrap: nowrap;
