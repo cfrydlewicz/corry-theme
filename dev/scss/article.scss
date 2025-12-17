@@ -187,7 +187,8 @@
       }
 
     }
-    a[href^="#a_"]::after {
+    a[href^="#a_"]::after,
+    a[href^="#h-"]::after {
       content: '#';
       display: inline-block;
       font-size: 0.5em;
