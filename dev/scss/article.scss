@@ -326,6 +326,13 @@
 
     }
 
+    // Groups
+    .inner-wrapper > .wp-block-group {
+      // subtle added spacing for grouped content
+      padding-bottom: 0.5rem;
+      padding-top: 0.5rem;
+    }
+
     // Columns
     .wp-block-columns {
       clear: both; // in case any floats are nearby
