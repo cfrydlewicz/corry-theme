@@ -213,7 +213,7 @@
 .srpw-block {
 
   a.srpw-title.srpw-title {
-    overflow: visible; // override
+    overflow: visible !important; // override
   }
 
 }
@@ -270,6 +270,9 @@
 }
 
 .srpw-content {
+  clear: both;
+  padding-left: $gutter;
+  padding-right: $gutter;
 }
 
 .srpw-title {
@@ -381,6 +384,7 @@
 
       li {
         list-style-type: none; // fix idiotic markup from plugin
+        max-width: 100%; // prevent overflow on mobile
       }
 
     }
