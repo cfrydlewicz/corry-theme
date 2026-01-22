@@ -679,6 +679,10 @@
     flex-grow: 1;
     width: 100%;
 
+    @media #{$mq_md} {
+      width: auto;
+    }
+
     > div:not(:last-child) {
       margin-bottom: 1rem;
 

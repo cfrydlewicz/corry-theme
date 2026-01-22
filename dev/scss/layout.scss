@@ -273,6 +273,7 @@
   clear: both;
   padding-left: $gutter;
   padding-right: $gutter;
+  padding-top: 0.5rem;
 }
 
 .srpw-title {
@@ -326,7 +327,7 @@
   right: 5%;
 
   @media #{$mq_md} {
-    right: 2%;
+    right: 10%;
   }
 
   @media #{$mq_mouse} {
