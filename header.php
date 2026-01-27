@@ -16,7 +16,13 @@ $saveData = (isset($_SERVER["HTTP_SAVE_DATA"]) && stristr($_SERVER["HTTP_SAVE_DA
   <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fff">
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e3c41">
 
-  <?php if ( !empty(wp_title('', false)) ) { $pageTitle = wp_title('', false).' | '.get_bloginfo('name'); } else { $pageTitle = get_bloginfo('name'); } ?>
+  <?php if ( is_home() ) {
+    $pageTitle = get_bloginfo('name');
+  } else if ( !empty(wp_title('', false)) ) {
+    $pageTitle = wp_title('', false).' | '.get_bloginfo('name');
+  } else {
+    $pageTitle = get_bloginfo('name');
+  } ?>
   <title><?php echo $pageTitle; ?></title>
   <meta name="og:title" property="og:title" content="<?php echo $pageTitle; ?>">
   <meta name="twitter:title" content="<?php echo $pageTitle; ?>">
