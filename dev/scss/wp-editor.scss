@@ -1,4 +1,29 @@
 // add_editor_style( 'editor-style.css' ); to functions.php
+
+// Modify the Editor Interface
+.editor-visual-editor__post-title-wrapper {
+  margin-top: 0 !important;
+  border-color: $c_light-base;
+  border-style: dashed;
+  border-width: 0 0 1px;
+}
+.editor-visual-editor__post-title-wrapper h1 {
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+// Match Front-End
+.editor-styles-wrapper {
+  font-family: 'Montserrat', helvetica, sans-serif; // critical
+  font-size: 16px;  // establishes rem basis
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  text-wrap: balance;  // prevent orphaned text (browser support fallback)
+  text-wrap: pretty; // prevent orphaned text
+}
+
+// Display Some Classes Differently Internally
 .u_visually-hidden,
 .u_hidden {
   opacity: 0.6;
