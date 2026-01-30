@@ -40,7 +40,7 @@ function theme_setup() {
   add_theme_support( 'widgets-block-editor' );
 
   // Style the editor
-  add_theme_support( 'editor-style' );
+  add_theme_support( 'editor-styles' );
   add_editor_style( 'editor-style.css' );
   add_theme_support( 'editor-color-palette', array(
     array(
