@@ -368,19 +368,20 @@ body {
 .exposed-nav button,
 .header-nav > button {
   border-radius: 0;
+  border-width: 2px;
   color: var(--c_link);
   height: $header_height;
   padding: 0 12px;
 
   &:not(:hover):not(:active):not(:focus) {
     background-color: transparent;
+    border-color: transparent;
     color: var(--c_link);
   }
 
   &:hover {
     background-color: var(--c_hover);
     border-color: var(--c_hover-dark);
-    border-width: 2px;
     color: $c_truewhite;
   }
 
