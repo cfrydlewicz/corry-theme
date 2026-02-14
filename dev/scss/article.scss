@@ -544,6 +544,16 @@
         top: 8px;
       }
 
+      h2,
+      h3,
+      h4 {
+
+        &:first-child {
+          margin-top: 0.25em;
+        }
+
+      }
+
       p,
       cite {
         line-height: 1.5;
