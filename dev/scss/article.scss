@@ -105,6 +105,11 @@
     p:not(:last-of-type):not(.alert) {
       margin-bottom: 1.5em;
     }
+
+    .has-small-font-size {
+      font-size: 14px !important;
+    }
+
     figcaption {
       font-size: 1em;
       line-height: 1.125;
