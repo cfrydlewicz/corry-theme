@@ -88,6 +88,38 @@ function exclude_microblogs( $query ) {
 }
 
 
+// Remove the "term" and "attachment" items from the hyperlink search results in the block editor
+add_filter('rest_request_after_callbacks', function($response, $handler, $request ) {
+  // Get the route
+  $route = $request->get_route();
+
+  // Check if the request is for the block editor's search
+  if (strpos($route, '/wp/v2/search') !== false) {
+    // Get the search query, per_page and type
+    $search_query = $request->get_param('search');
+    $per_page = $request->get_param('per_page');
+    $search_type = $request->get_param('type');
+
+    // If the type is 'term', return an empty response
+    if ($search_type === 'term' && !empty($search_query) && !empty($per_page)) {
+      return new \WP_REST_Response([], 200);
+    }
+  } elseif (strpos($route, '/wp/v2/media') !== false) { // Check if the request is for the media library
+    // Get the search query and per_page
+    $per_page = $request->get_param('per_page');
+    $search_query = $request->get_param('search');
+
+    // If the search query and per_page are not empty, return an empty response
+    if (!empty($search_query) && !empty($per_page)) {
+      return new \WP_REST_Response([], 200);
+    }
+  }
+
+  // Return the response
+  return $response;
+}, 10, 3 );
+
+
 // Remove spaces from front of title
 add_filter( 'wp_title', function($title) {
   return trim( $title );
