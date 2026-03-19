@@ -46,7 +46,8 @@ img:not(.emoji) {
 }
 
 // Unmark behaving images
-a img[alt]:not([alt=""]):not(.emoji) {
+a img[alt]:not([alt=""]):not(.emoji),
+.wp-block-media-text img[alt]:not([alt=""]):not(.emoji) {
   outline: none;
 }
 
