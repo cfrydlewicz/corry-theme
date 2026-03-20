@@ -355,6 +355,11 @@ body {
 
     li li a {
       padding-left: 32px;
+
+      &::before {
+        content: '▸';
+      }
+
     }
 
   }
