@@ -29,7 +29,6 @@ $saveData = (isset($_SERVER["HTTP_SAVE_DATA"]) && stristr($_SERVER["HTTP_SAVE_DA
   <meta name="twitter:site" content="@cfrydlewicz">
 
   <?php if ( is_singular() ) : ?>
-    <meta name="description" content="<?php echo get_the_excerpt(); ?>">
     <meta name="og:description" property="og:description" content="<?php echo get_the_excerpt(); ?>">
     <meta name="og:type" property="og:type" content="article">
     <meta name="twitter:card" content="summary">
@@ -43,22 +42,18 @@ $saveData = (isset($_SERVER["HTTP_SAVE_DATA"]) && stristr($_SERVER["HTTP_SAVE_DA
       <meta name="twitter:image:alt" content="Cute illustration of Corry Frydlewicz.">
     <?php endif; ?>
   <?php elseif ( is_category() ) : ?>
-    <meta name="description" content="Posts labeled <?php echo single_cat_title('', false); ?> from Corry Frydlewicz">
     <meta name="og:description" property="og:description" content="Posts labeled <?php echo single_cat_title('', false); ?> from Corry Frydlewicz">
     <meta name="keywords" content="<?php echo single_cat_title('', false); ?>, Corry Frydlewicz, Corry, Frydlewicz">
     <meta name="og:type" property="og:type" content="website">
   <?php elseif ( is_tag() ) : ?>
-    <meta name="description" content="Posts labeled <?php echo single_tag_title('', false); ?> from Corry Frydlewicz">
     <meta name="og:description" property="og:description" content="Posts tagged <?php echo single_tag_title('', false); ?> from Corry Frydlewicz">
     <meta name="keywords" content="<?php echo single_tag_title('', false); ?>, Corry Frydlewicz, Corry, Frydlewicz">
     <meta name="og:type" property="og:type" content="website">
   <?php elseif ( is_search() ) : ?>
-    <meta name="description" content="Search results for <?php echo esc_html($_GET['s']); ?> from Corry Frydlewicz">
     <meta name="og:description" property="og:description" content="Search results for <?php echo esc_html($_GET['s']); ?> from Corry Frydlewicz">
     <meta name="keywords" content="<?php echo esc_html($_GET['s']); ?>, Corry Frydlewicz, Corry, Frydlewicz">
     <meta name="og:type" property="og:type" content="website">
   <?php else : ?>
-    <meta name="description" content="Personal history, philosophy, reviews, game guides, advice, and petty rants. I've been blogging since my teen years, so a little bit of everything about me."><!-- 150-160 ch -->
     <meta name="og:description" property="og:description" content="Philosophy, reviews, personal drama, advice, rants, and more."><!-- 55-60 ch -->
     <meta name="keywords" content="Corry Frydlewicz, Corry, Frydlewicz, Corry Blog, CorryArt">
     <meta name="og:type" property="og:type" content="website">
