@@ -42,7 +42,6 @@ $saveData = (isset($_SERVER["HTTP_SAVE_DATA"]) && stristr($_SERVER["HTTP_SAVE_DA
       <meta name="twitter:image:alt" content="Cute illustration of Corry Frydlewicz.">
     <?php endif; ?>
   <?php elseif ( is_category() ) : ?>
-    <meta name="description" content="Posts labeled <?php echo single_cat_title('', false); ?> from Corry Frydlewicz">
     <meta name="og:description" property="og:description" content="Posts labeled <?php echo single_cat_title('', false); ?> from Corry Frydlewicz">
     <meta name="keywords" content="<?php echo single_cat_title('', false); ?>, Corry Frydlewicz, Corry, Frydlewicz">
     <meta name="og:type" property="og:type" content="website">
