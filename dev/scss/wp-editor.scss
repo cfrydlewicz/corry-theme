@@ -51,6 +51,15 @@ a img[alt]:not([alt=""]):not(.emoji),
   outline: none;
 }
 
+// Mark Styling in Headers
+h2 strong,
+h3 strong,
+h4 strong {
+  color: #900;
+  outline: 1px dashed #900;
+  outline-offset: 0.25em;
+}
+
 .wp-block {
 
   // custom classes
