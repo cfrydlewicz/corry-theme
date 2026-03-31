@@ -19,7 +19,7 @@ $saveData = (isset($_SERVER["HTTP_SAVE_DATA"]) && stristr($_SERVER["HTTP_SAVE_DA
   <?php if ( is_home() ) {
     $pageTitle = get_bloginfo('name');
   } else if ( !empty(wp_title('', false)) ) {
-    $pageTitle = wp_title('', false).' | '.get_bloginfo('name');
+    $pageTitle = wp_title('', false);
   } else {
     $pageTitle = get_bloginfo('name');
   } ?>
