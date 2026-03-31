@@ -101,9 +101,9 @@ add_filter('rest_request_after_callbacks', function($response, $handler, $reques
     $search_type = $request->get_param('type');
 
     // If the type is 'term', return an empty response
-    if ($search_type === 'term' && !empty($search_query) && !empty($per_page)) {
-      return new \WP_REST_Response([], 200);
-    }
+    //if ($search_type === 'term' && !empty($search_query) && !empty($per_page)) {
+      //return new \WP_REST_Response([], 200);
+    //}
   } elseif (strpos($route, '/wp/v2/media') !== false) { // Check if the request is for the media library
     // Get the search query and per_page
     $per_page = $request->get_param('per_page');
