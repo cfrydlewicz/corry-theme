@@ -208,6 +208,11 @@
       display: none;
     }
 
+    // Buttons
+    .wp-block-button a {
+      @include button(big);
+    }
+
     // lists
     ul,
     ol {
