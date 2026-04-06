@@ -1,6 +1,7 @@
 User-agent: *
 Disallow: /wp-admin/
 Allow: /wp-admin/admin-ajax.php
+Disallow: /*/feed/
 Sitemap: https://corryfrydlewicz.com/wp-sitemap.xml
 
 User-agent: GPTBot
