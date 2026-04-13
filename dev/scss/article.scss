@@ -209,8 +209,20 @@
     }
 
     // Buttons
+    .wp-block-buttons {
+      margin-bottom: 2.5rem;
+    }
     .wp-block-button a {
-      @include button(big);
+      background-color: $c_primary-dark;
+      color: $c_truewhite;
+      font-weight: 500;
+      text-decoration: none;
+
+      &:hover {
+        background-color: $c_accent-dim;
+        color: $c_truewhite;
+      }
+
     }
 
     // lists
