@@ -67,7 +67,6 @@
             <ul>
               <li><a class="i_mail"          title="Email Newsletter"               href="/emailsubscribe?utm_source=site-footer" target="_blank"></a></li>
               <li><a class="i_rss"           title="My RSS Feed"                    href="/subscribe-to-corrys-blog-with-rss/"></a></li>
-           <!--li><a class="i_heart"         title="My Patreon"                     href="/patreon"                                                                       rel="noreferrer" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://www.patreon.com']);"></a></li-->
               <li><a class="i_bluesky"       title="cfrydlewicz on Bluesky"         href="/bluesky"                                                                       rel="noreferrer" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://bsky.app']);"></a></li>
               <li><a class="i_discord"       title="My Discord Server"              href="/discord"                                                                       rel="noreferrer" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://discord.gg']);"></a></li>
               <li><a class="i_matrix"        title="My Matrix Server"               href="/matrix-chat"                                                                   rel="noreferrer" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://matrix.org']);"></a></li>

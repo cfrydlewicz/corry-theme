@@ -96,7 +96,6 @@
             <li><a class="i_mail" href="/emailsubscribe?utm_source=post-footer" target="_blank">Email Newsletter</a></li>
             <li><a class="i_rss" href="/subscribe-to-corrys-blog-with-rss/" target="_blank">RSS Feed</a></li>
             <li><a class="i_bluesky" href="/bluesky" rel="noreferrer" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://bsky.app']);">Bluesky</a></li>
-            <!--li><a class="i_heart" href="https://www.patreon.com/CorryFrydlewicz" target="_blank" rel="noreferrer" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://www.patreon.com']);">Patreon</a></li-->
           </ul>
         </section>
 
