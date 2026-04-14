@@ -655,7 +655,7 @@ body {
 
       &.tags {
         height: 5.5em;
-        max-height: 70vh;
+        max-height: max-content;
         min-height: 2.5em;
         overflow-y: auto;
         resize: vertical;
