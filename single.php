@@ -76,6 +76,7 @@
             <span class="word-count u_nowrap"><?php word_count(); ?> words</span><br>
             <span class="post-date u_nowrap"><?php the_date(); ?></span>
           </p>
+          <p class="post-categories f_small">Categories: <?php the_category(', '); ?></p>
           <p class="tags f_small"><?php the_tags(); ?></p>
         </section>
 
