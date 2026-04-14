@@ -776,6 +776,7 @@ body.shadow-on #shadow {
 
   p {
     @include f_smaller;
+    max-width: 75ch;
   }
 
 }
