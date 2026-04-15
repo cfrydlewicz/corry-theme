@@ -608,16 +608,20 @@ body {
       flex-wrap: wrap;
       padding: $gutter $gutter $gutter*2;
 
-      @media #{$mq_mouse} {
-        background-color: rgba(0,0,0,0.5);
-        opacity: 0.5;
-        transition-duration: 0.2s;
-        transition-property: opacity;
+      .single & {
 
-        &:hover,
-        &:focus,
-        &:focus-within {
-          opacity: 1.0;
+        @media #{$mq_mouse} {
+          background-color: rgba(0,0,0,0.5);
+          opacity: 0.5;
+          transition-duration: 0.2s;
+          transition-property: opacity;
+
+          &:hover,
+          &:focus,
+          &:focus-within {
+            opacity: 1.0;
+          }
+
         }
 
       }
