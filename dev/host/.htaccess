@@ -55,5 +55,8 @@ RewriteRule . /index.php [L]
 </IfModule>
 
 # php -- BEGIN cPanel-generated handler, do not edit
-# This domain inherits the “PHP” package.
+# Set the “ea-php83” package as the default “PHP” programming language.
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php83___lsphp .php .php8 .phtml
+</IfModule>
 # php -- END cPanel-generated handler, do not edit
