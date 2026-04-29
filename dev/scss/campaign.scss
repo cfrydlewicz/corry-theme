@@ -255,13 +255,20 @@ body.page-template-page_campaign-template {
 
         }
 
+        @media #{$mq_md2} {
+
+          li:nth-child(4) {
+            display: block;
+          }
+
+        }
+
         @media #{$mq_lg} {
 
           li:nth-child(4) {
             display: block;
           }
 
-          li:nth-child(5),
           li:nth-child(6) {
             display: none; // override main site
           }
@@ -271,7 +278,6 @@ body.page-template-page_campaign-template {
         @media #{$mq_max} {
           margin-left: 0px;
 
-          li:nth-child(5),
           li:nth-child(6) {
             display: block;
           }

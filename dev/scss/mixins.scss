@@ -94,6 +94,7 @@ $bp_sm3:   480px;
 $bp_sm4:   640px;
 $bp_md:    768px; // iPad
 $bp_admin: 783px; // when the admin bar switches to desktop mode
+$bp_md2:   840px;
 $bp_lg:    1024px; // Landscape Tablets, Laptops
 $bp_xl:    1024px + $gutter_lg*2; // Laptops, Desktops
 $bp_max:   1336px; // site width cap
@@ -109,6 +110,7 @@ $mq_sm4     : "only screen and (min-width: #{$bp_sm4})";
 $mq_sm-only : "only screen and (max-width: #{$bp_md - 1})";
 $mq_md      : "only screen and (min-width: #{$bp_md})";
 $mq_admin   : "only screen and (min-width: #{$bp_admin})";
+$mq_md2     : "only screen and (min-width: #{$bp_md2})";
 $mq_lg      : "only screen and (min-width: #{$bp_lg})";
 $mq_xl      : "only screen and (min-width: #{$bp_xl})";
 $mq_cols    : "only screen and (min-width: #{$bp_cols})";
