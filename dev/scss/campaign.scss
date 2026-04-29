@@ -223,6 +223,11 @@ body.page-template-page_campaign-template {
     .exposed-nav {
       margin-right: $gutter;
 
+      @media #{$mq_sm4} {
+        // when the Donate and Join Me Buttons Appear
+        margin-left: -40px; // remove width leftover from overlapped buttons
+      }
+
       @media #{$mq_lg} {
         margin-right: $gutter_lg;
       }
