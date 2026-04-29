@@ -194,7 +194,7 @@ body.page-template-page_campaign-template {
 
       @media #{$mq_max} {
         // when the full nav is exposed
-        min-width: 330px;
+        min-width: 390px;
       }
 
       a {
@@ -236,22 +236,17 @@ body.page-template-page_campaign-template {
     }
 
     .exposed-nav {
-      margin-right: $gutter;
-
-      @media #{$mq_lg} {
-        margin-right: $gutter_lg;
-      }
+      position: relative;
 
       @media #{$mq_max} {
         margin-right: 0;
       }
 
       ul {
-        gap: $gutter;
+        gap: $gutter/2;
 
         @media #{$mq_sm4} {
           // when the Donate and Join Me Buttons Appear
-          margin-left: -40px; // remove width leftover from overlapped buttons
 
           li:nth-child(2),
           li:nth-child(3) {
@@ -261,7 +256,6 @@ body.page-template-page_campaign-template {
         }
 
         @media #{$mq_lg} {
-          gap: $gutter_lg;
 
           li:nth-child(4) {
             display: block;
@@ -275,6 +269,7 @@ body.page-template-page_campaign-template {
         }
 
         @media #{$mq_max} {
+          margin-left: 0px;
 
           li:nth-child(5),
           li:nth-child(6) {
@@ -288,6 +283,7 @@ body.page-template-page_campaign-template {
       button {
         height: $header_height - 6px;
         text-transform: uppercase;
+        white-space: nowrap;
 
         &:not(:hover):not(:active):not(:focus) {
           background-color: var(--cmpn_link);
@@ -297,7 +293,27 @@ body.page-template-page_campaign-template {
 
       }
 
+      --donate-offset: 82px;
+
+      .issues,
+      .join {
+        z-index: 1;
+      }
+
+      .issues {
+
+        @media #{$mq_sm4} {
+          // make room for donate behind it
+          padding-right: calc( var(--donate-offset) - 18px );
+        }
+
+      }
+
       .donate {
+        left: var(--donate-offset);
+        position: absolute;
+        transform: rotate(-10deg);
+        z-index: 0;
 
         button {
           @extend .i_close;
@@ -319,34 +335,6 @@ body.page-template-page_campaign-template {
             z-index: 1;
           }
 
-        }
-
-      }
-
-      @media #{$mq_sm4} { // when the donate and Join Me buttons are visible
-
-        .issues,
-        .donate {
-          // underlap the Join CTA
-          position: relative;
-        }
-
-        .issues {
-          left: 54px;
-        }
-
-        .donate {
-          left: 40px;
-          z-index: 0;
-
-          button {
-            transform: rotate(-10deg);
-          }
-
-        }
-
-        .join {
-          z-index: 2;
         }
 
       }
