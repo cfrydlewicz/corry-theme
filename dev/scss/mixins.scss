@@ -91,6 +91,7 @@ $bp_min:   360px; // Samsung S6+, Samsung Note, iPhone 12 Mini
 $bp_sm:    375px; // iPhone 6+
 $bp_sm2:   412px; // iPhone 11+
 $bp_sm3:   480px;
+$bp_sm4:   640px;
 $bp_md:    768px; // iPad
 $bp_admin: 783px; // when the admin bar switches to desktop mode
 $bp_lg:    1024px; // Landscape Tablets, Laptops
@@ -104,6 +105,7 @@ $mq_submin  : "only screen and (max-width: #{$bp_min - 1})";
 $mq_sm      : "only screen and (min-width: #{$bp_sm})";
 $mq_sm2     : "only screen and (min-width: #{$bp_sm2})";
 $mq_sm3     : "only screen and (min-width: #{$bp_sm3})";
+$mq_sm4     : "only screen and (min-width: #{$bp_sm4})";
 $mq_sm-only : "only screen and (max-width: #{$bp_md - 1})";
 $mq_md      : "only screen and (min-width: #{$bp_md})";
 $mq_admin   : "only screen and (min-width: #{$bp_admin})";

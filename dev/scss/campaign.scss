@@ -230,8 +230,38 @@ body.page-template-page_campaign-template {
       ul {
         gap: $gutter;
 
+        @media #{$mq_sm4} {
+
+          li:nth-child(2),
+          li:nth-child(3) {
+            display: block;
+          }
+
+        }
+
+        @media #{$mq_md} {
+
+          li:nth-child(4) {
+            display: block;
+          }
+
+        }
+
         @media #{$mq_lg} {
           gap: $gutter_lg;
+
+          li:nth-child(5) {
+            display: block;
+          }
+
+        }
+
+        @media #{$mq_xl} {
+
+          li:nth-child(6) {
+            display: block;
+          }
+
         }
 
       }
@@ -274,7 +304,7 @@ body.page-template-page_campaign-template {
 
       }
 
-      @media #{$mq_lg} { // when the full exposed nav is visible
+      @media #{$mq_sm4} { // when the donate and Join Me buttons are visible
 
         .issues,
         .donate {
@@ -311,7 +341,7 @@ body.page-template-page_campaign-template {
 
         &:not(:hover):not(:active):not(:focus) {
           border-color: transparent;
-          color: var(--cmpn_link);
+          color: var(--cmpn_link) !important;
         }
 
       }
@@ -321,7 +351,7 @@ body.page-template-page_campaign-template {
         > button:not(:hover):not(:active):not(:focus) {
           background-color: var(--cmpn_active);
           border-color: var(--cmpn_active-dark);
-          color: $c_truewhite;
+          color: $c_truewhite !important;
         }
 
       }
@@ -331,7 +361,7 @@ body.page-template-page_campaign-template {
 
         a:not(:hover):not(:active):not(:focus) {
           border-left-color: var(--cmpn_link);
-          color: $c_black;
+          color: $c_black !important;
         }
 
         a:hover,

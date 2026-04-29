@@ -442,9 +442,17 @@ body {
 
   }
 
-  @media #{$mq_md} {
+  @media #{$mq_sm4} {
 
     li:nth-child(2) {
+      display: block;
+    }
+
+  }
+
+  @media #{$mq_md} {
+
+    li:nth-child(3) {
       display: block;
     }
 
