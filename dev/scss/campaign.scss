@@ -38,19 +38,19 @@ body.page-template-page_campaign-template {
     border-radius: 0.75em;
     border-style: solid;
     border-width: 2px;
-    color: $c_truewhite;
+    color: $c_truewhite !important;
 
     &:hover,
     &:focus {
       background-color: var(--cmpn_hover);
       border-color: var(--cmpn_hover-dark);
-      color: $c_truewhite;
+      color: $c_truewhite !important;
     }
 
     &:active {
       background-color: var(--cmpn_active);
       border-color: var(--cmpn_active-dark);
-      color: $c_truewhite;
+      color: $c_truewhite !important;
     }
 
   }
