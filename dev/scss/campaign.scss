@@ -59,7 +59,7 @@ body.page-template-page_campaign-template {
   .cta a {
     background-color: var(--cmpn_hover);
     border-color: var(--cmpn_hover-dark);
-    color: $c_truewhite;
+    color: $c_truewhite !important;
     font-weight: 500;
     line-height: 1;
     padding: $gutter*0.5 $gutter;
@@ -102,13 +102,13 @@ body.page-template-page_campaign-template {
     &:focus {
       background-color: var(--cmpn_link);
       border-color: var(--cmpn_link-dark);
-      color: $c_truewhite;
+      color: $c_truewhite !important;
     }
 
     &:active {
       background-color: var(--cmpn_active);
       border-color: var(--cmpn_active-dark);
-      color: $c_truewhite;
+      color: $c_truewhite !important;
     }
 
   }
