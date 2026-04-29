@@ -184,25 +184,40 @@ body.page-template-page_campaign-template {
 
     }
 
-    .header-logo a {
-      border-width: 0; // override
+    .header-logo {
+      min-width: 300px;
 
-      &,
-      &:active {
-        color: var(--cmpn_link);
-
-        path {
-          fill: var(--cmpn_link);
-        }
-
+      @media #{$mq_sm4} {
+        // when the Donate and Join Me Buttons Appear
+        min-width: 330px;
       }
 
-      &:hover,
-      &:focus {
-        color: var(--cmpn_hover);
+      @media #{$mq_max} {
+        // when the full nav is exposed
+        min-width: 330px;
+      }
 
-        path {
-          fill: var(--cmpn_hover);
+      a {
+        border-width: 0; // override
+
+        &,
+        &:active {
+          color: var(--cmpn_link);
+
+          path {
+            fill: var(--cmpn_link);
+          }
+
+        }
+
+        &:hover,
+        &:focus {
+          color: var(--cmpn_hover);
+
+          path {
+            fill: var(--cmpn_hover);
+          }
+
         }
 
       }
@@ -223,19 +238,20 @@ body.page-template-page_campaign-template {
     .exposed-nav {
       margin-right: $gutter;
 
-      @media #{$mq_sm4} {
-        // when the Donate and Join Me Buttons Appear
-        margin-left: -40px; // remove width leftover from overlapped buttons
-      }
-
       @media #{$mq_lg} {
         margin-right: $gutter_lg;
+      }
+
+      @media #{$mq_max} {
+        margin-right: 0;
       }
 
       ul {
         gap: $gutter;
 
         @media #{$mq_sm4} {
+          // when the Donate and Join Me Buttons Appear
+          margin-left: -40px; // remove width leftover from overlapped buttons
 
           li:nth-child(2),
           li:nth-child(3) {
@@ -244,25 +260,23 @@ body.page-template-page_campaign-template {
 
         }
 
-        @media #{$mq_md} {
+        @media #{$mq_lg} {
+          gap: $gutter_lg;
 
           li:nth-child(4) {
             display: block;
           }
 
-        }
-
-        @media #{$mq_lg} {
-          gap: $gutter_lg;
-
-          li:nth-child(5) {
-            display: block;
+          li:nth-child(5),
+          li:nth-child(6) {
+            display: none; // override main site
           }
 
         }
 
-        @media #{$mq_xl} {
+        @media #{$mq_max} {
 
+          li:nth-child(5),
           li:nth-child(6) {
             display: block;
           }
@@ -340,6 +354,11 @@ body.page-template-page_campaign-template {
     }
 
     .header-nav {
+
+      @media #{$mq_max} {
+        // when the full nav is exposed
+        display: none;
+      }
 
       > button {
         border-radius: 0;
