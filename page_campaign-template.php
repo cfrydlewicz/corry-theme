@@ -9,8 +9,8 @@
     echo $thisPostId[0];
     $thisPostTitle = get_the_title($thisPostId);
     $thisPostShortUrl = "https://corry.us/?p=".get_the_ID($thisPostId);
-    $thisPostShortDescUrl = "https://corry.us/emeryville/".$post->post_name;
-    $thisPostShortPrettyUrl = "corry.us/emeryville/".$post->post_name;
+    $thisPostShortDescUrl = "https://corry.us/".$post->post_name;
+    $thisPostShortPrettyUrl = "corry.us/".$post->post_name;
     $thisPostCommentNum = get_comments_number($thisPostId);
   ?>
 
