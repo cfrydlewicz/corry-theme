@@ -17,7 +17,8 @@ $c_light-base:          #d6f3f0; // pale teal
 // Variations
 $c_primary-darker:      oklch(25% 0.111 180.5);
 $c_primary-dark:        oklch(46.6% 0.111 180.5);
-  $c_primary-dark-rgb:  #006c5c;
+  $c_primary-dark-hex:  #006c5c;
+  $c_primary-dark-rgb:  rgb(0, 108, 92);
 $c_primary-dim:         oklch(73.24% 0.15 180.5);
   $c_primary-dim-hex:   #00c6ad;
   $c_primary-dim-rgb:   rgb(0, 198, 173);
