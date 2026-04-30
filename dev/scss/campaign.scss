@@ -6,7 +6,9 @@ body.page-template-page_campaign-template {
   color: $c_black;
 
   a,
-  button {
+  .article-content .entry-content a,
+  button,
+  .wp-block-button a {
 
     &:focus {
       outline-color: var(--cmpn_link);
@@ -17,7 +19,8 @@ body.page-template-page_campaign-template {
 
   }
 
-  a {
+  a,
+  .article-content .entry-content a:visited:not(:hover):not(:active):not(:focus) {
     color: var(--cmpn_link);
 
     &:hover,
@@ -32,6 +35,7 @@ body.page-template-page_campaign-template {
   }
 
   button,
+  .wp-block-button a,
   .cta a {
     background-color: var(--cmpn_link);
     border-color: var(--cmpn_link-dark);
@@ -55,6 +59,7 @@ body.page-template-page_campaign-template {
 
   }
 
+  .wp-block-button.cta a,
   button.cta,
   .cta a {
     background-color: var(--cmpn_hover);
@@ -113,7 +118,7 @@ body.page-template-page_campaign-template {
 
   }
 
-  .cta:not[button] {
+  .cta:not[button]:not(.wp-block-button) {
     display: flex;
 
     a {
@@ -236,6 +241,7 @@ body.page-template-page_campaign-template {
     }
 
     .exposed-nav {
+      --donate-offset: 82px;
       position: relative;
 
       @media #{$mq_max} {
@@ -299,14 +305,8 @@ body.page-template-page_campaign-template {
 
       }
 
-      --donate-offset: 82px;
-
-      .issues,
-      .join {
-        z-index: 1;
-      }
-
       .issues {
+        z-index: 0;
 
         @media #{$mq_sm4} {
           // make room for donate behind it
@@ -319,7 +319,7 @@ body.page-template-page_campaign-template {
         left: var(--donate-offset);
         position: absolute;
         transform: rotate(-10deg);
-        z-index: 0;
+        z-index: 1;
 
         button {
           @extend .i_close;
@@ -343,6 +343,10 @@ body.page-template-page_campaign-template {
 
         }
 
+      }
+
+      .join {
+        z-index: 2;
       }
 
     }
@@ -510,6 +514,10 @@ body.page-template-page_campaign-template {
 
       }
 
+      .wp-block-pullquote blockquote {
+        background: linear-gradient(90deg,rgba(0,0,0,0) 0, rgba(0, 108, 92, 0.2) 50%, rgba(0,0,0,0) 100%);
+      }
+
     }
 
   }
@@ -536,6 +544,30 @@ body.page-template-page_campaign-template {
 
     > .cta {
       width: 50%;
+    }
+
+    .share {
+
+      .label {
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+      }
+
+      ul {
+
+        @media #{$mq_xl} {
+          display: flex;
+          flex-wrap: wrap;
+          column-gap: 1.5rem;
+
+          li:last-child {
+            width: 100%;
+          }
+
+        }
+
+      }
+
     }
 
   }
