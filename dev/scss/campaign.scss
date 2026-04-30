@@ -8,7 +8,9 @@ body.page-template-page_campaign-template {
   a,
   .article-content .entry-content a,
   button,
-  .wp-block-button a {
+  .wp-block-button a,
+  input[type=submit],
+  .respond-container .form-submit input[type=submit] {
 
     &:focus {
       outline-color: var(--cmpn_link);
@@ -36,7 +38,9 @@ body.page-template-page_campaign-template {
 
   button,
   .wp-block-button a,
-  .cta a {
+  .cta a,
+  input[type=submit],
+  .respond-container .form-submit input[type=submit] {
     background-color: var(--cmpn_link);
     border-color: var(--cmpn_link-dark);
     border-radius: 0.75em;
@@ -541,6 +545,8 @@ body.page-template-page_campaign-template {
 
   .thanks-for-reading {
     background-color: transparent;
+    position: relative; // override sticky
+    top: 0 !important;
 
     > .cta {
       width: 50%;
@@ -554,20 +560,36 @@ body.page-template-page_campaign-template {
       }
 
       ul {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 1.5rem;
 
-        @media #{$mq_md} {
-          display: flex;
-          flex-wrap: wrap;
-          column-gap: 1.5rem;
-
-          li:last-child {
-            width: 100%;
-          }
-
+        li:last-child {
+          width: 100%;
         }
 
       }
 
+    }
+
+  }
+
+  .comments-container {
+
+    input,
+    textarea {
+      background-color: $c_white;
+      border-color: $c_light60;
+      color: $c_black;
+    }
+
+    textarea {
+      padding: 8px;
+    }
+
+    .respond-container .form-submit input[type=submit] {
+      margin-top: 0;
+      transform: none;
     }
 
   }
