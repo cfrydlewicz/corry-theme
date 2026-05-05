@@ -645,11 +645,16 @@
       margin-bottom: 3em;
 
       figcaption {
-        height: 2.375em;  // attempt to prevent unwanted scrollbars
+        min-height: 2.375em;  // attempt to prevent unwanted scrollbars
       }
 
-      &.is-style-stripes tbody tr:nth-child(odd) {
-        background-color: $c_grey80;
+      &.is-style-stripes {
+        border-bottom-width: 0; // override
+
+        tbody tr:nth-child(odd) {
+          background-color: $c_grey80;
+        }
+
       }
 
     }
