@@ -16,57 +16,106 @@ $saveData = (isset($_SERVER["HTTP_SAVE_DATA"]) && stristr($_SERVER["HTTP_SAVE_DA
   <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fff">
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e3c41">
 
-  <?php if ( is_home() ) {
-    $pageTitle = get_bloginfo('name');
-  } else if ( !empty(wp_title('', false)) ) {
-    $pageTitle = wp_title('', false);
-  } else {
-    $pageTitle = get_bloginfo('name');
-  } ?>
+  <!-- Yoast Meta Desc: <?php get_metadata($post_id, '_yoast_wpseo_metadesc', true) ?> -->
+  <!-- WP Excerpt: <?php get_the_excerpt(); ?> -->
+
+  <?php // meta variables
+
+    // Title
+    if ( is_home() ) {
+      $pageTitle = get_bloginfo('name');
+    } else if ( !empty(wp_title('', false)) ) {
+      $pageTitle = wp_title('', false);
+    } else {
+      $pageTitle = get_bloginfo('name');
+    }
+
+    // Description
+    if ( is_singular() ) {
+
+      if ( get_post_meta($post_id, '_yoast_wpseo_metadesc', true) !== "" ) {
+        // Always prefer Yoast Meta Settings - null prevents duplicate meta tag
+        $pageDesc = null;
+        $pageShortDesc = null;
+      } else {
+        $pageDesc = get_the_excerpt();
+        $pageShortDesc = substr( get_the_excerpt(), 0, 60); // 55-60 ch
+      }
+
+    } else if ( is_category() || is_tag() ) {
+
+      if ( get_term_meta($term_id, '_yoast_wpseo_metadesc', true) !== "" ) {
+        // Always prefer Yoast Meta Settings - null prevents duplicate meta tag
+        $pageDesc = null;
+        $pageShortDesc = null;
+      } else if ( the_excerpt() !== null && the_excerpt() !== '') {
+        $pageDesc = get_the_excerpt();
+        $pageShortDesc = substr( get_the_excerpt(), 0, 60); // 55-60 ch
+      } else {
+        if ( is_category() ) {
+          $pageDesc = "Posts labeled ".single_cat_title('', false)." | ".get_bloginfo('name');
+          $pageShortDesc = substr( single_cat_title('', false), 0, 60); // 55-60 ch
+        } else {
+          $pageDesc = "Posts labeled ".single_tag_title('', false)." | ".get_bloginfo('name');
+          $pageShortDesc = substr( single_tag_title('', false), 0, 60); // 55-60 ch
+        }
+      }
+
+    } else if ( is_search() ) {
+        $pageDesc = "Search results for ".esc_html($_GET['s'])." | ".get_bloginfo('name');
+        $pageShortDesc = "Search results for ".esc_html($_GET['s']);
+
+    } else {
+      // includes Home, search results
+      $pageDesc = "Personal history, philosophy, reviews, game guides, advice, and petty rants. I've been blogging since my teen years, so a little bit of everything about me." // 150-160 ch
+      $pageShortDesc = "Philosophy, reviews, personal drama, advice, rants, and more."; // 55-60 ch
+    }
+
+    // Type
+    if ( is_singular() ) {
+      $pageMetaType = "article";
+    } else {
+      $pageMetaType = "website";
+    }
+
+    // Thumbnail Image
+    if ( has_post_thumbnail() ) {
+      $pageThumbnailUrl = the_post_thumbnail_url();
+      $pageThumbnailAlt = get_post_meta(get_post_thumbnail_id( $post->ID ), '_wp_attachment_image_alt', true);
+    else {
+      $pageThumbnailUrl = bloginfo('template_url').'/assets/images/corry_opengraph.jpg';
+      //$pageThumbnailUrl = bloginfo('template_url').'/assets/images/corry_twittercard.jpg';
+      $pageThumbnailAlt = "Cute illustration of Corry Frydlewicz.";
+
+    }
+
+  ?>
+
+  <!-- Chosen Values: 
+    pageTitle: <?php echo $pageTitle; ?>
+    pageDesc: <?php echo $pageDesc; ?>
+    pageShortDesc: <?php echo $pageShortDesc; ?>
+    pageMetaType: <?php echo $pageMetaType; ?>
+    pageThumbnailUrl: <?php echo $pageThumbnailUrl; ?>
+    pageThumbnailAlt: <?php echo $pageThumbnailAlt; ?>
+  -->
+
   <title><?php echo $pageTitle; ?></title>
   <meta name="og:title" property="og:title" content="<?php echo $pageTitle; ?>">
   <meta name="twitter:title" content="<?php echo $pageTitle; ?>">
   <meta name="twitter:site" content="@cfrydlewicz">
 
-  <?php if ( is_singular() ) : ?>
-    <meta name="og:description" property="og:description" content="<?php echo get_the_excerpt(); ?>">
-    <meta name="og:type" property="og:type" content="article">
-    <meta name="twitter:card" content="summary">
-    <?php if ( has_post_thumbnail() ) : ?>
-      <meta name="og:image" property="og:image" content="<?php the_post_thumbnail_url(); ?>">
-      <meta name="twitter:image" content="<?php the_post_thumbnail_url(); ?>">
-      <meta name="twitter:image:alt" content="<?php echo get_post_meta(get_post_thumbnail_id( $post->ID ), '_wp_attachment_image_alt', true); ?>">
-    <?php else : ?>
-      <meta name="og:image" property="og:image" content="<?php bloginfo('template_url'); ?>/assets/images/corry_opengraph.jpg">
-      <meta name="twitter:image" content="<?php bloginfo('template_url'); ?>/assets/images/corry_twittercard.jpg">
-      <meta name="twitter:image:alt" content="Cute illustration of Corry Frydlewicz.">
-    <?php endif; ?>
-  <?php elseif ( is_category() ) : ?>
-    <meta name="og:description" property="og:description" content="Posts labeled <?php echo single_cat_title('', false); ?> from Corry Frydlewicz">
-    <meta name="keywords" content="<?php echo single_cat_title('', false); ?>, Corry Frydlewicz, Corry, Frydlewicz">
-    <meta name="og:type" property="og:type" content="website">
-  <?php elseif ( is_tag() ) : ?>
-    <meta name="description" content="Posts labeled <?php echo single_tag_title('', false); ?> from Corry Frydlewicz">
-    <meta name="og:description" property="og:description" content="Posts tagged <?php echo single_tag_title('', false); ?> from Corry Frydlewicz">
-    <meta name="keywords" content="<?php echo single_tag_title('', false); ?>, Corry Frydlewicz, Corry, Frydlewicz">
-    <meta name="og:type" property="og:type" content="website">
-  <?php elseif ( is_search() ) : ?>
-    <meta name="description" content="Search results for <?php echo esc_html($_GET['s']); ?> from Corry Frydlewicz">
-    <meta name="og:description" property="og:description" content="Search results for <?php echo esc_html($_GET['s']); ?> from Corry Frydlewicz">
-    <meta name="keywords" content="<?php echo esc_html($_GET['s']); ?>, Corry Frydlewicz, Corry, Frydlewicz">
-    <meta name="og:type" property="og:type" content="website">
-  <?php else : ?>
-    <meta name="description" content="Personal history, philosophy, reviews, game guides, advice, and petty rants. I've been blogging since my teen years, so a little bit of everything about me."><!-- 150-160 ch -->
-    <meta name="og:description" property="og:description" content="Philosophy, reviews, personal drama, advice, rants, and more."><!-- 55-60 ch -->
-    <meta name="keywords" content="Corry Frydlewicz, Corry, Frydlewicz, Corry Blog, CorryArt">
-    <meta name="og:type" property="og:type" content="website">
+  <?php if ( $pageDesc !== null) : // only print meta description if wp_head doesn't ?>
+    <meta name="description" content="<?php echo $pageDesc; ?>">
+    <meta name="og:description" property="og:description" content="<?php echo $pageShortDesc; ?>">
   <?php endif; ?>
 
-  <?php if ( !is_singular() ) : ?>
-    <meta name="og:image" property="og:image" content="<?php bloginfo('template_url'); ?>/assets/images/corry_opengraph.jpg">
-    <meta name="twitter:image" content="<?php bloginfo('template_url'); ?>/assets/images/corry_twittercard.jpg">
-    <meta name="twitter:image:alt" content="Cute illustration of Corry.">
-  <?php endif; ?>
+  <meta name="og:type" property="og:type" content="<?php echo $pageMetaType; ?>">
+  <meta name="twitter:card" content="<?php echo $pageMetaType; ?>">
+
+  <meta name="og:image" property="og:image" content="<?php echo $pageThumbnailUrl; ?>">
+  <meta name="twitter:image" content="<?php echo $pageThumbnailUrl; ?>">
+  <meta name="twitter:image:alt" content="<?php echo $pageThumbnailAlt; ?>">
 
   <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
