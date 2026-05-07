@@ -129,9 +129,9 @@ function post_thumbnail() {
   if ( has_post_thumbnail() ) {
     the_post_thumbnail();
   } elseif ( has_category('microblog') ) {
-    echo '<img alt="null" src="/wp-content/themes/corry/assets/images/thumbnail-microblog.jpg">';
+    echo '<img alt="microblog" src="/wp-content/themes/corry/assets/images/thumbnail-microblog.jpg">';
   } else {
-    echo '<img alt="null" src="/wp-content/themes/corry/assets/images/thumbnail-default.jpg">';
+    echo '<img alt="post thumbnail" src="/wp-content/themes/corry/assets/images/thumbnail-default.jpg">';
   }
 }
 
