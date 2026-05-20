@@ -442,11 +442,11 @@ body.page-template-page_campaign-template {
       }
 
       .entry-title {
-        font-size: 1.5em;
+        font-size: 1.375em;
         max-width: 170px;
 
         @media #{$mq_sm3} {
-          font-size: 1.875em;
+          font-size: 1.75em;
           max-width: 210px;
         }
 
@@ -456,7 +456,7 @@ body.page-template-page_campaign-template {
         }
 
         @media #{$mq_lg} {
-          font-size: 2.5em;
+          font-size: 2.125em;
           max-width: 380px;
         }
 
