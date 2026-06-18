@@ -22,7 +22,8 @@ body.page-template-page_campaign-template {
   }
 
   a,
-  .article-content .entry-content a:visited:not(:hover):not(:active):not(:focus) {
+  .article-content .entry-content a:visited:not(:hover):not(:active):not(:focus),
+  .article-content .entry-content details summary {
     color: var(--cmpn_link);
 
     &:hover,
@@ -520,6 +521,19 @@ body.page-template-page_campaign-template {
 
       .wp-block-pullquote blockquote {
         background: linear-gradient(90deg,rgba(0,0,0,0) 0, rgba(0, 108, 92, 0.2) 50%, rgba(0,0,0,0) 100%);
+      }
+
+      details {
+
+        > :not(summary) {
+          padding-left: 3rem;
+        }
+
+        ul {
+          margin-bottom: 0;
+          padding-bottom: 1.5em;
+        }
+
       }
 
     }
