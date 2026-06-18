@@ -69,6 +69,7 @@ $icons: (
   stop: d6a,
   twitch: efe,
   twitter: ef5,
+  update: d52, // TODO: Get an Update Icon
   youtube: efc,
   warning: d50,
   wiki: f27,
@@ -150,6 +151,10 @@ a.i_bluesky--after:active::after {
 
   &.stop {
     @extend .i_stop;
+  }
+
+  &.update {
+    @extend .i_update;
   }
 
   &.warning {

@@ -187,6 +187,19 @@ input[type="checkbox"] {
 
   }
 
+  &.update {
+    background-color: $c_accent-dark;
+    border-color: $c_accent;
+    border-radius: 1em;
+    border-style: dotted;
+    text-align: right;
+
+    strong {
+      color: $c_accent-lightest;
+    }
+
+  }
+
   a {
     // better contrast for links
     color: $c_primary-light;
