@@ -525,6 +525,11 @@ body.page-template-page_campaign-template {
 
       details {
 
+        > :not(summary),
+        &[open]::after {
+          border-color: var(--cmpn_teal);
+        }
+
         > :not(summary) {
           padding-left: 3rem;
         }
