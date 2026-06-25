@@ -53,7 +53,7 @@
                   <?php endif; ?>
                 </li>
               <?php endif; ?>
-              <li><a class="i_bluesky" href="https://bsky.app/intent/compose?text=@corry.us%0A<?php echo $thisPostShortDescUrl; ?>" target="_blank" rel="noreferrer" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://bsky.app']);">Discuss on Bluesky</a>
+              <li><a class="i_bluesky" href="https://bsky.app/intent/compose?text=@corry.us%0A<?php echo $thisPostShortDescUrl; ?>" target="_blank" rel="noreferrer" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://bsky.app']);">Discuss on Bluesky</a></li>
             </ul>
           </div>
           <?php if ( !empty($thisPostShortDescUrl) ) : ?>
