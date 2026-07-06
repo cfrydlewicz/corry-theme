@@ -97,7 +97,7 @@ $(document).ready( function() {
     // Logo Shrink on scroll
     $(window).on("scroll", function() {
       var scrollDiff = window.scrollY - $('section.entry-content').offset().top;
-      console.log(scrollDiff);
+      //console.log(scrollDiff);
       if ( scrollDiff > -220) {
         $('.header-logo.big').removeClass("big").addClass("small");
       } else {

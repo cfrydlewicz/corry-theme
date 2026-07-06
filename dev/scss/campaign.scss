@@ -240,20 +240,12 @@ body.page-template-page_campaign-template {
         &:hover,
         &:focus {
 
-          .badge {
-            fill: var(--cmpn_seafoam);
-          }
-
-          .accent {
-            //fill: var(--cmpn_aqua);
-          }
-
           .name {
-            fill: var(--cmpn_teal);
+            fill: #fff;
           }
 
           .text {
-            fill: #000;
+            fill: var(--cmpn_seafoam);
           }
 
         }
@@ -263,7 +255,12 @@ body.page-template-page_campaign-template {
       &.big {
 
         a svg {
-          height: 400%;
+          height: 460%;
+
+          @media #{$mq_lg} {
+            height: 600%;
+          }
+
         }
 
       }
@@ -291,7 +288,7 @@ body.page-template-page_campaign-template {
 
         }
 
-        @media #{$mq_md2} {
+        @media #{$mq_md} {
 
           li:nth-child(4) {
             display: block;
@@ -449,7 +446,7 @@ body.page-template-page_campaign-template {
       }
 
       .title-container {
-        align-items: center;
+        align-items: end;
         background: none;
         background-color: var(--cmpn_paleteal);
         clip-path: polygon(0 0%,100% 0,90% 100%,0 100%);
@@ -460,6 +457,10 @@ body.page-template-page_campaign-template {
         position: absolute;
         top: 0;
         z-index: $z_cta;
+
+        @media #{$mq_md} {
+          align-items: center;
+        }
 
         @media #{$mq_lg} {
           max-width: 70%;
