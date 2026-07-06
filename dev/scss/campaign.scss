@@ -213,37 +213,43 @@ body.page-template-page_campaign-template {
       a {
         border-width: 0; // override
 
-        &,
-        &:active {
-          color: var(--cmpn_link);
+        .badge {
+          fill: var(--cmpn_teal);
+        }
 
-          path {
-            fill: var(--cmpn_link);
-          }
+        .accent {
+          fill: var(--cmpn_aqua);
+        }
 
+        .name {
+          fill: var(--cmpn_seafoam);
+        }
+
+        .text {
+          fill: #fff;
         }
 
         &:hover,
         &:focus {
-          color: var(--cmpn_hover);
 
-          path {
-            fill: var(--cmpn_hover);
+          .badge {
+            fill: var(--cmpn_seafoam);
+          }
+
+          .accent {
+            //fill: var(--cmpn_aqua);
+          }
+
+          .name {
+            fill: var(--cmpn_teal);
+          }
+
+          .text {
+            fill: #000;
           }
 
         }
 
-      }
-
-    }
-
-    .logo-supplement-header {
-      display: inline-block;
-      font-size: 1.5rem;
-      margin-left: 0.375em;
-
-      @media #{$mq_md} {
-        font-size: 1.875rem;
       }
 
     }
