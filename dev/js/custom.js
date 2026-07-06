@@ -65,7 +65,7 @@ $(document).ready( function() {
 
   }
 
-  // Article Progress Bar
+  // Article Progress Bar & Logo Shrink
   // Only on Posts & Pages
   if ( $('body').hasClass('wp-singular') ) {
 
@@ -85,6 +85,15 @@ $(document).ready( function() {
         $('#jump-to-footer').fadeOut();
       } else {
         $('#jump-to-footer').fadeIn();
+      }
+
+      // Campaign Logo Shrink on scroll
+      if ( $('body').hasClass('page-template-page_campaign-template') ) {
+        if ( $('.header-logo').hasClass("big") && progressBarWidth > 15) {
+          $('.header-logo').removeClass('big');
+        } else {
+          $('.header-logo').addClass('big');
+        }
       }
 
     });

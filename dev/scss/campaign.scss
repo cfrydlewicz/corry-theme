@@ -216,6 +216,14 @@ body.page-template-page_campaign-template {
         svg {
           height: 100%;
           max-height: none;
+          transition-delay: 0;
+          transition-duration: 250ms;
+          transition-property: height;
+
+          &.big {
+            height: 400%;
+          }
+
         }
 
         .badge {

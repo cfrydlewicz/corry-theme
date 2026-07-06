@@ -105,7 +105,7 @@ $saveData = (isset($_SERVER["HTTP_SAVE_DATA"]) && stristr($_SERVER["HTTP_SAVE_DA
 
         <?php if ( is_page_template( 'page_campaign-template.php' ) ) : ?>
 
-          <section class="header-logo">
+          <section class="header-logo big">
             <a href="/emeryville/" title="Go to the top of the homepage." role="link">
               <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" id="Layer_1" x="0" y="0" viewBox="178.48 319.2 255.71 152.57">
                 <title>Corry Frydlewicz for Emeryville City Council</title>
