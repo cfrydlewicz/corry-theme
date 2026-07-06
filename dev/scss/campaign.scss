@@ -213,6 +213,11 @@ body.page-template-page_campaign-template {
       a {
         border-width: 0; // override
 
+        svg {
+          height: 100%;
+          max-height: none;
+        }
+
         .badge {
           fill: var(--cmpn_teal);
         }
