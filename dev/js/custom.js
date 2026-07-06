@@ -65,7 +65,7 @@ $(document).ready( function() {
 
   }
 
-  // Article Progress Bar & Logo Shrink
+  // Article Progress Bar
   // Only on Posts & Pages
   if ( $('body').hasClass('wp-singular') ) {
 
@@ -87,15 +87,22 @@ $(document).ready( function() {
         $('#jump-to-footer').fadeIn();
       }
 
-      // Campaign Logo Shrink on scroll
-      if ( $('body').hasClass('page-template-page_campaign-template') ) {
-        if ( $('.header-logo').hasClass("big") && progressBarWidth > 15) {
-          $('.header-logo').removeClass('big');
-        } else {
-          $('.header-logo').addClass('big');
-        }
-      }
+    });
 
+  }
+
+  // Only on Campaign Pages
+  if ( $('body').hasClass('page-template-page_campaign-template') ) {
+
+    // Logo Shrink on scroll
+    $(window).on("scroll", function() {
+      var scrollDiff = window.scrollY - $('section.entry-content').offset().top;
+      console.log(scrollDiff);
+      if ( scrollDiff > -220) {
+        $('.header-logo.big').removeClass("big").addClass("small");
+      } else {
+        $('.header-logo.small').removeClass("small").addClass("big");
+      }
     });
 
   }
