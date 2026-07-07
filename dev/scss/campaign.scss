@@ -349,9 +349,10 @@ body.page-template-page_campaign-template {
         z-index: 1;
 
         button {
-          @extend .i_close;
+          //@extend .i_close;
           position: relative;
 
+          /*
           &:not(:hover):not(:active):not(:focus) {
             background-color: $c_grey50;
             border-color: $c_grey50;
@@ -367,6 +368,7 @@ body.page-template-page_campaign-template {
             transform: translate(-50%, -50%) scale(1.5);
             z-index: 1;
           }
+          */
 
         }
 
