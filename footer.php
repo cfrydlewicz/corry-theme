@@ -43,7 +43,8 @@
 
         <?php if ( is_page_template( 'page_campaign-template.php' ) ) : ?>
           <section class="paid-for sp_padding">
-            <p class="f_smallest" style="text-align: center;">This site was <a href="/emeryville/campaign-finance/">paid for</a>, designed, and coded by Corry Frydlewicz.</p>
+            <p class="f_smallest" style="text-align: center;">This site was designed and coded by Corry Frydlewicz.<br>
+              Financial contributions and payments go through <em>Corry Frydlewicz for Emeryville City Council 2026</em>.</p>
           </section>
         <?php else : ?>
           <section class="reverse-canary sp_padding">
