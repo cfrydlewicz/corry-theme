@@ -502,6 +502,8 @@ body.page-template-page_campaign-template {
 
       .inner-wrapper {
         background-color: $c_truewhite;
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
         padding-bottom: 2rem;
         padding-left: $gutter;
         padding-right: $gutter;
@@ -559,7 +561,6 @@ body.page-template-page_campaign-template {
 
   // Footer
   footer {
-    background-color: $c_light80;
 
     .inner-wrapper {
       padding-left: $gutter;
