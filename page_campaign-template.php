@@ -66,7 +66,7 @@
                 <li><a class="i_facebook" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $thisPostShortDescUrl; ?>" target="_blank">Facebook</a></li>
                 <li><a class="i_twitter" href="https://twitter.com/intent/tweet?url=<?php echo $thisPostShortDescUrl; ?>" target="_blank">Twitter</a></li>
                 <li><a class="i_linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=<?php echo $thisPostShortDescUrl; ?>" target="_blank">LinkedIn</a></li>
-                <li><a class="f_small" href="<?php echo $thisPostShortDescUrl; ?>"><?php echo $thisPostShortPrettyUrl; ?></a></li>
+                <!--li><a class="f_small" href="<?php echo $thisPostShortDescUrl; ?>"><?php echo $thisPostShortPrettyUrl; ?></a></li-->
               </ul>
             </div>
           <?php endif; ?>
