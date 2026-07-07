@@ -451,6 +451,24 @@
 
     }
 
+    // Yoast FAQ Blocks
+    .schema-faq-section {
+      margin: calc( var(--gutter) * 2.5 ) auto;
+    }
+    .schema-faq-question {
+      display: block;
+      // simulate h2
+      font-size: 2em;
+      line-height: 1.125;
+      font-weight: 400;
+      margin-bottom: 0.5em;
+
+      @media #{$mq_md} {
+        font-size: 1.625em;
+      }
+
+    }
+
     // WP Color Palette
     .has-corry-primary-color {
       color: $c_primary;
