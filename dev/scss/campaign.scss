@@ -69,7 +69,11 @@ body.page-template-page_campaign-template {
   .wp-block-button.cta a,
   button.cta,
   .cta a {
-    padding: calc(var(--gutter) * 0.5) calc(var(--gutter) * 0.75) calc(var(--gutter) * 0.5) var(--gutter);
+    padding: $gutter*0.5 $gutter*0.75 $gutter*0.5 $gutter;
+
+    @media #{$mq_lg} {
+      padding: $gutter_lg*0.5 $gutter_lg*0.75 $gutter_lg*0.5 $gutter_lg;
+    }
 
     &::after,
     &[target="_blank"]:not([href*="corryfrydlewicz.com"])::after { // override
