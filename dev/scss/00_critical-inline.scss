@@ -48,10 +48,10 @@
   --cmpn_active-dark:  var(--cmpn_darkorange);
 
   // spacing
-  --gutter:            $gutter;
+  --gutter:            #{$gutter};
 
   @media #{$mq_lg} {
-    --gutter:          $gutter_lg;
+    --gutter:          #{$gutter_lg};
   }
 
 }
