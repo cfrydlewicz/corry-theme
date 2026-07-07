@@ -47,6 +47,13 @@
   --cmpn_active:       var(--cmpn_orange);
   --cmpn_active-dark:  var(--cmpn_darkorange);
 
+  // spacing
+  --gutter:            $gutter;
+
+  @media #{$mq_lg} {
+    --gutter:          $gutter_lg;
+  }
+
 }
 
 // Critical Utility
