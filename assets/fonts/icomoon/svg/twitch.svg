@@ -1,0 +1,5 @@
+<svg viewBox="0 0 1024 1024" fill="currentColor" width="32" height="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <path d="M96 0l-96 160v736h256v128h128l128-128h160l288-288v-608h-864zM832 544l-160 160h-160l-128 128v-128h-192v-576h640v416z" />
+    <path d="M608 256h96v256h-96v-256z" />
+    <path d="M416 256h96v256h-96v-256z" />
+</svg>
