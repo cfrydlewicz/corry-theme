@@ -37,7 +37,10 @@
               <!--li><a class="i_heart" href="https://www.patreon.com/CorryFrydlewicz" target="_blank" rel="noreferrer" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://www.patreon.com']);">Patreon</a> is where I'll share more once I have a few subscribers.</li-->
             <?php endif; ?>
             <li><a class="i_bluesky u_nowrap" href="/bluesky" rel="noreferrer" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://bsky.app']);">Bluesky</a></li>
+            <li><a class="i_youtube u_nowrap" href="https://www.youtube.com/@corry4emeryville" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://youtube.com']);">YouTube</a></li>
+            <li><a class="i_tiktok u_nowrap" href="https://www.tiktok.com/@corry4emeryville" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://tiktok.com']);">TikTok</a></li>
             <li><a class="i_facebook u_nowrap" href="https://www.facebook.com/groups/corry4emeryville" target="_blank" rel="noreferrer" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://facebook.com']);">Facebook</a></li>
+            <li><a class="i_instagram u_nowrap" href="https://www.instagram.com/corry4emeryville/" target="_blank" rel="noreferrer" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://instagram.com']);">Instagram</a></li>
           </ul>
         </section>
 

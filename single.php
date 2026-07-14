@@ -86,6 +86,9 @@
             <ul>
               <li><a class="i_mail" href="mailto:%20?subject=<?php echo $thisPostTitle; ?>&body=<?php echo $thisPostShortDescUrl; ?>" target="_blank">Email</a></li>
               <li><a class="i_bluesky" href="https://bsky.app/intent/compose?text=<?php echo $thisPostShortDescUrl; ?>" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://bsky.app']);">Bluesky</a></li>
+              <li><a class="i_facebook" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $thisPostShortDescUrl; ?>" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://facebook.com']);">Facebook</a></li>
+              <li><a class="i_twitter" href="https://twitter.com/intent/tweet?url=<?php echo $thisPostShortDescUrl; ?>" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://x.com']);">Twitter</a></li>
+              <li><a class="i_linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=<?php echo $thisPostShortDescUrl; ?>" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://linkedin.com']);">LinkedIn</a></li>
               <li class="f_small"><span class="u_visually-hidden">URL: </span><a href="<?php echo $thisPostShortDescUrl; ?>"><?php echo $thisPostShortPrettyUrl; ?></a></li>
             </ul>
           </section>
@@ -97,6 +100,12 @@
             <li><a class="i_mail" href="/emailsubscribe?utm_source=post-footer" target="_blank">Email Newsletter</a></li>
             <li><a class="i_rss" href="/subscribe-to-corrys-blog-with-rss/" target="_blank">RSS Feed</a></li>
             <li><a class="i_bluesky" href="/bluesky" rel="noreferrer" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://bsky.app']);">Bluesky</a></li>
+            <!--li><a class="i_youtube u_nowrap" href="https://www.youtube.com/@cfrydlewicz" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://youtube.com']);">YouTube</a></li-->
+            <!-- campaign accounts -->
+            <li><a class="i_youtube u_nowrap" href="https://www.youtube.com/@corry4emeryville" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://youtube.com']);">YouTube</a></li>
+            <li><a class="i_tiktok u_nowrap" href="https://www.tiktok.com/@corry4emeryville" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://tiktok.com']);">TikTok</a></li>
+            <li><a class="i_facebook u_nowrap" href="https://www.facebook.com/groups/corry4emeryville" target="_blank" rel="noreferrer" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://facebook.com']);">Facebook</a></li>
+            <li><a class="i_instagram u_nowrap" href="https://www.instagram.com/corry4emeryville/" target="_blank" rel="noreferrer" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://instagram.com']);">Instagram</a></li>
           </ul>
         </section>
 
