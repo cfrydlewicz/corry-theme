@@ -555,6 +555,21 @@ body.page-template-page_campaign-template {
 
       }
 
+      .endorsers-container {
+
+        .wp-block-image {
+          // profile photo
+          margin-bottom: 0.5rem;
+        }
+
+        h3 {
+          // org/person name
+          margin-bottom: 0.25em;
+          margin-top: 0;
+        }
+
+      }
+
     }
 
   }
