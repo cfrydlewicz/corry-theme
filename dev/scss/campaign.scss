@@ -562,6 +562,11 @@ body.page-template-page_campaign-template {
           margin-bottom: 0.5rem;
         }
 
+        body.admin-bar.logged-in.wp-singular main>article .entry-content & img:not(.emoji) {
+          // turn off linked image flag
+          outline: 0;
+        }
+
         h3 {
           // org/person name
           margin-bottom: 0.25em;
