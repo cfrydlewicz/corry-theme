@@ -73,6 +73,26 @@ function theme_setup() {
       'slug' => 'corry_light-base',
       'color' => '#d6f3f0'
     ),
+    array(
+      'name' => esc_attr__( 'C4E Teal', 'themeLangDomain'),
+      'slug' => 'cmpn_teal',
+      'color' => '#0e6d5d' // var(--cmpn_teal)
+    ),
+    array(
+      'name' => esc_attr__( 'C4E Seafoam', 'themeLangDomain'),
+      'slug' => 'cmpn_seafoam',
+      'color' => '#cee3dd' // var(--cmpn_seafoam)
+    ),
+    array(
+      'name' => esc_attr__( 'Black', 'themeLangDomain'),
+      'slug' => 'black',
+      'color' => '#000'
+    ),
+    array(
+      'name' => esc_attr__( 'White', 'themeLangDomain'),
+      'slug' => 'white',
+      'color' => '#fff'
+    ),
   ));
 
 }
