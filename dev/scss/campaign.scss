@@ -560,6 +560,49 @@ body.page-template-page_campaign-template {
 
       }
 
+      .wp-block-columns.progress-bar {
+        background-color: var(--cmpn_seafoam);
+        border: 1px solid var(--cmpn_teal);
+        color: var(--cmpn_teal);
+        gap: 0;
+        margin-bottom: 1rem;
+        padding: 0.5rem;
+
+        > .wp-block-column {
+          padding: 1rem;
+
+          &:first-child {
+            background: repeating-linear-gradient(
+              45deg,
+              var(--cmpn_teal),
+              var(--cmpn_teal) 16px,
+              color-mix(in lab, var(--cmpn_teal) 80%, #000 10%) 16px,
+              color-mix(in lab, var(--cmpn_teal) 80%, #000 10%) 24px);
+            border-bottom-right-radius: 1.5rem;
+            border-top-right-radius: 1.5rem;
+            color: #fff;
+          }
+
+          p {
+            color: inherit !important;
+            font-weight: 500;
+            line-height: 1;
+            margin-bottom: 0;
+
+            &.has-x-large-font-size {
+              margin-bottom: 0.25rem;
+            }
+
+            strong {
+              font-weight: 700;
+            }
+
+          }
+
+        }
+
+      }
+
       .endorsers-container {
 
         .wp-block-image {
