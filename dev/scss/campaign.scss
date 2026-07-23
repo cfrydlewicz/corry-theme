@@ -521,6 +521,11 @@ body.page-template-page_campaign-template {
       strong {
         color: $c_trueblack;
       }
+      .has-text-color b,
+      .has-text-color em,
+      .has-text-color strong {
+        color: inherit;
+      }
 
       .wp-block-quote {
         background: none; // override
