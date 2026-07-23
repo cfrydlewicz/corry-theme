@@ -76,7 +76,7 @@
 }
 
 // spacing
-.s_0 {
+.sp_0 {
   margin: 0 !important;
 }
 .sp_right_sm {
@@ -87,6 +87,13 @@
 }
 .sp_right_lg {
   margin-right: 1.5rem;
+}
+.sp_p_0 {
+  padding: 0 !important;
+}
+.sp_p,
+.sp_p_md {
+  padding: 1rem !important;
 }
 .sp_padding,
 .sp_horizontal-padding {
