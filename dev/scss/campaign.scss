@@ -569,7 +569,11 @@ body.page-template-page_campaign-template {
         padding: 0.5rem;
 
         > .wp-block-column {
-          padding: 1rem;
+          padding: 0.5rem;
+
+          @media #{$mq_md} {
+            padding: 1rem;
+          }
 
           &:first-child {
             background: repeating-linear-gradient(
@@ -591,6 +595,12 @@ body.page-template-page_campaign-template {
 
             &.has-x-large-font-size {
               margin-bottom: 0.25rem;
+              white-space: nowrap;
+
+              @media #{$mq_sm-only} {
+                font-size: 1.5rem !important; // fit within a narrow area on mobile
+              }
+
             }
 
             strong {
