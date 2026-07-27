@@ -24,46 +24,6 @@ $saveData = (isset($_SERVER["HTTP_SAVE_DATA"]) && stristr($_SERVER["HTTP_SAVE_DA
     $pageTitle = get_bloginfo('name');
   } ?>
   <title><?php echo $pageTitle; ?></title>
-  <meta name="og:title" property="og:title" content="<?php echo $pageTitle; ?>">
-  <meta name="twitter:title" content="<?php echo $pageTitle; ?>">
-  <meta name="twitter:site" content="@cfrydlewicz">
-
-  <?php if ( is_singular() ) : ?>
-    <meta name="og:description" property="og:description" content="<?php echo get_the_excerpt(); ?>">
-    <meta name="og:type" property="og:type" content="article">
-    <meta name="twitter:card" content="summary">
-    <?php if ( has_post_thumbnail() ) : ?>
-      <meta name="og:image" property="og:image" content="<?php the_post_thumbnail_url(); ?>">
-      <meta name="twitter:image" content="<?php the_post_thumbnail_url(); ?>">
-      <meta name="twitter:image:alt" content="<?php echo get_post_meta(get_post_thumbnail_id( $post->ID ), '_wp_attachment_image_alt', true); ?>">
-    <?php else : ?>
-      <meta name="og:image" property="og:image" content="<?php bloginfo('template_url'); ?>/assets/images/corry_opengraph.jpg">
-      <meta name="twitter:image" content="<?php bloginfo('template_url'); ?>/assets/images/corry_twittercard.jpg">
-      <meta name="twitter:image:alt" content="Cute illustration of Corry Frydlewicz.">
-    <?php endif; ?>
-  <?php elseif ( is_category() ) : ?>
-    <meta name="og:description" property="og:description" content="Posts labeled <?php echo single_cat_title('', false); ?> from Corry Frydlewicz">
-    <meta name="og:type" property="og:type" content="website">
-  <?php elseif ( is_tag() ) : ?>
-    <meta name="description" content="Posts labeled <?php echo single_tag_title('', false); ?> from Corry Frydlewicz">
-    <meta name="og:description" property="og:description" content="Posts tagged <?php echo single_tag_title('', false); ?> from Corry Frydlewicz">
-    <meta name="og:type" property="og:type" content="website">
-  <?php elseif ( is_search() ) : ?>
-    <meta name="description" content="Search results for <?php echo esc_html($_GET['s']); ?> from Corry Frydlewicz">
-    <meta name="og:description" property="og:description" content="Search results for <?php echo esc_html($_GET['s']); ?> from Corry Frydlewicz">
-    <meta name="og:type" property="og:type" content="website">
-  <?php else : ?>
-    <meta name="description" content="Personal history, philosophy, reviews, game guides, advice, and petty rants. I've been blogging since my teen years, so a little bit of everything about me."><!-- 150-160 ch -->
-    <meta name="og:description" property="og:description" content="Philosophy, reviews, personal drama, advice, rants, and more."><!-- 55-60 ch -->
-    <meta name="og:type" property="og:type" content="website">
-  <?php endif; ?>
-
-  <?php if ( !is_singular() ) : ?>
-    <meta name="og:image" property="og:image" content="<?php bloginfo('template_url'); ?>/assets/images/corry_opengraph.jpg">
-    <meta name="twitter:image" content="<?php bloginfo('template_url'); ?>/assets/images/corry_twittercard.jpg">
-    <meta name="twitter:image:alt" content="Cute illustration of Corry.">
-  <?php endif; ?>
-
   <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
