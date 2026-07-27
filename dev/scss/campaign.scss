@@ -379,6 +379,17 @@ body.page-template-page_campaign-template {
           color: var(--cmpn_link) !important;
         }
 
+        .nav-menu-text:not(:focus):not(:focus-within) {
+          left: unset;
+          position: relative;
+
+          @media #{$mq_sm4} {
+            left: -10000px;
+            position: absolute;
+          }
+
+        }
+
       }
 
       &[aria-expanded=true] {
