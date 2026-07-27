@@ -162,7 +162,12 @@ body.page-template-page_campaign-template {
 
   // header
   .site-header {
+    --logo-expanded-width: 248px;
     --menu-trigger-width: 96px;
+
+    @media #{$mq_sm4} {
+      --menu-trigger-width: 46px;
+    }
 
     .site-header-primary {
       background: none; // override
@@ -185,7 +190,7 @@ body.page-template-page_campaign-template {
 
     .header-logo {
       max-width: calc( 100vw - var(--menu-trigger-width));
-      min-width: 300px;
+      min-width: var(--logo-expanded-width);
 
       @media #{$mq_sm4} {
         // when the Donate and Join Me Buttons Appear
@@ -203,7 +208,7 @@ body.page-template-page_campaign-template {
         svg {
           height: 100%;
           max-height: none;
-          transition-delay: 0;
+          //transition-delay: 0ms;
           transition-duration: 250ms;
           transition-property: height;
         }
