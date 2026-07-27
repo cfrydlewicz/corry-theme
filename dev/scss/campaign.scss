@@ -162,6 +162,7 @@ body.page-template-page_campaign-template {
 
   // header
   .site-header {
+    --menu-trigger-width: 96px;
 
     .site-header-primary {
       background: none; // override
@@ -183,6 +184,7 @@ body.page-template-page_campaign-template {
     }
 
     .header-logo {
+      max-width: calc( 100vw - var(--menu-trigger-width));
       min-width: 300px;
 
       @media #{$mq_sm4} {
@@ -365,6 +367,7 @@ body.page-template-page_campaign-template {
     }
 
     .header-nav {
+      width: var(--menu-trigger-width);
 
       @media #{$mq_max} {
         // when the full nav is exposed
