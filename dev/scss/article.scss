@@ -690,9 +690,19 @@
 
       th,
       td {
+        min-width: 100px;
         padding: 0.75rem;
         border: 1px solid $c_grey50;
         vertical-align: middle;
+
+        @media #{$mq_md} {
+          min-width: 120px;
+        }
+
+        @media #{$mq_lg} {
+          min-width: 130px;
+        }
+
       }
 
       th {
