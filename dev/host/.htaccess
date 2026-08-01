@@ -4,6 +4,10 @@ RewriteEngine On
 RewriteCond %{HTTPS} !on
 RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
 
+Header set Access-Control-Allow-Origin 'https://corryfrydlewicz.com'
+Header set Access-Control-Allow-Origin 'https://corry.us'
+Header set Access-Control-Allow-Origin 'https://corry4emeryville.com'
+
 # BEGIN WordPress
 # The directives (lines) between "BEGIN WordPress" and "END WordPress" are
 # dynamically generated, and should only be modified via WordPress filters.
