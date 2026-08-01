@@ -53,6 +53,12 @@ RewriteRule . /index.php [L]
   </IfModule>
 
 </IfModule>
+RewriteCond %{HTTP_HOST} ^corry4emeryville\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.corry4emeryville\.com$
+RewriteRule ^(.*)$ "https\:\/\/corryfrydlewicz\.com\/emeryville\/$1" [R=301,L]
+RewriteCond %{HTTP_HOST} ^corryforemeryville\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.corryforemeryville\.com$
+RewriteRule ^(.*)$ "https\:\/\/corryfrydlewicz\.com\/emeryville\/$1" [R=301,L]
 
 # php -- BEGIN cPanel-generated handler, do not edit
 # Set the “ea-php83” package as the default “PHP” programming language.
