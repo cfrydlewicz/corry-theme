@@ -219,7 +219,7 @@
     }
     .wp-block-button a {
       background-color: $c_primary-dark;
-      color: $c_truewhite;
+      color: $c_truewhite !important;
       font-weight: 500;
       text-decoration: none;
 
