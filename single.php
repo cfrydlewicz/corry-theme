@@ -19,7 +19,7 @@
 
   <div class="main-columns-wrapper inner-wrapper">
 
-    <main id="a_skip-to-content">
+    <main>
       <article id="post-<?php the_ID(); ?>" <?php post_class('article-content'); ?>>
 
         <header class="entry-header">
@@ -30,7 +30,7 @@
           <?php else : ?>
             <img alt="default thumbnail" src="/wp-content/themes/corry/assets/images/thumbnail-default.jpg" class="u_attn">
           <?php endif; ?>
-          <div class="title-container">
+          <div id="a_skip-to-content" class="title-container">
             <h1 id="sticky-title" class="entry-title"><?php the_title(); ?></h1>
           </div>
         </header>

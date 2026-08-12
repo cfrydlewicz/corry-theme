@@ -19,7 +19,7 @@
 
 <div class="main-columns-wrapper inner-wrapper">
 
-  <main id="a_skip-to-content" class="listing-page">
+  <main class="listing-page">
     <?php if ( have_posts() ) : ?>
       <div class="article-list">
         <?php while ( have_posts() ) : ?>
@@ -31,7 +31,7 @@
               <div class="post-categories"><span class="u_visually-hidden">Categories:&nbsp;</span><?php the_category('<span class="separator"></span>'); ?></div>
             </header>
             <div class="entry-content sp_horizontal-padding">
-              <div class="title-container">
+              <div id="a_skip-to-content" class="title-container">
                 <?php if ( is_singular() ) : ?>
                   <h1 id="sticky-title" class="entry-title u_attn"><?php the_title(); ?></h1>
                 <?php else : ?>

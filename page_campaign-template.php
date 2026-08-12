@@ -19,7 +19,7 @@
 
       <header class="entry-header">
         <div class="inner-wrapper">
-          <div class="title-container">
+          <div id="a_skip-to-content" class="title-container">
             <h1 id="sticky-title" class="entry-title"><?php the_title(); ?></h1>
           </div>
           <a href="<?php the_post_thumbnail_url(); ?>">

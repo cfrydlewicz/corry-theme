@@ -6,7 +6,7 @@
       aria-label="Search the site.">
   </label>
   <label>
-    <button class="i_search"></button>
+    <button class="i_search"><span class="u_visually-hidden">Search</span></button>
     <input type="submit" class="search-submit" id="header-search-button" value="Search" tabindex="-1">
   </label>
 </form>
