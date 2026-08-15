@@ -572,6 +572,12 @@ body.page-template-page_campaign-template {
           padding-left: 3rem;
         }
 
+        p {
+          // swap to padding so dots don't get interrupted
+          margin-bottom: 0;
+          padding-bottom: 1.5rem;
+        }
+
         ul {
           margin-bottom: 0;
           padding-bottom: 1.5em;
