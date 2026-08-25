@@ -374,11 +374,6 @@ body.page-template-page_campaign-template {
     .header-nav {
       width: var(--menu-trigger-width);
 
-      @media #{$mq_max} {
-        // when the full nav is exposed
-        display: none;
-      }
-
       > button {
         border-radius: 0;
 

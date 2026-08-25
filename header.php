@@ -115,6 +115,8 @@ $saveData = (isset($_SERVER["HTTP_SAVE_DATA"]) && stristr($_SERVER["HTTP_SAVE_DA
                 <li><a href="/emeryville/about/">About Corry</a></li>
                 <li><a href="/emeryville/endorsements/">Endorsements</a></li>
                 <li><a href="/emeryville/press-kit/">Press Kit</a></li>
+                <li><a href="/emeryville/faq/">FAQs</a></li>
+                <li><a href="/about/rogue-e-pierogi/">Rogue</a></li>
               </ul>
             </nav>
           </section>
