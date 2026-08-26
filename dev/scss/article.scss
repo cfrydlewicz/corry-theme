@@ -440,6 +440,16 @@
 
       }
 
+      .wp-block-quote {
+        margin-bottom: 0;
+        margin-left: 0.5rem;
+
+        + p {
+          padding-top: 1.5rem;
+        }
+
+      }
+
     }
 
     // Yoast FAQ Blocks
