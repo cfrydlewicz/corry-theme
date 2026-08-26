@@ -371,30 +371,19 @@
       margin-bottom: 2rem;
 
       &::after {
-        /* border-color: $c_link; */
         border-style: solid;
         border-width: 1px 0 0;
         color: transparent;
         display: block;
         line-height: 0;
         width: 1rem;
-
-        @media #{$mq_max} {
-          margin-left: -1rem;
-        }
-
       }
 
       summary {
         color: $c_link;
         cursor: pointer;
         font-weight: 600;
-        margin-left: -0.25rem;
         padding: 0.25rem 0;
-
-        @media #{$mq_max} {
-          margin-left: -1.5rem;
-        }
 
         * {
           display: inline-block;
@@ -443,10 +432,6 @@
         border-style: dashed;
         border-width: 0 0 0 1px;
         padding-left: 1rem;
-
-        @media #{$mq_max} {
-          margin-left: -1rem;
-        }
 
         &:last-child {
           margin-bottom: 0;
