@@ -154,6 +154,10 @@
 
 
 // Skeleton
+html {
+  scroll-padding-top: calc(70px + 3.5rem); // so anchor links don't overlap fixed header (header height + padding)
+}
+
 body {
   font-family: 'Montserrat', helvetica, sans-serif; // critical
   font-size: 16px;  // establishes rem basis
