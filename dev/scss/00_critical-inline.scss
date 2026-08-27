@@ -162,7 +162,7 @@
 
 // Skeleton
 html {
-  scroll-padding-top: calc(70px + 3.5rem); // so anchor links don't overlap fixed header (header height + padding)
+  scroll-padding-top: calc( var(--max-header-height) + var(--gutter) ); // so anchor links don't overlap fixed header (header height + padding)
 }
 
 body {
