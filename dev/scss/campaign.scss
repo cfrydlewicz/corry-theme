@@ -541,6 +541,15 @@ body.page-template-page_campaign-template {
         color: inherit;
       }
 
+      .featured-links-list {
+        font-size: 1.25em;
+
+        li a[href*="#"] {
+          @extend .i_arrow-down--after;
+        }
+
+      }
+
       .wp-block-quote {
         background: none; // override
         background-color: var(--cmpn_palerteal);
