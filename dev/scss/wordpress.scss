@@ -6,6 +6,7 @@ html[lang] {
 
 // Backend Helpers
 body.admin-bar.logged-in {
+  scroll-padding-top: var(--admin-bar-height);
 
   .u_attn {
     outline: 2px dashed $c_accent2;
@@ -13,32 +14,16 @@ body.admin-bar.logged-in {
   }
 
   .site-header {
-    top: $admin-bar-height--sm;
-
-    @media #{$mq_admin} {
-      // when the WP Admin Bar changes
-      top: $admin-bar-height--lg; // height of desktop admin bar
-    }
-
+    top: var(--admin-bar-height);
   }
 
   .listing-page-header {
-    padding-top: $admin-bar-height--sm + $header_height + 2 + $gutter;
-
-    @media #{$mq_admin} {
-      padding-top: $admin-bar-height--lg + $header_height + 2 + $gutter;
-    }
-
+    padding-top: calc( var(--admin-bar-height) + var(--max-header-height) + var(--gutter) );
   }
 
   .main-columns-wrapper,
   .total-wrapper > main {
-    padding-top: $admin-bar-height--sm + $header_height + 2;
-
-    @media #{$mq_admin} {
-      padding-top: $admin-bar-height--lg + $header_height + 2;
-    }
-
+    padding-top: calc ( var(--admin-bar-height) + var(--max-header-height) );
   }
 
   &.wp-singular {
@@ -73,11 +58,7 @@ body.admin-bar.logged-in {
     .thanks-for-reading {
 
       @media only screen and (min-width: $bp_md) and (min-height: 480px + $header_height--max) {
-        top: $header_height--max + $admin-bar-height--sm;
-      }
-
-      @media only screen and (min-width: $bp_admin) and (min-height: 480px + $header_height--max) {
-        top: $header_height--max + $admin-bar-height--lg;
+        top: calc( var(--max-header-height) + var(--admin-bar-height) );
       }
 
     }
