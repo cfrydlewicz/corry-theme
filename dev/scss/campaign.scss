@@ -459,7 +459,7 @@ body.page-template-page_campaign-template {
         z-index: $z_cta;
 
         @media #{$mq_md} {
-          align-items: center;
+          padding-bottom: 1.25rem;
         }
 
         @media #{$mq_lg} {
