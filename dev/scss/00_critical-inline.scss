@@ -47,11 +47,18 @@
   --cmpn_active:       var(--cmpn_orange);
   --cmpn_active-dark:  var(--cmpn_darkorange);
 
-  // spacing
-  --gutter:            #{$gutter};
+  // spacing & structure
+  --admin-bar-height:  46px;
+  --border-radius:     12px;
+  --gutter:            16px;
+  --max-header-height: 72px; // total fixed header height + borders
+  --min-header-height: 40px; // primary fixed header
+  --nav-width:         320px;
+  --thumbnail-width:   1024px;
 
   @media #{$mq_lg} {
-    --gutter:          #{$gutter_lg};
+    --admin-bar-height:  32px;
+    --gutter:            24px;
   }
 
 }
