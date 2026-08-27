@@ -439,6 +439,7 @@ body.page-template-page_campaign-template {
 
     .entry-header {
       background-color: var(--cmpn_paleteal);
+      margin-top: var(--min-header-height);
 
       .inner-wrapper {
         display: flex;
@@ -782,6 +783,18 @@ body.page-template-page_campaign-template {
 
     .back-to-top {
       justify-content: flex-end;
+    }
+
+  }
+
+  &.admin-bar {
+
+    .article-content {
+
+      .entry-header {
+        margin-top: calc( var(--min-header-height) + var(--admin-bar-height) ) ;
+      }
+
     }
 
   }
