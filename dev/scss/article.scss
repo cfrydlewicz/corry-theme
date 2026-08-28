@@ -103,6 +103,12 @@
         max-width: 80ch; // for fine print
       }
 
+      &.has-text-align-center {
+        // for when smaller text is centered
+        margin-left: auto;
+        margin-right: auto;
+      }
+
       @media #{$mq_md} {
         font-weight: 300;
       }
