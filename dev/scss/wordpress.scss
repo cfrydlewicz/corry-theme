@@ -43,7 +43,8 @@ body.admin-bar.logged-in {
       }
 
       // Unmark behaving images
-      a img[alt]:not([alt=""]):not(.emoji) {
+      a img[alt]:not([alt=""]):not(.emoji),
+      .wp-block-media-text__media img[alt]:not([alt=""]):not(.emoji) {
         outline: none;
       }
 
