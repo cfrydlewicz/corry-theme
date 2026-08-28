@@ -472,6 +472,7 @@ body.page-template-page_campaign-template {
       .entry-title {
         font-size: 1.375em;
         max-width: 170px;
+        text-wrap: balance;
 
         @media #{$mq_sm3} {
           font-size: 1.75em;
