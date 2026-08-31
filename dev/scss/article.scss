@@ -445,22 +445,62 @@
         border-style: dashed;
         border-width: 0 0 0 1px;
         margin-left: 0.5rem;
-        padding-left: 1rem;
+        padding-left: 1.5rem;
 
         &:last-child {
           margin-bottom: 0;
+          padding-bottom: 1rem;
         }
 
       }
 
-      .wp-block-quote {
+      // Convert Margins to Padding to continue border line
+      > h2,
+      > h3,
+      > h4 {
         margin-bottom: 0;
-        margin-left: 0.5rem;
+        margin-top: 0;
+        padding-bottom: 0.5rem;
+        padding-top: 0.75rem;
+      }
+
+      > p,
+      > p:not(:last-of-type):not(.alert) {
+        margin-bottom: 0;
+        padding-bottom: 1.5rem;
+      }
+
+      > ul {
+        margin-bottom: 0;
+        padding-bottom: 1.5rem;
+      }
+
+      > .wp-block-quote,
+      > .wp-block-pullquote {
+        margin: 0 0.5rem;
+      }
+
+      > .wp-block-quote {
+        padding-left: 2.5rem;
+
+        &::before {
+          left: 1rem;
+        }
 
         + p {
           padding-top: 1.5rem;
         }
 
+      }
+
+      > .wp-block-pullquote {
+        padding: 2rem 1rem;
+      }
+
+      > .wp-block-image,
+      > :where(figure) {
+        margin-bottom: 0;
+        padding-bottom: 1.5rem;
       }
 
     }

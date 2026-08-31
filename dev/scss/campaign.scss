@@ -578,40 +578,6 @@ body.page-template-page_campaign-template {
           padding-left: 3rem;
         }
 
-        h2,
-        h3, 
-        h4 {
-          // swap to padding so dots don't get interrupted
-          margin-bottom: 0;
-          margin-top: 0;
-          padding-bottom: 0.5em;
-          padding-top: 0.75em;
-        }
-
-        p,
-        p:not(:last-of-type):not(.alert) {
-          // swap to padding so dots don't get interrupted
-          margin-bottom: 0;
-          padding-bottom: 1.5rem;
-        }
-
-        ul {
-          // swap to padding so dots don't get interrupted
-          margin-bottom: 0;
-          padding-bottom: 1.5em;
-        }
-
-        .wp-block-image,
-        :where(figure) {
-          // swap to padding so dots don't get interrupted
-          margin-bottom: 0;
-          padding-bottom: 1.5em;
-        }
-
-        blockquote {
-          margin-top: 0;
-        }
-
       }
 
       .wp-block-columns.progress-bar {
