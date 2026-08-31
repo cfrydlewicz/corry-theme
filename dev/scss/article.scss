@@ -454,6 +454,20 @@
           padding-bottom: 1rem;
         }
 
+        &.aligncenter {
+          margin-right: 0;
+          padding-left: 4.5rem;
+
+          &.wp-block-embed {
+            box-sizing: content-box;
+          }
+
+        }
+
+        &[id*="embed-optimizer-"] {
+          min-height: 180px !important; // override weird plugin behavior
+        }
+
       }
 
       // Convert Margins to Padding to continue border line
@@ -471,7 +485,7 @@
       }
 
       > p,
-      > p:not(:last-of-type):not(.alert) {
+      > p:not(:last-child):not(.alert) {
         margin-bottom: 0;
         padding-bottom: 1.5rem;
       }
