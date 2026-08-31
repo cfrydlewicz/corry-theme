@@ -456,7 +456,10 @@
 
         &.aligncenter {
           margin-right: 0;
-          padding-left: 4.5rem;
+
+          @media #{$mq_md2} {
+            padding-left: 4.5rem;
+          }
 
           &.wp-block-embed {
             box-sizing: content-box;

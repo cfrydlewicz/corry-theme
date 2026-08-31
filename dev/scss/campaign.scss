@@ -578,7 +578,11 @@ body.page-template-page_campaign-template {
           padding-left: 3rem;
 
           &.aligncenter {
-            padding-left: 6rem;
+
+            @media #{$mq_md2} {
+              padding-left: 6rem;
+            }
+
           }
 
         }
