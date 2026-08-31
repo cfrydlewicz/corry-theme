@@ -43,11 +43,11 @@
       margin-bottom: 0.5em;
 
       &:not(:first-child) {
-        margin-top: 2em;
+        margin-top: 4rem;
       }
 
       @media #{$mq_md} {
-        font-size: 1.625em;
+        font-size: 1.75em;
       }
 
     }
@@ -98,6 +98,7 @@
       }
 
     }
+
     p,
     li {
       font-size: 1em;
@@ -119,8 +120,9 @@
         font-weight: 300;
       }
     }
-    p:not(:last-of-type):not(.alert) {
-      margin-bottom: 1.5em;
+
+    p:not(:last-child):not(.alert) {
+      margin-bottom: 2rem;
     }
 
     .has-small-font-size {
@@ -462,6 +464,10 @@
         margin-top: 0;
         padding-bottom: 0.5rem;
         padding-top: 0.75rem;
+      }
+
+      > h2:not(:first-child) {
+        margin-top: 0; // override
       }
 
       > p,
