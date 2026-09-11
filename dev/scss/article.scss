@@ -330,6 +330,11 @@
 
     .wp-block-image {
       margin-bottom: 1.5em;
+
+      figure > a::after {
+        display: none !important; // don't add icons after linked images
+      }
+
     }
 
     figure {
