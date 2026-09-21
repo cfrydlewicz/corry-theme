@@ -594,15 +594,21 @@ body.page-template-page_campaign-template {
       }
 
       .endorsements-container {
-        align-items: flex-start;
+        align-items: flex-start !important;
+        gap: 0.75rem;
         justify-content: stretch;
         margin-bottom: 1.5rem;
 
         .wp-block-column {
           display: flex;
+          flex-basis: 50%;
           flex-direction: column;
           gap: 1rem;
           height: 100%;
+
+          @media #{$mq_md} {
+            flex-basis: 25%;
+          }
 
           .wp-block-image {
             align-items: center;
