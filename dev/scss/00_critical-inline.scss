@@ -29,7 +29,7 @@
   --cmpn_teal:         #0e6d5d;
   --cmpn_darkteal:     color-mix(in lab, var(--cmpn_teal) 100%, #000 100%);
   --cmpn_lightteal:    color-mix(in lab, var(--cmpn_teal) 100%, #fff 100%);
-  --cmpn_paleteal:     color-mix(in lab, var(--cmpn_teal) 25%, #fff 100%);
+  --cmpn_paleteal:     color-mix(in lab, var(--cmpn_teal) 25%, #fff 100%); // hex: d1e1dc, rgb: 209,225,220
   --cmpn_palerteal:    color-mix(in lab, var(--cmpn_teal) 12.5%, #fff 100%);
 
   --cmpn_aqua:         #46b6a6;
