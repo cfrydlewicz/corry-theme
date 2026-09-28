@@ -163,7 +163,7 @@
 // Skeleton
 html {
   font-size: 16px;  // establishes rem basis
-  scroll-padding-top: calc( var(--max-header-height) + var(--gutter) ); // so anchor links don't overlap fixed header (header height + padding)
+  scroll-padding-top: calc( var(--max-header-height) + var(--gutter)*2 ); // so anchor links don't overlap fixed header (header height + padding)
 
   @media #{$mq_lg} {
     font-size: 18px;
