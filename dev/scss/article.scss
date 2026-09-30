@@ -38,8 +38,8 @@
 
     h2 {
       font-size: 2em;
-      line-height: 1.125;
       font-weight: 400;
+      line-height: 1.125;
       margin-bottom: 0.5em;
 
       &:not(:first-child) {
@@ -56,8 +56,11 @@
       font-size: 1.375em;
       font-weight: 400;
       line-height: 1.375;
-      margin-top: 1.75em;
       margin-bottom: 0.5em;
+
+      &:not(:first-child) {
+        margin-top: 1.75em;
+      }
 
       @media #{$mq_md} {
         font-size: 1.25em;
@@ -68,19 +71,26 @@
 
     h4 {
       font-size: 1.125em;
-      line-height: 1.375;
       font-weight: 500;
-      margin-top: 1.625em;
+      line-height: 1.375;
       margin-bottom: 0.5em;
+
+      &:not(:first-child) {
+        margin-top: 1.625em;
+      }
+
     }
 
     h5 {
       font-size: 1em;
-      line-height: 1.125;
       font-weight: 500;
-      margin-top: 1.625em;
-      text-transform: uppercase;
+      line-height: 1.125;
       margin-bottom: 0.5em;
+      text-transform: uppercase;
+
+      &:not(:first-child) {
+        margin-top: 1.625em;
+      }
 
       @media #{$mq_md} {
         font-size: 1em;
