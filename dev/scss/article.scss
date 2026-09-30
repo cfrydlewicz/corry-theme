@@ -394,6 +394,15 @@
     .wp-block-columns {
       clear: both; // in case any floats are nearby
     }
+    .wp-block-column {
+
+      &.is-vertically-aligned-stretch {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+    }
 
     // Details
     details {
