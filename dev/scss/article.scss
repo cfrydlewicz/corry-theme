@@ -498,10 +498,16 @@
         padding-bottom: 1.5rem;
       }
 
-      > ul {
+      > ul,
+      > ol {
         margin-bottom: 0;
         padding-bottom: 1.5rem;
+      }
+      > ul {
         padding-left: 3rem; // increased padding for markers
+      }
+      > ol {
+        padding-left: 3.75rem; // increased padding for markers
       }
 
       > .wp-block-quote,
