@@ -96,7 +96,7 @@ $saveData = (isset($_SERVER["HTTP_SAVE_DATA"]) && stristr($_SERVER["HTTP_SAVE_DA
             <nav>
               <ul>
                 <li class="issues"><a href="/emeryville/issues/" tabindex="-1"><button>Issues</button></a></li>
-                <li class="donate"><a href="/emeryville/join-me/" title="If you're broke too, help in other ways" tabindex="-1"><button>Donate</button></a></li>
+                <li class="donate"><a href="/emeryville/join-me/#donate" title="If you're broke too, help in other ways" tabindex="-1"><button>Donate</button></a></li>
                 <li class="join"><a href="/emeryville/join-me/" tabindex="-1"><button>Join Me</button></a></li>
                 <li class="about"><a href="/emeryville/about/" tabindex="-1"><button>About Corry</button></a></li>
                 <li class="endorse"><a href="/emeryville/endorsements/" tabindex="-1"><button>Endorsements</button></a></li>
