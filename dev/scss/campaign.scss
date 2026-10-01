@@ -720,6 +720,22 @@ body.page-template-page_campaign-template {
 
   }
 
+  .thanks-for-reading,
+  .pre-footer {
+
+    .label {
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+    }
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 1.5rem;
+    }
+
+  }
+
   .thanks-for-reading {
     background-color: transparent;
     position: relative; // override sticky
@@ -727,26 +743,6 @@ body.page-template-page_campaign-template {
 
     > .cta {
       width: 50%;
-    }
-
-    .share {
-
-      .label {
-        font-weight: 500;
-        margin-bottom: 0.5rem;
-      }
-
-      ul {
-        display: flex;
-        flex-wrap: wrap;
-        column-gap: 1.5rem;
-
-        li:last-child {
-          width: 100%;
-        }
-
-      }
-
     }
 
   }
@@ -777,6 +773,11 @@ body.page-template-page_campaign-template {
 
   .pre-footer {
     text-align: center;
+
+    ul {
+      justify-content: center;
+    }
+
   }
 
   .site-footer {
