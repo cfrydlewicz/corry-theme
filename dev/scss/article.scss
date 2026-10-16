@@ -511,6 +511,16 @@
         margin-top: 0; // override
       }
 
+      > h3:not(:first-child) {
+        margin-top: 0;
+        padding-top: 1.75em;
+      }
+
+      > h4:not(:first-child) {
+        margin-top: 0;
+        padding-top: 1.625em;
+      }
+
       > p,
       > p:not(:last-child):not(.alert) {
         margin-bottom: 0;
@@ -555,6 +565,15 @@
       > :where(figure) {
         margin-bottom: 0;
         padding-bottom: 1.5rem;
+      }
+
+      > hr {
+        border-bottom-style: solid;
+        border-width: 0 0 1px 1px;
+        margin-bottom: 0;
+        margin-top: 0;
+        // padding apparently doesn't work here to get the left dashed border going?
+        width: 100%;
       }
 
     }
