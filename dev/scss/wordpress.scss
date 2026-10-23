@@ -7,7 +7,7 @@ html[lang] {
 // Backend Helpers
 body.admin-bar.logged-in {
   --admin-bar-height:  46px;
-  @media #{$mq_lg} {
+  @media #{$mq_admin} {
     --admin-bar-height:  32px;
   }
 
