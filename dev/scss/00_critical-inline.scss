@@ -48,7 +48,7 @@
   --cmpn_active-dark:  var(--cmpn_darkorange);
 
   // spacing & structure
-  --admin-bar-height:  46px;
+  --admin-bar-height:  0;
   --border-radius:     12px;
   --gutter:            16px;
   --max-header-height: 72px; // total fixed header height + borders
@@ -57,7 +57,6 @@
   --thumbnail-width:   1024px;
 
   @media #{$mq_lg} {
-    --admin-bar-height:  32px;
     --gutter:            24px;
   }
 
@@ -163,7 +162,7 @@
 // Skeleton
 html {
   font-size: 16px;  // establishes rem basis
-  scroll-padding-top: calc( var(--max-header-height) + var(--gutter)*2 ); // so anchor links don't overlap fixed header (header height + padding)
+  scroll-padding-top: calc( var(--admin-bar-height) + var(--max-header-height) + var(--gutter)*2 ); // so anchor links don't overlap fixed header (header height + padding)
 
   @media #{$mq_lg} {
     font-size: 18px;

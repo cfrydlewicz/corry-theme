@@ -6,7 +6,10 @@ html[lang] {
 
 // Backend Helpers
 body.admin-bar.logged-in {
-  scroll-padding-top: var(--admin-bar-height);
+  --admin-bar-height:  46px;
+  @media #{$mq_lg} {
+    --admin-bar-height:  32px;
+  }
 
   .u_attn {
     outline: 2px dashed $c_accent2;
