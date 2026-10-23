@@ -1,6 +1,12 @@
 /* Event Layouts */
 body.tribe-events-style-skeleton {
 
+  .total-wrapper > section,
+  .total-wrapper > .tribe-events-view--list {
+    // main body elements
+    margin-top: calc( var(--min-header-height) + var(--admin-bar-height) ) ;
+  }
+
   &.archive {
     /* Events listing page */
   }
