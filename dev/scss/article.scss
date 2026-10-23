@@ -1,25 +1,17 @@
 .article-content {
-  font-size: 16px;  // establishes em basis
+
   @media #{$mq_md} {
-    font-size: 22px;
     font-weight: 300;
-  }
-  @media #{$mq_lg} {
-    font-size: 24px;
   }
 
   .entry-title {
-    font-size: 2.5em;
-    font-weight: 500;
     line-height: 1;
     margin-bottom: 6px;
+
     @media #{$mq_md} {
-      font-size: 2.625em;
       font-weight: 400;
     }
-    @media #{$mq_lg} {
-      font-size: 3em;
-    }
+
   }
 
   .post-meta {
@@ -36,69 +28,6 @@
       max-width: $bp_xl;
     }
 
-    h2 {
-      font-size: 2em;
-      font-weight: 400;
-      line-height: 1.125;
-      margin-bottom: 0.5em;
-
-      &:not(:first-child) {
-        margin-top: 4rem;
-      }
-
-      @media #{$mq_md} {
-        font-size: 1.75em;
-      }
-
-    }
-
-    h3 {
-      font-size: 1.375em;
-      font-weight: 400;
-      line-height: 1.375;
-      margin-bottom: 0.5em;
-
-      &:not(:first-child) {
-        margin-top: 1.75em;
-      }
-
-      @media #{$mq_md} {
-        font-size: 1.25em;
-        font-weight: 600;
-      }
-
-    }
-
-    h4 {
-      font-size: 1.125em;
-      font-weight: 500;
-      line-height: 1.375;
-      margin-bottom: 0.5em;
-
-      &:not(:first-child) {
-        margin-top: 1.625em;
-      }
-
-    }
-
-    h5 {
-      font-size: 1em;
-      font-weight: 500;
-      line-height: 1.125;
-      margin-bottom: 0.5em;
-      text-transform: uppercase;
-
-      &:not(:first-child) {
-        margin-top: 1.625em;
-      }
-
-      @media #{$mq_md} {
-        font-size: 1em;
-        font-weight: 500;
-      }
-
-    }
-
     table {
 
       h5 {
@@ -107,106 +36,6 @@
         text-transform: none;
       }
 
-    }
-
-    p,
-    li {
-      font-size: 1em;
-      font-weight: 400;
-      line-height: 1.625;
-      max-width: 65ch; // accessibility recommendation is 80 max
-
-      &.has-small-font-size {
-        max-width: 80ch; // for fine print
-      }
-
-      &.has-text-align-center {
-        // for when smaller text is centered
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      @media #{$mq_md} {
-        font-weight: 300;
-      }
-    }
-
-    p:not(:last-child):not(.alert) {
-      margin-bottom: 2rem;
-    }
-
-    .has-small-font-size {
-      font-size: 14px !important;
-    }
-
-    figcaption {
-      font-size: 1em;
-      line-height: 1.125;
-      @media #{$mq_md} {
-        font-size: 0.75em;
-      }
-    }
-
-    // emphasis
-    strong,
-    b {
-      font-weight: 600;
-      @media #{$mq_md} {
-        font-weight: 500;
-      }
-    }
-    strong,
-    b,
-    em {
-      color: $c_truewhite;
-      strong,
-      b,
-      em {
-        color: $c_accent2;
-        font-size: 1.05em; // tiny bump in emphasis
-      }
-    }
-    del {
-      color: $c_light70;
-    }
-    a,
-    span[style*="color:"] { // Exception for when color is manually changed in the WP editor
-      strong,
-      b,
-      em,
-      del {
-        color: inherit;
-      }
-    }
-
-    // de-emphasis
-    sub,
-    sup {
-      @include f_smallest;
-
-      a {
-        color: $c_primary-dim;
-
-        &[target="_blank"]::after {
-          display: none;
-        }
-
-      }
-
-    }
-    sub {
-      display: block;  // break to a new line
-    }
-    sup {
-      vertical-align: super;
-    }
-
-    // highlighting
-    mark {
-      background-color: mix(white, #ff26e5, 25%);
-      color: #000;
-      font-weight: 500;
-      padding: 3px 6px;
     }
 
     // Text Links

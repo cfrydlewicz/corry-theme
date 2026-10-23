@@ -1,4 +1,13 @@
 // Above the fold layout
+html {
+  font-size: 16px;  // rem basis
+  @media #{$mq_md} {
+    font-size: 22px;
+  }
+  @media #{$mq_lg} {
+    font-size: 24px;
+  }
+}
 
 body {
   background-color: $c_dark-base;
@@ -25,11 +34,162 @@ body {
   background-size: 61.71px 288px, 288px 61.71px;
 }
 
-// General Definitions
+// Base Typography
+h1,
+.heading-a {
+  font-size: 2.5rem;
+  font-weight: 500;
+  line-height: 1;
+  margin-bottom: 6px;
+  @media #{$mq_md} {
+    font-size: 2.625rem;
+    font-weight: 400;
+  }
+  @media #{$mq_lg} {
+    font-size: 3rem;
+  }
+}
+h2,
+.heading-b {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.125;
+  margin-bottom: 0.5rem;
+
+  &:not(:first-child) {
+    margin-top: 4rem;
+  }
+
+  @media #{$mq_md} {
+    font-size: 1.75rem;
+  }
+
+}
+h3,
+.heading-c {
+  font-size: 1.375rem;
+  font-weight: 400;
+  line-height: 1.375;
+  margin-bottom: 0.5rem;
+
+  &:not(:first-child) {
+    margin-top: 1.75rem;
+  }
+
+  @media #{$mq_md} {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+
+}
+h4,
+.heading-d {
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.375;
+  margin-bottom: 0.5rem;
+
+  &:not(:first-child) {
+    margin-top: 1.625rem;
+  }
+
+}
+h5,
+.heading-e {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.125;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+
+  &:not(:first-child) {
+    margin-top: 1.625rem;
+  }
+
+  @media #{$mq_md} {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+}
+p,
+li {
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.625;
+  max-width: 65ch; // accessibility recommendation is 80 max
+
+  &.has-small-font-size {
+    max-width: 80ch; // for fine print
+  }
+
+  &.has-text-align-center {
+    // for when smaller text is centered
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media #{$mq_md} {
+    font-weight: 300;
+  }
+}
+p {
+  line-height: 1.5; // Accessibility standards recommend 1.5 - 2.0
+
+  &:not(:last-child):not(.alert) {
+    margin-bottom: 2rem;
+  }
+
+}
+li {
+  line-height: 1.2;
+
+  &:not(:last-child) {
+    margin-bottom: 0.5rem;
+  }
+
+}
+figcaption {
+  font-size: 1rem;
+  line-height: 1.125;
+
+  @media #{$mq_md} {
+    font-size: 0.75rem;
+  }
+
+}
+
+// WP Size Modifiers
+.has-small-font-size {
+  font-size: 14px !important;
+}
+.has-medium-font-size {
+  font-size: 1rem !important;
+}
+.has-large-font-size {
+  font-size: 1.75rem !important;
+}
+.has-x-large-font-size {
+  font-size: 2.5rem !important;
+}
+
+// Emphasis
+strong,
+b,
+em {
+  color: $c_truewhite;
+
+  strong,
+  b,
+  em {
+    color: $c_accent2;
+    font-size: 1.05em; // tiny bump in emphasis
+  }
+
+}
 strong,
 b {
   font-weight: 600;
-}
 
 em {
   font-style: italic;
