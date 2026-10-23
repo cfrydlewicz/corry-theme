@@ -1,10 +1,10 @@
 /* Event Layouts */
-body.tribe-events-style-skeleton {
+body.tribe-events-page-template {
 
-  .total-wrapper > section,
+  #tribe-events-pg-template,
   .total-wrapper > .tribe-events-view--list {
     // main body elements
-    margin-top: calc( var(--min-header-height) + var(--admin-bar-height) ) ;
+    top: calc( var(--min-header-height) + var(--admin-bar-height) );
   }
 
   &.archive {
