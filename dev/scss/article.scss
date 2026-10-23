@@ -40,51 +40,6 @@
 
     }
 
-    // Text Links
-    a {
-      overflow-wrap: break-word;
-      text-decoration: underline;
-      word-break: break-word;
-      word-wrap: break-word;
-
-      &:visited:not(:hover):not(:active):not(:focus) {
-        color: $c_visited;
-      }
-
-    }
-    a[href^="#a_"]::after,
-    a[href^="#h-"]::after {
-      content: '#';
-      display: inline-block;
-      font-size: 0.5em;
-      margin: 0 0.25em;
-      speak: none;
-      vertical-align: text-top;
-    }
-
-    figure a[target="_blank"]:not([href*="corryfrydlewicz.com"])::after {
-      // remove icons from linked media
-      content: '';
-      display: none;
-    }
-
-    // Buttons
-    .wp-block-buttons {
-      margin-bottom: 2.5rem;
-    }
-    .wp-block-button a {
-      background-color: $c_primary-dark;
-      color: $c_truewhite !important;
-      font-weight: 500;
-      text-decoration: none;
-
-      &:hover {
-        background-color: $c_accent-dim;
-        color: $c_truewhite;
-      }
-
-    }
-
     // lists
     ul,
     ol {

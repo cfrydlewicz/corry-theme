@@ -319,6 +319,29 @@ a {
 }
 
 // Buttons and CTAs
+.wp-block-buttons {
+  margin-bottom: 2.5rem;
+}
+button,
+.wp-block-button a,
+.cta a {
+
+}
+button {
+  cursor: pointer;
+}
+.wp-block-button a {
+  background-color: $c_primary-dark;
+  color: $c_truewhite !important;
+  font-weight: 500;
+  text-decoration: none;
+
+  &:hover {
+    background-color: $c_accent-dim;
+    color: $c_truewhite;
+  }
+
+}
 .cta a {
   border-radius: 0.75rem;
   border-style: solid;
