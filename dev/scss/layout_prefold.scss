@@ -191,10 +191,60 @@ strong,
 b {
   font-weight: 600;
 
+  @media #{$mq_md} {
+    font-weight: 500;
+  }
+
+}
 em {
   font-style: italic;
 }
 
+// de-emphasis
+del {
+  color: $c_light70;
+}
+sub,
+sup {
+  @include f_smallest;
+
+  a {
+    color: $c_primary-dim;
+
+    &[target="_blank"]::after {
+      display: none;
+    }
+
+  }
+
+}
+sub {
+  display: block;  // break to a new line
+}
+sup {
+  vertical-align: super;
+}
+
+// highlighting
+mark {
+  background-color: mix(white, #ff26e5, 25%);
+  color: #000;
+  font-weight: 500;
+  padding: 3px 6px;
+}
+
+// Exceptions - Links, Custom Colors
+a,
+span[style*="color:"] { 
+  strong,
+  b,
+  em,
+  del {
+    color: inherit;
+  }
+}
+
+// Links
 a {
   color: $c_link;
   text-decoration: none;
@@ -227,34 +277,55 @@ a {
     margin-right: 0.375em;
   }
 
-}
+  p &,
+  li & {
+    // Text Links
+    overflow-wrap: break-word;
+    text-decoration: underline;
+    word-break: break-word;
+    word-wrap: break-word;
 
-figure > a {
-  display: block;  // force the box model of a tags wrapped around images to behave (not links in captions though)
-}
+    &:visited:not(:hover):not(:active):not(:focus) {
+      color: $c_visited;
+    }
 
-p {
-  line-height: 1.5; // Accessibility standards recommend 1.5 - 2.0
-}
+    &[href^="#"]::after {
+      // anchor links
+      content: '#';
+      display: inline-block;
+      font-size: 0.5em;
+      margin: 0 0.25em;
+      speak: none;
+      vertical-align: text-top;
+    }
 
-.cta a {
-  border-radius: 0.75em;
-  border-style: solid;
-  border-width: 2px;
-  display: inline-block;
-  padding: 0.5em 1em;
+  }
 
-}
+  figure {
 
-li {
-  line-height: 1.2;
+    > & {
+      display: block;  // force the box model of a tags wrapped around images to behave (not links in captions though)
+    }
 
-  &:not(:last-child) {
-    margin-bottom: 0.5em;
+    a[target="_blank"]:not([href*="corry.us"])::after,
+    a[target="_blank"]:not([href*="corryfrydlewicz.com"])::after {
+      // remove icons from linked media
+      content: '';
+      display: none;
+    }
+
   }
 
 }
 
+// Buttons and CTAs
+.cta a {
+  border-radius: 0.75rem;
+  border-style: solid;
+  border-width: 2px;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+}
 
 // Specific Zones
 .header-logo {
@@ -268,7 +339,6 @@ li {
     }
   }
 }
-
 
 // Listing Pages and Widgets
 .article-list {
