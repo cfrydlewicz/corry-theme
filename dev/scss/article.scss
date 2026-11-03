@@ -169,7 +169,8 @@
     }
 
     // Groups
-    .inner-wrapper > .wp-block-group {
+    .inner-wrapper > .wp-block-group,
+    section > .wp-block-group {
       // subtle added spacing for grouped content
       margin-bottom: 2.5rem;
       padding-bottom: 0.5rem;
