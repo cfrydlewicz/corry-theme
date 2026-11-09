@@ -188,6 +188,10 @@ em {
   }
 
 }
+h2 em {
+  color: $c_accent2;
+  font-size: 1.05em; // tiny bump in emphasis
+}
 strong,
 b {
   font-weight: 600;
