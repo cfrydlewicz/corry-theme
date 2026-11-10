@@ -96,11 +96,7 @@ $saveData = (isset($_SERVER["HTTP_SAVE_DATA"]) && stristr($_SERVER["HTTP_SAVE_DA
             <nav>
               <ul>
                 <li class="issues"><a href="/emeryville/issues/" tabindex="-1"><button>Issues</button></a></li>
-                <li class="donate"><a href="/emeryville/join-me/#donate" title="If you're broke too, help in other ways" tabindex="-1"><button>Donate</button></a></li>
-                <li class="join"><a href="/emeryville/join-me/" tabindex="-1"><button>Join Me</button></a></li>
                 <li class="about"><a href="/emeryville/about/" tabindex="-1"><button>About Corry</button></a></li>
-                <li class="endorse"><a href="/emeryville/endorsements/" tabindex="-1"><button>Endorsements</button></a></li>
-                <li class="press"><a href="/emeryville/press-kit/" tabindex="-1"><button>Press Kit</button></a></li>
               </ul>
             </nav>
           </section>
@@ -111,10 +107,8 @@ $saveData = (isset($_SERVER["HTTP_SAVE_DATA"]) && stristr($_SERVER["HTTP_SAVE_DA
               <ul>
                 <li><a href="/emeryville">Home</a></li>
                 <li><a href="/emeryville/issues/">Issues</a></li>
-                <li><a href="/emeryville/join-me/">Join Me</a></li>
                 <li><a href="/emeryville/about/">About Corry</a></li>
                 <li><a href="/emeryville/endorsements/">Endorsements</a></li>
-                <li><a href="/emeryville/press-kit/">Press Kit</a></li>
                 <li><a href="/emeryville/faq/">FAQs</a></li>
                 <li><a href="/rogue-e-pierogi/">Rogue</a></li>
               </ul>

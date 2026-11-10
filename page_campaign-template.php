@@ -54,22 +54,8 @@
                 </li>
               <?php endif; ?>
               <li><a class="i_bluesky" href="https://bsky.app/intent/compose?text=@corry.us%0A<?php echo $thisPostShortDescUrl; ?>" target="_blank" rel="noreferrer" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://bsky.app']);">Discuss on Bluesky</a></li>
-              <li><a class="i_facebook" href="https://www.facebook.com/groups/corry4emeryville" target="_blank" rel="noreferrer" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://facebook.com']);">Discuss on Facebook</a></li>
             </ul>
           </div>
-          <?php if ( !empty($thisPostShortDescUrl) ) : ?>
-            <div class="share">
-              <div class="label">Share this page:</div>
-              <ul>
-                <li><a class="i_mail" href="mailto:%20?subject=<?php echo $thisPostTitle; ?>&body=<?php echo $thisPostShortDescUrl; ?>" target="_blank" title="Share via Email">Email</a></li>
-                <li><a class="i_bluesky" href="https://bsky.app/intent/compose?text=<?php echo $thisPostShortDescUrl; ?>" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://bsky.app']);" title="Share on Bluesky">Bluesky</a></li>
-                <li><a class="i_facebook" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $thisPostShortDescUrl; ?>" target="_blank">Facebook</a></li>
-                <li><a class="i_twitter" href="https://twitter.com/intent/tweet?url=<?php echo $thisPostShortDescUrl; ?>" target="_blank">Twitter</a></li>
-                <li><a class="i_linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=<?php echo $thisPostShortDescUrl; ?>" target="_blank">LinkedIn</a></li>
-                <!--li><a class="f_small" href="<?php echo $thisPostShortDescUrl; ?>"><?php echo $thisPostShortPrettyUrl; ?></a></li-->
-              </ul>
-            </div>
-          <?php endif; ?>
         </div>
       </section>
 
