@@ -38,6 +38,17 @@ body.page-template-page_campaign-template {
 
   }
 
+  b,
+  em,
+  strong {
+    color: $c_trueblack;
+  }
+  .has-text-color b,
+  .has-text-color em,
+  .has-text-color strong {
+    color: inherit;
+  }
+
   .article-content .entry-content details summary {
     font-size: 1.75rem;
   }
@@ -535,17 +546,6 @@ body.page-template-page_campaign-template {
           padding-right: $gutter_lg;
         }
 
-      }
-
-      b,
-      em,
-      strong {
-        color: $c_trueblack;
-      }
-      .has-text-color b,
-      .has-text-color em,
-      .has-text-color strong {
-        color: inherit;
       }
 
       .featured-links-list {
