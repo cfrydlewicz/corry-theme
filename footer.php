@@ -3,15 +3,8 @@
     <div class="pre-footer">
       <div class="inner-wrapper">
 
-        <section class="campaign-container sp_padding" role="complementary">
-          <?php if ( !is_page_template( 'page_campaign-template.php' ) ) : ?>
-            <div class="site-footer_header">Did You Know <strong>I'm Running for City Council?</strong></div>
-            <a href="/emeryville/join-me/"><img alt="Corry for Emeryville Logo" src="/wp-content/uploads/corry-emeryville-2026_logo-hi-res-scaled.png" style="width: 360px;"></a>
-          <?php endif; ?>
-          <div class="cta">
-            <a href="/emeryville/join-me/">Join Me</a>
-          </div>
-          <?php if ( is_page_template( 'page_campaign-template.php' ) ) : ?>
+        <?php if ( is_page_template( 'page_campaign-template.php' ) ) : ?>
+          <section class="campaign-container sp_padding" role="complementary">
             <div class="share-the-campaign">
               <div class="site-footer_header">Share The Campaign</div>
               <ul>
@@ -23,24 +16,15 @@
                 <!--li><a class="i_nextdoor" href="https://nextdoor.com/sharekit/?body=https://corryfrydlewicz.com/emeryville/?utm_source=nextdoor" target="_blank" rel="noreferrer noopener nofollow">NextDoor</a></li-->
               </ul>
             </div>
-          <?php endif; ?>
-        </section>
+          </section>
+       <?php endif; ?>
 
         <section class="follow-container sp_horizontal-padding" role="complementary">
           <div class="site-footer_header">Follow Me</div>
           <ul>
-            <?php if ( is_page_template( 'page_campaign-template.php' ) ) : ?>
-              <li><a class="i_mail" href="https://forms.gle/6pbe5HsXqWkBfeDj6" target="_blank">Newsletter Sign Up</a></li>
-            <?php else : ?>
-              <li><a class="i_mail" href="/emailsubscribe?utm_source=site-footer" target="_blank">Email me</a> to join my newsletter.</li>
-              <li><a class="i_rss" href="/subscribe-to-corrys-blog-with-rss/" target="_blank">RSS</a> is the best way to follow <em>new posts</em>.</li>
-              <!--li><a class="i_heart" href="https://www.patreon.com/CorryFrydlewicz" target="_blank" rel="noreferrer" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://www.patreon.com']);">Patreon</a> is where I'll share more once I have a few subscribers.</li-->
-            <?php endif; ?>
+            <li><a class="i_mail" href="https://forms.gle/NiPokd4kjcp6D32z7" target="_blank">Email</a></li>
+            <li><a class="i_rss" href="/subscribe-to-corrys-blog-with-rss/" target="_blank">RSS</a></li>
             <li><a class="i_bluesky u_nowrap" href="/bluesky" rel="noreferrer" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://bsky.app']);">Bluesky</a></li>
-            <li><a class="i_youtube u_nowrap" href="https://www.youtube.com/@corry4emeryville" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://youtube.com']);">YouTube</a></li>
-            <li><a class="i_tiktok u_nowrap" href="https://www.tiktok.com/@corry4emeryville" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://tiktok.com']);">TikTok</a></li>
-            <li><a class="i_facebook u_nowrap" href="https://www.facebook.com/groups/corry4emeryville" target="_blank" rel="noreferrer" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://facebook.com']);">Facebook</a></li>
-            <li><a class="i_instagram u_nowrap" href="https://www.instagram.com/corry4emeryville/" target="_blank" rel="noreferrer" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://instagram.com']);">Instagram</a></li>
           </ul>
         </section>
 
@@ -76,7 +60,6 @@
            <!--li><a class="i_discord"       title="My Discord Server"              href="/discord"                                                                       rel="noreferrer" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://discord.gg']);"></a></li-->
            <!--li><a class="i_matrix"        title="My Matrix Server"               href="/matrix-chat"                                                                   rel="noreferrer" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://matrix.org']);"></a></li-->
            <!--li><a class="i_pinterest"     title="My Boards"                      href="/boards"                                                                        target="_blank"></a></li-->
-              <li><a class="i_facebook"      title="Corry 4 Emeryville on Facebook" href="https://www.facebook.com/groups/corry4emeryville"                               rel="noreferrer" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://facebook.com']);"></a></li>
               <li><a class="i_spotify"       title="My Spotify Profile & Playlists" href="https://open.spotify.com/user/1232018881?si=2dd1be0bb2304895"                   rel="noreferrer" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://spotify.com/']);"></a></li>
               <li><a class="i_steam"         title="My Steam Profile"               href="https://steamcommunity.com/id/cfrydlewicz/"                                     rel="noreferrer" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://steamcommunity.com']);"></a></li>
            <!--li><a class="i_game"          title="My Final Fantasy XIV Character" href="https://na.finalfantasyxiv.com/lodestone/character/2240266/"                    rel="noreferrer" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','https://na.finalfantasyxiv.com']);"></a></li-->
