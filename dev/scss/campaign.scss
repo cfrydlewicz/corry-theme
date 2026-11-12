@@ -176,6 +176,21 @@ body.page-template-page_campaign-template {
 
   }
 
+  .alert {
+
+    &.stop,
+    &.warning {
+      background-color: var(--cmpn_orange);
+      border-color: var(--cmpn_darkorange);
+
+      &::before {
+        color: var(--cmpn_darkorange);
+      }
+
+    }
+
+  }
+
   // header
   .site-header {
     --logo-expanded-width: 248px;
