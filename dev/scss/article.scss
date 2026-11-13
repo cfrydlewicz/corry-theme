@@ -75,12 +75,44 @@
 
     ul {
       list-style-type: disc;
+
       ul {
         list-style-type: square;
+
         ul {
           list-style-type: circle;
         }
+
       }
+
+      &.flow-list {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        justify-content: center;
+
+        li {
+          margin: 0;
+          white-space: nowrap;
+
+          &:first-child {
+
+            &::marker {
+              content: none;
+            }
+
+          }
+
+          &:not(:first-child) {
+            margin-left: 1.25em;
+          }
+
+        }
+
+      }
+
     }
 
     ol {
