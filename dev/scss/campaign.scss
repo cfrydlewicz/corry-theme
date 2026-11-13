@@ -11,7 +11,8 @@ body.page-template-page_campaign-template {
   button,
   .wp-block-button a,
   input[type=submit],
-  .respond-container .form-submit input[type=submit] {
+  .respond-container .form-submit input[type=submit],
+  .comment-body .reply a {
 
     &:focus {
       outline-color: var(--cmpn_link);
@@ -57,7 +58,8 @@ body.page-template-page_campaign-template {
   .wp-block-button a,
   .cta a,
   input[type=submit],
-  .respond-container .form-submit input[type=submit] {
+  .respond-container .form-submit input[type=submit],
+  .comment-body .reply a {
     background-color: var(--cmpn_link);
     border-color: var(--cmpn_link-dark);
     border-radius: 0.75em;
@@ -780,6 +782,10 @@ body.page-template-page_campaign-template {
       transform: none;
     }
 
+  }
+
+  .comment-body {
+    background-color: var(--cmpn_seafoam);
   }
 
   .post-footer {
