@@ -14,7 +14,7 @@
 
         <?php if ( is_page_template( 'page_campaign-template.php' ) ) : ?>
           <section class="paid-for sp_padding">
-            <p class="f_smallest" style="margin-left:auto; margin-right: auto; text-align: center;">This site was designed and coded by Corry Frydlewicz.<br>
+            <p class="f_smallest" style="margin-left: auto; margin-right: auto; text-align: center;">This site was designed and coded by Corry Frydlewicz.<br>
               Paid for by <em>Corry Frydlewicz for Emeryville City Council 2026</em> (#1493176)</p>
           </section>
         <?php else : ?>
