@@ -208,6 +208,36 @@
 // Single Post Footer Styling
 
 // Read More Widget
+.read-more-container {
+  --read-more-articles: 3;
+  --read-more-gap: 1rem;
+
+  .widget-area {
+    margin: 0 auto;
+
+    ul {
+      align-items: flex-start;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      gap: var(--read-more-gap);
+
+      @media #{$mq_md} {
+        flex-direction: row;
+      }
+
+    }
+
+    li {
+      flex-basis: calc( ( 100% / var(--read-more-articles) ) - ( ( var(--read-more-articles) - 1 ) * var(--read-more-gap) ) );
+      list-style-type: none; // fix idiotic markup from plugin
+      max-width: 100%; // prevent overflow on mobile
+    }
+
+  }
+
+}
+
 .srpw-block {
 
   a.srpw-title.srpw-title {
@@ -216,22 +246,8 @@
 
 }
 
-.srpw-ul {
-  align-items: flex-start;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  gap: 1rem;
-
-  @media #{$mq_md} {
-    flex-direction: row;
-  }
-
-}
-
 .srpw-li {
-  max-width: $thumbnail_width;
-  min-width: 240px;
+  min-width: 240px; // override
   position: relative;
 
   &:hover {
@@ -250,7 +266,6 @@
 }
 
 .srpw-img {
-  //@extend .entry-header;
   background-color: var(--c_dark-base);
   overflow: hidden;
   position: relative;
@@ -376,20 +391,6 @@
     word-wrap: break-word;
   }
 
-  .read-more-container {
-
-    .widget-area {
-      margin: 0 auto;
-
-      li {
-        list-style-type: none; // fix idiotic markup from plugin
-        max-width: 100%; // prevent overflow on mobile
-      }
-
-    }
-
-  }
-
   @media #{$mq_md} {
 
     .comments-container {
@@ -456,11 +457,6 @@ body.single {
 
       .widget-area {
         margin: 0 auto;
-
-        li {
-          list-style-type: none; // fix idiotic markup from plugin
-        }
-
       }
 
     }
