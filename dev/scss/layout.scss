@@ -225,19 +225,12 @@
     }
 
     li {
-      flex-basis: calc( ( 100% / var(--read-more-articles) ) - ( ( var(--read-more-articles) - 1 ) * var(--read-more-gap) ) );
+      flex-basis: calc( 100% / var(--read-more-articles) );
       list-style-type: none; // fix idiotic markup from plugin
       max-width: 100%; // prevent overflow on mobile
+      width: 100%;
     }
 
-  }
-
-}
-
-.srpw-block {
-
-  a.srpw-title.srpw-title {
-    overflow: visible !important; // override
   }
 
 }
@@ -287,10 +280,15 @@
 
 .srpw-title {
   display: block;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
   font-size: 2em;
   font-weight: 400;
   line-height: 1;
   margin-bottom: 0.125em;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .srpw-comment::before,
@@ -323,17 +321,14 @@
   // overrides
   @include button(big);
   transition: all 0.2s ease-in-out;
-
-  @media #{$mq_md} {
-    margin-right: 1rem;
-  }
-
 }
 
 .srpw-more-link {
   bottom: 0;
+  font-size: 0.875rem; // compensate for scaling
   position: absolute;
   right: 5%;
+  white-space: nowrap;
 
   @media #{$mq_md} {
     right: 10%;
