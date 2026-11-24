@@ -522,12 +522,15 @@
     .wp-block-quote {
       background: radial-gradient(ellipse at right top, rgba(0,0,0,0.125) 0%, rgba(0,0,0,0.25) 100%);
       border-left: 8px solid $c_primary-dark;
-      margin: 2em 0;
-      padding: 0.75em 0.75em 1.25em 2.375em;
+      margin-top: 2rem;
+      padding-bottom: 1.25rem;
+      padding-left: 2.375rem;
+      padding-right: 0.75rem;
+      padding-top :0.75rem;
       position: relative;
 
-      @media #{$mq_md} {
-        padding-left: 1.25em;
+      &:not(:last-child) {
+        margin-bottom: 2rem;
       }
 
       &::before {
@@ -552,10 +555,6 @@
 
       p {
         margin-top: 0.5em;
-      }
-
-      &:last-child {
-        margin-bottom: 0;
       }
 
     }
