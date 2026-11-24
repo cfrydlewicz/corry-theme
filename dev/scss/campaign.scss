@@ -87,11 +87,7 @@ body.page-template-page_campaign-template {
   .wp-block-button.cta a,
   button.cta,
   .cta a {
-    padding: $gutter*0.5 $gutter*0.75 $gutter*0.5 $gutter;
-
-    @media #{$mq_lg} {
-      padding: $gutter_lg*0.5 $gutter_lg*0.75 $gutter_lg*0.5 $gutter_lg;
-    }
+    padding: calc( var(--gutter) / 2 ) calc( var(--gutter) * 0.75 ) calc( var(--gutter) / 2 ) var(--gutter);
 
     &::after,
     &[target="_blank"]:not([href*="corryfrydlewicz.com"])::after { // override
@@ -301,7 +297,7 @@ body.page-template-page_campaign-template {
       }
 
       ul {
-        gap: $gutter/2;
+        gap: calc( var(--gutter) / 2 );
 
         @media #{$mq_sm4} {
           // when the Donate and Join Me Buttons Appear
@@ -554,15 +550,9 @@ body.page-template-page_campaign-template {
         border-bottom-left-radius: 1rem;
         border-bottom-right-radius: 1rem;
         padding-bottom: 2rem;
-        padding-left: $gutter;
-        padding-right: $gutter;
+        padding-left: var(--gutter);
+        padding-right: var(--gutter);
         padding-top: 2rem;
-
-        @media #{$mq_xl} {
-          padding-left: $gutter_lg;
-          padding-right: $gutter_lg;
-        }
-
       }
 
       .featured-links-list {
@@ -725,14 +715,8 @@ body.page-template-page_campaign-template {
   footer {
 
     .inner-wrapper {
-      padding-left: $gutter;
-      padding-right: $gutter;
-
-      @media #{$mq_xl} {
-        padding-left: $gutter_lg;
-        padding-right: $gutter_lg;
-      }
-
+      padding-left: var(--gutter);
+      padding-right: var(--gutter);
     }
 
   }

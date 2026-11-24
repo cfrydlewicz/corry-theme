@@ -129,13 +129,8 @@
       align-items: center;
       display: flex;
       flex-grow: 1;
-      padding-left: $gutter;
-      padding-right: $gutter;
-    }
-
-    @media #{$mq_xl} {
-      padding-left: $gutter_lg;
-      padding-right: $gutter_lg;
+      padding-left: var(--gutter);
+      padding-right: var(--gutter);
     }
 
   }
@@ -186,12 +181,7 @@
   }
 
   a {
-    padding: 8px $gutter;
-
-    @media #{$mq_xl} {
-      padding-left: $gutter_lg;
-      padding-right: $gutter_lg;
-    }
+    padding: 8px var(--gutter);
 
     &:last-child {
       margin-left: auto;
@@ -284,8 +274,8 @@
 
 .srpw-content {
   clear: both;
-  padding-left: $gutter;
-  padding-right: $gutter;
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
   padding-top: 0.5rem;
 }
 
@@ -363,17 +353,13 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  gap: $gutter*2; // match .listing-page
+  gap: calc( var(--gutter) * 2 ); // match .listing-page
   justify-content: space-between;
   margin-bottom: 36px;
   margin-top: 48px;
 
   @media #{$mq_md} {
     flex-direction: row;
-  }
-
-  @media #{$mq_lg} {
-    gap: $gutter_lg*2; // match .listing-page
   }
 
   section {
@@ -451,8 +437,8 @@ body.single {
       padding-bottom: 0;
 
       .post-footer_header {
-        margin-left: $gutter;
-        margin-right: $gutter;
+        margin-left: var(--gutter);
+        margin-right: var(--gutter);
       }
 
       .widget-area {

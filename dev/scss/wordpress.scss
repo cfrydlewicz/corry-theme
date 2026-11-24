@@ -72,12 +72,7 @@ body.admin-bar.logged-in {
   &.archive {
 
     .main-columns-wrapper {
-      padding-top: $gutter;
-
-      @media #{$mq_xl} {
-        padding-top: $gutter_lg;
-      }
-
+      padding-top: var(--gutter);
     }
 
   }

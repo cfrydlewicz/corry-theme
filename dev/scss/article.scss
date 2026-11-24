@@ -674,7 +674,7 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  gap: $gutter;
+  gap: var(--gutter);
   justify-content: space-between;
 
   .thanks-main {
@@ -752,10 +752,6 @@
     position: sticky;
     top: $header_height--max;
     z-index: $z_cta+1;
-  }
-
-  @media #{$mq_lg} {
-    gap: $gutter_lg;
   }
 
 }

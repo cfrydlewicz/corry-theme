@@ -106,25 +106,13 @@
 }
 .sp_padding,
 .sp_horizontal-padding {
-  padding-left: $gutter;
-  padding-right: $gutter;
-
-  @media #{$mq_xl} {
-    padding-left: $gutter_lg;
-    padding-right: $gutter_lg;
-  }
-
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
 }
 .sp_padding,
 .sp_vertical-padding {
-  padding-bottom: $gutter;
-  padding-top: $gutter;
-
-  @media #{$mq_xl} {
-    padding-bottom: $gutter_lg;
-    padding-top: $gutter_lg;
-  }
-
+  padding-bottom: var(--gutter);
+  padding-top: var(--gutter);
 }
 
 .u_nowrap {
@@ -162,7 +150,7 @@
 // Skeleton
 html {
   font-size: 16px;  // establishes rem basis
-  scroll-padding-top: calc( var(--admin-bar-height) + var(--max-header-height) + var(--gutter)*2 ); // so anchor links don't overlap fixed header (header height + padding)
+  scroll-padding-top: calc( var(--admin-bar-height) + var(--max-header-height) + 20vh ); // so anchor links don't overlap fixed header (header height + padding)
 
   @media #{$mq_lg} {
     font-size: 18px;
@@ -264,11 +252,7 @@ body {
       display: flex;
       height: 100%;
       min-width: 40px;
-      padding: 4px $gutter;
-      @media #{$mq_xl} {
-        padding-left: $gutter_lg;
-        padding-right: $gutter_lg;
-      }
+      padding: 4px var(--gutter);
     }
 
     .title {
@@ -303,13 +287,8 @@ body {
     }
 
     @media #{$mq_sm2} {
-      padding-left: $gutter;
-      padding-right: $gutter;
-    }
-
-    @media #{$mq_xl} {
-      padding-left: $gutter_lg;
-      padding-right: $gutter_lg;
+      padding-left: var(--gutter);
+      padding-right: var(--gutter);
     }
 
   }
@@ -353,12 +332,7 @@ body {
 
     @media #{$mq_sm3} {
       font-size: 1rem;
-      padding: 0 $gutter;
-    }
-
-    @media #{$mq_xl} {
-      padding-left: $gutter_lg;
-      padding-right: $gutter_lg;
+      padding: 0 var(--gutter);
     }
 
   }
@@ -569,11 +543,7 @@ body {
       padding-left: 8px;
 
       @media #{$mq_sm2} {
-        padding-left: $gutter;
-      }
-
-      @media #{$mq_xl} {
-        padding-left: $gutter_lg;
+        padding-left: var(--gutter);
       }
 
     }
@@ -582,11 +552,7 @@ body {
       padding-right: 8px;
 
       @media #{$mq_sm2} {
-        padding-right: $gutter;
-      }
-
-      @media #{$mq_xl} {
-        padding-right: $gutter_lg;
+        padding-right: var(--gutter);
       }
 
     }
@@ -598,28 +564,22 @@ body {
 .main-columns-wrapper {
   display: flex;
   flex-direction: column;
-  gap: $gutter;
+  gap: var(--gutter);
   justify-content: space-between;
   padding-top: $header_height + 2;  // 2px for bezel borders
 
   @media #{$mq_cols} {
-    gap: $gutter_lg;
     flex-direction: row;
     flex-wrap: nowrap;
-    padding-left: $gutter;
-    padding-right: $gutter;
-  }
-
-  @media #{$mq_xl} {
-    padding-left: $gutter_lg;
-    padding-right: $gutter_lg;
+    padding-left: var(--gutter);
+    padding-right: var(--gutter);
   }
 
   body.archive &, // listing pages with title sections
   body.search &, // listing pages with title sections
   body:not(.wp-singular) & > main,
   > aside {
-    padding-top: $gutter;
+    padding-top: var(--gutter);
   }
 
   > main {
@@ -648,7 +608,7 @@ body {
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
-      padding: $gutter $gutter $gutter*2;
+      padding: var(--gutter) var(--gutter) calc( var(--gutter) * 2 );
 
       .single & {
 
