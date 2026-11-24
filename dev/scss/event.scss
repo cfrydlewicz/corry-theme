@@ -7,6 +7,10 @@ body.tribe-events-page-template {
     top: calc( var(--min-header-height) + var(--admin-bar-height) );
   }
 
+  .tribe-events-l-container {
+    padding-top: 1rem;
+  }
+
   &.archive {
     /* Events listing page */
   }
