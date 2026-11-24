@@ -550,24 +550,8 @@
 
       }
 
-      p,
-      cite {
-        line-height: 1.5;
-      }
-
       p {
         margin-top: 0.5em;
-      }
-
-      cite {
-        display: block;
-        font-size: 1rem;
-        margin-top: 1.25em;
-
-        @media #{$mq_md} {
-          font-size: 0.75rem;
-        }
-
       }
 
       &:last-child {
@@ -577,7 +561,7 @@
     }
 
     .wp-block-pullquote {
-      // Pull Quotes aren't usually actual Quotes. They're more for emphasis.
+      // Pull Quotes aren't always actual Quotes. They're more for emphasis.
       margin: 2em auto;
       padding: 0;
 
@@ -588,18 +572,6 @@
         border-width: 1px 0;
         padding: 0.75em;
         text-align: center;
-      }
-
-      // when they're cited, they are quotes
-      cite {
-        @include f_medium;
-        color: $c_light80;
-        font-style: italic;
-
-        &::before {
-          content: '― ';
-        }
-
       }
 
     }
