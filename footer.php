@@ -19,7 +19,7 @@
           </section>
         <?php else : ?>
           <section class="reverse-canary sp_padding">
-            <p class="f_smallest" style="text-align: center;">I have not been required to disclose data to the government under duress. If that changes and I'm able, I will remove this text. (last update: 2026-11-10)</p>
+            <p class="f_smallest">I have not been required to disclose data to the government under duress. If that changes and I'm able, I will remove this text. (last update: 2026-11-10)</p>
           </section>
         <?php endif; ?>
 
