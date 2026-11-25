@@ -144,7 +144,7 @@ input[type="checkbox"] {
   }
 
   &.aside {
-    @include f_small;
+    font-size: var(--font-small);
     border-radius: 1em;
     text-align: right;
   }
@@ -161,7 +161,7 @@ input[type="checkbox"] {
   }
 
   &.disclaimer {
-    @include f_smaller;
+    font-size: var(--font-min);
     border-radius: 0;
 
     &::before {
@@ -233,7 +233,7 @@ div.alert {
 }
 
 .disclaimer:not(.alert) {  // deprecated without alert class
-  @include f_small;
+  font-size: var(--font-min);
   background-color: $c_light10;
   border-color: $c_primary-dim;
   border-radius: 0;

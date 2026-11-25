@@ -122,7 +122,7 @@
 }
 
 .site-footer {
-  @include f_smallest;
+  font-size: var(--font-min);
   background-color: $c_grey40;
   bottom: 0;
   width: 100%;

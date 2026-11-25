@@ -90,7 +90,7 @@ body.admin-bar.logged-in {
   position: relative !important;
 }
 #fancybox-title {
-  @include f_small;
+  font-size: var(--font-small);
   background-color: $c_dark-base !important;
   padding: 12px 2px 4px !important;
 }

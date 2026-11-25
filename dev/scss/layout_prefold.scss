@@ -229,7 +229,7 @@ del {
 }
 sub,
 sup {
-  @include f_smallest;
+  font-size: var(--font-min);
 
   a {
     color: $c_primary-dim;
@@ -431,7 +431,7 @@ button {
   position: relative;
 
   .post-categories {
-    @include f_small;
+    font-size: var(--font-small);
     background-color: rgba($c_grey50,0.75);
     border-top-right-radius: 0.75em;
     bottom: 0;
@@ -455,7 +455,7 @@ button {
     }
 
     aside & {
-      @include f_smaller;
+      font-size: var(--font-smaller);
       padding: calc( var(--gutter) / 4 ) calc( var(--gutter) / 2 );
     }
 
@@ -636,7 +636,7 @@ button {
     }
 
     .post-stats {
-      @include f_small;
+      font-size: var(--font-small);
     }
 
   }

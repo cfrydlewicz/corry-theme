@@ -80,14 +80,26 @@
 }
 
 // font sizes
-.f_small {
-  @include f_small;
+.f_smallest {
+  font-size: var(--font-min) !important;
 }
 .f_smaller {
-  @include f_smaller;
+  font-size: var(--font-smaller) !important;
 }
-.f_smallest {
-  @include f_smallest;
+.f_small {
+  font-size: var(--font-small) !important;
+}
+.f_medium {
+  font-size: var(--font-medium) !important;
+}
+.f_large {
+  font-size: var(--font-large) !important;
+}
+.f_larger {
+  font-size: var(--font-larger) !important;
+}
+.f_largest {
+  font-size: var(--font-largest) !important;
 }
 
 // spacing
@@ -250,7 +262,7 @@ body {
     display: none; // show with JS
 
     .inner-wrapper {
-      @include f_smaller;
+      font-size: var(--font-smaller);
       display: flex;
       height: $header_height--secondary;
       justify-content: space-between;
@@ -771,14 +783,14 @@ body.shadow-on #shadow {
   width: 100%;
 
   .page-title {
-    @include f_larger;
+    font-size: var(--font-larger);
 
     &:not(:last-child) {
       margin-bottom: 0.25em;
     }
 
     span {
-      @include f_smallest;
+      font-size: var(--font-min);
       color: $c_light50;
       display: block;
       font-family: monospace;
@@ -794,7 +806,7 @@ body.shadow-on #shadow {
   }
 
   p {
-    @include f_smaller;
+    font-size: var(--font-smaller);
     max-width: 75ch;
   }
 
