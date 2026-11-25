@@ -300,30 +300,6 @@ a {
     margin-right: 0.375em;
   }
 
-  p &,
-  li & {
-    // Text Links
-    overflow-wrap: break-word;
-    text-decoration: underline;
-    word-break: break-word;
-    word-wrap: break-word;
-
-    &:visited:not(:hover):not(:active):not(:focus) {
-      color: $c_visited;
-    }
-
-    &[href^="#"]::after {
-      // anchor links
-      content: '#';
-      display: inline-block;
-      font-size: 0.5em;
-      margin: 0 0.25em;
-      speak: none;
-      vertical-align: text-top;
-    }
-
-  }
-
   figure {
 
     > & {
