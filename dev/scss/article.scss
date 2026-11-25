@@ -727,6 +727,10 @@
 
   .post-stats {
 
+    p:not(:last-child) {
+      margin-bottom: 0.75rem;
+    }
+
     @media #{$mq_md} {
       width: 66%;
     }
