@@ -1,12 +1,5 @@
 // Below-the-fold Environment Only - No Content Styling
 
-// Anchor Links Accommodate Fixed Header
-[id^="a_"],
-[id^="h-"] {
-  scroll-margin-top: $header_height + 8;
-}
-
-
 // Specific Zones
 .pre-footer {
   padding-bottom: $footer_height;
