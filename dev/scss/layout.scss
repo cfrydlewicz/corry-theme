@@ -20,22 +20,20 @@
   }
 
   .follow-container {
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+    text-align: center;
     width: 100%;
 
     @media #{$mq_md} {
-      justify-content: flex-end;
       width: auto;
     }
 
     ul {
       display: flex;
       flex-wrap: wrap; // wrap until icons load
+      gap: var(--gutter);
       justify-content: center;
-
-      @media #{$mq_md} {
-        justify-content: flex-end;
-      }
-
     }
 
   }
