@@ -747,11 +747,4 @@
 
   }
 
-  @media only screen and (min-width: $bp_md) and (min-height: 480px + $header_height--max) {
-    // tall screens only
-    position: sticky;
-    top: $header_height--max;
-    z-index: $z_cta+1;
-  }
-
 }
