@@ -1,8 +1,12 @@
 // Below-the-fold Environment Only - No Content Styling
 
 // Specific Zones
-.pre-footer {
-  padding-bottom: $footer_height;
+.footer-container {
+  --bottom-footer-height: 52px;
+
+  @media #{$mq_md} {
+    --bottom-footer-height: 32px;
+  }
 
   .site-footer_header {
     font-size: 1.25em;
@@ -14,6 +18,38 @@
   ul {
     list-style: none;
   }
+
+  .follow-container {
+    width: 100%;
+
+    @media #{$mq_md} {
+      justify-content: flex-end;
+      width: auto;
+    }
+
+    ul {
+      display: flex;
+      flex-wrap: wrap; // wrap until icons load
+      justify-content: center;
+
+      @media #{$mq_md} {
+        justify-content: flex-end;
+      }
+
+    }
+
+  }
+
+  .reverse-canary p {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+}
+
+.pre-footer {
+  padding-bottom: calc( var(--bottom-footer-height) + 1rem );
 
   .campaign-container,
   .paid-for {
@@ -81,12 +117,6 @@
 
   }
 
-  .reverse-canary p {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-  }
-
 }
 
 .site-footer {
@@ -142,27 +172,6 @@
   .copyright-footer .site-footer-text,
   .back-to-top a {
     white-space: nowrap;
-  }
-
-  .follow-container {
-    width: 100%;
-
-    @media #{$mq_md} {
-      justify-content: flex-end;
-      width: auto;
-    }
-
-    ul {
-      display: flex;
-      flex-wrap: wrap; // wrap until icons load
-      justify-content: center;
-
-      @media #{$mq_md} {
-        justify-content: flex-end;
-      }
-
-    }
-
   }
 
 }
