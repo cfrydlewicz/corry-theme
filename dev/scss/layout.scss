@@ -20,20 +20,11 @@
   }
 
   .follow-container {
-    padding-bottom: 2rem;
-    padding-top: 2rem;
-    text-align: center;
     width: 100%;
-
-    @media #{$mq_md} {
-      width: auto;
-    }
 
     ul {
       display: flex;
       flex-wrap: wrap; // wrap until icons load
-      gap: var(--gutter);
-      justify-content: center;
     }
 
   }
@@ -115,6 +106,19 @@
 
   }
 
+  .follow-container {
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+    text-align: center;
+    width: 100%;
+
+    ul {
+      gap: var(--gutter);
+      justify-content: center;
+    }
+
+  }
+
 }
 
 .site-footer {
@@ -170,6 +174,16 @@
   .copyright-footer .site-footer-text,
   .back-to-top a {
     white-space: nowrap;
+  }
+
+  .follow-container {
+    width: 100%;
+
+    @media #{$mq_md} {
+      justify-content: flex-end;
+      width: auto;
+    }
+
   }
 
 }
