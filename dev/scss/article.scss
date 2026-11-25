@@ -701,6 +701,11 @@
   gap: var(--gutter);
   justify-content: space-between;
 
+  @media #{$mq_md} {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
   .thanks-main {
     flex-grow: 1;
     width: 100%;
@@ -720,9 +725,23 @@
 
   }
 
+  .post-stats {
+
+    @media #{$mq_md} {
+      width: 66%;
+    }
+
+  }
+
   .thanks-header {
     font-size: 1.625rem;
     text-align: center;
+
+    @media #{$mq_md} {
+      font-size: 1.25rem;
+      text-align: left;
+    }
+
   }
 
   .label {
@@ -754,21 +773,6 @@
   .post-tags {
     max-height: 5.25em;
     overflow-y: auto;
-  }
-
-  @media #{$mq_md} {
-    flex-direction: row;
-    flex-wrap: nowrap;
-
-    .thanks-header {
-      font-size: 1.25rem;
-      text-align: left;
-    }
-
-    .post-stats {
-      width: 66%;
-    }
-
   }
 
 }
