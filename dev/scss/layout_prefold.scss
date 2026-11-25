@@ -206,7 +206,9 @@ em {
   }
 
 }
-h2 em {
+h2 em,
+h3 em,
+h4 em {
   color: $c_accent2;
   font-size: 1.05em; // tiny bump in emphasis
 }
