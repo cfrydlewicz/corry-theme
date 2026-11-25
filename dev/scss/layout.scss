@@ -302,15 +302,20 @@
   padding-left: 0; // override
 }
 
-.srpw-summary.srpw-summary {
-  // overrides
-  line-height: inherit;
-  padding-top: 0;
-}
 .srpw-summary {
   padding-bottom: 48px;
   position: relative;
   width: 100%;
+
+  @media #{$mq_md} {
+    padding-bottom: 66px;
+  }
+
+  &.srpw-summary {
+    // overrides
+    line-height: inherit;
+    padding-top: 0;
+  }
 
   p {
     max-width: 60ch;
