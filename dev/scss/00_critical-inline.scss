@@ -25,6 +25,15 @@
   --c_active-dark:     #{$c_active-dark};
   --c_visited:         #{$c_visited};
 
+  // typography
+  --font-min:          12px;
+  --font-smaller:      0.75rem;
+  --font-small:        0.875rem;
+  --font-medium:       1rem;
+  --font-large:        1.125rem;
+  --font-larger:       1.25rem;
+  --font-largest:      1.5rem;
+
   // campaign site color vars
   --cmpn_teal:         #0e6d5d;
   --cmpn_darkteal:     color-mix(in lab, var(--cmpn_teal) 100%, #000 100%);

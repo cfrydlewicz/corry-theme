@@ -670,12 +670,13 @@
 
     .spoiler-text {
       background-color: $c_basetext;
-      //color: $c_basetext;
 
       &::before {
         background-color: $c_black;
-        content: '[highlight this text to read spoilers] ';
-        display: inline;
+        content: '[highlight this text to read spoilers] 👇';
+        display: block;
+        font-size: var(--font-min);
+        margin-bottom: 0.125rem;
       }
 
       a,
@@ -686,6 +687,10 @@
         color: $c_basetext;
       }
 
+    }
+    span.spoiler-text::before {
+      content: '[highlight this text to read spoilers] 👉 ';
+      display: inline;
     }
 
   }
